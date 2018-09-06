@@ -89,7 +89,7 @@
 
                     <div slot="footer" class="dialog-footer">
                         <el-button @click="dialogSwitch.password = false">{{$t('cancel')}}</el-button>
-                        <el-button type="primary" @click="sendTransaction">{{$t('confirm')}}</el-button>
+                        <el-button type="primary" @click.prevent="sendTransaction">{{$t('confirm')}}</el-button>
                     </div>
                 </el-dialog>
 
@@ -123,6 +123,7 @@ export default {
                 password: ""
             },
             submitInfo: {},
+            isSubmit:false,
 
             toAccount: "",
             amount: 0,
@@ -202,14 +203,6 @@ export default {
                 return;
             }
 
-            // 账户余额为0不可以发
-            if (!parseFloat(self.accountInfo.balance)) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.balance_zero")
-                );
-                return;
-            }
-
             //发送金额 为0 或负，不可发送
             if (czrAmount <= 0) {
                 self.$message.error(
@@ -222,6 +215,14 @@ export default {
             if (!regObj) {
                 self.$message.error(
                     self.$t("page_transfer.msg_info.amount_error")
+                );
+                return;
+            }
+
+            // 账户余额为0不可以发
+            if (!parseFloat(self.accountInfo.balance)) {
+                self.$message.error(
+                    self.$t("page_transfer.msg_info.balance_zero")
                 );
                 return;
             }
@@ -246,7 +247,11 @@ export default {
         },
         sendTransaction: function() {
             let self = this;
-
+            if(!self.isSubmit){
+                self.isSubmit=true;
+            }else{
+                return;
+            }
             let amountValue = self.$czr.utils.toWei(this.amount, "czr");
             let id = Math.random();
 
@@ -274,6 +279,7 @@ export default {
                         self.dialogSwitch.password = false;
                         self.$router.push("/account/" + self.fromInfo.account);
                     } else {
+                        self.isSubmit=false;
                         self.$message.error(data.error);
                     }
                 });
