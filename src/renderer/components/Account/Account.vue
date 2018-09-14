@@ -35,50 +35,67 @@
         </div>
 
         <div class="account-content">
-            <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2>
-            <div class="transfer-log" v-loading="loadingSwitch">
-                <template v-for="item in accountInfo.currentTxList">
-                    <div v-if="item.to == address">
-                        <div class="transfer-item b-flex b-flex-justify tx-item plus-assets" @click="showTxInfo(item)">
-                            <div class="icon-wrap">
-                                <i class="iconfont icon-transfer">&#xe639;</i>
+            <!-- <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2> -->
+            <template>
+                <el-tabs v-model="activeName" @tab-click="tabsHandleClick">
+                    <el-tab-pane label="发送的交易" name="first">
+                        <!--  No transaction record  -->
+                        <div v-if="accountInfo.tx_list.length==0" class="no-transfer-log">
+                            <i class="iconfont">&#xe6e7;</i>
+                            <p>{{ $t('page_account.transfer_log_null') }}</p>
+                        </div>
+                    </el-tab-pane>
+                    <el-tab-pane label="全部交易" name="second">
+                        <el-alert center title="当前账户有新的交易信息" close-text="立即查看" type="warning">
+                        </el-alert>
+                        <div class="all-transaction">
+                            <div class="transfer-log" v-if="accountInfo.tx_list.length!==0" v-loading="loadingSwitch">
+                                <template v-for="item in accountInfo.currentTxList">
+                                    <div v-if="item.to == address">
+                                        <div class="transfer-item b-flex b-flex-justify tx-item plus-assets" @click="showTxInfo(item)">
+                                            <div class="icon-wrap">
+                                                <i class="iconfont icon-transfer">&#xe639;</i>
+                                            </div>
+                                            <div class="transfer-info">
+                                                <p class="by-address">{{item.from}}</p>
+                                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                            </div>
+                                            <div class="transfer-assets">
+                                                <div class="assets">+ {{item.amount | toCZRVal }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div v-if="item.from == address">
+                                        <div class="transfer-item b-flex b-flex-justify tx-item less-assets" @click="showTxInfo(item)">
+                                            <div class="icon-wrap">
+                                                <i class="iconfont icon-transfer">&#xe638;</i>
+                                            </div>
+                                            <div class="transfer-info">
+                                                <p class="by-address">{{item.to}}</p>
+                                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                            </div>
+                                            <div class="transfer-assets">
+                                                <div class="assets">- {{item.amount | toCZRVal }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="pagin-wrap b-flex b-flex-justify" v-if="accountInfo.tx_list.length>=pagingSwitch.limit">
+                                    <el-button :disabled="pagingSwitch.beforeDisabled" @click="beforeList" class="before-btn">上一页</el-button>
+                                    <el-button :disabled="pagingSwitch.nextDisabled" @click="nextList" class="next-btn">下一页</el-button>
+                                </div>
                             </div>
-                            <div class="transfer-info">
-                                <p class="by-address">{{item.from}}</p>
-                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
-                            </div>
-                            <div class="transfer-assets">
-                                <div class="assets">+ {{item.amount | toCZRVal }}</div>
+                            <!--  No transaction record  -->
+                            <div v-if="accountInfo.tx_list.length==0" class="no-transfer-log">
+                                <i class="iconfont">&#xe6e7;</i>
+                                <p>{{ $t('page_account.transfer_log_null') }}</p>
                             </div>
                         </div>
-                    </div>
+                    </el-tab-pane>
+                </el-tabs>
+            </template>
 
-                    <div v-if="item.from == address">
-                        <div class="transfer-item b-flex b-flex-justify tx-item less-assets" @click="showTxInfo(item)">
-                            <div class="icon-wrap">
-                                <i class="iconfont icon-transfer">&#xe638;</i>
-                            </div>
-                            <div class="transfer-info">
-                                <p class="by-address">{{item.to}}</p>
-                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
-                            </div>
-                            <div class="transfer-assets">
-                                <div class="assets">- {{item.amount | toCZRVal }}</div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-                <div class="pagin-wrap b-flex b-flex-justify" v-if="accountInfo.tx_list.length>=pagingSwitch.limit">
-                    <el-button :disabled="pagingSwitch.beforeDisabled" @click="beforeList" class="before-btn">上一页</el-button>
-                    <el-button :disabled="pagingSwitch.nextDisabled" @click="nextList" class="next-btn">下一页</el-button>
-                </div>
-            </div>
-
-            <!--  No transaction record  -->
-            <div v-if="accountInfo.tx_list.length==0" class="no-transfer-log">
-                <i class="iconfont">&#xe6e7;</i>
-                <p>{{ $t('page_account.transfer_log_null') }}</p>
-            </div>
         </div>
 
         <el-dialog :title="$t('dialog_tit')" :visible.sync="dialogSwitch.qrCode" width="40%" center>
@@ -128,13 +145,13 @@
                             <template v-if='transactionInfo.is_fork == "1" || transactionInfo.is_invalid == "1"'>
                                 <span class="txt-info"> 作废 </span>
                             </template>
-                             <template v-else>
-                                 <template v-if='transactionInfo.is_fail == "1"'>
-                                     <span class="txt-danger"> 失败 </span>
-                                 </template>
-                                 <template v-else>
-                                     <span class="txt-success"> 成功 </span>
-                                 </template>
+                            <template v-else>
+                                <template v-if='transactionInfo.is_fail == "1"'>
+                                    <span class="txt-danger"> 失败 </span>
+                                </template>
+                                <template v-else>
+                                    <span class="txt-success"> 成功 </span>
+                                </template>
                             </template>
                         </template>
                     </span>
@@ -199,7 +216,8 @@ export default {
             qrImgUrl: "",
             txStatus: "-",
             lastBlockHash: "",
-            editTag: ""
+            editTag: "",
+            activeName: "first"
         };
     },
     created() {
@@ -353,7 +371,7 @@ export default {
                             ? currentTxLeng
                             : self.pagingSwitch.limit;
                     var targetIndex = currentIndexInTxLixt - lessNum;
-                    if(targetIndex<0){
+                    if (targetIndex < 0) {
                         self.pagingSwitch.beforeDisabled = true;
                         self.loadingSwitch = false;
                         return;
@@ -399,6 +417,10 @@ export default {
             self.loadingSwitch = true;
             self.getBeforeList();
             self.pagingSwitch.nextDisabled = false; //释放 后翻
+        },
+        //点击
+        tabsHandleClick(tab, event) {
+            console.log(tab, event);
         },
         //Ini
         initTag: function() {
@@ -458,8 +480,8 @@ export default {
                                 //写回去
                                 self.accountInfo.tx_list[index] = data;
                                 //如果当前是 transactionInfo 则也些过去
-                                if(data.hash = self.transactionInfo.hash){
-                                    self.transactionInfo=data;
+                                if ((data.hash = self.transactionInfo.hash)) {
+                                    self.transactionInfo = data;
                                 }
                             }
                         });
@@ -470,7 +492,6 @@ export default {
                                 self.accountInfo.currentTxList[index] = data;
                             }
                         });
-
                     }
                 });
         },

@@ -264,7 +264,8 @@ export default {
                             self.createInfo.tag ||
                             self.$t("page_home.acc") +
                                 (self.database.length + 1),
-                        balance: 0
+                        balance: 0,
+                        send_list:[]
                     };
 
                     self.initAccount(params);
@@ -383,7 +384,8 @@ export default {
                                 self.importInfo.tag ||
                                 self.$t("page_home.acc") +
                                     (self.database.length + 1),
-                            balance: 0
+                            balance: 0,
+                            send_list:[]
                         };
 
                         self.initAccount(params);
@@ -497,7 +499,8 @@ export default {
                             let params = {
                                 address: reqAry,
                                 tag: "账号-" + ++flagLeng,
-                                balance: 0
+                                balance: 0,
+                                send_list:[]
                             };
                             self.$db
                                 .get("czr_accounts")

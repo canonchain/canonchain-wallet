@@ -277,6 +277,7 @@ export default {
                         //Clear data
                         self.dialogSwitch.confrim = false;
                         self.dialogSwitch.password = false;
+                        //TODO 写当前的HASH
                         self.$router.push("/account/" + self.fromInfo.account);
                     } else {
                         self.isSubmit=false;
