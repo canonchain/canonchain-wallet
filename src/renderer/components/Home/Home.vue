@@ -444,10 +444,11 @@ export default {
         runAccountsTimer() {
             self.getAccountTimer = setTimeout(function() {
                 self.getAccounts();
-            }, 3500);
+            }, 50);
         },
         getAccountsBalances(accountAry) {
-            self.$czr.request
+            self.runAccountsTimer();
+            /* self.$czr.request
                 .accountsBalances(accountAry)
                 .then(function(data) {
                     return data.balances;
@@ -462,7 +463,7 @@ export default {
                             .write();
                     }
                     self.runAccountsTimer();
-                });
+                }); */
         },
         getAccounts() {
             self.$czr.request

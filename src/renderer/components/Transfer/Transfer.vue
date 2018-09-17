@@ -196,17 +196,11 @@ export default {
                 self.$czr.utils.toWei(self.amount, "czr")
             );
 
+            console.log("validateForm")
+
             if (!self.toAccount) {
                 self.$message.error(
                     self.$t("page_transfer.msg_info.address_null")
-                );
-                return;
-            }
-
-            //发送金额 为0 或负，不可发送
-            if (czrAmount <= 0) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.amount_zero")
                 );
                 return;
             }
@@ -219,20 +213,34 @@ export default {
                 return;
             }
 
-            // 账户余额为0不可以发
-            if (!parseFloat(self.accountInfo.balance)) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.balance_zero")
-                );
-                return;
-            }
+            //发送金额 为0 或负，不可发送
+            // if (czrAmount <= 0) {
+            //     self.$message.error(
+            //         self.$t("page_transfer.msg_info.amount_zero")
+            //     );
+            //     return;
+            // }
 
+            // 账户余额为0不可以发
+            // if (!parseFloat(self.accountInfo.balance)) {
+            //     self.$message.error(
+            //         self.$t("page_transfer.msg_info.balance_zero")
+            //     );
+            //     return;
+            // }
+
+            console.log(self.$czr.request
+                .accountValidate);
             self.$czr.request
                 .accountValidate(self.toAccount)
                 .then(function(data) {
+                    console.log("accountValidate then",data)
                     return data.valid;
+                }).catch(function(error){
+                    console.log("accountValidate catch",error)
                 })
                 .then(function(data) {
+                    console.log("then",data)
                     if (data == "1") {
                         self.dialogSwitch.confrim = true;
                     } else if (data == "0") {
@@ -240,7 +248,7 @@ export default {
                             self.$t("page_transfer.msg_info.address_err")
                         );
                     }
-                });
+                })
         },
         openPwd:function(){
             self.fromInfo.password='';
@@ -277,13 +285,31 @@ export default {
                         //Clear data
                         self.dialogSwitch.confrim = false;
                         self.dialogSwitch.password = false;
-                        //TODO 写当前的HASH
-                        self.$router.push("/account/" + self.fromInfo.account);
+                        //TODO 写当前的HASH 
+                        //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
+                        let sendBlockInfo={
+                            hash: data.block,
+                            from:self.fromInfo.account,
+                            to  :self.toAccount,
+                            amount: amountValue,
+                            exec_timestamp : Math.ceil(new Date().getTime()/1000)
+                        }
+                        self.writeTransToSql(sendBlockInfo)
+                        console.log(data);
+                        // self.$router.push("/account/" + self.fromInfo.account);
                     } else {
                         self.isSubmit=false;
                         self.$message.error(data.error);
                     }
                 });
+        },
+        writeTransToSql:function(blockInfo){
+            self.$db.get('czr_accounts')
+            .find({address: blockInfo.from})
+            .get('send_list')
+            .push(blockInfo)
+            .write();
+            self.$router.push("/account/" + self.fromInfo.account);
         }
     },
     filters: {

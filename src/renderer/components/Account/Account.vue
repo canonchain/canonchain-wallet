@@ -27,7 +27,7 @@
                     <span>{{ $t('unit.czr') }}</span>
                 </div>
                 <div class="account-address-wrap">
-                    <span class="text-sub-color">{{ address }}</span>
+                    <span class="text-sub-color">{{ address}}</span>
                     <i class="iconfont icon-address-copy" @click="copyAddress"> &#xe645; </i>
                 </div>
             </div>
@@ -40,10 +40,27 @@
                 <el-tabs v-model="activeName" @tab-click="tabsHandleClick">
                     <el-tab-pane label="发送的交易" name="first">
                         <!--  No transaction record  -->
-                        <div v-if="accountInfo.tx_list.length==0" class="no-transfer-log">
+                        <div v-if="sendTransAry.length==0" class="no-transfer-log">
                             <i class="iconfont">&#xe6e7;</i>
                             <p>{{ $t('page_account.transfer_log_null') }}</p>
                         </div>
+                        <div class="transfer-log" v-if="sendTransAry.length!==0">
+                                <template v-for="item in sendTransAry">
+                                    <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
+                                        <div class="transfer-info">
+                                            <p class="by-address">{{item.to}}</p>
+                                            <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                        </div>
+                                        <div class="transfer-assets">
+                                            <strong class="assets">- {{item.amount | toCZRVal }}</strong>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="pagin-wrap b-flex b-flex-justify" v-if="sendTransAry.length>=pagingSwitch.limit">
+                                    <el-button  class="before-btn">上一页</el-button>
+                                    <el-button  class="next-btn">下一页</el-button>
+                                </div>
+                            </div>
                     </el-tab-pane>
                     <el-tab-pane label="全部交易" name="second">
                         <el-alert center title="当前账户有新的交易信息" close-text="立即查看" type="warning">
@@ -217,7 +234,8 @@ export default {
             txStatus: "-",
             lastBlockHash: "",
             editTag: "",
-            activeName: "first"
+            activeName: "first",
+            sendTransAry:[]
         };
     },
     created() {
@@ -232,6 +250,7 @@ export default {
         self.initDatabase();
         self.getTxList();
         self.initTag();
+        self.initSendTrans();
         self.initTransactionInfo();
 
         this.accountIntervalId = setInterval(() => {
@@ -443,6 +462,14 @@ export default {
                 signature: ""
             };
         },
+        initSendTrans(){
+            this.sendTransAry = this.$db.get('czr_accounts')
+            .find({address: this.address})
+            .get('send_list')
+            .value()
+            console.log(this.address,this.sendTransAry,this.sendTransAry.length)
+
+        },
         initDatabase() {
             var keystoreFile,
                 txListAry = [],
@@ -646,9 +673,9 @@ export default {
             };
             return (
                 newDate.getFullYear() +
-                " / " +
+                "-" +
                 addZero(newDate.getMonth() + 1) +
-                " / " +
+                "-" +
                 addZero(newDate.getDate()) +
                 " " +
                 addZero(newDate.getHours()) +
@@ -757,8 +784,12 @@ export default {
     background-color: #fff;
     padding: 10px 15px;
     margin-bottom: 2px;
+    border-bottom: 1px solid #f6f6f6;
     cursor: pointer;
     -webkit-user-select: none;
+}
+.transfer-log .transfer-item:hover{
+    background-color: #f5f7fa;
 }
 .account-content .transfer-log .transfer-info {
     width: 485px;

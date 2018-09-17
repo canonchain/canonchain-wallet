@@ -17,9 +17,14 @@ var HttpRequest = function (host, timeout, apiVersion) {
 
 
 var client = new rpc.Client(options);
+//log
+let logConfig = require('../../../log4/log_config.js');
+let walletLogs = logConfig.getLogger('rpc')    ;      //此处使用category的值 
+walletLogs.info("********** rpc 记录开始 ********** ");
 
 function asyncfunc(opt) {
-    return new Promise((resolve, reject) => {
+    walletLogs.info(opt)
+    let reset = new Promise((resolve, reject) => {
         client.call(opt,
             function (err, res) {
                 if (err) {
@@ -29,7 +34,11 @@ function asyncfunc(opt) {
                 }
             }
         );
+    });
+    reset.then((data)=>{
+        walletLogs.info(data)
     })
+    return reset
 }
 
 
