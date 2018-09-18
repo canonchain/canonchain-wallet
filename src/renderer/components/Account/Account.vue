@@ -37,15 +37,15 @@
         <div class="account-content">
             <!-- <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2> -->
             <template>
-                <el-tabs v-model="activeName" @tab-click="tabsHandleClick">
+                <el-tabs v-model="activeName">
                     <el-tab-pane label="发送的交易" name="first">
                         <!--  No transaction record  -->
-                        <div v-if="sendTransAry.length==0" class="no-transfer-log">
+                        <div v-if="sendTransCurrent.tempAry.length==0" class="no-transfer-log">
                             <i class="iconfont">&#xe6e7;</i>
                             <p>{{ $t('page_account.transfer_log_null') }}</p>
                         </div>
-                        <div class="transfer-log" v-if="sendTransAry.length!==0">
-                                <template v-for="item in sendTransAry">
+                        <div class="transfer-log" v-if="sendTransCurrent.tempAry.length!==0">
+                                <template v-for="item in sendTransCurrent.tempAry">
                                     <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
                                         <div class="transfer-info">
                                             <p class="by-address">{{item.to}}</p>
@@ -56,9 +56,9 @@
                                         </div>
                                     </div>
                                 </template>
-                                <div class="pagin-wrap b-flex b-flex-justify" v-if="sendTransAry.length>=pagingSwitch.limit">
-                                    <el-button  class="before-btn">上一页</el-button>
-                                    <el-button  class="next-btn">下一页</el-button>
+                                <div class="pagin-wrap b-flex b-flex-justify" v-if="sendTransCurrent.sourcesAry.length>=sendTransCurrent.limit">
+                                    <el-button @click="currentBefore" :disabled="sendTransCurrent.beforeDisabled" class="before-btn">上一页</el-button>
+                                    <el-button @click="currentNext" :disabled="sendTransCurrent.nextDisabled" class="next-btn">下一页</el-button>
                                 </div>
                             </div>
                     </el-tab-pane>
@@ -235,7 +235,15 @@ export default {
             lastBlockHash: "",
             editTag: "",
             activeName: "first",
-            sendTransAry:[]
+            sendTransCurrent:{
+                beforeDisabled:true,
+                nextDisabled: false,
+                page:1,
+                limit:10,
+                sourcesAry : [],
+                tempAry:[],
+                totalPage:0
+            }
         };
     },
     created() {
@@ -437,10 +445,54 @@ export default {
             self.getBeforeList();
             self.pagingSwitch.nextDisabled = false; //释放 后翻
         },
-        //点击
-        tabsHandleClick(tab, event) {
-            console.log(tab, event);
+
+        //当前账户发送的交易 Start
+        initSendTrans(){
+            let _current      = this.sendTransCurrent;
+            _current.sourcesAry = this.$db.get('czr_accounts')
+                .find({address: this.address})
+                .get('send_list')
+                .value()
+            // //按照时间排序
+            _current.sourcesAry.sort(function(a,b){
+                return b.exec_timestamp-a.exec_timestamp;
+            });
+            _current.tempAry = _current.sourcesAry.slice(0,10);
+            _current.page = 1;
+            _current.totalPage = Math.ceil(_current.sourcesAry.length/_current.limit);
         },
+        currentBefore(){
+            let _current      = this.sendTransCurrent;
+            const curPage       = _current.page;
+            const curSliceStart = _current.limit*(curPage-2);
+            const curSliceEnd   = curSliceStart+_current.limit;
+            _current.nextDisabled=false;
+            if(curPage>1){
+                _current.tempAry = _current.sourcesAry.slice(curSliceStart,curSliceEnd);
+                _current.page--;
+                if(_current.page===1){
+                    _current.beforeDisabled=true;
+                }
+            }
+            
+        },
+        currentNext(){
+            let _current      = this.sendTransCurrent;
+            const curPage       = _current.page;
+            const curSliceStart = _current.limit*curPage;
+            const curSliceEnd   = curSliceStart+_current.limit;
+            _current.beforeDisabled=false;
+            if(curPage<_current.totalPage){
+                _current.tempAry = _current.sourcesAry.slice(curSliceStart,curSliceEnd);
+                _current.page++;
+                if(_current.page===_current.totalPage){
+                    _current.nextDisabled=true;
+                }
+            }
+        },
+        //当前账户发送的交易 End
+
+
         //Ini
         initTag: function() {
             this.editTag = this.accountInfo.tag;
@@ -462,14 +514,7 @@ export default {
                 signature: ""
             };
         },
-        initSendTrans(){
-            this.sendTransAry = this.$db.get('czr_accounts')
-            .find({address: this.address})
-            .get('send_list')
-            .value()
-            console.log(this.address,this.sendTransAry,this.sendTransAry.length)
 
-        },
         initDatabase() {
             var keystoreFile,
                 txListAry = [],

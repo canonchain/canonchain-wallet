@@ -35,25 +35,25 @@ log4js.configure({
         default: {
             type: 'dateFile',
             filename: defaultPath,
-            "pattern": "yyyy-MM-dd-hh.log",
+            "pattern": "yyyy-MM-dd.log",
             alwaysIncludePattern: true
         },
         start_check: {
             type: 'dateFile',
             filename: startCheck,
-            "pattern": "yyyy-MM-dd-hh.log",
+            "pattern": "yyyy-MM-dd.log",
             alwaysIncludePattern: true
         },
         node_status: {
             type: 'dateFile',
             filename: nodeStatus,
-            "pattern": "yyyy-MM-dd-hh.log",
+            "pattern": "yyyy-MM-dd.log",
             alwaysIncludePattern: true
         },
         wallet_operate: {
             type: 'dateFile',
             filename: walletOperate,
-            "pattern": "yyyy-MM-dd-hh.log",
+            "pattern": "yyyy-MM-dd.log",
             alwaysIncludePattern: true
         }
     },

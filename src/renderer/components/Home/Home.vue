@@ -133,7 +133,7 @@ export default {
                 import: false,
                 remove: false
             },
-            database: [],
+            database  : [],
             createInfo: {},
             importInfo: {},
             removeInfo: {},
@@ -151,7 +151,7 @@ export default {
         }, 1500);
 
         //获取账号信息
-        self.getAccounts();
+        self.runAccountsTimer();
     },
     computed: {},
     beforeDestroy() {
@@ -444,7 +444,7 @@ export default {
         runAccountsTimer() {
             self.getAccountTimer = setTimeout(function() {
                 self.getAccounts();
-            }, 50);
+            }, 3500);
         },
         getAccountsBalances(accountAry) {
             self.runAccountsTimer();
@@ -493,6 +493,8 @@ export default {
                         }
                     }
 
+                    self.getAccountsBalances(data);
+                    //获取余额
                     var flagLeng = databaseAry.length;
                     data.forEach((reqAry, index) => {
                         if (databaseAry.indexOf(reqAry) < 0) {
@@ -509,10 +511,9 @@ export default {
                                 .write();
                         }
                     });
-                    //再把data中有，但是数据库里没有的账户添 加
-                    self.getAccountsBalances(data);
-                    //获取余额
-                });
+                }).catch((err)=>{
+                    self.$walletLogs.error("accountList Error",err)
+                })
         }
         //get Account End
     },
