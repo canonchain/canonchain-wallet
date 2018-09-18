@@ -47,8 +47,6 @@ function getLanguage() {
   let language
   if (navigator.language) {
     language = navigator.language;
-  } else {
-    language = navigator.browserLanguage;
   }
   language = language ? language : 'zh-CN'
   console.log("language",language)

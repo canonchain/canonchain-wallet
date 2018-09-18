@@ -120,9 +120,6 @@
                 <img :src="qrImgUrl" alt="code" class="qrcode-img">
                 <p class="dia-address">{{address}}</p>
             </span>
-            <!-- <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogSwitch.qrCode = false">{{$t('close')}}</el-button>
-      </span> -->
         </el-dialog>
 
         <el-dialog :title="$t('page_account.edit_dia.tit')" :visible.sync="dialogSwitch.editName" width="35%" center>
@@ -220,6 +217,9 @@ export default {
                 keystore: false,
                 txInfo: false
             },
+            timerSwitch:{
+                initData:null
+            },
             pagingSwitch: {
                 limit: 10,
                 beforeDisabled: true,
@@ -242,7 +242,8 @@ export default {
                 limit:10,
                 sourcesAry : [],
                 tempAry:[],
-                totalPage:0
+                totalPage:0,
+                unstableAry:[]
             }
         };
     },
@@ -258,19 +259,19 @@ export default {
         self.initDatabase();
         self.getTxList();
         self.initTag();
+        self.initTransItem();
         self.initSendTrans();
-        self.initTransactionInfo();
 
-        this.accountIntervalId = setInterval(() => {
+        this.timerSwitch.initData = setInterval(() => {
             self.initDatabase();
-        }, 2000);
+        }, 3000);
     },
     computed: {},
     beforeDestroy() {
-        clearInterval(this.accountIntervalId);
+        clearInterval(this.timerSwitch.initData);
     },
     methods: {
-        //get List
+        //获取所有交易 Start
         getTxList() {
             // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
             self.$czr.request
@@ -445,6 +446,7 @@ export default {
             self.getBeforeList();
             self.pagingSwitch.nextDisabled = false; //释放 后翻
         },
+        //获取所有交易 End
 
         //当前账户发送的交易 Start
         initSendTrans(){
@@ -453,10 +455,19 @@ export default {
                 .find({address: this.address})
                 .get('send_list')
                 .value()
-            // //按照时间排序
+            // 按照时间排序
             _current.sourcesAry.sort(function(a,b){
                 return b.exec_timestamp-a.exec_timestamp;
             });
+            // 找出不稳定的block is_stable
+            // _current.unstableAry = []
+            _current.sourcesAry.forEach((ele)=>{
+                if(ele.is_stable!=="1"){
+                    _current.unstableAry.push(ele.hash);
+                }
+            });
+            self.$walletLogs.info("需要轮询的 unstableAry",_current.unstableAry);
+
             _current.tempAry = _current.sourcesAry.slice(0,10);
             _current.page = 1;
             _current.totalPage = Math.ceil(_current.sourcesAry.length/_current.limit);
@@ -492,12 +503,11 @@ export default {
         },
         //当前账户发送的交易 End
 
-
-        //Ini
+        //Init Start
         initTag: function() {
             this.editTag = this.accountInfo.tag;
         },
-        initTransactionInfo() {
+        initTransItem() {
             this.transactionInfo = {
                 hash: "", //哈希值
                 from: "",
@@ -514,8 +524,8 @@ export default {
                 signature: ""
             };
         },
-
         initDatabase() {
+            console.log("this.timerSwitch.initData")
             var keystoreFile,
                 txListAry = [],
                 currentList = [];
@@ -539,6 +549,8 @@ export default {
             });
             this.accountInfo.tx_list = txListAry;
         },
+        //Init End
+
         getBlock(hash) {
             self.$czr.request
                 .getBlock(hash)
@@ -580,32 +592,12 @@ export default {
         //SHOW tx info
         showTxInfo(item) {
             this.transactionInfo = item;
-            // //判断 this.txStatus
-            // if (item.is_stable == "0") {
-            //     //不稳定
-            //     this.txStatus = -1; //不稳定
-            // } else if (item.is_stable == "1") {
-            //     //稳定
-            //     if (item.is_fork == "1" || item.is_invalid == "1") {
-            //         this.txStatus = 300; //作废
-            //         //
-            //     } else {
-            //         if (item.is_fail == "1") {
-            //             this.txStatus = 400; //失败
-            //         } else {
-            //             this.txStatus = 200; //成功
-            //         }
-            //     }
-            // }
-
             this.dialogSwitch.txInfo = true;
         },
-
         //Show Qrcode
         showQrCode: function() {
             this.dialogSwitch.qrCode = true;
         },
-
         //Edit Tag
         setEditTag: function() {
             if (!this.editTag) {
@@ -653,7 +645,6 @@ export default {
             );
             this.dialogSwitch.keystore = false;
         },
-
         //download
         downloadKeystore() {
             let link = document.createElement("a");

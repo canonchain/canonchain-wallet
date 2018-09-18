@@ -112,9 +112,10 @@
 
 <script>
 const fs = require("fs");
-import { setInterval, clearInterval } from "timers";
+import { setInterval, clearInterval, clearTimeout } from "timers";
 const { spawn, spawnSync } = require("child_process");
 let self = null;
+let getAccountTimer = null;
 
 const app = require("electron").remote.app;
 
@@ -137,8 +138,8 @@ export default {
             createInfo: {},
             importInfo: {},
             removeInfo: {},
-            intervalId: null,
-            getAccountTimer: null
+            intervalId: null
+            
         };
     },
     created() {
@@ -151,11 +152,19 @@ export default {
         }, 1500);
 
         //获取账号信息
-        self.runAccountsTimer();
+        // self.getAccounts();
+        if(!getAccountTimer){
+            self.runAccountsTimer();
+            self.$walletLogs.info("需要创建")
+        }else{
+            self.$walletLogs.info("不需要了")
+        }
     },
     computed: {},
     beforeDestroy() {
         clearInterval(this.intervalId);
+        this.intervalId=null;
+
     },
     methods: {
         initDatabase() {
@@ -442,11 +451,13 @@ export default {
 
         //get Account start
         runAccountsTimer() {
-            self.getAccountTimer = setTimeout(function() {
+            getAccountTimer = setTimeout(function() {
                 self.getAccounts();
             }, 3500);
         },
         getAccountsBalances(accountAry) {
+            //如果没有被清除，继续调用
+            self.$walletLogs.info(`如果没有被清除，继续调用 ${getAccountTimer}`)
             self.runAccountsTimer();
             /* self.$czr.request
                 .accountsBalances(accountAry)
@@ -469,6 +480,7 @@ export default {
             self.$czr.request
                 .accountList()
                 .then(function(data) {
+                    self.$walletLogs.info("收到accountList结果了")
                     return data.accounts;
                 })
                 .then(function(data) {
