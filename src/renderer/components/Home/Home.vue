@@ -116,6 +116,8 @@ import { setInterval, clearInterval, clearTimeout } from "timers";
 const { spawn, spawnSync } = require("child_process");
 let self = null;
 let getAccountTimer = null;
+let interVal = 1000;
+let flagNum = 0;
 
 const app = require("electron").remote.app;
 
@@ -452,8 +454,10 @@ export default {
         //get Account start
         runAccountsTimer() {
             getAccountTimer = setTimeout(function() {
+                interVal = 0;
+                console.log("开始 getAccounts")
                 self.getAccounts();
-            }, 3500);
+            }, interVal||3500);
         },
         getAccountsBalances(accountAry) {
             //如果没有被清除，继续调用
@@ -481,6 +485,7 @@ export default {
                 .accountList()
                 .then(function(data) {
                     self.$walletLogs.info("收到accountList结果了")
+                    console.log("收到accountList结果了",++flagNum)
                     return data.accounts;
                 })
                 .then(function(data) {

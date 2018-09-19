@@ -203,9 +203,10 @@
 <script>
 const { clipboard } = require("electron");
 import QRCode from "qrcode";
-import { setInterval, clearInterval } from "timers";
+import { setInterval, clearInterval,setTimeout, clearTimeout } from "timers";
 
 let self = null;
+let updateBlocksTimer = null;
 
 export default {
     name: "Account",
@@ -260,7 +261,9 @@ export default {
         self.getTxList();
         self.initTag();
         self.initTransItem();
+
         self.initSendTrans();
+        self.blocksStatus();
 
         this.timerSwitch.initData = setInterval(() => {
             self.initDatabase();
@@ -269,6 +272,7 @@ export default {
     computed: {},
     beforeDestroy() {
         clearInterval(this.timerSwitch.initData);
+        clearTimeout(updateBlocksTimer);
     },
     methods: {
         //获取所有交易 Start
@@ -500,6 +504,45 @@ export default {
                     _current.nextDisabled=true;
                 }
             }
+        },
+        blocksStatus(){
+            updateBlocksTimer = setTimeout(function() {
+                //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
+                console.log("开始更新发送为稳定的Block")
+                self.updateBlocks()
+            }, 5000);
+        },
+        updateBlocks(){
+            self.$czr.request
+                .blockList(
+                    self.accountInfo.address,
+                    self.pagingSwitch.limit)
+                .then(function(data) {
+                    return data;
+                })
+                .then(function(data) {
+                    console.log("updateBlocks，并继续下一2次更新",data)
+                    //TODO 循环每个 item 如果成功了，从unstableAry删除，并把最新数据写入数据库
+                
+                    for(let i =0,length = data.list.length;i<length;){
+                        const tempItem = data.list[i];
+
+                        if(tempItem.is_stable ==="0"){
+                            console.log(tempItem.is_stable)
+                            self.$db
+                                .read()
+                                .get("czr_accounts")
+                                .find({ address: "czr_1hd95bfoitkgbykr9rrnirfmz4fpew1z3a73u33npfa9jdxen37oopagsjrc" })
+                                .get("send_list")
+                                .find({ hash: "58BC05256B62F1ADDF0CA9D88029B33615F8AED544EB533071F6A457562E02F2" })
+                                .assign(tempItem)
+                                .write();
+                        }
+                        // console.log(data.list[i])
+                        i++;
+                    }
+                    self.blocksStatus();
+                });
         },
         //当前账户发送的交易 End
 
