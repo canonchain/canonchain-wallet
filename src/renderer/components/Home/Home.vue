@@ -455,7 +455,7 @@ export default {
         runAccountsTimer() {
             getAccountTimer = setTimeout(function() {
                 interVal = 0;
-                console.log("开始 getAccounts")
+                // console.log("开始 getAccounts")
                 self.getAccounts();
             }, interVal||3500);
         },

@@ -63,7 +63,7 @@
                             </div>
                     </el-tab-pane>
                     <el-tab-pane label="全部交易" name="second">
-                        <el-alert center title="当前账户有新的交易信息" close-text="立即查看" type="warning">
+                        <el-alert v-if="alertSwitch.isShowMsg" center title="当前账户有新的交易信息" close-text="立即查看" type="warning">
                         </el-alert>
                         <div class="all-transaction">
                             <div class="transfer-log" v-if="accountInfo.tx_list.length!==0" v-loading="loadingSwitch">
@@ -206,8 +206,8 @@ import QRCode from "qrcode";
 import { setInterval, clearInterval,setTimeout, clearTimeout } from "timers";
 
 let self = null;
-let updateBlocksTimer = null;
-
+let CONTINUATION = 2000;//定时器间隔时间
+let BeforeTime  = 1;
 export default {
     name: "Account",
     data() {
@@ -219,12 +219,17 @@ export default {
                 txInfo: false
             },
             timerSwitch:{
-                initData:null
+                initData:null,
+                updateBlocksTimer:null,
+                getLstestTrans:null//获取当前账户下，最新的trans
             },
             pagingSwitch: {
                 limit: 10,
                 beforeDisabled: true,
                 nextDisabled: false
+            },
+            alertSwitch:{
+                isShowMsg:false
             },
             loadingSwitch: true,
             address: this.$route.params.id,
@@ -258,7 +263,7 @@ export default {
             self.qrImgUrl = url;
         });
         self.initDatabase();
-        self.getTxList();
+        self.getTxList(true,true);
         self.initTag();
         self.initTransItem();
 
@@ -272,17 +277,23 @@ export default {
     computed: {},
     beforeDestroy() {
         clearInterval(this.timerSwitch.initData);
-        clearTimeout(updateBlocksTimer);
+        clearTimeout(this.timerSwitch.updateBlocksTimer);
     },
     methods: {
         //获取所有交易 Start
-        getTxList() {
+        runGetTransTimer(){
+            self.timerSwitch.updateBlocksTimer = setTimeout(function(){
+                self.getTxList();
+            },CONTINUATION);
+        },
+        getTxList(isGetData,runTimer) {
             // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
+            const tempLastBlock = isGetData ? self.lastBlockHash : '';//如果是获取数据的时候，才开始使用最后的blockHash
             self.$czr.request
                 .blockList(
                     self.accountInfo.address,
                     self.pagingSwitch.limit,
-                    self.lastBlockHash
+                    tempLastBlock
                 )
                 .then(function(data) {
                     if (data.error) {
@@ -293,24 +304,61 @@ export default {
                         self.loadingSwitch = false;
                         return;
                     }
-                    data = !!data ? data : { list: [] };
-                    self.loadingSwitch = false;
-                    if (data.list.length > 0) {
-                        self.accountInfo.currentTxList = data.list;
-                        data.list.forEach(element => {
-                            self.accountInfo.tx_list.push(element);
-                        });
-                    }
 
-                    //是否有下页
-                    if (data.list.length < self.pagingSwitch.limit) {
-                        self.pagingSwitch.nextDisabled = true;
-                    } else {
-                        self.pagingSwitch.nextDisabled = false;
-                        self.lastBlockHash =
-                            data.list[data.list.length - 1].hash; //需要拿新的HASH，准备下次请求
+                    if(isGetData){
+                        console.log("1.获取数据的")
+                        if(runTimer){
+                            self.runGetTransTimer();
+                        }
+                        self.setListInfo(data);
+                    }else{
+                        //对比是否有变化
+                        console.log("2.对比是否有变化")
+                        let tempList = data.list;
+                        let newHash = tempList[tempList.length-1].hash;
+                        let isEqual = true;
+                        if (tempList.length > 0 && tempList.length<self.pagingSwitch.limit ) {
+                            isEqual = self.blockDiff(newHash,self.accountInfo.tx_list[tx_list.length-1].hash );
+                        }else if(tempList.length = self.pagingSwitch.limit){
+                            isEqual = self.blockDiff(newHash,self.accountInfo.tx_list[self.pagingSwitch.limit-1].hash );
+                        }
+
+                        console.log("isEqual ",isEqual)
+                        if(isEqual){
+                            //如果是相同的，继续下次循环
+                            self.runGetTransTimer();
+                        }else{
+                            //如果不同，显示msg，并停止获取；
+                            self.alertSwitch.isShowMsg = true;
+                            //TODO 点击msg的时候，处理方法
+
+                        }
                     }
                 });
+        },
+        setListInfo(data){
+            //第一次初始化的
+            data = !!data ? data : { list: [] };
+            self.loadingSwitch = false;
+            if (data.list.length > 0) {
+                self.accountInfo.currentTxList = data.list;
+                data.list.forEach(element => {
+                    self.accountInfo.tx_list.push(element);
+                });
+            }
+
+            //是否有下页
+            if (data.list.length < self.pagingSwitch.limit) {
+                self.pagingSwitch.nextDisabled = true;
+            } else {
+                self.pagingSwitch.nextDisabled = false;
+                self.lastBlockHash =
+                    data.list[data.list.length - 1].hash; //需要拿新的HASH，准备下次请求
+            }
+        },
+        blockDiff(newHash,oldHash){
+            console.log(newHash , oldHash)
+            return oldHash ? newHash === oldHash : true;
         },
         getNextList() {
             /* 
@@ -328,7 +376,7 @@ export default {
                 //获取
                 // console.log("获取")
                 self.lastBlockHash = lastTxListHashBlock;
-                self.getTxList();
+                self.getTxList(true);
             } else {
                 //不获取
                 // console.log("不获取")
@@ -513,11 +561,11 @@ export default {
             }
         },
         blocksStatus(){
-            updateBlocksTimer = setTimeout(function() {
+            self.timerSwitch.updateBlocksTimer = setTimeout(function() {
                 //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
-                console.log("开始更新发送为稳定的Block")
+                // console.log("开始更新发送为稳定的Block")
                 self.updateBlocks()
-            }, 5000);
+            }, CONTINUATION);
         },
         updateBlocks(){
             //TODO 改接口名
