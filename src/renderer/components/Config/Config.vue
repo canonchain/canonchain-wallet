@@ -239,27 +239,24 @@ export default {
             this.conMsg = "准备启动节点";
 
             //如果节点启动了，就不再启用了
-            self.$czr.request
-                .accountList()
-                .then(function(res) {
-                  console.log("已经有节点了，不需要启动",res)
-                  self.$router.push({ path: "home" });
-                })
-                .catch(function(error) {
-                  console.log("节点启动了，启动。。。。",error)
-                    var ls = execFile(nodePath, [
-                        "--daemon",
-                        "--rpc_enable",
-                        "--rpc_enable_control"
-                    ]);
-                    // var ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
-                    self.conMsg = "节点启动成功，准备进入钱包";
-                    self.$startLogs.info("CanonChainPid", ls.pid);
-                    sessionStorage.setItem("CanonChainPid", ls.pid);
-                    //进程守护
-                    self.guardNode(ls, nodePath);
-                    self.$router.push({ path: "home" });
-                });
+            self.$czr.request.accountList().then((data)=>{
+                self.$startLogs.info("已经有节点，不需要启动;")
+                // self.$router.push({ path: "home" });
+            }).catch(function(error) {
+                self.$startLogs.info("本地没有节点，需要启动")
+                var ls = execFile(nodePath, [
+                    "--daemon",
+                    "--rpc_enable",
+                    "--rpc_enable_control"
+                ]);
+                // var ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
+                self.conMsg = "节点启动成功，准备进入钱包.";
+                self.$startLogs.info("CanonChainPid", ls.pid);
+                sessionStorage.setItem("CanonChainPid", ls.pid);
+                //进程守护
+                self.guardNode(ls, nodePath);
+                // self.$router.push({ path: "home" });
+            })
         },
         guardNode(ls, nodePath) {
             var self = this;

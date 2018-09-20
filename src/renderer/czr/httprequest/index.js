@@ -1,5 +1,5 @@
 "use strict";
-var rpc = require('node-json-rpc');
+var rpc = require('./rpc-index');
 
 var options = {
     // host: '192.168.10.232',
