@@ -262,7 +262,7 @@ export default {
         self.initTag();
         self.initTransItem();
 
-        self.initSendTrans();
+        self.initSendTrans(true);
         self.blocksStatus();
 
         this.timerSwitch.initData = setInterval(() => {
@@ -453,7 +453,8 @@ export default {
         //获取所有交易 End
 
         //当前账户发送的交易 Start
-        initSendTrans(){
+        initSendTrans(isFirstInit){
+            console.log("初始化数据了",isFirstInit)
             let _current      = this.sendTransCurrent;
             _current.sourcesAry = this.$db.get('czr_accounts')
                 .find({address: this.address})
@@ -463,6 +464,13 @@ export default {
             _current.sourcesAry.sort(function(a,b){
                 return b.exec_timestamp-a.exec_timestamp;
             });
+            if(isFirstInit){
+                self.filterUnstable();
+            }
+
+        },
+        filterUnstable(){
+            let _current      = this.sendTransCurrent;
             // 找出不稳定的block is_stable
             // _current.unstableAry = []
             _current.sourcesAry.forEach((ele)=>{
@@ -471,7 +479,6 @@ export default {
                 }
             });
             self.$walletLogs.info("需要轮询的 unstableAry",_current.unstableAry);
-
             _current.tempAry = _current.sourcesAry.slice(0,10);
             _current.page = 1;
             _current.totalPage = Math.ceil(_current.sourcesAry.length/_current.limit);
@@ -513,6 +520,7 @@ export default {
             }, 5000);
         },
         updateBlocks(){
+            //TODO 改接口名
             self.$czr.request
                 .blockList(
                     self.accountInfo.address,
@@ -521,27 +529,32 @@ export default {
                     return data;
                 })
                 .then(function(data) {
-                    console.log("updateBlocks，并继续下一2次更新",data)
-                    //TODO 循环每个 item 如果成功了，从unstableAry删除，并把最新数据写入数据库
-                
+                    let isModiTrans = false;
                     for(let i =0,length = data.list.length;i<length;){
                         const tempItem = data.list[i];
-
-                        if(tempItem.is_stable ==="0"){
-                            console.log(tempItem.is_stable)
-                            self.$db
+                        if(tempItem.is_stable ==="1"){
+                            let tempVal = self.$db
                                 .read()
                                 .get("czr_accounts")
-                                .find({ address: "czr_1hd95bfoitkgbykr9rrnirfmz4fpew1z3a73u33npfa9jdxen37oopagsjrc" })
+                                .find({ address: self.address })
                                 .get("send_list")
-                                .find({ hash: "58BC05256B62F1ADDF0CA9D88029B33615F8AED544EB533071F6A457562E02F2" })
+                                .find({ hash: tempItem.hash })
                                 .assign(tempItem)
                                 .write();
+                            // 如果成功了，从 unstableAry 删除，并把最新数据写入数据库
+                            self.sendTransCurrent.unstableAry.forEach((ele,index)=>{
+                                if (ele.hash == tempItem.hash) {
+                                    self.sendTransCurrent.unstableAry.splice(index,1)
+                                }
+                            })
+                            isModiTrans = true;
                         }
-                        // console.log(data.list[i])
                         i++;
                     }
                     self.blocksStatus();
+                    if(isModiTrans){
+                        self.initSendTrans();
+                    }
                 });
         },
         //当前账户发送的交易 End
@@ -568,7 +581,6 @@ export default {
             };
         },
         initDatabase() {
-            console.log("this.timerSwitch.initData")
             var keystoreFile,
                 txListAry = [],
                 currentList = [];

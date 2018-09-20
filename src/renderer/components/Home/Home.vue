@@ -463,29 +463,30 @@ export default {
             //如果没有被清除，继续调用
             self.$walletLogs.info(`如果没有被清除，继续调用 ${getAccountTimer}`)
             self.runAccountsTimer();
-            /* self.$czr.request
-                .accountsBalances(accountAry)
-                .then(function(data) {
-                    return data.balances;
-                })
-                .then(function(data) {
-                    for (var acc in data) {
-                        self.$db
-                            .read()
-                            .get("czr_accounts")
-                            .find({ address: acc })
-                            .assign({ balance: parseInt(data[acc]["balance"]) })
-                            .write();
-                    }
-                    self.runAccountsTimer();
-                }); */
+            
+            // self.$czr.request
+            //     .accountsBalances(accountAry)
+            //     .then(function(data) {
+            //         return data.balances;
+            //     })
+            //     .then(function(data) {
+            //         for (var acc in data) {
+            //             self.$db
+            //                 .read()
+            //                 .get("czr_accounts")
+            //                 .find({ address: acc })
+            //                 .assign({ balance: parseInt(data[acc]["balance"]) })
+            //                 .write();
+            //         }
+            //         self.runAccountsTimer();
+            //     });
         },
         getAccounts() {
             self.$czr.request
                 .accountList()
                 .then(function(data) {
-                    self.$walletLogs.info("收到accountList结果了")
-                    console.log("收到accountList结果了",++flagNum)
+                    self.$walletLogs.info("收到accountList结果了",++flagNum)
+                    console.log("收到accountList结果了",flagNum)
                     return data.accounts;
                 })
                 .then(function(data) {

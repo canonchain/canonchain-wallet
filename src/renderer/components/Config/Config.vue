@@ -21,8 +21,10 @@ const path = require("path");
 const { remote, app, shell } = require("electron");
 const axios = require("axios");
 const download = require("download");
-const { spawn, spawnSync, exec, execFile } = require("child_process");
+const { spawn, spawnSync, exec, execFile,fork } = require("child_process");
 const packageJson = require("../../../../package.json");
+// const childPath = require("./child");
+
 
 var self = null;
 export default {
@@ -240,22 +242,27 @@ export default {
 
             //如果节点启动了，就不再启用了
             self.$czr.request.accountList().then((data)=>{
+                console.log("已经有节点，不需要启动")
                 self.$startLogs.info("已经有节点，不需要启动;")
-                // self.$router.push({ path: "home" });
+                self.$router.push({ path: "home" });
             }).catch(function(error) {
+                console.log("本地没有节点，需要启动")
                 self.$startLogs.info("本地没有节点，需要启动")
-                var ls = execFile(nodePath, [
+                var ls = spawn(nodePath, [
                     "--daemon",
                     "--rpc_enable",
                     "--rpc_enable_control"
                 ]);
                 // var ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
+
+                // let ls = fork("./child");
+
                 self.conMsg = "节点启动成功，准备进入钱包.";
                 self.$startLogs.info("CanonChainPid", ls.pid);
                 sessionStorage.setItem("CanonChainPid", ls.pid);
                 //进程守护
                 self.guardNode(ls, nodePath);
-                // self.$router.push({ path: "home" });
+                self.$router.push({ path: "home" });
             })
         },
         guardNode(ls, nodePath) {
