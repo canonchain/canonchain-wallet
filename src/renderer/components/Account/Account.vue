@@ -63,7 +63,7 @@
                             </div>
                     </el-tab-pane>
                     <el-tab-pane label="全部交易" name="second">
-                        <el-alert v-if="alertSwitch.isShowMsg" center title="当前账户有新的交易信息" close-text="立即查看" type="warning">
+                        <el-alert v-if="alertSwitch.isShowMsg" center title="当前账户有新的交易信息" close-text="立即查看" type="warning" @close="refreshTrans">
                         </el-alert>
                         <div class="all-transaction">
                             <div class="transfer-log" v-if="accountInfo.tx_list.length!==0" v-loading="loadingSwitch">
@@ -206,8 +206,8 @@ import QRCode from "qrcode";
 import { setInterval, clearInterval,setTimeout, clearTimeout } from "timers";
 
 let self = null;
-let CONTINUATION = 2000;//定时器间隔时间
-let BeforeTime  = 1;
+let CONTINUATION = 5000;//定时器间隔时间
+// let BeforeTime  = 1;
 export default {
     name: "Account",
     data() {
@@ -286,6 +286,13 @@ export default {
                 self.getTxList();
             },CONTINUATION);
         },
+        refreshTrans(){
+            self.accountInfo.tx_list = [];
+            self.accountInfo.currentTxList = []
+            self.lastBlockHash="";
+            self.initDatabase();
+            self.getTxList(true);
+        },
         getTxList(isGetData,runTimer) {
             // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
             const tempLastBlock = isGetData ? self.lastBlockHash : '';//如果是获取数据的时候，才开始使用最后的blockHash
@@ -313,7 +320,6 @@ export default {
                         self.setListInfo(data);
                     }else{
                         //对比是否有变化
-                        console.log("2.对比是否有变化")
                         let tempList = data.list;
                         let newHash = tempList[tempList.length-1].hash;
                         let isEqual = true;
@@ -323,14 +329,14 @@ export default {
                             isEqual = self.blockDiff(newHash,self.accountInfo.tx_list[self.pagingSwitch.limit-1].hash );
                         }
 
-                        console.log("isEqual ",isEqual)
+                        // console.log("isEqual ",isEqual)
+                        console.log("2.对比是否变化,判断两次Hash是否相同 => ",isEqual)
                         if(isEqual){
                             //如果是相同的，继续下次循环
                             self.runGetTransTimer();
                         }else{
                             //如果不同，显示msg，并停止获取；
                             self.alertSwitch.isShowMsg = true;
-                            //TODO 点击msg的时候，处理方法
 
                         }
                     }
@@ -357,7 +363,6 @@ export default {
             }
         },
         blockDiff(newHash,oldHash){
-            console.log(newHash , oldHash)
             return oldHash ? newHash === oldHash : true;
         },
         getNextList() {

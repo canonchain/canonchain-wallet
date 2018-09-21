@@ -240,7 +240,7 @@ export default {
             self.$startLogs.info("准备启动 CanonChain :", nodePath);
             this.conMsg = "准备启动节点";
 
-            //如果节点启动了，就不再启用了
+            //如果节点启动了，就不再启用了 TODO 改RPC接口名
             self.$czr.request.accountList().then((data)=>{
                 console.log("已经有节点，不需要启动")
                 self.$startLogs.info("已经有节点，不需要启动;")
