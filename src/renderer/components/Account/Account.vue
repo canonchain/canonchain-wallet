@@ -340,7 +340,10 @@ export default {
 
                         }
                     }
-                });
+                })
+                .catch((error)=>{
+                    self.$walletLogs.error("Account blockList Error",error)
+                })
         },
         setListInfo(data){
             //第一次初始化的
@@ -665,6 +668,9 @@ export default {
                 .then(function(data) {
                     return data;
                 })
+                .catch((error) => {
+                    self.$walletLogs.error("Get Block Error",error.message);
+                })
                 .then(function(data) {
                     if (data.is_stable == "1") {
                         self.accountInfo.tx_list.forEach((ele, index) => {
@@ -736,11 +742,13 @@ export default {
             self.$czr.request
                 .accountExport(self.accountInfo.address)
                 .then(function(data) {
-                    return data.json;
-                })
-                .then(function(accJson) {
-                    self.accountInfo.keystore = accJson;
+                    self.accountInfo.keystore = data.json;
                     self.dialogSwitch.keystore = true;
+                })
+                .catch((error) => {
+                    //TODO Error
+                    self.$walletLogs.error("Account Export Error",error.message);
+                    self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
 

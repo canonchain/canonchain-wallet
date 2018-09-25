@@ -34,6 +34,7 @@ let czr = new Czr();
 Vue.czr = Vue.prototype.$czr = czr;
 
 Vue.prototype.$db = db
+Vue.prototype.$isOnline = true;
 
 
 // Loading i18 language

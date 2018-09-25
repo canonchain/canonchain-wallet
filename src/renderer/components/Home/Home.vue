@@ -141,36 +141,32 @@ export default {
             importInfo: {},
             removeInfo: {},
             intervalId: null
-            
         };
     },
     created() {
         self = this;
-        var ls;
-        this.database = this.$db.get("czr_accounts").value();
         self.initDatabase();
-        this.intervalId = setInterval(() => {
+        self.intervalId = setInterval(() => {
             self.initDatabase();
         }, 1500);
-
-        //获取账号信息
-        // self.getAccounts();
+    },
+    mounted: function () {
+        self.$walletLogs.info("HOME:页面渲染成功")
         if(!getAccountTimer){
             self.runAccountsTimer();
-            self.$walletLogs.info("需要创建")
+            self.$walletLogs.info("HOME:需要新建定时器")
         }else{
-            self.$walletLogs.info("不需要了")
+            self.$walletLogs.info("HOME:定时器已经存在，无需新建")
         }
     },
     computed: {},
     beforeDestroy() {
-        clearInterval(this.intervalId);
-        this.intervalId=null;
-
+        clearInterval(self.intervalId);
+        self.intervalId=null;
     },
     methods: {
         initDatabase() {
-            this.database = this.$db.get("czr_accounts").value();
+            self.database = self.$db.get("czr_accounts").value();
         },
         //Init Start
         initCreateInfo() {
@@ -266,11 +262,8 @@ export default {
                 .accountCreate(self.createInfo.pwd)
                 .then(function(data) {
                     self.createInfo.address = data.account;
-                    return data.account;
-                })
-                .then(function(data) {
                     let params = {
-                        address: data,
+                        address: data.account,
                         tag:
                             self.createInfo.tag ||
                             self.$t("page_home.acc") +
@@ -281,25 +274,33 @@ export default {
 
                     self.initAccount(params);
                     self.createInfo.step = 1;
+                })
+                .catch((error) => {
+                    //TODO Error
+                    self.$walletLogs.error("Account Create Error",error.message);
+                    self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
         downloadKeystore(accVal) {
             self.$czr.request
                 .accountExport(accVal)
                 .then(function(data) {
-                    return data.json;
-                })
-                .then(function(accJson) {
+                    // return data.json;
                     let link = document.createElement("a");
                     link.download = self.getNowTime() + "--" + accVal;
                     link.style.display = "none";
-                    // let blob = new Blob([JSON.stringify(accJson)]);
-                    let blob = new Blob([accJson]);
+                    
+                    let blob = new Blob([data.json]);
                     link.href = URL.createObjectURL(blob);
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
                     self.dialogSwitch.create = false;
+                })
+                .catch((error) => {
+                    //TODO Error
+                    self.$walletLogs.error("Account Export Error",error.message);
+                    self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
         getNowTime: function() {
@@ -380,33 +381,10 @@ export default {
                         return 0;
                     }
                 })
-                .then(function(data) {
-                    if (data === 0) {
-                        //TODO Error
-                        self.$message.error(
-                            self.$t(
-                                "page_home.import_dia.validate_error_keystore"
-                            )
-                        );
-                    } else {
-                        let params = {
-                            address: data,
-                            tag:
-                                self.importInfo.tag ||
-                                self.$t("page_home.acc") +
-                                    (self.database.length + 1),
-                            balance: 0,
-                            send_list:[]
-                        };
-
-                        self.initAccount(params);
-                        self.dialogSwitch.import = false;
-                        self.$message.success(
-                            self.$t(
-                                "page_home.import_dia.imported_account_success"
-                            )
-                        );
-                    }
+                .catch((error) => {
+                    //TODO Error
+                    self.$walletLogs.error("Account Import Error",error.message);
+                    self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
         //Import End
@@ -431,9 +409,7 @@ export default {
             self.$czr.request
                 .accountRemove(self.removeInfo.address, self.removeInfo.pwd)
                 .then(function(data) {
-                    return data;
-                })
-                .then(function(data) {
+                    // return data;
                     if (data.success == "1") {
                         self.$db
                             .get("czr_accounts")
@@ -447,6 +423,11 @@ export default {
                     } else {
                         self.$message.error(self.$t(data.error));
                     }
+                })
+                .catch((error) => {
+                    //TODO Error
+                    self.$walletLogs.error("Account Remove Error",error.message);
+                    self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
         // Remove End
@@ -454,10 +435,11 @@ export default {
         //get Account start
         runAccountsTimer() {
             getAccountTimer = setTimeout(function() {
-                interVal = 0;
-                // console.log("开始 getAccounts")
+                if(interVal){
+                    interVal = 0;
+                }
                 self.getAccounts();
-            }, interVal||50000);
+            }, interVal||15000);
         },
         getAccountsBalances(accountAry) {
             //如果没有被清除，继续调用
@@ -466,6 +448,9 @@ export default {
                 .accountsBalances(accountAry)
                 .then(function(data) {
                     return data.balances;
+                })
+                .catch(function(error){
+                    self.$walletLogs.info(`Accounts Balances Error ${error.message}`)       
                 })
                 .then(function(data) {
                     for (var acc in data) {
@@ -477,17 +462,17 @@ export default {
                             .write();
                     }
                     self.runAccountsTimer();
-                }).catch(function(error){
-                    console.log("Error",error)
-                });
+                })
         },
         getAccounts() {
             self.$czr.request
                 .accountList()
                 .then(function(data) {
                     self.$walletLogs.info("收到accountList结果了",++flagNum)
-                    console.log("收到accountList结果了",flagNum)
                     return data.accounts;
+                })
+                .catch((error)=>{
+                    self.$walletLogs.error("Account List Error",error.message)
                 })
                 .then(function(data) {
                     if (data == "") {
@@ -529,8 +514,6 @@ export default {
                                 .write();
                         }
                     });
-                }).catch((err)=>{
-                    self.$walletLogs.error("accountList Error",err)
                 })
         }
         //get Account End
