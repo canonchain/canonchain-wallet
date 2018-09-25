@@ -1,18 +1,18 @@
 <template>
-  <div class="page-config" :style="{backgroundImage:backgroundImage}">
-    <div class="icon-config">
-      <i class="el-icon-loading"></i>
-      <p class="config-test">配置检测中…</p>
-      <p class="message">{{conMsg}}</p>
+    <div class="page-config" :style="{backgroundImage:backgroundImage}">
+        <div class="icon-config">
+            <i class="el-icon-loading"></i>
+            <p class="config-test">配置检测中…</p>
+            <p class="message">{{conMsg}}</p>
+        </div>
+        <el-dialog title="版本更新提示" :visible.sync="versionDialogSwitch" width="60%" :close-on-click-modal="false" :close-on-press-escape="false" :show-close="false" :modal="false">
+            <span>CanonChain Wallet 已经有新版本，当前版本已停用，请至官网下载最新版钱包。</span>
+            <span slot="footer" class="dialog-footer">
+                <!-- <el-button @click="dropOut">退出钱包 </el-button> -->
+                <el-button type="primary" @click="downloadWallet">去官网下载最新版钱包</el-button>
+            </span>
+        </el-dialog>
     </div>
-    <el-dialog title="版本更新提示" :visible.sync="versionDialogSwitch" width="60%" :close-on-click-modal="false" :close-on-press-escape="false" :show-close="false" :modal="false">
-      <span>CanonChain Wallet 已经有新版本，当前版本已停用，请至官网下载最新版钱包。</span>
-      <span slot="footer" class="dialog-footer">
-        <!-- <el-button @click="dropOut">退出钱包 </el-button> -->
-        <el-button type="primary" @click="downloadWallet">去官网下载最新版钱包</el-button>
-      </span>
-    </el-dialog>
-  </div>
 </template>
 
 <script>
@@ -21,12 +21,11 @@ const path = require("path");
 const { remote, app, shell } = require("electron");
 const axios = require("axios");
 const download = require("download");
-const { spawn, spawnSync, exec, execFile,fork } = require("child_process");
+const { spawn, spawnSync, exec, execFile, fork } = require("child_process");
 const packageJson = require("../../../../package.json");
 // const childPath = require("./child");
 
-
-var self = null;
+let self = null;
 export default {
     name: "Config",
     data() {
@@ -52,15 +51,15 @@ export default {
     computed: {},
     methods: {
         validity() {
-            var self = this;
-            var radom = Math.random();
-            var targeyUrl =
+            let self = this;
+            let radom = Math.random();
+            let targeyUrl =
                 "http://www.canonchain.com/resource/file/canonchain/latest/czrVersion.json" +
                 "?radom=" +
                 radom;
-            axios.get(targeyUrl).then(function(response) {
-                var dataInfo = response.data;
-                var remoteVer = dataInfo.version;
+            axios.get(targeyUrl).then(response => {
+                let dataInfo = response.data;
+                let remoteVer = dataInfo.version;
                 //如果钱包版本和远程一致,就继续执行
                 if (self.walletVer == remoteVer) {
                     self.checkForNewConfig();
@@ -74,7 +73,7 @@ export default {
             shell.openExternal("http://www.canonchain.com/");
         },
         initConfig() {
-            var radom = Math.random();
+            let radom = Math.random();
             this.latest_config = {
                 content: "",
                 BINARY_URL:
@@ -91,13 +90,13 @@ export default {
         },
 
         checkForNewConfig() {
-            var self = this;
+            let self = this;
             this.conMsg = "检测是否有新的 CanonChain 节点文件";
             self.$startLogs.info("检测是否有新的 CanonChain 节点文件 ");
 
             axios
                 .get(self.latest_config.BINARY_URL)
-                .then(function(response) {
+                .then(response => {
                     self.latest_config.content = response.data;
                     self.conMsg = "已获取到最新的节点配置信息";
                     self.$startLogs.info(
@@ -106,12 +105,12 @@ export default {
                     );
                     self.checkLocalConfig();
                 })
-                .catch(function(error) {
+                .catch(error => {
                     self.conMsg = error; //TODO 取本地的，本地取不到，取安装包的配置
                 });
         },
         checkLocalConfig() {
-            var self = this;
+            let self = this;
             this.conMsg = "检测本地是否有节点文件";
             self.$startLogs.info("检测本地是否有节点文件");
             //读取本地二进制配置文件
@@ -152,10 +151,10 @@ export default {
         },
         isUpdate() {
             // 如果新的配置版本可用，然后询问用户是否希望更新
-            var latestVer = this.latest_config.content.clients[
+            let latestVer = this.latest_config.content.clients[
                 this.node_info.NODE_TYPE
             ].version;
-            var localVer = this.local_config.clients[this.node_info.NODE_TYPE]
+            let localVer = this.local_config.clients[this.node_info.NODE_TYPE]
                 .version;
             this.conMsg = "检测是否需要更新";
             self.$startLogs.info(
@@ -173,7 +172,7 @@ export default {
             }
         },
         isDownload() {
-            var self = this;
+            let self = this;
             // 准备节点信息
             const platform = process.platform
                 .replace("darwin", "mac")
@@ -185,7 +184,7 @@ export default {
                 this.node_info.NODE_TYPE
             ].platforms[platform][process.arch].download;
 
-            var options = {
+            let options = {
                 directory: path.join(this.userDataPath, "download"),
                 dirname: "filename",
                 extract: true,
@@ -203,7 +202,7 @@ export default {
                         this.node_info.binaryVersion.bin
                     )
                 );
-                var stats = fs.statSync(
+                let stats = fs.statSync(
                     path.join(
                         options.directory,
                         this.node_info.binaryVersion.bin
@@ -232,7 +231,7 @@ export default {
             }
         },
         runCanonChain() {
-            var nodePath = path.join(
+            let nodePath = path.join(
                 this.userDataPath,
                 "download",
                 this.node_info.binaryVersion.bin
@@ -241,34 +240,37 @@ export default {
             this.conMsg = "准备启动节点";
 
             //如果节点启动了，就不再启用了 TODO 改RPC接口名
-            self.$czr.request.accountList().then((data)=>{
-                console.log("已经有节点，不需要启动")
-                self.$startLogs.info("已经有节点，不需要启动;")
-                self.$router.push({ path: "home" });
-            }).catch(function(error) {
-                console.log("本地没有节点，需要启动")
-                self.$startLogs.info("本地没有节点，需要启动")
-                var ls = spawn(nodePath, [
-                    "--daemon",
-                    "--rpc_enable",
-                    "--rpc_enable_control"
-                ]);
-                // var ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
+            self.$czr.request
+                .accountList()
+                .then(data => {
+                    console.log("已经有节点，不需要启动");
+                    self.$startLogs.info("已经有节点，不需要启动;");
+                    self.$router.push({ path: "home" });
+                })
+                .catch(error => {
+                    console.log("本地没有节点，需要启动");
+                    self.$startLogs.info("本地没有节点，需要启动");
+                    let ls = spawn(nodePath, [
+                        "--daemon",
+                        "--rpc_enable",
+                        "--rpc_enable_control"
+                    ]);
+                    // let ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
 
-                // let ls = fork("./child");
+                    // let ls = fork("./child");
 
-                self.conMsg = "节点启动成功，准备进入钱包.";
-                self.$startLogs.info("CanonChainPid", ls.pid);
-                sessionStorage.setItem("CanonChainPid", ls.pid);
-                //进程守护
-                self.guardNode(ls, nodePath);
-                self.$router.push({ path: "home" });
-            })
+                    self.conMsg = "节点启动成功，准备进入钱包.";
+                    self.$startLogs.info("CanonChainPid", ls.pid);
+                    sessionStorage.setItem("CanonChainPid", ls.pid);
+                    //进程守护
+                    self.guardNode(ls, nodePath);
+                    self.$router.push({ path: "home" });
+                });
         },
         guardNode(ls, nodePath) {
-            var self = this;
+            let self = this;
             self.$nodeLogs.info("守护进程开启", ls.pid);
-            ls.on("exit", function() {
+            ls.on("exit", () => {
                 ls = spawn(path.join(nodePath), [
                     "--daemon",
                     "--rpc_enable",

@@ -1,31 +1,31 @@
 <template>
-  <header class="header b-flex">
-    <ul class="header-nav">
-      <li>
-        <router-link to="/home" class="active">{{ $t('model_header.home') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/transfer">{{ $t('model_header.transfer') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/contacts">{{ $t('model_header.contacts') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/setting">{{ $t('model_header.setting') }}</router-link>
-      </li>
-    </ul>
-    <div class="has-assets-czr">
-      <span class="testnet">{{ $t('model_header.testnet') }} 
-         - <span v-if="this.online" class="online">在线</span>
-        <span v-else class="unonline">离线</span>
-      </span>
-    </div>
-  </header>
+    <header class="header b-flex">
+        <ul class="header-nav">
+            <li>
+                <router-link to="/home" class="active">{{ $t('model_header.home') }}</router-link>
+            </li>
+            <li>
+                <router-link to="/transfer">{{ $t('model_header.transfer') }}</router-link>
+            </li>
+            <li>
+                <router-link to="/contacts">{{ $t('model_header.contacts') }}</router-link>
+            </li>
+            <li>
+                <router-link to="/setting">{{ $t('model_header.setting') }}</router-link>
+            </li>
+        </ul>
+        <div class="has-assets-czr">
+            <span class="testnet">{{ $t('model_header.testnet') }} -
+                <span v-if="this.online" class="online">在线</span>
+                <span v-else class="unonline">离线</span>
+            </span>
+        </div>
+    </header>
 </template>
 
 <script>
 import { setTimeout } from "timers";
-let self ;
+let self;
 let continued = 2000;
 export default {
     name: "Header",
@@ -37,7 +37,7 @@ export default {
         };
     },
     created() {
-      self=this;
+        self = this;
         this.onlineTimer();
     },
     computed: {},
@@ -50,21 +50,24 @@ export default {
         getStatus() {
             self.$czr.request
                 .accountList()
-                .then(function(res) {
-                    if(continued = 15000){
-                      continued = 2000;
+                .then(res => {
+                    if ((continued = 15000)) {
+                        continued = 2000;
                     }
                     self.onlineTimer();
                     self.online = true;
                 })
-                .catch(function(error) {
+                .catch(error => {
                     self.onlineTimer();
                     self.online = false;
-                    if(continued = 2000){
-                      continued = 15000;
+                    if ((continued = 2000)) {
+                        continued = 15000;
                     }
 
-                    self.$walletLogs.error("Header : Online Error",error.message);
+                    self.$walletLogs.error(
+                        "Header : Online Error",
+                        error.message
+                    );
                 });
         }
     }
@@ -107,11 +110,11 @@ export default {
     border-bottom: 3px solid #2d2b5d;
 }
 
-.online{
-  color: #67C23A;
+.online {
+    color: #67c23a;
 }
-.unonline{
-  color: #F56C6C;
+.unonline {
+    color: #f56c6c;
 }
 </style>
 

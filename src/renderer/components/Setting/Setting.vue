@@ -1,31 +1,31 @@
 <template>
-  <div class="page-setting">
-    <div class="setting-banner">
-      <div class="setting-center">
-        <h1 class="setting-tit">{{ $t('page_setting.tit') }} </h1>
-      </div>
-    </div>
-    <div class="setting-content">
-      <!-- <div class="selected-wrap">
+    <div class="page-setting">
+        <div class="setting-banner">
+            <div class="setting-center">
+                <h1 class="setting-tit">{{ $t('page_setting.tit') }} </h1>
+            </div>
+        </div>
+        <div class="setting-content">
+            <!-- <div class="selected-wrap">
         <span>{{ $t('page_setting.lang') }} </span>
         <el-select v-model="value" @change="selectVal">
           <el-option v-for="item in langOptions" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
         </el-select>
       </div> -->
-      <el-form label-position="right" label-width="340px">
-        <el-form-item :label="$t('page_setting.lang')">
-          <el-select v-model="value" @change="selectVal">
-            <el-option v-for="item in langOptions" :key="item.value" :label="item.label" :value="item.value">
-            </el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item label="版本号">
-          <p>{{walletVer}}</p>
-        </el-form-item>
-      </el-form>
+            <el-form label-position="right" label-width="340px">
+                <el-form-item :label="$t('page_setting.lang')">
+                    <el-select v-model="value" @change="selectVal">
+                        <el-option v-for="item in langOptions" :key="item.value" :label="item.label" :value="item.value">
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="版本号">
+                    <p>{{walletVer}}</p>
+                </el-form-item>
+            </el-form>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -40,7 +40,7 @@ export default {
         };
     },
     computed: {
-        langOptions: function() {
+        langOptions() {
             let langs = this.$db.get("czr_setting.lang_conf").value();
             let tempOption = [];
             for (const lang in langs) {
@@ -53,7 +53,7 @@ export default {
         }
     },
     methods: {
-        selectVal: function(val) {
+        selectVal(val) {
             //Write to the database
             this.$db
                 .read()

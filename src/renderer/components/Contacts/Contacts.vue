@@ -69,7 +69,7 @@
 </template>
 
 <script>
-var self;
+let self;
 export default {
     name: "Contacts",
     data() {
@@ -84,7 +84,7 @@ export default {
         };
     },
     created() {
-        self=this;
+        self = this;
         this.database = this.$db.get("czr_contacts.contact_ary").value();
     },
     methods: {
@@ -99,8 +99,8 @@ export default {
             this.dialogSwitch.delete = true;
         },
 
-        addContact: function() {
-            var self = this;
+        addContact() {
+            let self = this;
             if (!this.createInfo.tag) {
                 this.$message.error(this.$t("page_contacts.msg_info.no_tag"));
                 return;
@@ -122,10 +122,10 @@ export default {
             //TODO validate
             this.$czr.request
                 .accountValidate(self.createInfo.address)
-                .then(function(data) {
+                .then(data => {
                     return data.valid;
                 })
-                .then(function(data) {
+                .then(data => {
                     if (data == "1") {
                         //OK
                         let tempCon = {
@@ -152,7 +152,7 @@ export default {
                 });
         },
 
-        initAddContact: function(params) {
+        initAddContact: params => {
             let self = this;
             let contact = this.$db
                 .get("czr_contacts.contact_ary")
@@ -176,7 +176,7 @@ export default {
             );
             this.dialogSwitch.create = false;
         },
-        deleteContact: function() {
+        deleteContact() {
             this.$db
                 .get("czr_contacts.contact_ary")
                 .remove({ address: this.deleteInfo.address })

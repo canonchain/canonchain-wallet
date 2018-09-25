@@ -45,22 +45,22 @@
                             <p>{{ $t('page_account.transfer_log_null') }}</p>
                         </div>
                         <div class="transfer-log" v-if="sendTransCurrent.tempAry.length!==0">
-                                <template v-for="item in sendTransCurrent.tempAry">
-                                    <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
-                                        <div class="transfer-info">
-                                            <p class="by-address">{{item.to}}</p>
-                                            <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
-                                        </div>
-                                        <div class="transfer-assets">
-                                            <strong class="assets">- {{item.amount | toCZRVal }}</strong>
-                                        </div>
+                            <template v-for="item in sendTransCurrent.tempAry">
+                                <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
+                                    <div class="transfer-info">
+                                        <p class="by-address">{{item.to}}</p>
+                                        <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
                                     </div>
-                                </template>
-                                <div class="pagin-wrap b-flex b-flex-justify" v-if="sendTransCurrent.sourcesAry.length>=sendTransCurrent.limit">
-                                    <el-button @click="currentBefore" :disabled="sendTransCurrent.beforeDisabled" class="before-btn">上一页</el-button>
-                                    <el-button @click="currentNext" :disabled="sendTransCurrent.nextDisabled" class="next-btn">下一页</el-button>
+                                    <div class="transfer-assets">
+                                        <strong class="assets">- {{item.amount | toCZRVal }}</strong>
+                                    </div>
                                 </div>
+                            </template>
+                            <div class="pagin-wrap b-flex b-flex-justify" v-if="sendTransCurrent.sourcesAry.length>=sendTransCurrent.limit">
+                                <el-button @click="currentBefore" :disabled="sendTransCurrent.beforeDisabled" class="before-btn">上一页</el-button>
+                                <el-button @click="currentNext" :disabled="sendTransCurrent.nextDisabled" class="next-btn">下一页</el-button>
                             </div>
+                        </div>
                     </el-tab-pane>
                     <el-tab-pane label="全部交易" name="second">
                         <el-alert v-if="alertSwitch.isShowMsg" center title="当前账户有新的交易信息" close-text="立即查看" type="warning" @close="refreshTrans">
@@ -203,10 +203,10 @@
 <script>
 const { clipboard } = require("electron");
 import QRCode from "qrcode";
-import { setInterval, clearInterval,setTimeout, clearTimeout } from "timers";
+import { setInterval, clearInterval, setTimeout, clearTimeout } from "timers";
 
 let self = null;
-let CONTINUATION = 5000;//定时器间隔时间
+let CONTINUATION = 5000; //定时器间隔时间
 // let BeforeTime  = 1;
 export default {
     name: "Account",
@@ -218,18 +218,18 @@ export default {
                 keystore: false,
                 txInfo: false
             },
-            timerSwitch:{
-                initData:null,
-                updateBlocksTimer:null,
-                getLstestTrans:null//获取当前账户下，最新的trans
+            timerSwitch: {
+                initData: null,
+                updateBlocksTimer: null,
+                getLstestTrans: null //获取当前账户下，最新的trans
             },
             pagingSwitch: {
                 limit: 10,
                 beforeDisabled: true,
                 nextDisabled: false
             },
-            alertSwitch:{
-                isShowMsg:false
+            alertSwitch: {
+                isShowMsg: false
             },
             loadingSwitch: true,
             address: this.$route.params.id,
@@ -241,21 +241,21 @@ export default {
             lastBlockHash: "",
             editTag: "",
             activeName: "first",
-            sendTransCurrent:{
-                beforeDisabled:true,
+            sendTransCurrent: {
+                beforeDisabled: true,
                 nextDisabled: false,
-                page:1,
-                limit:10,
-                sourcesAry : [],
-                tempAry:[],
-                totalPage:0,
-                unstableAry:[]
+                page: 1,
+                limit: 10,
+                sourcesAry: [],
+                tempAry: [],
+                totalPage: 0,
+                unstableAry: []
             }
         };
     },
     created() {
         self = this;
-        QRCode.toDataURL(this.address, { width: 800 }, function(err, url) {
+        QRCode.toDataURL(this.address, { width: 800 }, (err, url) => {
             if (err) {
                 self.$walletLogs.info(err);
                 return;
@@ -263,7 +263,7 @@ export default {
             self.qrImgUrl = url;
         });
         self.initDatabase();
-        self.getTxList(true,true);
+        self.getTxList(true, true);
         self.initTag();
         self.initTransItem();
 
@@ -281,28 +281,28 @@ export default {
     },
     methods: {
         //获取所有交易 Start
-        runGetTransTimer(){
-            self.timerSwitch.updateBlocksTimer = setTimeout(function(){
+        runGetTransTimer() {
+            self.timerSwitch.updateBlocksTimer = setTimeout(() => {
                 self.getTxList();
-            },CONTINUATION);
+            }, CONTINUATION);
         },
-        refreshTrans(){
+        refreshTrans() {
             self.accountInfo.tx_list = [];
-            self.accountInfo.currentTxList = []
-            self.lastBlockHash="";
+            self.accountInfo.currentTxList = [];
+            self.lastBlockHash = "";
             self.initDatabase();
             self.getTxList(true);
         },
-        getTxList(isGetData,runTimer) {
+        getTxList(isGetData, runTimer) {
             // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
-            const tempLastBlock = isGetData ? self.lastBlockHash : '';//如果是获取数据的时候，才开始使用最后的blockHash
+            const tempLastBlock = isGetData ? self.lastBlockHash : ""; //如果是获取数据的时候，才开始使用最后的blockHash
             self.$czr.request
                 .blockList(
                     self.accountInfo.address,
                     self.pagingSwitch.limit,
                     tempLastBlock
                 )
-                .then(function(data) {
+                .then(data => {
                     if (data.error) {
                         self.$message({
                             message: data.error,
@@ -312,40 +312,56 @@ export default {
                         return;
                     }
 
-                    if(isGetData){
-                        console.log("1.获取数据的")
-                        if(runTimer){
+                    if (isGetData) {
+                        console.log("1.获取数据的");
+                        if (runTimer) {
                             self.runGetTransTimer();
                         }
                         self.setListInfo(data);
-                    }else{
+                    } else {
                         //对比是否有变化
                         let tempList = data.list;
-                        let newHash = tempList[tempList.length-1].hash;
+                        let newHash = tempList[tempList.length - 1].hash;
                         let isEqual = true;
-                        if (tempList.length > 0 && tempList.length<self.pagingSwitch.limit ) {
-                            isEqual = self.blockDiff(newHash,self.accountInfo.tx_list[tx_list.length-1].hash );
-                        }else if(tempList.length = self.pagingSwitch.limit){
-                            isEqual = self.blockDiff(newHash,self.accountInfo.tx_list[self.pagingSwitch.limit-1].hash );
+                        if (
+                            tempList.length > 0 &&
+                            tempList.length < self.pagingSwitch.limit
+                        ) {
+                            isEqual = self.blockDiff(
+                                newHash,
+                                self.accountInfo.tx_list[tx_list.length - 1]
+                                    .hash
+                            );
+                        } else if (
+                            (tempList.length = self.pagingSwitch.limit)
+                        ) {
+                            isEqual = self.blockDiff(
+                                newHash,
+                                self.accountInfo.tx_list[
+                                    self.pagingSwitch.limit - 1
+                                ].hash
+                            );
                         }
 
                         // console.log("isEqual ",isEqual)
-                        console.log("2.对比是否变化,判断两次Hash是否相同 => ",isEqual)
-                        if(isEqual){
+                        console.log(
+                            "2.对比是否变化,判断两次Hash是否相同 => ",
+                            isEqual
+                        );
+                        if (isEqual) {
                             //如果是相同的，继续下次循环
                             self.runGetTransTimer();
-                        }else{
+                        } else {
                             //如果不同，显示msg，并停止获取；
                             self.alertSwitch.isShowMsg = true;
-
                         }
                     }
                 })
-                .catch((error)=>{
-                    self.$walletLogs.error("Account blockList Error",error)
-                })
+                .catch(error => {
+                    self.$walletLogs.error("Account blockList Error", error);
+                });
         },
-        setListInfo(data){
+        setListInfo(data) {
             //第一次初始化的
             data = !!data ? data : { list: [] };
             self.loadingSwitch = false;
@@ -361,11 +377,10 @@ export default {
                 self.pagingSwitch.nextDisabled = true;
             } else {
                 self.pagingSwitch.nextDisabled = false;
-                self.lastBlockHash =
-                    data.list[data.list.length - 1].hash; //需要拿新的HASH，准备下次请求
+                self.lastBlockHash = data.list[data.list.length - 1].hash; //需要拿新的HASH，准备下次请求
             }
         },
-        blockDiff(newHash,oldHash){
+        blockDiff(newHash, oldHash) {
             return oldHash ? newHash === oldHash : true;
         },
         getNextList() {
@@ -374,11 +389,11 @@ export default {
                 - 等于   需要获取
                 - 不等   从tx_list中获取
             */
-            var _currentTxList = self.accountInfo.currentTxList;
-            var currentTxListHashBlock =
+            let _currentTxList = self.accountInfo.currentTxList;
+            let currentTxListHashBlock =
                 _currentTxList[_currentTxList.length - 1].hash;
-            var _txList = self.accountInfo.tx_list;
-            var lastTxListHashBlock = _txList[_txList.length - 1].hash;
+            let _txList = self.accountInfo.tx_list;
+            let lastTxListHashBlock = _txList[_txList.length - 1].hash;
             // console.log("currentTxListHashBlock == lastTxListHashBlock",currentTxListHashBlock == lastTxListHashBlock)
             if (currentTxListHashBlock == lastTxListHashBlock) {
                 //获取
@@ -389,13 +404,13 @@ export default {
                 //不获取
                 // console.log("不获取")
                 //先把当前的哈希，替换为下一个hash
-                var startHash = currentTxListHashBlock;
-                var tempAry = [];
-                var ele;
-                for (var j = 0; j < _txList.length; j++) {
+                let startHash = currentTxListHashBlock;
+                let tempAry = [];
+                let ele;
+                for (let j = 0; j < _txList.length; j++) {
                     ele = _txList[j];
-                    var _isSet = ele.hash == startHash;
-                    var _isGoOn = tempAry.length < self.pagingSwitch.limit;
+                    let _isSet = ele.hash == startHash;
+                    let _isGoOn = tempAry.length < self.pagingSwitch.limit;
                     // console.log("_isSet _isGoOn",_isSet,_isGoOn)
                     if (_isSet && _isGoOn) {
                         //如果是最后一个item，就不要循环了
@@ -411,8 +426,8 @@ export default {
                     }
                 }
                 // _txList.forEach((ele, index) => {
-                //     var _isSet = ele.hash == startHash;
-                //     var _isGoOn = tempAry.length < self.pagingSwitch.limit;
+                //     let _isSet = ele.hash == startHash;
+                //     let _isGoOn = tempAry.length < self.pagingSwitch.limit;
                 //     // console.log("_isSet _isGoOn",_isSet,_isGoOn)
                 //     if (_isSet && _isGoOn) {
                 //         startHash = _txList[index + 1].hash;
@@ -435,46 +450,46 @@ export default {
             = 开始 > 结束   返回
             = 开始 > 中间   返回
             */
-            var localList = self.accountInfo.tx_list;
-            var targetAry = [];
+            let localList = self.accountInfo.tx_list;
+            let targetAry = [];
             // console.log("tx_list", self.accountInfo.tx_list);
             // console.log("lastBlockHash", self.lastBlockHash);
             if (self.lastBlockHash) {
                 //当前list最后数据的hashBlock 就是当前hash；这时候需要换,换成上一页最后一个hash；
-                var _currentTxList = self.accountInfo.currentTxList;
-                var currentTxListHashBlock =
+                let _currentTxList = self.accountInfo.currentTxList;
+                let currentTxListHashBlock =
                     _currentTxList[_currentTxList.length - 1].hash;
                 if (self.lastBlockHash == currentTxListHashBlock) {
                     //当前 lastBlockHash 在 tx_list 中的索引
-                    var currentIndexInTxLixt = 0;
+                    let currentIndexInTxLixt = 0;
                     localList.forEach((ele, index) => {
                         if (ele.hash == self.lastBlockHash) {
                             currentIndexInTxLixt = index;
                         }
                     });
 
-                    var currentTxLeng = self.accountInfo.currentTxList.length;
-                    var lessNum =
+                    let currentTxLeng = self.accountInfo.currentTxList.length;
+                    let lessNum =
                         self.pagingSwitch.limit > currentTxLeng
                             ? currentTxLeng
                             : self.pagingSwitch.limit;
-                    var targetIndex = currentIndexInTxLixt - lessNum;
+                    let targetIndex = currentIndexInTxLixt - lessNum;
                     if (targetIndex < 0) {
                         self.pagingSwitch.beforeDisabled = true;
                         self.loadingSwitch = false;
                         return;
                     }
 
-                    // var targetIndex = currentIndexInTxLixt - self.pagingSwitch.limit;
+                    // let targetIndex = currentIndexInTxLixt - self.pagingSwitch.limit;
                     // console.log("换blockHash", targetIndex,currentIndexInTxLixt , lessNum ,self.pagingSwitch.limit , currentTxLeng);
                     self.lastBlockHash = localList[targetIndex].hash;
                 }
 
                 //如果有lastBlockHash
-                for (var i = localList.length - 1; i >= 0; i--) {
+                for (let i = localList.length - 1; i >= 0; i--) {
                     //如果当前Hash 等于 循环的哈希,开始取值
-                    var isSet = localList[i].hash == self.lastBlockHash; //是否取值
-                    var isGoOn = targetAry.length < self.pagingSwitch.limit; //是否继续取值
+                    let isSet = localList[i].hash == self.lastBlockHash; //是否取值
+                    let isGoOn = targetAry.length < self.pagingSwitch.limit; //是否继续取值
                     if (isSet && isGoOn) {
                         targetAry.unshift(localList[i]);
                         self.lastBlockHash = i > 0 ? localList[i - 1].hash : "";
@@ -509,86 +524,94 @@ export default {
         //获取所有交易 End
 
         //当前账户发送的交易 Start
-        initSendTrans(isFirstInit){
-            console.log("初始化数据了",isFirstInit)
-            let _current      = this.sendTransCurrent;
-            _current.sourcesAry = this.$db.get('czr_accounts')
-                .find({address: this.address})
-                .get('send_list')
-                .value()
+        initSendTrans(isFirstInit) {
+            console.log("初始化数据了", isFirstInit);
+            let _current = this.sendTransCurrent;
+            _current.sourcesAry = this.$db
+                .get("czr_accounts")
+                .find({ address: this.address })
+                .get("send_list")
+                .value();
             // 按照时间排序
-            _current.sourcesAry.sort(function(a,b){
-                return b.exec_timestamp-a.exec_timestamp;
+            _current.sourcesAry.sort((a, b) => {
+                return b.exec_timestamp - a.exec_timestamp;
             });
-            if(isFirstInit){
+            if (isFirstInit) {
                 self.filterUnstable();
             }
-
         },
-        filterUnstable(){
-            let _current      = this.sendTransCurrent;
+        filterUnstable() {
+            let _current = this.sendTransCurrent;
             // 找出不稳定的block is_stable
             // _current.unstableAry = []
-            _current.sourcesAry.forEach((ele)=>{
-                if(ele.is_stable!=="1"){
+            _current.sourcesAry.forEach(ele => {
+                if (ele.is_stable !== "1") {
                     _current.unstableAry.push(ele.hash);
                 }
             });
-            self.$walletLogs.info("需要轮询的 unstableAry",_current.unstableAry);
-            _current.tempAry = _current.sourcesAry.slice(0,10);
+            self.$walletLogs.info(
+                "需要轮询的 unstableAry",
+                _current.unstableAry
+            );
+            _current.tempAry = _current.sourcesAry.slice(0, 10);
             _current.page = 1;
-            _current.totalPage = Math.ceil(_current.sourcesAry.length/_current.limit);
+            _current.totalPage = Math.ceil(
+                _current.sourcesAry.length / _current.limit
+            );
         },
-        currentBefore(){
-            let _current      = this.sendTransCurrent;
-            const curPage       = _current.page;
-            const curSliceStart = _current.limit*(curPage-2);
-            const curSliceEnd   = curSliceStart+_current.limit;
-            _current.nextDisabled=false;
-            if(curPage>1){
-                _current.tempAry = _current.sourcesAry.slice(curSliceStart,curSliceEnd);
+        currentBefore() {
+            let _current = this.sendTransCurrent;
+            const curPage = _current.page;
+            const curSliceStart = _current.limit * (curPage - 2);
+            const curSliceEnd = curSliceStart + _current.limit;
+            _current.nextDisabled = false;
+            if (curPage > 1) {
+                _current.tempAry = _current.sourcesAry.slice(
+                    curSliceStart,
+                    curSliceEnd
+                );
                 _current.page--;
-                if(_current.page===1){
-                    _current.beforeDisabled=true;
+                if (_current.page === 1) {
+                    _current.beforeDisabled = true;
                 }
             }
-            
         },
-        currentNext(){
-            let _current      = this.sendTransCurrent;
-            const curPage       = _current.page;
-            const curSliceStart = _current.limit*curPage;
-            const curSliceEnd   = curSliceStart+_current.limit;
-            _current.beforeDisabled=false;
-            if(curPage<_current.totalPage){
-                _current.tempAry = _current.sourcesAry.slice(curSliceStart,curSliceEnd);
+        currentNext() {
+            let _current = this.sendTransCurrent;
+            const curPage = _current.page;
+            const curSliceStart = _current.limit * curPage;
+            const curSliceEnd = curSliceStart + _current.limit;
+            _current.beforeDisabled = false;
+            if (curPage < _current.totalPage) {
+                _current.tempAry = _current.sourcesAry.slice(
+                    curSliceStart,
+                    curSliceEnd
+                );
                 _current.page++;
-                if(_current.page===_current.totalPage){
-                    _current.nextDisabled=true;
+                if (_current.page === _current.totalPage) {
+                    _current.nextDisabled = true;
                 }
             }
         },
-        blocksStatus(){
-            self.timerSwitch.updateBlocksTimer = setTimeout(function() {
+        blocksStatus() {
+            self.timerSwitch.updateBlocksTimer = setTimeout(() => {
                 //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
                 // console.log("开始更新发送为稳定的Block")
-                self.updateBlocks()
+                self.updateBlocks();
             }, CONTINUATION);
         },
-        updateBlocks(){
+        updateBlocks() {
             //TODO 改接口名
             self.$czr.request
-                .blockList(
-                    self.accountInfo.address,
-                    self.pagingSwitch.limit)
-                .then(function(data) {
+                .blockList(self.accountInfo.address, self.pagingSwitch.limit)
+                .then(data => {
                     return data;
                 })
-                .then(function(data) {
+                .then(data => {
                     let isModiTrans = false;
-                    for(let i =0,length = data.list.length;i<length;){
+                    for (let i = 0, length = data.list.length; i < length; ) {
                         const tempItem = data.list[i];
-                        if(tempItem.is_stable ==="1"){
+                        if (tempItem.is_stable === "1") {
                             let tempVal = self.$db
                                 .read()
                                 .get("czr_accounts")
@@ -598,17 +621,22 @@ export default {
                                 .assign(tempItem)
                                 .write();
                             // 如果成功了，从 unstableAry 删除，并把最新数据写入数据库
-                            self.sendTransCurrent.unstableAry.forEach((ele,index)=>{
-                                if (ele.hash == tempItem.hash) {
-                                    self.sendTransCurrent.unstableAry.splice(index,1)
+                            self.sendTransCurrent.unstableAry.forEach(
+                                (ele, index) => {
+                                    if (ele.hash == tempItem.hash) {
+                                        self.sendTransCurrent.unstableAry.splice(
+                                            index,
+                                            1
+                                        );
+                                    }
                                 }
-                            })
+                            );
                             isModiTrans = true;
                         }
                         i++;
                     }
                     self.blocksStatus();
-                    if(isModiTrans){
+                    if (isModiTrans) {
                         self.initSendTrans();
                     }
                 });
@@ -616,7 +644,7 @@ export default {
         //当前账户发送的交易 End
 
         //Init Start
-        initTag: function() {
+        initTag() {
             this.editTag = this.accountInfo.tag;
         },
         initTransItem() {
@@ -637,7 +665,7 @@ export default {
             };
         },
         initDatabase() {
-            var keystoreFile,
+            let keystoreFile,
                 txListAry = [],
                 currentList = [];
             if (this.accountInfo) {
@@ -665,13 +693,13 @@ export default {
         getBlock(hash) {
             self.$czr.request
                 .getBlock(hash)
-                .then(function(data) {
+                .then(data => {
                     return data;
                 })
-                .catch((error) => {
-                    self.$walletLogs.error("Get Block Error",error.message);
+                .catch(error => {
+                    self.$walletLogs.error("Get Block Error", error.message);
                 })
-                .then(function(data) {
+                .then(data => {
                     if (data.is_stable == "1") {
                         self.accountInfo.tx_list.forEach((ele, index) => {
                             if (data.hash == ele.hash) {
@@ -695,7 +723,7 @@ export default {
         },
 
         //Copy Address
-        copyAddress: function() {
+        copyAddress() {
             clipboard.writeText(this.address);
             this.$message({
                 message: this.$t("page_account.msg_info.ads_copy_success"),
@@ -709,11 +737,11 @@ export default {
             this.dialogSwitch.txInfo = true;
         },
         //Show Qrcode
-        showQrCode: function() {
+        showQrCode() {
             this.dialogSwitch.qrCode = true;
         },
         //Edit Tag
-        setEditTag: function() {
+        setEditTag() {
             if (!this.editTag) {
                 this.$message.error(this.$t("page_account.edit_dia.no_tag"));
                 return;
@@ -738,16 +766,19 @@ export default {
 
         //export Keystore
         exportKeystore() {
-            var self = this;
+            let self = this;
             self.$czr.request
                 .accountExport(self.accountInfo.address)
-                .then(function(data) {
+                .then(data => {
                     self.accountInfo.keystore = data.json;
                     self.dialogSwitch.keystore = true;
                 })
-                .catch((error) => {
+                .catch(error => {
                     //TODO Error
-                    self.$walletLogs.error("Account Export Error",error.message);
+                    self.$walletLogs.error(
+                        "Account Export Error",
+                        error.message
+                    );
                     self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
@@ -774,7 +805,7 @@ export default {
             document.body.removeChild(link);
             this.dialogSwitch.keystore = false;
         },
-        getNowTime: function() {
+        getNowTime() {
             let date = new Date();
             let addZero = this.addZero;
             let LocalTime =
@@ -789,20 +820,20 @@ export default {
                 addZero(date.getSeconds());
             return LocalTime;
         },
-        addZero: function(val) {
+        addZero(val) {
             return val < 10 ? "0" + val : val;
         }
     },
     filters: {
-        toCZRVal: function(val) {
+        toCZRVal(val) {
             if (!val) {
                 return 0;
             }
             let tempVal = self.$czr.utils.fromWei(val, "czr");
-            var reg = /(\d+(?:\.)?)(\d{0,4})/;
-            var regAry = reg.exec(tempVal);
-            var integer = regAry[1];
-            var decimal = regAry[2];
+            let reg = /(\d+(?:\.)?)(\d{0,4})/;
+            let regAry = reg.exec(tempVal);
+            let integer = regAry[1];
+            let decimal = regAry[2];
             if (decimal) {
                 while (decimal.length < 4) {
                     decimal += "0";
@@ -810,17 +841,17 @@ export default {
             }
             return integer + decimal; //TODO Keep 4 decimal places
         },
-        toCZRFull: function(val) {
+        toCZRFull(val) {
             let tempVal = self.$czr.utils.fromWei(val, "czr");
             return tempVal;
         },
-        toDate: function(val) {
+        toDate(val) {
             if (val == "0" || !val) {
                 return "-";
             }
             let newDate = new Date();
             newDate.setTime(val * 1000);
-            let addZero = function(val) {
+            let addZero = val => {
                 return val < 10 ? "0" + val : val;
             };
             return (
@@ -940,7 +971,7 @@ export default {
     cursor: pointer;
     -webkit-user-select: none;
 }
-.transfer-log .transfer-item:hover{
+.transfer-log .transfer-item:hover {
     background-color: #f5f7fa;
 }
 .account-content .transfer-log .transfer-info {

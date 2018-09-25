@@ -123,7 +123,7 @@ export default {
                 password: ""
             },
             submitInfo: {},
-            isSubmit:false,
+            isSubmit: false,
 
             toAccount: "",
             amount: 0,
@@ -171,13 +171,13 @@ export default {
             this.database = this.$db.get("czr_accounts").value();
         },
         //选择联系人
-        confrimContacts: function() {
+        confrimContacts() {
             this.toAccount = this.selectedContact;
             this.dialogSwitch.contacts = false;
         },
 
         //发送全部金额
-        sendAllAmount: function() {
+        sendAllAmount() {
             if (this.checkedAll) {
                 let weiVal = this.accountInfo.balance;
                 let targetVal = self.$czr.utils.fromWei(weiVal, "czr");
@@ -188,15 +188,15 @@ export default {
         },
 
         //确认验证
-        validateForm: function() {
-            var self = this;
-            var reg = /^\d+(\.\d{1,18})?$/;
-            var regObj = reg.exec(self.amount);
-            var czrAmount = parseFloat(
+        validateForm() {
+            let self = this;
+            let reg = /^\d+(\.\d{1,18})?$/;
+            let regObj = reg.exec(self.amount);
+            let czrAmount = parseFloat(
                 self.$czr.utils.toWei(self.amount, "czr")
             );
 
-            console.log("validateForm")
+            console.log("validateForm");
 
             if (!self.toAccount) {
                 self.$message.error(
@@ -229,18 +229,18 @@ export default {
             //     return;
             // }
 
-            console.log(self.$czr.request
-                .accountValidate);
+            console.log(self.$czr.request.accountValidate);
             self.$czr.request
                 .accountValidate(self.toAccount)
-                .then(function(data) {
-                    console.log("accountValidate then",data)
+                .then(data => {
+                    console.log("accountValidate then", data);
                     return data.valid;
-                }).catch(function(error){
-                    console.log("accountValidate catch",error)
                 })
-                .then(function(data) {
-                    console.log("then",data)
+                .catch(error => {
+                    console.log("accountValidate catch", error);
+                })
+                .then(data => {
+                    console.log("then", data);
                     if (data == "1") {
                         self.dialogSwitch.confrim = true;
                     } else if (data == "0") {
@@ -248,16 +248,16 @@ export default {
                             self.$t("page_transfer.msg_info.address_err")
                         );
                     }
-                })
+                });
         },
-        openPwd:function(){
-            self.fromInfo.password='';
+        openPwd() {
+            self.fromInfo.password = "";
         },
-        sendTransaction: function() {
+        sendTransaction() {
             let self = this;
-            if(!self.isSubmit){
-                self.isSubmit=true;
-            }else{
+            if (!self.isSubmit) {
+                self.isSubmit = true;
+            } else {
                 return;
             }
             let amountValue = self.$czr.utils.toWei(this.amount, "czr");
@@ -274,10 +274,10 @@ export default {
 
             self.$czr.request
                 .send(sendObj)
-                .then(function(data) {
+                .then(data => {
                     return data;
                 })
-                .then(function(data) {
+                .then(data => {
                     if (!data.error) {
                         self.$message.success(
                             self.$t("page_transfer.msg_info.send_success")
@@ -285,35 +285,38 @@ export default {
                         //Clear data
                         self.dialogSwitch.confrim = false;
                         self.dialogSwitch.password = false;
-                        //TODO 写当前的HASH 
+                        //TODO 写当前的HASH
                         //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
-                        let sendBlockInfo={
+                        let sendBlockInfo = {
                             hash: data.block,
-                            from:self.fromInfo.account,
-                            to  :self.toAccount,
+                            from: self.fromInfo.account,
+                            to: self.toAccount,
                             amount: amountValue,
-                            exec_timestamp : Math.ceil(new Date().getTime()/1000)
-                        }
-                        self.writeTransToSql(sendBlockInfo)
+                            exec_timestamp: Math.ceil(
+                                new Date().getTime() / 1000
+                            )
+                        };
+                        self.writeTransToSql(sendBlockInfo);
                         console.log(data);
                         // self.$router.push("/account/" + self.fromInfo.account);
                     } else {
-                        self.isSubmit=false;
+                        self.isSubmit = false;
                         self.$message.error(data.error);
                     }
                 });
         },
-        writeTransToSql:function(blockInfo){
-            self.$db.get('czr_accounts')
-            .find({address: blockInfo.from})
-            .get('send_list')
-            .push(blockInfo)
-            .write();
+        writeTransToSql(blockInfo) {
+            self.$db
+                .get("czr_accounts")
+                .find({ address: blockInfo.from })
+                .get("send_list")
+                .push(blockInfo)
+                .write();
             self.$router.push("/account/" + self.fromInfo.account);
         }
     },
     filters: {
-        toCzrVal: function(val) {
+        toCzrVal(val) {
             let tempVal = self.$czr.utils.fromWei(val, "czr");
             return tempVal;
         }
