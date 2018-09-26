@@ -459,13 +459,9 @@ export default {
                     interVal = 0;
                 }
                 self.getAccounts();
-            }, interVal || 15000);
+            }, interVal || 5000);
         },
         getAccountsBalances(accountAry) {
-            //如果没有被清除，继续调用
-            self.$walletLogs.info(
-                `如果没有被清除，继续调用 ${getAccountTimer}`
-            );
             self.$czr.request
                 .accountsBalances(accountAry)
                 .then(data => {
