@@ -5,7 +5,8 @@ import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/element-ui.css';
 
-import Czr from './czr'
+// import Czr from './czr'
+import Czr from 'czr'
 
 //Introducing db database
 import db from '../datastore/index'

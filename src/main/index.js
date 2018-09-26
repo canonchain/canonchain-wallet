@@ -48,11 +48,6 @@ function createWindow() {
     Unreferences the window object. If your application supports multiple windows, you will usually store the window in an array. Click Close to remove the corresponding element.
     */
     mainWindow = null
-    // try {
-    //   var currentPid = sessionStorage.getItem("CanonChainPid")
-    //   process.kill(currentPid);
-    // } catch (err) {
-    // }
   })
 
   createMenu()

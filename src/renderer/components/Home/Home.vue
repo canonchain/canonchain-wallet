@@ -122,6 +122,14 @@ let flagNum = 0;
 const app = require("electron").remote.app;
 
 app.on("will-quit", () => {
+    //应用程序的窗口已经关闭，应用即将退出
+    self.$czr.stop();
+    self.$nodeLogs.info("will-quit start");
+});
+
+app.on("quit", () => {
+    //应用程序正在退出
+    self.$nodeLogs.info("quit start");
     let currentPid = Number(sessionStorage.getItem("CanonChainPid"));
     let result = process.kill(currentPid, "SIGINT");
     self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
