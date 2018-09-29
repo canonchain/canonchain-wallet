@@ -112,10 +112,11 @@
 
 <script>
 const fs = require("fs");
-import { setInterval, clearInterval, clearTimeout } from "timers";
+import { setInterval, clearInterval, clearTimeout, setTimeout } from "timers";
 const { spawn, spawnSync } = require("child_process");
 let self = null;
 let getAccountTimer = null;
+let accountErrorTimer = null;
 let interVal = 1000;
 let flagNum = 0;
 
@@ -493,6 +494,9 @@ export default {
                 })
                 .catch(error => {
                     self.$walletLogs.error("Account List Error", error.message);
+                    accountErrorTimer = setTimeout(()=>{
+                        self.runAccountsTimer();
+                    },1000*15)
                 })
                 .then(data => {
                     if (data == "") {

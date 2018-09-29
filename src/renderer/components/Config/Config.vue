@@ -106,7 +106,7 @@ export default {
                     self.checkLocalConfig();
                 })
                 .catch(error => {
-                    self.conMsg = error; //TODO 取本地的，本地取不到，取安装包的配置
+                    self.conMsg = error; // 取本地的，本地取不到，取安装包的配置
                 });
         },
         checkLocalConfig() {
@@ -134,7 +134,7 @@ export default {
                     self.local_config = self.latest_config.content;
                     self.writeLocalConfig(self.latest_config.content);
                 } else {
-                    this.conMsg = "无法加载本地或远程配置 无法继续!"; //TODO 加载安装包的配置
+                    this.conMsg = "无法加载本地或远程配置 无法继续!"; // 加载安装包的配置
                     self.$startLogs.info("无法加载本地或远程配置 无法继续!");
                 }
             }
@@ -191,7 +191,7 @@ export default {
                 timeout: 1000 * 60
             };
 
-            //TODO 判断是否有 CanonChain
+            //判断是否有 CanonChain
             this.conMsg = "检测当前设备是否有 CanonChain 节点文件";
             self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
             try {
