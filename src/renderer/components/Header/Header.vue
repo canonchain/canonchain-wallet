@@ -51,7 +51,7 @@ export default {
             self.$czr.request
                 .accountList()
                 .then(res => {
-                    if ((continued = 15000)) {
+                    if ((continued = 5000)) {
                         continued = 2000;
                     }
                     self.onlineTimer();
@@ -61,7 +61,7 @@ export default {
                     self.onlineTimer();
                     self.online = false;
                     if ((continued = 2000)) {
-                        continued = 15000;
+                        continued = 5000;
                     }
 
                     self.$walletLogs.error(

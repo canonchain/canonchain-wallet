@@ -48,7 +48,7 @@ function getLanguage() {
   if (navigator.language) {
     language = navigator.language;
   }
-  language = language ? language : 'zh-CN'
+  language = (language =='zh-CN') ? language : 'en'
   console.log("language",language)
   return language;
 }

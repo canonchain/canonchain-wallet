@@ -51,7 +51,6 @@ export default {
     computed: {},
     methods: {
         validity() {
-            let self = this;
             let radom = Math.random();
             let targeyUrl =
                 "http://www.canonchain.com/resource/file/canonchain/latest/czrVersion.json" +
@@ -74,24 +73,23 @@ export default {
         },
         initConfig() {
             let radom = Math.random();
-            this.latest_config = {
+            self.latest_config = {
                 content: "",
                 BINARY_URL:
                     "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" +
                     "?radom=" +
                     radom
             };
-            this.node_info = {
+            self.node_info = {
                 NODE_TYPE: "CanonChain",
                 binaryVersion: ""
             };
-            this.conMsg = "准备检测配置文件";
+            self.conMsg = "准备检测配置文件";
             self.$startLogs.info("准备检测配置文件");
         },
 
         checkForNewConfig() {
-            let self = this;
-            this.conMsg = "检测是否有新的 CanonChain 节点文件";
+            self.conMsg = "检测是否有新的 CanonChain 节点文件";
             self.$startLogs.info("检测是否有新的 CanonChain 节点文件 ");
 
             axios
@@ -110,8 +108,7 @@ export default {
                 });
         },
         checkLocalConfig() {
-            let self = this;
-            this.conMsg = "检测本地是否有节点文件";
+            self.conMsg = "检测本地是否有节点文件";
             self.$startLogs.info("检测本地是否有节点文件");
             //读取本地二进制配置文件
             try {
@@ -123,10 +120,10 @@ export default {
                         )
                         .toString()
                 );
-                this.conMsg = "当前设备存在节点文件的配置信息";
+                self.conMsg = "当前设备存在节点文件的配置信息";
                 self.$startLogs.info("当前设备存在节点文件的配置信息");
             } catch (err) {
-                this.conMsg = "没有检测到节点文件的配置信息，可能是第一次运行";
+                self.conMsg = "没有检测到节点文件的配置信息，可能是第一次运行";
                 self.$startLogs.info(
                     "没有检测到节点文件的配置信息，可能是第一次运行"
                 );
@@ -134,18 +131,18 @@ export default {
                     self.local_config = self.latest_config.content;
                     self.writeLocalConfig(self.latest_config.content);
                 } else {
-                    this.conMsg = "无法加载本地或远程配置 无法继续!"; // 加载安装包的配置
+                    self.conMsg = "无法加载本地或远程配置 无法继续!"; // 加载安装包的配置
                     self.$startLogs.info("无法加载本地或远程配置 无法继续!");
                 }
             }
             self.isUpdate();
         },
         writeLocalConfig(json) {
-            this.conMsg = "将获取的节点信息文件，写入本地磁盘";
+            self.conMsg = "将获取的节点信息文件，写入本地磁盘";
             self.$startLogs.info("将获取的节点信息文件，写入本地磁盘");
 
             fs.writeFileSync(
-                path.join(this.userDataPath, "clientBinaries.json"),
+                path.join(self.userDataPath, "clientBinaries.json"),
                 JSON.stringify(json, null, 2)
             );
         },
@@ -268,7 +265,6 @@ export default {
                 });
         },
         guardNode(ls, nodePath) {
-            let self = this;
             self.$nodeLogs.info("守护进程开启", ls.pid);
             ls.on("exit", () => {
                 ls = spawn(path.join(nodePath), [

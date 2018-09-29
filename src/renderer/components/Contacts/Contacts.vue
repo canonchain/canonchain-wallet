@@ -89,38 +89,37 @@ export default {
     },
     methods: {
         initCreateInfo() {
-            this.createInfo = {
+            self.createInfo = {
                 tag: "",
                 address: ""
             };
         },
         initDeleteInfo(contact) {
-            this.deleteInfo = contact;
-            this.dialogSwitch.delete = true;
+            self.deleteInfo = contact;
+            self.dialogSwitch.delete = true;
         },
 
         addContact() {
-            let self = this;
-            if (!this.createInfo.tag) {
-                this.$message.error(this.$t("page_contacts.msg_info.no_tag"));
+            if (!self.createInfo.tag) {
+                self.$message.error(self.$t("page_contacts.msg_info.no_tag"));
                 return;
             }
-            if (!this.createInfo.address) {
-                this.$message.error(
-                    this.$t("page_contacts.msg_info.no_address")
+            if (!self.createInfo.address) {
+                self.$message.error(
+                    self.$t("page_contacts.msg_info.no_address")
                 );
                 return;
             }
             //判断长度
-            if (this.createInfo.tag.length > 8) {
-                this.$message.error(
-                    this.$t("page_contacts.msg_info.validate_tag_length")
+            if (self.createInfo.tag.length > 8) {
+                self.$message.error(
+                    self.$t("page_contacts.msg_info.validate_tag_length")
                 );
                 return;
             }
 
             //TODO validate
-            this.$czr.request
+            self.$czr.request
                 .accountValidate(self.createInfo.address)
                 .then(data => {
                     return data.valid;
@@ -153,35 +152,33 @@ export default {
         },
 
         initAddContact: params => {
-            let self = this;
-            let contact = this.$db
+            let contact = self.$db
                 .get("czr_contacts.contact_ary")
                 .find({ address: params.address })
                 .value();
             if (contact) {
-                this.$message.error(
-                    this.$t("page_contacts.msg_info.exist") + contact.tag
+                self.$message.error(
+                    self.$t("page_contacts.msg_info.exist") + contact.tag
                 );
                 return;
             }
             //TODO validate contacts address
-            this.$db
+            self.$db
                 .get("czr_contacts.contact_ary")
                 .push(params)
                 .write();
-            this.database = this.$db.get("czr_contacts.contact_ary").value();
-            //提示成功
+            self.database = self.$db.get("czr_contacts.contact_ary").value();
             self.$message.success(
                 self.$t("page_contacts.add_cont.add_success")
             );
-            this.dialogSwitch.create = false;
+            self.dialogSwitch.create = false;
         },
         deleteContact() {
-            this.$db
+            self.$db
                 .get("czr_contacts.contact_ary")
-                .remove({ address: this.deleteInfo.address })
+                .remove({ address: self.deleteInfo.address })
                 .write();
-            this.database = this.$db
+            self.database = self.$db
                 .read()
                 .get("czr_contacts.contact_ary")
                 .value();
@@ -189,7 +186,7 @@ export default {
             self.$message.success(
                 self.$t("page_contacts.delete_dialog.remove_success")
             );
-            this.dialogSwitch.delete = false;
+            self.dialogSwitch.delete = false;
         }
     }
 };

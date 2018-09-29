@@ -496,7 +496,7 @@ export default {
                     self.$walletLogs.error("Account List Error", error.message);
                     accountErrorTimer = setTimeout(()=>{
                         self.runAccountsTimer();
-                    },1000*15)
+                    },1000*5)
                 })
                 .then(data => {
                     if (data == "") {
