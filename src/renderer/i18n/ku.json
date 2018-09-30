@@ -13,12 +13,15 @@
         "contacts":"Têkilî",
         "setting":"Setting",
         "total":"Tevahî",
-        "testnet":"Torê testê"
+        "testnet":"Torê testê",
+        "online":"Liserxetê",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Setting",
         "lang":"Ziman",
-        "select":"Ji kerema xwe hilbijêrin"
+        "select":"Ji kerema xwe hilbijêrin",
+        "version_number":"Hejmara volume"
     },
     "page_contacts": {
         "tit":"Têkilî",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Ji kerema xwe ji vê hesabê şîfreya xwe binivîse",
             "validate_password":"Ji kerema xwe ji hesabê şîfreya xwe binivîse",
             "remove_success":"Serkeftî jêbirin"
+        }
+    },
+    "page_config": {
+        "config_detection":"Pêvekirin",
+        "content_msg":{
+            "ready_test":"Pêşniyar bikin ku pelê veguhastinê bibînin",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Agahdariya danûstandinên dawî ya dawî ya dawî ye",
+            "is_local":"Heke ku liverek pelê navek heye heye",
+            "already_local":"Vebijêrk pelê ya node pelê li cîhaza heyî ye.",
+            "not_local":"Agahdariya danûstandinê ya pelê node nayê dîtin, ew dibe ku cara yekem diçin.",
+            "config_write_local":"Dîska agahdariya pelê ji bo dîska herêmî binivîse"
+        },
+        "version_dialog":{
+            "version_tit":"Guhertoya Nûveçûna lezgîn",
+            "download_wallet":"Herin malpera fermî ya fermî bike ku guhertoya herî dawî ya pereyan bike",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

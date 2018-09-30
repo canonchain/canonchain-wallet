@@ -13,12 +13,15 @@
         "contacts":"連絡先",
         "setting":"設定",
         "total":"合計",
-        "testnet":"テストネットワーク"
+        "testnet":"テストネットワーク",
+        "online":"オンライン",
+        "offline":"オフライン"
     },
     "page_setting": {
         "tit":"設定",
         "lang":"言語",
-        "select":"選択してください"
+        "select":"選択してください",
+        "version_number":"ウォレットのバージョン番号"
     },
     "page_contacts": {
         "tit":"連絡先",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"このアカウントのパスワードを入力してください",
             "validate_password":"アカウントのパスワードを入力してください",
             "remove_success":"削除されました"
+        }
+    },
+    "page_config": {
+        "config_detection":"構成検出",
+        "content_msg":{
+            "ready_test":"構成ファイルを検出する準備をする",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"最新のノード構成情報が取得されました",
+            "is_local":"ノードファイルがローカルにあるかどうかを確認する",
+            "already_local":"現在のデバイスにノードファイルの構成ファイルが存在します。",
+            "not_local":"ノードファイルの構成情報が検出されない場合は、初めて実行されることがあります。",
+            "config_write_local":"取得したノード情報ファイルをローカルディスクに書き込みます"
+        },
+        "version_dialog":{
+            "version_tit":"バージョン更新のプロンプト",
+            "download_wallet":"最新版のお金をダウンロードするには、公式サイトにアクセスしてください",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

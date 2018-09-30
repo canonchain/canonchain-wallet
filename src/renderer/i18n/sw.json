@@ -13,12 +13,15 @@
         "contacts":"Wasiliana",
         "setting":"Kuweka",
         "total":"Jumla",
-        "testnet":"Mtihani wa mtandao"
+        "testnet":"Mtihani wa mtandao",
+        "online":"Online",
+        "offline":"Hifadhi ya mbali"
     },
     "page_setting": {
         "tit":"Kuweka",
         "lang":"Lugha",
-        "select":"Tafadhali chagua"
+        "select":"Tafadhali chagua",
+        "version_number":"Nambari ya toleo la mkoba"
     },
     "page_contacts": {
         "tit":"Wasiliana",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Tafadhali ingiza nenosiri kwa akaunti hii",
             "validate_password":"Tafadhali ingiza nenosiri kwa akaunti",
             "remove_success":"Imeondolewa kwa ufanisi"
+        }
+    },
+    "page_config": {
+        "config_detection":"Kugundua upangilio",
+        "content_msg":{
+            "ready_test":"Jitayarisha kuchunguza faili ya usanidi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Taarifa ya upya ya node ya hivi karibuni imepatikana",
+            "is_local":"Angalia kama kuna faili ya node ndani ya nchi",
+            "already_local":"Faili ya usanidi wa faili ya node ipo kwenye kifaa cha sasa.",
+            "not_local":"Maelezo ya usanidi wa faili ya node haipatikani, inaweza kuwa mara ya kwanza kukimbia.",
+            "config_write_local":"Andika faili ya habari ya node iliyopatikana kwenye disk ya ndani"
+        },
+        "version_dialog":{
+            "version_tit":"Sasisho la toleo la haraka",
+            "download_wallet":"Nenda kwenye tovuti rasmi ili kupakua toleo la hivi karibuni la fedha",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

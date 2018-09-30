@@ -13,12 +13,15 @@
         "contacts":"Cyswllt",
         "setting":"Gosod",
         "total":"Cyfanswm",
-        "testnet":"Rhwydwaith profi"
+        "testnet":"Rhwydwaith profi",
+        "online":"Ar-lein",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Gosod",
         "lang":"Iaith",
-        "select":"Dewiswch"
+        "select":"Dewiswch",
+        "version_number":"Rhif fersiwn wallet"
     },
     "page_contacts": {
         "tit":"Cyswllt",
@@ -39,7 +42,7 @@
             "no_tag":"Nodwch nodyn cyfrif",
             "no_address":"Rhowch eich cyfeiriad cyfrif",
             "valid_address":"Mae cyfeiriad y cyswllt yn anghyfreithlon",
-            "validate_tag_length":"Ni all enw cofio fod yn hwy na 8 nod",
+            "validate_tag_length":"Ni all enw enw'r nodyn fod yn fwy na 8 nod.",
             "exist":"Mae'r cyswllt eisoes yn bodoli,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Addasu nodyn",
             "subtit":"Nodwch nodyn ar gyfer eich cyfrif",
             "no_tag":"Nodwch nodyn cyfrif",
-            "validate_tag_length":"Ni all enw cofio fod yn hwy na 8 nod"
+            "validate_tag_length":"Ni all enw enw'r nodyn fod yn fwy na 8 nod."
         },
         "dia_tx":{
             "tit":"Gwybodaeth am drafodion",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Lawrlwythwch y ffeil cyfrif",
 
             "validate_tag":"Rhowch enw'r nodyn cyfrif",
-            "validate_tag_length":"Ni all enw cofio fod yn hwy na 8 nod",
+            "validate_tag_length":"Ni all enw enw'r nodyn fod yn fwy na 8 nod.",
 
             "validate_password":"Rhowch y cyfrinair a osodwyd gennych",
             "validate_re_password":"Rhowch y cyfrinair a osodwyd gennych eto",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Rhowch enw'r nodyn cyfrif",
 
             "validate_tag":"Rhowch enw'r nodyn cyfrif",
-            "validate_tag_length":"Ni all enw cofio fod yn hwy na 8 nod",
+            "validate_tag_length":"Ni all enw enw'r nodyn fod yn fwy na 8 nod.",
             "validate_enter_keystore":"Mewnosodwch y ffeil cyfrif yn gyntaf",
             "validate_error_keystore":"Mewnforio cyfrif wedi methu, gall fod yn gwall ffeil cyfrif",
             "imported_account_success":"Mewnforio yn llwyddiannus",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Rhowch y cyfrinair ar gyfer y cyfrif hwn",
             "validate_password":"Rhowch y cyfrinair ar gyfer y cyfrif",
             "remove_success":"Wedi'i dynnu'n llwyddiannus"
+        }
+    },
+    "page_config": {
+        "config_detection":"Canfod ffurfweddu",
+        "content_msg":{
+            "ready_test":"Paratowch i ganfod y ffeil ffurfweddu",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Mae'r wybodaeth gyfluniad nodiadau diweddaraf wedi'i gael",
+            "is_local":"Gwiriwch a oes ffeil nod yn lleol",
+            "already_local":"Mae ffeil ffurfweddu'r ffeil nod yn bodoli ar y ddyfais gyfredol.",
+            "not_local":"Ni chanfyddir gwybodaeth ffurfweddu ffeil y nod, efallai mai dyma'r tro cyntaf i redeg.",
+            "config_write_local":"Ysgrifennwch y ffeil wybodaeth nodau a gafwyd i'r ddisg leol"
+        },
+        "version_dialog":{
+            "version_tit":"Diweddariad fersiwn yn brydlon",
+            "download_wallet":"Ewch i'r wefan swyddogol i lawrlwytho'r fersiwn ddiweddaraf o'r arian",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

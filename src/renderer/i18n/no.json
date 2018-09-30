@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Sett opp",
         "total":"total",
-        "testnet":"Testnettverk"
+        "testnet":"Testnettverk",
+        "online":"online",
+        "offline":"offline"
     },
     "page_setting": {
         "tit":"Sett opp",
         "lang":"språk",
-        "select":"Vennligst velg"
+        "select":"Vennligst velg",
+        "version_number":"Lommebokversjonsnummer"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Vennligst skriv inn passordet for denne kontoen",
             "validate_password":"Vennligst skriv inn passordet for kontoen",
             "remove_success":"Ble fjernet"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurasjons deteksjon",
+        "content_msg":{
+            "ready_test":"Forbered deg på å oppdage konfigurasjonsfilen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Den siste nodekonfigurasjonsinformasjonen er oppnådd",
+            "is_local":"Sjekk om det er en nodeliste lokalt",
+            "already_local":"Konfigurasjonsfilen til nodefilen finnes på den gjeldende enheten.",
+            "not_local":"Konfigurasjonsinformasjonen til nodefilen blir ikke oppdaget, det kan være første gang som kjører.",
+            "config_write_local":"Skriv den innhentede nodeinformasjonsfilen til den lokale disken"
+        },
+        "version_dialog":{
+            "version_tit":"Versjonsoppdateringsprompt",
+            "download_wallet":"Gå til den offisielle nettsiden for å laste ned den nyeste versjonen av pengene",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"ထိတှေ့",
         "setting":"တက် Set",
         "total":"စုစုပေါငျး",
-        "testnet":"စမ်းသပ်ခြင်းကွန်ယက်"
+        "testnet":"စမ်းသပ်ခြင်းကွန်ယက်",
+        "online":"အွန်လိုင်း",
+        "offline":"အော့ဖ်လိုင်း"
     },
     "page_setting": {
         "tit":"တက် Set",
         "lang":"ဘာသာစကား",
-        "select":"ကို select ပေးပါ"
+        "select":"ကို select ပေးပါ",
+        "version_number":"ပိုက်ဆံအိတ်ဗားရှင်းနံပါတ်"
     },
     "page_contacts": {
         "tit":"ထိတှေ့",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"ဒီအကောင့်စကားဝှက်ကိုရိုက်ထည့်ပေးပါ",
             "validate_password":"အကောင့် password ကိုရိုက်ထည့်ပေးပါ",
             "remove_success":"အောင်မြင်စွာဖယ်ရှား"
+        }
+    },
+    "page_config": {
+        "config_detection":"detection Configuration",
+        "content_msg":{
+            "ready_test":"configuration file ကို detect လုပ်ဖို့အဆင်သင့်",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"ဒါဟာနောက်ဆုံးပေါ် node ကို configuration အချက်အလက်တွေကိုဝယ်ယူထားပြီး",
+            "is_local":"ဒေသခံတစ်ဦး node ကိုဖိုင်ကိုလည်းမရှိရှိမရှိ detect",
+            "already_local":"လောလောဆယ်တစ်ဦး configuration ဖိုင်သတင်းအချက်အလက် node ကို device ကိုလည်းမရှိ",
+            "not_local":"node ကို configuration files တွေကို detected မရ, ဒါဟာပထမဦးဆုံးပြေးဖြစ်နိုင်သည်",
+            "config_write_local":"ဒေသခံ disk ကိုရေးသားအဆိုပါဝယ်ယူ node ကိုသတင်းအချက်အလက်ဖိုင်တွေ"
+        },
+        "version_dialog":{
+            "version_tit":"ဗားရှင်း update ကို prompt ကို",
+            "download_wallet":"ငွေများ၏နောက်ဆုံးဗားရှင်းကိုဒေါင်းလုဒ်လုပ်ရန် Quguan ကွန်ယက်ကို",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

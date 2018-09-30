@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Nastavení",
         "total":"Celkem",
-        "testnet":"Testovací síť"
+        "testnet":"Testovací síť",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Nastavení",
         "lang":"Jazyk",
-        "select":"Vyberte prosím"
+        "select":"Vyberte prosím",
+        "version_number":"Číslo verze peněženky"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -39,7 +42,7 @@
             "no_tag":"Zadejte poznámku k účtu",
             "no_address":"Zadejte adresu svého účtu",
             "valid_address":"Adresa kontaktu je neplatná",
-            "validate_tag_length":"Memo jméno nesmí být delší než 8 znaků",
+            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
             "exist":"Kontakt již existuje,"
         }
     },
@@ -71,7 +74,7 @@
             "address_err":"Formát přenesené adresy je neplatný.",
             "send_success":"Úspěšně odeslána",
 
-            "decrypt_err":"Analýza peněženky se nezdařila, může to být chyba hesla",
+            "decrypt_err":"Analýza peněženky se nezdařila, může se jednat o chybu hesla",
             "send_error":"Transakce selhala: zkontrolujte prosím, zda je dostatečný zůstatek a poplatek za mince"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Upravit poznámku",
             "subtit":"Označte poznámku k účtu",
             "no_tag":"Zadejte poznámku k účtu",
-            "validate_tag_length":"Memo jméno nesmí být delší než 8 znaků"
+            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků."
         },
         "dia_tx":{
             "tit":"Informace o transakcích",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Stáhněte soubor účtu",
 
             "validate_tag":"Zadejte název bankovky účtu",
-            "validate_tag_length":"Memo jméno nesmí být delší než 8 znaků",
+            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
 
             "validate_password":"Zadejte prosím heslo, které jste nastavili",
             "validate_re_password":"Zadejte znovu zadané heslo",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Nastavte prosím název účtu",
 
             "validate_tag":"Zadejte název bankovky účtu",
-            "validate_tag_length":"Memo jméno nesmí být delší než 8 znaků",
+            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
             "validate_enter_keystore":"Nejprve importujte soubor účtu",
             "validate_error_keystore":"Import importu účtu selhal, může to být chyba souboru účtu",
             "imported_account_success":"Úspěšně importováno",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Zadejte heslo pro tento účet",
             "validate_password":"Zadejte prosím heslo pro účet",
             "remove_success":"Úspěšně byla odebrána"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurační detekce",
+        "content_msg":{
+            "ready_test":"Připravte se ke zjištění konfiguračního souboru",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Byla získána nejnovější informace o konfiguraci uzlů",
+            "is_local":"Zkontrolujte, zda je lokální soubor uzlu",
+            "already_local":"Konfigurační soubor souboru uzlu existuje na aktuálním zařízení.",
+            "not_local":"Informace o konfiguraci souboru uzlů se nezjistí, může být poprvé spuštěna.",
+            "config_write_local":"Napište získaný informační soubor uzlu na místní disk"
+        },
+        "version_dialog":{
+            "version_tit":"Aktualizace výzvy k verzi",
+            "download_wallet":"Přejděte na oficiální webové stránky a stáhněte si nejnovější verzi peněz",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

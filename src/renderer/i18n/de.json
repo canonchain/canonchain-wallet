@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Einstellung",
         "total":"Summe",
-        "testnet":"Netzwerk testen"
+        "testnet":"Netzwerk testen",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Einstellung",
         "lang":"Sprache",
-        "select":"Bitte wählen"
+        "select":"Bitte wählen",
+        "version_number":"Wallet-Versionsnummer"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -39,7 +42,7 @@
             "no_tag":"Bitte geben Sie eine Kontonummer ein",
             "no_address":"Bitte geben Sie Ihre Kontoadresse ein",
             "valid_address":"Die Adresse des Kontakts ist illegal",
-            "validate_tag_length":"Der Memo-Name darf nicht länger als 8 Zeichen sein",
+            "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
             "exist":"Der Kontakt existiert bereits,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Notiz ändern",
             "subtit":"Markieren Sie eine Notiz für Ihr Konto",
             "no_tag":"Bitte geben Sie eine Kontonummer ein",
-            "validate_tag_length":"Der Memo-Name darf nicht länger als 8 Zeichen sein"
+            "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein."
         },
         "dia_tx":{
             "tit":"Transaktionsinformationen",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Konto-Datei herunterladen",
 
             "validate_tag":"Bitte geben Sie den Namen des Kontonamens ein",
-            "validate_tag_length":"Der Memo-Name darf nicht länger als 8 Zeichen sein",
+            "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
 
             "validate_password":"Bitte geben Sie das von Ihnen festgelegte Passwort ein",
             "validate_re_password":"Bitte geben Sie das von Ihnen eingestellte Passwort ein",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Bitte geben Sie den Namen des Kontonamens ein",
 
             "validate_tag":"Bitte geben Sie den Namen des Kontonamens ein",
-            "validate_tag_length":"Der Memo-Name darf nicht länger als 8 Zeichen sein",
+            "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
             "validate_enter_keystore":"Bitte importieren Sie zuerst die Account-Datei",
             "validate_error_keystore":"Der Kontoimport ist fehlgeschlagen, möglicherweise liegt ein Fehler in der Konto-Datei vor",
             "imported_account_success":"Erfolgreich importiert",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Bitte geben Sie das Passwort für dieses Konto ein",
             "validate_password":"Bitte geben Sie das Passwort für das Konto ein",
             "remove_success":"Erfolgreich entfernt"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurationserkennung",
+        "content_msg":{
+            "ready_test":"Bereiten Sie sich darauf vor, die Konfigurationsdatei zu erkennen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Die letzte Knotenkonfigurationsinformation wurde erhalten",
+            "is_local":"Überprüfen Sie, ob lokal eine Knotendatei vorhanden ist",
+            "already_local":"Die Konfigurationsdatei der Knotendatei ist auf dem aktuellen Gerät vorhanden.",
+            "not_local":"Die Konfigurationsinformationen der Knotendatei werden nicht erkannt, möglicherweise wird sie zum ersten Mal ausgeführt.",
+            "config_write_local":"Schreiben Sie die erhaltene Knoteninformationsdatei auf die lokale Festplatte"
+        },
+        "version_dialog":{
+            "version_tit":"Versionsaktualisierung",
+            "download_wallet":"Gehen Sie auf die offizielle Website, um die neueste Version des Geldes herunterzuladen",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

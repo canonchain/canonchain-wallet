@@ -13,12 +13,15 @@
         "contacts":"Kontakta",
         "setting":"Ställ in",
         "total":"total",
-        "testnet":"Test nätverk"
+        "testnet":"Test nätverk",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Ställ in",
         "lang":"språk",
-        "select":"Vänligen välj"
+        "select":"Vänligen välj",
+        "version_number":"Plånboksversionsnummer"
     },
     "page_contacts": {
         "tit":"Kontakta",
@@ -149,7 +152,7 @@
             "validate_enter_keystore":"Vänligen importera kontofilen först",
             "validate_error_keystore":"Kontoimport misslyckades, kan vara ett kontofel",
             "imported_account_success":"Importeras framgångsrikt",
-            "exist":"Det här kontot existerar redan, noten är",
+            "exist":"Det här kontot finns redan, anteckningen är",
             "keystore_error":"fel:",
             "imported_success":"Importera filen framgångsrikt"
         },
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Vänligen ange lösenordet för det här kontot",
             "validate_password":"Vänligen ange lösenordet för kontot",
             "remove_success":"Avlägsnades framgångsrikt"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurationsdetektering",
+        "content_msg":{
+            "ready_test":"Förbered dig för att upptäcka konfigurationsfilen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Den senaste nodkonfigurationsinformationen har erhållits",
+            "is_local":"Kontrollera om det finns en nodfil lokalt",
+            "already_local":"Konfigurationsfilen för nodfilen finns på den aktuella enheten.",
+            "not_local":"Konfigurationsinformationen för nodfilen detekteras inte, det kan vara första gången som körs.",
+            "config_write_local":"Skriv den erhållna nodinformationen till den lokala disken"
+        },
+        "version_dialog":{
+            "version_tit":"Versionsuppdateringsprompten",
+            "download_wallet":"Gå till den officiella hemsidan för att ladda ner den senaste versionen av pengarna",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Seadistus",
         "total":"Kokku",
-        "testnet":"Testvõrk"
+        "testnet":"Testvõrk",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Seadistus",
         "lang":"Keel",
-        "select":"Palun vali"
+        "select":"Palun vali",
+        "version_number":"Rahakoti versiooni number"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -39,7 +42,7 @@
             "no_tag":"Palun sisesta konto märkus",
             "no_address":"Palun sisesta oma konto aadress",
             "valid_address":"Kontaktisiku aadress on ebaseaduslik",
-            "validate_tag_length":"Memo nimi ei tohi olla pikem kui 8 tähemärki",
+            "validate_tag_length":"Märkme nime nimi ei tohi olla pikem kui 8 tähemärki.",
             "exist":"Kontakti on juba olemas"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Muuda märkmeid",
             "subtit":"Märkige märkus oma konto jaoks",
             "no_tag":"Palun sisesta konto märkus",
-            "validate_tag_length":"Memo nimi ei tohi olla pikem kui 8 tähemärki"
+            "validate_tag_length":"Märkme nime nimi ei tohi olla pikem kui 8 tähemärki."
         },
         "dia_tx":{
             "tit":"Tehingu teave",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Konto faili allalaadimine",
 
             "validate_tag":"Palun sisesta konto märkme nimi",
-            "validate_tag_length":"Memo nimi ei tohi olla pikem kui 8 tähemärki",
+            "validate_tag_length":"Märkme nime nimi ei tohi olla pikem kui 8 tähemärki.",
 
             "validate_password":"Palun sisesta parool, mille olete seadistanud",
             "validate_re_password":"Palun sisesta uuesti parool",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Palun määrake konto märkme nimi",
 
             "validate_tag":"Palun sisesta konto märkme nimi",
-            "validate_tag_length":"Memo nimi ei tohi olla pikem kui 8 tähemärki",
+            "validate_tag_length":"Märkme nime nimi ei tohi olla pikem kui 8 tähemärki.",
             "validate_enter_keystore":"Palun importige konto faili kõigepealt",
             "validate_error_keystore":"Konto import nurjus, võib olla konto failiviga",
             "imported_account_success":"Edukalt imporditud",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Palun sisesta selle konto parool",
             "validate_password":"Palun sisestage konto parool",
             "remove_success":"Edukalt eemaldatud"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfiguratsiooni avastamine",
+        "content_msg":{
+            "ready_test":"Valmistage konfiguratsioonifaili avastamiseks",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Viimane sõlme konfiguratsiooni info on saadud",
+            "is_local":"Kontrollige, kas sõlme fail on kohapeal olemas",
+            "already_local":"Liitfaili konfiguratsioonifail on praegusel seadmel olemas.",
+            "not_local":"Liitfaili konfiguratsiooniteavet ei tuvastata, võib see esmakordselt töötada.",
+            "config_write_local":"Kirjutage saadud osade andmefail kohalikku kettale"
+        },
+        "version_dialog":{
+            "version_tit":"Versiooni värskendamise viip",
+            "download_wallet":"Mine viimase veebi versiooni allalaadimiseks ametlikule veebisaidile",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Kontakto",
         "setting":"Agordo",
         "total":"Tuta",
-        "testnet":"Testa reto"
+        "testnet":"Testa reto",
+        "online":"Enreta",
+        "offline":"Senkonekta"
     },
     "page_setting": {
         "tit":"Agordo",
         "lang":"Lingvo",
-        "select":"Bonvolu elekti"
+        "select":"Bonvolu elekti",
+        "version_number":"Monerĉa versio numero"
     },
     "page_contacts": {
         "tit":"Kontakto",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Bonvolu enmeti la pasvorton por ĉi tiu konto",
             "validate_password":"Bonvolu enmeti la pasvorton por la konto",
             "remove_success":"Sukcese forigita"
+        }
+    },
+    "page_config": {
+        "config_detection":"Agordo detekto",
+        "content_msg":{
+            "ready_test":"Preparu por detekti la agordan dosieron",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"La plej lasta nodo-agordo-informo estis akirita",
+            "is_local":"Kontrolu se estas nodo dosiero loke",
+            "already_local":"La agorda dosiero de la nodo dosiero ekzistas sur la nuna aparato.",
+            "not_local":"La agordo-informo de la nodo-dosiero ne estas detektita, eble ĝi estu la unua fojo funkcianta.",
+            "config_write_local":"Skribu la akiritan nodo-dosieron al la loka disko"
+        },
+        "version_dialog":{
+            "version_tit":"Versio ĝisdatigilo",
+            "download_wallet":"Iru al la oficiala retejo por elŝuti la plej lastan version de la mono",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

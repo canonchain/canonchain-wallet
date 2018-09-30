@@ -13,12 +13,15 @@
         "contacts":"Stik",
         "setting":"Nastavitev",
         "total":"Skupaj",
-        "testnet":"Preskusno omrežje"
+        "testnet":"Preskusno omrežje",
+        "online":"Online",
+        "offline":"Brez povezave"
     },
     "page_setting": {
         "tit":"Nastavitev",
         "lang":"Jezik",
-        "select":"Prosimo, izberite"
+        "select":"Prosimo, izberite",
+        "version_number":"Številka različice za denarnico"
     },
     "page_contacts": {
         "tit":"Stik",
@@ -39,7 +42,7 @@
             "no_tag":"Vnesite beležko računa",
             "no_address":"Vnesite svoj naslov računa",
             "valid_address":"Naslov stika je nezakonit",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
             "exist":"Stik že obstaja,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Spremeni beležko",
             "subtit":"Označite opombo za svoj račun",
             "no_tag":"Vnesite beležko računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov"
+            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov."
         },
         "dia_tx":{
             "tit":"Podatki o transakcijah",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Prenos datoteke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
 
             "validate_password":"Vnesite geslo, ki ste ga nastavili",
             "validate_re_password":"Vnesite geslo, ki ste ga ponovno nastavili",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Nastavite ime beležke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
             "validate_enter_keystore":"Najprej uvozite datoteko računa",
             "validate_error_keystore":"Uvoz računa ni uspel, morda je napaka v računu",
             "imported_account_success":"Uspešno uvoženo",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Vnesite geslo za ta račun",
             "validate_password":"Vnesite geslo za račun",
             "remove_success":"Uspešno je bil odstranjen"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detekcija konfiguracije",
+        "content_msg":{
+            "ready_test":"Pripravite se na odkrivanje konfiguracijske datoteke",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Dobljene so bile najnovejše informacije o konfiguraciji vozlišča",
+            "is_local":"Preverite, ali je lokalna datoteka vozlišča",
+            "already_local":"Konfiguracijska datoteka datoteke vozlišča obstaja na trenutni napravi.",
+            "not_local":"Podatki o konfiguraciji datoteke vozlišča niso zaznani, morda se prvič izvajajo.",
+            "config_write_local":"Napišite informativno datoteko vozlišča na lokalni disk"
+        },
+        "version_dialog":{
+            "version_tit":"Različica za posodobitev različice",
+            "download_wallet":"Pojdite na uradno spletno stran, da prenesete najnovejšo različico denarja",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Kontak",
         "setting":"Pengaturan",
         "total":"Total",
-        "testnet":"Uji jaringan"
+        "testnet":"Uji jaringan",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Pengaturan",
         "lang":"Bahasa",
-        "select":"Silakan pilih"
+        "select":"Silakan pilih",
+        "version_number":"Nomor versi dompet"
     },
     "page_contacts": {
         "tit":"Kontak",
@@ -39,7 +42,7 @@
             "no_tag":"Harap masukkan catatan akun",
             "no_address":"Silakan masukkan alamat akun Anda",
             "valid_address":"Alamat kontak itu ilegal",
-            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
+            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
             "exist":"Kontak sudah ada,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Ubah catatan",
             "subtit":"Tandai catatan untuk akun Anda",
             "no_tag":"Harap masukkan catatan akun",
-            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter"
+            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter."
         },
         "dia_tx":{
             "tit":"Informasi transaksi",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Unduh file akun",
 
             "validate_tag":"Harap masukkan nama catatan akun",
-            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
+            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
 
             "validate_password":"Silakan masukkan kata sandi yang Anda tetapkan",
             "validate_re_password":"Silakan masukkan kata sandi yang Anda atur lagi",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Silakan mengatur nama catatan akun",
 
             "validate_tag":"Harap masukkan nama catatan akun",
-            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
+            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
             "validate_enter_keystore":"Harap impor file akun terlebih dahulu",
             "validate_error_keystore":"Impor akun gagal, mungkin kesalahan file akun",
             "imported_account_success":"Berhasil diimpor",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Silakan masukkan kata sandi untuk akun ini",
             "validate_password":"Silakan masukkan kata sandi untuk akun tersebut",
             "remove_success":"Berhasil dihapus"
+        }
+    },
+    "page_config": {
+        "config_detection":"Deteksi konfigurasi",
+        "content_msg":{
+            "ready_test":"Bersiaplah untuk mendeteksi file konfigurasi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Informasi konfigurasi node terbaru telah diperoleh",
+            "is_local":"Periksa apakah ada file node secara lokal",
+            "already_local":"File konfigurasi dari file node ada di perangkat saat ini.",
+            "not_local":"Tidak terdeteksi file konfigurasi node, mungkin jangka pertama",
+            "config_write_local":"Tulis file informasi node yang diperoleh ke disk lokal"
+        },
+        "version_dialog":{
+            "version_tit":"Permintaan pembaruan versi",
+            "download_wallet":"Buka situs web resmi untuk mengunduh versi terbaru dari uang tersebut",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

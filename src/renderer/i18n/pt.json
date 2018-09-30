@@ -13,12 +13,15 @@
         "contacts":"Entre em contato",
         "setting":"Configuração",
         "total":"Total",
-        "testnet":"Rede de teste"
+        "testnet":"Rede de teste",
+        "online":"Online",
+        "offline":"Off-line"
     },
     "page_setting": {
         "tit":"Configuração",
         "lang":"Idioma",
-        "select":"Por favor escolha"
+        "select":"Por favor escolha",
+        "version_number":"Número da versão da carteira"
     },
     "page_contacts": {
         "tit":"Entre em contato",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Por favor insira a senha para esta conta",
             "validate_password":"Por favor insira a senha da conta",
             "remove_success":"Removido com sucesso"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detecção de configuração",
+        "content_msg":{
+            "ready_test":"Prepare-se para detectar o arquivo de configuração",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"As últimas informações de configuração do nó foram obtidas",
+            "is_local":"Verifique se existe um arquivo de nó localmente",
+            "already_local":"O arquivo de configuração do arquivo do nó existe no dispositivo atual.",
+            "not_local":"As informações de configuração do arquivo do nó não são detectadas, pode ser a primeira vez que são executadas.",
+            "config_write_local":"Grave o arquivo de informações do nó obtido no disco local"
+        },
+        "version_dialog":{
+            "version_tit":"Prompt de atualização de versão",
+            "download_wallet":"Ir para o site oficial para baixar a versão mais recente do dinheiro",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

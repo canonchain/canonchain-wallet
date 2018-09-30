@@ -13,12 +13,15 @@
         "contacts":"Aloqa",
         "setting":"Sozlash",
         "total":"Jami",
-        "testnet":"Viktorina tarmog'i"
+        "testnet":"Viktorina tarmog'i",
+        "online":"Onlaynda",
+        "offline":"Oflayn"
     },
     "page_setting": {
         "tit":"Sozlash",
         "lang":"Til",
-        "select":"Marhamat, tanlang"
+        "select":"Marhamat, tanlang",
+        "version_number":"Hamyon versiya raqami"
     },
     "page_contacts": {
         "tit":"Aloqa",
@@ -39,7 +42,7 @@
             "no_tag":"Iltimos, hisob qaydnomasini kiriting",
             "no_address":"Hisob manzilingizni kiriting",
             "valid_address":"Kontakt manzili noqonuniy hisoblanadi",
-            "validate_tag_length":"Eslatma nomi 8 ta belgidan oshmasligi kerak",
+            "validate_tag_length":"Izoh nomining nomi 8 ta belgidan oshmasligi kerak.",
             "exist":"Kontakt allaqachon mavjud,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Qaydni o'zgartiring",
             "subtit":"Hisobingiz uchun eslatma belgilang",
             "no_tag":"Iltimos, hisob qaydnomasini kiriting",
-            "validate_tag_length":"Eslatma nomi 8 ta belgidan oshmasligi kerak"
+            "validate_tag_length":"Izoh nomining nomi 8 ta belgidan oshmasligi kerak."
         },
         "dia_tx":{
             "tit":"Jurnal haqida ma'lumot",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Hisob faylini yuklab oling",
 
             "validate_tag":"Hisob qaydnomasi nomini kiriting",
-            "validate_tag_length":"Eslatma nomi 8 ta belgidan oshmasligi kerak",
+            "validate_tag_length":"Izoh nomining nomi 8 ta belgidan oshmasligi kerak.",
 
             "validate_password":"Iltimos, siz kiritgan parolni kiriting",
             "validate_re_password":"Iltimos, qaytadan o'rnatgan parolni kiriting",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Hisob qaydnomangiz nomini tanlang",
 
             "validate_tag":"Hisob qaydnomasi nomini kiriting",
-            "validate_tag_length":"Eslatma nomi 8 ta belgidan oshmasligi kerak",
+            "validate_tag_length":"Izoh nomining nomi 8 ta belgidan oshmasligi kerak.",
             "validate_enter_keystore":"Iltimos, oldin hisob faylini import qiling",
             "validate_error_keystore":"Hisobni import amalga oshmadi, hisob fayllari xatosi bo'lishi mumkin",
             "imported_account_success":"Muvaffaqiyatli import qilindi",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Iltimos, ushbu hisob uchun parolni kiriting",
             "validate_password":"Iltimos, hisob uchun parolni kiriting",
             "remove_success":"Muvaffaqiyatli olib tashlandi"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfiguratsiya aniqlash",
+        "content_msg":{
+            "ready_test":"Konfiguratsiya faylini aniqlashga tayyorlang",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Eng so'nggi tugunni sozlash haqida ma'lumot olingan",
+            "is_local":"Mahalliy tugunli fayl mavjudligini tekshiring",
+            "already_local":"Tugun faylining konfiguratsiya fayli mavjud qurilmada mavjud.",
+            "not_local":"Tugun faylining konfiguratsiya ma'lumotlari aniqlanmadi, u birinchi marta ishlayotgan bo'lishi mumkin.",
+            "config_write_local":"Olingan tugun ma'lumotlarini mahalliy diskka yozing"
+        },
+        "version_dialog":{
+            "version_tit":"Versiya yangilanish so'rovi",
+            "download_wallet":"Pulning oxirgi versiyasini yuklab olish uchun rasmiy veb-saytga o'ting",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"La xiriir",
         "setting":"Dejinta",
         "total":"Wadarta",
-        "testnet":"Shabakad tijaabo ah"
+        "testnet":"Shabakad tijaabo ah",
+        "online":"Online",
+        "offline":"Isbeddel"
     },
     "page_setting": {
         "tit":"Dejinta",
         "lang":"Luuqadda",
-        "select":"Fadlan dooro"
+        "select":"Fadlan dooro",
+        "version_number":"Nambarka saxda ah ee khadka"
     },
     "page_contacts": {
         "tit":"La xiriir",
@@ -39,7 +42,7 @@
             "no_tag":"Fadlan qor qoraalka xisaabta",
             "no_address":"Fadlan gali cinwaanka koontadaada",
             "valid_address":"Cinwaanka xidhiidhka waa sharci darro",
-            "validate_tag_length":"Magaca xasuusta ma noqon karto wax ka badan 8 characters",
+            "validate_tag_length":"Magaca magaca qoraalka ahi ma noqon karo mid ka badan 8 xuruuf.",
             "exist":"Xiriirkii hore u jirey,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Bedel qoraalka",
             "subtit":"Calaamad ku qor xisaabtaada",
             "no_tag":"Fadlan qor qoraalka xisaabta",
-            "validate_tag_length":"Magaca xasuusta ma noqon karto wax ka badan 8 characters"
+            "validate_tag_length":"Magaca magaca qoraalka ahi ma noqon karo mid ka badan 8 xuruuf."
         },
         "dia_tx":{
             "tit":"Macluumaadka macaamilka",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Download faylka xisaabta",
 
             "validate_tag":"Fadlan gali magaca qoraalka xisaabta",
-            "validate_tag_length":"Magaca xasuusta ma noqon karto wax ka badan 8 characters",
+            "validate_tag_length":"Magaca magaca qoraalka ahi ma noqon karo mid ka badan 8 xuruuf.",
 
             "validate_password":"Fadlan gali sirta aad ku qortey",
             "validate_re_password":"Fadlan gali sirta aad mar kale dhigtay",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Fadlan qor magaca koontada xisaabta",
 
             "validate_tag":"Fadlan gali magaca qoraalka xisaabta",
-            "validate_tag_length":"Magaca xasuusta ma noqon karto wax ka badan 8 characters",
+            "validate_tag_length":"Magaca magaca qoraalka ahi ma noqon karo mid ka badan 8 xuruuf.",
             "validate_enter_keystore":"Fadlan horey u soo qaado feylka xisaabta",
             "validate_error_keystore":"Soo-galinta xisaabtu way guuldareysatay, waxay noqon kartaa khaladaad faylasha",
             "imported_account_success":"Si guul leh loogu soo dhoofiyo",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Fadlan gali erayga sirta ah ee koontadan",
             "validate_password":"Fadlan gali ereyga sirta ee koontada",
             "remove_success":"Si guul leh ayaa loo saaray"
+        }
+    },
+    "page_config": {
+        "config_detection":"Ogaanshaha Qaabka",
+        "content_msg":{
+            "ready_test":"Diyaarso si aad u ogaato faylka qaabeynta",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Macluumaadka habka ugu danbeeya ee node-ka ayaa la helay",
+            "is_local":"Hubi haddii uu jiro faylka codka ee deegaanka",
+            "already_local":"Faylka habka faylka ah ee faylka ayaa ku jira qalabka hadda jira.",
+            "not_local":"Macluumaadka qaabeynta faylka nootka lama helin, waxay noqon kartaa markii ugu horeysay ee soconaya.",
+            "config_write_local":"Fadlan feylka macluumaadka noodhka ee la helay si aad u heshid diskka deegaanka"
+        },
+        "version_dialog":{
+            "version_tit":"Waqtiga casriga cusub",
+            "download_wallet":"Tag bogga rasmiga ah si aad u soo daabacdo koobkii ugu dambeeyay ee lacagta",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

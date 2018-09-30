@@ -13,12 +13,15 @@
         "contacts":"Kontakti",
         "setting":"Iestatījums",
         "total":"Kopā",
-        "testnet":"Pārbaudes tīkls"
+        "testnet":"Pārbaudes tīkls",
+        "online":"Tiešsaistē",
+        "offline":"Bezsaistē"
     },
     "page_setting": {
         "tit":"Iestatījums",
         "lang":"Valoda",
-        "select":"Lūdzu, izvēlies"
+        "select":"Lūdzu, izvēlies",
+        "version_number":"Maka versijas numurs"
     },
     "page_contacts": {
         "tit":"Kontakti",
@@ -39,7 +42,7 @@
             "no_tag":"Lūdzu, ievadiet konta piezīmi",
             "no_address":"Lūdzu, ievadiet sava konta adresi",
             "valid_address":"Kontaktpersonas adrese ir nelikumīga",
-            "validate_tag_length":"Atgādinājuma nosaukums nedrīkst būt garāks par 8 rakstzīmēm",
+            "validate_tag_length":"Nosaukuma nosaukums nedrīkst būt lielāks par 8 rakstzīmēm.",
             "exist":"Kontaktpersona jau pastāv"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Mainīt piezīmi",
             "subtit":"Atzīmējiet piezīmi savam kontam",
             "no_tag":"Lūdzu, ievadiet konta piezīmi",
-            "validate_tag_length":"Atgādinājuma nosaukums nedrīkst būt garāks par 8 rakstzīmēm"
+            "validate_tag_length":"Nosaukuma nosaukums nedrīkst būt lielāks par 8 rakstzīmēm."
         },
         "dia_tx":{
             "tit":"Darījuma informācija",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Lejupielādējiet konta failu",
 
             "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
-            "validate_tag_length":"Atgādinājuma nosaukums nedrīkst būt garāks par 8 rakstzīmēm",
+            "validate_tag_length":"Nosaukuma nosaukums nedrīkst būt lielāks par 8 rakstzīmēm.",
 
             "validate_password":"Lūdzu, ievadiet iestatīto paroli",
             "validate_re_password":"Lūdzu, ievadiet vēlreiz iestatīto paroli",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Lūdzu, iestatiet konta piezīmes nosaukumu",
 
             "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
-            "validate_tag_length":"Atgādinājuma nosaukums nedrīkst būt garāks par 8 rakstzīmēm",
+            "validate_tag_length":"Nosaukuma nosaukums nedrīkst būt lielāks par 8 rakstzīmēm.",
             "validate_enter_keystore":"Vispirms importējiet konta failu",
             "validate_error_keystore":"Konta importēšana neizdevās, iespējams, ir konta faila kļūda",
             "imported_account_success":"Veiksmīgi importēts",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Lūdzu, ievadiet šī konta paroli",
             "validate_password":"Lūdzu, ievadiet konta paroli",
             "remove_success":"Veiksmīgi noņemts"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurācijas atklāšana",
+        "content_msg":{
+            "ready_test":"Sagatavojies, lai noteiktu konfigurācijas failu",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Ir iegūta jaunākā mezgla konfigurācijas informācija",
+            "is_local":"Pārbaudiet, vai vietnes failā ir mezgla fails",
+            "already_local":"Mezgla faila konfigurācijas fails pastāv pašreizējā ierīcē.",
+            "not_local":"Mezgla faila konfigurācijas informācija nav konstatēta, tā var būt pirmā reize.",
+            "config_write_local":"Uz vietējā diska uzrakstiet iegūto mezglu informācijas failu"
+        },
+        "version_dialog":{
+            "version_tit":"Versijas atjaunināšanas uzvedne",
+            "download_wallet":"Pārejiet uz oficiālo vietni, lai lejupielādētu jaunāko naudas versiju",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Əlaqə",
         "setting":"Ayarlama",
         "total":"Ümumi",
-        "testnet":"Test şəbəkəsi"
+        "testnet":"Test şəbəkəsi",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Ayarlama",
         "lang":"Dil",
-        "select":"Xahiş edirik seçin"
+        "select":"Xahiş edirik seçin",
+        "version_number":"Wallet versiyası nömrəsi"
     },
     "page_contacts": {
         "tit":"Əlaqə",
@@ -39,7 +42,7 @@
             "no_tag":"Xahiş edirik bir hesab qeydini daxil edin",
             "no_address":"Xahiş edirik hesab ünvanınızı daxil edin",
             "valid_address":"Kontaktın ünvanı qanunsuzdur",
-            "validate_tag_length":"Memo adı 8 simvoldan artıq ola bilməz",
+            "validate_tag_length":"Qeyd adının adı 8 simvoldan çox ola bilməz.",
             "exist":"Əlaqə artıq mövcuddur,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Notu dəyişdirin",
             "subtit":"Hesabınız üçün qeyd yaz",
             "no_tag":"Xahiş edirik bir hesab qeydini daxil edin",
-            "validate_tag_length":"Memo adı 8 simvoldan artıq ola bilməz"
+            "validate_tag_length":"Qeyd adının adı 8 simvoldan çox ola bilməz."
         },
         "dia_tx":{
             "tit":"Əməliyyat məlumatları",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Hesab hesabını yükləyin",
 
             "validate_tag":"Xahiş edirik hesabın notunun adını daxil edin",
-            "validate_tag_length":"Memo adı 8 simvoldan artıq ola bilməz",
+            "validate_tag_length":"Qeyd adının adı 8 simvoldan çox ola bilməz.",
 
             "validate_password":"Xahiş etdiyiniz parol daxil edin",
             "validate_re_password":"Yenidən təyin etdiyiniz parolunuzu daxil edin",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Xahiş edirik hesabın notunu təyin edin",
 
             "validate_tag":"Xahiş edirik hesabın notunun adını daxil edin",
-            "validate_tag_length":"Memo adı 8 simvoldan artıq ola bilməz",
+            "validate_tag_length":"Qeyd adının adı 8 simvoldan çox ola bilməz.",
             "validate_enter_keystore":"Əvvəlcə hesab faylını idxal edin",
             "validate_error_keystore":"Hesabın idxalı uğursuz olub, hesab faylı səhv ola bilər",
             "imported_account_success":"Uğurla idxal edilib",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Bu hesab üçün parol daxil edin",
             "validate_password":"Xahiş edirik hesab üçün parol daxil edin",
             "remove_success":"Uğurla silindi"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfiqurasiya aşkarlanması",
+        "content_msg":{
+            "ready_test":"Konfiqurasiya faylını aşkar etməyə hazırlaşın",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Son node konfiqurasiya məlumatları əldə edilmişdir",
+            "is_local":"Bir node faylının yerli olub olmadığını yoxlayın",
+            "already_local":"Node faylının konfiqurasiya faylı mövcud cihazda mövcuddur.",
+            "not_local":"Düğüm faylının konfiqurasiya məlumatı aşkarlanmadı, ilk dəfə işləyən ola bilər.",
+            "config_write_local":"Alınan node məlumat faylını yerli diskə yazın"
+        },
+        "version_dialog":{
+            "version_tit":"Version yeniləmə istemi",
+            "download_wallet":"Pulun son versiyasını yükləmək üçün rəsmi saytına gedin",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Contact",
         "setting":"Kuisa",
         "total":"Total",
-        "testnet":"Test network"
+        "testnet":"Test network",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Kuisa",
         "lang":"Mutauro",
-        "select":"Ndapota sarudza"
+        "select":"Ndapota sarudza",
+        "version_number":"Chikwata chechikwata chenhamba"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -39,7 +42,7 @@
             "no_tag":"Ndapota nyora chinyorwa chebhuku",
             "no_address":"Ndapota nyora kero yako kero",
             "valid_address":"Kero yekutaurirana haisi pamutemo",
-            "validate_tag_length":"Memo zita harigoni kuva rakapfuvura kupfuura mazita 8",
+            "validate_tag_length":"Zita rezita rekunyorera haringagoni kudarika vanhu vatatu.",
             "exist":"Kukurukurirana kwave kuripo,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Shandura nyora",
             "subtit":"Isa chinyorwa cheakaunti yako",
             "no_tag":"Ndapota nyora chinyorwa chebhuku",
-            "validate_tag_length":"Memo zita harigoni kuva rakapfuvura kupfuura mazita 8"
+            "validate_tag_length":"Zita rezita rekunyorera haringagoni kudarika vanhu vatatu."
         },
         "dia_tx":{
             "tit":"Transaction information",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Dhawisira faira reakaunti",
 
             "validate_tag":"Ndapota tumira zita rezvenhau rekambani",
-            "validate_tag_length":"Memo zita harigoni kuva rakapfuvura kupfuura mazita 8",
+            "validate_tag_length":"Zita rezita rekunyorera haringagoni kudarika vanhu vatatu.",
 
             "validate_password":"Ndapota nyorai password yawakagadzirisa",
             "validate_re_password":"Ndapota nyorai password yawakamisa zvakare",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Ndapota chengetedza zita rezvenhau",
 
             "validate_tag":"Ndapota tumira zita rezvenhau rekambani",
-            "validate_tag_length":"Memo zita harigoni kuva rakapfuvura kupfuura mazita 8",
+            "validate_tag_length":"Zita rezita rekunyorera haringagoni kudarika vanhu vatatu.",
             "validate_enter_keystore":"Ndapota tumira mafeji eyokutanga kutanga",
             "validate_error_keystore":"Kubudiswa kweAunti yakakundikana, inogona kunge yakanganisa faira faira",
             "imported_account_success":"Yakapindirwa zvakanaka",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Ndapota nyora pasi password yeiyo account",
             "validate_password":"Ndapota nyora password yeiyo account",
             "remove_success":"Akabudirira kubudirira"
+        }
+    },
+    "page_config": {
+        "config_detection":"Kugadzirisa kugona",
+        "content_msg":{
+            "ready_test":"Gadzirira kugona faira yefaira",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Ikozvino node yekugadzirisa mashoko yakawanikwa",
+            "is_local":"Tarisai kana kune node yefaira munzvimbo yako",
+            "already_local":"Itaji yefaira yefodhi yefodhi iripo pane imwe purogiramu yemazuva ano.",
+            "not_local":"Izvo zvakagadziriswa zveruzhinji zvefodhi yefodhi haina kuonekwa, inogona kunge ichatanga kushanda.",
+            "config_write_local":"Nyora iyo yakagadziriswa fodhi yefodhi yefaira kune yedhi disk"
+        },
+        "version_dialog":{
+            "version_tit":"Version update prompt",
+            "download_wallet":"Endai kunzvimbo yepamutemo webhusaiti kuti mubudise shanduro yakapedzisira yemari",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

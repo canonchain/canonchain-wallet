@@ -13,12 +13,15 @@
         "contacts":"Harremanetarako",
         "setting":"Ezarri",
         "total":"Guztira",
-        "testnet":"Proba sarea"
+        "testnet":"Proba sarea",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Ezarri",
         "lang":"Hizkuntza",
-        "select":"Aukeratu ezazu"
+        "select":"Aukeratu ezazu",
+        "version_number":"Karrerako bertsioaren zenbakia"
     },
     "page_contacts": {
         "tit":"Harremanetarako",
@@ -39,7 +42,7 @@
             "no_tag":"Idatzi kontuaren oharra",
             "no_address":"Sartu zure kontuaren helbidea",
             "valid_address":"Kontaktuaren helbidea legez kanpokoa da",
-            "validate_tag_length":"Memo izenik ezin da 8 karaktere baino gehiago izan",
+            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
             "exist":"Kontaktua lehendik ere badago,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Aldatu oharra",
             "subtit":"Markatu ohar bat zure konturako",
             "no_tag":"Idatzi kontuaren oharra",
-            "validate_tag_length":"Memo izenik ezin da 8 karaktere baino gehiago izan"
+            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan."
         },
         "dia_tx":{
             "tit":"Transakzio informazioa",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Deskargatu kontu fitxategia",
 
             "validate_tag":"Idatzi kontuaren oharraren izena",
-            "validate_tag_length":"Memo izenik ezin da 8 karaktere baino gehiago izan",
+            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
 
             "validate_password":"Idatzi zehaztutako pasahitza",
             "validate_re_password":"Sartu berriro ezarri duzun pasahitza",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Ezarri kontuaren oharraren izena",
 
             "validate_tag":"Idatzi kontuaren oharraren izena",
-            "validate_tag_length":"Memo izenik ezin da 8 karaktere baino gehiago izan",
+            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
             "validate_enter_keystore":"Inportatu kontu fitxategia lehenik",
             "validate_error_keystore":"Kontuaren inportazioa huts egin du, kontu fitxategiaren errorea izan daiteke",
             "imported_account_success":"Ondo inportatu da",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Sartu pasahitza kontu honetarako",
             "validate_password":"Idatzi kontuaren pasahitza",
             "remove_success":"Behar bezala kendu da"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurazioaren detekzioa",
+        "content_msg":{
+            "ready_test":"Konfigurazio fitxategia hautatzeko prestatu",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Azken nodoaren konfigurazio informazioa lortu da",
+            "is_local":"Egiaztatu nodoen fitxategia lokalean dagoela",
+            "already_local":"Nodo fitxategiaren konfigurazio fitxategia uneko gailuan dago.",
+            "not_local":"Nodoaren konfigurazioaren informazioa ez da hauteman, lehen aldiz exekutatzen egon daiteke.",
+            "config_write_local":"Idatzi lortutako nodoen informazio-fitxategia disko lokalean"
+        },
+        "version_dialog":{
+            "version_tit":"Eguneratzeen bertsioaren jarraipena",
+            "download_wallet":"Joan webgune ofizialera dirua azken bertsioa deskargatzeko",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

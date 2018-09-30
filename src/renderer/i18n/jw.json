@@ -13,12 +13,15 @@
         "contacts":"Kontak",
         "setting":"Setelan",
         "total":"Total",
-        "testnet":"Jaringan uji"
+        "testnet":"Jaringan uji",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Setelan",
         "lang":"Basa",
-        "select":"Mangga milih"
+        "select":"Mangga milih",
+        "version_number":"Nomer versi dompet"
     },
     "page_contacts": {
         "tit":"Kontak",
@@ -39,7 +42,7 @@
             "no_tag":"Mangga mlebu cathetan akun",
             "no_address":"Mangga ketik alamat akun sampeyan",
             "valid_address":"Alamat kontak iku ilegal",
-            "validate_tag_length":"Jeneng memo ora bisa luwih saka 8 karakter",
+            "validate_tag_length":"Jeneng jeneng cathetan ora bisa luwih saka 8 karakter.",
             "exist":"Kontak wis ana,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Ngowahi cathetan",
             "subtit":"Tandai cathetan kanggo akun sampeyan",
             "no_tag":"Mangga mlebu cathetan akun",
-            "validate_tag_length":"Jeneng memo ora bisa luwih saka 8 karakter"
+            "validate_tag_length":"Jeneng jeneng cathetan ora bisa luwih saka 8 karakter."
         },
         "dia_tx":{
             "tit":"Informasi transaksi",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Ngunduh file akun",
 
             "validate_tag":"Mangga ketik jeneng cathetan akun",
-            "validate_tag_length":"Jeneng memo ora bisa luwih saka 8 karakter",
+            "validate_tag_length":"Jeneng jeneng cathetan ora bisa luwih saka 8 karakter.",
 
             "validate_password":"Mangga ketik sandhi sing sampeyan setel",
             "validate_re_password":"Mangga ketik sandhi sing wis disetel maneh",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Mangga nyetel jeneng cathetan akun",
 
             "validate_tag":"Mangga ketik jeneng cathetan akun",
-            "validate_tag_length":"Jeneng memo ora bisa luwih saka 8 karakter",
+            "validate_tag_length":"Jeneng jeneng cathetan ora bisa luwih saka 8 karakter.",
             "validate_enter_keystore":"Mangga ngimpor file akun dhisik dhisik",
             "validate_error_keystore":"Ngimpor akun gagal, bisa dadi kesalahan file akun",
             "imported_account_success":"Kasil apik",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Mangga ketik sandhi kanggo akun iki",
             "validate_password":"Mangga ketik sandhi kanggo akun kasebut",
             "remove_success":"Kanthi sukses dibusak"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurasi konfigurasi",
+        "content_msg":{
+            "ready_test":"Siapke ndeteksi berkas konfigurasi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Informasi konfigurasi node paling anyar wis diduweni",
+            "is_local":"Priksa manawa ana file simpul sacara lokal",
+            "already_local":"Berkas konfigurasi berkas simpul ana ing piranti saiki.",
+            "not_local":"Informasi konfigurasi file simpul ora dideteksi, bisa dadi sing pertama kaloro.",
+            "config_write_local":"Tulis berkas informasi simpul sing ditampa ing disk lokal"
+        },
+        "version_dialog":{
+            "version_tit":"Ganti update versi",
+            "download_wallet":"Bukak situs web resmi kanggo ngundhuh dhuwit sing paling anyar",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

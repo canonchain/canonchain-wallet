@@ -13,12 +13,15 @@
         "contacts":"Fesoʻotaʻiga",
         "setting":"Faʻatonu",
         "total":"Aofaʻi",
-        "testnet":"Tofiga o suʻega"
+        "testnet":"Tofiga o suʻega",
+        "online":"Initaneti",
+        "offline":"Lafoaʻi"
     },
     "page_setting": {
         "tit":"Faʻatonu",
         "lang":"Gagana",
-        "select":"Faamolemole filifili"
+        "select":"Faamolemole filifili",
+        "version_number":"Laupepa numera numera"
     },
     "page_contacts": {
         "tit":"Fesoʻotaʻiga",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Faamolemole ia ulufale i le upega tafailagi mo lenei tala",
             "validate_password":"Faʻamolemole tuʻu mai le faʻaupuga mo le teugatupe",
             "remove_success":"Aveese ma le manuia"
+        }
+    },
+    "page_config": {
+        "config_detection":"Faʻamatalaga o le folasia",
+        "content_msg":{
+            "ready_test":"Saunia e suʻe le faila faatulagaina",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Ua maua le faʻamatalaga fou o le faʻatulagaga o le node",
+            "is_local":"Siaki pe i ai se faila node i le lotoifale",
+            "already_local":"O le faila faatulagaina o le faila node o loʻo i luga o le masini faʻaoga nei.",
+            "not_local":"E le o iloa le faʻamatalaga faʻasologa o le faila pusa, atonu o le taimi muamua lea e tamoe ai.",
+            "config_write_local":"Tusi le faila faʻamatalaga o le faʻailoga maua i le disasite i le lotoifale"
+        },
+        "version_dialog":{
+            "version_tit":"Faʻafouina le faʻafouina o lomiga",
+            "download_wallet":"Alu i luga o le upega tafaʻilagi aloaia e ave ai le lomiga lata mai o le tupe",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

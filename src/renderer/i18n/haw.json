@@ -13,12 +13,15 @@
         "contacts":"Hoʻokaʻaʻike",
         "setting":"Hoʻonohonoho",
         "total":"Hōʻuluʻulu",
-        "testnet":"Ka ho'āʻo ho'āʻo"
+        "testnet":"Ka ho'āʻo ho'āʻo",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Hoʻonohonoho",
         "lang":"'Ōlelo",
-        "select":"E koho"
+        "select":"E koho",
+        "version_number":"ʻO ka helu huapalama"
     },
     "page_contacts": {
         "tit":"Hoʻokaʻaʻike",
@@ -39,7 +42,7 @@
             "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
             "no_address":"Eʻoluʻolu e tomo i kāu helu helu pūnaewele",
             "valid_address":"ʻO ke kūlana o ka hulina he kānāwaiʻole",
-            "validate_tag_length":"ʻO ka Memo inoaʻaʻole hiki ke lōʻihi ma mua o 8 mau kikowaena",
+            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
             "exist":"Loaʻa ka hulina,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Hoʻololi i ka memo",
             "subtit":"E kākau i kahi leka no kāu helu",
             "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
-            "validate_tag_length":"ʻO ka Memo inoaʻaʻole hiki ke lōʻihi ma mua o 8 mau kikowaena"
+            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona."
         },
         "dia_tx":{
             "tit":"Kaʻike pilina",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Hoʻoiho i ka waihona pūnaewele",
 
             "validate_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa memo",
-            "validate_tag_length":"ʻO ka Memo inoaʻaʻole hiki ke lōʻihi ma mua o 8 mau kikowaena",
+            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
 
             "validate_password":"Eʻoluʻolu e hoʻokau i ka hua'ōlelo āu e hoʻonoho ai",
             "validate_re_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i ka hua'ōlelo āu e hoʻonoho hou",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa inoa",
 
             "validate_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa memo",
-            "validate_tag_length":"ʻO ka Memo inoaʻaʻole hiki ke lōʻihi ma mua o 8 mau kikowaena",
+            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
             "validate_enter_keystore":"E hoʻokomo i ka waihona pūnaewele mua",
             "validate_error_keystore":"Ua laka ka hōʻoia kālā, hiki ke hana hewa i ka pūnaewele",
             "imported_account_success":"Ua hoʻokomo 'ia i kahi komo",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Eʻoluʻolu, e hoʻokomo i ka hua'ōlelo no kēia pūnaewele",
             "validate_password":"Eʻoluʻolu eʻoluʻolu e hoʻokomo i ka hua'ōlelo no ka helu",
             "remove_success":"Ua hoʻopau 'ia me ka hoʻoholo"
+        }
+    },
+    "page_config": {
+        "config_detection":"ʻImi ke koho",
+        "content_msg":{
+            "ready_test":"E hoʻomākaukau eʻike i ka'ōnaehana hoʻonohonoho",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Loaʻaʻia kaʻike o ka hoʻonohonoho kūwaho hou",
+            "is_local":"E hōʻoia inā loaʻa kahi'ōpili pani ma kahi",
+            "already_local":"Kuhi ka'ōnaehana hoʻonohonoho o ke kōpena'īpona ma ka polokalamu i kēia manawa.",
+            "not_local":"ʻAʻoleʻikeʻia kaʻike hoʻonohonohoʻana o ka pūnaewele'ōpena,ʻo ia ka manawa mua e holo ai.",
+            "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi"
+        },
+        "version_dialog":{
+            "version_tit":"Hoʻopuka hou i ka hoʻololi",
+            "download_wallet":"E hele i ka pūnaewele official e kiʻi ai i ka hōʻailona hou loa o ke kālā",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

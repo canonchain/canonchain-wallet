@@ -13,12 +13,15 @@
         "contacts":"اړیکه",
         "setting":"ترتیب",
         "total":"ټول",
-        "testnet":"د ازموینې شبکه"
+        "testnet":"د ازموینې شبکه",
+        "online":"آنلاین",
+        "offline":"ناباوره"
     },
     "page_setting": {
         "tit":"ترتیب",
         "lang":"ژبه",
-        "select":"لطفا غوره کړئ"
+        "select":"لطفا غوره کړئ",
+        "version_number":"د بڼې نسخه شمیره"
     },
     "page_contacts": {
         "tit":"اړیکه",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"لطفا د دې ګڼون لپاره پټنوم وليکئ",
             "validate_password":"مهرباني وکړئ د حساب لپاره شفر ورکړه",
             "remove_success":"په بریالیتوب سره لرې کړای شو"
+        }
+    },
+    "page_config": {
+        "config_detection":"د تفتیش موندنه",
+        "content_msg":{
+            "ready_test":"د ترتیب کولو دوتنه کشفولو لپاره تیار کړئ",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"د نوډ نوډ تمدید معلومات ترلاسه شوي",
+            "is_local":"وګورئ که چیرې په محلي توګه یوډډ فایل شتون ولري",
+            "already_local":"د اوسنی وسیلو په اړه د نوډ فایل فایل فاکس شتون لري.",
+            "not_local":"د نوډ دوتنې کنټرول معلومات ندی معلوم شوی، دا کیدی شي لومړی ځل وي.",
+            "config_write_local":"د ترلاسه شوي نوډ معلومات د سیمی ډیسک ته ولیکئ"
+        },
+        "version_dialog":{
+            "version_tit":"د نسخه تازه اوسمهال",
+            "download_wallet":"د پیسو وروستی نسخه ډکولو لپاره رسمي ویب پاڼې ته لاړ شئ",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

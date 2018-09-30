@@ -13,12 +13,15 @@
         "contacts":"Kontakte",
         "setting":"Anviwònman",
         "total":"Total",
-        "testnet":"Rezo tès"
+        "testnet":"Rezo tès",
+        "online":"Sou entènèt",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Anviwònman",
         "lang":"Lang",
-        "select":"Tanpri chwazi"
+        "select":"Tanpri chwazi",
+        "version_number":"Bous vèsyon nimewo"
     },
     "page_contacts": {
         "tit":"Kontakte",
@@ -39,7 +42,7 @@
             "no_tag":"Tanpri antre yon nòt kont",
             "no_address":"Tanpri antre adrès kont ou",
             "valid_address":"Adrès la nan kontak la se ilegal",
-            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
+            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
             "exist":"Kontak la deja egziste,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Modifye nòt",
             "subtit":"Make yon nòt pou kont ou",
             "no_tag":"Tanpri antre yon nòt kont",
-            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè."
+            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè"
         },
         "dia_tx":{
             "tit":"Enfòmasyon tranzaksyon",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Download dosye kont",
 
             "validate_tag":"Tanpri antre non an nòt kont",
-            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
+            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
 
             "validate_password":"Tanpri antre modpas la ou mete",
             "validate_re_password":"Tanpri antre modpas la ou mete ankò",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Tanpri mete non an nòt kont",
 
             "validate_tag":"Tanpri antre non an nòt kont",
-            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
+            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
             "validate_enter_keystore":"Tanpri enpòte dosye a kont premye",
             "validate_error_keystore":"Kont enpòte echwe, yo ka erè dosye kont",
             "imported_account_success":"Siksè enpòte",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Tanpri antre modpas la pou kont sa a",
             "validate_password":"Tanpri antre modpas la pou kont lan",
             "remove_success":"Siksè retire li"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigirasyon deteksyon",
+        "content_msg":{
+            "ready_test":"Prepare yo detekte dosye a konfigirasyon",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Yo te jwenn dènye enfòmasyon konfigirasyon ne la",
+            "is_local":"Tcheke si gen yon dosye node lokalman",
+            "already_local":"Fichye a konfigirasyon nan dosye a ne egziste sou aparèy aktyèl la.",
+            "not_local":"Enfòmasyon konfigirasyon nan dosye a ne pa detekte, li ka premye fwa kouri.",
+            "config_write_local":"Ekri dosye a ne jwenn enfòmasyon sou disk lokal la"
+        },
+        "version_dialog":{
+            "version_tit":"Version aktyalizasyon rapid",
+            "download_wallet":"Ale nan sit entènèt la ofisyèl nan download vèsyon an dènye nan lajan an",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"kosketus",
         "setting":"perustettu",
         "total":"kokonais-",
-        "testnet":"Testausverkko"
+        "testnet":"Testausverkko",
+        "online":"Online",
+        "offline":"Poissa"
     },
     "page_setting": {
         "tit":"perustettu",
         "lang":"kieli",
-        "select":"Valitse"
+        "select":"Valitse",
+        "version_number":"Lompakon versionumero"
     },
     "page_contacts": {
         "tit":"kosketus",
@@ -39,7 +42,7 @@
             "no_tag":"Anna tili-ilmoitus",
             "no_address":"Anna tilisi osoite",
             "valid_address":"Yhteyshenkilön osoite on lainvastainen",
-            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
+            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
             "exist":"Yhteys on jo olemassa,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Muokkaa huomautusta",
             "subtit":"Merkitse tiliisi merkintä",
             "no_tag":"Anna tili-ilmoitus",
-            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä"
+            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä."
         },
         "dia_tx":{
             "tit":"Tapahtumatiedot",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Lataa tilitiedosto",
 
             "validate_tag":"Anna tilin huomata nimi",
-            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
+            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
 
             "validate_password":"Anna salasanasi, jonka olet määrittänyt",
             "validate_re_password":"Anna uudelleen määrittämäsi salasana",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Aseta tilin huomata nimi",
 
             "validate_tag":"Anna tilin huomata nimi",
-            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
+            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
             "validate_enter_keystore":"Tuo ensin tilitietokanta",
             "validate_error_keystore":"Tilin tuonti epäonnistui, voi olla tilin tiedostovirhe",
             "imported_account_success":"Tuodaan onnistuneesti",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Anna tämän tilin salasana",
             "validate_password":"Anna tilin salasana",
             "remove_success":"Poistettiin onnistuneesti"
+        }
+    },
+    "page_config": {
+        "config_detection":"Kokoonpanon tunnistus",
+        "content_msg":{
+            "ready_test":"Valmistaudu määrittämään asetustiedoston",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Uusimmat solmun kokoonpanotiedot on saatu",
+            "is_local":"Tarkista, onko solmutiedosto paikallisesti",
+            "already_local":"Solmun tiedostomuodon tiedosto on olemassa olevassa laitteessa.",
+            "not_local":"Solmutiedoston konfiguraatiotietoja ei tunnisteta, se saattaa olla ensimmäinen kerta.",
+            "config_write_local":"Kirjoita saatu solmutietotiedosto paikalliselle levylle"
+        },
+        "version_dialog":{
+            "version_tit":"Versiopäivitys-kehote",
+            "download_wallet":"Siirry viralliselle verkkosivustolle ladataksesi uusimman version rahoista",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Hubungi",
         "setting":"Menetapkan",
         "total":"Jumlah",
-        "testnet":"Rangkaian ujian"
+        "testnet":"Rangkaian ujian",
+        "online":"Online",
+        "offline":"Luar talian"
     },
     "page_setting": {
         "tit":"Menetapkan",
         "lang":"Bahasa",
-        "select":"Sila pilih"
+        "select":"Sila pilih",
+        "version_number":"Nombor versi Wallet"
     },
     "page_contacts": {
         "tit":"Hubungi",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Sila masukkan kata laluan untuk akaun ini",
             "validate_password":"Sila masukkan kata laluan untuk akaun tersebut",
             "remove_success":"Berjaya dikeluarkan"
+        }
+    },
+    "page_config": {
+        "config_detection":"Pengesanan konfigurasi",
+        "content_msg":{
+            "ready_test":"Bersedia untuk mengesan fail konfigurasi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Maklumat konfigurasi nod terkini telah diperolehi",
+            "is_local":"Periksa sama ada terdapat fail nod dalam negara",
+            "already_local":"Fail konfigurasi fail simpul wujud pada peranti semasa.",
+            "not_local":"Maklumat konfigurasi fail nod tidak dikesan, ia mungkin kali pertama dijalankan.",
+            "config_write_local":"Tulis fail maklumat nod yang diperolehi ke cakera tempatan"
+        },
+        "version_dialog":{
+            "version_tit":"Promosi kemas kini versi",
+            "download_wallet":"Pergi ke laman web rasmi untuk memuat turun versi terkini wang",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

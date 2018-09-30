@@ -13,12 +13,15 @@
         "contacts":"Contact",
         "setting":"Manangana",
         "total":"Total",
-        "testnet":"Tetikasa fitsapana"
+        "testnet":"Tetikasa fitsapana",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Manangana",
         "lang":"fiteny",
-        "select":"Mifidiana azafady"
+        "select":"Mifidiana azafady",
+        "version_number":"Valin'ny nomerika Wallet"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -39,7 +42,7 @@
             "no_tag":"Mampidira fanamarihana ny kaonty azafady",
             "no_address":"Ampidiro azafady ny adiresinao",
             "valid_address":"Tsy ara-dalàna ny adiresin'ny fifandraisana",
-            "validate_tag_length":"Ny anaran'ny memo dia tsy mety maharitra mihoatra ny 8",
+            "validate_tag_length":"Ny anaran'ny anarana fanamarihana dia tsy afaka mihoatra ny 8.",
             "exist":"Efa misy ny fifandraisana,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Hanova fanamarihana",
             "subtit":"Mariho marika ho an'ny kaontinao",
             "no_tag":"Mampidira fanamarihana ny kaonty azafady",
-            "validate_tag_length":"Ny anaran'ny memo dia tsy mety maharitra mihoatra ny 8"
+            "validate_tag_length":"Ny anaran'ny anarana fanamarihana dia tsy afaka mihoatra ny 8."
         },
         "dia_tx":{
             "tit":"Fampahalalana momba ny trosa",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Download ny rakitra amin'ny kaonty",
 
             "validate_tag":"Ampidiro azafady ny anaran'ny kaontinao",
-            "validate_tag_length":"Ny anaran'ny memo dia tsy mety maharitra mihoatra ny 8",
+            "validate_tag_length":"Ny anaran'ny anarana fanamarihana dia tsy afaka mihoatra ny 8.",
 
             "validate_password":"Ampidiro azafady ny tenimiafinao",
             "validate_re_password":"Ampidiro azafady ny tenimiafinao averina",
@@ -136,7 +139,7 @@
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
-            "create_success_des":"Azafady saveo ny rakitrao ka aza mizara izany amin'ny olona rehetra!"
+            "create_success_des":"Azafady saveo ny rakitra ao amin'ny kaontinao ary aza mizara izany amin'ny olona rehetra!"
         },
         "import_dia": {
             "tit":"Ampidiro ny kaonty",    
@@ -145,7 +148,7 @@
             "placeholder_tag":"Ampidiro azafady ny anaran'ny kaontinao",
 
             "validate_tag":"Ampidiro azafady ny anaran'ny kaontinao",
-            "validate_tag_length":"Ny anaran'ny memo dia tsy mety maharitra mihoatra ny 8",
+            "validate_tag_length":"Ny anaran'ny anarana fanamarihana dia tsy afaka mihoatra ny 8.",
             "validate_enter_keystore":"Miangavy aloha azafady aloha ny rakitra",
             "validate_error_keystore":"Voafandina ny kaonty kaonty, mety ho diso ny rakitra",
             "imported_account_success":"Nahomby nafarana",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Ampidiro azafady ny tenimiafinao amin'ity kaonty ity",
             "validate_password":"Ampidiro azafady ny tenimiafin'ilay kaonty",
             "remove_success":"Nesorina tamim-pahombiazana"
+        }
+    },
+    "page_config": {
+        "config_detection":"Conception detection",
+        "content_msg":{
+            "ready_test":"Miomàna hamantatra ny rakitra fikirakirana",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Ny fampahalalana farany momba ny fanalahidy farany dia azo",
+            "is_local":"Hamarino raha misy rakitra nodia eo an-toerana",
+            "already_local":"Ny rakitra fanoratana ny rakitra node dia misy eo amin'ny fitaovana misy ankehitriny.",
+            "not_local":"Ny fampahalalana fanoratana ny rakitra node dia tsy fantatra, mety ho fotoana voalohany hihazakazahana izany.",
+            "config_write_local":"Soraty amin'ny rakitra ao an-toerana ny rakitra fampahalalana rakitra"
+        },
+        "version_dialog":{
+            "version_tit":"Version prompt",
+            "download_wallet":"Mandehana any amin'ny tranonkala ofisialy mba haka ilay version farany amin'ny vola",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Cuntattate",
         "setting":"Parcu",
         "total":"Tuttu",
-        "testnet":"Test Network"
+        "testnet":"Test Network",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Parcu",
         "lang":"Lingua",
-        "select":"Sceglite u vostru"
+        "select":"Sceglite u vostru",
+        "version_number":"U numaru di versione Wallet"
     },
     "page_contacts": {
         "tit":"Cuntattate",
@@ -39,7 +42,7 @@
             "no_tag":"Per piacè inserisce una nota di cunta",
             "no_address":"Intrazate l'indirizzu vostru indirizzu",
             "valid_address":"L'indirizzu di u cuntattu hè illegale",
-            "validate_tag_length":"U nome di Memo ùn pò esse più di più di 8 caratteri",
+            "validate_tag_length":"U nome di u nome di nota ùn pò esse più grande di 8 caratteri.",
             "exist":"U cuntattu hè digià esiste,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Modifiche nota",
             "subtit":"Marcate una nota per u vostru contu",
             "no_tag":"Per piacè inserisce una nota di cunta",
-            "validate_tag_length":"U nome di Memo ùn pò esse più di più di 8 caratteri"
+            "validate_tag_length":"U nome di u nome di nota ùn pò esse più grande di 8 caratteri."
         },
         "dia_tx":{
             "tit":"Informazioni transaccione",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Scaricate un schedariu di resa",
 
             "validate_tag":"Per piacè inserite u nome in nota",
-            "validate_tag_length":"U nome di Memo ùn pò esse più di più di 8 caratteri",
+            "validate_tag_length":"U nome di u nome di nota ùn pò esse più grande di 8 caratteri.",
 
             "validate_password":"Per piacè inserite u password chjode",
             "validate_re_password":"Per piacè inserite u password si trova à novu",
@@ -136,7 +139,7 @@
             "validate_password_length":"A password in modu cuntenutu hè intesa in duie volte",
 
             "create_success":"Creatu successu",
-            "create_success_des":"Sàlvate u vostru articulu di u cuntestu è ùn ne micca sparte cù qualcosa!"
+            "create_success_des":"Sàlvate u vostru articulu di u vostru contu è micca sparte cù qualcosa!"
         },
         "import_dia": {
             "tit":"Impurtante u compte",    
@@ -145,7 +148,7 @@
             "placeholder_tag":"Fate u vostru nome di nota",
 
             "validate_tag":"Per piacè inserite u nome in nota",
-            "validate_tag_length":"U nome di Memo ùn pò esse più di più di 8 caratteri",
+            "validate_tag_length":"U nome di u nome di nota ùn pò esse più grande di 8 caratteri.",
             "validate_enter_keystore":"Importama u vostru file cum'è prima",
             "validate_error_keystore":"A importe di una cuntrullata fallita, pò esse l'errore di u registratu",
             "imported_account_success":"Impurtatu importatu",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Per piacè inserite u password per stu cuntu",
             "validate_password":"Per piacè inserite u password per u contu",
             "remove_success":"Successfully eliminata"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detitazione di cunfigurazione",
+        "content_msg":{
+            "ready_test":"Preparate per dette u schedariu di cunfigurazione",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"L'ultime nant'à l'informazione di a nuvola hè stata ottata",
+            "is_local":"Verificate s'ellu ci hè un schedariu node locale",
+            "already_local":"U schedariu di cunfigurazione di u nientu schedariu esiste in u attuale attuale.",
+            "not_local":"A infurmazione di a nfurmazzioni di u schedariu node ùn hè micca detecatu, pò esse a prima volta in corruzzione.",
+            "config_write_local":"Scrivite u schedariu d'infurmazione in l'infurmazione di u node à u discu locale"
+        },
+        "version_dialog":{
+            "version_tit":"A pàgina di aghjurnamentu di versione",
+            "download_wallet":"Andà à a pàgina web ufficiale per scaricà l'ultima versione di i soldi",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

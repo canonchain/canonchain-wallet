@@ -13,12 +13,15 @@
         "contacts":"Hafa samband",
         "setting":"Stillingar",
         "total":"Samtals",
-        "testnet":"Prófunarnet"
+        "testnet":"Prófunarnet",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Stillingar",
         "lang":"Tungumál",
-        "select":"Vinsamlegast veljið"
+        "select":"Vinsamlegast veljið",
+        "version_number":"Veski útgáfa númer"
     },
     "page_contacts": {
         "tit":"Hafa samband",
@@ -39,7 +42,7 @@
             "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
             "no_address":"Vinsamlegast sláðu inn netfangið þitt",
             "valid_address":"Heimilisfang tengiliðs er ólöglegt",
-            "validate_tag_length":"Minnispunktur getur ekki verið lengri en 8 stafir",
+            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
             "exist":"Tengiliðurinn er þegar til,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Breyta athugasemd",
             "subtit":"Merktu athugasemd fyrir reikninginn þinn",
             "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
-            "validate_tag_length":"Minnispunktur getur ekki verið lengri en 8 stafir"
+            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir."
         },
         "dia_tx":{
             "tit":"Upplýsingar um viðskipti",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Hlaða niður reikningsskrá",
 
             "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
-            "validate_tag_length":"Minnispunktur getur ekki verið lengri en 8 stafir",
+            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
 
             "validate_password":"Vinsamlegast sláðu inn lykilorðið sem þú setur",
             "validate_re_password":"Vinsamlegast sláðu inn lykilorðið sem þú stillir aftur",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Vinsamlegast settu nafn reikningsnota",
 
             "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
-            "validate_tag_length":"Minnispunktur getur ekki verið lengri en 8 stafir",
+            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
             "validate_enter_keystore":"Vinsamlegast flytðu inn reikningsskráin fyrst",
             "validate_error_keystore":"Reikningur innflutnings mistókst, gæti verið villa skráar villa",
             "imported_account_success":"Innflutt með góðum árangri",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Vinsamlegast sláðu inn lykilorðið fyrir þennan reikning",
             "validate_password":"Vinsamlegast sláðu inn lykilorðið fyrir reikninginn",
             "remove_success":"Tókst að fjarlægja"
+        }
+    },
+    "page_config": {
+        "config_detection":"Stilling uppgötvun",
+        "content_msg":{
+            "ready_test":"Undirbúið að uppgötva stillingarskrána",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Nýjustu upplýsingar um hnút stillingar hafa verið fengnar",
+            "is_local":"Athugaðu hvort það sé hnútskrá á staðnum",
+            "already_local":"Stillingarskráin á hnútskránni er til staðar á núverandi tæki.",
+            "not_local":"Stillingarupplýsingarnar á hnútskránni eru ekki greindar, það kann að vera í fyrsta sinn í gangi.",
+            "config_write_local":"Skrifaðu hnútupplýsingaskrána á staðbundna diskinn"
+        },
+        "version_dialog":{
+            "version_tit":"Útgáfa uppfærsla hvetja",
+            "download_wallet":"Farðu á opinbera vefsíðu til að hlaða niður nýjustu útgáfunni af peningunum",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

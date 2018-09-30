@@ -13,12 +13,15 @@
         "contacts":"Liên hệ",
         "setting":"Cài đặt",
         "total":"Tổng số",
-        "testnet":"Mạng kiểm tra"
+        "testnet":"Mạng kiểm tra",
+        "online":"Trực tuyến",
+        "offline":"Ngoại tuyến"
     },
     "page_setting": {
         "tit":"Cài đặt",
         "lang":"Ngôn ngữ",
-        "select":"Vui lòng chọn"
+        "select":"Vui lòng chọn",
+        "version_number":"Số phiên bản Wallet"
     },
     "page_contacts": {
         "tit":"Liên hệ",
@@ -39,7 +42,7 @@
             "no_tag":"Vui lòng nhập ghi chú tài khoản",
             "no_address":"Vui lòng nhập địa chỉ tài khoản của bạn",
             "valid_address":"Địa chỉ liên hệ là bất hợp pháp",
-            "validate_tag_length":"Tên bản ghi không thể dài hơn 8 ký tự",
+            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
             "exist":"Địa chỉ liên hệ đã tồn tại,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Sửa đổi ghi chú",
             "subtit":"Đánh dấu ghi chú cho tài khoản của bạn",
             "no_tag":"Vui lòng nhập ghi chú tài khoản",
-            "validate_tag_length":"Tên bản ghi không thể dài hơn 8 ký tự"
+            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự."
         },
         "dia_tx":{
             "tit":"Thông tin giao dịch",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Tải xuống tệp tài khoản",
 
             "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
-            "validate_tag_length":"Tên bản ghi không thể dài hơn 8 ký tự",
+            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
 
             "validate_password":"Vui lòng nhập mật khẩu bạn đã đặt",
             "validate_re_password":"Vui lòng nhập mật khẩu bạn đặt lại",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Vui lòng đặt tên ghi chú tài khoản",
 
             "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
-            "validate_tag_length":"Tên bản ghi không thể dài hơn 8 ký tự",
+            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
             "validate_enter_keystore":"Vui lòng nhập tệp tài khoản trước",
             "validate_error_keystore":"Nhập tài khoản không thành công, có thể là lỗi tệp tài khoản",
             "imported_account_success":"Đã nhập thành công",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Vui lòng nhập mật khẩu cho tài khoản này",
             "validate_password":"Vui lòng nhập mật khẩu cho tài khoản",
             "remove_success":"Đã xóa thành công"
+        }
+    },
+    "page_config": {
+        "config_detection":"Phát hiện cấu hình",
+        "content_msg":{
+            "ready_test":"Chuẩn bị phát hiện tệp cấu hình",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Thông tin cấu hình nút mới nhất đã thu được",
+            "is_local":"Kiểm tra xem có một tệp nút cục bộ không",
+            "already_local":"Tệp cấu hình của tệp nút tồn tại trên thiết bị hiện tại.",
+            "not_local":"Thông tin cấu hình của tệp nút không được phát hiện, đây có thể là lần đầu tiên chạy.",
+            "config_write_local":"Ghi tập tin thông tin nút thu được vào đĩa cục bộ"
+        },
+        "version_dialog":{
+            "version_tit":"Lời nhắc cập nhật phiên bản",
+            "download_wallet":"Truy cập trang web chính thức để tải xuống phiên bản tiền mới nhất",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Байланыш",
         "setting":"орнотуу",
         "total":"Бардыгы болуп",
-        "testnet":"Test Network"
+        "testnet":"Test Network",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"орнотуу",
         "lang":"тил",
-        "select":"Сураныч, тандоо"
+        "select":"Сураныч, тандоо",
+        "version_number":"Purse версия номери"
     },
     "page_contacts": {
         "tit":"Байланыш",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Бул каттоо эсеби үчүн сырсөз",
             "validate_password":"Сураныч, эсеп сырсөз",
             "remove_success":"ийгиликтүү алынып салынды"
+        }
+    },
+    "page_config": {
+        "config_detection":"аныктоо Тарам орнотуусу",
+        "content_msg":{
+            "ready_test":"тарам билэни аныктоо даяр",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Бул акыркы түйүн тарам маалымат алган",
+            "is_local":"жергиликтүү түйүн билэ бар же жок экенин аныктоо",
+            "already_local":"Учурда бир тарам билэ маалымат түйүнү түзмөк жок",
+            "not_local":"Эмес, түйүн тарам материалдары табылды, ал биринчи жолу Нускасы болушу мүмкүн",
+            "config_write_local":"ээ түйүн маалымат жергиликтүү дискке жазылган Files"
+        },
+        "version_dialog":{
+            "version_tit":"Версия өзгөртүү киргизүүгө чакыруу",
+            "download_wallet":"Quguan тармак Акча акыркы нускасын жүктөп алуу",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Cuir fios thugainn",
         "setting":"A 'suidheachadh",
         "total":"Iomlan",
-        "testnet":"Deuchainn lìonra"
+        "testnet":"Deuchainn lìonra",
+        "online":"Air-loidhne",
+        "offline":"Air loidhne"
     },
     "page_setting": {
         "tit":"A 'suidheachadh",
         "lang":"Cànan",
-        "select":"Tagh"
+        "select":"Tagh",
+        "version_number":"Àireamh tionndaidh ballain"
     },
     "page_contacts": {
         "tit":"Cuir fios thugainn",
@@ -39,7 +42,7 @@
             "no_tag":"Cuir a-steach nòta cunntais",
             "no_address":"Cuir a-steach do sheòladh cunntais",
             "valid_address":"Tha seòladh a 'chonaltraidh mì-laghail",
-            "validate_tag_length":"Chan fhaod ainm meòrachan a bhith nas fhaide na 8 caractaran",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
             "exist":"Tha an ceangal a-cheana ann,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Nòta atharrachaidh",
             "subtit":"Dèan nota airson do chunntas",
             "no_tag":"Cuir a-steach nòta cunntais",
-            "validate_tag_length":"Chan fhaod ainm meòrachan a bhith nas fhaide na 8 caractaran"
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran."
         },
         "dia_tx":{
             "tit":"Fiosrachadh gluasadach",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Luchdaich sìos faidhle cunntais",
 
             "validate_tag":"Cuir a-steach ainm na nòta cunntais",
-            "validate_tag_length":"Chan fhaod ainm meòrachan a bhith nas fhaide na 8 caractaran",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
 
             "validate_password":"Cuir a-steach am facal-faire a shuidhich thu",
             "validate_re_password":"Cuir a-steach am facal-faire a shuidhich thu a-rithist",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Suidhich an t-ainm nòta cunntais",
 
             "validate_tag":"Cuir a-steach ainm na nòta cunntais",
-            "validate_tag_length":"Chan fhaod ainm meòrachan a bhith nas fhaide na 8 caractaran",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
             "validate_enter_keystore":"Cuir a-steach am faidhle cunntais an toiseach",
             "validate_error_keystore":"Dh'fhàillig càradh a 'chunntais, is dòcha gur e mearachd faidhle cunntais",
             "imported_account_success":"Chaidh a thoirt a-steach gu soirbheachail",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Cuir a-steach am facal-faire airson a 'chunntais seo",
             "validate_password":"Cuir a-steach am facal-faire airson a 'chunntais",
             "remove_success":"Chaidh a thoirt air falbh gu soirbheachail"
+        }
+    },
+    "page_config": {
+        "config_detection":"A 'lorg rèiteachadh",
+        "content_msg":{
+            "ready_test":"Dèan ullachadh gus am faidhle rèiteachaidh a lorg",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Chaidh am fiosrachadh rèiteachaidh nód as ùire fhaighinn",
+            "is_local":"Dèan cinnteach gu bheil faidhle nód ann gu h-ionadail",
+            "already_local":"Tha faidhle rèiteachaidh an fhaidhle nód air an inneal làithreach.",
+            "not_local":"Chan eil am fiosrachadh rèiteachaidh den fhaidhle nód air a lorg, is dòcha gur e seo a 'chiad uair a tha e a' ruith.",
+            "config_write_local":"Sgrìobh am faidhle fiosrachaidh nòta a chaidh fhaighinn chun a 'bhios ionadail"
+        },
+        "version_dialog":{
+            "version_tit":"Ùrachadh tionndadh gu luath",
+            "download_wallet":"Theirig chun làrach-lìn oifigeil airson an dreach as ùire den airgead a luchdachadh sìos",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

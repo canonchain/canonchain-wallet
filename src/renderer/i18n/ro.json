@@ -13,12 +13,15 @@
         "contacts":"contact",
         "setting":"Configurarea",
         "total":"total",
-        "testnet":"Rețeaua de testare"
+        "testnet":"Rețeaua de testare",
+        "online":"online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Configurarea",
         "lang":"limbă",
-        "select":"Vă rugăm să alegeți"
+        "select":"Vă rugăm să alegeți",
+        "version_number":"Numărul versiunii Wallet"
     },
     "page_contacts": {
         "tit":"contact",
@@ -39,7 +42,7 @@
             "no_tag":"Introduceți o notă de cont",
             "no_address":"Introduceți adresa dvs. de cont",
             "valid_address":"Adresa de contact este ilegală",
-            "validate_tag_length":"Memo numele nu poate fi mai lung de 8 caractere",
+            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
             "exist":"Contactul există deja,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Modificați nota",
             "subtit":"Marcați o notă pentru contul dvs.",
             "no_tag":"Introduceți o notă de cont",
-            "validate_tag_length":"Memo numele nu poate fi mai lung de 8 caractere"
+            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere."
         },
         "dia_tx":{
             "tit":"Informații despre tranzacții",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Descărcați fișierul de cont",
 
             "validate_tag":"Introduceți numele notei de cont",
-            "validate_tag_length":"Memo numele nu poate fi mai lung de 8 caractere",
+            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
 
             "validate_password":"Introduceți parola setată",
             "validate_re_password":"Introduceți din nou parola pe care o setați din nou",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Stabiliți numele notei de cont",
 
             "validate_tag":"Introduceți numele notei de cont",
-            "validate_tag_length":"Memo numele nu poate fi mai lung de 8 caractere",
+            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
             "validate_enter_keystore":"Vă rugăm să importați mai întâi fișierul contului",
             "validate_error_keystore":"Contul de import nu a reușit, poate fi eroare de fișier de cont",
             "imported_account_success":"S-a importat cu succes",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Introduceți parola pentru acest cont",
             "validate_password":"Introduceți parola pentru cont",
             "remove_success":"A fost eliminată cu succes"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detectarea configurației",
+        "content_msg":{
+            "ready_test":"Pregătiți-vă pentru a detecta fișierul de configurare",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Au fost obținute cele mai recente informații privind configurația nodurilor",
+            "is_local":"Verificați dacă există un fișier nod local",
+            "already_local":"Fișierul de configurare al fișierului nod există pe dispozitivul curent.",
+            "not_local":"Informațiile de configurare ale fișierului nod nu sunt detectate, poate fi prima dată când rulează.",
+            "config_write_local":"Scrieți fișierul informațiilor despre nodurile obținute pe discul local"
+        },
+        "version_dialog":{
+            "version_tit":"Versiunea de actualizare a promptului",
+            "download_wallet":"Du-te la site-ul oficial pentru a descărca cea mai recentă versiune a banilor",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Setzen",
         "total":"Total",
-        "testnet":"Testnetz"
+        "testnet":"Testnetz",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Setzen",
         "lang":"Sprooch",
-        "select":"Wielt weg"
+        "select":"Wielt weg",
+        "version_number":"Wallet Versioun Nummer"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -39,7 +42,7 @@
             "no_tag":"Gidd weg eng Konto Notiz",
             "no_address":"Gidd weg Är Kontoun Adress",
             "valid_address":"D'Adress vum Kontakt ass illegal",
-            "validate_tag_length":"Numm vum Memo kann net méi wéi 8 Zeechen sinn",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
             "exist":"De Kontakt existéiert schonn,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Änneren",
             "subtit":"Mark eng Notiz fir Äre Kont",
             "no_tag":"Gidd weg eng Konto Notiz",
-            "validate_tag_length":"Numm vum Memo kann net méi wéi 8 Zeechen sinn"
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen."
         },
         "dia_tx":{
             "tit":"Transaktiounsinformatioun",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Luet de Kont Datei",
 
             "validate_tag":"Gidd weg den Kontnummnumm",
-            "validate_tag_length":"Numm vum Memo kann net méi wéi 8 Zeechen sinn",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
 
             "validate_password":"Gidd weg den Passwuert, deen Dir agefouert hutt",
             "validate_re_password":"Gidd weg den Passwuert, deen Dir erëm gesat hutt",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Gitt weg den Account Notiznamen",
 
             "validate_tag":"Gidd weg den Kontnummnumm",
-            "validate_tag_length":"Numm vum Memo kann net méi wéi 8 Zeechen sinn",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
             "validate_enter_keystore":"Kuckt d'Eklicken first ofzehalen",
             "validate_error_keystore":"Kont importéiert ass falsch, ka Kont Filet vu Feeler",
             "imported_account_success":"Erfolleg importéiert",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Gidd weg Äert Passwuert fir dësen Account",
             "validate_password":"Gidd weg den Passwuert fir de Kont",
             "remove_success":"Erfolleg ofgëtt"
+        }
+    },
+    "page_config": {
+        "config_detection":"Configuratiounsdetektioun",
+        "content_msg":{
+            "ready_test":"Bereet Iech d 'Konfiguratiounsdatei z'erreechen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Déi lescht Knätschkonfiguratiounsinformatioun gouf kritt",
+            "is_local":"Kuckt ob et e Knueddate lokal ass",
+            "already_local":"De Configuratiounsdatei vun der Knueddatei existéiert op dem aktuellen Apparat.",
+            "not_local":"D'Konfiguratiounsinformatioun vun der Knueddatei gëtt net festgestallt, et kann d'éischt de Moment laafen.",
+            "config_write_local":"Schreift déi gewonnene Knotinformationsdatei op der lokaler Festplatte"
+        },
+        "version_dialog":{
+            "version_tit":"Versioun vum Update aktualiséiert",
+            "download_wallet":"Gitt op d'offizielle Websäit, fir déi lescht Versioun vum Geld ze lueden",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

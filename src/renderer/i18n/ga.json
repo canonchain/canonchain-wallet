@@ -13,12 +13,15 @@
         "contacts":"Teagmháil",
         "setting":"Socrú",
         "total":"Iomlán",
-        "testnet":"Líonra tástála"
+        "testnet":"Líonra tástála",
+        "online":"Ar Líne",
+        "offline":"Líne"
     },
     "page_setting": {
         "tit":"Socrú",
         "lang":"Teanga",
-        "select":"Roghnaigh"
+        "select":"Roghnaigh",
+        "version_number":"Uimhir leagan saoire"
     },
     "page_contacts": {
         "tit":"Teagmháil",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Cuir isteach an focal faire don chuntas seo",
             "validate_password":"Cuir isteach an focal faire don chuntas",
             "remove_success":"Bainte amach go rathúil"
+        }
+    },
+    "page_config": {
+        "config_detection":"Brath cumraíochta",
+        "content_msg":{
+            "ready_test":"Ullmhaigh an comhad cumraíochta a bhrath",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Tá an fhaisnéis chumraíochta nód is déanaí faighte",
+            "is_local":"Seiceáil an bhfuil comhad nód ann go háitiúil",
+            "already_local":"Tá comhad cumraíochta an chomhaid nód ann ar an bhfeiste atá ann faoi láthair.",
+            "not_local":"Ní bhfaightear faisnéis chumraíochta an chomhaid nód, b'fhéidir gurb é an chéad uair a bhí sé ag rith.",
+            "config_write_local":"Scríobh an comhad faisnéise nód a fhaightear chuig an diosca áitiúil"
+        },
+        "version_dialog":{
+            "version_tit":"Nuashonrú ar an leagan go pras",
+            "download_wallet":"Téigh go dtí an láithreán gréasáin oifigiúil chun an leagan is déanaí den airgead a íoslódáil",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

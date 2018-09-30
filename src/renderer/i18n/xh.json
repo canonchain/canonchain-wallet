@@ -13,12 +13,15 @@
         "contacts":"Uqhagamshelwano",
         "setting":"Ukubeka",
         "total":"Iyonke",
-        "testnet":"Inethiwekhi yokuhlola"
+        "testnet":"Inethiwekhi yokuhlola",
+        "online":"I-intanethi",
+        "offline":"Ngaphandle"
     },
     "page_setting": {
         "tit":"Ukubeka",
         "lang":"ULwimi",
-        "select":"Nceda ukhethe"
+        "select":"Nceda ukhethe",
+        "version_number":"Inombolo yenguqulo yeWallet"
     },
     "page_contacts": {
         "tit":"Uqhagamshelwano",
@@ -39,7 +42,7 @@
             "no_tag":"Nceda ufake inqaku le-akhawunti",
             "no_address":"Nceda ufake idilesi yeakhawunti yakho",
             "valid_address":"Idilesi yoqhagamshelwano ayikho mthethweni",
-            "validate_tag_length":"Igama leMemo alikwazi ukuba lide kunezinhlamvu ezingu-8",
+            "validate_tag_length":"Igama legama leenqaku alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
             "exist":"Uqhagamshelwano lukhona kakade,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Shintsha ingqalelo",
             "subtit":"Maka uphawu kwiakhawunti yakho",
             "no_tag":"Nceda ufake inqaku le-akhawunti",
-            "validate_tag_length":"Igama leMemo alikwazi ukuba lide kunezinhlamvu ezingu-8"
+            "validate_tag_length":"Igama legama leenqaku alikwazi ukuba likhulu kunezinhlamvu ezingu-8."
         },
         "dia_tx":{
             "tit":"Ulwazi lomthengi",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Landa ifayile yeakhawunti",
 
             "validate_tag":"Nceda ufake igama le-note note",
-            "validate_tag_length":"Igama leMemo alikwazi ukuba lide kunezinhlamvu ezingu-8",
+            "validate_tag_length":"Igama legama leenqaku alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
 
             "validate_password":"Nceda faka iphasiwedi oyimisile",
             "validate_re_password":"Nceda faka iphasiwedi oyifake kwakhona",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Nceda usethe igama legama leakhawunti",
 
             "validate_tag":"Nceda ufake igama le-note note",
-            "validate_tag_length":"Igama leMemo alikwazi ukuba lide kunezinhlamvu ezingu-8",
+            "validate_tag_length":"Igama legama leenqaku alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
             "validate_enter_keystore":"Nceda ngenisa ifayile ye-akhawunti kuqala",
             "validate_error_keystore":"Ukungenisa kweAkhawunti akuphumelelanga, ingaba ikopi yefayile ye-akhawunti",
             "imported_account_success":"Ngeniswe ngempumelelo",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Nceda faka iphasiwedi yale akhawunti",
             "validate_password":"Nceda faka iphasiwedi ye-akhawunti",
             "remove_success":"Ususwe ngempumelelo"
+        }
+    },
+    "page_config": {
+        "config_detection":"Ukuqwalaselwa kokuqwalasela",
+        "content_msg":{
+            "ready_test":"Lungiselela ukufumana ifayile yoqwalaselo",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Ulwazi lwangoku lwakhiwo lwe-node lufunyenwe",
+            "is_local":"Khangela ukuba kukho ifowuni yefowuni kwindawo",
+            "already_local":"Ifayile yokuqwalasela yefayile ye-node ikhoyo kwisixhobo esikhoyo.",
+            "not_local":"Ulwazi loqwalaselo lwefayile ye-node alufumanekanga, lube luqala ukusebenza.",
+            "config_write_local":"Bhala ifayili yolwazi efunyenwe kwi-disk yendawo"
+        },
+        "version_dialog":{
+            "version_tit":"Ukuhlaziywa kwesiqendu",
+            "download_wallet":"Yiya kwiwebhusayithi esemthethweni ukukhuphela inguqu yakutshanje yemali",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

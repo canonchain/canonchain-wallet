@@ -13,12 +13,15 @@
         "contacts":"Iteanye",
         "setting":"Ho beha",
         "total":"Kakaretso",
-        "testnet":"Inthanete ea teko"
+        "testnet":"Inthanete ea teko",
+        "online":"Inthaneteng",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Ho beha",
         "lang":"Puo",
-        "select":"Ka kopo khetha"
+        "select":"Ka kopo khetha",
+        "version_number":"Nomoro ea lenane la li-wallet"
     },
     "page_contacts": {
         "tit":"Iteanye",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Ka kopo kenya phasewete bakeng sa akhaonto ena",
             "validate_password":"Ka kopo kenya phasewete bakeng sa akhaonto",
             "remove_success":"E tlosoa ka katleho"
+        }
+    },
+    "page_config": {
+        "config_detection":"Tlhokomeliso ea ho etsa",
+        "content_msg":{
+            "ready_test":"Itokisetse ho bona faele ea phetoho",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Lintlha tsa morao-rao tsa tlhahlobo ea node li fumanoe",
+            "is_local":"Hlahloba hore na ho na le fensetere ea node sebakeng sa heno",
+            "already_local":"Fupete ea tlhomamiso ea faele ea hau ea node e teng ho sesebelisoa sa hona joale.",
+            "not_local":"Boitsebiso ba tlhahlobo ea faele ea node ha bo fumanehe, e ka 'na ea e-ba ea pele e sebetsa.",
+            "config_write_local":"Ngola faele ea tlhahisoleseding ea node e fumanoang disk ea sebakeng seo"
+        },
+        "version_dialog":{
+            "version_tit":"Phetolelo ea tlhahiso ea tlhahiso",
+            "download_wallet":"E-ea ho websaeteng ea molao e le hore u fumane chelete ea morao-rao ea chelete",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

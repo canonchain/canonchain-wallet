@@ -13,12 +13,15 @@
         "contacts":"צור קשר",
         "setting":"הגדרה",
         "total":"סך הכל",
-        "testnet":"בדוק את הרשת"
+        "testnet":"בדוק את הרשת",
+        "online":"באינטרנט",
+        "offline":"לא מקוון"
     },
     "page_setting": {
         "tit":"הגדרה",
         "lang":"שפה",
-        "select":"אנא בחר"
+        "select":"אנא בחר",
+        "version_number":"מספר הגרסה של ארנק Google"
     },
     "page_contacts": {
         "tit":"צור קשר",
@@ -39,7 +42,7 @@
             "no_tag":"הזן הערה לחשבון",
             "no_address":"הזן את כתובת החשבון שלך",
             "valid_address":"הכתובת של איש הקשר אינה חוקית",
-            "validate_tag_length":"שם התזכורת לא יכול להיות ארוך מ -8 תווים",
+            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
             "exist":"איש הקשר כבר קיים,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"שנה הערה",
             "subtit":"סמן הערה עבור החשבון שלך",
             "no_tag":"הזן הערה לחשבון",
-            "validate_tag_length":"שם התזכורת לא יכול להיות ארוך מ -8 תווים"
+            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים."
         },
         "dia_tx":{
             "tit":"מידע על עסקאות",
@@ -128,7 +131,7 @@
             "account_download_keystore":"הורד את קובץ החשבון",
 
             "validate_tag":"הזן את שם ההערה בחשבון",
-            "validate_tag_length":"שם התזכורת לא יכול להיות ארוך מ -8 תווים",
+            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
 
             "validate_password":"הזן את הסיסמה שהגדרת",
             "validate_re_password":"הזן את הסיסמה שהגדרת שוב",
@@ -145,7 +148,7 @@
             "placeholder_tag":"הגדר את שם ההערה בחשבון",
 
             "validate_tag":"הזן את שם ההערה בחשבון",
-            "validate_tag_length":"שם התזכורת לא יכול להיות ארוך מ -8 תווים",
+            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
             "validate_enter_keystore":"תחילה ייבא את קובץ החשבון",
             "validate_error_keystore":"ייבוא ​​החשבון נכשל, עשוי להיות שגיאת קובץ חשבון",
             "imported_account_success":"ייבא בהצלחה",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"הזן את הסיסמה עבור חשבון זה",
             "validate_password":"הזן את הסיסמה עבור החשבון",
             "remove_success":"הוסר בהצלחה"
+        }
+    },
+    "page_config": {
+        "config_detection":"זיהוי תצורה",
+        "content_msg":{
+            "ready_test":"היכונו כדי לאתר את קובץ התצורה",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"המידע האחרון תצורת הצומת הושג",
+            "is_local":"בדוק אם יש קובץ צומת מקומי",
+            "already_local":"קובץ התצורה של קובץ הצומת קיים בהתקן הנוכחי.",
+            "not_local":"מידע התצורה של קובץ הצומת אינו מזוהה, ייתכן שהוא פועל בפעם הראשונה.",
+            "config_write_local":"כתוב את קובץ הצומת שהושג לדיסק המקומי"
+        },
+        "version_dialog":{
+            "version_tit":"גרסה עדכון גרסה",
+            "download_wallet":"עבור אל האתר הרשמי כדי להוריד את הגירסה האחרונה של הכסף",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

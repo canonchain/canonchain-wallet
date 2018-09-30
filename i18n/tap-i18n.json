@@ -13,12 +13,15 @@
         "contacts": "联系人",
         "setting": "设置",
         "total": "合计",
-        "testnet":"测试网络"
+        "testnet":"测试网络",
+        "online":"在线",
+        "offline":"离线"
     },
     "page_setting": {
         "tit": "设置",
         "lang": "语言",
-        "select": "请选择"
+        "select": "请选择",
+        "version_number":"钱包版本"
     },
     "page_contacts": {
         "tit": "联系人",
@@ -161,6 +164,32 @@
             "placeholder_pwd":"请输入此账户的密码",
             "validate_password": "请输入账户的密码",
             "remove_success": "移除成功"
+        }
+    },
+    "page_config": {
+        "config_detection": "配置检测中",
+        "content_msg":{
+            "ready_test":"准备检测配置文件",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"已获取到最新的节点配置信息",
+            "is_local":"检测本地是否有节点文件",
+            "already_local":"当前设备存在节点文件的配置信息",
+            "not_local":"没有检测到节点文件的配置信息，可能是第一次运行",
+            "config_write_local":"将获取的节点信息文件，写入本地磁盘",
+            "whether_update_node":"检测是否需要更新",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"正在下载节点程序,请耐心等待",
+            "already_downloaded":"节点程序已经下载好，准备启动",
+            "ready_start":"准备启动节点",
+            "enter_wallet":"节点启动成功，准备进入钱包"
+        },
+        "version_dialog":{
+            "version_tit":"版本更新提示",
+            "download_wallet":"去官网下载最新版钱",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

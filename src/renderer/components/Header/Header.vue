@@ -16,8 +16,8 @@
         </ul>
         <div class="has-assets-czr">
             <span class="testnet">{{ $t('model_header.testnet') }} -
-                <span v-if="this.online" class="online">在线</span>
-                <span v-else class="unonline">离线</span>
+                <span v-if="this.online" class="online">{{ $t('model_header.online') }}</span>
+                <span v-else class="unonline">{{ $t('model_header.offline') }}</span>
             </span>
         </div>
     </header>

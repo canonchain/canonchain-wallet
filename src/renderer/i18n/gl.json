@@ -13,12 +13,15 @@
         "contacts":"Contacto",
         "setting":"Configuración",
         "total":"Total",
-        "testnet":"Rede de probas"
+        "testnet":"Rede de probas",
+        "online":"En liña",
+        "offline":"Desconectado"
     },
     "page_setting": {
         "tit":"Configuración",
         "lang":"Linguaxe",
-        "select":"Elixe"
+        "select":"Elixe",
+        "version_number":"Número de versión de carteira"
     },
     "page_contacts": {
         "tit":"Contacto",
@@ -39,7 +42,7 @@
             "no_tag":"Insira unha nota de conta",
             "no_address":"Introduce o enderezo da túa conta",
             "valid_address":"O enderezo do contacto é ilegal",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
             "exist":"O contacto xa existe,"
         }
     },
@@ -55,7 +58,7 @@
         "select":"Elixe",
         "no_account_info":"Aínda non hai ningunha conta, crea ou importa unha conta",
         "contacts_dig": {
-            "title":"Seleccione unha conta de contacto",
+            "title":"Selecciona unha conta de contacto",
             "select_placeholder":"Elixe"
         },
         "confirm_dia": {
@@ -87,7 +90,7 @@
             "tit":"Modificar nota",
             "subtit":"Marca unha nota para a túa conta",
             "no_tag":"Insira unha nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres"
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres."
         },
         "dia_tx":{
             "tit":"Información de transaccións",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Descargar o ficheiro da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
 
             "validate_password":"Introduza o contrasinal que configurou",
             "validate_re_password":"Introduza o contrasinal que configurou de novo",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Configure o nome da nota da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
             "validate_enter_keystore":"Importe primeiro o ficheiro da conta",
             "validate_error_keystore":"Fallou a importación da conta, pode ser un erro de ficheiro de conta",
             "imported_account_success":"Importada con éxito",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Introduza o contrasinal para esta conta",
             "validate_password":"Introduce o contrasinal da conta",
             "remove_success":"Eliminouse con éxito"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detección de configuración",
+        "content_msg":{
+            "ready_test":"Prepárese para detectar o ficheiro de configuración",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Obtíñase a última información de configuración do nodo",
+            "is_local":"Comprobe se hai un ficheiro de nodo localmente",
+            "already_local":"O ficheiro de configuración do ficheiro de nodo existe no dispositivo actual.",
+            "not_local":"Non se detecta a información de configuración do ficheiro do nodo, pode ser a primeira vez que se execute.",
+            "config_write_local":"Escribe o ficheiro de información do nodo obtido no disco local"
+        },
+        "version_dialog":{
+            "version_tit":"Solicitude de actualización da versión",
+            "download_wallet":"Vaia ao sitio web oficial para descargar a última versión do diñeiro",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

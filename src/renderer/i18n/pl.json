@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Ustawienie",
         "total":"Razem",
-        "testnet":"Sieć testowa"
+        "testnet":"Sieć testowa",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Ustawienie",
         "lang":"Język",
-        "select":"Proszę wybrać"
+        "select":"Proszę wybrać",
+        "version_number":"Numer wersji portfela"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Wprowadź hasło do tego konta",
             "validate_password":"Wprowadź hasło do konta",
             "remove_success":"Pomyślnie usunięto"
+        }
+    },
+    "page_config": {
+        "config_detection":"Wykrywanie konfiguracji",
+        "content_msg":{
+            "ready_test":"Przygotuj się do wykrycia pliku konfiguracyjnego",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Otrzymano najnowsze informacje o konfiguracji węzła",
+            "is_local":"Sprawdź lokalnie, czy istnieje plik węzła",
+            "already_local":"Plik konfiguracyjny pliku węzła istnieje na bieżącym urządzeniu.",
+            "not_local":"Informacje o konfiguracji pliku węzła nie są wykrywane, może to być pierwszy raz.",
+            "config_write_local":"Zapisz otrzymany plik informacji o węźle na dysku lokalnym"
+        },
+        "version_dialog":{
+            "version_tit":"Monit aktualizacji wersji",
+            "download_wallet":"Przejdź na oficjalną stronę internetową, aby pobrać najnowszą wersję pieniędzy",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

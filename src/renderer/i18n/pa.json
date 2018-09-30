@@ -13,12 +13,15 @@
         "contacts":"ਸੰਪਰਕ ਕਰੋ",
         "setting":"ਸੈਟਿੰਗ",
         "total":"ਕੁੱਲ",
-        "testnet":"ਟੈਸਟ ਨੈਟਵਰਕ"
+        "testnet":"ਟੈਸਟ ਨੈਟਵਰਕ",
+        "online":"ਆਨਲਾਈਨ",
+        "offline":"ਔਫਲਾਈਨ"
     },
     "page_setting": {
         "tit":"ਸੈਟਿੰਗ",
         "lang":"ਭਾਸ਼ਾ",
-        "select":"ਚੁਣੋ ਜੀ"
+        "select":"ਚੁਣੋ ਜੀ",
+        "version_number":"ਵਾਲਿਟ ਵਰਜਨ ਨੰਬਰ"
     },
     "page_contacts": {
         "tit":"ਸੰਪਰਕ ਕਰੋ",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਖਾਤੇ ਲਈ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
             "validate_password":"ਕਿਰਪਾ ਕਰਕੇ ਖਾਤੇ ਲਈ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
             "remove_success":"ਸਫਲਤਾਪੂਰਵਕ ਹਟਾ ਦਿੱਤਾ ਗਿਆ"
+        }
+    },
+    "page_config": {
+        "config_detection":"ਸੰਰਚਨਾ ਖੋਜ",
+        "content_msg":{
+            "ready_test":"ਸੰਰਚਨਾ ਫਾਇਲ ਨੂੰ ਖੋਜਣ ਲਈ ਤਿਆਰੀ ਕਰੋ",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"ਨਵੀਨਤਮ ਨੋਡ ਸੰਰਚਨਾ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕੀਤੀ ਗਈ ਹੈ",
+            "is_local":"ਜਾਂਚ ਕਰੋ ਕਿ ਕੀ ਸਥਾਨਕ ਤੌਰ ਤੇ ਕੋਈ ਨੋਡ ਫਾਇਲ ਹੈ",
+            "already_local":"ਮੌਜੂਦਾ ਜੰਤਰ ਤੇ ਨੋਡ ਫਾਇਲ ਦੀ ਸੰਰਚਨਾ ਫਾਇਲ ਮੌਜੂਦ ਹੈ.",
+            "not_local":"ਨੋਡ ਫਾਇਲ ਦੀ ਸੰਰਚਨਾ ਜਾਣਕਾਰੀ ਖੋਜੀ ਨਹੀਂ ਗਈ ਹੈ, ਇਹ ਪਹਿਲੀ ਵਾਰ ਚੱਲ ਰਹੀ ਹੈ",
+            "config_write_local":"ਪ੍ਰਾਪਤ ਕੀਤੀ ਨੋਡ ਜਾਣਕਾਰੀ ਨੂੰ ਸਥਾਨਕ ਡਿਸਕ ਤੇ ਲਿਖੋ"
+        },
+        "version_dialog":{
+            "version_tit":"ਵਰਜਨ ਅਪਡੇਟ ਪ੍ਰੋਂਪਟ",
+            "download_wallet":"ਪੈਸੇ ਦੇ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਸਰਕਾਰੀ ਵੈਬਸਾਈਟ 'ਤੇ ਜਾਓ",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

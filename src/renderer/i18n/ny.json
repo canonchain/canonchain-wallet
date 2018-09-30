@@ -13,12 +13,15 @@
         "contacts":"Lumikizanani",
         "setting":"Kukhazikitsa",
         "total":"Chiwerengero",
-        "testnet":"Kuyesera kwa mayesero"
+        "testnet":"Kuyesera kwa mayesero",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Kukhazikitsa",
         "lang":"Chilankhulo",
-        "select":"Chonde sankhani"
+        "select":"Chonde sankhani",
+        "version_number":"Nambala yowonjezera ndalama"
     },
     "page_contacts": {
         "tit":"Lumikizanani",
@@ -39,7 +42,7 @@
             "no_tag":"Chonde lowetsani ndemanga ya akaunti",
             "no_address":"Chonde lowetsani adilesi yanu ya akaunti",
             "valid_address":"Adilesi yothandizirayi ndi yotsutsa",
-            "validate_tag_length":"Dzina la memo silingakhale lalitali kuposa malemba 8",
+            "validate_tag_length":"Dzinalo la dzina lolembera silingakhale lalikulu kuposa malemba 8.",
             "exist":"Ulalowo ulipo kale,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Sinthani mawu",
             "subtit":"Lembani chizindikiro cha akaunti yanu",
             "no_tag":"Chonde lowetsani ndemanga ya akaunti",
-            "validate_tag_length":"Dzina la memo silingakhale lalitali kuposa malemba 8"
+            "validate_tag_length":"Dzinalo la dzina lolembera silingakhale lalikulu kuposa malemba 8."
         },
         "dia_tx":{
             "tit":"Zosintha zamalonda",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Tsitsani fayilo ya akaunti",
 
             "validate_tag":"Chonde lowetsani dzina lachinsinsi",
-            "validate_tag_length":"Dzina la memo silingakhale lalitali kuposa malemba 8",
+            "validate_tag_length":"Dzinalo la dzina lolembera silingakhale lalikulu kuposa malemba 8.",
 
             "validate_password":"Chonde lowetsani mawu achinsinsi omwe mwasankha",
             "validate_re_password":"Chonde lowetsani mawu achinsinsi omwe mumayikanso",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Chonde lekani dzina lachinsinsi",
 
             "validate_tag":"Chonde lowetsani dzina lachinsinsi",
-            "validate_tag_length":"Dzina la memo silingakhale lalitali kuposa malemba 8",
+            "validate_tag_length":"Dzinalo la dzina lolembera silingakhale lalikulu kuposa malemba 8.",
             "validate_enter_keystore":"Chonde lowetsani fayilo ya akaunti yoyamba",
             "validate_error_keystore":"Kutumiza kwa akaunti sikulephereka, kungakhale zolakwika za fayilo",
             "imported_account_success":"Inalowetsedwa bwino",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Chonde lowetsani mawu achinsinsi pa akauntiyi",
             "validate_password":"Chonde lowetsani mawu achinsinsi pa akaunti",
             "remove_success":"Ichotsedwa bwino"
+        }
+    },
+    "page_config": {
+        "config_detection":"Kuzindikira kukonza",
+        "content_msg":{
+            "ready_test":"Konzani kuti muone fayilo yosinthidwa",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Zosintha zamakono zatsopano zowonongeka",
+            "is_local":"Onetsetsani ngati pali fayilo fayilo kwanuko",
+            "already_local":"Dongosolo la kasinthidwe la fayilo ya node likupezeka pa chipangizo chamakono.",
+            "not_local":"Kukonzekera kwa chidziwitso cha fayilo yazithunzi sikunapezeke, kungakhale kothamanga koyamba.",
+            "config_write_local":"Lembani fayilo yolondola ya node yomwe imapezeka ku diski yapafupi"
+        },
+        "version_dialog":{
+            "version_tit":"Kusintha kwawamasinthidwe mwamsanga",
+            "download_wallet":"Pitani ku webusaiti yathuyi kuti mulandire ndalama zatsopano",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

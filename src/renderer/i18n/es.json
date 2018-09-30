@@ -1,7 +1,7 @@
 {
     "confirm":"Confirmar",
     "cancel":"Cancelar",
-    "dialog_tit":"Prompt",
+    "dialog_tit":"Pronta",
     "close":"Cerrar",
     "confirm_you_active":"Por favor confirme su operación",
     "unit": {
@@ -13,12 +13,15 @@
         "contacts":"Contacto",
         "setting":"Ajuste",
         "total":"Total",
-        "testnet":"Red de prueba"
+        "testnet":"Red de prueba",
+        "online":"En linea",
+        "offline":"Fuera de linea"
     },
     "page_setting": {
         "tit":"Ajuste",
         "lang":"Idioma",
-        "select":"Por favor elija"
+        "select":"Por favor elija",
+        "version_number":"Número de versión de Wallet"
     },
     "page_contacts": {
         "tit":"Contacto",
@@ -39,18 +42,18 @@
             "no_tag":"Por favor ingrese una nota de cuenta",
             "no_address":"Por favor ingrese la dirección de su cuenta",
             "valid_address":"La dirección del contacto es ilegal",
-            "validate_tag_length":"El nombre de la nota no puede tener más de 8 caracteres",
+            "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
             "exist":"El contacto ya existe,"
         }
     },
     "page_transfer": {
         "from_address":"Fiesta de envío",
         "to_address":"Beneficiario",
-        "amount":"Monto",
+        "amount":"Cantidad",
         "send_all":"Enviar todo",
         "data":"Datos",
         "data_placeholder":"Datos hexadecimales",
-        "fees":"Tasa de manejo",
+        "fees":"Tarifa de manejo",
         "total":"Total",
         "select":"Por favor elija",
         "no_account_info":"Sin cuenta todavía, crea o importa una cuenta",
@@ -71,8 +74,8 @@
             "address_err":"El formato de la dirección transferida no es válido.",
             "send_success":"Enviado con éxito",
 
-            "decrypt_err":"El análisis de Wallet falló, puede ser un error de contraseña",
-            "send_error":"Transacción fallida: compruebe si hay saldo suficiente y comisión minera"
+            "decrypt_err":"Falló el análisis de monedero, puede ser un error de contraseña",
+            "send_error":"Transacción fallida: verifique si hay suficiente saldo y tarifa de minero"
         }
     },
     "page_account": {
@@ -87,7 +90,7 @@
             "tit":"Modificar nota",
             "subtit":"Marque una nota para su cuenta",
             "no_tag":"Por favor ingrese una nota de cuenta",
-            "validate_tag_length":"El nombre de la nota no puede tener más de 8 caracteres"
+            "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres."
         },
         "dia_tx":{
             "tit":"Información de transacción",
@@ -95,18 +98,18 @@
             "status":"Estado",
             "from":"Fiesta de envío",
             "to":"Beneficiario",
-            "amount":"Monto",
+            "amount":"Cantidad",
             "data":"Datos",
-            "send_time":"Tiempo de envío",
-            "mac_time":"Hora de la cadena principal"
+            "send_time":"Enviando tiempo",
+            "mac_time":"Tiempo de la cadena principal"
         },
         "keystore": {
-            "tit":"Archivo de la carpeta de respaldo",
+            "tit":"Archivo de cartera de copia de seguridad",
             "copy":"Copia",
             "download":"Descargar el archivo de la billetera"
         },
         "msg_info": {
-            "ads_copy_success":"La dirección ha sido copiada",
+            "ads_copy_success":"Dirección ha sido copiada",
             "key_copy_success":"Copia exitosa"
         }
     },
@@ -115,8 +118,8 @@
         "add_account":"Nueva cuenta",
         "acc":"Cuenta",
         "create_dia": {
-            "create_tit":"Crea una cuenta",
-            "backup_tit":"Haga una copia de seguridad de su nueva cuenta",
+            "create_tit":"Crear una cuenta",
+            "backup_tit":"Copia de seguridad de su nueva cuenta",
             "create_tag":"Nota de cuenta",
             "create_pwd":"Establecer contraseña",
             "create_repwd":"Confirmar contraseña",
@@ -128,15 +131,15 @@
             "account_download_keystore":"Descargar archivo de cuenta",
 
             "validate_tag":"Por favor ingrese el nombre de la cuenta",
-            "validate_tag_length":"El nombre de la nota no puede tener más de 8 caracteres",
+            "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
 
             "validate_password":"Por favor ingrese la contraseña que configuró",
-            "validate_re_password":"Por favor ingrese la contraseña que configuró nuevamente",
-            "validate_strong_password":"Por favor ingrese una contraseña de al menos 8 dígitos",
+            "validate_re_password":"Por favor ingrese la contraseña que estableció de nuevo",
+            "validate_strong_password":"Por favor, introduzca una contraseña de al menos 8 dígitos",
             "validate_password_length":"Contraseña incoherente ingresada dos veces",
 
             "create_success":"Creado con éxito",
-            "create_success_des":"¡Guarde el archivo de su cuenta y no lo comparta con nadie!"
+            "create_success_des":"Por favor, guarde el archivo de su cuenta y no lo comparta con nadie!"
         },
         "import_dia": {
             "tit":"Importar cuenta",    
@@ -145,7 +148,7 @@
             "placeholder_tag":"Configura el nombre de la cuenta",
 
             "validate_tag":"Por favor ingrese el nombre de la cuenta",
-            "validate_tag_length":"El nombre de la nota no puede tener más de 8 caracteres",
+            "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
             "validate_enter_keystore":"Por favor, importe el archivo de cuenta primero",
             "validate_error_keystore":"La importación de la cuenta falló, puede haber un error en el archivo de la cuenta",
             "imported_account_success":"Exitosamente importados",
@@ -159,8 +162,25 @@
             "backup":"Preste atención a la copia de seguridad de esta cuenta para evitar daños a la propiedad.",
             "input_pwd":"Contraseña",
             "placeholder_pwd":"Por favor ingrese la contraseña para esta cuenta",
-            "validate_password":"Por favor ingrese la contraseña para la cuenta",
+            "validate_password":"Por favor ingrese la contraseña de la cuenta",
             "remove_success":"Eliminado con éxito"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detección de configuración",
+        "content_msg":{
+            "ready_test":"Prepárese para detectar el archivo de configuración",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Se ha obtenido la última información de configuración de nodo",
+            "is_local":"Compruebe si hay un archivo de nodo localmente",
+            "already_local":"El archivo de configuración del archivo de nodo existe en el dispositivo actual.",
+            "not_local":"La información de configuración del archivo de nodo no se detecta, puede ser la primera vez que se ejecuta.",
+            "config_write_local":"Escriba el archivo de información de nodo obtenido en el disco local"
+        },
+        "version_dialog":{
+            "version_tit":"Solicitud de actualización de la versión",
+            "download_wallet":"Vaya al sitio web oficial para descargar la última versión del dinero",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Kontak",
         "setting":"opstel",
         "total":"totale",
-        "testnet":"Toets netwerk"
+        "testnet":"Toets netwerk",
+        "online":"Online",
+        "offline":"op die regte pad"
     },
     "page_setting": {
         "tit":"opstel",
         "lang":"taal",
-        "select":"Kies asseblief"
+        "select":"Kies asseblief",
+        "version_number":"Wallet-weergawe nommer"
     },
     "page_contacts": {
         "tit":"Kontak",
@@ -39,7 +42,7 @@
             "no_tag":"Voer asseblief 'n rekeningnota in",
             "no_address":"Voer asseblief jou rekening adres in",
             "valid_address":"Die adres van die kontak is onwettig",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
             "exist":"Die kontak bestaan ​​reeds,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Wysig nota",
             "subtit":"Merk 'n nota vir jou rekening",
             "no_tag":"Voer asseblief 'n rekeningnota in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie"
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie."
         },
         "dia_tx":{
             "tit":"Transaksie-inligting",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Laai rekeninglêer af",
 
             "validate_tag":"Voer asseblief die rekeningnootnaam in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
 
             "validate_password":"Voer asseblief die wagwoord in wat u ingestel het",
             "validate_re_password":"Voer asseblief die wagwoord in wat u weer ingestel het",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Stel asseblief die rekeningnota se naam in",
 
             "validate_tag":"Voer asseblief die rekeningnootnaam in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
             "validate_enter_keystore":"Voer asseblief eers die rekeninglêer in",
             "validate_error_keystore":"Rekeninginvoer het misluk, dalk is die rekening lêer fout",
             "imported_account_success":"Suksesvol ingevoer",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Voer asseblief die wagwoord vir hierdie rekening in",
             "validate_password":"Voer asseblief die wagwoord vir die rekening in",
             "remove_success":"Suksesvol verwyder"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurasie opsporing",
+        "content_msg":{
+            "ready_test":"Berei voor om die konfigurasielêer op te spoor",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Die nuutste nodus konfigurasie inligting is verkry",
+            "is_local":"Kyk of daar 'n nodus lêer plaaslik is",
+            "already_local":"Die konfigurasie lêer van die node lêer bestaan ​​op die huidige toestel.",
+            "not_local":"Die konfigurasie-inligting van die node lêer word nie opgespoor nie, dit kan die eerste keer wees.",
+            "config_write_local":"Skryf die verkryde nodusinligtingslêer op die plaaslike skyf"
+        },
+        "version_dialog":{
+            "version_tit":"Weergawe opdateringsprompt",
+            "download_wallet":"Gaan na die amptelike webwerf om die nuutste weergawe van die geld af te laai",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

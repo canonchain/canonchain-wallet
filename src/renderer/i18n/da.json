@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Opsæt",
         "total":"I alt",
-        "testnet":"Test netværk"
+        "testnet":"Test netværk",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Opsæt",
         "lang":"sprog",
-        "select":"Vælg venligst"
+        "select":"Vælg venligst",
+        "version_number":"Tegnebogens versionsnummer"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -66,7 +69,7 @@
         "msg_info": {
             "address_null":"Indtast venligst den anden parts konto",
             "balance_zero":"Manglende balance, ude af stand til at fortsætte",
-            "amount_zero":"Overførsel beløb skal være større end 0",
+            "amount_zero":"Overførselsbeløbet skal være større end 0",
             "amount_error":"Indtast venligst et juridisk transaktionsbeløb",
             "address_err":"Formatet på den overførte adresse er ugyldig.",
             "send_success":"Sendt med succes",
@@ -147,7 +150,7 @@
             "validate_tag":"Indtast venligst kontonodenavnet",
             "validate_tag_length":"Navnet på notenavnet må ikke være større end 8 tegn.",
             "validate_enter_keystore":"Indtast venligst kontofilen først",
-            "validate_error_keystore":"Konto import mislykkes, kontoen kan være forkert fil",
+            "validate_error_keystore":"Kontoimporten mislykkedes, det kan være en kontofilfejl",
             "imported_account_success":"Indført med succes",
             "exist":"Denne konto eksisterer allerede, notatet er",
             "keystore_error":"Fejl:",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Indtast venligst adgangskoden til denne konto",
             "validate_password":"Indtast venligst adgangskoden til kontoen",
             "remove_success":"Fjernet succesfuldt"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfigurationsdetektering",
+        "content_msg":{
+            "ready_test":"Forbered dig på at opdage konfigurationsfilen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Den nyeste nodekonfigurationsinformation er opnået",
+            "is_local":"Kontroller, om der er en nodefil lokalt",
+            "already_local":"Konfigurationsfilen til nodefilen findes på den aktuelle enhed.",
+            "not_local":"Konfigurationsoplysningerne i nodefilen registreres ikke, det kan være første gang, der kører.",
+            "config_write_local":"Skriv den hentede nodeinformationsfil til den lokale disk"
+        },
+        "version_dialog":{
+            "version_tit":"Version opdateringsprompt",
+            "download_wallet":"Gå til den officielle hjemmeside for at downloade den seneste version af pengene",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

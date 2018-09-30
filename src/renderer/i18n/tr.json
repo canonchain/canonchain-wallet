@@ -13,12 +13,15 @@
         "contacts":"temas",
         "setting":"kurmak",
         "total":"toplam",
-        "testnet":"Test ağı"
+        "testnet":"Test ağı",
+        "online":"çevrimiçi",
+        "offline":"Çevrimdışı"
     },
     "page_setting": {
         "tit":"kurmak",
         "lang":"dil",
-        "select":"Lütfen seçiniz"
+        "select":"Lütfen seçiniz",
+        "version_number":"Cüzdan sürüm numarası"
     },
     "page_contacts": {
         "tit":"temas",
@@ -39,7 +42,7 @@
             "no_tag":"Lütfen bir hesap notu girin",
             "no_address":"Lütfen hesap adresinizi giriniz",
             "valid_address":"Kişinin adresi yasa dışı",
-            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
+            "validate_tag_length":"Not isminin adı 8 karakterden büyük olamaz.",
             "exist":"Kişi zaten var,"
         }
     },
@@ -87,11 +90,11 @@
             "tit":"Notu değiştir",
             "subtit":"Hesabınız için bir notu işaretle",
             "no_tag":"Lütfen bir hesap notu girin",
-            "validate_tag_length":"Not adı 8 karakterden uzun olamaz"
+            "validate_tag_length":"Not isminin adı 8 karakterden büyük olamaz."
         },
         "dia_tx":{
             "tit":"İşlem bilgisi",
-            "block_hash":"Işlem numarası",
+            "block_hash":"İşlem numarası",
             "status":"devlet",
             "from":"Parti gönderme",
             "to":"alacaklı",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Hesap dosyasını indir",
 
             "validate_tag":"Lütfen hesap notunun adını girin",
-            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
+            "validate_tag_length":"Not isminin adı 8 karakterden büyük olamaz.",
 
             "validate_password":"Lütfen belirlediğiniz şifreyi girin",
             "validate_re_password":"Lütfen tekrar belirlediğiniz şifreyi girin",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Lütfen hesap notunun adını belirtin",
 
             "validate_tag":"Lütfen hesap notunun adını girin",
-            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
+            "validate_tag_length":"Not isminin adı 8 karakterden büyük olamaz.",
             "validate_enter_keystore":"Lütfen önce hesap dosyasını içe aktarın",
             "validate_error_keystore":"Hesap içe aktarma başarısız oldu, hesap dosyası hatası olabilir",
             "imported_account_success":"Başarıyla içe aktarıldı",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Lütfen bu hesabın şifresini girin",
             "validate_password":"Lütfen hesabın şifresini girin",
             "remove_success":"Başarıyla kaldırıldı"
+        }
+    },
+    "page_config": {
+        "config_detection":"Yapılandırma algılama",
+        "content_msg":{
+            "ready_test":"Yapılandırma dosyasını tespit etmeye hazırlanın",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"En son düğüm yapılandırma bilgisi elde edildi",
+            "is_local":"Yerel olarak bir düğüm dosyası olup olmadığını kontrol edin",
+            "already_local":"Geçerli dosyada düğüm dosyasının yapılandırma dosyası var.",
+            "not_local":"Düğüm dosyasının yapılandırma bilgisi algılanmadı, ilk kez çalıştırılıyor olabilir.",
+            "config_write_local":"Elde edilen düğüm bilgi dosyasını yerel diske yaz"
+        },
+        "version_dialog":{
+            "version_tit":"Sürüm güncelleme istemi",
+            "download_wallet":"Paranın son sürümünü indirmek için resmi web sitesine gidin",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

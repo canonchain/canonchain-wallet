@@ -13,12 +13,15 @@
         "contacts":"kontakt",
         "setting":"založiť",
         "total":"totálnej",
-        "testnet":"Testovať sieť"
+        "testnet":"Testovať sieť",
+        "online":"online",
+        "offline":"offline"
     },
     "page_setting": {
         "tit":"založiť",
         "lang":"jazyk",
-        "select":"Vyberte prosím"
+        "select":"Vyberte prosím",
+        "version_number":"Číslo verzie peňaženky"
     },
     "page_contacts": {
         "tit":"kontakt",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Zadajte heslo pre tento účet",
             "validate_password":"Zadajte heslo pre účet",
             "remove_success":"Úspešne odstránené"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detekcia konfigurácie",
+        "content_msg":{
+            "ready_test":"Pripravte sa na zistenie konfiguračného súboru",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Boli získané najnovšie informácie o konfigurácii uzlov",
+            "is_local":"Skontrolujte, či je lokálny súbor uzla",
+            "already_local":"Na aktuálnom zariadení existuje konfiguračný súbor súboru uzlov.",
+            "not_local":"Informácie o konfigurácii súboru uzla nie sú zistené, môže to byť prvýkrát spustené.",
+            "config_write_local":"Napíšte získaný informačný súbor uzla na lokálny disk"
+        },
+        "version_dialog":{
+            "version_tit":"Príkaz na aktualizáciu verzie",
+            "download_wallet":"Prejdite na oficiálnu webovú stránku, kde si stiahnete najnovšiu verziu peňazí",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -36,7 +36,7 @@ function i18n(from, to) {
             if (tJson.length > 2000)
                 this.emit('error', new PluginError(PLUGIN_NAME, 'Source file is greater than 2000 words'));
             //Google Translate
-            google.translate({
+            baidu.translate({
                 text: tJson,
                 from: from,
                 to: to
@@ -105,6 +105,9 @@ function i18n(from, to) {
                 // Tell the stream engine that we have finished processing this file
                 cb();
 
+            }).catch(error=>{
+                console.log(error)
+                return;
             })
         }
     });

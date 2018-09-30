@@ -13,12 +13,15 @@
         "contacts":"Kan si",
         "setting":"Eto",
         "total":"Lapapọ",
-        "testnet":"Nẹtiwọki idanwo"
+        "testnet":"Nẹtiwọki idanwo",
+        "online":"Online",
+        "offline":"Ti ailopin"
     },
     "page_setting": {
         "tit":"Eto",
         "lang":"Ede",
-        "select":"Jọwọ yan"
+        "select":"Jọwọ yan",
+        "version_number":"Nọmba ikede apamọwọ"
     },
     "page_contacts": {
         "tit":"Kan si",
@@ -39,7 +42,7 @@
             "no_tag":"Jowo tẹ akọsilẹ akọsilẹ",
             "no_address":"Jowo tẹ adirẹsi adirẹsi rẹ sii",
             "valid_address":"Adirẹsi ti olubasọrọ naa jẹ arufin",
-            "validate_tag_length":"Orukọ akọsilẹ ko le jẹ gun ju awọn ohun kikọ 8 lọ",
+            "validate_tag_length":"Orukọ orukọ akọsilẹ ko le jẹ tobi ju awọn ohun kikọ 8 lọ.",
             "exist":"Olubasọrọ naa ti wa tẹlẹ,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Ṣe akọsilẹ atunṣe",
             "subtit":"Ṣe akọsilẹ akọsilẹ kan fun akọọlẹ rẹ",
             "no_tag":"Jowo tẹ akọsilẹ akọsilẹ",
-            "validate_tag_length":"Orukọ akọsilẹ ko le jẹ gun ju awọn ohun kikọ 8 lọ"
+            "validate_tag_length":"Orukọ orukọ akọsilẹ ko le jẹ tobi ju awọn ohun kikọ 8 lọ."
         },
         "dia_tx":{
             "tit":"Alaye iṣowo",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Gba faili akọọlẹ",
 
             "validate_tag":"Jọwọ tẹ orukọ akọsilẹ akọsilẹ",
-            "validate_tag_length":"Orukọ akọsilẹ ko le jẹ gun ju awọn ohun kikọ 8 lọ",
+            "validate_tag_length":"Orukọ orukọ akọsilẹ ko le jẹ tobi ju awọn ohun kikọ 8 lọ.",
 
             "validate_password":"Jowo tẹ ọrọigbaniwọle ti o ṣeto",
             "validate_re_password":"Jọwọ tẹ ọrọigbaniwọle ti o tun ṣeto sii",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Jọwọ ṣeto akọsilẹ akọsilẹ akọsilẹ",
 
             "validate_tag":"Jọwọ tẹ orukọ akọsilẹ akọsilẹ",
-            "validate_tag_length":"Orukọ akọsilẹ ko le jẹ gun ju awọn ohun kikọ 8 lọ",
+            "validate_tag_length":"Orukọ orukọ akọsilẹ ko le jẹ tobi ju awọn ohun kikọ 8 lọ.",
             "validate_enter_keystore":"Jọwọ gbe faili faili ni akọkọ",
             "validate_error_keystore":"Akọsilẹ ti iṣowo ti kuna, le jẹ aṣiṣe faili aṣiṣe",
             "imported_account_success":"Ni ifiṣeyọri wọle",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Jọwọ tẹ ọrọigbaniwọle sii fun iroyin yii",
             "validate_password":"Jọwọ tẹ ọrọigbaniwọle sii fun iroyin naa",
             "remove_success":"Ti yọ kuro ni ifijišẹ"
+        }
+    },
+    "page_config": {
+        "config_detection":"Iwari iṣeto ni",
+        "content_msg":{
+            "ready_test":"Mura lati wa faili iṣeto",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Alaye ti iṣeto titun ti a ti gba",
+            "is_local":"Ṣayẹwo boya faili faili kan wa ni agbegbe",
+            "already_local":"Faili iṣeto faili ti faili ipade wa lori ẹrọ to wa.",
+            "not_local":"Awọn alaye iṣeto ti faili faili ti a ko ti ri, o le jẹ akoko akọkọ nṣiṣẹ.",
+            "config_write_local":"Kọ faili alaye ti n gba ti o wa si disiki agbegbe"
+        },
+        "version_dialog":{
+            "version_tit":"Imudani imudojuiwọn taara",
+            "download_wallet":"Lọ si aaye ayelujara osise lati gba lati ayelujara tuntun ti owo naa",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

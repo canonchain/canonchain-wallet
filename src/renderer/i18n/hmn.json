@@ -13,12 +13,15 @@
         "contacts":"Hu rau",
         "setting":"Qhov chaw",
         "total":"Tag nrho",
-        "testnet":"Kuaj kev sib tw"
+        "testnet":"Kuaj kev sib tw",
+        "online":"Hauv internet",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Qhov chaw",
         "lang":"Lus",
-        "select":"Thov xaiv"
+        "select":"Thov xaiv",
+        "version_number":"Phab ntsa version tooj"
     },
     "page_contacts": {
         "tit":"Hu rau",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Thov sau tus password rau qhov no",
             "validate_password":"Thov sau tus password rau tus as khauj",
             "remove_success":"Hloov tawm zoo"
+        }
+    },
+    "page_config": {
+        "config_detection":"Confection detection",
+        "content_msg":{
+            "ready_test":"Npaj txhawm rau txhim kho cov ntaub ntawv tawm tswv yim",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Qhov tseeb ntawm cov ntaub ntawv ntawm configuration configuration tau txais lawm",
+            "is_local":"Kos yog tias muaj ntaub ntawv ntawm zos",
+            "already_local":"Cov ntaub ntawv teev ntawm cov ntaub ntawv ntawm cov ntaub ntawv muaj nyob rau ntawm cov cuab yeej tam sim no.",
+            "not_local":"Cov lus qhia ntawm cov ntaub ntawv ntawm cov ntaub ntawv ntawm no tsis raug kuaj pom, nws yuav yog thawj zaug khiav.",
+            "config_write_local":"Sau cov ntawv xov xwm ntawm cov ntaub ntawv mus rau lub zos qhov chaw"
+        },
+        "version_dialog":{
+            "version_tit":"Version kho kom sai",
+            "download_wallet":"Mus rau lub vas sab website mus download tau qhov tseeb version ntawm cov nyiaj",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

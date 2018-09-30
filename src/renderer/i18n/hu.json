@@ -13,12 +13,15 @@
         "contacts":"érintkezés",
         "setting":"beállítása",
         "total":"teljes",
-        "testnet":"Teszt hálózat"
+        "testnet":"Teszt hálózat",
+        "online":"online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"beállítása",
         "lang":"nyelv",
-        "select":"Kérem válasszon"
+        "select":"Kérem válasszon",
+        "version_number":"Wallet verziószáma"
     },
     "page_contacts": {
         "tit":"érintkezés",
@@ -39,7 +42,7 @@
             "no_tag":"Kérjük, írjon be egy bankjegyet",
             "no_address":"Kérjük, adja meg fiókjának címét",
             "valid_address":"A kapcsolat címe illegális",
-            "validate_tag_length":"Az emlékeztetõ név legfeljebb 8 karakter lehet",
+            "validate_tag_length":"A jegyzet neve legfeljebb 8 karakter lehet.",
             "exist":"A kapcsolat már létezik,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Jegyzet módosítása",
             "subtit":"Jelöljön meg egy jegyzetet fiókjához",
             "no_tag":"Kérjük, írjon be egy bankjegyet",
-            "validate_tag_length":"Az emlékeztetõ név legfeljebb 8 karakter lehet"
+            "validate_tag_length":"A jegyzet neve legfeljebb 8 karakter lehet."
         },
         "dia_tx":{
             "tit":"Tranzakciós információk",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Számlafájl letöltése",
 
             "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
-            "validate_tag_length":"Az emlékeztetõ név legfeljebb 8 karakter lehet",
+            "validate_tag_length":"A jegyzet neve legfeljebb 8 karakter lehet.",
 
             "validate_password":"Adja meg a megadott jelszót",
             "validate_re_password":"Adja meg újra a beállított jelszót",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Kérjük, állítsa be a fiók megjegyzésének nevét",
 
             "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
-            "validate_tag_length":"Az emlékeztetõ név legfeljebb 8 karakter lehet",
+            "validate_tag_length":"A jegyzet neve legfeljebb 8 karakter lehet.",
             "validate_enter_keystore":"Kérjük, először importálja a fiókfájlt",
             "validate_error_keystore":"Fiók importálása sikertelen, lehet, hogy fiókfájl hiba",
             "imported_account_success":"Sikeresen importálva",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Kérjük, adja meg a fiókhoz tartozó jelszót",
             "validate_password":"Adja meg a fiókhoz tartozó jelszót",
             "remove_success":"Sikeresen eltávolították"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfiguráció felderítése",
+        "content_msg":{
+            "ready_test":"Készüljön fel a konfigurációs fájl észlelésére",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"A legfrissebb csomópont-konfigurációs adatokat kaptuk",
+            "is_local":"Ellenőrizze, hogy van-e csomópont-fájl helyben",
+            "already_local":"A csomópont konfigurációs fájlja létezik az aktuális eszközön.",
+            "not_local":"A csomópont-fájl konfigurációs adatait nem észlelik, először futhat.",
+            "config_write_local":"Írja be a kapott csomópont információ fájlt a helyi lemezre"
+        },
+        "version_dialog":{
+            "version_tit":"Verziófrissítési kérelem",
+            "download_wallet":"Menjen a hivatalos weboldalra, hogy töltse le a pénz legfrissebb verzióját",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

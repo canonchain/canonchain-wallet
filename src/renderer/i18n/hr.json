@@ -13,12 +13,15 @@
         "contacts":"kontakt",
         "setting":"postaviti",
         "total":"ukupno",
-        "testnet":"Provjerite mrežu"
+        "testnet":"Provjerite mrežu",
+        "online":"na vezi",
+        "offline":"offline"
     },
     "page_setting": {
         "tit":"postaviti",
         "lang":"jezik",
-        "select":"Molimo odaberite"
+        "select":"Molimo odaberite",
+        "version_number":"Broj inačice novčanika"
     },
     "page_contacts": {
         "tit":"kontakt",
@@ -39,7 +42,7 @@
             "no_tag":"Unesite bilješku o računu",
             "no_address":"Unesite adresu svog računa",
             "valid_address":"Adresa kontakta je ilegalna",
-            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
+            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
             "exist":"Kontakt već postoji,"
         }
     },
@@ -87,7 +90,7 @@
             "tit":"Izmijenite bilješku",
             "subtit":"Označite bilješku za svoj račun",
             "no_tag":"Unesite bilješku o računu",
-            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova"
+            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova."
         },
         "dia_tx":{
             "tit":"Informacije o transakciji",
@@ -128,7 +131,7 @@
             "account_download_keystore":"Preuzmite datoteku računa",
 
             "validate_tag":"Unesite naziv bilješke računa",
-            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
+            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
 
             "validate_password":"Unesite zaporku koju ste postavili",
             "validate_re_password":"Unesite zaporku koju ste ponovno postavili",
@@ -145,7 +148,7 @@
             "placeholder_tag":"Postavite naziv bilješke računa",
 
             "validate_tag":"Unesite naziv bilješke računa",
-            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
+            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
             "validate_enter_keystore":"Najprije uvezite datoteku računa",
             "validate_error_keystore":"Uvoz računa nije uspio, možda je pogreška u datoteci računa",
             "imported_account_success":"Uspješno uvezeno",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Unesite zaporku za ovaj račun",
             "validate_password":"Unesite zaporku za račun",
             "remove_success":"Uspješno uklonjeno"
+        }
+    },
+    "page_config": {
+        "config_detection":"Detekcija konfiguracije",
+        "content_msg":{
+            "ready_test":"Pripremite se za otkrivanje konfiguracijske datoteke",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Dobivene su najnovije informacije o konfiguraciji čvorova",
+            "is_local":"Provjerite postoji li lokalni čvor",
+            "already_local":"Konfiguracijska datoteka datoteke čvora postoji na trenutnom uređaju.",
+            "not_local":"Informacije o konfiguraciji datoteke čvorova nisu otkrivene, može biti prvi put pokrenut.",
+            "config_write_local":"Napišite dobivenu informacijsku datoteku čvora na lokalni disk"
+        },
+        "version_dialog":{
+            "version_tit":"Ažuriranje verzije verzije",
+            "download_wallet":"Idite na službenu web stranicu da biste preuzeli najnoviju verziju novca",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

@@ -13,12 +13,15 @@
         "contacts":"Saduwa",
         "setting":"Saitin",
         "total":"Jimlar",
-        "testnet":"Cibiyar gwadawa"
+        "testnet":"Cibiyar gwadawa",
+        "online":"Online",
+        "offline":"Haddatse"
     },
     "page_setting": {
         "tit":"Saitin",
         "lang":"Harshe",
-        "select":"Don Allah a zaɓi"
+        "select":"Don Allah a zaɓi",
+        "version_number":"Lambar sutura"
     },
     "page_contacts": {
         "tit":"Saduwa",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Da fatan a shigar da kalmar shiga don wannan asusu",
             "validate_password":"Da fatan a shigar da kalmar shiga don asusun",
             "remove_success":"An cire shi da nasara"
+        }
+    },
+    "page_config": {
+        "config_detection":"Siffarwar daftarin tsarin",
+        "content_msg":{
+            "ready_test":"Shirya don gano fayil din sanyi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"An samo bayanan sabuntawa na karshe",
+            "is_local":"Bincika idan akwai fayil na node a gida",
+            "already_local":"Fayil din tsari na fayil na node ya wanzu akan na'urar yanzu.",
+            "not_local":"Ba'a gano bayanin sanyi na fayil ɗin node ba, yana iya zama farkon lokacin gudu.",
+            "config_write_local":"Rubuta fayilolin bayanin yad da aka samo zuwa faifai na gida"
+        },
+        "version_dialog":{
+            "version_tit":"Sabunta sabuntawar sabuntawa",
+            "download_wallet":"Je zuwa shafin yanar gizon yanar gizon don sauke sabon tsarin kudi",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

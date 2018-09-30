@@ -13,12 +13,15 @@
         "contacts":"Contact",
         "setting":"eriges",
         "total":"summa",
-        "testnet":"test Network"
+        "testnet":"test Network",
+        "online":"Online",
+        "offline":"Online"
     },
     "page_setting": {
         "tit":"eriges",
         "lang":"lingua",
-        "select":"placere eligere"
+        "select":"placere eligere",
+        "version_number":"Versio sacculus est numerus"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -156,11 +159,28 @@
         "remove_dia": {
             "tit":"Tu es certus sit removere vis?",
             "remove_confrim":"Im 'certus ad removendum",
-            "backup":"Lorem quod rursum ob rem ne patiamini",
+            "backup":"Lorem quod redire ob rem Indemnitati",
             "input_pwd":"Password",
             "placeholder_pwd":"Hoc enim signum PDF",
             "validate_password":"PDF rationem ignoro",
             "remove_success":"remota feliciter"
+        }
+    },
+    "page_config": {
+        "config_detection":"configurationis deprehensio",
+        "content_msg":{
+            "ready_test":"Promptus ad deprehendere file configuratione",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Quae non acquiritur de tardus notitia nodi configuratione",
+            "is_local":"Utrum illic est a locus nodi file deprehendere",
+            "already_local":"Configuratione et fabrica lima notitia est currently nodi",
+            "not_local":"Non nequiquam detecta fraude nodi configuratione files, non potest esse prima currere",
+            "config_write_local":"Ad tertiam quaestionem dicendum files scriptum est locus nodi notitia orbis"
+        },
+        "version_dialog":{
+            "version_tit":"Version promptum update",
+            "download_wallet":"Quguan network ut download tardus poema poematis of Pecunia",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

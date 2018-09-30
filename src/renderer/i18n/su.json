@@ -13,12 +13,15 @@
         "contacts":"hubungan",
         "setting":"nyetél",
         "total":"total",
-        "testnet":"test Network"
+        "testnet":"test Network",
+        "online":"online",
+        "offline":"offline"
     },
     "page_setting": {
         "tit":"nyetél",
         "lang":"basa",
-        "select":"Mangga pilih"
+        "select":"Mangga pilih",
+        "version_number":"Jumlah Vérsi dompet"
     },
     "page_contacts": {
         "tit":"hubungan",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Mangga lebetkeun sandi pikeun akun ieu",
             "validate_password":"Mangga lebetkeun sandi akun",
             "remove_success":"dipupus junun"
+        }
+    },
+    "page_config": {
+        "config_detection":"Pangwanoh Konfigurasi",
+        "content_msg":{
+            "ready_test":"Siap ngadeteksi file konfigurasi",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"Geus kaala jeung informasi konfigurasi titik panganyarna",
+            "is_local":"Ngadeteksi naha aya file titik lokal",
+            "already_local":"Ayeuna aya file konfigurasi alat informasi titik",
+            "not_local":"Teu kauninga file konfigurasi titik, nya meureun ngajalankeun munggaran",
+            "config_write_local":"Inpo titik nu kaala file ditulis kana piringan lokal"
+        },
+        "version_dialog":{
+            "version_tit":"Vérsi update ajakan",
+            "download_wallet":"jaringan Quguan pikeun ngundeur versi panganyarna tina Duit",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

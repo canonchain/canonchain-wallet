@@ -13,12 +13,15 @@
         "contacts":"Kontakt",
         "setting":"Setting",
         "total":"Totaal",
-        "testnet":"Testnetwurk"
+        "testnet":"Testnetwurk",
+        "online":"Online",
+        "offline":"Offline"
     },
     "page_setting": {
         "tit":"Setting",
         "lang":"Taal",
-        "select":"Kies hjirfoar"
+        "select":"Kies hjirfoar",
+        "version_number":"Wallet ferzjenûmer"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -161,6 +164,23 @@
             "placeholder_pwd":"Fier hjir it wachtwurd yn foar dizze akkount",
             "validate_password":"Fier it wachtwurd yn foar it akkount yn",
             "remove_success":"Op sukses ferwidere"
+        }
+    },
+    "page_config": {
+        "config_detection":"Konfiguraasje-fernijing",
+        "content_msg":{
+            "ready_test":"Rieplachtsje om it konfiguraasjetriem te finen",
+            "network_latest":"检测是否有新的 CanonChain 节点文件",
+            "get_latest":"De lêste node-konfiguraasje ynformaasje is krigen",
+            "is_local":"Kontrolearje oft der in lokaal bestân is",
+            "already_local":"De konfiguraasjetriem fan it knooppadest bestiet op it aktive apparaat.",
+            "not_local":"De konfiguraasjeynformaasje fan it knooppentrie wurdt net fûn, it kin it earste tiid wêze.",
+            "config_write_local":"Skriuw it krêftynformaasjefile nei de lokale skiif"
+        },
+        "version_dialog":{
+            "version_tit":"Ferzje update prompt",
+            "download_wallet":"Gean nei de offisjele webside om de lêste ferzje fan it jild te laden",
+            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }
