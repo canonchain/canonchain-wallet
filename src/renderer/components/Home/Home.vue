@@ -390,10 +390,20 @@ export default {
                 .accountImport(self.importInfo.keystore)
                 .then(data => {
                     if (data.success == "1") {
+                        //TODO 提示导入成功
+                        self.$message.success(
+                            self.$t(
+                                "page_home.import_dia.imported_account_success"
+                            )
+                        );
                         self.importInfo.address = data.account;
-                        return data.account;
+                        self.dialogSwitch.import = false;
                     } else if (data.success == "0") {
-                        return 0;
+                        self.$message.error(
+                            self.$t(
+                                "page_home.import_dia.validate_error_keystore"
+                            )
+                        );
                     }
                 })
                 .catch(error => {

@@ -156,16 +156,11 @@
                             <span class="txt-warning"> 不稳定 </span>
                         </template>
                         <template v-else-if='transactionInfo.is_stable == "1"'>
-                            <template v-if='transactionInfo.is_fork == "1" || transactionInfo.is_invalid == "1"'>
-                                <span class="txt-info"> 作废 </span>
+                            <template v-if='transactionInfo.is_illegal == "0"'>
+                                <span class="txt-success"> 成功 </span>
                             </template>
                             <template v-else>
-                                <template v-if='transactionInfo.is_fail == "1"'>
-                                    <span class="txt-danger"> 失败 </span>
-                                </template>
-                                <template v-else>
-                                    <span class="txt-success"> 成功 </span>
-                                </template>
+                                <span class="txt-danger"> 失败 </span>
                             </template>
                         </template>
                     </span>

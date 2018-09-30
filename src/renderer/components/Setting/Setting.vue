@@ -20,7 +20,7 @@
                         </el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="版本号">
+                <el-form-item :label="$t('page_setting.version_number')">
                     <p>{{walletVer}}</p>
                 </el-form-item>
             </el-form>
