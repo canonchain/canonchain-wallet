@@ -233,9 +233,9 @@ export default {
             self.$startLogs.info("准备启动 CanonChain :", nodePath);
             self.conMsg = self.$t("page_config.version_dialog.ready_start");
 
-            //如果节点启动了，就不再启用了 TODO 改RPC接口名
+            //如果节点启动了，就不再启用了
             self.$czr.request
-                .accountList()
+                .status()
                 .then(data => {
                     console.log("已经有节点，不需要启动");
                     self.$startLogs.info("已经有节点，不需要启动;");

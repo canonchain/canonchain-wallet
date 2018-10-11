@@ -49,7 +49,7 @@ export default {
         },
         getStatus() {
             self.$czr.request
-                .accountList()
+                .status()
                 .then(res => {
                     if ((continued = 5000)) {
                         continued = 2000;

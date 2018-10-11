@@ -153,14 +153,20 @@
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.status')}}</strong>
                     <span class="tx-item-info">
                         <template v-if='transactionInfo.is_stable == "0"'>
-                            <span class="txt-warning"> 不稳定 </span>
+                            <span class="txt-warning"> 等待确认 </span>
                         </template>
                         <template v-else-if='transactionInfo.is_stable == "1"'>
-                            <template v-if='transactionInfo.is_illegal == "0"'>
+                            <template v-if='transactionInfo.status == "0"'>
                                 <span class="txt-success"> 成功 </span>
                             </template>
-                            <template v-else>
-                                <span class="txt-danger"> 失败 </span>
+                            <template v-else-if='transactionInfo.status == "1"'>
+                                <span class="txt-danger"> 失败(1) </span>
+                            </template>
+                            <template v-else-if='transactionInfo.status == "2"'>
+                                <span class="txt-danger"> 失败(2) </span>
+                            </template>
+                            <template v-else-if='transactionInfo.status == "3"'>
+                                <span class="txt-danger"> 失败(3) </span>
                             </template>
                         </template>
                     </span>
@@ -591,7 +597,7 @@ export default {
         blocksStatus() {
             self.timerSwitch.updateBlocksTimer = setTimeout(() => {
                 //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
-                // console.log("开始更新发送为稳定的Block")
+                console.log("开始更新发送为稳定的Block",self.sendTransCurrent.unstableAry)
                 self.updateBlocks();
             }, CONTINUATION);
         },
@@ -769,7 +775,6 @@ export default {
                     self.dialogSwitch.keystore = true;
                 })
                 .catch(error => {
-                    //TODO Error
                     self.$walletLogs.error(
                         "Account Export Error",
                         error.message
@@ -834,7 +839,7 @@ export default {
                     decimal += "0";
                 }
             }
-            return integer + decimal; //TODO Keep 4 decimal places
+            return integer + decimal;
         },
         toCZRFull(val) {
             let tempVal = self.$czr.utils.fromWei(val, "czr");

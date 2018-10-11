@@ -292,6 +292,7 @@ export default {
                             from: self.fromInfo.account,
                             to: self.toAccount,
                             amount: amountValue,
+                            is_stable:"0",
                             exec_timestamp: Math.ceil(
                                 new Date().getTime() / 1000
                             )
