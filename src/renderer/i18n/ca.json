@@ -21,7 +21,7 @@
         "tit":"Configuració",
         "lang":"Llengua",
         "select":"Trieu",
-        "version_number":"Número de versió de la cartera"
+        "version_number":"Versió de la cartera"
     },
     "page_contacts": {
         "tit":"Contacte",
@@ -42,7 +42,7 @@
             "no_tag":"Introduïu una nota del compte",
             "no_address":"Introduïu l'adreça del vostre compte",
             "valid_address":"L'adreça del contacte és il·legal",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
+            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
             "exist":"El contacte ja existeix,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"L'import de la transferència ha de ser superior a 0",
             "amount_error":"Introduïu un import de transacció legal",
             "address_err":"El format de l'adreça transferida no és vàlida.",
-            "send_success":"S'ha enviat correctament",
+            "send_success":"S'ha enviat la transacció",
 
             "decrypt_err":"L'anàlisi de la cartera ha fallat, pot ser un error de contrasenya",
             "send_error":"Ha fallat la transacció: si us plau, comproveu si hi ha un saldo suficient i una tarifa de minera"
@@ -90,7 +90,7 @@
             "tit":"Modifica nota",
             "subtit":"Marqueu una nota per al vostre compte",
             "no_tag":"Introduïu una nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters."
+            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters"
         },
         "dia_tx":{
             "tit":"Informació sobre la transacció",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Baixeu el fitxer del compte",
 
             "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
+            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
 
             "validate_password":"Introduïu la contrasenya que heu definit",
             "validate_re_password":"Introduïu la contrasenya que heu configurat de nou",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Establiu el nom de la nota del compte",
 
             "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
+            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
             "validate_enter_keystore":"Importeu primer el fitxer del compte",
             "validate_error_keystore":"La importació del compte ha fallat, pot ser un error del fitxer de compte",
             "imported_account_success":"S'ha importat correctament",
@@ -175,7 +175,16 @@
             "is_local":"Comproveu si hi ha un fitxer de node localment",
             "already_local":"El fitxer de configuració del fitxer node existeix en el dispositiu actual.",
             "not_local":"La informació de configuració del fitxer node no es detecta, pot ser la primera vegada que s'executi.",
-            "config_write_local":"Escriu el fitxer d'informació del node obtingut al disc local"
+            "config_write_local":"Escriu el fitxer d'informació del node obtingut al disc local",
+            "whether_update_node":"Comproveu si cal una actualització",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"S'està baixant el programa de nodes, tingueu paciència",
+            "already_downloaded":"S'ha baixat el programa del node i està llest per començar.",
+            "ready_start":"Prepara't per iniciar el node",
+            "enter_wallet":"El node s'ha iniciat amb èxit i està preparat per entrar a la cartera"
         },
         "version_dialog":{
             "version_tit":"Indicador d'actualització de la versió",

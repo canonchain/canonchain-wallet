@@ -21,7 +21,7 @@
         "tit":"Anviwònman",
         "lang":"Lang",
         "select":"Tanpri chwazi",
-        "version_number":"Bous vèsyon nimewo"
+        "version_number":"Bous vèsyon"
     },
     "page_contacts": {
         "tit":"Kontakte",
@@ -42,7 +42,7 @@
             "no_tag":"Tanpri antre yon nòt kont",
             "no_address":"Tanpri antre adrès kont ou",
             "valid_address":"Adrès la nan kontak la se ilegal",
-            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
+            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
             "exist":"Kontak la deja egziste,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Kantite transfè dwe pi gran pase 0",
             "amount_error":"Tanpri antre yon kantite tranzaksyon legal",
             "address_err":"Fòma a nan adrès la transfere se valab.",
-            "send_success":"Siksè voye",
+            "send_success":"Tranzaksyon te voye",
 
             "decrypt_err":"Bous analyse echwe, li ka yon erè modpas",
             "send_error":"Tranzaksyon echwe: tanpri tcheke si gen ase balans ak frè minè"
@@ -90,7 +90,7 @@
             "tit":"Modifye nòt",
             "subtit":"Make yon nòt pou kont ou",
             "no_tag":"Tanpri antre yon nòt kont",
-            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè"
+            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè."
         },
         "dia_tx":{
             "tit":"Enfòmasyon tranzaksyon",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Download dosye kont",
 
             "validate_tag":"Tanpri antre non an nòt kont",
-            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
+            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
 
             "validate_password":"Tanpri antre modpas la ou mete",
             "validate_re_password":"Tanpri antre modpas la ou mete ankò",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Tanpri mete non an nòt kont",
 
             "validate_tag":"Tanpri antre non an nòt kont",
-            "validate_tag_length":"Non memo pa ka pi long pase 8 karaktè",
+            "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
             "validate_enter_keystore":"Tanpri enpòte dosye a kont premye",
             "validate_error_keystore":"Kont enpòte echwe, yo ka erè dosye kont",
             "imported_account_success":"Siksè enpòte",
@@ -175,7 +175,16 @@
             "is_local":"Tcheke si gen yon dosye node lokalman",
             "already_local":"Fichye a konfigirasyon nan dosye a ne egziste sou aparèy aktyèl la.",
             "not_local":"Enfòmasyon konfigirasyon nan dosye a ne pa detekte, li ka premye fwa kouri.",
-            "config_write_local":"Ekri dosye a ne jwenn enfòmasyon sou disk lokal la"
+            "config_write_local":"Ekri dosye a ne jwenn enfòmasyon nan lokal disk la",
+            "whether_update_node":"Tcheke si yo bezwen yon ajou",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Download pwogram ne, tanpri pran pasyans",
+            "already_downloaded":"Pwogram nan ne te telechaje epi li pare yo kòmanse.",
+            "ready_start":"Prepare pou kòmanse ne la",
+            "enter_wallet":"Nœud la siksè te kòmanse ak pare yo antre nan bous la"
         },
         "version_dialog":{
             "version_tit":"Version aktyalizasyon rapid",

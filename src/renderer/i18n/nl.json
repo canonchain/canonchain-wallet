@@ -21,7 +21,7 @@
         "tit":"oprichten",
         "lang":"taal",
         "select":"Kies alstublieft",
-        "version_number":"Portierversienummer"
+        "version_number":"Wallet-versie"
     },
     "page_contacts": {
         "tit":"contact",
@@ -72,7 +72,7 @@
             "amount_zero":"Overboeking moet groter zijn dan 0",
             "amount_error":"Voer een wettelijk transactiebedrag in",
             "address_err":"Het formaat van het overgedragen adres is ongeldig.",
-            "send_success":"Verzonden",
+            "send_success":"Transactie verzonden",
 
             "decrypt_err":"Portefeuille parseren mislukt, dit kan een wachtwoordfout zijn",
             "send_error":"Transactie mislukt: controleer of er voldoende saldo en mineerkosten zijn"
@@ -175,7 +175,16 @@
             "is_local":"Controleer of er lokaal een knooppuntbestand is",
             "already_local":"Het configuratiebestand van het knooppuntbestand bestaat op het huidige apparaat.",
             "not_local":"De configuratie-informatie van het knooppuntbestand wordt niet gedetecteerd, mogelijk is dit de eerste keer dat het bestand wordt uitgevoerd.",
-            "config_write_local":"Schrijf het verkregen knooppuntinformatiebestand naar de lokale schijf"
+            "config_write_local":"Schrijf het verkregen knooppuntinformatiebestand naar de lokale schijf",
+            "whether_update_node":"Controleer of een update nodig is",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Knoopprogramma downloaden, wees geduldig",
+            "already_downloaded":"Het knooppuntprogramma is gedownload en klaar om te starten.",
+            "ready_start":"Bereid je voor om het knooppunt te starten",
+            "enter_wallet":"Het knooppunt is met succes gestart en klaar om de portefeuille te betreden"
         },
         "version_dialog":{
             "version_tit":"Update van de versieupdate",

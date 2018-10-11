@@ -21,7 +21,7 @@
         "tit":"Socrú",
         "lang":"Teanga",
         "select":"Roghnaigh",
-        "version_number":"Uimhir leagan saoire"
+        "version_number":"Leagan saoire"
     },
     "page_contacts": {
         "tit":"Teagmháil",
@@ -72,7 +72,7 @@
             "amount_zero":"Ní mór an méid aistrithe a bheith níos mó ná 0",
             "amount_error":"Cuir isteach méid idirbhearta dlíthiúil",
             "address_err":"Tá formáid an seoladh aistrithe neamhbhailí.",
-            "send_success":"Seoladh go rathúil",
+            "send_success":"Aistriú curtha",
 
             "decrypt_err":"Theip ar parsáil sparán, d'fhéadfadh sé gur earráid focal faire é",
             "send_error":"Theip ar an Idirbheart: seiceáil an bhfuil dóthain cothromaíochta agus táille miner ann"
@@ -175,7 +175,16 @@
             "is_local":"Seiceáil an bhfuil comhad nód ann go háitiúil",
             "already_local":"Tá comhad cumraíochta an chomhaid nód ann ar an bhfeiste atá ann faoi láthair.",
             "not_local":"Ní bhfaightear faisnéis chumraíochta an chomhaid nód, b'fhéidir gurb é an chéad uair a bhí sé ag rith.",
-            "config_write_local":"Scríobh an comhad faisnéise nód a fhaightear chuig an diosca áitiúil"
+            "config_write_local":"Scríobh an comhad faisnéise nód a fhaightear chuig an diosca áitiúil",
+            "whether_update_node":"Seiceáil an bhfuil gá le nuashonrú",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Clár nód a íoslódáil, bíodh othar ort",
+            "already_downloaded":"Tá an clár nód á íoslódáil agus réidh le tosú.",
+            "ready_start":"Ullmhaigh chun an nód a thosú",
+            "enter_wallet":"Tá an nód ar siúl go rathúil agus réidh chun dul isteach sa sparán"
         },
         "version_dialog":{
             "version_tit":"Nuashonrú ar an leagan go pras",

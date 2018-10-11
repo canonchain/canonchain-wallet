@@ -21,7 +21,7 @@
         "tit":"postaviti",
         "lang":"jezik",
         "select":"Molimo odaberite",
-        "version_number":"Broj inačice novčanika"
+        "version_number":"Verzija novÄŤanika"
     },
     "page_contacts": {
         "tit":"kontakt",
@@ -42,7 +42,7 @@
             "no_tag":"Unesite bilješku o računu",
             "no_address":"Unesite adresu svog računa",
             "valid_address":"Adresa kontakta je ilegalna",
-            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
+            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
             "exist":"Kontakt već postoji,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Iznos prijenosa mora biti veći od 0",
             "amount_error":"Unesite iznos pravne transakcije",
             "address_err":"Format prenesene adrese nije valjan.",
-            "send_success":"Uspješno je poslana",
+            "send_success":"Poslana transakcija",
 
             "decrypt_err":"Raščlanjivanje novčanika nije uspjelo, možda je pogreška zaporke",
             "send_error":"Transakcija nije uspjela: provjerite postoji li dovoljan iznos salda i rudara"
@@ -90,7 +90,7 @@
             "tit":"Izmijenite bilješku",
             "subtit":"Označite bilješku za svoj račun",
             "no_tag":"Unesite bilješku o računu",
-            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova."
+            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova"
         },
         "dia_tx":{
             "tit":"Informacije o transakciji",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Preuzmite datoteku računa",
 
             "validate_tag":"Unesite naziv bilješke računa",
-            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
+            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
 
             "validate_password":"Unesite zaporku koju ste postavili",
             "validate_re_password":"Unesite zaporku koju ste ponovno postavili",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Postavite naziv bilješke računa",
 
             "validate_tag":"Unesite naziv bilješke računa",
-            "validate_tag_length":"Naziv naziva bilješke ne može biti veći od 8 znakova.",
+            "validate_tag_length":"Memo ime ne može biti duže od 8 znakova",
             "validate_enter_keystore":"Najprije uvezite datoteku računa",
             "validate_error_keystore":"Uvoz računa nije uspio, možda je pogreška u datoteci računa",
             "imported_account_success":"Uspješno uvezeno",
@@ -175,7 +175,16 @@
             "is_local":"Provjerite postoji li lokalni čvor",
             "already_local":"Konfiguracijska datoteka datoteke čvora postoji na trenutnom uređaju.",
             "not_local":"Informacije o konfiguraciji datoteke čvorova nisu otkrivene, može biti prvi put pokrenut.",
-            "config_write_local":"Napišite dobivenu informacijsku datoteku čvora na lokalni disk"
+            "config_write_local":"Napišite dobivenu informacijsku datoteku čvora na lokalni disk",
+            "whether_update_node":"Provjerite je li ažuriranje potrebno",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Preuzimanje čvor programa, molimo Vas da budite strpljivi",
+            "already_downloaded":"Program čvora je preuzeto i spremno za početak.",
+            "ready_start":"Pripremite se za početak čvora",
+            "enter_wallet":"Čvor je uspješno pokrenut i spreman za ulaz u novčanik"
         },
         "version_dialog":{
             "version_tit":"Ažuriranje verzije verzije",

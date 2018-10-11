@@ -21,7 +21,7 @@
         "tit":"ቅንብር",
         "lang":"ቋንቋ",
         "select":"እባክዎ ይምረጡ",
-        "version_number":"የቦክስ ስሪት ቁጥር"
+        "version_number":"የ Wallet ስሪት"
     },
     "page_contacts": {
         "tit":"እውቅያ",
@@ -42,7 +42,7 @@
             "no_tag":"እባክዎ የመለያ ማስታወሻ ያስገቡ",
             "no_address":"እባክዎ የመለያዎን አድራሻ ያስገቡ",
             "valid_address":"የእውቂያ አድራሻው ህገወጥ ነው",
-            "validate_tag_length":"ማስታወሻዎች ስም ከ 8 ቁምፊዎች መሆን አይችልም",
+            "validate_tag_length":"የማሳወቂያ ስም ከ 8 ቁምፊዎች በላይ መሆን አይችልም.",
             "exist":"እውቅያው አስቀድሞም ይገኛል,"
         }
     },
@@ -72,10 +72,10 @@
             "amount_zero":"የማስተላለፍ መጠን ከ 0 በላይ መሆን አለበት",
             "amount_error":"እባክዎ የህጋዊ ግብይት መጠን ያስገቡ",
             "address_err":"የተሰጠው አድራሻ ቅርጸት ልክ ያልሆነ ነው.",
-            "send_success":"በተሳካ ሁኔታ ተልኳል",
+            "send_success":"የገንዘብ ልውውጥ ተልኳል",
 
             "decrypt_err":"Wallet መሰራት አልተሳካም, ምናልባት የይለፍ ቃል ስህተት ሊሆን ይችላል",
-            "send_error":"ግብይቱ ካልተሳካ: በቂ ሚዛን እና ቆፋሪዎች ክፍያ የለም ከሆነ ያረጋግጡ"
+            "send_error":"ግብይቱ አልተሳካም እባክዎን በቂ የሆነ ሚዛን እና የአምራቾች ክፍያ ካለ ያረጋግጡ"
         }
     },
     "page_account": {
@@ -90,7 +90,7 @@
             "tit":"ማስታወሻን ያሻሽሉ",
             "subtit":"ለመለያዎ ማስታወሻ ያመልክቱ",
             "no_tag":"እባክዎ የመለያ ማስታወሻ ያስገቡ",
-            "validate_tag_length":"ማስታወሻዎች ስም ከ 8 ቁምፊዎች መሆን አይችልም"
+            "validate_tag_length":"የማሳወቂያ ስም ከ 8 ቁምፊዎች በላይ መሆን አይችልም."
         },
         "dia_tx":{
             "tit":"የግብይት መረጃ",
@@ -131,7 +131,7 @@
             "account_download_keystore":"የመለያ ፋይል ያውርዱ",
 
             "validate_tag":"እባክዎ የመለያ ማስታወሻ ስም ያስገቡ",
-            "validate_tag_length":"ማስታወሻዎች ስም ከ 8 ቁምፊዎች መሆን አይችልም",
+            "validate_tag_length":"የማሳወቂያ ስም ከ 8 ቁምፊዎች በላይ መሆን አይችልም.",
 
             "validate_password":"እባክዎ ያዋቀሩትን የይለፍ ቃል ያስገቡ",
             "validate_re_password":"እባክህ በድጋሚ ያዋቀውን የይለፍ ቃል አስገባ",
@@ -148,7 +148,7 @@
             "placeholder_tag":"እባክዎ የመለያ ማስታወሻ ስም ያዘጋጁ",
 
             "validate_tag":"እባክዎ የመለያ ማስታወሻ ስም ያስገቡ",
-            "validate_tag_length":"ማስታወሻዎች ስም ከ 8 ቁምፊዎች መሆን አይችልም",
+            "validate_tag_length":"የማሳወቂያ ስም ከ 8 ቁምፊዎች በላይ መሆን አይችልም.",
             "validate_enter_keystore":"እባክዎ በመጀመሪያ የመለያውን ፋይል ያስመጡ",
             "validate_error_keystore":"የመለያ ማስመጣት አልተሳካም, የመለያ ፋይል ስህተት ሊሆን ይችላል",
             "imported_account_success":"በተሳካ ሁኔታ ከውጭ ገብቷል",
@@ -173,9 +173,18 @@
             "network_latest":"检测是否有新的 CanonChain 节点文件",
             "get_latest":"የቅርብ ጊዜ የመለወጫ አወቃቀሩ መረጃ ተገኝቷል",
             "is_local":"የአከባቢ ፋይል በአካባቢው ካለ ያረጋግጡ",
-            "already_local":"በአሁኑ ውቅረት ፋይል መረጃ የአንጓ መሳሪያ የለም",
+            "already_local":"የአንጓውን ፋይል ውቅር ፋይል አሁን ባለው መሣሪያ ላይ አለ.",
             "not_local":"የአንጓውን ፋይል ውቅረት መረጃ አልተገኘም, ለመጀመሪያ ጊዜ እየሄደ ሊሆን ይችላል.",
-            "config_write_local":"የተገኘውን የአውቶቡስ መረጃ ፋይል ወደ አካባቢያዊ ዲስክ ይጻፉ"
+            "config_write_local":"የተገኘውን የአውቶቡስ መረጃ ፋይል ወደ አካባቢያዊ ዲስክ ይጻፉ",
+            "whether_update_node":"አንድ ዝማኔ አስፈላጊ መሆኑን ያረጋግጡ",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"የአንጎድ ፕሮግራምን በማውረድ, እባክዎ ይታገሱ",
+            "already_downloaded":"የአንጎድ ፕሮግራሙ ወርዷል እናም ለመጀመር ዝግጁ ነው.",
+            "ready_start":"ሥፍራውን ለመጀመር ያዘጋጁ",
+            "enter_wallet":"መስቀያው በትክክል ተጀምሮ በኪስ ቦርሳ ለመግባት ዝግጁ ነው"
         },
         "version_dialog":{
             "version_tit":"የስሪት ማዘመኛ ጥያቄ",

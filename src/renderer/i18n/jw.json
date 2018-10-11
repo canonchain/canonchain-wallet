@@ -21,7 +21,7 @@
         "tit":"Setelan",
         "lang":"Basa",
         "select":"Mangga milih",
-        "version_number":"Nomer versi dompet"
+        "version_number":"Versi Wallet"
     },
     "page_contacts": {
         "tit":"Kontak",
@@ -72,7 +72,7 @@
             "amount_zero":"Jumlah transfer kudu luwih saka 0",
             "amount_error":"Mangga nglebokna jumlah transaksi legal",
             "address_err":"Format alamat sing ditransfer ora bener.",
-            "send_success":"Sukses dikirim",
+            "send_success":"Transaksi dikirim",
 
             "decrypt_err":"Parsing Wallet gagal, bisa dadi kesalahan sandi",
             "send_error":"Transaksi gagal: mangga dipriksa manawa ana keseimbangan sing cukup lan ragad penambang"
@@ -175,7 +175,16 @@
             "is_local":"Priksa manawa ana file simpul sacara lokal",
             "already_local":"Berkas konfigurasi berkas simpul ana ing piranti saiki.",
             "not_local":"Informasi konfigurasi file simpul ora dideteksi, bisa dadi sing pertama kaloro.",
-            "config_write_local":"Tulis berkas informasi simpul sing ditampa ing disk lokal"
+            "config_write_local":"Tulis berkas informasi simpul sing ditampa ing disk lokal",
+            "whether_update_node":"Priksa yen ana pembaruan",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ngundhuh program simpul, please sabar",
+            "already_downloaded":"Program simpul wis diundhuh lan siap diwiwiti.",
+            "ready_start":"Siapake miwiti simpul kasebut",
+            "enter_wallet":"Simpul kasebut kasil diwiwiti lan siap ngetik dompet"
         },
         "version_dialog":{
             "version_tit":"Ganti update versi",

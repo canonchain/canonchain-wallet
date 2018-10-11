@@ -21,7 +21,7 @@
         "tit":"Kukhazikitsa",
         "lang":"Chilankhulo",
         "select":"Chonde sankhani",
-        "version_number":"Nambala yowonjezera ndalama"
+        "version_number":"Chikwama cha ndalama"
     },
     "page_contacts": {
         "tit":"Lumikizanani",
@@ -72,7 +72,7 @@
             "amount_zero":"Kutumiza ndalama ziyenera kukhala zazikulu kuposa 0",
             "amount_error":"Chonde lowetsani kuchuluka kwa malamulo",
             "address_err":"Maonekedwe a adiresi yosamutsidwa ndi ofunika.",
-            "send_success":"Kutumizidwa bwino",
+            "send_success":"Kutumiza kutumizidwa",
 
             "decrypt_err":"Kusungidwa kwa ngongole kunalephera, ikhoza kukhala cholakwika chachinsinsi",
             "send_error":"Kugulitsa kunalephera: chonde onani ngati pali malipiro okwanira ndi malipiro a minera"
@@ -175,7 +175,16 @@
             "is_local":"Onetsetsani ngati pali fayilo fayilo kwanuko",
             "already_local":"Dongosolo la kasinthidwe la fayilo ya node likupezeka pa chipangizo chamakono.",
             "not_local":"Kukonzekera kwa chidziwitso cha fayilo yazithunzi sikunapezeke, kungakhale kothamanga koyamba.",
-            "config_write_local":"Lembani fayilo yolondola ya node yomwe imapezeka ku diski yapafupi"
+            "config_write_local":"Lembani fayilo yolondola ya node yomwe imapezeka ku diski yapafupi",
+            "whether_update_node":"Onetsetsani ngati zosinthika zikufunika",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Koperani pulogalamu ya ndondomeko, chonde khalani oleza mtima",
+            "already_downloaded":"Pulogalamu ya ndondomeko yamasulidwa ndipo yatsala pang'ono kuyamba.",
+            "ready_start":"Konzani kuyamba mfundo",
+            "enter_wallet":"Nodeyi imayambitsidwa bwino ndi yokonzeka kulowa mu chikwama"
         },
         "version_dialog":{
             "version_tit":"Kusintha kwawamasinthidwe mwamsanga",

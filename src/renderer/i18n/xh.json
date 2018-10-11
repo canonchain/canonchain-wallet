@@ -21,7 +21,7 @@
         "tit":"Ukubeka",
         "lang":"ULwimi",
         "select":"Nceda ukhethe",
-        "version_number":"Inombolo yenguqulo yeWallet"
+        "version_number":"IWallet version"
     },
     "page_contacts": {
         "tit":"Uqhagamshelwano",
@@ -72,7 +72,7 @@
             "amount_zero":"Imali yokutshintsha kufuneka ibe ngaphezu kwe-0",
             "amount_error":"Nceda ufake inani lokuthengiselana ngokomthetho",
             "address_err":"Ifomathi yedilesi edluliselweyo ayivumelekanga.",
-            "send_success":"Thunyelwe ngempumelelo",
+            "send_success":"Intengiso ithunyelwe",
 
             "decrypt_err":"Ukutshatyalaliswa kwe-Wallet kwehlulekile, kusenokuba yimpazamo yephasiwedi",
             "send_error":"Ukuthengiswa kwehlulekile: nceda uqaphele ukuba kukho ukulingana okwaneleyo kunye nemirhumo yemayini"
@@ -175,7 +175,16 @@
             "is_local":"Khangela ukuba kukho ifowuni yefowuni kwindawo",
             "already_local":"Ifayile yokuqwalasela yefayile ye-node ikhoyo kwisixhobo esikhoyo.",
             "not_local":"Ulwazi loqwalaselo lwefayile ye-node alufumanekanga, lube luqala ukusebenza.",
-            "config_write_local":"Bhala ifayili yolwazi efunyenwe kwi-disk yendawo"
+            "config_write_local":"Bhala ifayili yolwazi efunyenwe kwi-disk yendawo",
+            "whether_update_node":"Khangela ukuba kufuneka ukubuyekezwa",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ukukhuphela inkqubo ye-node, nceda ube nomonde",
+            "already_downloaded":"Inkqubo ye-node ikhutshwe kwaye ikulungele ukuqala.",
+            "ready_start":"Lungiselela ukuqala le node",
+            "enter_wallet":"I-node iqalwe ngempumelelo kwaye ilungele ukungena esikhwameni"
         },
         "version_dialog":{
             "version_tit":"Ukuhlaziywa kwesiqendu",

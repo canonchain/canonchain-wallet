@@ -21,7 +21,7 @@
         "tit":"eriges",
         "lang":"lingua",
         "select":"placere eligere",
-        "version_number":"Versio sacculus est numerus"
+        "version_number":"sacculus version"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -72,7 +72,7 @@
             "amount_zero":"Serie debet esse major moles 0",
             "amount_error":"Please enter a quantum valet transaction",
             "address_err":"In forma oratio non esse legitimam,",
-            "send_success":"mitte victoria",
+            "send_success":"Trading missum est",
 
             "decrypt_err":"Peram animi fallit peccatum sit ignoro",
             "send_error":"Rei deficit: vide si satis est ut Reprehendo et fossores feodo statera"
@@ -159,7 +159,7 @@
         "remove_dia": {
             "tit":"Tu es certus sit removere vis?",
             "remove_confrim":"Im 'certus ad removendum",
-            "backup":"Lorem quod redire ob rem Indemnitati",
+            "backup":"Lorem quod rursum ob rem ne patiamini",
             "input_pwd":"Password",
             "placeholder_pwd":"Hoc enim signum PDF",
             "validate_password":"PDF rationem ignoro",
@@ -175,7 +175,16 @@
             "is_local":"Utrum illic est a locus nodi file deprehendere",
             "already_local":"Configuratione et fabrica lima notitia est currently nodi",
             "not_local":"Non nequiquam detecta fraude nodi configuratione files, non potest esse prima currere",
-            "config_write_local":"Ad tertiam quaestionem dicendum files scriptum est locus nodi notitia orbis"
+            "config_write_local":"Ad tertiam quaestionem dicendum files scriptum est locus nodi notitia orbis",
+            "whether_update_node":"Si deprehendatur indiget updated",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Download nodi, placere patientes estote",
+            "already_downloaded":"Nodi progressio iam receptae sunt, et compararim incipere",
+            "ready_start":"Promptus nodi incipere",
+            "enter_wallet":"Node incipit feliciter pera parati penetrare"
         },
         "version_dialog":{
             "version_tit":"Version promptum update",

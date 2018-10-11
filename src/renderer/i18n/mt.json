@@ -21,7 +21,7 @@
         "tit":"Twaqqif",
         "lang":"Lingwa",
         "select":"Jekk jogħġbok agħżel",
-        "version_number":"Numru tal-verżjoni tal-kartiera"
+        "version_number":"Verżjoni tal-kartiera"
     },
     "page_contacts": {
         "tit":"Kuntatt",
@@ -72,7 +72,7 @@
             "amount_zero":"L-ammont tat-trasferiment għandu jkun akbar minn 0",
             "amount_error":"Jekk jogħġbok daħħal ammont ta 'transazzjoni legali",
             "address_err":"Il-format tal-indirizz ittrasferit huwa invalidu.",
-            "send_success":"Messaġġ mibgħut b'suċċess",
+            "send_success":"Tranżazzjoni mibgħuta",
 
             "decrypt_err":"L-analiżi tal-kartiera fallew, jista 'jkun żball tal-password",
             "send_error":"In-nuqqas ta 'tranżazzjoni: jekk jogħġbok iċċekkja jekk hemmx bilanċ suffiċjenti u miżata tal-minatur"
@@ -175,7 +175,16 @@
             "is_local":"Iċċekkja jekk hemmx node file lokalment",
             "already_local":"Il-fajl tal-konfigurazzjoni tal-fajl node jeżisti fuq it-tagħmir kurrenti.",
             "not_local":"L-informazzjoni dwar il-konfigurazzjoni tal-fajl tan-nodi ma nstabx, jista 'jkun l-ewwel darba.",
-            "config_write_local":"Ikteb il-fajl tal-informazzjoni node miksuba lid-diska lokali"
+            "config_write_local":"Ikteb il-fajl tal-informazzjoni node miksuba lid-diska lokali",
+            "whether_update_node":"Iċċekkja jekk hemmx bżonn ta 'aġġornament",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Niżżel il-programm node, jekk jogħġbok tkun pazjent",
+            "already_downloaded":"Il-programm node ġie mniżżel u lest biex jibda.",
+            "ready_start":"Ipprepara biex tibda n-nodu",
+            "enter_wallet":"In-node jinbeda b'suċċess u jkun lest biex jidħol fil-kartiera"
         },
         "version_dialog":{
             "version_tit":"Verżjoni ta 'aġġornament fil",

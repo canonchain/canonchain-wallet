@@ -21,7 +21,7 @@
         "tit":"Hoʻonohonoho",
         "lang":"'Ōlelo",
         "select":"E koho",
-        "version_number":"ʻO ka helu huapalama"
+        "version_number":"ʻO ka paku pēlā"
     },
     "page_contacts": {
         "tit":"Hoʻokaʻaʻike",
@@ -72,7 +72,7 @@
             "amount_zero":"Pono ka nui o ka hoʻoiliʻana ma mua o ka 0",
             "amount_error":"Eʻoluʻolu e hoʻokomo i ka nui o ka hihia",
             "address_err":"ʻAʻole pono keʻano o ka helu i hoʻololiʻia.",
-            "send_success":"Ua hoʻounaʻia ma ka hoʻouna",
+            "send_success":"Hoʻounaʻia ka hana",
 
             "decrypt_err":"Ua lakaʻole ka wallet, kahi hewa paha",
             "send_error":"Ua pau ka hana: eʻoluʻolu e nānā inā loaʻa ka uku kaulike a me ka uku miner"
@@ -175,7 +175,16 @@
             "is_local":"E hōʻoia inā loaʻa kahi'ōpili pani ma kahi",
             "already_local":"Kuhi ka'ōnaehana hoʻonohonoho o ke kōpena'īpona ma ka polokalamu i kēia manawa.",
             "not_local":"ʻAʻoleʻikeʻia kaʻike hoʻonohonohoʻana o ka pūnaewele'ōpena,ʻo ia ka manawa mua e holo ai.",
-            "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi"
+            "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi",
+            "whether_update_node":"E nānā i kahi e pono ai ka loiloi",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ke hoʻoukaʻana i ka papa'ōpili, eʻoluʻolu e hoʻomanawanui",
+            "already_downloaded":"Ua hoʻopukaʻia ka polokalamu hoʻohoka a ua hoʻomakaʻia e hoʻomaka.",
+            "ready_start":"E hoʻomākaukau e hoʻomaka i ke kiko",
+            "enter_wallet":"Hoʻomakaʻia ka puka a hoʻomaka me ke komoʻana i ke eke"
         },
         "version_dialog":{
             "version_tit":"Hoʻopuka hou i ka hoʻololi",

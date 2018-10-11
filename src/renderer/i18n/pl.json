@@ -21,7 +21,7 @@
         "tit":"Ustawienie",
         "lang":"Język",
         "select":"Proszę wybrać",
-        "version_number":"Numer wersji portfela"
+        "version_number":"Wersja portfela"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Kwota transferu musi być większa niż 0",
             "amount_error":"Wprowadź kwotę transakcji prawnej",
             "address_err":"Format przesłanego adresu jest nieprawidłowy.",
-            "send_success":"Pomyślnie wysłano",
+            "send_success":"Transakcja wysłana",
 
             "decrypt_err":"Nie udało się przetworzyć portfela, może to być błąd hasła",
             "send_error":"Transakcja nie powiodła się: proszę sprawdzić, czy istnieje wystarczająca opłata bilansowa i górnicza"
@@ -175,7 +175,16 @@
             "is_local":"Sprawdź lokalnie, czy istnieje plik węzła",
             "already_local":"Plik konfiguracyjny pliku węzła istnieje na bieżącym urządzeniu.",
             "not_local":"Informacje o konfiguracji pliku węzła nie są wykrywane, może to być pierwszy raz.",
-            "config_write_local":"Zapisz otrzymany plik informacji o węźle na dysku lokalnym"
+            "config_write_local":"Zapisz otrzymany plik informacji o węźle na dysku lokalnym",
+            "whether_update_node":"Sprawdź, czy wymagana jest aktualizacja",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Pobieram program węzłowy, proszę o cierpliwość",
+            "already_downloaded":"Program węzłowy został pobrany i gotowy do uruchomienia.",
+            "ready_start":"Przygotuj się do uruchomienia węzła",
+            "enter_wallet":"Węzeł został pomyślnie uruchomiony i gotowy do wejścia do portfela"
         },
         "version_dialog":{
             "version_tit":"Monit aktualizacji wersji",

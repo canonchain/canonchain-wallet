@@ -21,7 +21,7 @@
         "tit":"Seadistus",
         "lang":"Keel",
         "select":"Palun vali",
-        "version_number":"Rahakoti versiooni number"
+        "version_number":"Rahakoti versioon"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Ülekande summa peab olema suurem kui 0",
             "amount_error":"Palun sisestage õigusliku tehingu summa",
             "address_err":"Edastatud aadressi formaat on kehtetu.",
-            "send_success":"Edukalt saadetud",
+            "send_success":"Tehing saadeti",
 
             "decrypt_err":"Rahakoti parsing ebaõnnestus, võib see olla parooli viga",
             "send_error":"Tehing ebaõnnestus: kontrollige, kas on piisavalt tasakaalu ja mineraali tasu"
@@ -175,7 +175,16 @@
             "is_local":"Kontrollige, kas sõlme fail on kohapeal olemas",
             "already_local":"Liitfaili konfiguratsioonifail on praegusel seadmel olemas.",
             "not_local":"Liitfaili konfiguratsiooniteavet ei tuvastata, võib see esmakordselt töötada.",
-            "config_write_local":"Kirjutage saadud osade andmefail kohalikku kettale"
+            "config_write_local":"Kirjutage saadud osade andmefail kohalikku kettale",
+            "whether_update_node":"Kontrollige, kas värskendus on vajalik",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Allalaaditav sõlmeprogramm, olge kannatlik",
+            "already_downloaded":"Sõlmeprogramm on alla laaditud ja valmis käivituma.",
+            "ready_start":"Valmistage sõlme käivitamiseks",
+            "enter_wallet":"Sõlm on edukalt käivitunud ja valmis sisestama rahakoti"
         },
         "version_dialog":{
             "version_tit":"Versiooni värskendamise viip",

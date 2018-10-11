@@ -21,7 +21,7 @@
         "tit":"nyetél",
         "lang":"basa",
         "select":"Mangga pilih",
-        "version_number":"Jumlah Vérsi dompet"
+        "version_number":"Vérsi dompet"
     },
     "page_contacts": {
         "tit":"hubungan",
@@ -72,7 +72,7 @@
             "amount_zero":"Jumlah mindahkeun kudu leuwih gede ti 0",
             "amount_error":"Mangga lebetkeun jumlah urus valid",
             "address_err":"Kana format alamat henteu sah",
-            "send_success":"Kirim surélék ayaan",
+            "send_success":"Dagang geus dikirim",
 
             "decrypt_err":"resolusi dompét gagal, nya meureun sandi salah",
             "send_error":"urus gagal: cék ningali lamun aya cukup kasaimbangan sarta panambang fee"
@@ -175,7 +175,16 @@
             "is_local":"Ngadeteksi naha aya file titik lokal",
             "already_local":"Ayeuna aya file konfigurasi alat informasi titik",
             "not_local":"Teu kauninga file konfigurasi titik, nya meureun ngajalankeun munggaran",
-            "config_write_local":"Inpo titik nu kaala file ditulis kana piringan lokal"
+            "config_write_local":"Inpo titik nu kaala file ditulis kana piringan lokal",
+            "whether_update_node":"Naha beungeut perlu diropéa",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ngundeur titik, punten janten sabar",
+            "already_downloaded":"program titik geus diundeur jeung meunang siap pikeun ngamimitian",
+            "ready_start":"Siap pikeun ngamimitian titik",
+            "enter_wallet":"Titik dimimitian hasil, siap asupkeun dompet"
         },
         "version_dialog":{
             "version_tit":"Vérsi update ajakan",

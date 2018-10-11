@@ -21,7 +21,7 @@
         "tit":"Configuración",
         "lang":"Linguaxe",
         "select":"Elixe",
-        "version_number":"Número de versión de carteira"
+        "version_number":"Versión de carteira"
     },
     "page_contacts": {
         "tit":"Contacto",
@@ -42,7 +42,7 @@
             "no_tag":"Insira unha nota de conta",
             "no_address":"Introduce o enderezo da túa conta",
             "valid_address":"O enderezo do contacto é ilegal",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
+            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
             "exist":"O contacto xa existe,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"O importe da transferencia debe ser superior a 0",
             "amount_error":"Introduce un importe de transacción legal",
             "address_err":"O formato do enderezo transferido non é válido.",
-            "send_success":"Enviouse con éxito",
+            "send_success":"Transacción enviada",
 
             "decrypt_err":"Fallou a análise de carteira, pode ser un erro de contrasinal",
             "send_error":"Fallou a transacción: verifique se hai un saldo suficiente e unha taxa de mineiros"
@@ -90,7 +90,7 @@
             "tit":"Modificar nota",
             "subtit":"Marca unha nota para a túa conta",
             "no_tag":"Insira unha nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres."
+            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres"
         },
         "dia_tx":{
             "tit":"Información de transaccións",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Descargar o ficheiro da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
+            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
 
             "validate_password":"Introduza o contrasinal que configurou",
             "validate_re_password":"Introduza o contrasinal que configurou de novo",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Configure o nome da nota da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
+            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
             "validate_enter_keystore":"Importe primeiro o ficheiro da conta",
             "validate_error_keystore":"Fallou a importación da conta, pode ser un erro de ficheiro de conta",
             "imported_account_success":"Importada con éxito",
@@ -175,7 +175,16 @@
             "is_local":"Comprobe se hai un ficheiro de nodo localmente",
             "already_local":"O ficheiro de configuración do ficheiro de nodo existe no dispositivo actual.",
             "not_local":"Non se detecta a información de configuración do ficheiro do nodo, pode ser a primeira vez que se execute.",
-            "config_write_local":"Escribe o ficheiro de información do nodo obtido no disco local"
+            "config_write_local":"Escribe o ficheiro de información do nodo obtido no disco local",
+            "whether_update_node":"Comprobe se se necesita unha actualización",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Descargando o programa de nodos, ten paciencia",
+            "already_downloaded":"O programa do nodo foi descargado e listo para comezar.",
+            "ready_start":"Prepárese para iniciar o nodo",
+            "enter_wallet":"O nodo comezou con éxito e listo para entrar na carteira"
         },
         "version_dialog":{
             "version_tit":"Solicitude de actualización da versión",

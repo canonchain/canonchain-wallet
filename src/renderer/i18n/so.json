@@ -21,7 +21,7 @@
         "tit":"Dejinta",
         "lang":"Luuqadda",
         "select":"Fadlan dooro",
-        "version_number":"Nambarka saxda ah ee khadka"
+        "version_number":"Qalabka loo yaqaan "wallet""
     },
     "page_contacts": {
         "tit":"La xiriir",
@@ -72,7 +72,7 @@
             "amount_zero":"Xaddiga wareejinta waa inuu ka weyn yahay 0",
             "amount_error":"Fadlan gali qadar lacageed oo sharci ah",
             "address_err":"Nidaamka cinwaanka la soo wareejiyay waa mid aan sharci ahayn.",
-            "send_success":"Si guul leh ayaa loo soo diray",
+            "send_success":"Ganacsi ayaa loo diraa",
 
             "decrypt_err":"Qalabaynta jeebka ayaa ku fashilmay, waxay noqon kartaa qalad sir ah",
             "send_error":"Hawlgalku wuu ku fashilmay: fadlan iska hubi haddii ay jirto dheelitir ku filan iyo qarash yar"
@@ -175,7 +175,16 @@
             "is_local":"Hubi haddii uu jiro faylka codka ee deegaanka",
             "already_local":"Faylka habka faylka ah ee faylka ayaa ku jira qalabka hadda jira.",
             "not_local":"Macluumaadka qaabeynta faylka nootka lama helin, waxay noqon kartaa markii ugu horeysay ee soconaya.",
-            "config_write_local":"Fadlan feylka macluumaadka noodhka ee la helay si aad u heshid diskka deegaanka"
+            "config_write_local":"Fadlan feylka macluumaadka noodhka ee la helay si aad u heshid diskka deegaanka",
+            "whether_update_node":"Hubi haddii loo baahdo cusbooneysiin",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Soo dejinta barnaamijka qadka, fadlan dulqaado",
+            "already_downloaded":"Barnaamijka qadka ayaa la soo dejiyey oo diyaar u ah inuu bilaabo.",
+            "ready_start":"Isu diyaari inaad bilowdo barta",
+            "enter_wallet":"Barta ayaa si fiican loo bilaabay oo diyaar u ah inay galaan jeebka"
         },
         "version_dialog":{
             "version_tit":"Waqtiga casriga cusub",

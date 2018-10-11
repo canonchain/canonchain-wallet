@@ -21,7 +21,7 @@
         "tit":"Parcu",
         "lang":"Lingua",
         "select":"Sceglite u vostru",
-        "version_number":"U numaru di versione Wallet"
+        "version_number":"A versione Wallet"
     },
     "page_contacts": {
         "tit":"Cuntattate",
@@ -72,7 +72,7 @@
             "amount_zero":"U cantu di trasferimentu deve esse più grande ca 0",
             "amount_error":"Per piacè inserisce una quantità di transazzione legali",
             "address_err":"U formatu di l'indirizzu trasferitore hè invalidu.",
-            "send_success":"Mandatu bè",
+            "send_success":"A currezzione mandata",
 
             "decrypt_err":"L'analizazione di Wallet falla, pò esse un errore di password",
             "send_error":"A transaczione falleva: cuntene qualchì bastanza di equilibriu è minore"
@@ -175,7 +175,16 @@
             "is_local":"Verificate s'ellu ci hè un schedariu node locale",
             "already_local":"U schedariu di cunfigurazione di u nientu schedariu esiste in u attuale attuale.",
             "not_local":"A infurmazione di a nfurmazzioni di u schedariu node ùn hè micca detecatu, pò esse a prima volta in corruzzione.",
-            "config_write_local":"Scrivite u schedariu d'infurmazione in l'infurmazione di u node à u discu locale"
+            "config_write_local":"Scrivite u schedariu d'infurmazione in l'infurmazione di u node à u discu locale",
+            "whether_update_node":"Verificate chì una aghjurnamentu hè necessariu",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Scaricate u prugrammu in node, per esse pazienti",
+            "already_downloaded":"U schedariu di u node hè stata scaricata è pronta per cumincià.",
+            "ready_start":"Preparate per inizià u node",
+            "enter_wallet":"U node hè riesce bè è pronto per entre in a billetula"
         },
         "version_dialog":{
             "version_tit":"A pàgina di aghjurnamentu di versione",

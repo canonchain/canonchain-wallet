@@ -21,7 +21,7 @@
         "tit":"Postavljanje",
         "lang":"Jezik",
         "select":"Molimo vas da izaberete",
-        "version_number":"Broj verzije novčanika"
+        "version_number":"Verzija novčanica"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Suma transfera mora biti veća od 0",
             "amount_error":"Molimo unesite iznos pravne transakcije",
             "address_err":"Format prenete adrese je nevažeći.",
-            "send_success":"Uspješno poslat",
+            "send_success":"Transakcija poslata",
 
             "decrypt_err":"Analiziranje novčanika nije uspelo, možda greška greške",
             "send_error":"Transakcija nije uspela: proverite da li postoji dovoljna ravnoteža i rudarska naknada"
@@ -175,7 +175,16 @@
             "is_local":"Proverite da li postoji datoteka čvora na lokalnom nivou",
             "already_local":"Konfiguracioni fajl čvora postoji na trenutnom uređaju.",
             "not_local":"Informacije o konfiguraciji datoteke čvora nisu otkrivene, možda se prvi put pokreće.",
-            "config_write_local":"Napišite dobijenu informacionu datoteku na lokalnom disku"
+            "config_write_local":"Napišite dobijenu informacionu datoteku na lokalnom disku",
+            "whether_update_node":"Proverite da li je potrebno ažuriranje",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Preuzimanje programa čvora, molimo vas da budete strpljivi",
+            "already_downloaded":"Program čvora je preuzet i spreman za pokretanje.",
+            "ready_start":"Pripremite se za pokretanje čvora",
+            "enter_wallet":"Čvor se uspešno započinje i spreman je da uđe u novčanik"
         },
         "version_dialog":{
             "version_tit":"Verzija za ažuriranje verzije",

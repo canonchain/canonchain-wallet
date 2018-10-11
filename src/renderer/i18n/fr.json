@@ -8,7 +8,7 @@
         "czr":"CZR"
     },
     "model_header": {
-        "home":"La maison",
+        "home":"Accueil",
         "transfer":"Transfert",
         "contacts":"Contact",
         "setting":"Réglage",
@@ -21,7 +21,7 @@
         "tit":"Réglage",
         "lang":"Langue",
         "select":"S'il vous plaît choisir",
-        "version_number":"Numéro de version du portefeuille"
+        "version_number":"Version portefeuille"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -30,8 +30,8 @@
             "tit":"Nouveau contact",
             "tag":"Contact",
             "address":"Adresse du compte",
-            "tag_placeholder":"Veuillez saisir le nom du contact",
-            "address_placeholder":"Veuillez entrer l'adresse du compte du contact",
+            "tag_placeholder":"S'il vous plaît entrer le nom du contact",
+            "address_placeholder":"Veuillez saisir l'adresse du compte du contact.",
             "add_success":"Ajouté avec succès"
         },
         "delete_dialog": {
@@ -39,8 +39,8 @@
             "remove_success":"Enlevé avec succès"
         },
         "msg_info": {
-            "no_tag":"Veuillez entrer une note de compte",
-            "no_address":"Veuillez entrer votre adresse de compte",
+            "no_tag":"S'il vous plaît entrer une note de compte",
+            "no_address":"S'il vous plaît entrer votre adresse de compte",
             "valid_address":"L'adresse du contact est illégale",
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères.",
             "exist":"Le contact existe déjà,"
@@ -51,28 +51,28 @@
         "to_address":"Bénéficiaire",
         "amount":"Montant",
         "send_all":"Envoyer tout",
-        "data":"Des données",
+        "data":"Les données",
         "data_placeholder":"Données hexadécimales",
         "fees":"Frais de traitement",
         "total":"Total",
         "select":"S'il vous plaît choisir",
-        "no_account_info":"Pas encore de compte, s'il vous plaît créer ou importer un compte",
+        "no_account_info":"Pas encore de compte, créez ou importez un compte",
         "contacts_dig": {
             "title":"Sélectionnez un compte de contact",
             "select_placeholder":"S'il vous plaît choisir"
         },
         "confirm_dia": {
             "title":"S'il vous plaît confirmer",
-            "enter_passworld_tit":"S'il vous plaît entrer votre mot de passe",
-            "enter_passworld_place":"S'il vous plaît entrer votre mot de passe"
+            "enter_passworld_tit":"Veuillez entrer votre mot de passe",
+            "enter_passworld_place":"Veuillez entrer votre mot de passe"
         },
         "msg_info": {
-            "address_null":"Veuillez entrer le compte de l'autre partie",
+            "address_null":"S'il vous plaît entrer le compte de l'autre partie",
             "balance_zero":"Solde insuffisant, incapable de continuer",
             "amount_zero":"Le montant du transfert doit être supérieur à 0",
             "amount_error":"Veuillez saisir un montant de transaction légal",
             "address_err":"Le format de l'adresse transférée est invalide.",
-            "send_success":"Envoyé avec succès",
+            "send_success":"Transaction envoyée",
 
             "decrypt_err":"L'analyse du portefeuille a échoué, il peut s'agir d'une erreur de mot de passe",
             "send_error":"Échec de la transaction: veuillez vérifier si le solde et les frais du mineur sont suffisants"
@@ -80,7 +80,7 @@
     },
     "page_account": {
         "transfer_log":"Enregistrement de transaction",
-        "transfer_log_null":"Aucun historique des transactions",
+        "transfer_log_null":"Aucun historique de transaction",
         "active_icon": {
             "go_transfer":"Initier un transfert",
             "import_keystore":"Fichier de compte",
@@ -89,13 +89,13 @@
         "edit_dia": {
             "tit":"Modifier la note",
             "subtit":"Marquez une note pour votre compte",
-            "no_tag":"Veuillez entrer une note de compte",
+            "no_tag":"S'il vous plaît entrer une note de compte",
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères."
         },
         "dia_tx":{
             "tit":"Information de transaction",
             "block_hash":"Numéro de transaction",
-            "status":"État",
+            "status":"Etat",
             "from":"Partie d'envoi",
             "to":"Bénéficiaire",
             "amount":"Montant",
@@ -104,8 +104,8 @@
             "mac_time":"Temps de la chaîne principale"
         },
         "keystore": {
-            "tit":"Fichier de sauvegarde",
-            "copy":"Copier",
+            "tit":"Fichier portefeuille de sauvegarde",
+            "copy":"Copie",
             "download":"Télécharger le fichier portefeuille"
         },
         "msg_info": {
@@ -123,9 +123,9 @@
             "create_tag":"Note de compte",
             "create_pwd":"Définir le mot de passe",
             "create_repwd":"Confirmer le mot de passe",
-            "placeholder_tag":"Veuillez définir le nom de la note de compte",
+            "placeholder_tag":"Veuillez définir le nom de la note de compte.",
             "placeholder_pwd":"S'il vous plaît définir le mot de passe du compte",
-            "placeholder_repwd":"Veuillez confirmer le mot de passe du compte",
+            "placeholder_repwd":"S'il vous plaît confirmer le mot de passe du compte",
             
             
             "account_download_keystore":"Télécharger le fichier de compte",
@@ -134,7 +134,7 @@
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères.",
 
             "validate_password":"Veuillez entrer le mot de passe que vous avez défini",
-            "validate_re_password":"Veuillez saisir le mot de passe que vous avez défini à nouveau",
+            "validate_re_password":"Veuillez saisir le mot de passe que vous avez défini à nouveau.",
             "validate_strong_password":"Veuillez entrer un mot de passe d'au moins 8 chiffres",
             "validate_password_length":"Mot de passe incohérent entré deux fois",
 
@@ -143,14 +143,14 @@
         },
         "import_dia": {
             "tit":"Compte d'importation",    
-            "placeholder_keystore":"Veuillez faire glisser le fichier de compte ici",
+            "placeholder_keystore":"S'il vous plaît faites glisser le fichier de compte ici",
             "create_tag":"Note de compte",
-            "placeholder_tag":"Veuillez définir le nom de la note de compte",
+            "placeholder_tag":"Veuillez définir le nom de la note de compte.",
 
             "validate_tag":"S'il vous plaît entrer le nom de la note de compte",
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères.",
-            "validate_enter_keystore":"Veuillez importer le fichier de compte en premier",
-            "validate_error_keystore":"L'importation du compte a échoué, peut être une erreur de fichier",
+            "validate_enter_keystore":"S'il vous plaît importer le fichier de compte d'abord",
+            "validate_error_keystore":"L'importation du compte a échoué, peut être une erreur de fichier du compte",
             "imported_account_success":"Importé avec succès",
             "exist":"Ce compte existe déjà, la note est",
             "keystore_error":"Erreur:",
@@ -161,8 +161,8 @@
             "remove_confrim":"Je suis sûr de retirer",
             "backup":"Faites attention à la sauvegarde de ce compte pour éviter des dommages matériels.",
             "input_pwd":"Mot de passe",
-            "placeholder_pwd":"Veuillez entrer le mot de passe pour ce compte",
-            "validate_password":"Veuillez saisir le mot de passe du compte",
+            "placeholder_pwd":"Veuillez saisir le mot de passe pour ce compte.",
+            "validate_password":"S'il vous plaît entrer le mot de passe pour le compte",
             "remove_success":"Enlevé avec succès"
         }
     },
@@ -171,11 +171,20 @@
         "content_msg":{
             "ready_test":"Préparez-vous à détecter le fichier de configuration",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Les dernières informations de configuration de noeud ont été obtenues",
-            "is_local":"Vérifiez s'il y a un fichier de noeud localement",
+            "get_latest":"Les dernières informations de configuration du noeud ont été obtenues",
+            "is_local":"Vérifier s'il y a un fichier de noeud localement",
             "already_local":"Le fichier de configuration du fichier de noeud existe sur le périphérique actuel.",
             "not_local":"Les informations de configuration du fichier de noeud ne sont pas détectées, cela peut être la première exécution.",
-            "config_write_local":"Écrivez le fichier d'informations sur le nœud obtenu sur le disque local"
+            "config_write_local":"Écrire le fichier d’information de noeud obtenu sur le disque local",
+            "whether_update_node":"Vérifier si une mise à jour est nécessaire",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Programme de téléchargement, veuillez patienter",
+            "already_downloaded":"Le programme de nœud a été téléchargé et prêt à démarrer.",
+            "ready_start":"Préparez-vous à démarrer le noeud",
+            "enter_wallet":"Le nœud est démarré avec succès et prêt à entrer dans le portefeuille"
         },
         "version_dialog":{
             "version_tit":"Invite de mise à jour de version",

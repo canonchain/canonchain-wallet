@@ -21,7 +21,7 @@
         "tit":"设置",
         "lang":"语言",
         "select":"请选择",
-        "version_number":"钱包版本号"
+        "version_number":"钱包版本"
     },
     "page_contacts": {
         "tit":"联系人",
@@ -72,7 +72,7 @@
             "amount_zero":"转账金额必须大于0",
             "amount_error":"请输入合法的交易金额",
             "address_err":"转入的地址格式不合法",
-            "send_success":"发送成功",
+            "send_success":"交易已发送",
 
             "decrypt_err":"钱包解析失败，可能是密码错误",
             "send_error":"交易失败：请检查是否有足量余额和矿工费"
@@ -175,7 +175,16 @@
             "is_local":"检测本地是否有节点文件",
             "already_local":"当前设备存在节点文件的配置信息",
             "not_local":"没有检测到节点文件的配置信息，可能是第一次运行",
-            "config_write_local":"将获取的节点信息文件，写入本地磁盘"
+            "config_write_local":"将获取的节点信息文件，写入本地磁盘",
+            "whether_update_node":"检测是否需要更新",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"正在下载节点程序,请耐心等待",
+            "already_downloaded":"节点程序已经下载好，准备启动",
+            "ready_start":"准备启动节点",
+            "enter_wallet":"节点启动成功，准备进入钱包"
         },
         "version_dialog":{
             "version_tit":"版本更新提示",

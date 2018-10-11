@@ -21,7 +21,7 @@
         "tit":"Nastavitev",
         "lang":"Jezik",
         "select":"Prosimo, izberite",
-        "version_number":"Številka različice za denarnico"
+        "version_number":"Različica za Google Denarnico"
     },
     "page_contacts": {
         "tit":"Stik",
@@ -42,7 +42,7 @@
             "no_tag":"Vnesite beležko računa",
             "no_address":"Vnesite svoj naslov računa",
             "valid_address":"Naslov stika je nezakonit",
-            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
+            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
             "exist":"Stik že obstaja,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Znesek prenosa mora biti večji od 0",
             "amount_error":"Vnesite znesek pravne transakcije",
             "address_err":"Oblika prenesenega naslova je neveljavna.",
-            "send_success":"Uspešno poslana",
+            "send_success":"Poslana transakcija",
 
             "decrypt_err":"Razčlenjevanje z denarnico ni uspelo, morda je napaka gesla",
             "send_error":"Transakcija ni uspela: preverite, ali obstaja dovolj ravnotežja in pristojbina za rudarje"
@@ -90,7 +90,7 @@
             "tit":"Spremeni beležko",
             "subtit":"Označite opombo za svoj račun",
             "no_tag":"Vnesite beležko računa",
-            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov."
+            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov"
         },
         "dia_tx":{
             "tit":"Podatki o transakcijah",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Prenos datoteke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
+            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
 
             "validate_password":"Vnesite geslo, ki ste ga nastavili",
             "validate_re_password":"Vnesite geslo, ki ste ga ponovno nastavili",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Nastavite ime beležke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti večje od 8 znakov.",
+            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
             "validate_enter_keystore":"Najprej uvozite datoteko računa",
             "validate_error_keystore":"Uvoz računa ni uspel, morda je napaka v računu",
             "imported_account_success":"Uspešno uvoženo",
@@ -175,7 +175,16 @@
             "is_local":"Preverite, ali je lokalna datoteka vozlišča",
             "already_local":"Konfiguracijska datoteka datoteke vozlišča obstaja na trenutni napravi.",
             "not_local":"Podatki o konfiguraciji datoteke vozlišča niso zaznani, morda se prvič izvajajo.",
-            "config_write_local":"Napišite informativno datoteko vozlišča na lokalni disk"
+            "config_write_local":"Napišite informativno datoteko vozlišča na lokalni disk",
+            "whether_update_node":"Preverite, ali je potrebna posodobitev",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Prenesite program vozlišča, bodite potrpežljivi",
+            "already_downloaded":"Program vozlišča je bil prenesen in pripravljen za zagon.",
+            "ready_start":"Pripravite se na zagon vozlišča",
+            "enter_wallet":"Vozlišče se uspešno zažene in je pripravljeno za vstop v denarnico"
         },
         "version_dialog":{
             "version_tit":"Različica za posodobitev različice",

@@ -21,7 +21,7 @@
         "tit":"Ntọala",
         "lang":"Asụsụ",
         "select":"Biko họrọ",
-        "version_number":"Nọmba nke obere akpa"
+        "version_number":"Akara akpa"
     },
     "page_contacts": {
         "tit":"Kpọtụrụ",
@@ -72,7 +72,7 @@
             "amount_zero":"Ọnụ ego ga-ebu ibu karịa 0",
             "amount_error":"Biko tinye ego ego",
             "address_err":"Ọdịdị nke adreesị ebufe adighi mma.",
-            "send_success":"E zigara nke ọma",
+            "send_success":"A zitere ọrụ",
 
             "decrypt_err":"Obere obere akpa wuru, o nwere ike ịbụ njehie paswọọdụ",
             "send_error":"Ozigbo ego ejirila: biko jụọ ma ọ bụrụ na e nwere nkwụnye ego zuru oke na ụgwọ ọrụ"
@@ -175,7 +175,16 @@
             "is_local":"Lelee ma enwere nodo faịlụ na mpaghara",
             "already_local":"Njikwa nhazi nke faịlụ nhicha dị na ngwaọrụ dị ugbu a.",
             "not_local":"Enweghị ike ịchọta ozi nhazi nke faịlụ nhọta, ọ nwere ike ịbụ oge mbụ na-agba ọsọ.",
-            "config_write_local":"Dee ụdị ozi nhọta a nwetara na diski mpaghara"
+            "config_write_local":"Dee ụdị ozi nhọta a nwetara na diski mpaghara",
+            "whether_update_node":"Lelee ma ọ dị mkpa imelite",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Nbudata usoro node, biko nwee ndidi",
+            "already_downloaded":"Enwere ike ibudata usoro node na njikere ịmalite.",
+            "ready_start":"Kwadebe iji malite ọnụ",
+            "enter_wallet":"Ọnụ ọnụ ahụ malitere nke ọma na njikere ịbanye obere akpa"
         },
         "version_dialog":{
             "version_tit":"Nwelite nsụgharị ozugbo",

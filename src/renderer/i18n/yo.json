@@ -21,7 +21,7 @@
         "tit":"Eto",
         "lang":"Ede",
         "select":"Jọwọ yan",
-        "version_number":"Nọmba ikede apamọwọ"
+        "version_number":"Apamọwọ apamọ"
     },
     "page_contacts": {
         "tit":"Kan si",
@@ -72,7 +72,7 @@
             "amount_zero":"Gbeye iye gbọdọ jẹ tobi ju 0 lọ",
             "amount_error":"Jowo tẹ iye idunadura ofin kan",
             "address_err":"Awọn kika ti adirẹsi ti o ti gbe jẹ aišišẹ.",
-            "send_success":"Ti firanṣẹ daradara",
+            "send_success":"Ifiranṣẹ ranṣẹ",
 
             "decrypt_err":"Apamọwọ ti kuna, o le jẹ aṣiṣe aṣínà kan",
             "send_error":"Ti kuna iṣẹ-ṣiṣe: jọwọ ṣayẹwo ti o ba to iwontunwonsi ati iye owo miner"
@@ -175,7 +175,16 @@
             "is_local":"Ṣayẹwo boya faili faili kan wa ni agbegbe",
             "already_local":"Faili iṣeto faili ti faili ipade wa lori ẹrọ to wa.",
             "not_local":"Awọn alaye iṣeto ti faili faili ti a ko ti ri, o le jẹ akoko akọkọ nṣiṣẹ.",
-            "config_write_local":"Kọ faili alaye ti n gba ti o wa si disiki agbegbe"
+            "config_write_local":"Kọ faili alaye ti n gba ti o wa si disiki agbegbe",
+            "whether_update_node":"Ṣayẹwo ti o ba nilo imudojuiwọn kan",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Gbigba eto ipade ilana, jọwọ jẹ alaisan",
+            "already_downloaded":"Eto ti ipade ti a ti gba lati ayelujara ati setan lati bẹrẹ.",
+            "ready_start":"Mura lati bẹrẹ ideri",
+            "enter_wallet":"Ipele naa ti bẹrẹ ni ifijišẹ bere ati setan lati tẹ apo apamọwọ"
         },
         "version_dialog":{
             "version_tit":"Imudani imudojuiwọn taara",

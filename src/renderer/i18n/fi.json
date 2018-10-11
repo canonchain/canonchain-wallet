@@ -21,7 +21,7 @@
         "tit":"perustettu",
         "lang":"kieli",
         "select":"Valitse",
-        "version_number":"Lompakon versionumero"
+        "version_number":"Lompakon versio"
     },
     "page_contacts": {
         "tit":"kosketus",
@@ -42,7 +42,7 @@
             "no_tag":"Anna tili-ilmoitus",
             "no_address":"Anna tilisi osoite",
             "valid_address":"Yhteyshenkilön osoite on lainvastainen",
-            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
+            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
             "exist":"Yhteys on jo olemassa,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Siirron määrä on suurempi kuin 0",
             "amount_error":"Anna laillinen maksutapa",
             "address_err":"Siirretyn osoitteen muoto on virheellinen.",
-            "send_success":"Lähetetty onnistuneesti",
+            "send_success":"Tapahtuma lähetettiin",
 
             "decrypt_err":"Lompakon jäsentäminen epäonnistui, se voi olla salasanavirhe",
             "send_error":"Tapahtuma epäonnistui: tarkista, onko riittävä tasapaino ja mineraalimaksu"
@@ -90,7 +90,7 @@
             "tit":"Muokkaa huomautusta",
             "subtit":"Merkitse tiliisi merkintä",
             "no_tag":"Anna tili-ilmoitus",
-            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä."
+            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä"
         },
         "dia_tx":{
             "tit":"Tapahtumatiedot",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Lataa tilitiedosto",
 
             "validate_tag":"Anna tilin huomata nimi",
-            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
+            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
 
             "validate_password":"Anna salasanasi, jonka olet määrittänyt",
             "validate_re_password":"Anna uudelleen määrittämäsi salasana",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Aseta tilin huomata nimi",
 
             "validate_tag":"Anna tilin huomata nimi",
-            "validate_tag_length":"Merkin nimen nimi voi olla enintään 8 merkkiä.",
+            "validate_tag_length":"Huomautuksen nimi voi olla enintään 8 merkkiä",
             "validate_enter_keystore":"Tuo ensin tilitietokanta",
             "validate_error_keystore":"Tilin tuonti epäonnistui, voi olla tilin tiedostovirhe",
             "imported_account_success":"Tuodaan onnistuneesti",
@@ -175,7 +175,16 @@
             "is_local":"Tarkista, onko solmutiedosto paikallisesti",
             "already_local":"Solmun tiedostomuodon tiedosto on olemassa olevassa laitteessa.",
             "not_local":"Solmutiedoston konfiguraatiotietoja ei tunnisteta, se saattaa olla ensimmäinen kerta.",
-            "config_write_local":"Kirjoita saatu solmutietotiedosto paikalliselle levylle"
+            "config_write_local":"Kirjoita saatu solmutietotiedosto paikalliselle levylle",
+            "whether_update_node":"Tarkista, onko päivitys tarpeen",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Lataa solmuprojekti, ole kärsivällinen",
+            "already_downloaded":"Solmuprojekti on ladattu ja valmis aloittamaan.",
+            "ready_start":"Valmista aloittamaan solmu",
+            "enter_wallet":"Solmu on käynnistetty ja valmiina saapumaan lompakkoon"
         },
         "version_dialog":{
             "version_tit":"Versiopäivitys-kehote",

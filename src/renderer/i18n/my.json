@@ -21,7 +21,7 @@
         "tit":"တက် Set",
         "lang":"ဘာသာစကား",
         "select":"ကို select ပေးပါ",
-        "version_number":"ပိုက်ဆံအိတ်ဗားရှင်းနံပါတ်"
+        "version_number":"ပိုက်ဆံအိတ်ဗားရှင်း"
     },
     "page_contacts": {
         "tit":"ထိတှေ့",
@@ -72,7 +72,7 @@
             "amount_zero":"လွှဲပြောင်းငွေပမာဏ 0 င်ထက် သာ. ကြီးမြတ်ဖြစ်ရမည်",
             "amount_error":"ခိုင်လုံသောငွေပေးငွေယူငွေပမာဏကိုရိုက်ထည့်ပေးပါ",
             "address_err":"လိပ်စာပုံစံသို့တရားဝင်မဟုတ်ပါဘူး",
-            "send_success":"အောင်မြင်မှု Send",
+            "send_success":"ထရေးဒင်းကိုစေလွှတ်ထားပြီး",
 
             "decrypt_err":"ပိုက်ဆံအိတ် resolution ကိုပျက်ကွက်ပါကမှားယွင်းတဲ့ password ကိုဖြစ်စေခြင်းငှါ",
             "send_error":"အဆိုပါငွေပေးငွေယူပျက်ကွက်: အလုံအလောက်ချိန်ခွင်လျှာနှင့်မိုင်းလုပ်သားအခကြေးငွေရှိလျှင်ကြည့်ဖို့ Check"
@@ -175,7 +175,16 @@
             "is_local":"ဒေသခံတစ်ဦး node ကိုဖိုင်ကိုလည်းမရှိရှိမရှိ detect",
             "already_local":"လောလောဆယ်တစ်ဦး configuration ဖိုင်သတင်းအချက်အလက် node ကို device ကိုလည်းမရှိ",
             "not_local":"node ကို configuration files တွေကို detected မရ, ဒါဟာပထမဦးဆုံးပြေးဖြစ်နိုင်သည်",
-            "config_write_local":"ဒေသခံ disk ကိုရေးသားအဆိုပါဝယ်ယူ node ကိုသတင်းအချက်အလက်ဖိုင်တွေ"
+            "config_write_local":"ဒေသခံ disk ကိုရေးသားအဆိုပါဝယ်ယူ node ကိုသတင်းအချက်အလက်ဖိုင်တွေ",
+            "whether_update_node":"ထောက်လှမ်းမွမ်းမံရန်လိုအပ်နေပါသည်ပဲဖြစ်ဖြစ်",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"node ကိုဒေါင်းလုဒ်လုပ်ခြင်း, စိတ်ရှည်ကျေးဇူးပြုပြီး",
+            "already_downloaded":"node program ကို download လုပ်များနှင့်စတင်ရန်အဆင်သင့်မရထားသည်",
+            "ready_start":"node ကိုစတင်ရန်အဆင်သင့်ဖြစ်နေ",
+            "enter_wallet":"node, အောင်မြင်စွာပိုက်ဆံအိတ်ထည့်သွင်းဖို့အဆင်သင့်စတင်သည်"
         },
         "version_dialog":{
             "version_tit":"ဗားရှင်း update ကို prompt ကို",

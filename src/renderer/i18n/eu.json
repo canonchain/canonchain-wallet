@@ -21,7 +21,7 @@
         "tit":"Ezarri",
         "lang":"Hizkuntza",
         "select":"Aukeratu ezazu",
-        "version_number":"Karrerako bertsioaren zenbakia"
+        "version_number":"Karrerako bertsioa"
     },
     "page_contacts": {
         "tit":"Harremanetarako",
@@ -72,7 +72,7 @@
             "amount_zero":"Transferentzia zenbatekoa 0 baino handiagoa izan behar da",
             "amount_error":"Sartu transakzio juridikoko zenbatekoa",
             "address_err":"Transferitutako helbidea formatua baliogabea da.",
-            "send_success":"Ongi bidali da",
+            "send_success":"Transakzioa bidali da",
 
             "decrypt_err":"Huts egin du parekatzeak huts egin du, pasahitzaren errorea izan daiteke",
             "send_error":"Transakzioak huts egin du: egiaztatu oreka nahikoa dagoela eta meatzaritza kuota"
@@ -175,7 +175,16 @@
             "is_local":"Egiaztatu nodoen fitxategia lokalean dagoela",
             "already_local":"Nodo fitxategiaren konfigurazio fitxategia uneko gailuan dago.",
             "not_local":"Nodoaren konfigurazioaren informazioa ez da hauteman, lehen aldiz exekutatzen egon daiteke.",
-            "config_write_local":"Idatzi lortutako nodoen informazio-fitxategia disko lokalean"
+            "config_write_local":"Idatzi lortutako nodoen informazio-fitxategia disko lokalean",
+            "whether_update_node":"Egiaztatu eguneratzea beharrezkoa dela",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Nodoa programa deskargatzen, pazientzia izan",
+            "already_downloaded":"Nodoaren programa deskargatu da eta hasierarako prest dago.",
+            "ready_start":"Prestatu nodoa abiarazteko",
+            "enter_wallet":"Nodoa ongi hasi eta zorroan sartzeko prest dago"
         },
         "version_dialog":{
             "version_tit":"Eguneratzeen bertsioaren jarraipena",

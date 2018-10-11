@@ -21,7 +21,7 @@
         "tit":"Agordo",
         "lang":"Lingvo",
         "select":"Bonvolu elekti",
-        "version_number":"Monerĉa versio numero"
+        "version_number":"Vendo"
     },
     "page_contacts": {
         "tit":"Kontakto",
@@ -72,7 +72,7 @@
             "amount_zero":"Transdono devas esti pli granda ol 0",
             "amount_error":"Bonvolu enmeti leĝan kvanton",
             "address_err":"La formato de la translokita adreso estas nevalida.",
-            "send_success":"Sukcese sendis",
+            "send_success":"Transaĵo sendita",
 
             "decrypt_err":"Malkrapa analizo malsukcesis, ĝi eble povas esti pasvorta eraro",
             "send_error":"Transakcio malsukcesis: bonvolu kontroli ĉu ekzistas sufiĉa ekvilibro kaj ministo-kotizo"
@@ -175,7 +175,16 @@
             "is_local":"Kontrolu se estas nodo dosiero loke",
             "already_local":"La agorda dosiero de la nodo dosiero ekzistas sur la nuna aparato.",
             "not_local":"La agordo-informo de la nodo-dosiero ne estas detektita, eble ĝi estu la unua fojo funkcianta.",
-            "config_write_local":"Skribu la akiritan nodo-dosieron al la loka disko"
+            "config_write_local":"Skribu la akiritan nodo-dosieron al la loka disko",
+            "whether_update_node":"Kontrolu, se necesas ĝisdatigo",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Elŝuta nodo programo, bonvolu pacienca",
+            "already_downloaded":"La nodo programo estis elŝutita kaj preta por komenci.",
+            "ready_start":"Preparu por komenci la nodo",
+            "enter_wallet":"La nodo sukcese komenciĝis kaj pretas eniri la monujon"
         },
         "version_dialog":{
             "version_tit":"Versio ĝisdatigilo",

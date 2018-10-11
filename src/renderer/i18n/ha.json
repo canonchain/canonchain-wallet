@@ -21,7 +21,7 @@
         "tit":"Saitin",
         "lang":"Harshe",
         "select":"Don Allah a zaɓi",
-        "version_number":"Lambar sutura"
+        "version_number":"Wallet version"
     },
     "page_contacts": {
         "tit":"Saduwa",
@@ -42,7 +42,7 @@
             "no_tag":"Da fatan a shigar da bayanin kula",
             "no_address":"Da fatan a shigar adireshin adireshinku",
             "valid_address":"Adireshin lambar sadarwa ba bisa doka ba ne",
-            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
+            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
             "exist":"Lambar ta rigaya ta kasance,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Canja wuri dole ne ya fi 0",
             "amount_error":"Da fatan a shigar da adadin ma'amalar shari'a",
             "address_err":"Tsarin adireshin da aka canja shi ba daidai ba ne.",
-            "send_success":"An aika da nasarar",
+            "send_success":"Ma'amalar aikawa",
 
             "decrypt_err":"Kuskuren takalma ya kasa, yana iya zama kuskuren sirri",
             "send_error":"An gama aiki: don Allah a duba idan akwai daidaitattun daidaitaka da nauyin kuɗi"
@@ -90,7 +90,7 @@
             "tit":"Sauya bayanin kula",
             "subtit":"Rubuta bayanin kula don asusunku",
             "no_tag":"Da fatan a shigar da bayanin kula",
-            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba."
+            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba"
         },
         "dia_tx":{
             "tit":"Bayaniyar bayani",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Download fayil din asusun",
 
             "validate_tag":"Da fatan a shigar da sunan martabar asusun",
-            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
+            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
 
             "validate_password":"Da fatan a shigar da kalmar wucewar da kuka saita",
             "validate_re_password":"Da fatan a shigar da kalmar sirrin da kuka sake saitawa",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Da fatan a sanya sunan martabar asusun",
 
             "validate_tag":"Da fatan a shigar da sunan martabar asusun",
-            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
+            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
             "validate_enter_keystore":"Da fatan a shigar da asusun ajiyar farko",
             "validate_error_keystore":"Asusun da aka shigo da asusun, ya zama kuskuren fayil ɗin asusu",
             "imported_account_success":"An shigo da shi cikin nasara",
@@ -175,7 +175,16 @@
             "is_local":"Bincika idan akwai fayil na node a gida",
             "already_local":"Fayil din tsari na fayil na node ya wanzu akan na'urar yanzu.",
             "not_local":"Ba'a gano bayanin sanyi na fayil ɗin node ba, yana iya zama farkon lokacin gudu.",
-            "config_write_local":"Rubuta fayilolin bayanin yad da aka samo zuwa faifai na gida"
+            "config_write_local":"Rubuta fayilolin bayanin yad da aka samo zuwa faifai na gida",
+            "whether_update_node":"Duba idan an buƙatar ɗaukakawa",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ana sauke shirin kumburi, don Allah a yi haƙuri",
+            "already_downloaded":"An sauke shirin node kuma a shirye don farawa.",
+            "ready_start":"Shirya don fara kumburi",
+            "enter_wallet":"An fara samun kumburi kuma yana shirye don shigar da walat"
         },
         "version_dialog":{
             "version_tit":"Sabunta sabuntawar sabuntawa",

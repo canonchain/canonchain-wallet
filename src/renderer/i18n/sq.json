@@ -21,7 +21,7 @@
         "tit":"ngritur",
         "lang":"gjuhë",
         "select":"Ju lutem zgjidhni",
-        "version_number":"Numri i versionit të Portofolit"
+        "version_number":"Versioni i Portofolit"
     },
     "page_contacts": {
         "tit":"kontakt",
@@ -42,7 +42,7 @@
             "no_tag":"Futni një shënim llogarie",
             "no_address":"Ju lutemi shkruani adresën tuaj të llogarisë",
             "valid_address":"Adresa e kontaktit është e paligjshme",
-            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
+            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
             "exist":"Kontakti tashmë ekziston,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Shuma e transferimit duhet të jetë më e madhe se 0",
             "amount_error":"Ju lutemi shkruani shumën e një transaksioni ligjor",
             "address_err":"Formati i adresës së transferuar është i pavlefshëm.",
-            "send_success":"U dërgua me sukses",
+            "send_success":"Transaksioni u dërgua",
 
             "decrypt_err":"Analizimi i portofolit dështoi, mund të jetë një gabim fjalëkalimi",
             "send_error":"Transaksioni dështoi: ju lutemi kontrolloni nëse ka ekuilibër të mjaftueshëm dhe tarifë minatorësh"
@@ -90,7 +90,7 @@
             "tit":"Modifiko shënimin",
             "subtit":"Shënoni një shënim për llogarinë tuaj",
             "no_tag":"Futni një shënim llogarie",
-            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja."
+            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja"
         },
         "dia_tx":{
             "tit":"Informacion mbi transaksionet",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Shkarko skedarin e llogarisë",
 
             "validate_tag":"Ju lutemi shkruani emrin e shënimit të llogarisë",
-            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
+            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
 
             "validate_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur",
             "validate_re_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur përsëri",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Vendosni emrin e shënimit të llogarisë",
 
             "validate_tag":"Ju lutemi shkruani emrin e shënimit të llogarisë",
-            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
+            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
             "validate_enter_keystore":"Ju lutemi të importoni skedarin e llogarisë së parë",
             "validate_error_keystore":"Importi i llogarisë dështoi, mund të jetë gabim në skedarin e llogarisë",
             "imported_account_success":"Importuar me sukses",
@@ -175,7 +175,16 @@
             "is_local":"Kontrolloni nëse ka një skedar nyjesh lokalisht",
             "already_local":"Skeda e konfigurimit e skedarit të nyjeve ekziston në pajisjen aktuale.",
             "not_local":"Informacioni i konfigurimit të skedarit të nyjeve nuk zbulohet, mund të jetë hera e parë që po funksionon.",
-            "config_write_local":"Shkruani skedarin e informatave të nyjeve të marra në diskun lokal"
+            "config_write_local":"Shkruani skedarin e informatave të nyjeve të marra në diskun lokal",
+            "whether_update_node":"Kontrolloni nëse nevojitet një përditësim",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Shkarkimi i programit të nyjeve, ju lutemi të jeni të duruar",
+            "already_downloaded":"Programi i nyjeve është shkarkuar dhe gati për të filluar.",
+            "ready_start":"Përgatituni për të filluar nyjen",
+            "enter_wallet":"Nyja është nisur me sukses dhe gati për të hyrë në portofolin"
         },
         "version_dialog":{
             "version_tit":"Përditësim i versionit të shpejtë",

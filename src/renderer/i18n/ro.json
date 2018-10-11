@@ -21,7 +21,7 @@
         "tit":"Configurarea",
         "lang":"limbă",
         "select":"Vă rugăm să alegeți",
-        "version_number":"Numărul versiunii Wallet"
+        "version_number":"Versiunea Wallet"
     },
     "page_contacts": {
         "tit":"contact",
@@ -72,7 +72,7 @@
             "amount_zero":"Suma transferului trebuie să fie mai mare de 0",
             "amount_error":"Introduceți o sumă legată de tranzacție",
             "address_err":"Formatul adresei transferate este nevalid.",
-            "send_success":"Trimiteți cu succes",
+            "send_success":"Tranzacția a fost trimisă",
 
             "decrypt_err":"Parcelarea parolei nu a reușit, poate fi o eroare de parolă",
             "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și taxa de miner"
@@ -175,7 +175,16 @@
             "is_local":"Verificați dacă există un fișier nod local",
             "already_local":"Fișierul de configurare al fișierului nod există pe dispozitivul curent.",
             "not_local":"Informațiile de configurare ale fișierului nod nu sunt detectate, poate fi prima dată când rulează.",
-            "config_write_local":"Scrieți fișierul informațiilor despre nodurile obținute pe discul local"
+            "config_write_local":"Scrieți fișierul informațiilor despre nodurile obținute pe discul local",
+            "whether_update_node":"Verificați dacă este necesară o actualizare",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Descărcarea programului de noduri, vă rugăm să aveți răbdare",
+            "already_downloaded":"Programul de noduri a fost descărcat și gata să înceapă.",
+            "ready_start":"Pregătește-te pentru a porni nodul",
+            "enter_wallet":"Nodul a fost pornit cu succes și este gata să intre în portofel"
         },
         "version_dialog":{
             "version_tit":"Versiunea de actualizare a promptului",

@@ -21,7 +21,7 @@
         "tit":"Ho beha",
         "lang":"Puo",
         "select":"Ka kopo khetha",
-        "version_number":"Nomoro ea lenane la li-wallet"
+        "version_number":"Phatlalatso ea lichelete"
     },
     "page_contacts": {
         "tit":"Iteanye",
@@ -72,7 +72,7 @@
             "amount_zero":"Chelete ea ho fetisa e tlameha ho ba kholo ho feta 0",
             "amount_error":"Ka kopo kenya chelete ea tefiso ea molao",
             "address_err":"Sebopeho sa aterese e fetisitsoeng ha e na thuso.",
-            "send_success":"E rometsoe ka katleho",
+            "send_success":"Transaction e rometsoe",
 
             "decrypt_err":"Ho tsamaisa lichelete ho hlōlehile, e ka 'na ea e-ba phoso ea password",
             "send_error":"Transaction e ile ea hlōleha: ka kōpo hlahloba hore na ho na le tekanyo e leka-lekaneng le tefo ea merafo"
@@ -175,7 +175,16 @@
             "is_local":"Hlahloba hore na ho na le fensetere ea node sebakeng sa heno",
             "already_local":"Fupete ea tlhomamiso ea faele ea hau ea node e teng ho sesebelisoa sa hona joale.",
             "not_local":"Boitsebiso ba tlhahlobo ea faele ea node ha bo fumanehe, e ka 'na ea e-ba ea pele e sebetsa.",
-            "config_write_local":"Ngola faele ea tlhahisoleseding ea node e fumanoang disk ea sebakeng seo"
+            "config_write_local":"Ngola faele ea tlhahisoleseding ea node e fumanoang disk ea sebakeng seo",
+            "whether_update_node":"Hlahloba hore na tlhahlobo e hlokahalang",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ho ts'oara lenaneo la khoeli, ka kōpo e-ba le mamello",
+            "already_downloaded":"Lenaneo la manono le khutsitsoe mme le itokiselitse ho qala.",
+            "ready_start":"Lokisetsa ho qala node",
+            "enter_wallet":"Node ena e atlehile hantle le e loketse ho kenya sepache"
         },
         "version_dialog":{
             "version_tit":"Phetolelo ea tlhahiso ea tlhahiso",

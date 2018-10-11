@@ -21,7 +21,7 @@
         "tit":"Pagtakda",
         "lang":"Pinulongan",
         "select":"Palihug pagpili",
-        "version_number":"Numero sa bersyon sa wallet"
+        "version_number":"Bersyon sa Wallet"
     },
     "page_contacts": {
         "tit":"Pagkontak",
@@ -72,7 +72,7 @@
             "amount_zero":"Ang pagbalhin nga kantidad kinahanglan nga labaw pa kay sa 0",
             "amount_error":"Palihog pagsulod sa kantidad sa legal nga transaksiyon",
             "address_err":"Ang format sa gibalhin nga address dili balido.",
-            "send_success":"Malampuson nga gipadala",
+            "send_success":"Gipadala ang transaksyon",
 
             "decrypt_err":"Ang pagwagtang sa pitaka napakyas, kini mahimong usa ka sayop nga password",
             "send_error":"Napakyas ang transaksyon: palihug susiha kung adunay igong balanse ug bayad sa minero"
@@ -175,7 +175,16 @@
             "is_local":"Susiha kon dunay node nga file sa lokal nga lugar",
             "already_local":"Ang configuration file sa node file naa sa kasamtangan nga device.",
             "not_local":"Ang kasayuran nga kasayuran sa node file dili mahibaw-an, mahimo kini ang unang higayon nga magdagan.",
-            "config_write_local":"Isulat ang nadawat nga impormasyon sa node ngadto sa lokal nga disk"
+            "config_write_local":"Isulat ang nadawat nga impormasyon sa node ngadto sa lokal nga disk",
+            "whether_update_node":"Susiha kon gikinahanglan ang update",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Pag-download sa node nga programa, palihug pagpailub",
+            "already_downloaded":"Ang node nga programa na-download ug andam nga magsugod.",
+            "ready_start":"Pag-andam sa pagsugod sa node",
+            "enter_wallet":"Ang node malampuson nga nagsugod ug andam nga mosulod sa pitaka"
         },
         "version_dialog":{
             "version_tit":"Ang pag-update sa update prompt",

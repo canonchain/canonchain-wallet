@@ -21,7 +21,7 @@
         "tit":"Faʻatonu",
         "lang":"Gagana",
         "select":"Faamolemole filifili",
-        "version_number":"Laupepa numera numera"
+        "version_number":"Faʻamatalaga faiva"
     },
     "page_contacts": {
         "tit":"Fesoʻotaʻiga",
@@ -72,10 +72,10 @@
             "amount_zero":"Tupe faʻaalu e tatau ona sili atu i le 0",
             "amount_error":"Faʻamolemole ulufale i se tau faʻatulafonoina",
             "address_err":"O le faatulagaga o le tuatusi o le tuatusi ua le aoga.",
-            "send_success":"Na auina atu ma le manuia",
+            "send_success":"Faʻatonuina o feʻau",
 
             "decrypt_err":"Ua le manuia le pusa faila, atonu o se sese ole palakalafa",
-            "send_error":"Ua le manuia le gaioiga: faamolemole siaki pe a lava le paleni paleni ma le tau o le miner"
+            "send_error":"Le feuiaiga faapisinisi ua le mafai: Siaki e vaai pe ua lava paleni ma miners totogifuapauina"
         }
     },
     "page_account": {
@@ -174,8 +174,17 @@
             "get_latest":"Ua maua le faʻamatalaga fou o le faʻatulagaga o le node",
             "is_local":"Siaki pe i ai se faila node i le lotoifale",
             "already_local":"O le faila faatulagaina o le faila node o loʻo i luga o le masini faʻaoga nei.",
-            "not_local":"E le o iloa le faʻamatalaga faʻasologa o le faila pusa, atonu o le taimi muamua lea e tamoe ai.",
-            "config_write_local":"Tusi le faila faʻamatalaga o le faʻailoga maua i le disasite i le lotoifale"
+            "not_local":"E le iloa mai faila configuration node, atonu e le faasee muamua",
+            "config_write_local":"Tusi le faila faʻamatalaga o le faʻailoga maua i le disasite i le lotoifale",
+            "whether_update_node":"Siaki pe manaʻomia se faʻalauiloa",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Faʻapipiʻiina o le pona polokalama, faamolemole ia onosai",
+            "already_downloaded":"Ua uma ona sii mai le polokalama o le pona ma sauni e amata.",
+            "ready_start":"Saunia e amata le nato",
+            "enter_wallet":"Ua amata manuia le nato ma sauni e ulufale i le atotupe"
         },
         "version_dialog":{
             "version_tit":"Faʻafouina le faʻafouina o lomiga",

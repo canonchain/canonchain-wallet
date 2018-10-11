@@ -21,7 +21,7 @@
         "tit":"Stillingar",
         "lang":"Tungumál",
         "select":"Vinsamlegast veljið",
-        "version_number":"Veski útgáfa númer"
+        "version_number":"Veski útgáfa"
     },
     "page_contacts": {
         "tit":"Hafa samband",
@@ -72,7 +72,7 @@
             "amount_zero":"Flutningsfjárhæð verður að vera meiri en 0",
             "amount_error":"Vinsamlegast sláðu inn lagalega viðskiptabréf",
             "address_err":"Sniðið á yfirfærðu heimilisfangi er ógilt.",
-            "send_success":"Tilkynnt með góðum árangri",
+            "send_success":"Viðskipti send",
 
             "decrypt_err":"Pappaþáttun mistókst, það gæti verið lykilorðsvilla",
             "send_error":"Viðskipti mistókst: Vinsamlegast athugaðu hvort það sé nægjanlegt jafnvægi og jarðvegsgjald"
@@ -175,7 +175,16 @@
             "is_local":"Athugaðu hvort það sé hnútskrá á staðnum",
             "already_local":"Stillingarskráin á hnútskránni er til staðar á núverandi tæki.",
             "not_local":"Stillingarupplýsingarnar á hnútskránni eru ekki greindar, það kann að vera í fyrsta sinn í gangi.",
-            "config_write_local":"Skrifaðu hnútupplýsingaskrána á staðbundna diskinn"
+            "config_write_local":"Skrifaðu hnútupplýsingaskrána á staðbundna diskinn",
+            "whether_update_node":"Athugaðu hvort uppfærsla sé þörf",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Hlaða niður hnút forrit, vinsamlegast vertu þolinmóð",
+            "already_downloaded":"Hnútaforritið hefur verið hlaðið niður og tilbúið til að byrja.",
+            "ready_start":"Undirbúið að hefja hnútinn",
+            "enter_wallet":"Hnúturinn tókst að byrja og tilbúinn til að koma inn í veskið"
         },
         "version_dialog":{
             "version_tit":"Útgáfa uppfærsla hvetja",

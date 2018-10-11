@@ -21,7 +21,7 @@
         "tit":"Setting",
         "lang":"Taal",
         "select":"Kies hjirfoar",
-        "version_number":"Wallet ferzjenûmer"
+        "version_number":"Wallet ferzje"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Transfermuseur moat grutter wêze as 0",
             "amount_error":"Fier in juridyske transaksjild yn",
             "address_err":"It formaat fan it oerlevere adres is ûnjildich.",
-            "send_success":"Op sukses ferstjoerd",
+            "send_success":"Transaksje stjoerd",
 
             "decrypt_err":"Portemonneare parsing mislearre, it kin in wachtwurd fout wêze",
             "send_error":"Ferkearing mislearre: kontrolearje of as der genôch balâns en minder fergoeding is"
@@ -175,7 +175,16 @@
             "is_local":"Kontrolearje oft der in lokaal bestân is",
             "already_local":"De konfiguraasjetriem fan it knooppadest bestiet op it aktive apparaat.",
             "not_local":"De konfiguraasjeynformaasje fan it knooppentrie wurdt net fûn, it kin it earste tiid wêze.",
-            "config_write_local":"Skriuw it krêftynformaasjefile nei de lokale skiif"
+            "config_write_local":"Skriuw it krêftynformaasjefile nei de lokale skiif",
+            "whether_update_node":"Kontrolearje oft in update nedich is",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"It programma fan it kodearjen fan it nodeljen, kinne geduld wêze",
+            "already_downloaded":"It nodprogramma is ynladen en klear om te begjinnen.",
+            "ready_start":"Meitsje om de knooppel te begjinnen",
+            "enter_wallet":"De knooppunt is mei súkses begon en klear om de wallet te ynfoljen"
         },
         "version_dialog":{
             "version_tit":"Ferzje update prompt",

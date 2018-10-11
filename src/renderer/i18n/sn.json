@@ -21,7 +21,7 @@
         "tit":"Kuisa",
         "lang":"Mutauro",
         "select":"Ndapota sarudza",
-        "version_number":"Chikwata chechikwata chenhamba"
+        "version_number":"Wallet version"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -72,7 +72,7 @@
             "amount_zero":"Kudhinda chikamu chinofanira kuva chikuru kupfuura 0",
             "amount_error":"Ndapota nyora mukana wekutengesa mutemo",
             "address_err":"Mhando yekodzero yekutambirwa haina kuwanikwa.",
-            "send_success":"Akabudirira kutumwa",
+            "send_success":"Transaction yatumwa",
 
             "decrypt_err":"Kurapa kwechikwata kwakakundikana, ingangodaro isiri iyo password",
             "send_error":"Transaction yakakundikana: tapota tarisai kana pane mari yakakwana uye mari yevashandi"
@@ -175,7 +175,16 @@
             "is_local":"Tarisai kana kune node yefaira munzvimbo yako",
             "already_local":"Itaji yefaira yefodhi yefodhi iripo pane imwe purogiramu yemazuva ano.",
             "not_local":"Izvo zvakagadziriswa zveruzhinji zvefodhi yefodhi haina kuonekwa, inogona kunge ichatanga kushanda.",
-            "config_write_local":"Nyora iyo yakagadziriswa fodhi yefodhi yefaira kune yedhi disk"
+            "config_write_local":"Nyora iyo yakagadziriswa fodhi yefodhi yefaira kune yedhi disk",
+            "whether_update_node":"Chengetedza kana zvinyorwa zvinodiwa",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Kuchengeta purogiramu yenhamba, ndapota ivai nemoyo murefu",
+            "already_downloaded":"Purogiramu yechirungu yakaderedzwa uye yakagadzirira kutanga.",
+            "ready_start":"Gadzirira kutanga node",
+            "enter_wallet":"Node yacho inotanga kubudirira uye yakagadzirira kupinda muhomwe"
         },
         "version_dialog":{
             "version_tit":"Version update prompt",

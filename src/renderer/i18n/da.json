@@ -21,7 +21,7 @@
         "tit":"Opsæt",
         "lang":"sprog",
         "select":"Vælg venligst",
-        "version_number":"Tegnebogens versionsnummer"
+        "version_number":"Tegnebog version"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Overførselsbeløbet skal være større end 0",
             "amount_error":"Indtast venligst et juridisk transaktionsbeløb",
             "address_err":"Formatet på den overførte adresse er ugyldig.",
-            "send_success":"Sendt med succes",
+            "send_success":"Transaktion sendt",
 
             "decrypt_err":"Palletparsing mislykkedes, det kan være et kodeordfejl",
             "send_error":"Transaktion mislykkedes: Kontroller, om der er tilstrækkelig balance og minearbejder gebyr"
@@ -175,7 +175,16 @@
             "is_local":"Kontroller, om der er en nodefil lokalt",
             "already_local":"Konfigurationsfilen til nodefilen findes på den aktuelle enhed.",
             "not_local":"Konfigurationsoplysningerne i nodefilen registreres ikke, det kan være første gang, der kører.",
-            "config_write_local":"Skriv den hentede nodeinformationsfil til den lokale disk"
+            "config_write_local":"Skriv den hentede nodeinformationsfil til den lokale disk",
+            "whether_update_node":"Kontroller, om en opdatering er nødvendig",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Downloading nodeprogram, vær så tålmodig",
+            "already_downloaded":"Knudeprogrammet er downloadet og klar til at starte.",
+            "ready_start":"Forbered dig på at starte noden",
+            "enter_wallet":"Knuden er startet og klar til at komme ind i tegnebogen"
         },
         "version_dialog":{
             "version_tit":"Version opdateringsprompt",

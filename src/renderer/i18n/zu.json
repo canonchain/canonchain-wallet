@@ -21,7 +21,7 @@
         "tit":"Ukubeka",
         "lang":"Ulimi",
         "select":"Sicela ukhethe",
-        "version_number":"Inombolo yenguqulo ye-Wallet"
+        "version_number":"I-Wallet version"
     },
     "page_contacts": {
         "tit":"Othintana naye",
@@ -72,7 +72,7 @@
             "amount_zero":"Ukudluliswa kwemali kumele kube mkhulu kunezingu-0",
             "amount_error":"Sicela ufake inani lokuthengiselana ngokomthetho",
             "address_err":"Ifomethi yekheli elidlulisiwe alivumelekile.",
-            "send_success":"Kuthunyelwe ngempumelelo",
+            "send_success":"Ukuthengiswa kuthunyelwe",
 
             "decrypt_err":"I-Wallet parsing ihlulekile, kungenzeka kube yiphutha lephasiwedi",
             "send_error":"Ukuthengwa kwehlulekile: sicela uhlole uma kukhona imali ebhalansi neyamaminerali okwanele"
@@ -175,7 +175,16 @@
             "is_local":"Hlola uma kukhona ifayela le-node endaweni yangakini",
             "already_local":"Ifayela lokumisa lefayela le-node likhona kudivayisi yamanje.",
             "not_local":"Imininingwane yokucushwa kwefayela le-node ayitholakali, kungase kube okokuqala kusebenza.",
-            "config_write_local":"Bhala ifayili yolwazi etholakalayo etholakala kwidiski yendawo"
+            "config_write_local":"Bhala ifayili yolwazi etholakalayo etholakala kwidiski yendawo",
+            "whether_update_node":"Hlola uma kudingekile isibuyekezo",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ukulanda uhlelo lwe-node, sicela ubekezele",
+            "already_downloaded":"Uhlelo lwe-noode lulayishiwe futhi lungele ukuqala.",
+            "ready_start":"Lungiselela ukuqala i-node",
+            "enter_wallet":"I-node iqalwe ngempumelelo futhi ilungele ukungena esikhwameni"
         },
         "version_dialog":{
             "version_tit":"Ukuvuselelwa kokubuyekeza kwe-version",

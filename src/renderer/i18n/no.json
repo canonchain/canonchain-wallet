@@ -21,7 +21,7 @@
         "tit":"Sett opp",
         "lang":"språk",
         "select":"Vennligst velg",
-        "version_number":"Lommebokversjonsnummer"
+        "version_number":"Wallet-versjon"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -42,7 +42,7 @@
             "no_tag":"Vennligst skriv inn et kontonotat",
             "no_address":"Vennligst skriv inn din kontoadresse",
             "valid_address":"Adressen til kontakten er ulovlig",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+            "validate_tag_length":"Notatnavn kan ikke være lenger enn 8 tegn",
             "exist":"Kontakten eksisterer allerede,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Overføringsbeløpet må være større enn 0",
             "amount_error":"Vennligst oppgi et juridisk transaksjonsbeløp",
             "address_err":"Formatet på den overførte adressen er ugyldig.",
-            "send_success":"Vellykket sendt",
+            "send_success":"Transaksjon sendt",
 
             "decrypt_err":"Wallet-parsing mislyktes, det kan være en passordfeil",
             "send_error":"Transaksjonen mislyktes: sjekk om det er tilstrekkelig saldo og gruveavgift"
@@ -90,7 +90,7 @@
             "tit":"Endre notat",
             "subtit":"Merk et notat for kontoen din",
             "no_tag":"Vennligst skriv inn et kontonotat",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn."
+            "validate_tag_length":"Notatnavn kan ikke være lenger enn 8 tegn"
         },
         "dia_tx":{
             "tit":"Transaksjonsinformasjon",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Last ned kontofilen",
 
             "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+            "validate_tag_length":"Notatnavn kan ikke være lenger enn 8 tegn",
 
             "validate_password":"Vennligst skriv inn passordet du angir",
             "validate_re_password":"Vennligst skriv inn passordet du angir igjen",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Vennligst sett inn kontonotasjonsnavnet",
 
             "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+            "validate_tag_length":"Notatnavn kan ikke være lenger enn 8 tegn",
             "validate_enter_keystore":"Vennligst importer kontofilen først",
             "validate_error_keystore":"Kontoimporten mislyktes, kan være en kontofilfeil",
             "imported_account_success":"Importert suksess",
@@ -175,7 +175,16 @@
             "is_local":"Sjekk om det er en nodeliste lokalt",
             "already_local":"Konfigurasjonsfilen til nodefilen finnes på den gjeldende enheten.",
             "not_local":"Konfigurasjonsinformasjonen til nodefilen blir ikke oppdaget, det kan være første gang som kjører.",
-            "config_write_local":"Skriv den innhentede nodeinformasjonsfilen til den lokale disken"
+            "config_write_local":"Skriv den innhentede nodeinformasjonsfilen til den lokale disken",
+            "whether_update_node":"Sjekk om en oppdatering er nødvendig",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Nedlasting av nodeprogram, vær så tålmodig",
+            "already_downloaded":"Knuteprogrammet er lastet ned og klar til å starte.",
+            "ready_start":"Forbered deg på å starte noden",
+            "enter_wallet":"Koden er vellykket startet og klar til å gå inn i lommeboken"
         },
         "version_dialog":{
             "version_tit":"Versjonsoppdateringsprompt",

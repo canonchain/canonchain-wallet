@@ -21,7 +21,7 @@
         "tit":"založiť",
         "lang":"jazyk",
         "select":"Vyberte prosím",
-        "version_number":"Číslo verzie peňaženky"
+        "version_number":"Verzia peňaženky"
     },
     "page_contacts": {
         "tit":"kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Prevodná suma musí byť väčšia ako 0",
             "amount_error":"Zadajte sumu právnej transakcie",
             "address_err":"Formát prenesenej adresy je neplatný.",
-            "send_success":"Úspešne odoslaná",
+            "send_success":"Transakcia bola odoslaná",
 
             "decrypt_err":"Analýza peňaženky zlyhala, môže to byť chyba v hesle",
             "send_error":"Transakcia zlyhala: skontrolujte, či existuje dostatočný zostatok a poplatok za horník"
@@ -175,7 +175,16 @@
             "is_local":"Skontrolujte, či je lokálny súbor uzla",
             "already_local":"Na aktuálnom zariadení existuje konfiguračný súbor súboru uzlov.",
             "not_local":"Informácie o konfigurácii súboru uzla nie sú zistené, môže to byť prvýkrát spustené.",
-            "config_write_local":"Napíšte získaný informačný súbor uzla na lokálny disk"
+            "config_write_local":"Napíšte získaný informačný súbor uzla na lokálny disk",
+            "whether_update_node":"Skontrolujte, či je potrebná aktualizácia",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Sťahovanie programu uzlov, prosím, buďte trpezliví",
+            "already_downloaded":"Program uzla bol stiahnutý a pripravený na spustenie.",
+            "ready_start":"Pripravte sa na spustenie uzla",
+            "enter_wallet":"Uzol bol úspešne spustený a pripravený na vstup do peňaženky"
         },
         "version_dialog":{
             "version_tit":"Príkaz na aktualizáciu verzie",

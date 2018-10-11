@@ -21,7 +21,7 @@
         "tit":"Pengaturan",
         "lang":"Bahasa",
         "select":"Silakan pilih",
-        "version_number":"Nomor versi dompet"
+        "version_number":"Versi dompet"
     },
     "page_contacts": {
         "tit":"Kontak",
@@ -72,7 +72,7 @@
             "amount_zero":"Jumlah transfer harus lebih besar dari 0",
             "amount_error":"Harap masukkan jumlah transaksi hukum",
             "address_err":"Format alamat yang ditransfer tidak valid.",
-            "send_success":"Berhasil dikirim",
+            "send_success":"Transaksi terkirim",
 
             "decrypt_err":"Gagal menguraikan dompet, mungkin ini adalah kesalahan kata sandi",
             "send_error":"Transaksi gagal: silakan periksa apakah ada saldo yang cukup dan biaya penambang"
@@ -174,8 +174,17 @@
             "get_latest":"Informasi konfigurasi node terbaru telah diperoleh",
             "is_local":"Periksa apakah ada file node secara lokal",
             "already_local":"File konfigurasi dari file node ada di perangkat saat ini.",
-            "not_local":"Tidak terdeteksi file konfigurasi node, mungkin jangka pertama",
-            "config_write_local":"Tulis file informasi node yang diperoleh ke disk lokal"
+            "not_local":"Informasi konfigurasi file node tidak terdeteksi, mungkin ini pertama kali berjalan.",
+            "config_write_local":"Tulis file informasi node yang diperoleh ke disk lokal",
+            "whether_update_node":"Periksa apakah pembaruan diperlukan",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Mengunduh program node, harap bersabar",
+            "already_downloaded":"Program simpul telah diunduh dan siap untuk dimulai.",
+            "ready_start":"Bersiaplah untuk memulai simpul",
+            "enter_wallet":"Node berhasil dimulai dan siap untuk memasuki dompet"
         },
         "version_dialog":{
             "version_tit":"Permintaan pembaruan versi",

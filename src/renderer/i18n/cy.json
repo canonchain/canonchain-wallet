@@ -21,7 +21,7 @@
         "tit":"Gosod",
         "lang":"Iaith",
         "select":"Dewiswch",
-        "version_number":"Rhif fersiwn wallet"
+        "version_number":"Fersiwn wallet"
     },
     "page_contacts": {
         "tit":"Cyswllt",
@@ -72,7 +72,7 @@
             "amount_zero":"Rhaid i'r swm trosglwyddo fod yn fwy na 0",
             "amount_error":"Rhowch swm trafodiad cyfreithiol",
             "address_err":"Mae fformat y cyfeiriad trosglwyddedig yn annilys.",
-            "send_success":"Wedi'i anfon yn llwyddiannus",
+            "send_success":"Trosglwyddiad wedi'i anfon",
 
             "decrypt_err":"Methodd dadliad gwaledi, gall fod yn gamgymeriad cyfrinair",
             "send_error":"Methodd y trafodiad: gwiriwch a oes digon o gydbwysedd a ffi glowyr"
@@ -175,7 +175,16 @@
             "is_local":"Gwiriwch a oes ffeil nod yn lleol",
             "already_local":"Mae ffeil ffurfweddu'r ffeil nod yn bodoli ar y ddyfais gyfredol.",
             "not_local":"Ni chanfyddir gwybodaeth ffurfweddu ffeil y nod, efallai mai dyma'r tro cyntaf i redeg.",
-            "config_write_local":"Ysgrifennwch y ffeil wybodaeth nodau a gafwyd i'r ddisg leol"
+            "config_write_local":"Ysgrifennwch y ffeil wybodaeth nodau a gafwyd i'r ddisg leol",
+            "whether_update_node":"Gwiriwch a oes angen diweddariad",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Lawrlwytho rhaglen nodau, byddwch yn amyneddgar",
+            "already_downloaded":"Mae'r rhaglen nodau wedi'i lawrlwytho ac yn barod i ddechrau.",
+            "ready_start":"Paratowch i gychwyn y nod",
+            "enter_wallet":"Mae'r nod yn dechrau'n llwyddiannus ac yn barod i fynd i mewn i'r waled"
         },
         "version_dialog":{
             "version_tit":"Diweddariad fersiwn yn brydlon",

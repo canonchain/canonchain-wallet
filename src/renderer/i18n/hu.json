@@ -21,7 +21,7 @@
         "tit":"beállítása",
         "lang":"nyelv",
         "select":"Kérem válasszon",
-        "version_number":"Wallet verziószáma"
+        "version_number":"Wallet verzió"
     },
     "page_contacts": {
         "tit":"érintkezés",
@@ -72,7 +72,7 @@
             "amount_zero":"A transzfer összegének 0-nál nagyobbnak kell lennie",
             "amount_error":"Kérjük, adjon meg egy jogi tranzakció összegét",
             "address_err":"Az átvitt cím formátuma érvénytelen.",
-            "send_success":"Sikeresen elküldve",
+            "send_success":"Tranzakció elküldve",
 
             "decrypt_err":"A Wallet-elemzés sikertelen, lehet, hogy jelszóhiba",
             "send_error":"A tranzakció sikertelen: ellenőrizze, van-e elegendő egyensúly és a bányászdíj"
@@ -175,7 +175,16 @@
             "is_local":"Ellenőrizze, hogy van-e csomópont-fájl helyben",
             "already_local":"A csomópont konfigurációs fájlja létezik az aktuális eszközön.",
             "not_local":"A csomópont-fájl konfigurációs adatait nem észlelik, először futhat.",
-            "config_write_local":"Írja be a kapott csomópont információ fájlt a helyi lemezre"
+            "config_write_local":"Írja be a kapott csomópont információ fájlt a helyi lemezre",
+            "whether_update_node":"Ellenőrizze, hogy szükség van-e frissítésre",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Csomópont-program letöltése, legyen türelemmel",
+            "already_downloaded":"A csomópont program letöltött és készen áll a kezdésre.",
+            "ready_start":"Készüljön fel a csomópont elindítására",
+            "enter_wallet":"A csomópont sikeresen elindult és készen áll a mobiltárca beírására"
         },
         "version_dialog":{
             "version_tit":"Verziófrissítési kérelem",

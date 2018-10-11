@@ -21,7 +21,7 @@
         "tit":"Einstellung",
         "lang":"Sprache",
         "select":"Bitte wählen",
-        "version_number":"Wallet-Versionsnummer"
+        "version_number":"Wallet-Version"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -72,7 +72,7 @@
             "amount_zero":"Der Überweisungsbetrag muss größer als 0 sein",
             "amount_error":"Bitte geben Sie einen legalen Transaktionsbetrag ein",
             "address_err":"Das Format der übertragenen Adresse ist ungültig.",
-            "send_success":"Erfolgreich gesendet",
+            "send_success":"Transaktion gesendet",
 
             "decrypt_err":"Das Parsen von Briefen ist fehlgeschlagen, möglicherweise liegt ein Kennwortfehler vor",
             "send_error":"Transaktion fehlgeschlagen: Bitte prüfen Sie, ob genügend Guthaben und Bergarbeitergebühr vorhanden sind"
@@ -175,7 +175,16 @@
             "is_local":"Überprüfen Sie, ob lokal eine Knotendatei vorhanden ist",
             "already_local":"Die Konfigurationsdatei der Knotendatei ist auf dem aktuellen Gerät vorhanden.",
             "not_local":"Die Konfigurationsinformationen der Knotendatei werden nicht erkannt, möglicherweise wird sie zum ersten Mal ausgeführt.",
-            "config_write_local":"Schreiben Sie die erhaltene Knoteninformationsdatei auf die lokale Festplatte"
+            "config_write_local":"Schreiben Sie die erhaltene Knoteninformationsdatei auf die lokale Festplatte",
+            "whether_update_node":"Überprüfen Sie, ob ein Update erforderlich ist",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Download des Knotenprogramms, bitte haben Sie etwas Geduld",
+            "already_downloaded":"Das Knotenprogramm wurde heruntergeladen und ist startbereit.",
+            "ready_start":"Bereiten Sie vor, den Knoten zu starten",
+            "enter_wallet":"Der Knoten wurde erfolgreich gestartet und ist bereit, in die Brieftasche zu gelangen"
         },
         "version_dialog":{
             "version_tit":"Versionsaktualisierung",

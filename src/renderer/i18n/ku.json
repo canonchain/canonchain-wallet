@@ -21,7 +21,7 @@
         "tit":"Setting",
         "lang":"Ziman",
         "select":"Ji kerema xwe hilbijêrin",
-        "version_number":"Hejmara volume"
+        "version_number":"Guhertoya Wallet"
     },
     "page_contacts": {
         "tit":"Têkilî",
@@ -42,7 +42,7 @@
             "no_tag":"Ji kerema xwe ji bîr nekin",
             "no_address":"Ji kerema xwe navnîşana hesabê xwe binivîse",
             "valid_address":"Navnîşa têkiliyê ne qanûn e",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
             "exist":"Têkilî niha heye,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Hejmara derbasbûnê divê ji 0 re mezintir be",
             "amount_error":"Ji kerema xwe heqê veguherandina qanûnek qanûnî bike",
             "address_err":"Forma şîfreya veguhestinê ne çewt e.",
-            "send_success":"Serkeftî şandin",
+            "send_success":"Transaction şandin",
 
             "decrypt_err":"Parsing failed, ew dibe ku çewtiyek şîfre be",
             "send_error":"Veguhastin têkelî: ger ji kerema xwe hebe ku heqê heqê heqê û heqê minerî ye"
@@ -90,7 +90,7 @@
             "tit":"Şirovekirin",
             "subtit":"Ji bo hesabê we re gotarek binivîse",
             "no_tag":"Ji kerema xwe ji bîr nekin",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne."
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê"
         },
         "dia_tx":{
             "tit":"Agahdariya danûstendinê",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Pelê hesab bike",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
 
             "validate_password":"Ji kerema xwe hûn şîfreya xwe binivîse",
             "validate_re_password":"Ji kerema xwe hûn şîfreya xwe binivîse ku hûn dîsa careke din bikin",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Ji kerema xwe navê navnîşa hesabê binivîse",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
             "validate_enter_keystore":"Ji kerema xwe pelê yekem hesab bike",
             "validate_error_keystore":"Import import failed, dibe ku çewtiyek pelê hesab bike",
             "imported_account_success":"Bi serkeftî veguhestin",
@@ -175,7 +175,16 @@
             "is_local":"Heke ku liverek pelê navek heye heye",
             "already_local":"Vebijêrk pelê ya node pelê li cîhaza heyî ye.",
             "not_local":"Agahdariya danûstandinê ya pelê node nayê dîtin, ew dibe ku cara yekem diçin.",
-            "config_write_local":"Dîska agahdariya pelê ji bo dîska herêmî binivîse"
+            "config_write_local":"Dîska agahdariya pelê ji bo dîska herêmî binivîse",
+            "whether_update_node":"Heke ku rojnav hewce ye",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Bernameya node daxistin, ji kerema xwe re bîhnfireh bikin",
+            "already_downloaded":"Bernameya node daxuyanî û amade ye ku dest pê bikin.",
+            "ready_start":"Preparing start to stop",
+            "enter_wallet":"Node bi serkeftî dest pê kir û amade ye ku li walletê bike"
         },
         "version_dialog":{
             "version_tit":"Guhertoya Nûveçûna lezgîn",

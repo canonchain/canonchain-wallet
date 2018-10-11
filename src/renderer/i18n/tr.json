@@ -21,7 +21,7 @@
         "tit":"kurmak",
         "lang":"dil",
         "select":"Lütfen seçiniz",
-        "version_number":"Cüzdan sürüm numarası"
+        "version_number":"Cüzdan sürümü"
     },
     "page_contacts": {
         "tit":"temas",
@@ -72,7 +72,7 @@
             "amount_zero":"Aktarım miktarı 0'dan büyük olmalıdır",
             "amount_error":"Lütfen bir yasal işlem tutarı girin",
             "address_err":"Aktarılan adresin biçimi geçersiz.",
-            "send_success":"Başarıyla gönderildi",
+            "send_success":"İşlem gönderildi",
 
             "decrypt_err":"Cüzdan ayrıştırma işlemi başarısız oldu, şifre hatası olabilir",
             "send_error":"İşlem başarısız oldu: lütfen yeterli bakiye ve maden ücreti olup olmadığını kontrol edin"
@@ -175,7 +175,16 @@
             "is_local":"Yerel olarak bir düğüm dosyası olup olmadığını kontrol edin",
             "already_local":"Geçerli dosyada düğüm dosyasının yapılandırma dosyası var.",
             "not_local":"Düğüm dosyasının yapılandırma bilgisi algılanmadı, ilk kez çalıştırılıyor olabilir.",
-            "config_write_local":"Elde edilen düğüm bilgi dosyasını yerel diske yaz"
+            "config_write_local":"Elde edilen düğüm bilgi dosyasını yerel diske yaz",
+            "whether_update_node":"Bir güncellemenin gerekli olup olmadığını kontrol edin",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Düğüm programını indirirken lütfen sabırlı olun",
+            "already_downloaded":"Düğüm programı indirildi ve başlatılmaya hazır.",
+            "ready_start":"Düğümü başlatmak için hazırlanın",
+            "enter_wallet":"Düğüm başarıyla başlatıldı ve cüzdanına girmeye hazır"
         },
         "version_dialog":{
             "version_tit":"Sürüm güncelleme istemi",

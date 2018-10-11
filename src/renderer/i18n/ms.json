@@ -21,7 +21,7 @@
         "tit":"Menetapkan",
         "lang":"Bahasa",
         "select":"Sila pilih",
-        "version_number":"Nombor versi Wallet"
+        "version_number":"Versi Wallet"
     },
     "page_contacts": {
         "tit":"Hubungi",
@@ -42,7 +42,7 @@
             "no_tag":"Sila masukkan nota akaun",
             "no_address":"Sila masukkan alamat akaun anda",
             "valid_address":"Alamat kenalan adalah haram",
-            "validate_tag_length":"Nama memo tidak boleh melebihi 8 aksara",
+            "validate_tag_length":"Nama nama nota tidak boleh melebihi 8 aksara.",
             "exist":"Kenalan sudah wujud,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Jumlah pemindahan mesti melebihi 0",
             "amount_error":"Sila masukkan jumlah urus niaga yang sah",
             "address_err":"Format alamat yang dipindahkan tidak sah.",
-            "send_success":"Berhasil dihantar",
+            "send_success":"Transaksi dihantar",
 
             "decrypt_err":"Parsing Wallet gagal, mungkin ralat kata laluan",
             "send_error":"Urus niaga gagal: sila semak jika ada baki yang mencukupi dan yuran pelombong"
@@ -90,7 +90,7 @@
             "tit":"Ubah nota",
             "subtit":"Tandakan nota untuk akaun anda",
             "no_tag":"Sila masukkan nota akaun",
-            "validate_tag_length":"Nama memo tidak boleh melebihi 8 aksara"
+            "validate_tag_length":"Nama nama nota tidak boleh melebihi 8 aksara."
         },
         "dia_tx":{
             "tit":"Maklumat urus niaga",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Muat turun fail akaun",
 
             "validate_tag":"Sila masukkan nama nota akaun",
-            "validate_tag_length":"Nama memo tidak boleh melebihi 8 aksara",
+            "validate_tag_length":"Nama nama nota tidak boleh melebihi 8 aksara.",
 
             "validate_password":"Sila masukkan kata laluan yang anda tetapkan",
             "validate_re_password":"Sila masukkan kata laluan yang anda tetapkan semula",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Sila nyatakan nama nota akaun",
 
             "validate_tag":"Sila masukkan nama nota akaun",
-            "validate_tag_length":"Nama memo tidak boleh melebihi 8 aksara",
+            "validate_tag_length":"Nama nama nota tidak boleh melebihi 8 aksara.",
             "validate_enter_keystore":"Sila masukkan fail akaun terlebih dahulu",
             "validate_error_keystore":"Import akaun gagal, mungkin ralat fail akaun",
             "imported_account_success":"Berjaya diimport",
@@ -175,7 +175,16 @@
             "is_local":"Periksa sama ada terdapat fail nod dalam negara",
             "already_local":"Fail konfigurasi fail simpul wujud pada peranti semasa.",
             "not_local":"Maklumat konfigurasi fail nod tidak dikesan, ia mungkin kali pertama dijalankan.",
-            "config_write_local":"Tulis fail maklumat nod yang diperolehi ke cakera tempatan"
+            "config_write_local":"Tulis fail maklumat nod yang diperolehi ke cakera tempatan",
+            "whether_update_node":"Periksa sama ada kemas kini diperlukan",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Mengunduh program nod, bersabarlah",
+            "already_downloaded":"Program nod telah dimuat turun dan bersedia untuk bermula.",
+            "ready_start":"Bersedia untuk memulakan nod",
+            "enter_wallet":"Node berjaya dimulakan dan bersedia untuk memasuki dompet"
         },
         "version_dialog":{
             "version_tit":"Promosi kemas kini versi",

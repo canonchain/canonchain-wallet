@@ -21,7 +21,7 @@
         "tit":"Sozlash",
         "lang":"Til",
         "select":"Marhamat, tanlang",
-        "version_number":"Hamyon versiya raqami"
+        "version_number":"Hamyon versiyasi"
     },
     "page_contacts": {
         "tit":"Aloqa",
@@ -72,7 +72,7 @@
             "amount_zero":"Pul o'tkazmasining miqdori 0dan katta bo'lishi kerak",
             "amount_error":"Iltimos, qonuniy jurnali miqdorini kiriting",
             "address_err":"O'tkazilgan manzilning formati noto'g'ri.",
-            "send_success":"Muvaffaqiyatli yuborildi",
+            "send_success":"Jurnal yuborildi",
 
             "decrypt_err":"Hamyonni saralash muvaffaqiyatsiz tugadi, bu parol xato bo'lishi mumkin",
             "send_error":"Jurnal muvaffaqiyatsiz tugadi: iltimos balans va miner ish haqi borligini tekshiring"
@@ -175,7 +175,16 @@
             "is_local":"Mahalliy tugunli fayl mavjudligini tekshiring",
             "already_local":"Tugun faylining konfiguratsiya fayli mavjud qurilmada mavjud.",
             "not_local":"Tugun faylining konfiguratsiya ma'lumotlari aniqlanmadi, u birinchi marta ishlayotgan bo'lishi mumkin.",
-            "config_write_local":"Olingan tugun ma'lumotlarini mahalliy diskka yozing"
+            "config_write_local":"Olingan tugun ma'lumotlarini mahalliy diskka yozing",
+            "whether_update_node":"Yangilanish zarurligini tekshiring",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Tugun dasturini yuklab oling, iltimos, sabr qiling",
+            "already_downloaded":"Tugunli dastur yuklab olingan va ishga tushirishga tayyor.",
+            "ready_start":"Tugunni boshlashga tayyorgarlik ko'ring",
+            "enter_wallet":"Tugun muvaffaqiyatli boshlandi va hamyonni kiritish uchun tayyor"
         },
         "version_dialog":{
             "version_tit":"Versiya yangilanish so'rovi",

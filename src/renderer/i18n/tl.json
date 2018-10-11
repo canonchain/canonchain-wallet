@@ -21,7 +21,7 @@
         "tit":"Pagtatakda",
         "lang":"Wika",
         "select":"Mangyaring pumili",
-        "version_number":"Numero ng bersyon ng Wallet"
+        "version_number":"Bersyon ng Wallet"
     },
     "page_contacts": {
         "tit":"Makipag-ugnay sa",
@@ -72,7 +72,7 @@
             "amount_zero":"Ang halaga ng paglipat ay dapat na higit sa 0",
             "amount_error":"Mangyaring magpasok ng isang legal na halaga ng transaksyon",
             "address_err":"Di-wasto ang format ng nailipat na address.",
-            "send_success":"Matagumpay na naipadala",
+            "send_success":"Ipinadala ang transaksyon",
 
             "decrypt_err":"Nabigo ang pag-parse ng Wallet, maaaring ito ay isang error sa password",
             "send_error":"Nabigo ang transaksyon: pakitingnan kung may sapat na balanse at bayad sa minero"
@@ -174,8 +174,17 @@
             "get_latest":"Ang pinakabagong impormasyon sa configuration ng node ay nakuha",
             "is_local":"Suriin kung may node file nang lokal",
             "already_local":"Ang configuration file ng node file ay umiiral sa kasalukuyang aparato.",
-            "not_local":"Hindi napansin node configuration file, maaaring ito ay ang unang run",
-            "config_write_local":"Isulat ang nakuha node na impormasyon file sa lokal na disk"
+            "not_local":"Ang impormasyon ng pagsasaayos ng node na file ay hindi nakita, maaaring ito ang unang pagkakataon na tumatakbo.",
+            "config_write_local":"Isulat ang nakuha node na impormasyon file sa lokal na disk",
+            "whether_update_node":"Suriin kung kinakailangan ang pag-update",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Nagda-download ng programa ng node, mangyaring maging matiyaga",
+            "already_downloaded":"Na-download na ang program ng node at handa nang magsimula.",
+            "ready_start":"Maghanda upang simulan ang node",
+            "enter_wallet":"Matagumpay na nagsimula ang node at handa nang pumasok sa wallet"
         },
         "version_dialog":{
             "version_tit":"Prompt na i-update ang bersyon",

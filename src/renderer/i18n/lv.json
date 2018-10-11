@@ -21,7 +21,7 @@
         "tit":"Iestatījums",
         "lang":"Valoda",
         "select":"Lūdzu, izvēlies",
-        "version_number":"Maka versijas numurs"
+        "version_number":"Maka versija"
     },
     "page_contacts": {
         "tit":"Kontakti",
@@ -72,7 +72,7 @@
             "amount_zero":"Pārskaitījuma summa ir lielāka par 0",
             "amount_error":"Lūdzu, ievadiet juridisko darījuma summu",
             "address_err":"Pārvietotās adreses formāts nav derīgs.",
-            "send_success":"Veiksmīgi nosūtīts",
+            "send_success":"Darījums nosūtīts",
 
             "decrypt_err":"Maka sinizēšana neizdevās, tā var būt paroles kļūda",
             "send_error":"Darījums neizdevās: lūdzu, pārbaudiet, vai ir pietiekama atlikuma un minerāžas maksa"
@@ -175,7 +175,16 @@
             "is_local":"Pārbaudiet, vai vietnes failā ir mezgla fails",
             "already_local":"Mezgla faila konfigurācijas fails pastāv pašreizējā ierīcē.",
             "not_local":"Mezgla faila konfigurācijas informācija nav konstatēta, tā var būt pirmā reize.",
-            "config_write_local":"Uz vietējā diska uzrakstiet iegūto mezglu informācijas failu"
+            "config_write_local":"Uz vietējā diska uzrakstiet iegūto mezglu informācijas failu",
+            "whether_update_node":"Pārbaudiet, vai ir nepieciešams atjauninājums",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Lejupielādējot mezglu programmu, lūdzu, esiet pacietīgi",
+            "already_downloaded":"Mezgla programma ir lejupielādēta un ir gatava sākt.",
+            "ready_start":"Sagatavojieties mezgla uzsākšanai",
+            "enter_wallet":"Mezgls ir veiksmīgi startēts un gatavs ieiet seifā"
         },
         "version_dialog":{
             "version_tit":"Versijas atjaunināšanas uzvedne",

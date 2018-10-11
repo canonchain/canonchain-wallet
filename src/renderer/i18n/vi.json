@@ -21,7 +21,7 @@
         "tit":"Cài đặt",
         "lang":"Ngôn ngữ",
         "select":"Vui lòng chọn",
-        "version_number":"Số phiên bản Wallet"
+        "version_number":"Phiên bản Wallet"
     },
     "page_contacts": {
         "tit":"Liên hệ",
@@ -72,7 +72,7 @@
             "amount_zero":"Số tiền chuyển khoản phải lớn hơn 0",
             "amount_error":"Vui lòng nhập số tiền giao dịch hợp pháp",
             "address_err":"Định dạng của địa chỉ được chuyển không hợp lệ.",
-            "send_success":"Đã gửi thành công",
+            "send_success":"Giao dịch đã được gửi",
 
             "decrypt_err":"Phân tích cú pháp trên Wallet không thành công, đó có thể là lỗi mật khẩu",
             "send_error":"Giao dịch không thành công: vui lòng kiểm tra xem có đủ số dư và phí thợ mỏ không"
@@ -175,7 +175,16 @@
             "is_local":"Kiểm tra xem có một tệp nút cục bộ không",
             "already_local":"Tệp cấu hình của tệp nút tồn tại trên thiết bị hiện tại.",
             "not_local":"Thông tin cấu hình của tệp nút không được phát hiện, đây có thể là lần đầu tiên chạy.",
-            "config_write_local":"Ghi tập tin thông tin nút thu được vào đĩa cục bộ"
+            "config_write_local":"Ghi tập tin thông tin nút thu được vào đĩa cục bộ",
+            "whether_update_node":"Kiểm tra xem có cần cập nhật không",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Tải xuống chương trình nút, hãy kiên nhẫn",
+            "already_downloaded":"Chương trình nút đã được tải xuống và sẵn sàng để bắt đầu.",
+            "ready_start":"Chuẩn bị để bắt đầu nút",
+            "enter_wallet":"Nút được khởi động thành công và sẵn sàng để nhập ví"
         },
         "version_dialog":{
             "version_tit":"Lời nhắc cập nhật phiên bản",

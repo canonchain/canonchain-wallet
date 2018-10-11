@@ -21,7 +21,7 @@
         "tit":"Manangana",
         "lang":"fiteny",
         "select":"Mifidiana azafady",
-        "version_number":"Valin'ny nomerika Wallet"
+        "version_number":"Wallet version"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -72,7 +72,7 @@
             "amount_zero":"Ny habetsaky ny famindrana dia tsy tokony hihoatra ny 0",
             "amount_error":"Mampidira sanda ara-dalàna ny volavolan-dalàna",
             "address_err":"Tsy mety ny endriky ny adiresy nadika.",
-            "send_success":"Nalefa tamim-pahombiazana",
+            "send_success":"Nandefa transaction",
 
             "decrypt_err":"Tsy nahomby ny fanadihadiana ny kitapo, mety ho fahadisoana anaty tenimiafina izany",
             "send_error":"Tsy nahomby ny fanatanterahana: azafady raha ampy ny sanda sy ny sara-mineraly"
@@ -139,7 +139,7 @@
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
-            "create_success_des":"Azafady saveo ny rakitra ao amin'ny kaontinao ary aza mizara izany amin'ny olona rehetra!"
+            "create_success_des":"Azafady saveo ny rakitrao ka aza mizara izany amin'ny olona rehetra!"
         },
         "import_dia": {
             "tit":"Ampidiro ny kaonty",    
@@ -175,7 +175,16 @@
             "is_local":"Hamarino raha misy rakitra nodia eo an-toerana",
             "already_local":"Ny rakitra fanoratana ny rakitra node dia misy eo amin'ny fitaovana misy ankehitriny.",
             "not_local":"Ny fampahalalana fanoratana ny rakitra node dia tsy fantatra, mety ho fotoana voalohany hihazakazahana izany.",
-            "config_write_local":"Soraty amin'ny rakitra ao an-toerana ny rakitra fampahalalana rakitra"
+            "config_write_local":"Soraty amin'ny rakitra ao an-toerana ny rakitra fampahalalana rakitra",
+            "whether_update_node":"Hamarino raha ilaina ny fanavaozana",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Raiso ny programa nodia, ataovy marary",
+            "already_downloaded":"Ny tetikasa nodidiana dia navoaka ary vonona ny hanomboka.",
+            "ready_start":"Manomàna hanombohana ny kodiarana",
+            "enter_wallet":"Ny fantsom-pahombiazana dia efa manomboka ary vonona ny hiditra ny kitapo"
         },
         "version_dialog":{
             "version_tit":"Version prompt",

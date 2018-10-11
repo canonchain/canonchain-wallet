@@ -21,7 +21,7 @@
         "tit":"Kuweka",
         "lang":"Lugha",
         "select":"Tafadhali chagua",
-        "version_number":"Nambari ya toleo la mkoba"
+        "version_number":"Toleo la Mkoba"
     },
     "page_contacts": {
         "tit":"Wasiliana",
@@ -42,7 +42,7 @@
             "no_tag":"Tafadhali ingiza maelezo ya akaunti",
             "no_address":"Tafadhali ingiza anwani yako ya akaunti",
             "valid_address":"Anwani ya kuwasiliana ni kinyume cha sheria",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
             "exist":"Mawasiliano tayari iko,"
         }
     },
@@ -72,7 +72,7 @@
             "amount_zero":"Kiasi cha uhamisho lazima kiwe zaidi ya 0",
             "amount_error":"Tafadhali ingiza kiasi cha malipo ya kisheria",
             "address_err":"Faili ya anwani ya kuhamishiwa ni batili.",
-            "send_success":"Imepelekwa kwa ufanisi",
+            "send_success":"Shughuli imetumwa",
 
             "decrypt_err":"Mchanganyiko wa Wallet umeshindwa, inaweza kuwa kosa la nenosiri",
             "send_error":"Shughuli imeshindwa: tafadhali angalia ikiwa kuna usawa wa kutosha na ada ya mchimbaji"
@@ -90,7 +90,7 @@
             "tit":"Badilisha maelezo",
             "subtit":"Andika alama kwa akaunti yako",
             "no_tag":"Tafadhali ingiza maelezo ya akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8."
+            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8"
         },
         "dia_tx":{
             "tit":"Maelezo ya ushirikiano",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Pakua faili ya akaunti",
 
             "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
 
             "validate_password":"Tafadhali ingiza nenosiri uliloweka",
             "validate_re_password":"Tafadhali ingiza nenosiri uliloweka tena",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
 
             "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
             "validate_enter_keystore":"Tafadhali ingiza faili ya akaunti kwanza",
             "validate_error_keystore":"Kuagiza kwa Akaunti kushindwa, inaweza kuwa kosa la faili la akaunti",
             "imported_account_success":"Imeingizwa kwa mafanikio",
@@ -175,7 +175,16 @@
             "is_local":"Angalia kama kuna faili ya node ndani ya nchi",
             "already_local":"Faili ya usanidi wa faili ya node ipo kwenye kifaa cha sasa.",
             "not_local":"Maelezo ya usanidi wa faili ya node haipatikani, inaweza kuwa mara ya kwanza kukimbia.",
-            "config_write_local":"Andika faili ya habari ya node iliyopatikana kwenye disk ya ndani"
+            "config_write_local":"Andika faili ya habari ya node iliyopatikana kwenye disk ya ndani",
+            "whether_update_node":"Angalia kama sasisho linahitajika",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Inapakua mpango wa nodi, tafadhali subira",
+            "already_downloaded":"Programu ya node imepakuliwa na tayari kuanza.",
+            "ready_start":"Jitayarishe kuanza node",
+            "enter_wallet":"Node imeanza vizuri na tayari kuingia kwenye mkoba"
         },
         "version_dialog":{
             "version_tit":"Sasisho la toleo la haraka",

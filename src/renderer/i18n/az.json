@@ -21,7 +21,7 @@
         "tit":"Ayarlama",
         "lang":"Dil",
         "select":"Xahiş edirik seçin",
-        "version_number":"Wallet versiyası nömrəsi"
+        "version_number":"Wallet versiyası"
     },
     "page_contacts": {
         "tit":"Əlaqə",
@@ -72,7 +72,7 @@
             "amount_zero":"Transferin məbləği 0-dən çox olmalıdır",
             "amount_error":"Xahiş edirik hüquqi əməliyyat məbləğini daxil edin",
             "address_err":"Köçürülmüş ünvanın formatı etibarsızdır.",
-            "send_success":"Müvəffəqiyyətlə göndərildi",
+            "send_success":"Əməliyyat göndərildi",
 
             "decrypt_err":"Wallet ayrıştırma başarısız oldu, bu parol hatası ola bilər",
             "send_error":"Əməliyyat başarısız oldu: kifayət qədər balans və miner haqlarının olmadığını yoxlayın"
@@ -175,7 +175,16 @@
             "is_local":"Bir node faylının yerli olub olmadığını yoxlayın",
             "already_local":"Node faylının konfiqurasiya faylı mövcud cihazda mövcuddur.",
             "not_local":"Düğüm faylının konfiqurasiya məlumatı aşkarlanmadı, ilk dəfə işləyən ola bilər.",
-            "config_write_local":"Alınan node məlumat faylını yerli diskə yazın"
+            "config_write_local":"Alınan node məlumat faylını yerli diskə yazın",
+            "whether_update_node":"Bir yeniləmənin lazım olduğunu yoxlayın",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Node proqramını yükləyin, səbr edin",
+            "already_downloaded":"Node proqramı endirildi və başlamağa hazırdı.",
+            "ready_start":"Düğümü başlamaq üçün hazırlayın",
+            "enter_wallet":"Node uğurla başlamış və cüzdana daxil etməyə hazırdır"
         },
         "version_dialog":{
             "version_tit":"Version yeniləmə istemi",

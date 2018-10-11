@@ -21,7 +21,7 @@
         "tit":"Ställ in",
         "lang":"språk",
         "select":"Vänligen välj",
-        "version_number":"Plånboksversionsnummer"
+        "version_number":"Wallet-version"
     },
     "page_contacts": {
         "tit":"Kontakta",
@@ -72,7 +72,7 @@
             "amount_zero":"Överföringsbeloppet måste vara större än 0",
             "amount_error":"Ange ett juridiskt transaktionsbelopp",
             "address_err":"Formatet på den överförda adressen är ogiltig.",
-            "send_success":"Skickas framgångsrikt",
+            "send_success":"Transaktion skickad",
 
             "decrypt_err":"Pappersparsning misslyckades, det kan vara ett lösenordsfel",
             "send_error":"Transaktionen misslyckades: Kontrollera om det finns tillräckligt med balans och gruvavgift"
@@ -175,7 +175,16 @@
             "is_local":"Kontrollera om det finns en nodfil lokalt",
             "already_local":"Konfigurationsfilen för nodfilen finns på den aktuella enheten.",
             "not_local":"Konfigurationsinformationen för nodfilen detekteras inte, det kan vara första gången som körs.",
-            "config_write_local":"Skriv den erhållna nodinformationen till den lokala disken"
+            "config_write_local":"Skriv den erhållna nodinformationen till den lokala disken",
+            "whether_update_node":"Kontrollera om en uppdatering behövs",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Nedladdning av nodprogram, var patient",
+            "already_downloaded":"Nodprogrammet har laddats ner och redo att starta.",
+            "ready_start":"Förbered dig för att starta noden",
+            "enter_wallet":"Noden har startats framgångsrikt och redo att komma in i plånboken"
         },
         "version_dialog":{
             "version_tit":"Versionsuppdateringsprompten",

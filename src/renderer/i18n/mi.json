@@ -21,7 +21,7 @@
         "tit":"Tautuhi",
         "lang":"Reo",
         "select":"Tono koa",
-        "version_number":"Tau nama putanga"
+        "version_number":"He putanga putea"
     },
     "page_contacts": {
         "tit":"Whakapā",
@@ -72,7 +72,7 @@
             "amount_zero":"Ko te nui whakawhiti me nui atu i te 0",
             "amount_error":"Tēnā koa whakauruhia he moni whakawhitinga ture",
             "address_err":"He muhu te whakatakotoranga o te wāhitau kua whakawhitia.",
-            "send_success":"I tono angitu",
+            "send_success":"Tukuna te tukunga",
 
             "decrypt_err":"I rahua te taraipa a te putea, he hapa kupuhipa pea",
             "send_error":"I rahua te mahi: tirohia mehemea he nui te utu me te utu minita"
@@ -175,7 +175,16 @@
             "is_local":"Tirohia mēnā he kōnae kōpaki kei te rohe",
             "already_local":"Kei te noho te kōnae whirihoranga o te kōnae kōpuku i runga i te pūrere o nāianei.",
             "not_local":"Kaore i kitea te korero whirihoranga o te kōnae kōpuku, ko te wa tuatahi te rere.",
-            "config_write_local":"Tuhia te kōnae mōhiohio pungae kua whiwhi ki te kōpae o te rohe"
+            "config_write_local":"Tuhia te kōnae mōhiohio pungae kua whiwhi ki te kōpae o te rohe",
+            "whether_update_node":"Tirohia mehemea he hiahia whakahou",
+            "no_need":"本地 CanonChain 节点文件是最新的",
+            "need":"本地 CanonChain 节点文件是老版本",
+            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
+            "have":"当前设备已存在 CanonChain 节点文件",
+            "no":"Ko te tikiake i te papatono kohanga, tena koa kia manawanui",
+            "already_downloaded":"Kua tīkina te hōtaka kōpuku me te rite ki te tīmata.",
+            "ready_start":"Whakapaia kia tīmata te kōpuku",
+            "enter_wallet":"Kua tīmata pai te kōpuku me te rite ki te whakauru i te putea"
         },
         "version_dialog":{
             "version_tit":"Whakahou whakahou putanga",
