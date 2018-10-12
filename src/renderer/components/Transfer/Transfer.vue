@@ -307,10 +307,9 @@ export default {
                 });
         },
         writeTransToSql(blockInfo) {
+            //写入sendlist
             self.$db
-                .get("czr_accounts")
-                .find({ address: blockInfo.from })
-                .get("send_list")
+                .get("send_list."+blockInfo.from)
                 .push(blockInfo)
                 .write();
             self.$router.push("/account/" + self.fromInfo.account);

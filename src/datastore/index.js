@@ -32,6 +32,9 @@ db._.mixin(LodashId)
 if (!db.read().has('czr_accounts').value()) {
   db.set('czr_accounts', []).write()
 }
+if (!db.has('send_list').value()) {
+  db.set('send_list', {}).write()
+}
 if (!db.has('czr_contacts').value()) {
   db.set('czr_contacts', {}).write()
 }

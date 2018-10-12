@@ -269,7 +269,7 @@ export default {
         self.initTransItem();
 
         self.initSendTrans(true);
-        self.blocksStatus();
+        // self.blocksStatus();
 
         this.timerSwitch.initData = setInterval(() => {
             self.initDatabase();
@@ -529,31 +529,30 @@ export default {
             console.log("初始化数据了", isFirstInit);
             let _current = this.sendTransCurrent;
             _current.sourcesAry = this.$db
-                .get("czr_accounts")
-                .find({ address: this.address })
-                .get("send_list")
+                .get("send_list."+this.address)
                 .value();
             // 按照时间排序
             _current.sourcesAry.sort((a, b) => {
                 return b.exec_timestamp - a.exec_timestamp;
             });
+            console.log(_current.sourcesAry)
             if (isFirstInit) {
-                self.filterUnstable();
+                self.createSendDefault();
             }
         },
-        filterUnstable() {
+        createSendDefault() {
             let _current = this.sendTransCurrent;
             // 找出不稳定的block is_stable
             // _current.unstableAry = []
-            _current.sourcesAry.forEach(ele => {
-                if (ele.is_stable !== "1") {
-                    _current.unstableAry.push(ele.hash);
-                }
-            });
-            self.$walletLogs.info(
-                "需要轮询的 unstableAry",
-                _current.unstableAry
-            );
+            // _current.sourcesAry.forEach(ele => {
+            //     if (ele.is_stable !== "1") {
+            //         _current.unstableAry.push(ele.hash);
+            //     }
+            // });
+            // self.$walletLogs.info(
+            //     "需要轮询的 unstableAry",
+            //     _current.unstableAry
+            // );
             _current.tempAry = _current.sourcesAry.slice(0, 10);
             _current.page = 1;
             _current.totalPage = Math.ceil(
@@ -594,10 +593,11 @@ export default {
                 }
             }
         },
+
+        //废弃
         blocksStatus() {
             self.timerSwitch.updateBlocksTimer = setTimeout(() => {
                 //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
-                console.log("开始更新发送为稳定的Block",self.sendTransCurrent.unstableAry)
                 self.updateBlocks();
             }, CONTINUATION);
         },

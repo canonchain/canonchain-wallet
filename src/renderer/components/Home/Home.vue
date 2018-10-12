@@ -222,6 +222,19 @@ export default {
                 .get("czr_accounts")
                 .push(params)
                 .write();
+            //写入send_list的对应key
+            if (
+                !self.$db
+                    .read()
+                    .has("send_list."+params.address)
+                    .value()
+            ) {
+                self.$db
+                    .read()
+                    .set("send_list."+params.address, [])
+                    .write();
+            }
+
             this.initDatabase();
         },
 
@@ -546,6 +559,18 @@ export default {
                                 .get("czr_accounts")
                                 .push(params)
                                 .write();
+                            //轮询节点下的账户，并写入send_list的对应key
+                            if (
+                                !self.$db
+                                    .read()
+                                    .has("send_list."+reqAry)
+                                    .value()
+                            ) {
+                                self.$db
+                                    .read()
+                                    .set("send_list."+reqAry, [])
+                                    .write();
+                            }
                         }
                     });
                 });
