@@ -118,7 +118,7 @@ export default {
                 return;
             }
 
-            //TODO validate
+            //validate
             self.$czr.request
                 .accountValidate(self.createInfo.address)
                 .then(data => {
@@ -162,7 +162,6 @@ export default {
                 );
                 return;
             }
-            //TODO validate contacts address
             self.$db
                 .get("czr_contacts.contact_ary")
                 .push(params)

@@ -269,7 +269,6 @@ export default {
         self.initTransItem();
 
         self.initSendTrans(true);
-        // self.blocksStatus();
 
         this.timerSwitch.initData = setInterval(() => {
             self.initDatabase();
@@ -442,7 +441,7 @@ export default {
             }
         },
         getBeforeList() {
-            //TODO 从 tx_list 中取一些值给currentTxLList
+            // 从 tx_list 中取一些值给currentTxLList
             /* 
             1.当前有 lastBlockHash 开始循环找
             2.可以取值，并且可以继续，则取值
@@ -592,55 +591,6 @@ export default {
                     _current.nextDisabled = true;
                 }
             }
-        },
-
-        //废弃
-        blocksStatus() {
-            self.timerSwitch.updateBlocksTimer = setTimeout(() => {
-                //更新已发送的未稳定Block  => this.sendTransCurrent.unstableAry
-                self.updateBlocks();
-            }, CONTINUATION);
-        },
-        updateBlocks() {
-            //TODO 改接口名
-            self.$czr.request
-                .blockList(self.accountInfo.address, self.pagingSwitch.limit)
-                .then(data => {
-                    return data;
-                })
-                .then(data => {
-                    let isModiTrans = false;
-                    for (let i = 0, length = data.list.length; i < length; ) {
-                        const tempItem = data.list[i];
-                        if (tempItem.is_stable === "1") {
-                            let tempVal = self.$db
-                                .read()
-                                .get("czr_accounts")
-                                .find({ address: self.address })
-                                .get("send_list")
-                                .find({ hash: tempItem.hash })
-                                .assign(tempItem)
-                                .write();
-                            // 如果成功了，从 unstableAry 删除，并把最新数据写入数据库
-                            self.sendTransCurrent.unstableAry.forEach(
-                                (ele, index) => {
-                                    if (ele.hash == tempItem.hash) {
-                                        self.sendTransCurrent.unstableAry.splice(
-                                            index,
-                                            1
-                                        );
-                                    }
-                                }
-                            );
-                            isModiTrans = true;
-                        }
-                        i++;
-                    }
-                    self.blocksStatus();
-                    if (isModiTrans) {
-                        self.initSendTrans();
-                    }
-                });
         },
         //当前账户发送的交易 End
 

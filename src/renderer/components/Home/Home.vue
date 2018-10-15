@@ -119,6 +119,14 @@ let getAccountTimer = null;
 let accountErrorTimer = null;
 let interVal = 1000;
 let flagNum = 0;
+let updataBlockTimer={
+    start:null,
+    error:null
+};
+let updataBlockData={
+    sourcesObj:null,//源文件
+    targetAry:[]    //筛选后，需要更新的Blocks
+}
 
 const app = require("electron").remote.app;
 
@@ -149,13 +157,17 @@ export default {
             createInfo: {},
             importInfo: {},
             removeInfo: {},
+            timerSwitch:{
+                initAccount:null,
+                updateSendBlock:null
+            },
             intervalId: null
         };
     },
     created() {
         self = this;
         self.initDatabase();
-        self.intervalId = setInterval(() => {
+        self.timerSwitch.initAccount = setInterval(() => {
             self.initDatabase();
         }, 1500);
     },
@@ -163,15 +175,22 @@ export default {
         self.$walletLogs.info("HOME:页面渲染成功");
         if (!getAccountTimer) {
             self.runAccountsTimer();
-            self.$walletLogs.info("HOME:需要新建定时器");
+            self.$walletLogs.info("HOME:需要新建 Account 定时器");
         } else {
-            self.$walletLogs.info("HOME:定时器已经存在，无需新建");
+            self.$walletLogs.info("HOME:Account定时器已经存在，无需新建");
+        }
+        //更新Block
+        if(!updataBlockTimer.start){
+            self.$walletLogs.info("HOME:需要新建updataBlock定时器");
+            self.runUpdateBlocksTimer();
+        }else{
+            self.$walletLogs.info("HOME:updataBlock已经存在，无需建立");
         }
     },
     computed: {},
     beforeDestroy() {
-        clearInterval(self.intervalId);
-        self.intervalId = null;
+        clearInterval(self.timerSwitch.initAccount);
+        self.timerSwitch.initAccount = null;
     },
     methods: {
         initDatabase() {
@@ -298,7 +317,6 @@ export default {
                     self.createInfo.step = 1;
                 })
                 .catch(error => {
-                    //TODO Error
                     self.$walletLogs.error(
                         "Account Create Error",
                         error.message
@@ -323,7 +341,6 @@ export default {
                     self.dialogSwitch.create = false;
                 })
                 .catch(error => {
-                    //TODO Error
                     self.$walletLogs.error(
                         "Account Export Error",
                         error.message
@@ -403,7 +420,6 @@ export default {
                 .accountImport(self.importInfo.keystore)
                 .then(data => {
                     if (data.success == "1") {
-                        //TODO 提示导入成功
                         self.$message.success(
                             self.$t(
                                 "page_home.import_dia.imported_account_success"
@@ -420,7 +436,6 @@ export default {
                     }
                 })
                 .catch(error => {
-                    //TODO Error
                     self.$walletLogs.error(
                         "Account Import Error",
                         error.message
@@ -466,7 +481,6 @@ export default {
                     }
                 })
                 .catch(error => {
-                    //TODO Error
                     self.$walletLogs.error(
                         "Account Remove Error",
                         error.message
@@ -574,8 +588,54 @@ export default {
                         }
                     });
                 });
-        }
+        },
         //get Account End
+
+        // Update send block start
+        runUpdateBlocksTimer(){
+            //定时器控制时间
+            updataBlockTimer.start = setTimeout(() => {
+                self.chooseUpdateBlocksData();
+            }, 5000);
+        },
+        chooseUpdateBlocksData(){
+            //读取所有数据,并筛选不稳定的Hash合集
+            updataBlockData.sourcesObj = self.$db.get("send_list").value();
+            let curentAry=[];
+            updataBlockData.targetAry=[];
+            for(let key in updataBlockData.sourcesObj){
+                curentAry = curentAry.concat(updataBlockData.sourcesObj[key]);
+            }
+            curentAry.forEach(ele=>{
+                if(ele.is_stable==="0"){
+                    updataBlockData.targetAry.push(ele.hash);
+                }
+            })
+            self.startUpdateBlocks();
+        },
+        startUpdateBlocks(){
+            //拿到最新数据，写入数据库，并准备下次
+            self.$czr.request
+                .getBlocks(updataBlockData.targetAry)
+                .then(data => {
+                    //把稳定的写入
+                    let obtainData = data.blocks;
+                    obtainData.forEach(ele=>{
+                        if(ele.is_stable==="1"){
+                            self.$db.get("send_list."+ele.from).find({ hash: ele.hash })
+                            .assign(ele).write()
+                        }
+                    })
+                    self.runUpdateBlocksTimer();
+                })
+                .catch(error => {
+                    self.$walletLogs.error("Update Blocks Error", error.message);
+                    self.runUpdateBlocksTimer();
+                })
+
+        }
+        // Update send block end
+        
     },
     filters: {
         toCzrVal(val) {
@@ -592,7 +652,7 @@ export default {
                     decimal += "0";
                 }
             }
-            return integer + decimal; //TODO Keep 4 decimal places
+            return integer + decimal;
         }
     }
 };

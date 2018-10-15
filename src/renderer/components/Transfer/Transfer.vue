@@ -285,7 +285,6 @@ export default {
                         //Clear data
                         self.dialogSwitch.confrim = false;
                         self.dialogSwitch.password = false;
-                        //TODO 写当前的HASH
                         //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
                         let sendBlockInfo = {
                             hash: data.block,
