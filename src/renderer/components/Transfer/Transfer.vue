@@ -261,15 +261,15 @@ export default {
                 return;
             }
             let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-            // let id = Math.random();
+            let id = Math.random();
 
             let sendObj = {
                 from: self.fromInfo.account,
                 to: self.toAccount,
                 amount: amountValue,
                 password: self.fromInfo.password,
-                data: self.extraData
-                //, id: id
+                data: self.extraData, 
+                id: id
             };
 
             self.$czr.request
