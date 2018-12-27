@@ -1,5 +1,5 @@
 {
-    "confirm":"Potrdi",
+    "confirm":"Potrdite",
     "cancel":"Prekliči",
     "dialog_tit":"Poziv",
     "close":"Zapri",
@@ -10,103 +10,103 @@
     "model_header": {
         "home":"Domov",
         "transfer":"Prenos",
-        "contacts":"Stik",
+        "contacts":"Kontakt",
         "setting":"Nastavitev",
         "total":"Skupaj",
-        "testnet":"Preskusno omrežje",
+        "testnet":"Preizkusite omrežje",
         "online":"Online",
         "offline":"Brez povezave"
     },
     "page_setting": {
         "tit":"Nastavitev",
         "lang":"Jezik",
-        "select":"Prosimo, izberite",
-        "version_number":"Različica za Google Denarnico"
+        "select":"Prosim izberite",
+        "version_number":"Različica denarnice"
     },
     "page_contacts": {
-        "tit":"Stik",
-        "add_dialog":"Nov stik",
+        "tit":"Kontakt",
+        "add_dialog":"Nova oseba",
         "add_cont": {
-            "tit":"Nov stik",
-            "tag":"Stik",
+            "tit":"Nova oseba",
+            "tag":"Kontakt",
             "address":"Naslov računa",
             "tag_placeholder":"Vnesite ime stika",
             "address_placeholder":"Vnesite naslov računa za stik",
             "add_success":"Uspešno dodano"
         },
         "delete_dialog": {
-            "title":"Odstranite",
-            "remove_success":"Uspešno je bil odstranjen"
+            "title":"Odstranjujete",
+            "remove_success":"Uspešno odstranjena"
         },
         "msg_info": {
             "no_tag":"Vnesite beležko računa",
-            "no_address":"Vnesite svoj naslov računa",
+            "no_address":"Vnesite naslov svojega računa",
             "valid_address":"Naslov stika je nezakonit",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
             "exist":"Stik že obstaja,"
         }
     },
     "page_transfer": {
         "from_address":"Pošiljatelj",
-        "to_address":"Prejemnik plačila",
+        "to_address":"Prejemnik",
         "amount":"Znesek",
         "send_all":"Pošlji vse",
         "data":"Podatki",
         "data_placeholder":"Šestnajstiški podatki",
         "fees":"Pristojbina za ravnanje",
         "total":"Skupaj",
-        "select":"Prosimo, izberite",
-        "no_account_info":"Še nimate računa, ustvarite ali uvozite račun",
+        "select":"Prosim izberite",
+        "no_account_info":"Še ni računa, ustvarite ali uvozite račun",
         "contacts_dig": {
-            "title":"Izberite kontaktni račun",
-            "select_placeholder":"Prosimo, izberite"
+            "title":"Izberite račun za stike",
+            "select_placeholder":"Prosim izberite"
         },
         "confirm_dia": {
             "title":"Prosimo, potrdite",
-            "enter_passworld_tit":"Vnesite geslo",
-            "enter_passworld_place":"Vnesite geslo"
+            "enter_passworld_tit":"Vnesite svoje geslo",
+            "enter_passworld_place":"Vnesite svoje geslo"
         },
         "msg_info": {
-            "address_null":"Prosimo, vnesite račun druge stranke",
-            "balance_zero":"Nezadostno ravnovesje, ne more nadaljevati",
-            "amount_zero":"Znesek prenosa mora biti večji od 0",
-            "amount_error":"Vnesite znesek pravne transakcije",
-            "address_err":"Oblika prenesenega naslova je neveljavna.",
-            "send_success":"Poslana transakcija",
+            "address_null":"Vnesite račun druge stranke",
+            "balance_zero":"Nezadostno ravnovesje, ki ne more nadaljevati",
+            "amount_zero":"Prenosni znesek mora biti večji od 0",
+            "amount_error":"Vnesite pravni znesek transakcije",
+            "address_err":"Oblika prenesenega naslova ni veljavna.",
+            "send_success":"Transakcija je bila poslana",
 
-            "decrypt_err":"Razčlenjevanje z denarnico ni uspelo, morda je napaka gesla",
-            "send_error":"Transakcija ni uspela: preverite, ali obstaja dovolj ravnotežja in pristojbina za rudarje"
+            "decrypt_err":"Razčlenjevanje denarnice ni uspelo, morda gre za napako gesla",
+            "send_error":"Transakcija ni uspela: preverite, ali obstaja zadostna bilanca in pristojbina rudarjev"
         }
     },
     "page_account": {
-        "transfer_log":"Transakcijski zapis",
-        "transfer_log_null":"Brez zgodovine transakcij",
+        "transfer_log":"Zapis transakcije",
+        "transfer_log_null":"Ni zgodovine transakcij",
         "active_icon": {
             "go_transfer":"Začnite prenos",
             "import_keystore":"Datoteka računa",
-            "qrcode":"QR kodo"
+            "qrcode":"QR koda"
         },
         "edit_dia": {
             "tit":"Spremeni beležko",
-            "subtit":"Označite opombo za svoj račun",
+            "subtit":"Označite beležko za svoj račun",
             "no_tag":"Vnesite beležko računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov"
+            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov."
         },
         "dia_tx":{
-            "tit":"Podatki o transakcijah",
+            "tit":"Informacije o transakcijah",
             "block_hash":"Številka transakcije",
-            "status":"Država",
+            "status":"Državi članici",
             "from":"Pošiljatelj",
-            "to":"Prejemnik plačila",
+            "to":"Prejemnik",
             "amount":"Znesek",
             "data":"Podatki",
-            "send_time":"Pošiljanje časa",
-            "mac_time":"Glavni čas verige"
+            "send_time":"Čas pošiljanja",
+            "mac_time":"Čas glavne verige"
         },
         "keystore": {
-            "tit":"Datoteka varnostne kopije",
+            "tit":"Varnostna kopija denarnice",
             "copy":"Kopiraj",
-            "download":"Prenesi denarnico"
+            "download":"Prenesite datoteko za denarnico"
         },
         "msg_info": {
             "ads_copy_success":"Naslov je bil kopiran",
@@ -114,81 +114,81 @@
         }
     },
     "page_home": {
-        "import_account":"Uvoz računa",
+        "import_account":"Uvozi račun",
         "add_account":"Nov račun",
         "acc":"Račun",
         "create_dia": {
             "create_tit":"Ustvarite račun",
-            "backup_tit":"Varnostno kopirajte svoj novi račun",
-            "create_tag":"Opomba računa",
+            "backup_tit":"Varnostno kopirajte nov račun",
+            "create_tag":"Obvestilo o računu",
             "create_pwd":"Nastavite geslo",
             "create_repwd":"Potrdite geslo",
             "placeholder_tag":"Nastavite ime beležke računa",
-            "placeholder_pwd":"Nastavite geslo za račun",
-            "placeholder_repwd":"Potrdite geslo za račun",
+            "placeholder_pwd":"Nastavite geslo računa",
+            "placeholder_repwd":"Potrdite geslo računa",
             
             
-            "account_download_keystore":"Prenos datoteke računa",
+            "account_download_keystore":"Prenesite datoteko računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
 
             "validate_password":"Vnesite geslo, ki ste ga nastavili",
-            "validate_re_password":"Vnesite geslo, ki ste ga ponovno nastavili",
-            "validate_strong_password":"Vnesite geslo z najmanj 8 števkami",
-            "validate_password_length":"Vstavljeno dvokliknite dvokliknite",
+            "validate_re_password":"Vnesite geslo, ki ga nastavite znova",
+            "validate_strong_password":"Vnesite vsaj 8-mestno geslo",
+            "validate_password_length":"Dvakrat je vneseno nedosledno geslo",
 
-            "create_success":"Ustvarjeno je uspešno",
-            "create_success_des":"Prosimo, shranite datoteko računa in ne delite z nikomer!"
+            "create_success":"Ustvarjeno uspešno",
+            "create_success_des":"Shranite datoteko računa in je ne delite z nikomer!"
         },
         "import_dia": {
-            "tit":"Uvoz računa",    
+            "tit":"Uvozi račun",    
             "placeholder_keystore":"Tukaj povlecite datoteko računa",
-            "create_tag":"Opomba računa",
+            "create_tag":"Obvestilo o računu",
             "placeholder_tag":"Nastavite ime beležke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime beležke ne sme biti daljše od 8 znakov",
+            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
             "validate_enter_keystore":"Najprej uvozite datoteko računa",
-            "validate_error_keystore":"Uvoz računa ni uspel, morda je napaka v računu",
+            "validate_error_keystore":"Uvoz računa ni uspel, napaka v računu",
             "imported_account_success":"Uspešno uvoženo",
-            "exist":"Ta račun že obstaja, je opomba",
+            "exist":"Ta račun že obstaja, opomba je",
             "keystore_error":"Napaka:",
             "imported_success":"Uvozite datoteko uspešno"
         },
         "remove_dia": {
             "tit":"Ali ste prepričani, da ga želite odstraniti?",
             "remove_confrim":"Prepričan sem, da ga odstranim",
-            "backup":"Prosimo, bodite pozorni na varnostno kopijo tega računa, da se izognete nepremoženjski škodi.",
+            "backup":"Prosimo, bodite pozorni na varnostno kopijo tega računa, da se izognete materialni škodi.",
             "input_pwd":"Geslo",
             "placeholder_pwd":"Vnesite geslo za ta račun",
             "validate_password":"Vnesite geslo za račun",
-            "remove_success":"Uspešno je bil odstranjen"
+            "remove_success":"Uspešno odstranjena"
         }
     },
     "page_config": {
-        "config_detection":"Detekcija konfiguracije",
+        "config_detection":"Zaznavanje konfiguracije",
         "content_msg":{
-            "ready_test":"Pripravite se na odkrivanje konfiguracijske datoteke",
+            "ready_test":"Pripravite se na zaznavanje konfiguracijske datoteke",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Dobljene so bile najnovejše informacije o konfiguraciji vozlišča",
-            "is_local":"Preverite, ali je lokalna datoteka vozlišča",
-            "already_local":"Konfiguracijska datoteka datoteke vozlišča obstaja na trenutni napravi.",
-            "not_local":"Podatki o konfiguraciji datoteke vozlišča niso zaznani, morda se prvič izvajajo.",
-            "config_write_local":"Napišite informativno datoteko vozlišča na lokalni disk",
+            "get_latest":"Dobili smo najnovejše informacije o konfiguraciji vozlišč",
+            "is_local":"Preverite, ali je lokalno datoteka vozlišča",
+            "already_local":"Na trenutni napravi obstaja konfiguracijska datoteka datoteke vozlišča.",
+            "not_local":"Konfiguracijske informacije o datoteki vozlišča niso zaznane, morda se prvič izvaja.",
+            "config_write_local":"Prejeto datoteko z informacijami o vozlišču zapišite na lokalni disk",
             "whether_update_node":"Preverite, ali je potrebna posodobitev",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Prenesite program vozlišča, bodite potrpežljivi",
+            "no":"Prenos programa vozlišča, bodite potrpežljivi",
             "already_downloaded":"Program vozlišča je bil prenesen in pripravljen za zagon.",
             "ready_start":"Pripravite se na zagon vozlišča",
-            "enter_wallet":"Vozlišče se uspešno zažene in je pripravljeno za vstop v denarnico"
+            "enter_wallet":"Vozlišče je uspešno zagnano in pripravljeno za vstop v denarnico"
         },
         "version_dialog":{
-            "version_tit":"Različica za posodobitev različice",
-            "download_wallet":"Pojdite na uradno spletno stran, da prenesete najnovejšo različico denarja",
+            "version_tit":"Poziv za posodobitev različice",
+            "download_wallet":"Pojdite na uradno spletno stran in prenesite najnovejšo različico denarja",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

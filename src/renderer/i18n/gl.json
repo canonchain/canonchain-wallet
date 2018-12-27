@@ -42,7 +42,7 @@
             "no_tag":"Insira unha nota de conta",
             "no_address":"Introduce o enderezo da túa conta",
             "valid_address":"O enderezo do contacto é ilegal",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
             "exist":"O contacto xa existe,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Modificar nota",
             "subtit":"Marca unha nota para a túa conta",
             "no_tag":"Insira unha nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres"
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres."
         },
         "dia_tx":{
             "tit":"Información de transaccións",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Descargar o ficheiro da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
 
             "validate_password":"Introduza o contrasinal que configurou",
             "validate_re_password":"Introduza o contrasinal que configurou de novo",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Configure o nome da nota da conta",
 
             "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome da nota non pode ter máis de 8 caracteres",
+            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
             "validate_enter_keystore":"Importe primeiro o ficheiro da conta",
             "validate_error_keystore":"Fallou a importación da conta, pode ser un erro de ficheiro de conta",
             "imported_account_success":"Importada con éxito",

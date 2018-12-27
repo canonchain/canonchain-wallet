@@ -175,7 +175,7 @@
             "is_local":"Mahalliy tugunli fayl mavjudligini tekshiring",
             "already_local":"Tugun faylining konfiguratsiya fayli mavjud qurilmada mavjud.",
             "not_local":"Tugun faylining konfiguratsiya ma'lumotlari aniqlanmadi, u birinchi marta ishlayotgan bo'lishi mumkin.",
-            "config_write_local":"Olingan tugun ma'lumotlarini mahalliy diskka yozing",
+            "config_write_local":"Olingan tugun ma'lumot faylini mahalliy diskka yozing",
             "whether_update_node":"Yangilanish zarurligini tekshiring",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",

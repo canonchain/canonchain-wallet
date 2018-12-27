@@ -1,194 +1,194 @@
 {
-    "confirm":"confirméieren",
-    "cancel":"annuléiert",
-    "dialog_tit":"VIRSCHLOEN",
-    "close":"zoumaachen",
-    "confirm_you_active":"Weg sécherstellen Är Operatioun",
+    "confirm":"Confirm",
+    "cancel":"Ofbriechen",
+    "dialog_tit":"Prompéiert",
+    "close":"Zoumaachen",
+    "confirm_you_active":"Bestätegt Är Operatioun confirméiert",
     "unit": {
         "czr":"CZR"
     },
     "model_header": {
         "home":"Home",
-        "transfer":"Transfermaart",
+        "transfer":"Transfer",
         "contacts":"Kontakt",
-        "setting":"Ariichten",
-        "total":"Ganzen",
-        "testnet":"Test Network",
-        "online":"online",
+        "setting":"Setzen",
+        "total":"Total",
+        "testnet":"Testnetz",
+        "online":"Online",
         "offline":"Offline"
     },
     "page_setting": {
-        "tit":"Ariichten",
+        "tit":"Setzen",
         "lang":"Sprooch",
-        "select":"wielt we g",
-        "version_number":"Portmonni Versioun"
+        "select":"Wielt weg",
+        "version_number":"Wallet Versioun"
     },
     "page_contacts": {
         "tit":"Kontakt",
-        "add_dialog":"New Contact",
+        "add_dialog":"Neie Kontakt",
         "add_cont": {
-            "tit":"New Contact",
+            "tit":"Neie Kontakt",
             "tag":"Kontakt",
-            "address":"Kont Adress",
-            "tag_placeholder":"Gitt weg den Numm an d'Kontakt",
-            "address_placeholder":"Gitt de Kontakt Adress vum Kont",
-            "add_success":"erfollegräich dobäi"
+            "address":"Konto Adress",
+            "tag_placeholder":"Gidd weg den Numm vum Kontakt",
+            "address_placeholder":"Gidd weg d'Kontoun Adress",
+            "add_success":"Huet Erfolleg"
         },
         "delete_dialog": {
-            "title":"Dir sidd Stoppen",
-            "remove_success":"geläscht erfollegräich"
+            "title":"Dir sidd ewechhuelen",
+            "remove_success":"Erfolleg ofgëtt"
         },
         "msg_info": {
-            "no_tag":"Gitt weg Kont heem",
-            "no_address":"Gitt de Kont Adress",
-            "valid_address":"Kontakt an d'Adress ass net legitim",
-            "validate_tag_length":"Notes Numm kann net méi laang wéi 8 Zeechen ginn",
-            "exist":"Kontakt schonn,"
+            "no_tag":"Gidd weg eng Konto Notiz",
+            "no_address":"Gidd weg Är Kontoun Adress",
+            "valid_address":"D'Adress vum Kontakt ass illegal",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
+            "exist":"De Kontakt existéiert schonn,"
         }
     },
     "page_transfer": {
-        "from_address":"Schécken Suen Partei",
+        "from_address":"Sending Party",
         "to_address":"Payee",
-        "amount":"Suen",
-        "send_all":"schéckt all",
-        "data":"Donnéeën",
-        "data_placeholder":"Hexadecimal Donnéeën",
-        "fees":"bezuelen",
-        "total":"Ganzen",
-        "select":"wielt we g",
-        "no_account_info":"Kee Kont schafen weg e Kont oder Import",
+        "amount":"Betrag",
+        "send_all":"Schéckt all",
+        "data":"Daten",
+        "data_placeholder":"Hexadezimal Daten",
+        "fees":"Handlungsgebitt",
+        "total":"Total",
+        "select":"Wielt weg",
+        "no_account_info":"Kuckt nach kee Kont, erstellen oder Konto kaafen",
         "contacts_dig": {
-            "title":"Wielt de Kontakt Kont",
-            "select_placeholder":"wielt we g"
+            "title":"Wielt e Konto Kont",
+            "select_placeholder":"Wielt weg"
         },
         "confirm_dia": {
-            "title":"weg confirméieren",
-            "enter_passworld_tit":"Gitt weg Är Passwuert",
-            "enter_passworld_place":"Gitt weg Är Passwuert"
+            "title":"Confirméiert weg",
+            "enter_passworld_tit":"Gidd weg Äert Passwuert",
+            "enter_passworld_place":"Gidd weg Äert Passwuert"
         },
         "msg_info": {
-            "address_null":"Gitt weg all aneren d'Konte",
-            "balance_zero":"D'Gläichgewiicht ass genuch, kann net weider",
-            "amount_zero":"Transfermaart Montant muss méi grouss wéi 0",
-            "amount_error":"Gitt weg eng valabel Transaktioun Montant",
-            "address_err":"An der Adress Format ass net legitim",
-            "send_success":"Trading gouf geschéckt",
+            "address_null":"Gidd weg d'Kont vun der anerer Partei",
+            "balance_zero":"Net genuch Waasserkapazitéit, konnt net weiderfueren",
+            "amount_zero":"Transfermaart muss méi grouss sinn wéi 0",
+            "amount_error":"Gitt eng legal Transaktioun",
+            "address_err":"De Format vun der iwwerschriwwe Adress ass ongëlteg.",
+            "send_success":"Transaktioun geschéckt",
 
-            "decrypt_err":"Portemonnaie Resolutioun net klappt, kann et falsch Passwuert ginn",
-            "send_error":"D'Transaktioun klappt: Check ze gesinn, ob et genuch Gläichgewiicht an Bolivianer ass dossier"
+            "decrypt_err":"Portemonnaie vun der Portemonnaie konnt net geännert ginn, et ass e Passwuertfehler",
+            "send_error":"Transaktioun ofgeschalt: Iwwerpréift weg ob d'Ausbezuelung vun der Waasserstoff a Minerie bezuele muss"
         }
     },
     "page_account": {
-        "transfer_log":"Transaktioun Record",
-        "transfer_log_null":"Nee Transaktiounen",
+        "transfer_log":"Transaktiounsplang",
+        "transfer_log_null":"Keng Transaktiounsgeschicht",
         "active_icon": {
-            "go_transfer":"dat Transfert",
-            "import_keystore":"Kont Fichier",
-            "qrcode":"Zwee-zweedimensional Code"
+            "go_transfer":"Initiatioun transferéieren",
+            "import_keystore":"Kontaccount",
+            "qrcode":"QR code"
         },
         "edit_dia": {
-            "tit":"Ännerung Note",
-            "subtit":"Fir Äre Kont Mark eng Remarque",
-            "no_tag":"Gitt weg Kont heem",
-            "validate_tag_length":"Notes Numm kann net méi laang wéi 8 Zeechen ginn"
+            "tit":"Änneren",
+            "subtit":"Mark eng Notiz fir Äre Kont",
+            "no_tag":"Gidd weg eng Konto Notiz",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen."
         },
         "dia_tx":{
-            "tit":"Trading Informatiounen",
-            "block_hash":"Transaktioun Zuel",
-            "status":"Stat",
-            "from":"Schécken Suen Partei",
+            "tit":"Transaktiounsinformatioun",
+            "block_hash":"Transaktiounsnummer",
+            "status":"Staat",
+            "from":"Sending Party",
             "to":"Payee",
-            "amount":"Suen",
-            "data":"Donnéeën",
-            "send_time":"schécken Time",
-            "mac_time":"Zäit Réckrad"
+            "amount":"Betrag",
+            "data":"Daten",
+            "send_time":"Sending time",
+            "mac_time":"Haaptlängt"
         },
         "keystore": {
-            "tit":"Backupsatellit Portemonnaie Fichier",
-            "copy":"Kopie",
-            "download":"Download Portemonnaie Fichier"
+            "tit":"Backup - Portemonnaie",
+            "copy":"Kopéieren",
+            "download":"Download vun der Portemonnaie"
         },
         "msg_info": {
-            "ads_copy_success":"Adress kopéiert ginn",
-            "key_copy_success":"kopéiert erfollegräich"
+            "ads_copy_success":"Adress gouf kopéiert",
+            "key_copy_success":"Erfolleg Kopie"
         }
     },
     "page_home": {
-        "import_account":"Import Kont",
-        "add_account":"New Kont",
-        "acc":"Kont",
+        "import_account":"Konto importéieren",
+        "add_account":"Neie Kont",
+        "acc":"Account",
         "create_dia": {
-            "create_tit":"Schafen eng Kont",
-            "backup_tit":"Zréck an Ärem neie Kont",
-            "create_tag":"Wuertmeldung Kont",
-            "create_pwd":"Passwuert",
-            "create_repwd":"confirméieren Passwuert",
-            "placeholder_tag":"Set de Kont Numm heem",
-            "placeholder_pwd":"Set Kont Passwuert",
-            "placeholder_repwd":"Sécherstellen de Kont Passwuert",
+            "create_tit":"Account erstellen",
+            "backup_tit":"Reservéiert Äre neie Kont",
+            "create_tag":"Account Notiz",
+            "create_pwd":"Passwuert aginn",
+            "create_repwd":"Confirmatioun vum Passwuert",
+            "placeholder_tag":"Gitt weg den Account Notiznamen",
+            "placeholder_pwd":"Pass op de Kontpasswuert",
+            "placeholder_repwd":"Bestätegt de Kontpasswuert",
             
             
-            "account_download_keystore":"Download de Kont Fichier",
+            "account_download_keystore":"Luet de Kont Datei",
 
-            "validate_tag":"Gitt de Kont Numm heem",
-            "validate_tag_length":"Notes Numm kann net méi laang wéi 8 Zeechen ginn",
+            "validate_tag":"Gidd weg den Kontnummnumm",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
 
-            "validate_password":"Gitt weg d'Passwuert Dir Formatioun",
-            "validate_re_password":"Gitt weg d'Passwuert Dir erëm Formatioun",
-            "validate_strong_password":"Gitt weg e Passwuert vu mindestens aacht",
-            "validate_password_length":"Passwierder nët Match",
+            "validate_password":"Gidd weg den Passwuert, deen Dir agefouert hutt",
+            "validate_re_password":"Gidd weg den Passwuert, deen Dir erëm gesat hutt",
+            "validate_strong_password":"Gitt weg e Passwuert vun mindestens 8 Zifferen",
+            "validate_password_length":"Inconsistent Passwuert zweemol getraff",
 
-            "create_success":"Créatioun Succès",
-            "create_success_des":"Weg retten Äre Kont Fichier, net mat jidderengem deelen!"
+            "create_success":"Erfolleg gemaach",
+            "create_success_des":"Dir kënnt Är Kontaccount späicheren an net mat jiddereen ze deelen!"
         },
         "import_dia": {
-            "tit":"Import Kont",    
-            "placeholder_keystore":"Weg Fichier Rechnung hei",
-            "create_tag":"Wuertmeldung Kont",
-            "placeholder_tag":"Set de Kont Numm heem",
+            "tit":"Konto importéieren",    
+            "placeholder_keystore":"Zéckt weg d'Accountfichier hier",
+            "create_tag":"Account Notiz",
+            "placeholder_tag":"Gitt weg den Account Notiznamen",
 
-            "validate_tag":"Gitt de Kont Numm heem",
-            "validate_tag_length":"Notes Numm kann net méi laang wéi 8 Zeechen ginn",
-            "validate_enter_keystore":"Weg Import de Kont Fichier",
-            "validate_error_keystore":"Kont Import net klappt, kann de Kont ginn falsch Fichier",
-            "imported_account_success":"Import Succès",
-            "exist":"Dëst Kont schonn, Notizen, datt",
+            "validate_tag":"Gidd weg den Kontnummnumm",
+            "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
+            "validate_enter_keystore":"Kuckt éischt de Kont vum Fichier importéieren",
+            "validate_error_keystore":"Kont importéiert ass falsch, ka Kont Filet vu Feeler",
+            "imported_account_success":"Erfolleg importéiert",
+            "exist":"Dëse Account existéiert schonns, d'Note",
             "keystore_error":"Feeler:",
-            "imported_success":"Fichier Succès"
+            "imported_success":"Datei importéieren Successioun"
         },
         "remove_dia": {
-            "tit":"Sidd Dir sécher, dass Dir wëllt et ze läschen?",
-            "remove_confrim":"Ech sécher ze läschen",
-            "backup":"Weg drun, dass an dësem Kont zréck, Verméigen Schued ze verhënneren",
+            "tit":"Sidd Dir sécher, datt Dir se ewechhuelt?",
+            "remove_confrim":"Ech si sécher si ze läschen",
+            "backup":"Gitt op d'Auteur vun dësem Kont op, fir e Schued ze verhënneren.",
             "input_pwd":"Passwuert",
-            "placeholder_pwd":"Gitt weg d'Passwuert fir dës Kont",
-            "validate_password":"Gitt weg Kont Passwuert",
-            "remove_success":"geläscht erfollegräich"
+            "placeholder_pwd":"Gidd weg Äert Passwuert fir dësen Account",
+            "validate_password":"Gidd weg den Passwuert fir de Kont",
+            "remove_success":"Erfolleg ofgëtt"
         }
     },
     "page_config": {
-        "config_detection":"Detectioun ConfiguratiounName",
+        "config_detection":"Configuratiounsdetektioun",
         "content_msg":{
-            "ready_test":"Prett Configuratiounsdatei ze entdecken",
+            "ready_test":"Bereet Iech d 'Konfiguratiounsdatei z'erreechen",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Et huet d'läscht Node Configuratioun Informatiounen Qualifikatiounen",
-            "is_local":"Entdecken ob et eng lokal Node Fichier",
-            "already_local":"Moment do ass eng Configuratioun Datei Informatiounen Node Apparat",
-            "not_local":"Net Fichieren Node Configuratioun fonnt, kann et déi éischt Course ginn",
-            "config_write_local":"De Qualifikatiounen Node Informatiounen Fichier'en op déi lokal Scheif schrëftlech",
-            "whether_update_node":"Ob erkennen brauch gin aktualiséiert",
+            "get_latest":"Déi lescht Knätschkonfiguratiounsinformatioun gouf kritt",
+            "is_local":"Kuckt ob et e Knueddate lokal ass",
+            "already_local":"De Configuratiounsdatei vun der Knueddatei existéiert op dem aktuellen Apparat.",
+            "not_local":"D'Konfiguratiounsinformatioun vun der Knueddatei gëtt net festgestallt, et kann d'éischt de Moment laafen.",
+            "config_write_local":"Schreift déi gewonnene Knotinformationsdatei op der lokaler Festplatte",
+            "whether_update_node":"Kuckt ob d'Aktualiséierung néideg ass",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Eroflueden Node, weg ginn Patient",
-            "already_downloaded":"Node Programm ass erofgeluede an iis prett fir ufänken",
-            "ready_start":"Prett Node ufänken",
-            "enter_wallet":"Node fänkt erfollegräich, prett de Portemonnaie ze gitt"
+            "no":"Kuckt de Knot Programm, da sidd Dir Gedold",
+            "already_downloaded":"De Knuedungsprogramm gouf erofgelueden a se fäerdeg ze starten.",
+            "ready_start":"Bereet de Knäif un",
+            "enter_wallet":"Den Knuedner ass erfollegräich ugefaang a fäerdeg fir de Portemonnaie opzemaachen"
         },
         "version_dialog":{
-            "version_tit":"Versioun update VIRSCHLOEN",
-            "download_wallet":"Quguan Reseau déi neisten Versioun vum Suen download",
+            "version_tit":"Versioun vum Update aktualiséiert",
+            "download_wallet":"Gitt op d'offizielle Websäit, fir déi lescht Versioun vum Geld ze lueden",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

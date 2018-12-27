@@ -42,7 +42,7 @@
             "no_tag":"Futni një shënim llogarie",
             "no_address":"Ju lutemi shkruani adresën tuaj të llogarisë",
             "valid_address":"Adresa e kontaktit është e paligjshme",
-            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
+            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
             "exist":"Kontakti tashmë ekziston,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Modifiko shënimin",
             "subtit":"Shënoni një shënim për llogarinë tuaj",
             "no_tag":"Futni një shënim llogarie",
-            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja"
+            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja."
         },
         "dia_tx":{
             "tit":"Informacion mbi transaksionet",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Shkarko skedarin e llogarisë",
 
             "validate_tag":"Ju lutemi shkruani emrin e shënimit të llogarisë",
-            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
+            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
 
             "validate_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur",
             "validate_re_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur përsëri",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Vendosni emrin e shënimit të llogarisë",
 
             "validate_tag":"Ju lutemi shkruani emrin e shënimit të llogarisë",
-            "validate_tag_length":"Emri memo nuk mund të jetë më i gjatë se 8 shkronja",
+            "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
             "validate_enter_keystore":"Ju lutemi të importoni skedarin e llogarisë së parë",
             "validate_error_keystore":"Importi i llogarisë dështoi, mund të jetë gabim në skedarin e llogarisë",
             "imported_account_success":"Importuar me sukses",

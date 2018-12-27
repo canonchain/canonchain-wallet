@@ -1,7 +1,7 @@
 {
     "confirm":"Ikkonferma",
     "cancel":"Ikkanċella",
-    "dialog_tit":"Pront",
+    "dialog_tit":"Prompt",
     "close":"Agħlaq",
     "confirm_you_active":"Jekk jogħġbok ikkonferma l-operazzjoni tiegħek",
     "unit": {
@@ -12,7 +12,7 @@
         "transfer":"Trasferiment",
         "contacts":"Kuntatt",
         "setting":"Twaqqif",
-        "total":"Totali",
+        "total":"Total",
         "testnet":"Netwerk tat-test",
         "online":"Online",
         "offline":"Offline"
@@ -21,7 +21,7 @@
         "tit":"Twaqqif",
         "lang":"Lingwa",
         "select":"Jekk jogħġbok agħżel",
-        "version_number":"Verżjoni tal-kartiera"
+        "version_number":"Verżjoni kartiera"
     },
     "page_contacts": {
         "tit":"Kuntatt",
@@ -29,165 +29,165 @@
         "add_cont": {
             "tit":"Kuntatt ġdid",
             "tag":"Kuntatt",
-            "address":"L-indirizz tal-kont",
+            "address":"Indirizz tal-kont",
             "tag_placeholder":"Jekk jogħġbok ikteb l-isem tal-kuntatt",
-            "address_placeholder":"Jekk jogħġbok idħol l-indirizz tal-kont tal-kuntatt",
+            "address_placeholder":"Jekk jogħġbok ikteb l-indirizz tal-kont tal-kuntatt",
             "add_success":"Miżjud b'suċċess"
         },
         "delete_dialog": {
-            "title":"Int qed tneħħi",
-            "remove_success":"Tneħħiet b'suċċess"
+            "title":"Qed tneħħi",
+            "remove_success":"Imneħħija b’suċċess"
         },
         "msg_info": {
-            "no_tag":"Jekk jogħġbok daħħal in-nota tal-kont",
-            "no_address":"Jekk jogħġbok idħol l-indirizz tal-kont tiegħek",
+            "no_tag":"Jekk jogħġbok daħħal nota tal-kont",
+            "no_address":"Jekk jogħġbok ikteb l-indirizz tal-kont tiegħek",
             "valid_address":"L-indirizz tal-kuntatt huwa illegali",
-            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun akbar minn 8 karattri.",
+            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun ikbar minn 8 karattri.",
             "exist":"Il-kuntatt diġà jeżisti,"
         }
     },
     "page_transfer": {
-        "from_address":"Parti li tibgħat",
-        "to_address":"Payee",
+        "from_address":"Parti mittenti",
+        "to_address":"Min jitħallas",
         "amount":"Ammont",
-        "send_all":"Ibgħat kollha",
+        "send_all":"Ibgħat kollox",
         "data":"Dejta",
-        "data_placeholder":"Dejta hexadecimali",
-        "fees":"Ħlas għall-immaniġġjar",
-        "total":"Totali",
+        "data_placeholder":"Dejta esseċimali",
+        "fees":"Immaniġġjar miżata",
+        "total":"Total",
         "select":"Jekk jogħġbok agħżel",
-        "no_account_info":"Għad m'hemmx kont, jekk jogħġbok toħloq jew timporta kont",
+        "no_account_info":"Għad m'hemmx kont, jekk jogħġbok oħloq jew importa kont",
         "contacts_dig": {
-            "title":"Agħżel kont ta 'kuntatt",
+            "title":"Agħżel kont tal-kuntatt",
             "select_placeholder":"Jekk jogħġbok agħżel"
         },
         "confirm_dia": {
             "title":"Jekk jogħġbok ikkonferma",
-            "enter_passworld_tit":"Jekk jogħġbok daħħal il-password tiegħek",
-            "enter_passworld_place":"Jekk jogħġbok daħħal il-password tiegħek"
+            "enter_passworld_tit":"Jekk jogħġbok ikteb il-password tiegħek",
+            "enter_passworld_place":"Jekk jogħġbok ikteb il-password tiegħek"
         },
         "msg_info": {
             "address_null":"Jekk jogħġbok ikteb il-kont tal-parti l-oħra",
-            "balance_zero":"Bilanċ insuffiċjenti, li ma jistax ikompli",
-            "amount_zero":"L-ammont tat-trasferiment għandu jkun akbar minn 0",
-            "amount_error":"Jekk jogħġbok daħħal ammont ta 'transazzjoni legali",
-            "address_err":"Il-format tal-indirizz ittrasferit huwa invalidu.",
+            "balance_zero":"Bilanċ insuffiċjenti, ma jistax ikompli",
+            "amount_zero":"Ammont ta 'trasferiment irid ikun ikbar minn 0",
+            "amount_error":"Jekk jogħġbok ikteb ammont ta 'transazzjoni legali",
+            "address_err":"Il-format tal-indirizz trasferit huwa invalidu.",
             "send_success":"Tranżazzjoni mibgħuta",
 
-            "decrypt_err":"L-analiżi tal-kartiera fallew, jista 'jkun żball tal-password",
-            "send_error":"In-nuqqas ta 'tranżazzjoni: jekk jogħġbok iċċekkja jekk hemmx bilanċ suffiċjenti u miżata tal-minatur"
+            "decrypt_err":"It-tqabbil tal-kartiera falza, jista 'jkun żball tal-password",
+            "send_error":"It-transazzjoni falliet: jekk jogħġbok iċċekkja jekk hemmx biżżejjed bilanċ u miżata tal-minatur"
         }
     },
     "page_account": {
-        "transfer_log":"Rekord tat-tranżazzjoni",
+        "transfer_log":"Reġistrazzjoni tat-transazzjoni",
         "transfer_log_null":"L-ebda storja ta 'transazzjoni",
         "active_icon": {
             "go_transfer":"Ibda trasferiment",
-            "import_keystore":"Fajl ta 'kont",
+            "import_keystore":"Fajl tal-kont",
             "qrcode":"Kodiċi QR"
         },
         "edit_dia": {
-            "tit":"Tibdel in-nota",
+            "tit":"Ibdel in-nota",
             "subtit":"Immarka nota għall-kont tiegħek",
-            "no_tag":"Jekk jogħġbok daħħal in-nota tal-kont",
-            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun akbar minn 8 karattri."
+            "no_tag":"Jekk jogħġbok daħħal nota tal-kont",
+            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun ikbar minn 8 karattri."
         },
         "dia_tx":{
-            "tit":"Informazzjoni dwar it-tranżazzjonijiet",
-            "block_hash":"In-numru tat-tranżazzjoni",
+            "tit":"Informazzjoni dwar it-transazzjoni",
+            "block_hash":"Numru tat-transazzjoni",
             "status":"Stat",
-            "from":"Parti li tibgħat",
-            "to":"Payee",
+            "from":"Parti mittenti",
+            "to":"Min jitħallas",
             "amount":"Ammont",
             "data":"Dejta",
-            "send_time":"Ħin li jintbagħat",
-            "mac_time":"Ħin ewlieni tal-katina"
+            "send_time":"Mittenti ħin",
+            "mac_time":"Ħin tal-katina prinċipali"
         },
         "keystore": {
-            "tit":"Fajl ta 'portafoll ta' riżerva",
-            "copy":"Kopja",
+            "tit":"Fajl tal-kartiera backup",
+            "copy":"Ikkopja",
             "download":"Niżżel il-fajl tal-kartiera"
         },
         "msg_info": {
             "ads_copy_success":"L-indirizz ġie kkupjat",
-            "key_copy_success":"Kopja b'suċċess"
+            "key_copy_success":"Kopja ta 'suċċess"
         }
     },
     "page_home": {
-        "import_account":"Kont ta 'importazzjoni",
+        "import_account":"Importazzjoni kont",
         "add_account":"Kont ġdid",
         "acc":"Kont",
         "create_dia": {
             "create_tit":"Oħloq kont",
-            "backup_tit":"Iffrankar il-kont il-ġdid tiegħek",
+            "backup_tit":"Irrepeti l-kont il-ġdid tiegħek",
             "create_tag":"Nota tal-kont",
-            "create_pwd":"Set password",
+            "create_pwd":"Issettja l-password",
             "create_repwd":"Ikkonferma l-password",
-            "placeholder_tag":"Jekk jogħġbok issettja l-isem tal-kont nota",
+            "placeholder_tag":"Jekk jogħġbok issettja l-isem tan-nota tal-kont",
             "placeholder_pwd":"Jekk jogħġbok issettja l-password tal-kont",
             "placeholder_repwd":"Jekk jogħġbok ikkonferma l-password tal-kont",
             
             
-            "account_download_keystore":"Fajl tal-kont Download",
+            "account_download_keystore":"Niżżel il-fajl tal-kont",
 
-            "validate_tag":"Jekk jogħġbok daħħal l-isem tal-kont tal-kont",
-            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun akbar minn 8 karattri.",
+            "validate_tag":"Jekk jogħġbok ikteb l-isem tan-nota tal-kont",
+            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun ikbar minn 8 karattri.",
 
-            "validate_password":"Jekk jogħġbok daħħal il-password li ssettja",
-            "validate_re_password":"Jekk jogħġbok daħħal il-password li tissettja mill-ġdid",
-            "validate_strong_password":"Jekk jogħġbok daħħal password ta 'mill-inqas 8 ċifri",
-            "validate_password_length":"Il-password inkonsistenti daħal darbtejn",
+            "validate_password":"Jekk jogħġbok ikteb il-password li tissettjah",
+            "validate_re_password":"Jekk jogħġbok ikteb il-password li ssettjajt mill-ġdid",
+            "validate_strong_password":"Jekk jogħġbok ikteb password ta 'mill-inqas 8 numri",
+            "validate_password_length":"Password inkonsistenti mdaħħla darbtejn",
 
-            "create_success":"Maħluq b'suċċess",
-            "create_success_des":"Jekk jogħġbok salva l-fajl tal-kont tiegħek u ma taqsamha ma 'ħaddieħor!"
+            "create_success":"Maħluqa b'suċċess",
+            "create_success_des":"Jekk jogħġbok ħlief il-fajl tal-kont tiegħek u ma taqsamx ma 'ħadd!"
         },
         "import_dia": {
-            "tit":"Kont ta 'importazzjoni",    
-            "placeholder_keystore":"Jekk jogħġbok drag il-fajl tal-kont hawn",
+            "tit":"Importazzjoni kont",    
+            "placeholder_keystore":"Jekk jogħġbok ġib il-fajl tal-kont hawn",
             "create_tag":"Nota tal-kont",
-            "placeholder_tag":"Jekk jogħġbok issettja l-isem tal-kont nota",
+            "placeholder_tag":"Jekk jogħġbok issettja l-isem tan-nota tal-kont",
 
-            "validate_tag":"Jekk jogħġbok daħħal l-isem tal-kont tal-kont",
-            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun akbar minn 8 karattri.",
+            "validate_tag":"Jekk jogħġbok ikteb l-isem tan-nota tal-kont",
+            "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun ikbar minn 8 karattri.",
             "validate_enter_keystore":"Jekk jogħġbok importa l-fajl tal-kont l-ewwel",
-            "validate_error_keystore":"L-importazzjoni tal-kont falliet, tista 'tkun żball fil-fajl tal-kont",
-            "imported_account_success":"Importat b'suċċess",
+            "validate_error_keystore":"Importazzjoni tal-kont falliet, jista 'jkun żball fil-fajl tal-kont",
+            "imported_account_success":"Importati b’suċċess",
             "exist":"Dan il-kont diġà jeżisti, in-nota hija",
             "keystore_error":"Żball:",
-            "imported_success":"Importa fajl b'suċċess"
+            "imported_success":"Importa l-fajl b'suċċess"
         },
         "remove_dia": {
-            "tit":"Int żgur li trid tneħħih?",
+            "tit":"Inti żgur li trid tneħħiha?",
             "remove_confrim":"Jiena ċert li tneħħi",
-            "backup":"Jekk jogħġbok agħti attenzjoni fuq il-backup ta 'dan il-kont biex tevita ħsara fil-proprjetà.",
+            "backup":"Jekk jogħġbok oqgħod attent għall-backup ta 'dan il-kont biex tevita ħsara lill-proprjetà.",
             "input_pwd":"Password",
-            "placeholder_pwd":"Jekk jogħġbok daħħal il-password għal dan il-kont",
-            "validate_password":"Jekk jogħġbok daħħal il-password għall-kont",
-            "remove_success":"Tneħħiet b'suċċess"
+            "placeholder_pwd":"Jekk jogħġbok ikteb il-password għal dan il-kont",
+            "validate_password":"Jekk jogħġbok ikteb il-password għall-kont",
+            "remove_success":"Imneħħija b’suċċess"
         }
     },
     "page_config": {
-        "config_detection":"Detezzjoni tal-konfigurazzjoni",
+        "config_detection":"Skoperta ta 'konfigurazzjoni",
         "content_msg":{
-            "ready_test":"Ipprepara biex tiskopri l-fajl tal-konfigurazzjoni",
+            "ready_test":"Ipprepara biex jikxef il-fajl tal-konfigurazzjoni",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"L-aħħar informazzjoni dwar il-konfigurazzjoni tal-għoqda nkisbet",
-            "is_local":"Iċċekkja jekk hemmx node file lokalment",
-            "already_local":"Il-fajl tal-konfigurazzjoni tal-fajl node jeżisti fuq it-tagħmir kurrenti.",
-            "not_local":"L-informazzjoni dwar il-konfigurazzjoni tal-fajl tan-nodi ma nstabx, jista 'jkun l-ewwel darba.",
-            "config_write_local":"Ikteb il-fajl tal-informazzjoni node miksuba lid-diska lokali",
+            "get_latest":"Inkisbet l-aħħar informazzjoni dwar il-konfigurazzjoni tan-node",
+            "is_local":"Iċċekkja jekk hemmx fajl node lokalment",
+            "already_local":"Il-fajl tal-konfigurazzjoni tal-fajl node jeżisti fuq l-apparat kurrenti.",
+            "not_local":"L-informazzjoni dwar il-konfigurazzjoni tal-fajl node ma tinstabx, tista 'tkun l-ewwel darba li tkun għaddejja.",
+            "config_write_local":"Ikteb il-fajl tal-informazzjoni tan-node miksuba fuq id-diska lokali",
             "whether_update_node":"Iċċekkja jekk hemmx bżonn ta 'aġġornament",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Niżżel il-programm node, jekk jogħġbok tkun pazjent",
+            "no":"Tniżżil il-programm node, jekk jogħġbok kun paċenz",
             "already_downloaded":"Il-programm node ġie mniżżel u lest biex jibda.",
             "ready_start":"Ipprepara biex tibda n-nodu",
-            "enter_wallet":"In-node jinbeda b'suċċess u jkun lest biex jidħol fil-kartiera"
+            "enter_wallet":"In-nodu huwa b'suċċess u lest biex jidħol fil-portafoll"
         },
         "version_dialog":{
-            "version_tit":"Verżjoni ta 'aġġornament fil",
+            "version_tit":"Pront aġġornament tal-verżjoni",
             "download_wallet":"Mur fil-websajt uffiċjali biex tniżżel l-aħħar verżjoni tal-flus",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }

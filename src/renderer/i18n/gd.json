@@ -42,7 +42,7 @@
             "no_tag":"Cuir a-steach nòta cunntais",
             "no_address":"Cuir a-steach do sheòladh cunntais",
             "valid_address":"Tha seòladh a 'chonaltraidh mì-laghail",
-            "validate_tag_length":"'Chlàir ainm nach urrainn a bhith nas fhaide na caractaran 8",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
             "exist":"Tha an ceangal a-cheana ann,"
         }
     },
@@ -75,7 +75,7 @@
             "send_success":"Gnìomh air a chuir",
 
             "decrypt_err":"Dh'fhàillig parsadh barain, is dòcha gur e mearachd facal-faire a th 'ann",
-            "send_error":"Tha tar-fàilligeadh: Lorg fhaicinn ma tha gu leòr cothromachadh agus mèinnearan chìs"
+            "send_error":"Dh'fhàillig an t-atharrachadh: feuch a bheil cothromachadh gu leòr agus cìs mèinnearach"
         }
     },
     "page_account": {
@@ -90,7 +90,7 @@
             "tit":"Nòta atharrachaidh",
             "subtit":"Dèan nota airson do chunntas",
             "no_tag":"Cuir a-steach nòta cunntais",
-            "validate_tag_length":"'Chlàir ainm nach urrainn a bhith nas fhaide na caractaran 8"
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran."
         },
         "dia_tx":{
             "tit":"Fiosrachadh gluasadach",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Luchdaich sìos faidhle cunntais",
 
             "validate_tag":"Cuir a-steach ainm na nòta cunntais",
-            "validate_tag_length":"'Chlàir ainm nach urrainn a bhith nas fhaide na caractaran 8",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
 
             "validate_password":"Cuir a-steach am facal-faire a shuidhich thu",
             "validate_re_password":"Cuir a-steach am facal-faire a shuidhich thu a-rithist",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Suidhich an t-ainm nòta cunntais",
 
             "validate_tag":"Cuir a-steach ainm na nòta cunntais",
-            "validate_tag_length":"'Chlàir ainm nach urrainn a bhith nas fhaide na caractaran 8",
+            "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
             "validate_enter_keystore":"Cuir a-steach am faidhle cunntais an toiseach",
             "validate_error_keystore":"Dh'fhàillig càradh a 'chunntais, is dòcha gur e mearachd faidhle cunntais",
             "imported_account_success":"Chaidh a thoirt a-steach gu soirbheachail",
@@ -159,7 +159,7 @@
         "remove_dia": {
             "tit":"A bheil thu cinnteach gu bheil thu airson a thoirt às?",
             "remove_confrim":"Tha mi cinnteach gun cuir mi às",
-            "backup":"Thoiribh an aire gum ais suas an cunntas seo, a sheachnadh seilbh milleadh",
+            "backup":"Thoir aire gu cùl-taice a 'chunntais seo gus milleadh thogalaichean a sheachnadh.",
             "input_pwd":"Facal-faire",
             "placeholder_pwd":"Cuir a-steach am facal-faire airson a 'chunntais seo",
             "validate_password":"Cuir a-steach am facal-faire airson a 'chunntais",
@@ -174,7 +174,7 @@
             "get_latest":"Chaidh am fiosrachadh rèiteachaidh nód as ùire fhaighinn",
             "is_local":"Dèan cinnteach gu bheil faidhle nód ann gu h-ionadail",
             "already_local":"Tha faidhle rèiteachaidh an fhaidhle nód air an inneal làithreach.",
-            "not_local":"Neo lorg node rèiteachaidh faidhlichean, dh'fhaodadh gum biodh e a 'chiad ruith",
+            "not_local":"Chan eil am fiosrachadh rèiteachaidh den fhaidhle nód air a lorg, is dòcha gur e seo a 'chiad uair a tha e a' ruith.",
             "config_write_local":"Sgrìobh am faidhle fiosrachaidh nòta a chaidh fhaighinn chun a 'bhios ionadail",
             "whether_update_node":"Dèan cinnteach a bheil feum air ùrachadh",
             "no_need":"本地 CanonChain 节点文件是最新的",

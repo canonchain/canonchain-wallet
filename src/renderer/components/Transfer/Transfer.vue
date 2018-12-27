@@ -213,21 +213,13 @@ export default {
                 return;
             }
 
-            //发送金额 为0 或负，不可发送
-            // if (czrAmount <= 0) {
-            //     self.$message.error(
-            //         self.$t("page_transfer.msg_info.amount_zero")
-            //     );
-            //     return;
-            // }
-
             // 账户余额为0不可以发
-            // if (!parseFloat(self.accountInfo.balance)) {
-            //     self.$message.error(
-            //         self.$t("page_transfer.msg_info.balance_zero")
-            //     );
-            //     return;
-            // }
+            if (!parseFloat(self.accountInfo.balance)) {
+                self.$message.error(
+                    self.$t("page_transfer.msg_info.balance_zero")
+                );
+                return;
+            }
 
             console.log(self.$czr.request.accountValidate);
             self.$czr.request

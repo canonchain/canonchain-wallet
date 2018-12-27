@@ -56,7 +56,7 @@
         "fees":"Frais de traitement",
         "total":"Total",
         "select":"S'il vous plaît choisir",
-        "no_account_info":"Pas encore de compte, créez ou importez un compte",
+        "no_account_info":"Pas encore de compte, veuillez créer ou importer un compte",
         "contacts_dig": {
             "title":"Sélectionnez un compte de contact",
             "select_placeholder":"S'il vous plaît choisir"
@@ -93,7 +93,7 @@
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères."
         },
         "dia_tx":{
-            "tit":"Information de transaction",
+            "tit":"Informations de transaction",
             "block_hash":"Numéro de transaction",
             "status":"Etat",
             "from":"Partie d'envoi",
@@ -130,10 +130,10 @@
             
             "account_download_keystore":"Télécharger le fichier de compte",
 
-            "validate_tag":"S'il vous plaît entrer le nom de la note de compte",
+            "validate_tag":"Veuillez saisir le nom de la note de compte.",
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères.",
 
-            "validate_password":"Veuillez entrer le mot de passe que vous avez défini",
+            "validate_password":"Veuillez saisir le mot de passe que vous avez défini",
             "validate_re_password":"Veuillez saisir le mot de passe que vous avez défini à nouveau.",
             "validate_strong_password":"Veuillez entrer un mot de passe d'au moins 8 chiffres",
             "validate_password_length":"Mot de passe incohérent entré deux fois",
@@ -147,7 +147,7 @@
             "create_tag":"Note de compte",
             "placeholder_tag":"Veuillez définir le nom de la note de compte.",
 
-            "validate_tag":"S'il vous plaît entrer le nom de la note de compte",
+            "validate_tag":"Veuillez saisir le nom de la note de compte.",
             "validate_tag_length":"Le nom du nom de la note ne peut pas dépasser 8 caractères.",
             "validate_enter_keystore":"S'il vous plaît importer le fichier de compte d'abord",
             "validate_error_keystore":"L'importation du compte a échoué, peut être une erreur de fichier du compte",
@@ -161,7 +161,7 @@
             "remove_confrim":"Je suis sûr de retirer",
             "backup":"Faites attention à la sauvegarde de ce compte pour éviter des dommages matériels.",
             "input_pwd":"Mot de passe",
-            "placeholder_pwd":"Veuillez saisir le mot de passe pour ce compte.",
+            "placeholder_pwd":"Veuillez entrer le mot de passe pour ce compte",
             "validate_password":"S'il vous plaît entrer le mot de passe pour le compte",
             "remove_success":"Enlevé avec succès"
         }
@@ -187,7 +187,7 @@
             "enter_wallet":"Le nœud est démarré avec succès et prêt à entrer dans le portefeuille"
         },
         "version_dialog":{
-            "version_tit":"Invite de mise à jour de version",
+            "version_tit":"Mise à jour de la version",
             "download_wallet":"Allez sur le site officiel pour télécharger la dernière version de l'argent",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }

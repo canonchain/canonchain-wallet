@@ -42,7 +42,7 @@
             "no_tag":"Introduïu una nota del compte",
             "no_address":"Introduïu l'adreça del vostre compte",
             "valid_address":"L'adreça del contacte és il·legal",
-            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
+            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
             "exist":"El contacte ja existeix,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Modifica nota",
             "subtit":"Marqueu una nota per al vostre compte",
             "no_tag":"Introduïu una nota del compte",
-            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters"
+            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters."
         },
         "dia_tx":{
             "tit":"Informació sobre la transacció",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Baixeu el fitxer del compte",
 
             "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
+            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
 
             "validate_password":"Introduïu la contrasenya que heu definit",
             "validate_re_password":"Introduïu la contrasenya que heu configurat de nou",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Establiu el nom de la nota del compte",
 
             "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom de memòria no pot superar els 8 caràcters",
+            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
             "validate_enter_keystore":"Importeu primer el fitxer del compte",
             "validate_error_keystore":"La importació del compte ha fallat, pot ser un error del fitxer de compte",
             "imported_account_success":"S'ha importat correctament",
@@ -172,7 +172,7 @@
             "ready_test":"Prepara't per detectar el fitxer de configuració",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
             "get_latest":"S'ha obtingut la informació de configuració del node més recent",
-            "is_local":"Comproveu si hi ha un fitxer de node localment",
+            "is_local":"Comproveu si hi ha un fitxer de node local",
             "already_local":"El fitxer de configuració del fitxer node existeix en el dispositiu actual.",
             "not_local":"La informació de configuració del fitxer node no es detecta, pot ser la primera vegada que s'executi.",
             "config_write_local":"Escriu el fitxer d'informació del node obtingut al disc local",

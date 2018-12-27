@@ -41,8 +41,8 @@
         "msg_info": {
             "no_tag":"Ji kerema xwe ji bîr nekin",
             "no_address":"Ji kerema xwe navnîşana hesabê xwe binivîse",
-            "valid_address":"Navnîşa têkiliyê ne qanûn e",
-            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
+            "valid_address":"Navnîşa têkiliyê neqanûn e",
+            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
             "exist":"Têkilî niha heye,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Şirovekirin",
             "subtit":"Ji bo hesabê we re gotarek binivîse",
             "no_tag":"Ji kerema xwe ji bîr nekin",
-            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê"
+            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne."
         },
         "dia_tx":{
             "tit":"Agahdariya danûstendinê",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Pelê hesab bike",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
+            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
 
             "validate_password":"Ji kerema xwe hûn şîfreya xwe binivîse",
             "validate_re_password":"Ji kerema xwe hûn şîfreya xwe binivîse ku hûn dîsa careke din bikin",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Ji kerema xwe navê navnîşa hesabê binivîse",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
+            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
             "validate_enter_keystore":"Ji kerema xwe pelê yekem hesab bike",
             "validate_error_keystore":"Import import failed, dibe ku çewtiyek pelê hesab bike",
             "imported_account_success":"Bi serkeftî veguhestin",
@@ -188,7 +188,7 @@
         },
         "version_dialog":{
             "version_tit":"Guhertoya Nûveçûna lezgîn",
-            "download_wallet":"Herin malpera fermî ya fermî bike ku guhertoya herî dawî ya pereyan bike",
+            "download_wallet":"Herin malpera fermî ya fermî bikin ku da ku versa nûçeyê dawî ya pereyan bikin",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

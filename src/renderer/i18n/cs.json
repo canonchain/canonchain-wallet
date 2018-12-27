@@ -74,7 +74,7 @@
             "address_err":"Formát přenesené adresy je neplatný.",
             "send_success":"Transakce odeslána",
 
-            "decrypt_err":"Analýza peněženky se nezdařila, může se jednat o chybu hesla",
+            "decrypt_err":"Analýza peněženky se nezdařila, může to být chyba hesla",
             "send_error":"Transakce selhala: zkontrolujte prosím, zda je dostatečný zůstatek a poplatek za mince"
         }
     },
@@ -136,7 +136,7 @@
             "validate_password":"Zadejte prosím heslo, které jste nastavili",
             "validate_re_password":"Zadejte znovu zadané heslo",
             "validate_strong_password":"Zadejte heslo alespoň 8 číslic",
-            "validate_password_length":"Nekonzistentní zadání hesla dvakrát",
+            "validate_password_length":"Nesouvislé zadání hesla dvakrát",
 
             "create_success":"Vytvořeno úspěšně",
             "create_success_des":"Uložte si soubor účtu a nesdílejte ho nikomu!"

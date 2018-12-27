@@ -150,7 +150,7 @@
             "validate_tag":"Por favor insira o nome da nota da conta",
             "validate_tag_length":"O nome do nome da nota não pode ser maior que 8 caracteres.",
             "validate_enter_keystore":"Por favor, importe o arquivo da conta primeiro",
-            "validate_error_keystore":"A importação de conta falhou, pode ser um erro no arquivo de conta",
+            "validate_error_keystore":"A importação de conta falhou, pode ser um erro no arquivo da conta",
             "imported_account_success":"Importado com sucesso",
             "exist":"Esta conta já existe, a nota é",
             "keystore_error":"Erro:",

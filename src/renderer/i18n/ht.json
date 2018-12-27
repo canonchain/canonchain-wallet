@@ -159,7 +159,7 @@
         "remove_dia": {
             "tit":"Èske ou sèten ou vle retire li?",
             "remove_confrim":"Mwen asire w ke yo retire",
-            "backup":"Tanpri peye atansyon sou backup sa a kont pou fè pou evite domaj sou pwopriyete.",
+            "backup":"Tanpri peye atansyon sou backup sa a kont pou fè pou evite domaj sou pwopriyete a.",
             "input_pwd":"Modpas",
             "placeholder_pwd":"Tanpri antre modpas la pou kont sa a",
             "validate_password":"Tanpri antre modpas la pou kont lan",

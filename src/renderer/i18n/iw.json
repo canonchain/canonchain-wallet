@@ -169,7 +169,7 @@
     "page_config": {
         "config_detection":"זיהוי תצורה",
         "content_msg":{
-            "ready_test":"היכונו כדי לאתר את קובץ התצורה",
+            "ready_test":"היכונו כדי לזהות את קובץ התצורה",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
             "get_latest":"המידע האחרון תצורת הצומת הושג",
             "is_local":"בדוק אם יש קובץ צומת מקומי",

@@ -135,7 +135,7 @@
 
             "validate_password":"သငျသညျ set password ကိုရိုက်ထည့်ပေးပါ",
             "validate_re_password":"သငျသညျတဖနျ set password ကိုရိုက်ထည့်ပေးပါ",
-            "validate_strong_password":"အနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
+            "validate_strong_password":"ကအနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
             "validate_password_length":"Passwords များကိုမတိုက်ဆိုင်ကြဘူး",
 
             "create_success":"အောင်မြင်မှု Creating",

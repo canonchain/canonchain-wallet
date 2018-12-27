@@ -42,7 +42,7 @@
             "no_tag":"Tafadhali ingiza maelezo ya akaunti",
             "no_address":"Tafadhali ingiza anwani yako ya akaunti",
             "valid_address":"Anwani ya kuwasiliana ni kinyume cha sheria",
-            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
+            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
             "exist":"Mawasiliano tayari iko,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Badilisha maelezo",
             "subtit":"Andika alama kwa akaunti yako",
             "no_tag":"Tafadhali ingiza maelezo ya akaunti",
-            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8"
+            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8."
         },
         "dia_tx":{
             "tit":"Maelezo ya ushirikiano",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Pakua faili ya akaunti",
 
             "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
+            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
 
             "validate_password":"Tafadhali ingiza nenosiri uliloweka",
             "validate_re_password":"Tafadhali ingiza nenosiri uliloweka tena",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
 
             "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la Memo haliwezi kuwa zaidi ya wahusika 8",
+            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
             "validate_enter_keystore":"Tafadhali ingiza faili ya akaunti kwanza",
             "validate_error_keystore":"Kuagiza kwa Akaunti kushindwa, inaweza kuwa kosa la faili la akaunti",
             "imported_account_success":"Imeingizwa kwa mafanikio",

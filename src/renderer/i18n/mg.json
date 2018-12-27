@@ -139,7 +139,7 @@
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
-            "create_success_des":"Azafady saveo ny rakitrao ka aza mizara izany amin'ny olona rehetra!"
+            "create_success_des":"Azafady saveo ny rakitra ao amin'ny kaontinao ary aza mizara izany amin'ny olona rehetra!"
         },
         "import_dia": {
             "tit":"Ampidiro ny kaonty",    
@@ -159,7 +159,7 @@
         "remove_dia": {
             "tit":"Tena tianao ve ny manala azy?",
             "remove_confrim":"Azoko antoka fa tokony hesorina aho",
-            "backup":"Tandremo tsara ny fametrahana ity kaonty ity mba hialana amin'ny fahavoazana.",
+            "backup":"Tandremo tsara ny fametrahana ity kaonty ity mba hisorohana ny fahavoazan'ny fananana.",
             "input_pwd":"Password",
             "placeholder_pwd":"Ampidiro azafady ny tenimiafinao amin'ity kaonty ity",
             "validate_password":"Ampidiro azafady ny tenimiafin'ilay kaonty",

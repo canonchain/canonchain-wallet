@@ -1,5 +1,5 @@
 {
-    "confirm":"Konfirmasikan",
+    "confirm":"Konfirmasi",
     "cancel":"Batalkan",
     "dialog_tit":"Prompt",
     "close":"Tutup",
@@ -35,11 +35,11 @@
             "add_success":"Berhasil ditambahkan"
         },
         "delete_dialog": {
-            "title":"Anda menghapus",
+            "title":"Anda sedang menghapus",
             "remove_success":"Berhasil dihapus"
         },
         "msg_info": {
-            "no_tag":"Harap masukkan catatan akun",
+            "no_tag":"Silakan masukkan catatan akun",
             "no_address":"Silakan masukkan alamat akun Anda",
             "valid_address":"Alamat kontak itu ilegal",
             "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
@@ -47,7 +47,7 @@
         }
     },
     "page_transfer": {
-        "from_address":"Mengirim pihak",
+        "from_address":"Mengirim pesta",
         "to_address":"Penerima pembayaran",
         "amount":"Jumlah",
         "send_all":"Kirim semua",
@@ -62,49 +62,49 @@
             "select_placeholder":"Silakan pilih"
         },
         "confirm_dia": {
-            "title":"Tolong konfirmasi",
+            "title":"Mohon konfirmasi",
             "enter_passworld_tit":"Silakan masukkan kata sandi Anda",
             "enter_passworld_place":"Silakan masukkan kata sandi Anda"
         },
         "msg_info": {
             "address_null":"Silakan masukkan akun pihak lain",
-            "balance_zero":"Saldo tidak mencukupi, tidak dapat dilanjutkan",
+            "balance_zero":"Saldo tidak mencukupi, tidak dapat melanjutkan",
             "amount_zero":"Jumlah transfer harus lebih besar dari 0",
-            "amount_error":"Harap masukkan jumlah transaksi hukum",
+            "amount_error":"Silakan masukkan jumlah transaksi yang sah",
             "address_err":"Format alamat yang ditransfer tidak valid.",
             "send_success":"Transaksi terkirim",
 
-            "decrypt_err":"Gagal menguraikan dompet, mungkin ini adalah kesalahan kata sandi",
-            "send_error":"Transaksi gagal: silakan periksa apakah ada saldo yang cukup dan biaya penambang"
+            "decrypt_err":"Penguraian dompet gagal, mungkin kesalahan kata sandi",
+            "send_error":"Transaksi gagal: harap periksa apakah ada saldo dan biaya penambang yang memadai"
         }
     },
     "page_account": {
         "transfer_log":"Catatan transaksi",
         "transfer_log_null":"Tidak ada riwayat transaksi",
         "active_icon": {
-            "go_transfer":"Mulai transfer",
+            "go_transfer":"Lakukan transfer",
             "import_keystore":"File akun",
             "qrcode":"Kode QR"
         },
         "edit_dia": {
             "tit":"Ubah catatan",
             "subtit":"Tandai catatan untuk akun Anda",
-            "no_tag":"Harap masukkan catatan akun",
+            "no_tag":"Silakan masukkan catatan akun",
             "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter."
         },
         "dia_tx":{
             "tit":"Informasi transaksi",
             "block_hash":"Nomor transaksi",
             "status":"Negara",
-            "from":"Mengirim pihak",
+            "from":"Mengirim pesta",
             "to":"Penerima pembayaran",
             "amount":"Jumlah",
             "data":"Data",
-            "send_time":"Waktu pengiriman",
-            "mac_time":"Waktu berantai utama"
+            "send_time":"Mengirim waktu",
+            "mac_time":"Waktu rantai utama"
         },
         "keystore": {
-            "tit":"Cadangkan file dompet",
+            "tit":"File dompet cadangan",
             "copy":"Salin",
             "download":"Unduh file dompet"
         },
@@ -122,42 +122,42 @@
             "backup_tit":"Cadangkan akun baru Anda",
             "create_tag":"Catatan akun",
             "create_pwd":"Setel kata sandi",
-            "create_repwd":"Konfirmasi kata sandi",
-            "placeholder_tag":"Silakan mengatur nama catatan akun",
-            "placeholder_pwd":"Silakan mengatur kata sandi akun",
-            "placeholder_repwd":"Silakan konfirmasi kata sandi akun",
+            "create_repwd":"Konfirmasikan kata sandi",
+            "placeholder_tag":"Silakan tentukan nama catatan akun",
+            "placeholder_pwd":"Silakan setel kata sandi akun",
+            "placeholder_repwd":"Harap konfirmasi kata sandi akun",
             
             
             "account_download_keystore":"Unduh file akun",
 
-            "validate_tag":"Harap masukkan nama catatan akun",
+            "validate_tag":"Silakan masukkan nama catatan akun",
             "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
 
-            "validate_password":"Silakan masukkan kata sandi yang Anda tetapkan",
+            "validate_password":"Silakan masukkan kata sandi yang Anda atur",
             "validate_re_password":"Silakan masukkan kata sandi yang Anda atur lagi",
-            "validate_strong_password":"Masukkan kata sandi minimal 8 digit",
-            "validate_password_length":"Kata sandi tidak konsisten dimasukkan dua kali",
+            "validate_strong_password":"Silakan masukkan kata sandi minimal 8 digit",
+            "validate_password_length":"Kata sandi yang tidak konsisten dimasukkan dua kali",
 
-            "create_success":"Berhasil dibuat",
+            "create_success":"Diciptakan dengan sukses",
             "create_success_des":"Harap simpan file akun Anda dan jangan bagikan dengan siapa pun!"
         },
         "import_dia": {
             "tit":"Impor akun",    
-            "placeholder_keystore":"Silakan seret file akun di sini",
+            "placeholder_keystore":"Harap seret file akun di sini",
             "create_tag":"Catatan akun",
-            "placeholder_tag":"Silakan mengatur nama catatan akun",
+            "placeholder_tag":"Silakan tentukan nama catatan akun",
 
-            "validate_tag":"Harap masukkan nama catatan akun",
+            "validate_tag":"Silakan masukkan nama catatan akun",
             "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
             "validate_enter_keystore":"Harap impor file akun terlebih dahulu",
             "validate_error_keystore":"Impor akun gagal, mungkin kesalahan file akun",
             "imported_account_success":"Berhasil diimpor",
             "exist":"Akun ini sudah ada, catatannya adalah",
-            "keystore_error":"Galat:",
-            "imported_success":"Impor file berhasil"
+            "keystore_error":"Kesalahan:",
+            "imported_success":"Impor file dengan sukses"
         },
         "remove_dia": {
-            "tit":"Anda yakin ingin menghapusnya?",
+            "tit":"Apakah Anda yakin ingin menghapusnya?",
             "remove_confrim":"Saya yakin untuk menghapus",
             "backup":"Harap perhatikan cadangan akun ini untuk menghindari kerusakan properti.",
             "input_pwd":"Kata sandi",
@@ -171,24 +171,24 @@
         "content_msg":{
             "ready_test":"Bersiaplah untuk mendeteksi file konfigurasi",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Informasi konfigurasi node terbaru telah diperoleh",
-            "is_local":"Periksa apakah ada file node secara lokal",
-            "already_local":"File konfigurasi dari file node ada di perangkat saat ini.",
-            "not_local":"Informasi konfigurasi file node tidak terdeteksi, mungkin ini pertama kali berjalan.",
-            "config_write_local":"Tulis file informasi node yang diperoleh ke disk lokal",
+            "get_latest":"Informasi konfigurasi simpul terbaru telah diperoleh",
+            "is_local":"Periksa apakah ada file simpul secara lokal",
+            "already_local":"File konfigurasi dari file simpul ada di perangkat saat ini.",
+            "not_local":"Informasi konfigurasi dari file node tidak terdeteksi, mungkin ini adalah pertama kalinya berjalan.",
+            "config_write_local":"Tulis file informasi simpul yang diperoleh ke disk lokal",
             "whether_update_node":"Periksa apakah pembaruan diperlukan",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Mengunduh program node, harap bersabar",
-            "already_downloaded":"Program simpul telah diunduh dan siap untuk dimulai.",
-            "ready_start":"Bersiaplah untuk memulai simpul",
+            "no":"Mengunduh program simpul, harap bersabar",
+            "already_downloaded":"Program simpul telah diunduh dan siap untuk memulai.",
+            "ready_start":"Bersiaplah untuk memulai node",
             "enter_wallet":"Node berhasil dimulai dan siap untuk memasuki dompet"
         },
         "version_dialog":{
-            "version_tit":"Permintaan pembaruan versi",
-            "download_wallet":"Buka situs web resmi untuk mengunduh versi terbaru dari uang tersebut",
+            "version_tit":"Versi pembaruan cepat",
+            "download_wallet":"Kunjungi situs web resmi untuk mengunduh versi uang terbaru",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

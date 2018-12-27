@@ -42,7 +42,7 @@
             "no_tag":"Voer asseblief 'n rekeningnota in",
             "no_address":"Voer asseblief jou rekening adres in",
             "valid_address":"Die adres van die kontak is onwettig",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
             "exist":"Die kontak bestaan ​​reeds,"
         }
     },
@@ -90,7 +90,7 @@
             "tit":"Wysig nota",
             "subtit":"Merk 'n nota vir jou rekening",
             "no_tag":"Voer asseblief 'n rekeningnota in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie"
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie."
         },
         "dia_tx":{
             "tit":"Transaksie-inligting",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Laai rekeninglêer af",
 
             "validate_tag":"Voer asseblief die rekeningnootnaam in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
 
             "validate_password":"Voer asseblief die wagwoord in wat u ingestel het",
             "validate_re_password":"Voer asseblief die wagwoord in wat u weer ingestel het",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Stel asseblief die rekeningnota se naam in",
 
             "validate_tag":"Voer asseblief die rekeningnootnaam in",
-            "validate_tag_length":"Memo naam kan nie langer as 8 karakters wees nie",
+            "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
             "validate_enter_keystore":"Voer asseblief eers die rekeninglêer in",
             "validate_error_keystore":"Rekeninginvoer het misluk, dalk is die rekening lêer fout",
             "imported_account_success":"Suksesvol ingevoer",

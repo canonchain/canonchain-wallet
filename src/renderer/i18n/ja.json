@@ -1,16 +1,16 @@
 {
-    "confirm":"確認",
+    "confirm":"確認する",
     "cancel":"キャンセル",
     "dialog_tit":"プロンプト",
     "close":"閉じる",
-    "confirm_you_active":"あなたの操作を確認してください",
+    "confirm_you_active":"操作を確認してください",
     "unit": {
         "czr":"CZR"
     },
     "model_header": {
         "home":"ホーム",
-        "transfer":"転送",
-        "contacts":"連絡先",
+        "transfer":"転送する",
+        "contacts":"お問い合わせ",
         "setting":"設定",
         "total":"合計",
         "testnet":"テストネットワーク",
@@ -21,174 +21,174 @@
         "tit":"設定",
         "lang":"言語",
         "select":"選択してください",
-        "version_number":"ウォレットバージョン"
+        "version_number":"財布バージョン"
     },
     "page_contacts": {
-        "tit":"連絡先",
+        "tit":"お問い合わせ",
         "add_dialog":"新しい連絡先",
         "add_cont": {
             "tit":"新しい連絡先",
-            "tag":"連絡先",
+            "tag":"お問い合わせ",
             "address":"アカウントアドレス",
             "tag_placeholder":"連絡先の名前を入力してください",
             "address_placeholder":"連絡先のアカウントアドレスを入力してください",
-            "add_success":"追加されました"
+            "add_success":"追加しました"
         },
         "delete_dialog": {
-            "title":"あなたは削除しています",
-            "remove_success":"削除されました"
+            "title":"削除しています",
+            "remove_success":"削除しました"
         },
         "msg_info": {
-            "no_tag":"アカウントのメモを入力してください",
+            "no_tag":"口座メモを入力してください",
             "no_address":"あなたのアカウントアドレスを入力してください",
-            "valid_address":"連絡先の住所が不正です",
-            "validate_tag_length":"ノート名の名前は8文字以下でなければなりません。",
-            "exist":"連絡先は既に存在しますが、"
+            "valid_address":"連絡先の住所が違法です",
+            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
+            "exist":"連絡先は既に存在します"
         }
     },
     "page_transfer": {
-        "from_address":"送信側",
+        "from_address":"送信パーティー",
         "to_address":"受取人",
         "amount":"金額",
-        "send_all":"すべてを送る",
+        "send_all":"全部送る",
         "data":"データ",
         "data_placeholder":"16進データ",
         "fees":"手数料",
         "total":"合計",
         "select":"選択してください",
-        "no_account_info":"アカウントはまだ作成されていません。アカウントを作成またはインポートしてください",
+        "no_account_info":"まだアカウントがありません。アカウントを作成またはインポートしてください",
         "contacts_dig": {
             "title":"連絡先アカウントを選択",
             "select_placeholder":"選択してください"
         },
         "confirm_dia": {
-            "title":"確認してください",
+            "title":"ご確認ください",
             "enter_passworld_tit":"パスワードを入力してください",
             "enter_passworld_place":"パスワードを入力してください"
         },
         "msg_info": {
             "address_null":"相手のアカウントを入力してください",
-            "balance_zero":"バランスが不十分で、続行できません",
-            "amount_zero":"転送量は0より大きくなければなりません",
-            "amount_error":"法的な取引金額を入力してください",
+            "balance_zero":"残高不足、続行不可",
+            "amount_zero":"振込金額は0より大きくなければなりません",
+            "amount_error":"法定取引金額を入力してください",
             "address_err":"転送されたアドレスの形式が無効です。",
-            "send_success":"送信されたトランザクション",
+            "send_success":"取引が送信されました",
 
-            "decrypt_err":"ウォレットの解析に失敗しました。パスワードエラーの可能性があります",
-            "send_error":"取引に失敗しました：十分な残高と鉱山手数料があるかどうか確認してください"
+            "decrypt_err":"Walletの解析に失敗しました。パスワードエラーの可能性があります",
+            "send_error":"取引に失敗しました：十分な残高と鉱夫費があるかどうか確認してください"
         }
     },
     "page_account": {
         "transfer_log":"取引記録",
-        "transfer_log_null":"取引履歴はありません",
+        "transfer_log_null":"取引履歴なし",
         "active_icon": {
             "go_transfer":"転送を開始する",
             "import_keystore":"アカウントファイル",
             "qrcode":"QRコード"
         },
         "edit_dia": {
-            "tit":"メモを変更する",
-            "subtit":"あなたのアカウントのメモをマークする",
-            "no_tag":"アカウントのメモを入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下でなければなりません。"
+            "tit":"メモを修正",
+            "subtit":"あなたのアカウントにメモを付ける",
+            "no_tag":"口座メモを入力してください",
+            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。"
         },
         "dia_tx":{
             "tit":"取引情報",
             "block_hash":"取引番号",
             "status":"州",
-            "from":"送信側",
+            "from":"送信パーティー",
             "to":"受取人",
             "amount":"金額",
             "data":"データ",
             "send_time":"送信時間",
-            "mac_time":"主鎖の時間"
+            "mac_time":"メインチェーンタイム"
         },
         "keystore": {
-            "tit":"バックアップ・ウォレット・ファイル",
-            "copy":"コピー",
-            "download":"ウォレットファイルをダウンロードする"
+            "tit":"バックアップウォレットファイル",
+            "copy":"コピーする",
+            "download":"財布ファイルをダウンロードする"
         },
         "msg_info": {
-            "ads_copy_success":"アドレスがコピーされました",
-            "key_copy_success":"コピーが成功しました"
+            "ads_copy_success":"住所がコピーされました",
+            "key_copy_success":"コピー成功"
         }
     },
     "page_home": {
-        "import_account":"アカウントをインポートする",
+        "import_account":"アカウントをインポート",
         "add_account":"新しいアカウント",
         "acc":"アカウント",
         "create_dia": {
             "create_tit":"アカウントを作成する",
             "backup_tit":"新しいアカウントをバックアップする",
-            "create_tag":"勘定科目",
-            "create_pwd":"パスワードを設定する",
-            "create_repwd":"パスワードを確認する",
-            "placeholder_tag":"口座名を設定してください",
+            "create_tag":"アカウントノート",
+            "create_pwd":"パスワードを設定",
+            "create_repwd":"パスワード確認",
+            "placeholder_tag":"アカウントノート名を設定してください",
             "placeholder_pwd":"アカウントのパスワードを設定してください",
             "placeholder_repwd":"アカウントのパスワードを確認してください",
             
             
             "account_download_keystore":"アカウントファイルをダウンロードする",
 
-            "validate_tag":"口座名を入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下でなければなりません。",
+            "validate_tag":"アカウントノートの名前を入力してください",
+            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
 
             "validate_password":"設定したパスワードを入力してください",
-            "validate_re_password":"再度設定したパスワードを入力してください",
-            "validate_strong_password":"少なくとも8桁のパスワードを入力してください",
-            "validate_password_length":"不一致のパスワードが2回入力されました",
+            "validate_re_password":"もう一度設定したパスワードを入力してください",
+            "validate_strong_password":"8桁以上のパスワードを入力してください",
+            "validate_password_length":"パスワードが2回入力されています",
 
-            "create_success":"作成済み",
-            "create_success_des":"あなたのアカウントファイルを保存し、誰とも共有しないでください！"
+            "create_success":"作成しました",
+            "create_success_des":"アカウントファイルを保存して他の人と共有しないでください。"
         },
         "import_dia": {
-            "tit":"アカウントをインポートする",    
-            "placeholder_keystore":"ここにアカウントファイルをドラッグしてください",
-            "create_tag":"勘定科目",
-            "placeholder_tag":"口座名を設定してください",
+            "tit":"アカウントをインポート",    
+            "placeholder_keystore":"アカウントファイルをここにドラッグしてください",
+            "create_tag":"アカウントノート",
+            "placeholder_tag":"アカウントノート名を設定してください",
 
-            "validate_tag":"口座名を入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下でなければなりません。",
+            "validate_tag":"アカウントノートの名前を入力してください",
+            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
             "validate_enter_keystore":"最初にアカウントファイルをインポートしてください",
-            "validate_error_keystore":"アカウントのインポートに失敗しました。アカ​​ウントファイルのエラーです",
-            "imported_account_success":"インポートに成功しました",
-            "exist":"このアカウントは既に存在し、メモは",
+            "validate_error_keystore":"アカウントのインポートに失敗しました。アカ​​ウントファイルエラーの可能性があります",
+            "imported_account_success":"正常にインポートされました",
+            "exist":"このアカウントは既に存在します。メモは",
             "keystore_error":"エラー：",
-            "imported_success":"ファイルを正常にインポートする"
+            "imported_success":"ファイルをインポートしました"
         },
         "remove_dia": {
-            "tit":"それを削除してもよろしいですか？",
-            "remove_confrim":"私は必ず削除します",
-            "backup":"物的損害を避けるため、このアカウントのバックアップに注意してください。",
+            "tit":"削除してよろしいですか？",
+            "remove_confrim":"きっと削除します",
+            "backup":"物的損害を避けるために、このアカウントのバックアップに注意を払ってください。",
             "input_pwd":"パスワード",
             "placeholder_pwd":"このアカウントのパスワードを入力してください",
             "validate_password":"アカウントのパスワードを入力してください",
-            "remove_success":"削除されました"
+            "remove_success":"削除しました"
         }
     },
     "page_config": {
         "config_detection":"構成検出",
         "content_msg":{
-            "ready_test":"構成ファイルを検出する準備をする",
+            "ready_test":"設定ファイルを検出する準備をする",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"最新のノード構成情報が取得されました",
-            "is_local":"ノードファイルがローカルにあるかどうかを確認する",
-            "already_local":"現在のデバイスにノードファイルの構成ファイルが存在します。",
-            "not_local":"ノードファイルの構成情報が検出されない場合は、初めて実行されることがあります。",
-            "config_write_local":"取得したノード情報ファイルをローカルディスクに書き込みます",
-            "whether_update_node":"更新が必要かどうかを確認する",
+            "get_latest":"最新のノード構成情報を取得しました",
+            "is_local":"ローカルにノードファイルがあるか確認してください",
+            "already_local":"ノードファイルの設定ファイルは現在のデバイスに存在します。",
+            "not_local":"ノードファイルの構成情報が検出されません。初めて実行される可能性があります。",
+            "config_write_local":"取得したノード情報ファイルをローカルディスクに書き込む",
+            "whether_update_node":"更新が必要かどうかを確認",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"ノードプログラムをダウンロードしてください、しばらくお待ちください",
-            "already_downloaded":"ノードプログラムがダウンロードされ、開始する準備ができました。",
-            "ready_start":"ノードの起動を準備する",
-            "enter_wallet":"ノードが正常に開始され、ウォレットに入る準備ができました。"
+            "no":"ノードプログラムをダウンロードしています、しばらくお待ちください",
+            "already_downloaded":"ノードプログラムがダウンロードされ、起動する準備が整いました。",
+            "ready_start":"ノードを起動する準備をします。",
+            "enter_wallet":"ノードは正常に起動され、ウォレットに入る準備ができました"
         },
         "version_dialog":{
-            "version_tit":"バージョン更新のプロンプト",
-            "download_wallet":"最新版のお金をダウンロードするには、公式サイトにアクセスしてください",
+            "version_tit":"バージョン更新プロンプト",
+            "download_wallet":"公式ウェブサイトに行き、最新版のお金をダウンロードしてください。",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

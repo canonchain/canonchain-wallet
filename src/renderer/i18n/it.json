@@ -75,7 +75,7 @@
             "send_success":"Transazione inviata",
 
             "decrypt_err":"L'analisi del wallet non è riuscita, potrebbe trattarsi di un errore della password",
-            "send_error":"Transazione fallita: si prega di verificare se vi è una quota sufficiente di equilibrio e minatore"
+            "send_error":"Transazione fallita: si prega di verificare se vi sono sufficienti costi per il saldo e il minatore"
         }
     },
     "page_account": {
@@ -174,7 +174,7 @@
             "get_latest":"Le informazioni sulla configurazione del nodo più recenti sono state ottenute",
             "is_local":"Controlla se c'è un file di nodo localmente",
             "already_local":"Il file di configurazione del file di nodo esiste sul dispositivo corrente.",
-            "not_local":"Le informazioni di configurazione del file nodo non vengono rilevate, potrebbe essere la prima volta in esecuzione.",
+            "not_local":"Le informazioni di configurazione del file di nodo non vengono rilevate, potrebbe essere la prima volta in esecuzione.",
             "config_write_local":"Scrivi il file di informazioni sul nodo ottenuto sul disco locale",
             "whether_update_node":"Controlla se è necessario un aggiornamento",
             "no_need":"本地 CanonChain 节点文件是最新的",

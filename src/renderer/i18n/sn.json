@@ -62,7 +62,7 @@
             "select_placeholder":"Ndapota sarudza"
         },
         "confirm_dia": {
-            "title":"Ndapota chengetedza",
+            "title":"Ndapota fungidzira",
             "enter_passworld_tit":"Ndapota nyora password yako",
             "enter_passworld_place":"Ndapota nyora password yako"
         },
@@ -159,9 +159,9 @@
         "remove_dia": {
             "tit":"Une chokwadi here kuti unoda kuibvisa?",
             "remove_confrim":"Ndine chokwadi chokuti ndichabvisa",
-            "backup":"Ndapota chengetera kubhadhadziro yebhuku iyi kuti urege kudzima pfuma.",
+            "backup":"Ndapota chengetedza kubhadharira kwebhuku iyi kuti urege kuparadza zvinhu.",
             "input_pwd":"Password",
-            "placeholder_pwd":"Ndapota nyora pasi password yeiyo account",
+            "placeholder_pwd":"Ndapota tumira pasi password yeiyo account",
             "validate_password":"Ndapota nyora password yeiyo account",
             "remove_success":"Akabudirira kubudirira"
         }
@@ -176,7 +176,7 @@
             "already_local":"Itaji yefaira yefodhi yefodhi iripo pane imwe purogiramu yemazuva ano.",
             "not_local":"Izvo zvakagadziriswa zveruzhinji zvefodhi yefodhi haina kuonekwa, inogona kunge ichatanga kushanda.",
             "config_write_local":"Nyora iyo yakagadziriswa fodhi yefodhi yefaira kune yedhi disk",
-            "whether_update_node":"Chengetedza kana zvinyorwa zvinodiwa",
+            "whether_update_node":"Chengetedza kana chinoshandiswa chinodiwa",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",

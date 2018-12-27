@@ -42,7 +42,7 @@
             "no_tag":"Da fatan a shigar da bayanin kula",
             "no_address":"Da fatan a shigar adireshin adireshinku",
             "valid_address":"Adireshin lambar sadarwa ba bisa doka ba ne",
-            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
+            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
             "exist":"Lambar ta rigaya ta kasance,"
         }
     },
@@ -75,7 +75,7 @@
             "send_success":"Ma'amalar aikawa",
 
             "decrypt_err":"Kuskuren takalma ya kasa, yana iya zama kuskuren sirri",
-            "send_error":"An gama aiki: don Allah a duba idan akwai daidaitattun daidaitaka da nauyin kuɗi"
+            "send_error":"An gama aiki: don Allah a duba idan akwai daidaitattun daidaitattun kuɗin kuɗi"
         }
     },
     "page_account": {
@@ -90,7 +90,7 @@
             "tit":"Sauya bayanin kula",
             "subtit":"Rubuta bayanin kula don asusunku",
             "no_tag":"Da fatan a shigar da bayanin kula",
-            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba"
+            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba."
         },
         "dia_tx":{
             "tit":"Bayaniyar bayani",
@@ -131,7 +131,7 @@
             "account_download_keystore":"Download fayil din asusun",
 
             "validate_tag":"Da fatan a shigar da sunan martabar asusun",
-            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
+            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
 
             "validate_password":"Da fatan a shigar da kalmar wucewar da kuka saita",
             "validate_re_password":"Da fatan a shigar da kalmar sirrin da kuka sake saitawa",
@@ -148,7 +148,7 @@
             "placeholder_tag":"Da fatan a sanya sunan martabar asusun",
 
             "validate_tag":"Da fatan a shigar da sunan martabar asusun",
-            "validate_tag_length":"Sunan memo bazai iya kasancewa fiye da haruffa 8 ba",
+            "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
             "validate_enter_keystore":"Da fatan a shigar da asusun ajiyar farko",
             "validate_error_keystore":"Asusun da aka shigo da asusun, ya zama kuskuren fayil ɗin asusu",
             "imported_account_success":"An shigo da shi cikin nasara",
@@ -157,7 +157,7 @@
             "imported_success":"Shigar da fayil cikin nasara"
         },
         "remove_dia": {
-            "tit":"Shin kuna tabbatar kuna so ku cire shi?",
+            "tit":"Shin kuna tabbatar kuna son cire shi?",
             "remove_confrim":"Na tabbata cire",
             "backup":"Da fatan a kula da madadin wannan asusun don kauce wa lalacewar dukiya.",
             "input_pwd":"Kalmar sirri",

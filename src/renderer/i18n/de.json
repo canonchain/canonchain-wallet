@@ -1,19 +1,19 @@
 {
-    "confirm":"Bestätigen Sie",
+    "confirm":"Bestätigen",
     "cancel":"Abbrechen",
-    "dialog_tit":"Aufforderung",
-    "close":"Schließen",
-    "confirm_you_active":"Bitte bestätigen Sie Ihre Operation",
+    "dialog_tit":"Prompt",
+    "close":"Schliessen",
+    "confirm_you_active":"Bitte bestätigen Sie Ihren Vorgang",
     "unit": {
         "czr":"CZR"
     },
     "model_header": {
         "home":"Zuhause",
-        "transfer":"Übertragung",
+        "transfer":"Übertragen",
         "contacts":"Kontakt",
         "setting":"Einstellung",
-        "total":"Summe",
-        "testnet":"Netzwerk testen",
+        "total":"Gesamt",
+        "testnet":"Testen Sie das Netzwerk",
         "online":"Online",
         "offline":"Offline"
     },
@@ -21,7 +21,7 @@
         "tit":"Einstellung",
         "lang":"Sprache",
         "select":"Bitte wählen",
-        "version_number":"Wallet-Version"
+        "version_number":"Brieftaschenversion"
     },
     "page_contacts": {
         "tit":"Kontakt",
@@ -31,85 +31,85 @@
             "tag":"Kontakt",
             "address":"Kontoadresse",
             "tag_placeholder":"Bitte geben Sie den Namen des Kontakts ein",
-            "address_placeholder":"Bitte geben Sie die Kontonummer des Kontakts ein",
+            "address_placeholder":"Bitte geben Sie die Kontoadresse des Kontakts ein",
             "add_success":"Erfolgreich hinzugefügt"
         },
         "delete_dialog": {
-            "title":"Sie entfernen",
+            "title":"Du entfernst dich",
             "remove_success":"Erfolgreich entfernt"
         },
         "msg_info": {
-            "no_tag":"Bitte geben Sie eine Kontonummer ein",
+            "no_tag":"Bitte geben Sie eine Konto-Notiz ein",
             "no_address":"Bitte geben Sie Ihre Kontoadresse ein",
             "valid_address":"Die Adresse des Kontakts ist illegal",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
-            "exist":"Der Kontakt existiert bereits,"
+            "exist":"Der Kontakt existiert bereits"
         }
     },
     "page_transfer": {
-        "from_address":"Sendepartei",
+        "from_address":"Sendende Partei",
         "to_address":"Zahlungsempfänger",
         "amount":"Betrag",
-        "send_all":"Sende alles",
+        "send_all":"Senden Sie alles",
         "data":"Daten",
-        "data_placeholder":"Hexadezimale Daten",
+        "data_placeholder":"Hexadezimaldaten",
         "fees":"Bearbeitungsgebühr",
-        "total":"Summe",
+        "total":"Gesamt",
         "select":"Bitte wählen",
-        "no_account_info":"Noch kein Konto, bitte Konto erstellen oder importieren",
+        "no_account_info":"Noch kein Konto, bitte erstellen oder importieren Sie ein Konto",
         "contacts_dig": {
-            "title":"Wählen Sie ein Kontaktkonto",
+            "title":"Wählen Sie ein Kontaktkonto aus",
             "select_placeholder":"Bitte wählen"
         },
         "confirm_dia": {
-            "title":"Bitte bestätigen",
+            "title":"Bitte bestätigen Sie",
             "enter_passworld_tit":"Bitte geben Sie Ihr Passwort ein",
             "enter_passworld_place":"Bitte geben Sie Ihr Passwort ein"
         },
         "msg_info": {
             "address_null":"Bitte geben Sie das Konto des anderen Teilnehmers ein",
-            "balance_zero":"Unzureichendes Gleichgewicht, unfähig fortzufahren",
-            "amount_zero":"Der Überweisungsbetrag muss größer als 0 sein",
-            "amount_error":"Bitte geben Sie einen legalen Transaktionsbetrag ein",
-            "address_err":"Das Format der übertragenen Adresse ist ungültig.",
+            "balance_zero":"Unzureichendes Gleichgewicht, kann nicht fortfahren",
+            "amount_zero":"Überweisungsbetrag muss größer als 0 sein",
+            "amount_error":"Bitte geben Sie einen gesetzlichen Transaktionsbetrag ein",
+            "address_err":"Das Format der übergebenen Adresse ist ungültig.",
             "send_success":"Transaktion gesendet",
 
-            "decrypt_err":"Das Parsen von Briefen ist fehlgeschlagen, möglicherweise liegt ein Kennwortfehler vor",
-            "send_error":"Transaktion fehlgeschlagen: Bitte prüfen Sie, ob genügend Guthaben und Bergarbeitergebühr vorhanden sind"
+            "decrypt_err":"Die Analyse der Brieftasche ist fehlgeschlagen. Es kann sich um einen Kennwortfehler handeln",
+            "send_error":"Transaktion fehlgeschlagen: Bitte überprüfen Sie, ob ein ausreichendes Guthaben und eine Minergebühr vorhanden sind"
         }
     },
     "page_account": {
         "transfer_log":"Transaktionsdatensatz",
-        "transfer_log_null":"Kein Transaktionsverlauf",
+        "transfer_log_null":"Keine Transaktionshistorie",
         "active_icon": {
-            "go_transfer":"Initiieren Sie eine Übertragung",
+            "go_transfer":"Transfer einleiten",
             "import_keystore":"Kontodatei",
             "qrcode":"QR-Code"
         },
         "edit_dia": {
-            "tit":"Notiz ändern",
+            "tit":"Hinweis ändern",
             "subtit":"Markieren Sie eine Notiz für Ihr Konto",
-            "no_tag":"Bitte geben Sie eine Kontonummer ein",
+            "no_tag":"Bitte geben Sie eine Konto-Notiz ein",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein."
         },
         "dia_tx":{
             "tit":"Transaktionsinformationen",
             "block_hash":"Transaktionsnummer",
-            "status":"Staat",
-            "from":"Sendepartei",
+            "status":"Zustand",
+            "from":"Sendende Partei",
             "to":"Zahlungsempfänger",
             "amount":"Betrag",
             "data":"Daten",
             "send_time":"Sendezeit",
-            "mac_time":"Hauptzeit der Kette"
+            "mac_time":"Hauptkettenzeit"
         },
         "keystore": {
-            "tit":"Backup-Brieftasche-Datei",
+            "tit":"Backup-Wallet-Datei",
             "copy":"Kopieren",
             "download":"Laden Sie die Wallet-Datei herunter"
         },
         "msg_info": {
-            "ads_copy_success":"Die Adresse wurde kopiert",
+            "ads_copy_success":"Adresse wurde kopiert",
             "key_copy_success":"Erfolgreiche Kopie"
         }
     },
@@ -121,44 +121,44 @@
             "create_tit":"Erstellen Sie ein Konto",
             "backup_tit":"Sichern Sie Ihr neues Konto",
             "create_tag":"Konto Hinweis",
-            "create_pwd":"Passwort festlegen",
+            "create_pwd":"Passwort setzen",
             "create_repwd":"Passwort bestätigen",
-            "placeholder_tag":"Bitte geben Sie den Namen des Kontonamens ein",
-            "placeholder_pwd":"Bitte geben Sie das Kontopasswort ein",
+            "placeholder_tag":"Bitte legen Sie den Namen der Kontonotiz fest",
+            "placeholder_pwd":"Bitte legen Sie das Kontopasswort fest",
             "placeholder_repwd":"Bitte bestätigen Sie das Kontopasswort",
             
             
-            "account_download_keystore":"Konto-Datei herunterladen",
+            "account_download_keystore":"Laden Sie die Kontodatei herunter",
 
-            "validate_tag":"Bitte geben Sie den Namen des Kontonamens ein",
+            "validate_tag":"Bitte geben Sie den Kontonamen ein",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
 
-            "validate_password":"Bitte geben Sie das von Ihnen festgelegte Passwort ein",
-            "validate_re_password":"Bitte geben Sie das von Ihnen eingestellte Passwort ein",
+            "validate_password":"Bitte geben Sie das von Ihnen eingestellte Passwort ein",
+            "validate_re_password":"Bitte geben Sie das Passwort erneut ein",
             "validate_strong_password":"Bitte geben Sie ein Passwort mit mindestens 8 Ziffern ein",
             "validate_password_length":"Inkonsistentes Passwort zweimal eingegeben",
 
             "create_success":"Erfolgreich erstellt",
-            "create_success_des":"Bitte speichern Sie Ihre Account-Datei und teilen Sie sie nicht mit anderen!"
+            "create_success_des":"Bitte speichern Sie Ihre Kontodatei und geben Sie sie nicht an Dritte weiter!"
         },
         "import_dia": {
             "tit":"Konto importieren",    
-            "placeholder_keystore":"Bitte ziehe die Account-Datei hier",
+            "placeholder_keystore":"Bitte ziehen Sie die Kontodatei hierher",
             "create_tag":"Konto Hinweis",
-            "placeholder_tag":"Bitte geben Sie den Namen des Kontonamens ein",
+            "placeholder_tag":"Bitte legen Sie den Namen der Kontonotiz fest",
 
-            "validate_tag":"Bitte geben Sie den Namen des Kontonamens ein",
+            "validate_tag":"Bitte geben Sie den Kontonamen ein",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
-            "validate_enter_keystore":"Bitte importieren Sie zuerst die Account-Datei",
-            "validate_error_keystore":"Der Kontoimport ist fehlgeschlagen, möglicherweise liegt ein Fehler in der Konto-Datei vor",
+            "validate_enter_keystore":"Bitte importieren Sie zuerst die Kontodatei",
+            "validate_error_keystore":"Kontoimport fehlgeschlagen, möglicherweise ist ein Kontodateifehler",
             "imported_account_success":"Erfolgreich importiert",
-            "exist":"Dieser Account existiert bereits, der Hinweis ist",
+            "exist":"Dieses Konto existiert bereits, die Notiz ist",
             "keystore_error":"Fehler:",
             "imported_success":"Datei erfolgreich importieren"
         },
         "remove_dia": {
-            "tit":"Sind Sie sicher, dass Sie es entfernen möchten?",
-            "remove_confrim":"Ich bin sicher, zu entfernen",
+            "tit":"Möchten Sie es wirklich entfernen?",
+            "remove_confrim":"Ich bin sicher zu entfernen",
             "backup":"Bitte achten Sie auf die Sicherung dieses Kontos, um Sachschäden zu vermeiden.",
             "input_pwd":"Passwort",
             "placeholder_pwd":"Bitte geben Sie das Passwort für dieses Konto ein",
@@ -169,26 +169,26 @@
     "page_config": {
         "config_detection":"Konfigurationserkennung",
         "content_msg":{
-            "ready_test":"Bereiten Sie sich darauf vor, die Konfigurationsdatei zu erkennen",
+            "ready_test":"Bereiten Sie die Erkennung der Konfigurationsdatei vor",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Die letzte Knotenkonfigurationsinformation wurde erhalten",
-            "is_local":"Überprüfen Sie, ob lokal eine Knotendatei vorhanden ist",
+            "get_latest":"Die neuesten Informationen zur Knotenkonfiguration wurden abgerufen",
+            "is_local":"Prüfen Sie, ob lokal eine Knotendatei vorhanden ist",
             "already_local":"Die Konfigurationsdatei der Knotendatei ist auf dem aktuellen Gerät vorhanden.",
-            "not_local":"Die Konfigurationsinformationen der Knotendatei werden nicht erkannt, möglicherweise wird sie zum ersten Mal ausgeführt.",
+            "not_local":"Die Konfigurationsinformationen der Knotendatei werden nicht erkannt. Möglicherweise werden sie zum ersten Mal ausgeführt.",
             "config_write_local":"Schreiben Sie die erhaltene Knoteninformationsdatei auf die lokale Festplatte",
-            "whether_update_node":"Überprüfen Sie, ob ein Update erforderlich ist",
+            "whether_update_node":"Prüfen Sie, ob ein Update erforderlich ist",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Download des Knotenprogramms, bitte haben Sie etwas Geduld",
-            "already_downloaded":"Das Knotenprogramm wurde heruntergeladen und ist startbereit.",
-            "ready_start":"Bereiten Sie vor, den Knoten zu starten",
-            "enter_wallet":"Der Knoten wurde erfolgreich gestartet und ist bereit, in die Brieftasche zu gelangen"
+            "no":"Das Knotenprogramm wird heruntergeladen, bitte haben Sie etwas Geduld",
+            "already_downloaded":"Das Knotenprogramm wurde heruntergeladen und kann gestartet werden.",
+            "ready_start":"Bereiten Sie sich vor, den Knoten zu starten",
+            "enter_wallet":"Der Knoten ist erfolgreich gestartet und bereit, die Brieftasche zu betreten"
         },
         "version_dialog":{
-            "version_tit":"Versionsaktualisierung",
-            "download_wallet":"Gehen Sie auf die offizielle Website, um die neueste Version des Geldes herunterzuladen",
+            "version_tit":"Versionsaktualisierungsaufforderung",
+            "download_wallet":"Besuchen Sie die offizielle Website, um die neueste Version des Geldes herunterzuladen",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

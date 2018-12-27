@@ -56,7 +56,7 @@
         "fees":"Tarifa de manejo",
         "total":"Total",
         "select":"Por favor elija",
-        "no_account_info":"Aún no hay cuenta, por favor cree o importe la cuenta",
+        "no_account_info":"Aún no tienes cuenta, por favor crea o importa una cuenta",
         "contacts_dig": {
             "title":"Seleccione una cuenta de contacto",
             "select_placeholder":"Por favor elija"
@@ -69,12 +69,12 @@
         "msg_info": {
             "address_null":"Por favor ingrese la cuenta de la otra parte",
             "balance_zero":"Balance insuficiente, no se puede continuar.",
-            "amount_zero":"El monto de la transferencia debe ser mayor que 0",
+            "amount_zero":"El importe de la transferencia debe ser mayor que 0",
             "amount_error":"Por favor ingrese un monto de transacción legal",
             "address_err":"El formato de la dirección transferida no es válido.",
             "send_success":"Transacción enviada",
 
-            "decrypt_err":"Falló el análisis de monedero, puede ser un error de contraseña",
+            "decrypt_err":"Falló el análisis de la cartera, puede ser un error de contraseña",
             "send_error":"Transacción fallida: verifique si hay suficiente saldo y tarifa de minero"
         }
     },
@@ -130,13 +130,13 @@
             
             "account_download_keystore":"Descargar archivo de cuenta",
 
-            "validate_tag":"Por favor ingrese el nombre de la nota de la cuenta",
+            "validate_tag":"Por favor ingrese el nombre de la nota de cuenta",
             "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
 
             "validate_password":"Por favor ingrese la contraseña que estableció",
             "validate_re_password":"Por favor ingrese la contraseña que estableció de nuevo",
             "validate_strong_password":"Por favor, introduzca una contraseña de al menos 8 dígitos",
-            "validate_password_length":"Contraseña inconsistente ingresada dos veces",
+            "validate_password_length":"Contraseña incoherente introducida dos veces",
 
             "create_success":"Creado exitosamente",
             "create_success_des":"Por favor, guarde el archivo de su cuenta y no lo comparta con nadie!"
@@ -147,13 +147,13 @@
             "create_tag":"Nota de cuenta",
             "placeholder_tag":"Por favor, establezca el nombre de la nota de cuenta",
 
-            "validate_tag":"Por favor ingrese el nombre de la nota de la cuenta",
+            "validate_tag":"Por favor ingrese el nombre de la nota de cuenta",
             "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
             "validate_enter_keystore":"Por favor importe el archivo de cuenta primero",
             "validate_error_keystore":"Error en la importación de la cuenta, puede haber un error en el archivo de la cuenta",
             "imported_account_success":"Exitosamente importado",
             "exist":"Esta cuenta ya existe, la nota es",
-            "keystore_error":"Error:",
+            "keystore_error":"Error",
             "imported_success":"Importar archivo correctamente"
         },
         "remove_dia": {

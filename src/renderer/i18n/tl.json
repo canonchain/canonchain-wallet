@@ -172,7 +172,7 @@
             "ready_test":"Maghanda upang makita ang configuration file",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
             "get_latest":"Ang pinakabagong impormasyon sa configuration ng node ay nakuha",
-            "is_local":"Suriin kung may node file nang lokal",
+            "is_local":"Suriin kung mayroong node file nang lokal",
             "already_local":"Ang configuration file ng node file ay umiiral sa kasalukuyang aparato.",
             "not_local":"Ang impormasyon ng pagsasaayos ng node na file ay hindi nakita, maaaring ito ang unang pagkakataon na tumatakbo.",
             "config_write_local":"Isulat ang nakuha node na impormasyon file sa lokal na disk",

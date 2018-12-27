@@ -75,7 +75,7 @@
             "send_success":"Tranzacția a fost trimisă",
 
             "decrypt_err":"Parcelarea parolei nu a reușit, poate fi o eroare de parolă",
-            "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și taxa de miner"
+            "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și o taxă pentru mineri"
         }
     },
     "page_account": {

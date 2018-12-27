@@ -5,11 +5,11 @@
             <p class="config-test">{{ $t('page_config.config_detection') }} …</p>
             <p class="message">{{conMsg}}</p>
         </div>
-        <el-dialog :title="$t('page_config.version_tit')" :visible.sync="versionDialogSwitch" width="60%" :close-on-click-modal="false" :close-on-press-escape="false" :show-close="false" :modal="false">
-            <span>{{ $t('page_config.wallet_disabled') }}</span>
+        <el-dialog :title="$t('page_config.version_dialog.version_tit')" :visible.sync="versionDialogSwitch" width="60%" :close-on-click-modal="false" :close-on-press-escape="false" :show-close="false" :modal="false">
+            <span>{{ $t('page_config.version_dialog.wallet_disabled') }}</span>
             <span slot="footer" class="dialog-footer">
                 <!-- <el-button @click="dropOut">退出钱包 </el-button> -->
-                <el-button type="primary" @click="downloadWallet">{{ $t('page_config.download_wallet') }}</el-button>
+                <el-button type="primary" @click="downloadWallet">{{ $t('page_config.version_dialog.download_wallet') }}</el-button>
             </span>
         </el-dialog>
     </div>
@@ -84,19 +84,19 @@ export default {
                 NODE_TYPE: "CanonChain",
                 binaryVersion: ""
             };
-            self.conMsg = self.$t("page_config.version_dialog.ready_test");
+            self.conMsg = self.$t("page_config.content_msg.ready_test");
             self.$startLogs.info("准备检测配置文件");
         },
 
         checkForNewConfig() {
-            self.conMsg = self.$t("page_config.version_dialog.network_latest");
+            self.conMsg = self.$t("page_config.content_msg.network_latest");
             self.$startLogs.info("检测是否有新的 CanonChain 节点文件 ");
 
             axios
                 .get(self.latest_config.BINARY_URL)
                 .then(response => {
                     self.latest_config.content = response.data;
-                    self.conMsg = self.$t("page_config.version_dialog.get_latest");
+                    self.conMsg = self.$t("page_config.content_msg.get_latest");
                     self.$startLogs.info(
                         "已获取到最新的节点配置信息",
                         response.data
@@ -108,7 +108,7 @@ export default {
                 });
         },
         checkLocalConfig() {
-            self.conMsg = self.$t("page_config.version_dialog.is_local");
+            self.conMsg = self.$t("page_config.content_msg.is_local");
             self.$startLogs.info("检测本地是否有节点文件");
             //读取本地二进制配置文件
             try {
@@ -120,10 +120,10 @@ export default {
                         )
                         .toString()
                 );
-                self.conMsg = self.$t("page_config.version_dialog.already_local");
+                self.conMsg = self.$t("page_config.content_msg.already_local");
                 self.$startLogs.info("当前设备存在节点文件的配置信息");
             } catch (err) {
-                self.conMsg = self.$t("page_config.version_dialog.not_local");
+                self.conMsg = self.$t("page_config.content_msg.not_local");
                 self.$startLogs.info(
                     "没有检测到节点文件的配置信息，可能是第一次运行"
                 );
@@ -135,7 +135,7 @@ export default {
             self.isUpdate();
         },
         writeLocalConfig(json) {
-            self.conMsg = self.$t("page_config.version_dialog.config_write_local");
+            self.conMsg = self.$t("page_config.content_msg.config_write_local");
             self.$startLogs.info("将获取的节点信息文件，写入本地磁盘");
 
             fs.writeFileSync(
@@ -150,16 +150,16 @@ export default {
             ].version;
             let localVer = this.local_config.clients[this.node_info.NODE_TYPE]
                 .version;
-            self.conMsg = self.$t("page_config.version_dialog.whether_update_node");
+            self.conMsg = self.$t("page_config.content_msg.whether_update_node");
             self.$startLogs.info(
                 `检测是否需要更新,本地${localVer},最新${latestVer}`
             );
             if (latestVer == localVer) {
-                self.conMsg = self.$t("page_config.version_dialog.no_need");
+                self.conMsg = self.$t("page_config.content_msg.no_need");
                 self.$startLogs.info("本地 CanonChain 节点文件是最新的");
                 this.isDownload();
             } else {
-                self.conMsg = self.$t("page_config.version_dialog.need");
+                self.conMsg = self.$t("page_config.content_msg.need");
                 self.$startLogs.info("本地 CanonChain 节点文件是老版本");
                 this.writeLocalConfig(this.latest_config.content);
                 this.isDownload();
@@ -186,9 +186,10 @@ export default {
             };
 
             //判断是否有 CanonChain
-            self.conMsg = self.$t("page_config.version_dialog.is_local_node");
+            self.conMsg = self.$t("page_config.content_msg.is_local_node");
             self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
             try {
+                console.log(options.directory)
                 self.$startLogs.info(
                     "本地的节点文件",
                     path.join(
@@ -202,11 +203,11 @@ export default {
                         this.node_info.binaryVersion.bin
                     )
                 );
-                self.conMsg = self.$t("page_config.version_dialog.have");
+                self.conMsg = self.$t("page_config.content_msg.have");
                 self.$startLogs.info("当前设备已存在 CanonChain 节点文件");
                 self.runCanonChain();
             } catch (err) {
-                self.conMsg = self.$t("page_config.version_dialog.no");
+                self.conMsg = self.$t("page_config.content_msg.no");
                 self.$startLogs.info(
                     "正在下载节点程序,请耐心等待",
                     this.node_info.binaryVersion.url,
@@ -218,7 +219,7 @@ export default {
                     options.directory,
                     options
                 ).then(() => {
-                    self.conMsg = self.$t("page_config.version_dialog.already_downloaded");
+                    self.conMsg = self.$t("page_config.content_msg.already_downloaded");
                     self.$startLogs.info("节点程序已经下载好");
                     self.runCanonChain();
                 });
@@ -231,7 +232,7 @@ export default {
                 this.node_info.binaryVersion.bin
             );
             self.$startLogs.info("准备启动 CanonChain :", nodePath);
-            self.conMsg = self.$t("page_config.version_dialog.ready_start");
+            self.conMsg = self.$t("page_config.content_msg.ready_start");
 
             //如果节点启动了，就不再启用了
             self.$czr.request
@@ -253,7 +254,7 @@ export default {
 
                     // let ls = fork("./child");
 
-                    self.conMsg = self.$t("page_config.version_dialog.enter_wallet");
+                    self.conMsg = self.$t("page_config.content_msg.enter_wallet");
                     self.$startLogs.info("CanonChainPid", ls.pid);
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     //进程守护

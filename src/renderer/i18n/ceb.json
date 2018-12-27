@@ -162,7 +162,7 @@
             "backup":"Palihug pagtagad sa pag-backup sa niini nga account aron malikayan ang kadaot sa propyedad.",
             "input_pwd":"Sala",
             "placeholder_pwd":"Palihug pasabta ang pasword alang niini nga account",
-            "validate_password":"Palihug pasabta ang password alang sa account",
+            "validate_password":"Palihug ipasulod ang password alang sa account",
             "remove_success":"Malampuson nga gikuha"
         }
     },
@@ -171,7 +171,7 @@
         "content_msg":{
             "ready_test":"Pag-andam sa pag-ila sa configuration file",
             "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Ang pinaka-ulahi nga kasayuran sa configuration sa node nakuha",
+            "get_latest":"Ang pinaka-ulahi nga kasayuran sa configuration nga node nakuha",
             "is_local":"Susiha kon dunay node nga file sa lokal nga lugar",
             "already_local":"Ang configuration file sa node file naa sa kasamtangan nga device.",
             "not_local":"Ang kasayuran nga kasayuran sa node file dili mahibaw-an, mahimo kini ang unang higayon nga magdagan.",
