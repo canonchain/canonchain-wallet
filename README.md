@@ -2,6 +2,11 @@
 
 标准链钱包
 
+### Data Path
+
+MAC:`/Users/YouName/Library/Application Support/AppName`;
+
+Windows:``;
 
 ### Tips
 

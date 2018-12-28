@@ -343,10 +343,10 @@ export default {
                         }
 
                         // console.log("isEqual ",isEqual)
-                        console.log(
-                            "2.对比是否变化,判断两次Hash是否相同 => ",
-                            isEqual
-                        );
+                        // console.log(
+                        //     "2.对比是否变化,判断两次Hash是否相同 => ",
+                        //     isEqual
+                        // );
                         if (isEqual) {
                             //如果是相同的，继续下次循环
                             self.runGetTransTimer();
@@ -524,7 +524,7 @@ export default {
 
         //当前账户发送的交易 Start
         initSendTrans(isFirstInit) {
-            console.log("初始化数据了", isFirstInit);
+            // console.log("初始化数据了", isFirstInit);
             let _current = this.sendTransCurrent;
             _current.sourcesAry = this.$db
                 .get("send_list."+this.address)
@@ -533,7 +533,7 @@ export default {
             _current.sourcesAry.sort((a, b) => {
                 return b.exec_timestamp - a.exec_timestamp;
             });
-            console.log(_current.sourcesAry)
+            // console.log(_current.sourcesAry)
             if (isFirstInit) {
                 self.createSendDefault();
             }
