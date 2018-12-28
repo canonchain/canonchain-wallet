@@ -1,7 +1,7 @@
 "use strict";
 // let version     = require('../package.json').version;
 let version = "0.0.001";
-let Accounts    = require('./accounts');
+//let Accounts    = require('./accounts');
 let HttpRequest = require('./httprequest');
 let utils       = require('./utils');
 
@@ -15,7 +15,7 @@ let Czr = function (request) {
         this.dev = false;
     }
     this.request = new HttpRequest(this);
-    this.accounts = new Accounts(this.dev);
+    //this.accounts = new Accounts(this.dev);
 };
 Czr.prototype={
     constructor:Czr,
