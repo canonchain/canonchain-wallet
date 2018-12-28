@@ -542,7 +542,7 @@ export default {
                     },1000*5)
                 })
                 .then(data => {
-                    if (data == "") {
+                    if (!data) {
                         data = [];
                     }
                     //先把本地数据库存在，但是 data 里不存在的账户 删除
