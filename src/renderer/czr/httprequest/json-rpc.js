@@ -30,167 +30,167 @@ var https = require('https');
  *  }
  */
 var Client = function (options) {
-  var serv, agent;
-  var self = this;
-  options = options || {};
+    var serv, agent;
+    var self = this;
+    options = options || {};
 
-  var conf = {
-    host: options.host || '127.0.0.1',
-    path: options.path || '/',
+    var conf = {
+        host: options.host || '127.0.0.1',
+        path: options.path || '/',
 
-    hash: options.hash || null,
-    login: options.login || null,
-  };
-
-  if (options.ssl) {
-    conf.ssl = {
-      sniName: options.ssl.sniName || 'RPC-Server',
-      protocol: options.ssl.protocol || 'SSLv3_client_method'
+        hash: options.hash || null,
+        login: options.login || null,
     };
 
-    if (options.ssl.pfx) {
-      conf.ssl.pfx = options.ssl.pfx;
-      conf.ssl.strict = options.ssl.strict || true;
+    if (options.ssl) {
+        conf.ssl = {
+            sniName: options.ssl.sniName || 'RPC-Server',
+            protocol: options.ssl.protocol || 'SSLv3_client_method'
+        };
+
+        if (options.ssl.pfx) {
+            conf.ssl.pfx = options.ssl.pfx;
+            conf.ssl.strict = options.ssl.strict || true;
+        }
+        else {
+            if (options.ssl.ca) {
+                conf.ssl.ca = options.ssl.ca;
+                conf.ssl.strict = options.ssl.strict || true;
+            }
+            if (options.ssl.key && options.ssl.cert) {
+                conf.ssl.key = options.ssl.key;
+                conf.ssl.cert = options.ssl.certs;
+            }
+        }
+        if (options.ssl.passphrase) {
+            conf.ssl.passphrase = options.ssl.passphrase;
+        }
     }
-    else {
-      if (options.ssl.ca) {
-        conf.ssl.ca = options.ssl.ca;
-        conf.ssl.strict = options.ssl.strict || true;
-      }
-      if (options.ssl.key && options.ssl.cert) {
-        conf.ssl.key = options.ssl.key;
-        conf.ssl.cert = options.ssl.certs;
-      }
-    }
-    if (options.ssl.passphrase) {
-      conf.ssl.passphrase = options.ssl.passphrase;
-    }
-  }
-
-  if (conf.ssl) {
-    serv = https;
-    agent = new https.Agent(); 
-    conf.port = options.port || 5433;
-  }
-  else {
-    serv = http;
-    agent = new http.Agent(); 
-    conf.port = options.port || 5080;
-  }
-
-  /* Private: Returns options object for http request */
-  var buildOptions = function (opts) {
-    var options = {
-      agent: agent,
-      method: opts.method,
-
-      host: conf.host,
-      port: conf.port,
-      path: opts.path,
-
-      headers: {
-        'host': conf.host + ':' + conf.port,
-        'content-type': 'application/json',
-        'content-length': opts.length,
-      }
-    };
-
-    if (opts.login && opts.hash)
-      options.auth = opts.login + ':' + opts.hash;
 
     if (conf.ssl) {
-      options.servername = conf.ssl.sniName || 'RPC-Server';
-      options.secureProtocol = conf.ssl.protocol || 'SSLv3_client_method';
-
-      if (conf.ssl.pfx) {
-        options.pfx = conf.ssl.pfx;
-        options.rejectUnauthorized = conf.ssl.strict || true;
-      }
-      else {
-        if (conf.ssl.key && conf.ssl.cert) {
-          options.key = conf.ssl.key;
-          options.cert = conf.ssl.cert;
-
-        }
-        if (conf.ssl.ca) {
-          options.ca = conf.ssl.ca;
-          options.rejectUnauthorized = conf.ssl.strict || true;
-        }
-      }
-      if (conf.ssl.passphrase)
-        options.passphrase = conf.ssl.passphrase;
+        serv = https;
+        agent = new https.Agent();
+        conf.port = options.port || 5433;
+    }
+    else {
+        serv = http;
+        agent = new http.Agent();
+        conf.port = options.port || 5080;
     }
 
-    return options;
-  };
+    /* Private: Returns options object for http request */
+    var buildOptions = function (opts) {
+        var options = {
+            agent: agent,
+            method: opts.method,
 
-  /* Public: Call a function on remote server.
-   *  - data: json request object, required
-   *  - callback: function (error, result) -> null, required
-   *  - opts: json options object, default {}
-   *
-   *  Define: '' {
-   *    path: string request path, defaul '/'
-   *    method: string request method, default 'POST'
-   *
-   *    hash: string user password, default null
-   *    login: string user login name, default null
-   *  }
-   */
-  this.call = function (data, callback, opts) {
-    opts = opts || {}
-    var body = JSON.stringify(data);
-    var options = buildOptions({ 
-      length: body.length,
-      method: opts.method || 'POST',
-      path: opts.path || conf.path,
+            host: conf.host,
+            port: conf.port,
+            path: opts.path,
 
-      login: opts.login || conf.login,
-      hash: opts.hash || conf.hash
-    });
-
-    var request = serv.request(options);
-
-    request.on('error', function (error) {
-      //TODO Proccess Request Error
-      // console.error(`请求遇到问题: ${error.message}`);
-       callback(error);
-       return;
-      // throw new Error(error.message);
-     
-    });
-
-    request.on('response', function (response) {
-      var data = '';
-      response.on('data', function(bytes) {
-          data += bytes;
-      });
-
-      response.on('end', function() {
-        var error, result;
-
-        //TODO Deal with 401 and other codes
-        if (response.statusCode === 200 || response.statusCode === 304) {
-          if (data.length > 0) {
-            try {
-              result = JSON.parse(data);
+            headers: {
+                'host': conf.host + ':' + conf.port,
+                'content-type': 'application/json',
+                'content-length': opts.length,
             }
-            catch (err) {
-              error = err;
-              console.error("Client error: failed to parse response from server.");
+        };
+
+        if (opts.login && opts.hash)
+            options.auth = opts.login + ':' + opts.hash;
+
+        if (conf.ssl) {
+            options.servername = conf.ssl.sniName || 'RPC-Server';
+            options.secureProtocol = conf.ssl.protocol || 'SSLv3_client_method';
+
+            if (conf.ssl.pfx) {
+                options.pfx = conf.ssl.pfx;
+                options.rejectUnauthorized = conf.ssl.strict || true;
             }
-          }
+            else {
+                if (conf.ssl.key && conf.ssl.cert) {
+                    options.key = conf.ssl.key;
+                    options.cert = conf.ssl.cert;
+
+                }
+                if (conf.ssl.ca) {
+                    options.ca = conf.ssl.ca;
+                    options.rejectUnauthorized = conf.ssl.strict || true;
+                }
+            }
+            if (conf.ssl.passphrase)
+                options.passphrase = conf.ssl.passphrase;
         }
-        else console.log("Client: TODO Status Code: " + response.statusCode); 
 
-        callback(error, result);
-      });
-    });
+        return options;
+    };
 
-    request.end(body);
-  };
+    /* Public: Call a function on remote server.
+     *  - data: json request object, required
+     *  - callback: function (error, result) -> null, required
+     *  - opts: json options object, default {}
+     *
+     *  Define: '' {
+     *    path: string request path, defaul '/'
+     *    method: string request method, default 'POST'
+     *
+     *    hash: string user password, default null
+     *    login: string user login name, default null
+     *  }
+     */
+    this.call = function (data, callback, opts) {
+        opts = opts || {}
+        var body = JSON.stringify(data);
+        var options = buildOptions({
+            length: body.length,
+            method: opts.method || 'POST',
+            path: opts.path || conf.path,
 
-  options = null;
+            login: opts.login || conf.login,
+            hash: opts.hash || conf.hash
+        });
+
+        var request = serv.request(options);
+
+        request.on('error', function (error) {
+            //TODO Proccess Request Error
+            // console.error(`请求遇到问题: ${error.message}`);
+            callback(error);
+            return;
+            // throw new Error(error.message);
+
+        });
+
+        request.on('response', function (response) {
+            var data = '';
+            response.on('data', function(bytes) {
+                data += bytes;
+            });
+
+            response.on('end', function() {
+                var error, result;
+
+                //TODO Deal with 401 and other codes
+                if (response.statusCode === 200 || response.statusCode === 304) {
+                    if (data.length > 0) {
+                        try {
+                            result = JSON.parse(data);
+                        }
+                        catch (err) {
+                            error = err;
+                            console.error("Client error: failed to parse response from server.");
+                        }
+                    }
+                }
+                else console.log("Client: TODO Status Code: " + response.statusCode);
+
+                callback(error, result);
+            });
+        });
+
+        request.end(body);
+    };
+
+    options = null;
 };
 
 module.exports = Client;

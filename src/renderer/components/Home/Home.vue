@@ -299,6 +299,11 @@ export default {
                 return;
             }
 
+            // console.log(self.createInfo.pwd);
+            // console.log(self.$czr.accounts)
+            // self.$czr.accounts.create(self.createInfo.pwd).then(data => {
+            //     console.log(data);
+            // })
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
@@ -425,6 +430,7 @@ export default {
                                 "page_home.import_dia.imported_account_success"
                             )
                         );
+                        self.initDatabase();
                         self.importInfo.address = data.account;
                         self.dialogSwitch.import = false;
                     } else if (data.success == "0") {

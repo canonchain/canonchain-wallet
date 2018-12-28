@@ -1,28 +1,27 @@
 "use strict";
-var version = require('./version.json').version;
-var utils = require('./utils');
-var HttpRequest = require('./httprequest');
+// let version     = require('../package.json').version;
+let version = "0.0.001";
+let Accounts    = require('./accounts');
+let HttpRequest = require('./httprequest');
+let utils       = require('./utils');
 
-var Czr = function Czr(request) {
-    if (request) {
-		this._request = request;
-	}
-    // this.version = version;
-    // this.utils = utils;
-    // this.account = new Account(this);
+let Czr = function (request) {
+    // if (request) {
+    //     this._request = request;
+    // }
+    if(request){
+        this.dev = request.dev ? request.dev : false;
+    }else{
+        this.dev = false;
+    }
     this.request = new HttpRequest(this);
+    this.accounts = new Accounts(this.dev);
 };
-
 Czr.prototype={
     constructor:Czr,
     version:version,
-    utils:utils,
-    setRequest:function(request){
-        this._request = request;
-        // this.api._setRequest(request);
-        // this.admin._setRequest(request);
-    }
-
-}
+    utils:utils
+};
 
 module.exports = Czr;
+

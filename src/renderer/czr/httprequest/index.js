@@ -1,32 +1,22 @@
 "use strict";
-var rpc = require('./rpc-index');
+// let rpc     = require('node-json-rpc');
+let rpc     = require('./rpc-main');
+let options = require("./config");
 
-var options = {
-    // host: '192.168.10.232',
-    // host: '192.168.10.111',
-    host: "127.0.0.1",
-    port: 8765,
-};
-
-
-var HttpRequest = function (host, timeout, apiVersion) {
+let HttpRequest = function (host, timeout, apiVersion) {
     this.hostCon = host || options;
     // this.timeout = timeout || 0;
     // this.apiVersion = apiVersion || "v1";
 };
 
 
-var client = new rpc.Client(options);
-//log
-let logConfig = require('../../../log4/log_config.js');
-let walletLogs = logConfig.getLogger('rpc')    ;      //此处使用category的值 
-walletLogs.info("********** rpc 记录开始 ********** ");
+let client = new rpc.Client(options);
 
 function asyncfunc(opt) {
-    walletLogs.info(opt)
-    let reset = new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         client.call(opt,
             function (err, res) {
+
                 if (err) {
                     reject(err);
                 } else {
@@ -34,11 +24,15 @@ function asyncfunc(opt) {
                 }
             }
         );
-    });
-    reset.then((data)=>{
-        walletLogs.info(data)
     })
-    return reset
+    /*client.call(opt,function (err, cal) {
+        console.log(err,cal);
+        if(err){
+            return err;
+        }
+        return cal
+
+    })*/
 }
 
 
@@ -64,12 +58,11 @@ HttpRequest.prototype.accountCreate = async function(pwd) {
     if(!pwd){
         return 100
     }
-    var opt = {
+    let opt = {
         "action": "account_create",
         "password":pwd
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 /* 
@@ -87,13 +80,12 @@ HttpRequest.prototype.accountRemove = async function(account,pwd) {
     if(!pwd){
         return 101
     }
-    var opt = {
+    let opt = {
         "action": "account_remove",
         "account":account,
         "password":pwd
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 
@@ -108,12 +100,11 @@ HttpRequest.prototype.accountImport = async function(jsonFile) {
     if(!jsonFile){
         return 100
     }
-    var opt = {
+    let opt = {
         "action": "account_import",
         "json":jsonFile
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 
@@ -129,12 +120,11 @@ HttpRequest.prototype.accountExport = async function(account) {
     if(!account){
         return 100
     }
-    var opt = {
+    let opt = {
         "action": "account_export",
         "account":account
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
  
 /* 
@@ -149,12 +139,11 @@ HttpRequest.prototype.accountValidate = async function(accountVal) {
     if(!accountVal){
         return 0
     }
-    var opt = {
+    let opt = {
         "action": "account_validate",
         "account": accountVal
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 /* 
@@ -166,11 +155,10 @@ HttpRequest.prototype.accountValidate = async function(accountVal) {
 */
 
 HttpRequest.prototype.accountList = async function() {
-    var opt = {
+    let opt = {
         "action": "account_list"
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 // Account End
@@ -182,12 +170,11 @@ HttpRequest.prototype.accountBalance = async function(account) {
     if(!account){
         return 0//没有参数
     }
-    var opt = {
+    let opt = {
         "action": "account_balance",
         "account": account
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 //批量获取账户余额
@@ -198,12 +185,11 @@ HttpRequest.prototype.accountsBalances = async function(accountAry) {
     if(!accountAry){
         return 1 //格式不正确
     }
-    var opt = {
+    let opt = {
         "action": "accounts_balances",
         "accounts": accountAry
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 /* 
@@ -222,7 +208,7 @@ HttpRequest.prototype.send = async function(sendObj) {
     if(!sendObj){
         return 0//没有参数
     }
-    var opt = {
+    let opt = {
         "action": "send",
         "from": sendObj.from,
         "to": sendObj.to,
@@ -231,31 +217,52 @@ HttpRequest.prototype.send = async function(sendObj) {
         "data": sendObj.data,
         "id": sendObj.id
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
 HttpRequest.prototype.getBlock = async function(blockHash) {
     if(!blockHash){
         return 0//没有参数
     }
-    var opt = {
+    let opt = {
         "action": "block",
         "hash": blockHash
     };
-    let ret = await asyncfunc(opt);
-    return ret;
+    return await asyncfunc(opt);
 };
 
-HttpRequest.prototype.blockList = async function(account, limit, last_hash) {
-    var opt;
+HttpRequest.prototype.getBlocks = async function(blockHashAry) {
+    if(!blockHashAry){
+        return 0//没有参数
+    }
+    let opt = {
+        "action": "blocks",
+        "hashes": blockHashAry
+    };
+    return await asyncfunc(opt);
+};
+
+/*
+获取账号列表： blockList()
+@parm:
+    - amount
+    - account
+    - limit
+@return:当前账号中 稳定的交易（不包含分叉）
+     {
+        xxxxx:""
+        next_inde:""
+     }
+* */
+HttpRequest.prototype.blockList = async function(account, limit, index) {
+    let opt;
     if(!account){
         return 0//没有参数 
     }
     if(!limit){
         return 1//没有参数 
     }
-    if(!last_hash){
+    if(!index){
         opt = {
             "action": "block_list",
             "account": account,
@@ -266,12 +273,107 @@ HttpRequest.prototype.blockList = async function(account, limit, last_hash) {
             "action": "block_list",
             "account": account,
             "limit": limit,
-            "last_hash": last_hash
+            "index": index
         };
     }
-    let ret = await asyncfunc(opt);
-    return ret;
+    //next_index
+    /*
+    * From - >
+    * */
+    return await asyncfunc(opt);
 };
 
+//传入的mci值,返回mci下所有block的信息
+/* 
+{
+    "action"    :"mci_blocks",
+    "mci"       :"121",
+    "limit"     :"50",
+    "next_index":'',    //第一次传空字符串，后续的值取上一次结果中 next_index
+} 
+-> 
+{
+    blocks:[],
+    "next_index": "XXX" // ""或者一串字符串,如果 next_index == ""  这个mci下的block请求结束
+};
+*/
+HttpRequest.prototype.mciBlocks = async function(mci, limit, next_index) { 
+    if(!limit){
+        return 1//没有参数 
+    }
+
+    let opt = {
+        "action"    :"mci_blocks",
+        "mci"       :mci,
+        "limit"     :limit,
+        "next_index":(next_index ? next_index : ''), //空字符串，后续的值取上一次结果中next_index
+    };
+    return await asyncfunc(opt);
+};
+
+//当前不稳定的所有block的信息
+/* 
+{
+    "action"    :"unstable_blocks",
+    "mci"       :"121",
+    "limit"     :"50",
+    "next_index":'',    //第一次传空字符串，后续的值取上一次结果中 next_index
+} 
+-> 
+{
+    blocks:[],
+    "next_index": "XXX" // ""或者一串字符串,如果 next_index == ""  这个mci下的block请求结束
+};
+*/
+HttpRequest.prototype.unstableBlocks = async function(limit, next_index) {
+    if(!limit){
+        return 0//没有参数 
+    }
+    let opt = {
+        "action"    : "unstable_blocks",
+        "limit"     :limit,
+        "next_index":(next_index ? next_index : ''), //空字符串，后续的值取上一次结果中next_index
+    };
+    return await asyncfunc(opt);
+};
+
+//最后一个稳定点的mci，block信息
+/* 
+return
+    {
+        last_stable_mci: 100, 
+        last_mci:122
+    }
+*/
+HttpRequest.prototype.status = async function() {
+    let opt = {
+        "action": "status"
+    };
+    return await asyncfunc(opt);
+};
+
+//导入账号
+/*
+{ success: '0', account: '' }
+//success 0=未成功，1=成功
+* */
+
+HttpRequest.prototype.accountImport = async function(account) {
+    if(!account){
+        return 100
+    }
+    let opt = {
+        "action": "account_import",
+        "json":account
+    };
+    return await asyncfunc(opt);
+};
+
+HttpRequest.prototype.stop = async function() {
+    let opt = {
+        "action": "stop"
+    };
+    return await asyncfunc(opt);
+};
 
 module.exports = HttpRequest;

@@ -313,7 +313,6 @@ export default {
                     }
 
                     if (isGetData) {
-                        console.log("1.获取数据的");
                         if (runTimer) {
                             self.runGetTransTimer();
                         }
