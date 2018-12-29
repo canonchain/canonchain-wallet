@@ -156,7 +156,7 @@
             "imported_account_success":"Veiksmīgi importēts",
             "exist":"Šis konts jau pastāv, piezīme ir",
             "keystore_error":"Kļūda:",
-            "imported_success":"Importēt failu veiksmīgi"
+            "imported_success":"Jau atlasīts fails"
         },
         "remove_dia": {
             "tit":"Vai tiešām vēlaties to noņemt?",

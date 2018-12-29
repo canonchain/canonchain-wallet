@@ -156,7 +156,7 @@
             "imported_account_success":"Pomyślnie zaimportowano",
             "exist":"To konto już istnieje, notatka jest",
             "keystore_error":"Błąd:",
-            "imported_success":"Importuj plik pomyślnie"
+            "imported_success":"Już wybrany plik"
         },
         "remove_dia": {
             "tit":"Czy na pewno chcesz go usunąć?",

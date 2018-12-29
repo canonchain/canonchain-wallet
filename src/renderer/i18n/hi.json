@@ -156,7 +156,7 @@
             "imported_account_success":"सफलतापूर्वक आयात किया गया",
             "exist":"यह खाता पहले से मौजूद है, नोट है",
             "keystore_error":"त्रुटि:",
-            "imported_success":"फ़ाइल को सफलतापूर्वक आयात करें"
+            "imported_success":"पहले से ही चयनित फ़ाइल"
         },
         "remove_dia": {
             "tit":"क्या आप वाकई इसे हटाना चाहते हैं?",

@@ -156,7 +156,7 @@
             "imported_account_success":"Ondo inportatu da",
             "exist":"Kontua badago lehendik ere, oharra da",
             "keystore_error":"Akatsa:",
-            "imported_success":"Inportatu fitxategia behar bezala"
+            "imported_success":"Dagoeneko hautatutako fitxategia"
         },
         "remove_dia": {
             "tit":"Ziur al zaude ezabatu nahi duzula?",

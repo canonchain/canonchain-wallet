@@ -156,7 +156,7 @@
             "imported_account_success":"Uğurla idxal edilib",
             "exist":"Bu hesab artıq mövcuddur, not deyil",
             "keystore_error":"Hata:",
-            "imported_success":"Faylı uğurla gətir"
+            "imported_success":"Zaten seçilmiş fayl"
         },
         "remove_dia": {
             "tit":"Bunu aradan qaldırmaq istədiyinizə əminsiniz?",

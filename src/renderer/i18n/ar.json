@@ -156,7 +156,7 @@
             "imported_account_success":"تم استيراده بنجاح",
             "exist":"هذا الحساب موجود بالفعل ، والملاحظة هي",
             "keystore_error":"خطأ:",
-            "imported_success":"استيراد الملف بنجاح"
+            "imported_success":"بالفعل اختيار الملف"
         },
         "remove_dia": {
             "tit":"هل أنت متأكد من أنك تريد إزالته؟",

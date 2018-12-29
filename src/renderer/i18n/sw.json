@@ -156,7 +156,7 @@
             "imported_account_success":"Imeingizwa kwa mafanikio",
             "exist":"Akaunti hii tayari imepo, maelezo ni",
             "keystore_error":"Hitilafu:",
-            "imported_success":"Ingiza faili kwa mafanikio"
+            "imported_success":"Tayari faili iliyochaguliwa"
         },
         "remove_dia": {
             "tit":"Una uhakika unataka kuiondoa?",

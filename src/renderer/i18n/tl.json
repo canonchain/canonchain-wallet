@@ -156,7 +156,7 @@
             "imported_account_success":"Matagumpay na na-import",
             "exist":"Mayroon nang account na ito, ang tala ay",
             "keystore_error":"Error:",
-            "imported_success":"Matagumpay na i-import ang file"
+            "imported_success":"Pinili na file"
         },
         "remove_dia": {
             "tit":"Sigurado ka bang gusto mong alisin ito?",

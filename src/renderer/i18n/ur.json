@@ -156,7 +156,7 @@
             "imported_account_success":"کامیابی سے درآمد",
             "exist":"یہ اکاؤنٹ پہلے ہی موجود ہے، نوٹ ہے",
             "keystore_error":"غلطی:",
-            "imported_success":"فائل کامیابی سے درآمد کریں"
+            "imported_success":"پہلے سے ہی منتخب کردہ فائل"
         },
         "remove_dia": {
             "tit":"کیا آپ واقعی یہ ہٹانا چاہتے ہیں؟",

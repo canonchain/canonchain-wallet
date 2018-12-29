@@ -156,7 +156,7 @@
             "imported_account_success":"သွင်းကုန်အောင်မြင်မှု",
             "exist":"ဒီအကောင့်ကိုပြီးသားကြောင်းမှတ်ချက်ပြု, တည်ရှိ",
             "keystore_error":"အမှား:",
-            "imported_success":"သွင်းကုန် file ကိုအောင်မြင်"
+            "imported_success":"file ကိုရှေးခယျြခဲ့သ"
         },
         "remove_dia": {
             "tit":"သင်ကသင်ဖယ်ရှားလိုတာသေချာလား?",

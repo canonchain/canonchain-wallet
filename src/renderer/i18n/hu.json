@@ -156,7 +156,7 @@
             "imported_account_success":"Sikeresen importált",
             "exist":"Ez a fiók már létezik, a megjegyzés",
             "keystore_error":"Hiba:",
-            "imported_success":"Fájl importálása sikeres"
+            "imported_success":"Már kiválasztott fájl"
         },
         "remove_dia": {
             "tit":"Biztosan el akarja távolítani?",

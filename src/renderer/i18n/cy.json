@@ -156,7 +156,7 @@
             "imported_account_success":"Mewnforio yn llwyddiannus",
             "exist":"Mae'r cyfrif hwn yn bodoli eisoes, y nodyn yw",
             "keystore_error":"Gwall:",
-            "imported_success":"Mewnforio ffeil yn llwyddiannus"
+            "imported_success":"Ffeil a ddewiswyd eisoes"
         },
         "remove_dia": {
             "tit":"Ydych chi'n siŵr eich bod am ei dynnu?",

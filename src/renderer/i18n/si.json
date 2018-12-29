@@ -156,7 +156,7 @@
             "imported_account_success":"සාර්ථකව ආනයනය කරන ලදි",
             "exist":"මෙම ගිණුම දැනටමත් පවතී, සටහන යනු",
             "keystore_error":"දෝෂය:",
-            "imported_success":"ගොනුව සාර්ථකව ආයාත කරන්න"
+            "imported_success":"දැනටමත් තෝරාගත් ගොනුව"
         },
         "remove_dia": {
             "tit":"ඔබට එය ඉවත් කිරීමට අවශ්ය බව ඔබට විශ්වාසද?",

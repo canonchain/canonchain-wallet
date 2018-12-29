@@ -156,7 +156,7 @@
             "imported_account_success":"Importuar me sukses",
             "exist":"Kjo llogari tashmë ekziston, shënimi është",
             "keystore_error":"gabim:",
-            "imported_success":"Dosja e importit me sukses"
+            "imported_success":"Skedari i përzgjedhur tashmë"
         },
         "remove_dia": {
             "tit":"Jeni i sigurt se doni ta hiqni atë?",

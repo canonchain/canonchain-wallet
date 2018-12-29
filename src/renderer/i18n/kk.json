@@ -156,7 +156,7 @@
             "imported_account_success":"Сәтті импортталды",
             "exist":"Бұл есептік жазба бұрыннан бар, ескертпе",
             "keystore_error":"Қате:",
-            "imported_success":"Файлды сәтті импорттау"
+            "imported_success":"Таңдалған файл"
         },
         "remove_dia": {
             "tit":"Сіз оны жойғыңыз келе ме?",

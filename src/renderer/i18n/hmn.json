@@ -156,7 +156,7 @@
             "imported_account_success":"Hloov tau zoo",
             "exist":"Cov nyiaj no twb muaj lawm, daim ntawv no yog",
             "keystore_error":"Yuam kev:",
-            "imported_success":"Ntshis ntawv tau zoo"
+            "imported_success":"Twb tau xaiv cov ntaub ntawv"
         },
         "remove_dia": {
             "tit":"Koj puas paub tseeb tias koj xav muab nws tshem?",

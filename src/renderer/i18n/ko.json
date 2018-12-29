@@ -156,7 +156,7 @@
             "imported_account_success":"수입 성공",
             "exist":"이 계정은 이미 존재하며 메모는",
             "keystore_error":"오류 :",
-            "imported_success":"파일 가져 오기가 완료되었습니다."
+            "imported_success":"이미 선택된 파일"
         },
         "remove_dia": {
             "tit":"제거 하시겠습니까?",

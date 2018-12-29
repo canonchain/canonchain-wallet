@@ -156,7 +156,7 @@
             "imported_account_success":"Importert suksess",
             "exist":"Denne kontoen eksisterer allerede, notatet er",
             "keystore_error":"feil:",
-            "imported_success":"Importer filen vellykket"
+            "imported_success":"Allerede valgt fil"
         },
         "remove_dia": {
             "tit":"Er du sikker på at du vil fjerne den?",

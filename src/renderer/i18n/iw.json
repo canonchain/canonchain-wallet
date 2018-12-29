@@ -156,7 +156,7 @@
             "imported_account_success":"ייבא בהצלחה",
             "exist":"חשבון זה כבר קיים, הפתק הוא",
             "keystore_error":"שגיאה:",
-            "imported_success":"ייבוא ​​הקובץ בהצלחה"
+            "imported_success":"קובץ שנבחר כבר"
         },
         "remove_dia": {
             "tit":"האם אתה בטוח שברצונך להסיר אותו?",

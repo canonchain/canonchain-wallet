@@ -156,7 +156,7 @@
             "imported_account_success":"Başarıyla içe aktarıldı",
             "exist":"Bu hesap zaten var, not",
             "keystore_error":"Hata:",
-            "imported_success":"Dosyayı başarıyla içe aktar"
+            "imported_success":"Zaten seçilen dosya"
         },
         "remove_dia": {
             "tit":"Kaldırmak istediğinden emin misin?",

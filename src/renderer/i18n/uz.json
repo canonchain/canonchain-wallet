@@ -156,7 +156,7 @@
             "imported_account_success":"Muvaffaqiyatli import qilindi",
             "exist":"Ushbu hisob allaqachon mavjud, eslatma mavjud",
             "keystore_error":"Xato:",
-            "imported_success":"Faylni muvaffaqiyatli import qiling"
+            "imported_success":"Siz allaqachon tanlangan fayl"
         },
         "remove_dia": {
             "tit":"Uni olib tashlashni xohlaysizmi?",

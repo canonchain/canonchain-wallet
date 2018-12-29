@@ -156,7 +156,7 @@
             "imported_account_success":"Suksesvol ingevoer",
             "exist":"Hierdie rekening bestaan ​​reeds, die nota is",
             "keystore_error":"fout:",
-            "imported_success":"Voer die lêer suksesvol in"
+            "imported_success":"Reeds geselekteerde lêer"
         },
         "remove_dia": {
             "tit":"Is jy seker jy wil dit verwyder?",

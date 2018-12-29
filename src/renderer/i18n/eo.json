@@ -156,7 +156,7 @@
             "imported_account_success":"Sukcese importita",
             "exist":"Ĉi tiu konto jam ekzistas, la noto estas",
             "keystore_error":"Eraro:",
-            "imported_success":"Importi dosieron sukcese"
+            "imported_success":"Elektita dosiero"
         },
         "remove_dia": {
             "tit":"Ĉu vi certas, ke vi volas forigi ĝin?",

@@ -156,7 +156,7 @@
             "imported_account_success":"Úspešne importované",
             "exist":"Tento účet už existuje, je to poznámka",
             "keystore_error":"chyba:",
-            "imported_success":"Importovať súbor úspešne"
+            "imported_success":"Už vybraný súbor"
         },
         "remove_dia": {
             "tit":"Naozaj chcete odstrániť?",

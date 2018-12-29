@@ -156,7 +156,7 @@
             "imported_account_success":"ڪاميابي سان درآمد ڪئي وئي",
             "exist":"هي اڪائونٽ اڳ ۾ موجود آهي، نوٽ آهي",
             "keystore_error":"غلطي",
-            "imported_success":"فائل ڪاميابيء سان برآمد ڪريو"
+            "imported_success":"اڳئين چونڊيل فائل"
         },
         "remove_dia": {
             "tit":"ڇا اوھان کي پڪ آھي ته ان کي ختم ڪرڻ چاھيو ٿا؟",

@@ -156,7 +156,7 @@
             "imported_account_success":"Berjaya diimport",
             "exist":"Akaun ini sudah ada, nota itu",
             "keystore_error":"Ralat:",
-            "imported_success":"Import fail berjaya"
+            "imported_success":"Telah dipilih fail"
         },
         "remove_dia": {
             "tit":"Adakah anda pasti mahu mengeluarkannya?",

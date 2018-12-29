@@ -132,16 +132,29 @@ const app = require("electron").remote.app;
 
 app.on("will-quit", () => {
     //应用程序的窗口已经关闭，应用即将退出
-    self.$czr.stop();
     self.$nodeLogs.info("will-quit start");
+    self.$czr.request.stop().then(data => {
+        self.$nodeLogs.info("Stop成功");
+        self.$nodeLogs.info(data);
+    }).catch(error => {
+        self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
+        self.$nodeLogs.error(error);
+    });
 });
 
 app.on("quit", () => {
     //应用程序正在退出
-    self.$nodeLogs.info("quit start");
+    self.$nodeLogs.info("quit start and stop");
     let currentPid = Number(sessionStorage.getItem("CanonChainPid"));
     let result = process.kill(currentPid, "SIGINT");
     self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
+     self.$czr.request.stop().then(data => {
+        self.$nodeLogs.info("Stop成功");
+        self.$nodeLogs.info(data);
+    }).catch(error => {
+        self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
+        self.$nodeLogs.error(error);
+    });
 });
 
 export default {
@@ -307,6 +320,10 @@ export default {
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
+                    if(data.error){
+                        self.$message.error("出错啦 : 可能是非法的密码格式");
+                        return;
+                    }
                     self.createInfo.address = data.account;
                     let params = {
                         address: data.account,
@@ -446,7 +463,7 @@ export default {
                         "Account Import Error",
                         error.message
                     );
-                    self.$message.error("出错啦，建议重启钱包后再次操作");
+                    self.$message.error("出错啦，可能是不正确的钱包文件，请检查后再次操作");
                 });
         },
         //Import End

@@ -156,7 +156,7 @@
             "imported_account_success":"Uspešno uvoženo",
             "exist":"Ta račun že obstaja, opomba je",
             "keystore_error":"Napaka:",
-            "imported_success":"Uvozite datoteko uspešno"
+            "imported_success":"Že izbrana datoteka"
         },
         "remove_dia": {
             "tit":"Ali ste prepričani, da ga želite odstraniti?",

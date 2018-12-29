@@ -156,7 +156,7 @@
             "imported_account_success":"Innflutt með góðum árangri",
             "exist":"Þessi reikningur er þegar til, minnismiðinn er",
             "keystore_error":"Villa:",
-            "imported_success":"Flytja inn skrá með góðum árangri"
+            "imported_success":"Already selected file"
         },
         "remove_dia": {
             "tit":"Ertu viss um að þú viljir fjarlægja það?",

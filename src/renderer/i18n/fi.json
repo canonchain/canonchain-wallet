@@ -156,7 +156,7 @@
             "imported_account_success":"Tuonti onnistui",
             "exist":"Tämä tili on jo olemassa, huomautus on",
             "keystore_error":"Virhe:",
-            "imported_success":"Tuo tiedosto onnistuneesti"
+            "imported_success":"Jo valittu tiedosto"
         },
         "remove_dia": {
             "tit":"Haluatko varmasti poistaa sen?",

@@ -156,7 +156,7 @@
             "imported_account_success":"імпарт поспех",
             "exist":"Гэтая уліковы запіс ўжо існуе, адзначае, што",
             "keystore_error":"памылка:",
-            "imported_success":"Імпарт файла Поспех"
+            "imported_success":"Быў абраны файл"
         },
         "remove_dia": {
             "tit":"Вы ўпэўненыя, што жадаеце выдаліць яго?",

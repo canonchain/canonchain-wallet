@@ -134,7 +134,7 @@
         </el-dialog>
 
         <el-dialog :title="$t('page_account.keystore.copy')" :visible.sync="dialogSwitch.keystore">
-            <el-input v-if="accountInfo" :value="accountInfo.keystore" type="textarea" :autosize="{minRows: 2}">
+            <el-input v-if="accountInfo" :value="accountInfo.keystore" type="textarea" :disabled="true" :autosize="{minRows: 2}">
             </el-input>
             <div slot="footer">
                 <el-button @click="copyKeystore">{{$t('page_account.keystore.copy')}}</el-button>

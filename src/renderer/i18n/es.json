@@ -156,7 +156,7 @@
             "imported_account_success":"Exitosamente importado",
             "exist":"Esta cuenta ya existe, la nota es",
             "keystore_error":"Error",
-            "imported_success":"Importar archivo correctamente"
+            "imported_success":"Archivo ya seleccionado"
         },
         "remove_dia": {
             "tit":"¿Seguro que quieres eliminarlo?",

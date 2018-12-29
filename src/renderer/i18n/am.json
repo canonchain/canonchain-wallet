@@ -156,7 +156,7 @@
             "imported_account_success":"በተሳካ ሁኔታ ከውጭ ገብቷል",
             "exist":"ይህ መለያ አስቀድሞም ይገኛል, ማስታወሻው",
             "keystore_error":"ስህተት:",
-            "imported_success":"ፋይል በተሳካ ሁኔታ አስመጣ"
+            "imported_success":"ቀድሞውኑ የተመረጠ ፋይል"
         },
         "remove_dia": {
             "tit":"እርግጠኛ ነዎት እሱን ማስወገድ ይፈልጋሉ?",

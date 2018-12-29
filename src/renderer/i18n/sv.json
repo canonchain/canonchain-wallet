@@ -156,7 +156,7 @@
             "imported_account_success":"Importeras framgångsrikt",
             "exist":"Det här kontot finns redan, anteckningen är",
             "keystore_error":"fel:",
-            "imported_success":"Importera filen framgångsrikt"
+            "imported_success":"Redan vald fil"
         },
         "remove_dia": {
             "tit":"Är du säker på att du vill ta bort den?",

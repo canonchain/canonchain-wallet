@@ -156,7 +156,7 @@
             "imported_account_success":"Успішно імпортовано",
             "exist":"Цей обліковий запис вже існує",
             "keystore_error":"Помилка:",
-            "imported_success":"Імпортувати файл успішно"
+            "imported_success":"Вже вибраний файл"
         },
         "remove_dia": {
             "tit":"Дійсно видалити його?",

@@ -156,7 +156,7 @@
             "imported_account_success":"導入成功",
             "exist":"此賬戶已經存在,備註是",
             "keystore_error":"錯誤：",
-            "imported_success":"導入文件成功"
+            "imported_success":"已經選擇文件"
         },
         "remove_dia": {
             "tit":"你確定要移除嗎？",

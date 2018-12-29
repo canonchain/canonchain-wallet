@@ -156,7 +156,7 @@
             "imported_account_success":"បាននាំចូលដោយជោគជ័យ",
             "exist":"គណនីនេះមានរួចហើយ, ចំណាំគឺ",
             "keystore_error":"កំហុស:",
-            "imported_success":"នាំឯកសារដោយជោគជ័យ"
+            "imported_success":"ឯកសារដែលបានជ្រើសរួចហើយ"
         },
         "remove_dia": {
             "tit":"តើអ្នកប្រាកដជាចង់លុបវាចោលមែនទេ?",

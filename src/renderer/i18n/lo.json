@@ -156,7 +156,7 @@
             "imported_account_success":"ປະສົບຄວາມສໍາເລັດນໍາເຂົ້າ",
             "exist":"ບັນຊີນີ້ມີຢູ່ແລ້ວ, ຫມາຍເຫດແມ່ນ",
             "keystore_error":"ຂໍ້ຜິດພາດ:",
-            "imported_success":"Import file successfully"
+            "imported_success":"ໄຟລ໌ທີ່ເລືອກແລ້ວ"
         },
         "remove_dia": {
             "tit":"ທ່ານແນ່ໃຈວ່າທ່ານຕ້ອງການເອົາມັນອອກ?",

@@ -156,7 +156,7 @@
             "imported_account_success":"S-a importat cu succes",
             "exist":"Acest cont există deja, este nota",
             "keystore_error":"Eroare:",
-            "imported_success":"Importați fișierul cu succes"
+            "imported_success":"Fișier deja selectat"
         },
         "remove_dia": {
             "tit":"Sigur doriți să îl eliminați?",

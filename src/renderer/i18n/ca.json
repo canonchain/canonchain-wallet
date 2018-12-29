@@ -156,7 +156,7 @@
             "imported_account_success":"S'ha importat correctament",
             "exist":"Aquest compte ja existeix, la nota és",
             "keystore_error":"Error:",
-            "imported_success":"Importa el fitxer amb èxit"
+            "imported_success":"Arxiu ja seleccionat"
         },
         "remove_dia": {
             "tit":"Esteu segur que voleu eliminar-lo?",

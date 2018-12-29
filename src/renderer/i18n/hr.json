@@ -156,7 +156,7 @@
             "imported_account_success":"Uspješno je uvezeno",
             "exist":"Taj račun već postoji, napomena je",
             "keystore_error":"pogreška:",
-            "imported_success":"Uvezite datoteku uspješno"
+            "imported_success":"Već odabrana datoteka"
         },
         "remove_dia": {
             "tit":"Jeste li sigurni da ga želite ukloniti?",

@@ -156,7 +156,7 @@
             "imported_account_success":"Успешно је увезено",
             "exist":"Овај налог већ постоји, напомена је",
             "keystore_error":"Грешка:",
-            "imported_success":"Успешно увези датотеку"
+            "imported_success":"Већ одабрана датотека"
         },
         "remove_dia": {
             "tit":"Јесте ли сигурни да га желите уклонити?",

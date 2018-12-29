@@ -156,7 +156,7 @@
             "imported_account_success":"Malampuson nga gi-import",
             "exist":"Adunay kini nga asoy, ang mubo nga sulat",
             "keystore_error":"Sayop:",
-            "imported_success":"Import nga file nga malampuson"
+            "imported_success":"Na gipili nga file"
         },
         "remove_dia": {
             "tit":"Sigurado ba nga gusto nimong kuhaon kini?",

@@ -156,7 +156,7 @@
             "imported_account_success":"Nhập khẩu thành công",
             "exist":"Tài khoản này đã tồn tại, ghi chú là",
             "keystore_error":"Lỗi:",
-            "imported_success":"Nhập tệp thành công"
+            "imported_success":"Đã chọn tập tin"
         },
         "remove_dia": {
             "tit":"Bạn có chắc chắn muốn loại bỏ nó?",

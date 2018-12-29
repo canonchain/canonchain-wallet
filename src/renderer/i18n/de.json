@@ -156,7 +156,7 @@
             "imported_account_success":"Erfolgreich importiert",
             "exist":"Dieses Konto existiert bereits, die Notiz ist",
             "keystore_error":"Fehler:",
-            "imported_success":"Datei erfolgreich importieren"
+            "imported_success":"Bereits ausgewählte Datei"
         },
         "remove_dia": {
             "tit":"Möchten Sie es wirklich entfernen?",

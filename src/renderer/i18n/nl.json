@@ -156,7 +156,7 @@
             "imported_account_success":"Succesvol geïmporteerd",
             "exist":"Dit account bestaat al, de notitie is",
             "keystore_error":"fout:",
-            "imported_success":"Bestand met succes importeren"
+            "imported_success":"Al geselecteerd bestand"
         },
         "remove_dia": {
             "tit":"Weet je zeker dat je het wilt verwijderen?",

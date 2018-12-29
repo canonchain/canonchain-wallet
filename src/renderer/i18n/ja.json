@@ -156,7 +156,7 @@
             "imported_account_success":"正常にインポートされました",
             "exist":"このアカウントは既に存在します。メモは",
             "keystore_error":"エラー：",
-            "imported_success":"ファイルをインポートしました"
+            "imported_success":"選択済みファイル"
         },
         "remove_dia": {
             "tit":"削除してよろしいですか？",

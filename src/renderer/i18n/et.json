@@ -156,7 +156,7 @@
             "imported_account_success":"Edukalt imporditud",
             "exist":"See konto on juba olemas, märkus on",
             "keystore_error":"Viga:",
-            "imported_success":"Impordi fail edukalt"
+            "imported_success":"Juba valitud fail"
         },
         "remove_dia": {
             "tit":"Kas olete kindel, et soovite selle eemaldada?",

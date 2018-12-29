@@ -156,7 +156,7 @@
             "imported_account_success":"Berhasil diimpor",
             "exist":"Akun ini sudah ada, catatannya adalah",
             "keystore_error":"Kesalahan:",
-            "imported_success":"Impor file dengan sukses"
+            "imported_success":"File sudah dipilih"
         },
         "remove_dia": {
             "tit":"Apakah Anda yakin ingin menghapusnya?",

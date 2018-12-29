@@ -156,7 +156,7 @@
             "imported_account_success":"นำเข้าสำเร็จแล้ว",
             "exist":"บัญชีนี้มีอยู่แล้วหมายเหตุคือ",
             "keystore_error":"ข้อผิดพลาด:",
-            "imported_success":"นำเข้าไฟล์สำเร็จ"
+            "imported_success":"ไฟล์ที่เลือกไว้แล้ว"
         },
         "remove_dia": {
             "tit":"คุณแน่ใจหรือไม่ว่าต้องการลบ",
