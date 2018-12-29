@@ -50,6 +50,7 @@
         "from_address":"Part enviadora",
         "to_address":"Pagador",
         "amount":"Import",
+        "gas":"Gas",
         "send_all":"Envieu-ho tot",
         "data":"Dades",
         "data_placeholder":"Dades hexadecimals",
@@ -73,6 +74,7 @@
             "amount_error":"Introduïu un import de transacció legal",
             "address_err":"El format de l'adreça transferida no és vàlida.",
             "send_success":"S'ha enviat la transacció",
+            "amount_exceeded":"L'import total de la transacció actual supera el saldo del compte",
 
             "decrypt_err":"L'anàlisi de la cartera ha fallat, pot ser un error de contrasenya",
             "send_error":"Ha fallat la transacció: si us plau, comproveu si hi ha un saldo suficient i una tarifa de minera"

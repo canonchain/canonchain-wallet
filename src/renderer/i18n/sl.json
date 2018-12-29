@@ -50,6 +50,7 @@
         "from_address":"Pošiljatelj",
         "to_address":"Prejemnik",
         "amount":"Znesek",
+        "gas":"Plin",
         "send_all":"Pošlji vse",
         "data":"Podatki",
         "data_placeholder":"Šestnajstiški podatki",
@@ -73,6 +74,7 @@
             "amount_error":"Vnesite pravni znesek transakcije",
             "address_err":"Oblika prenesenega naslova ni veljavna.",
             "send_success":"Transakcija je bila poslana",
+            "amount_exceeded":"Skupni znesek trenutne transakcije presega stanje na računu",
 
             "decrypt_err":"Razčlenjevanje denarnice ni uspelo, morda gre za napako gesla",
             "send_error":"Transakcija ni uspela: preverite, ali obstaja zadostna bilanca in pristojbina rudarjev"

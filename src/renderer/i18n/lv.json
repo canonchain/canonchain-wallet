@@ -50,6 +50,7 @@
         "from_address":"Sūtīšanas puse",
         "to_address":"Saņēmējs",
         "amount":"Summa",
+        "gas":"Gāze",
         "send_all":"Sūtīt visus",
         "data":"Dati",
         "data_placeholder":"Heksadecimālie dati",
@@ -73,6 +74,7 @@
             "amount_error":"Lūdzu, ievadiet juridisko darījumu summu",
             "address_err":"Pārsūtītās adreses formāts nav derīgs.",
             "send_success":"Nosūtīts darījums",
+            "amount_exceeded":"Pašreizējā darījuma kopējā summa pārsniedz konta atlikumu",
 
             "decrypt_err":"Seifa parsēšana neizdevās, tā var būt parole kļūda",
             "send_error":"Darījums neizdevās: lūdzu, pārbaudiet, vai ir pietiekams atlikums un kalnraču maksa"

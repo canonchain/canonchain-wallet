@@ -1,7 +1,7 @@
 {
     "confirm":"Confirmar",
     "cancel":"Cancelar",
-    "dialog_tit":"Pronta",
+    "dialog_tit":"rápido",
     "close":"Cerrar",
     "confirm_you_active":"Por favor confirme su operación",
     "unit": {
@@ -50,6 +50,7 @@
         "from_address":"Fiesta de envio",
         "to_address":"Beneficiario",
         "amount":"Cantidad",
+        "gas":"Gas",
         "send_all":"Enviar todo",
         "data":"Los datos",
         "data_placeholder":"Datos hexadecimales",
@@ -73,6 +74,7 @@
             "amount_error":"Por favor ingrese un monto de transacción legal",
             "address_err":"El formato de la dirección transferida no es válido.",
             "send_success":"Transacción enviada",
+            "amount_exceeded":"El monto total de la transacción actual excede el saldo de la cuenta",
 
             "decrypt_err":"Falló el análisis de la cartera, puede ser un error de contraseña",
             "send_error":"Transacción fallida: verifique si hay suficiente saldo y tarifa de minero"

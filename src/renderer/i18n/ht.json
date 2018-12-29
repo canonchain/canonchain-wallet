@@ -50,6 +50,7 @@
         "from_address":"Voye pati",
         "to_address":"Peye",
         "amount":"Kantite lajan",
+        "gas":"Gaz",
         "send_all":"Voye tout",
         "data":"Done",
         "data_placeholder":"Hexadecimal done",
@@ -73,6 +74,7 @@
             "amount_error":"Tanpri antre yon kantite tranzaksyon legal",
             "address_err":"Fòma a nan adrès la transfere se valab.",
             "send_success":"Tranzaksyon te voye",
+            "amount_exceeded":"Tranzaksyon aktyèl total kantite depase balans kont",
 
             "decrypt_err":"Bous analyse echwe, li ka yon erè modpas",
             "send_error":"Tranzaksyon echwe: tanpri tcheke si gen ase balans ak frè minè"

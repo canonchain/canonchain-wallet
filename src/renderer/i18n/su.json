@@ -50,6 +50,7 @@
         "from_address":"Kirim surélék pihak duit",
         "to_address":"Payee",
         "amount":"duit",
+        "gas":"gas",
         "send_all":"Kirim sadaya",
         "data":"data",
         "data_placeholder":"data Hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Mangga lebetkeun jumlah urus valid",
             "address_err":"Kana format alamat henteu sah",
             "send_success":"Dagang geus dikirim",
+            "amount_exceeded":"Jumlah urus total ngaleuwihan kasaimbangan akun ayeuna",
 
             "decrypt_err":"resolusi dompét gagal, nya meureun sandi salah",
             "send_error":"urus gagal: cék ningali lamun aya cukup kasaimbangan sarta panambang fee"

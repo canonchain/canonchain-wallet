@@ -50,6 +50,7 @@
         "from_address":"Wysyłanie strony",
         "to_address":"Płatnik",
         "amount":"Kwota",
+        "gas":"Gaz",
         "send_all":"Wyślij wszystko",
         "data":"Dane",
         "data_placeholder":"Dane szesnastkowe",
@@ -73,6 +74,7 @@
             "amount_error":"Wprowadź kwotę transakcji prawnej",
             "address_err":"Format przesłanego adresu jest nieprawidłowy.",
             "send_success":"Transakcja wysłana",
+            "amount_exceeded":"Łączna kwota bieżącej transakcji przekracza saldo konta",
 
             "decrypt_err":"Nie udało się przetworzyć portfela, może to być błąd hasła",
             "send_error":"Transakcja nie powiodła się: proszę sprawdzić, czy istnieje wystarczająca opłata bilansowa i górnicza"

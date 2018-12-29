@@ -28,6 +28,12 @@
 
                     </el-checkbox>
                 </el-form-item>
+
+                <el-form-item :label="$t('page_transfer.gas')">
+                    <el-input v-model="gas" :min="0" :max="accountInfo.balance" class="width-180"></el-input>
+                    <span>{{$t('unit.czr')}}</span>
+                </el-form-item>
+
                 <el-form-item>
                     <el-input type="textarea" :rows="4" :placeholder="$t('page_transfer.data_placeholder')" v-model="extraData"></el-input>
                 </el-form-item>
@@ -72,6 +78,9 @@
                     </el-form-item>
                     <el-form-item :label="$t('page_transfer.amount')">
                         <p>{{amount}} {{$t('unit.czr')}}</p>
+                    </el-form-item>
+                    <el-form-item :label="$t('page_transfer.gas')">
+                        <p>{{gas}} {{$t('unit.czr')}}</p>
                     </el-form-item>
                     <el-form-item :label="$t('page_transfer.data')">
                         <p>{{extraData || '-'}}</p>
@@ -127,6 +136,7 @@ export default {
 
             toAccount: "",
             amount: 0,
+            gas:0,
             gasPrice: "",
             feePercent: 100,
             gasLimit: 200000, //参考  myetherwallet
@@ -196,8 +206,6 @@ export default {
                 self.$czr.utils.toWei(self.amount, "czr")
             );
 
-            console.log("validateForm");
-
             if (!self.toAccount) {
                 self.$message.error(
                     self.$t("page_transfer.msg_info.address_null")
@@ -221,18 +229,27 @@ export default {
                 return;
             }
 
-            console.log(self.$czr.request.accountValidate);
+            // 金额 + gas*price <= balance  !!  self.accountInfo.balance
+            let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+            let gasValue = self.$czr.utils.toWei(this.gas, "czr");
+            if((amountValue+gasValue)>self.accountInfo.balance){
+                self.$message.error(
+                    self.$t("page_transfer.msg_info.amount_exceeded")
+                );
+                return;
+            }
+
             self.$czr.request
                 .accountValidate(self.toAccount)
                 .then(data => {
-                    console.log("accountValidate then", data);
+                    // console.log("accountValidate then", data);
                     return data.valid;
                 })
                 .catch(error => {
-                    console.log("accountValidate catch", error);
+                    // console.log("accountValidate catch", error);
                 })
                 .then(data => {
-                    console.log("then", data);
+                    // console.log("then", data);
                     if (data == "1") {
                         self.dialogSwitch.confrim = true;
                     } else if (data == "0") {
@@ -253,17 +270,18 @@ export default {
                 return;
             }
             let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+            let gasValue = self.$czr.utils.toWei(this.gas, "czr");
             let id = Math.random();
 
             let sendObj = {
                 from: self.fromInfo.account,
                 to: self.toAccount,
                 amount: amountValue,
+                gas: gasValue,
                 password: self.fromInfo.password,
                 data: self.extraData, 
                 id: id
             };
-
             self.$czr.request
                 .send(sendObj)
                 .then(data => {
@@ -283,13 +301,14 @@ export default {
                             from: self.fromInfo.account,
                             to: self.toAccount,
                             amount: amountValue,
+                            gas : gasValue,
                             is_stable:"0",
                             exec_timestamp: Math.ceil(
                                 new Date().getTime() / 1000
                             )
                         };
                         self.writeTransToSql(sendBlockInfo);
-                        console.log(data);
+                        // console.log(data);
                         // self.$router.push("/account/" + self.fromInfo.account);
                     } else {
                         self.isSubmit = false;

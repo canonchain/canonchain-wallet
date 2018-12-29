@@ -50,6 +50,7 @@
         "from_address":"Partiya yuborish",
         "to_address":"Xaridor",
         "amount":"Miqdori",
+        "gas":"Gaz",
         "send_all":"Barchasini jo'natish",
         "data":"Ma'lumotlar",
         "data_placeholder":"O'nta o'lchovli ma'lumotlar",
@@ -73,6 +74,7 @@
             "amount_error":"Iltimos, qonuniy jurnali miqdorini kiriting",
             "address_err":"O'tkazilgan manzilning formati noto'g'ri.",
             "send_success":"Jurnal yuborildi",
+            "amount_exceeded":"Joriy bitimning umumiy summasi hisobraqam balansidan oshadi",
 
             "decrypt_err":"Hamyonni saralash muvaffaqiyatsiz tugadi, bu parol xato bo'lishi mumkin",
             "send_error":"Jurnal muvaffaqiyatsiz tugadi: iltimos balans va miner ish haqi borligini tekshiring"

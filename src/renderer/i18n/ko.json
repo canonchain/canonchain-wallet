@@ -50,6 +50,7 @@
         "from_address":"발신자",
         "to_address":"수취인",
         "amount":"금액",
+        "gas":"가스",
         "send_all":"모두 보내기",
         "data":"데이터",
         "data_placeholder":"16 진수 데이터",
@@ -73,6 +74,7 @@
             "amount_error":"법적 거래 금액을 입력하십시오.",
             "address_err":"전송 된 주소의 형식이 잘못되었습니다.",
             "send_success":"거래가 전송되었습니다.",
+            "amount_exceeded":"현재 거래 총액이 계정 잔액을 초과합니다.",
 
             "decrypt_err":"월렛 파싱에 실패했습니다. 비밀번호 오류 일 수 있습니다.",
             "send_error":"거래 실패 : 잔액 및 광부 수수료가 충분한 지 확인하십시오."

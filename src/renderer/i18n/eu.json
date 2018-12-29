@@ -50,6 +50,7 @@
         "from_address":"Bidaltzailea",
         "to_address":"payee",
         "amount":"Dirua",
+        "gas":"gas",
         "send_all":"Bidali dena",
         "data":"Datuak",
         "data_placeholder":"Hexadecimal datuak",
@@ -73,6 +74,7 @@
             "amount_error":"Sartu transakzio juridikoko zenbatekoa",
             "address_err":"Transferitutako helbidea formatua baliogabea da.",
             "send_success":"Transakzioa bidali da",
+            "amount_exceeded":"Uneko transakzioaren guztizko zenbatekoa kontuaren saldoa gainditzen du",
 
             "decrypt_err":"Huts egin du parekatzeak huts egin du, pasahitzaren errorea izan daiteke",
             "send_error":"Transakzioak huts egin du: egiaztatu oreka nahikoa dagoela eta meatzaritza kuota"

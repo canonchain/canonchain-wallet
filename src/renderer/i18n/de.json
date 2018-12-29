@@ -50,6 +50,7 @@
         "from_address":"Sendende Partei",
         "to_address":"Zahlungsempfänger",
         "amount":"Betrag",
+        "gas":"Gas",
         "send_all":"Senden Sie alles",
         "data":"Daten",
         "data_placeholder":"Hexadezimaldaten",
@@ -73,6 +74,7 @@
             "amount_error":"Bitte geben Sie einen gesetzlichen Transaktionsbetrag ein",
             "address_err":"Das Format der übergebenen Adresse ist ungültig.",
             "send_success":"Transaktion gesendet",
+            "amount_exceeded":"Der Gesamtbetrag der aktuellen Transaktion übersteigt den Kontostand",
 
             "decrypt_err":"Die Analyse der Brieftasche ist fehlgeschlagen. Es kann sich um einen Kennwortfehler handeln",
             "send_error":"Transaktion fehlgeschlagen: Bitte überprüfen Sie, ob ein ausreichendes Guthaben und eine Minergebühr vorhanden sind"

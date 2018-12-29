@@ -50,6 +50,7 @@
         "from_address":"Strana koja šalje",
         "to_address":"Plati",
         "amount":"Iznos",
+        "gas":"Gas",
         "send_all":"Pošalji sve",
         "data":"Podaci",
         "data_placeholder":"Heksadecimalni podaci",
@@ -73,6 +74,7 @@
             "amount_error":"Unesite pravni iznos transakcije",
             "address_err":"Format prenesene adrese je nevažeći.",
             "send_success":"Transakcija je poslata",
+            "amount_exceeded":"Ukupan iznos tekuće transakcije premašuje stanje na računu",
 
             "decrypt_err":"Analiza novčanika nije uspela, to može biti greška lozinke",
             "send_error":"Transakcija nije uspjela: provjerite ima li dovoljno balansa i rudarske naknade"

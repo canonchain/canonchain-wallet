@@ -50,6 +50,7 @@
         "from_address":"Invio di festa",
         "to_address":"beneficiario",
         "amount":"soldi",
+        "gas":"gas",
         "send_all":"Invia tutto",
         "data":"dati",
         "data_placeholder":"Dati esadecimali",
@@ -73,6 +74,7 @@
             "amount_error":"Si prega di inserire un importo di transazione legale",
             "address_err":"Il formato dell'indirizzo trasferito non è valido.",
             "send_success":"Transazione inviata",
+            "amount_exceeded":"L'importo totale della transazione corrente supera il saldo del conto",
 
             "decrypt_err":"L'analisi del wallet non è riuscita, potrebbe trattarsi di un errore della password",
             "send_error":"Transazione fallita: si prega di verificare se vi sono sufficienti costi per il saldo e il minatore"

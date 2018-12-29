@@ -50,6 +50,7 @@
         "from_address":"Festa enviada",
         "to_address":"Beneficiario",
         "amount":"Cantidade",
+        "gas":"Gas",
         "send_all":"Enviar todo",
         "data":"Datos",
         "data_placeholder":"Datos hexadecimales",
@@ -73,6 +74,7 @@
             "amount_error":"Introduce un importe de transacción legal",
             "address_err":"O formato do enderezo transferido non é válido.",
             "send_success":"Transacción enviada",
+            "amount_exceeded":"O importe total da transacción actual supera o saldo da conta",
 
             "decrypt_err":"Fallou a análise de carteira, pode ser un erro de contrasinal",
             "send_error":"Fallou a transacción: verifique se hai un saldo suficiente e unha taxa de mineiros"

@@ -50,6 +50,7 @@
         "from_address":"Lähetysosapuoli",
         "to_address":"saaja",
         "amount":"raha",
+        "gas":"kaasu",
         "send_all":"Lähetä kaikki",
         "data":"data",
         "data_placeholder":"Heksadesimaaliset tiedot",
@@ -73,6 +74,7 @@
             "amount_error":"Anna oikeudellinen tapahtuma",
             "address_err":"Siirretyn osoitteen muoto on virheellinen.",
             "send_success":"Transaktio lähetetty",
+            "amount_exceeded":"Nykyinen liiketoimen kokonaismäärä ylittää tilin saldon",
 
             "decrypt_err":"Lompakon jäsentäminen epäonnistui, se voi olla salasanavirhe",
             "send_error":"Tapahtuma epäonnistui: tarkista, onko saldo ja kaivosmaksu riittävä"

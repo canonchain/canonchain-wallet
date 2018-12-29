@@ -50,6 +50,7 @@
         "from_address":"Sendeparti",
         "to_address":"betalingsmottaker",
         "amount":"penger",
+        "gas":"gass",
         "send_all":"Send alle",
         "data":"data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Vennligst oppgi et juridisk transaksjonsbeløp",
             "address_err":"Formatet på den overførte adressen er ugyldig.",
             "send_success":"Transaksjon sendt",
+            "amount_exceeded":"Gjeldende transaksjonsbeløp overstiger kontosaldoen",
 
             "decrypt_err":"Wallet-parsing mislyktes, det kan være en passordfeil",
             "send_error":"Transaksjonen mislyktes: sjekk om det er tilstrekkelig saldo og gruveavgift"

@@ -50,6 +50,7 @@
         "from_address":"Sending Party",
         "to_address":"Payee",
         "amount":"Betrag",
+        "gas":"Gas",
         "send_all":"Schéckt all",
         "data":"Daten",
         "data_placeholder":"Hexadezimal Daten",
@@ -73,6 +74,7 @@
             "amount_error":"Gitt eng legal Transaktioun",
             "address_err":"De Format vun der iwwerschriwwe Adress ass ongëlteg.",
             "send_success":"Transaktioun geschéckt",
+            "amount_exceeded":"Aktuelle Transaktiounsgesamt Betrag erhéicht de Kontostand",
 
             "decrypt_err":"Portemonnaie vun der Portemonnaie konnt net geännert ginn, et ass e Passwuertfehler",
             "send_error":"Transaktioun ofgeschalt: Iwwerpréift weg ob d'Ausbezuelung vun der Waasserstoff a Minerie bezuele muss"

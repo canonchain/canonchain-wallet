@@ -50,6 +50,7 @@
         "from_address":"Ferstjoere partij",
         "to_address":"Payee",
         "amount":"Beleanne",
+        "gas":"Gas",
         "send_all":"Alle stjoere",
         "data":"Data",
         "data_placeholder":"Hexadezimal gegevens",
@@ -73,6 +74,7 @@
             "amount_error":"Fier in juridyske transaksjild yn",
             "address_err":"It formaat fan it oerlevere adres is ûnjildich.",
             "send_success":"Transaksje stjoerd",
+            "amount_exceeded":"It aktuele bedrach fan oerienkomsten heger as skonkenbalâns",
 
             "decrypt_err":"Portemonneare parsing mislearre, it kin in wachtwurd fout wêze",
             "send_error":"Ferkearing mislearre: kontrolearje of as der genôch balâns en minder fergoeding is"

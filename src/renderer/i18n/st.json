@@ -50,6 +50,7 @@
         "from_address":"Ho romella mokga",
         "to_address":"Payee",
         "amount":"Chelete",
+        "gas":"Gesi",
         "send_all":"Romela tsohle",
         "data":"Lintlha",
         "data_placeholder":"Dintlha tsa hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Ka kopo kenya chelete ea tefiso ea molao",
             "address_err":"Sebopeho sa aterese e fetisitsoeng ha e na thuso.",
             "send_success":"Transaction e rometsoe",
+            "amount_exceeded":"Chelete ea chelete ea morao tjena e feta phallo ea akhaonto",
 
             "decrypt_err":"Ho tsamaisa lichelete ho hlōlehile, e ka 'na ea e-ba phoso ea password",
             "send_error":"Transaction e ile ea hlōleha: ka kōpo hlahloba hore na ho na le tekanyo e leka-lekaneng le tefo ea merafo"

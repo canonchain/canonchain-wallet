@@ -50,6 +50,7 @@
         "from_address":"Vysielajúca strana",
         "to_address":"veriteľ",
         "amount":"peniaze",
+        "gas":"plynový",
         "send_all":"Odoslať všetko",
         "data":"údaje",
         "data_placeholder":"Hexadecimálne údaje",
@@ -73,6 +74,7 @@
             "amount_error":"Zadajte sumu právnej transakcie",
             "address_err":"Formát prenesenej adresy je neplatný.",
             "send_success":"Transakcia bola odoslaná",
+            "amount_exceeded":"Celková suma aktuálnej transakcie presahuje zostatok na účte",
 
             "decrypt_err":"Analýza peňaženky zlyhala, môže to byť chyba v hesle",
             "send_error":"Transakcia zlyhala: skontrolujte, či existuje dostatočný zostatok a poplatok za horník"

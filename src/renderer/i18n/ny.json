@@ -50,6 +50,7 @@
         "from_address":"Kutumiza phwando",
         "to_address":"Payee",
         "amount":"Zambiri",
+        "gas":"Gasi",
         "send_all":"Tumizani zonse",
         "data":"Deta",
         "data_placeholder":"Deta ya hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Chonde lowetsani kuchuluka kwa malamulo",
             "address_err":"Maonekedwe a adiresi yosamutsidwa ndi ofunika.",
             "send_success":"Kutumiza kutumizidwa",
+            "amount_exceeded":"Ndalama zamakono zogulira zikuposa kuchuluka kwa akaunti",
 
             "decrypt_err":"Kusungidwa kwa ngongole kunalephera, ikhoza kukhala cholakwika chachinsinsi",
             "send_error":"Kugulitsa kunalephera: chonde onani ngati pali malipiro okwanira ndi malipiro a minera"

@@ -50,6 +50,7 @@
         "from_address":"ပိုက်ဆံပါတီ Send",
         "to_address":"ငွေလက်ခံသူ",
         "amount":"ပိုက်ဆံ",
+        "gas":"ဓါတျငှေ့",
         "send_all":"အားလုံး Send",
         "data":"ဒေတာများ",
         "data_placeholder":"hexadecimal ဒေတာ",
@@ -73,6 +74,7 @@
             "amount_error":"ခိုင်လုံသောငွေပေးငွေယူငွေပမာဏကိုရိုက်ထည့်ပေးပါ",
             "address_err":"လိပ်စာပုံစံသို့တရားဝင်မဟုတ်ပါဘူး",
             "send_success":"ထရေးဒင်းကိုစေလွှတ်ထားပြီး",
+            "amount_exceeded":"စုစုပေါင်းငွေပမာဏဟာလက်ရှိအကောင့်လက်ကျန်ငွေထက်ကျော်လွန်",
 
             "decrypt_err":"ပိုက်ဆံအိတ် resolution ကိုပျက်ကွက်ပါကမှားယွင်းတဲ့ password ကိုဖြစ်စေခြင်းငှါ",
             "send_error":"အဆိုပါငွေပေးငွေယူပျက်ကွက်: အလုံအလောက်ချိန်ခွင်လျှာနှင့်မိုင်းလုပ်သားအခကြေးငွေရှိလျှင်ကြည့်ဖို့ Check"
@@ -135,7 +137,7 @@
 
             "validate_password":"သငျသညျ set password ကိုရိုက်ထည့်ပေးပါ",
             "validate_re_password":"သငျသညျတဖနျ set password ကိုရိုက်ထည့်ပေးပါ",
-            "validate_strong_password":"ကအနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
+            "validate_strong_password":"အနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
             "validate_password_length":"Passwords များကိုမတိုက်ဆိုင်ကြဘူး",
 
             "create_success":"အောင်မြင်မှု Creating",

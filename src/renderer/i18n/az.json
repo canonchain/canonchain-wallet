@@ -50,6 +50,7 @@
         "from_address":"Partiyanı göndərmək",
         "to_address":"Alıcı",
         "amount":"Məbləğ",
+        "gas":"Qaz",
         "send_all":"Hamısını göndər",
         "data":"Məlumatlar",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Xahiş edirik hüquqi əməliyyat məbləğini daxil edin",
             "address_err":"Köçürülmüş ünvanın formatı etibarsızdır.",
             "send_success":"Əməliyyat göndərildi",
+            "amount_exceeded":"Cari əməliyyatın ümumi məbləği hesab balansını aşır",
 
             "decrypt_err":"Wallet ayrıştırma başarısız oldu, bu parol hatası ola bilər",
             "send_error":"Əməliyyat başarısız oldu: kifayət qədər balans və miner haqlarının olmadığını yoxlayın"

@@ -50,6 +50,7 @@
         "from_address":"Ithumela iqembu",
         "to_address":"Umkhokheli",
         "amount":"Inani",
+        "gas":"Igesi",
         "send_all":"Thumela konke",
         "data":"Idatha",
         "data_placeholder":"Idatha ye-Hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Sicela ufake inani lokuthengiselana ngokomthetho",
             "address_err":"Ifomethi yekheli elidlulisiwe alivumelekile.",
             "send_success":"Ukuthengiswa kuthunyelwe",
+            "amount_exceeded":"Isamba samanje sesamba senani lidlula ibhalansi ye-akhawunti",
 
             "decrypt_err":"I-Wallet parsing ihlulekile, kungenzeka kube yiphutha lephasiwedi",
             "send_error":"Ukuthengwa kwehlulekile: sicela uhlole uma kukhona imali ebhalansi neyamaminerali okwanele"

@@ -50,6 +50,7 @@
         "from_address":"Fifiranṣẹ keta",
         "to_address":"Payee",
         "amount":"Iye",
+        "gas":"Gaasi",
         "send_all":"Firanṣẹ gbogbo",
         "data":"Data",
         "data_placeholder":"Data hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Jowo tẹ iye idunadura ofin kan",
             "address_err":"Awọn kika ti adirẹsi ti o ti gbe jẹ aišišẹ.",
             "send_success":"Ifiranṣẹ ranṣẹ",
+            "amount_exceeded":"Idunadura iye owo ti o wa lọwọlọwọ kọja iwontunwonsi iroyin",
 
             "decrypt_err":"Apamọwọ ti kuna, o le jẹ aṣiṣe aṣínà kan",
             "send_error":"Ti kuna iṣẹ-ṣiṣe: jọwọ ṣayẹwo ti o ba to iwontunwonsi ati iye owo miner"

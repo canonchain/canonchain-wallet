@@ -50,6 +50,7 @@
         "from_address":"Sendandi aðila",
         "to_address":"Greiðanda",
         "amount":"Upphæð",
+        "gas":"Gas",
         "send_all":"Senda allt",
         "data":"Gögn",
         "data_placeholder":"Hexadecimal gögn",
@@ -73,6 +74,7 @@
             "amount_error":"Vinsamlegast sláðu inn lagalega viðskiptabréf",
             "address_err":"Sniðið á yfirfærðu heimilisfangi er ógilt.",
             "send_success":"Viðskipti send",
+            "amount_exceeded":"Núverandi heildarfjárhæð viðskipta er yfir reikningsjöfnuði",
 
             "decrypt_err":"Pappaþáttun mistókst, það gæti verið lykilorðsvilla",
             "send_error":"Viðskipti mistókst: Vinsamlegast athugaðu hvort það sé nægjanlegt jafnvægi og jarðvegsgjald"

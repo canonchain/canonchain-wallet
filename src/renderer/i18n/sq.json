@@ -50,6 +50,7 @@
         "from_address":"Dërgimi i partisë",
         "to_address":"i paguari",
         "amount":"para",
+        "gas":"gaz",
         "send_all":"Dërgo te gjitha",
         "data":"të dhëna",
         "data_placeholder":"Të dhëna hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Ju lutemi shkruani shumën e një transaksioni ligjor",
             "address_err":"Formati i adresës së transferuar është i pavlefshëm.",
             "send_success":"Transaksioni u dërgua",
+            "amount_exceeded":"Shuma e përgjithshme e transaksionit aktual tejkalon bilancin e llogarisë",
 
             "decrypt_err":"Analizimi i portofolit dështoi, mund të jetë një gabim fjalëkalimi",
             "send_error":"Transaksioni dështoi: ju lutemi kontrolloni nëse ka ekuilibër të mjaftueshëm dhe tarifë minatorësh"

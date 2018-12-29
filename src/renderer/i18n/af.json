@@ -50,6 +50,7 @@
         "from_address":"Stuurpartytjie",
         "to_address":"nemer",
         "amount":"geld",
+        "gas":"gas",
         "send_all":"Stuur alles",
         "data":"data",
         "data_placeholder":"Hexadecimale data",
@@ -73,6 +74,7 @@
             "amount_error":"Voer asseblief 'n wettige transaksiesbedrag in",
             "address_err":"Die formaat van die oorgeplaasde adres is ongeldig.",
             "send_success":"Transaksie gestuur",
+            "amount_exceeded":"Huidige transaksie totale bedrag oorskry rekeningbalans",
 
             "decrypt_err":"Wallet parsing het misluk, dit kan 'n wagwoord fout wees",
             "send_error":"Transaksie misluk: kyk asseblief of daar genoegsame balans en mynwerkersfooi is"

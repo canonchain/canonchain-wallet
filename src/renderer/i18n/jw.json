@@ -50,6 +50,7 @@
         "from_address":"Ngirim partai",
         "to_address":"Payee",
         "amount":"Jumlah",
+        "gas":"Gas",
         "send_all":"Kirim kabeh",
         "data":"Data",
         "data_placeholder":"Data heksadesimal",
@@ -73,6 +74,7 @@
             "amount_error":"Mangga nglebokna jumlah transaksi legal",
             "address_err":"Format alamat sing ditransfer ora bener.",
             "send_success":"Transaksi dikirim",
+            "amount_exceeded":"Jumlah total transaksi saiki ngluwihi imbangan akun",
 
             "decrypt_err":"Parsing Wallet gagal, bisa dadi kesalahan sandi",
             "send_error":"Transaksi gagal: mangga dipriksa manawa ana keseimbangan sing cukup lan ragad penambang"

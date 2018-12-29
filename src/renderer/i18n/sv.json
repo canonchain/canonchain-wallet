@@ -50,6 +50,7 @@
         "from_address":"Sändande parti",
         "to_address":"Betalningsmottagare",
         "amount":"pengar",
+        "gas":"gas",
         "send_all":"Skicka allt",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Ange ett juridiskt transaktionsbelopp",
             "address_err":"Formatet på den överförda adressen är ogiltig.",
             "send_success":"Transaktion skickad",
+            "amount_exceeded":"Nuvarande transaktionsbelopp överstiger kontobalans",
 
             "decrypt_err":"Pappersparsning misslyckades, det kan vara ett lösenordsfel",
             "send_error":"Transaktionen misslyckades: Kontrollera om det finns tillräckligt med balans och gruvavgift"

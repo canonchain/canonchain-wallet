@@ -50,6 +50,7 @@
         "from_address":"Anfon plaid",
         "to_address":"Payee",
         "amount":"Swm",
+        "gas":"Nwy",
         "send_all":"Anfonwch bawb",
         "data":"Data",
         "data_placeholder":"Data hecsadegol",
@@ -73,6 +74,7 @@
             "amount_error":"Rhowch swm trafodiad cyfreithiol",
             "address_err":"Mae fformat y cyfeiriad trosglwyddedig yn annilys.",
             "send_success":"Trosglwyddiad wedi'i anfon",
+            "amount_exceeded":"Mae cyfanswm y trafodyn cyfredol yn fwy na chydbwysedd y cyfrif",
 
             "decrypt_err":"Methodd dadliad gwaledi, gall fod yn gamgymeriad cyfrinair",
             "send_error":"Methodd y trafodiad: gwiriwch a oes digon o gydbwysedd a ffi glowyr"

@@ -50,6 +50,7 @@
         "from_address":"Na-eziga otu",
         "to_address":"Payee",
         "amount":"Ọnụ",
+        "gas":"Gas",
         "send_all":"Ziga niile",
         "data":"Data",
         "data_placeholder":"Data hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Biko tinye ego ego",
             "address_err":"Ọdịdị nke adreesị ebufe adighi mma.",
             "send_success":"A zitere ọrụ",
+            "amount_exceeded":"Onu ogugu ego ugbua na ugbua karia ihe nchoputa",
 
             "decrypt_err":"Obere obere akpa wuru, o nwere ike ịbụ njehie paswọọdụ",
             "send_error":"Ozigbo ego ejirila: biko jụọ ma ọ bụrụ na e nwere nkwụnye ego zuru oke na ụgwọ ọrụ"

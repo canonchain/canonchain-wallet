@@ -50,6 +50,7 @@
         "from_address":"Tuuina atu o le pati",
         "to_address":"Payee",
         "amount":"Aofaʻi",
+        "gas":"Gas",
         "send_all":"Auina uma",
         "data":"Faʻamatalaga",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Faʻamolemole ulufale i se tau faʻatulafonoina",
             "address_err":"O le faatulagaga o le tuatusi o le tuatusi ua le aoga.",
             "send_success":"Faʻatonuina o feʻau",
+            "amount_exceeded":"O le aofai o le aofaʻiga o fefaʻatauaʻiga i le taimi nei e sili atu i le paleni o tupe",
 
             "decrypt_err":"Ua le manuia le pusa faila, atonu o se sese ole palakalafa",
             "send_error":"Ua le manuia le gaioiga: faamolemole siaki pe afai e lava le paleni ma le totogi o le miner"

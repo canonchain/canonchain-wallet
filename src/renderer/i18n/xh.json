@@ -50,6 +50,7 @@
         "from_address":"Ukuthumela umcimbi",
         "to_address":"Umvuzo",
         "amount":"Isixa",
+        "gas":"Gesi",
         "send_all":"Thumela konke",
         "data":"Iinkcukacha",
         "data_placeholder":"Idatha yeHexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Nceda ufake inani lokuthengiselana ngokomthetho",
             "address_err":"Ifomathi yedilesi edluliselweyo ayivumelekanga.",
             "send_success":"Intengiso ithunyelwe",
+            "amount_exceeded":"Ixabiso langoku lithengiselwano lilonke lidlula ibhalansi ye-akhawunti",
 
             "decrypt_err":"Ukutshatyalaliswa kwe-Wallet kwehlulekile, kusenokuba yimpazamo yephasiwedi",
             "send_error":"Ukuthengiswa kwehlulekile: nceda uqaphele ukuba kukho ukulingana okwaneleyo kunye nemirhumo yemayini"

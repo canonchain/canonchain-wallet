@@ -50,6 +50,7 @@
         "from_address":"Pagpadala sa partido",
         "to_address":"Pagbayad",
         "amount":"Amgo",
+        "gas":"Gas",
         "send_all":"Ipadala ang tanan",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Palihog pagsulod sa kantidad sa legal nga transaksiyon",
             "address_err":"Ang format sa gibalhin nga address dili balido.",
             "send_success":"Gipadala ang transaksyon",
+            "amount_exceeded":"Ang kinatibuk-ang kantidad sa transaksyon sa milapas nga labaw sa balance sa account",
 
             "decrypt_err":"Ang pagwagtang sa pitaka napakyas, kini mahimong usa ka sayop nga password",
             "send_error":"Napakyas ang transaksyon: palihug susiha kung adunay igong balanse ug bayad sa minero"

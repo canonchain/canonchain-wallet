@@ -50,6 +50,7 @@
         "from_address":"Küldő fél",
         "to_address":"kedvezményezett",
         "amount":"pénz",
+        "gas":"gáz",
         "send_all":"Küldj mindet",
         "data":"adat",
         "data_placeholder":"Hexadecimális adatok",
@@ -73,6 +74,7 @@
             "amount_error":"Kérjük, adja meg a jogi tranzakció összegét",
             "address_err":"Az átadott cím formátuma érvénytelen.",
             "send_success":"Elküldött tranzakció",
+            "amount_exceeded":"A jelenlegi tranzakció összege meghaladja a számlaegyenleget",
 
             "decrypt_err":"A mobiltárca elemzése sikertelen, lehet, hogy jelszóhiba",
             "send_error":"Tranzakció sikertelen: ellenőrizze, hogy van-e elegendő egyenleg és bányászati ​​díj"

@@ -50,6 +50,7 @@
         "from_address":"Afsendelsesparti",
         "to_address":"betalingsmodtager",
         "amount":"penge",
+        "gas":"gas",
         "send_all":"Send alle",
         "data":"data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Indtast venligst et juridisk transaktionsbeløb",
             "address_err":"Formatet på den overførte adresse er ugyldig.",
             "send_success":"Transaktion sendt",
+            "amount_exceeded":"Nuværende transaktions samlede beløb overstiger kontosaldo",
 
             "decrypt_err":"Palletparsing mislykkedes, det kan være et kodeordfejl",
             "send_error":"Transaktion mislykkedes: Kontroller, om der er tilstrækkelig balance og minearbejder gebyr"

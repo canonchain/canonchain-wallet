@@ -50,6 +50,7 @@
         "from_address":"Odesílající strana",
         "to_address":"Příjemce platby",
         "amount":"Částka",
+        "gas":"Plyn",
         "send_all":"Pošlete vše",
         "data":"Data",
         "data_placeholder":"Hexadecimální data",
@@ -73,6 +74,7 @@
             "amount_error":"Zadejte částku právní transakce",
             "address_err":"Formát přenesené adresy je neplatný.",
             "send_success":"Transakce odeslána",
+            "amount_exceeded":"Celková částka běžné transakce přesahuje zůstatek účtu",
 
             "decrypt_err":"Analýza peněženky se nezdařila, může to být chyba hesla",
             "send_error":"Transakce selhala: zkontrolujte prosím, zda je dostatečný zůstatek a poplatek za mince"

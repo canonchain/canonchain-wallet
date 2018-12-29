@@ -50,6 +50,7 @@
         "from_address":"Pàrtaidh a 'cur a-mach",
         "to_address":"Payee",
         "amount":"Suim",
+        "gas":"Gas",
         "send_all":"Cuir a h-uile càil",
         "data":"Dàta",
         "data_placeholder":"Dàta trì-sheasmhach",
@@ -73,6 +74,7 @@
             "amount_error":"Cuir a-steach suim laghail laghail",
             "address_err":"Tha cruth an t-seòlaidh air a ghluasad mì-dhligheach.",
             "send_success":"Gnìomh air a chuir",
+            "amount_exceeded":"Tha suim iomlan a 'ghnothaich làithreach nas àirde na cothromachadh cunntais",
 
             "decrypt_err":"Dh'fhàillig parsadh barain, is dòcha gur e mearachd facal-faire a th 'ann",
             "send_error":"Dh'fhàillig an t-atharrachadh: feuch a bheil cothromachadh gu leòr agus cìs mèinnearach"

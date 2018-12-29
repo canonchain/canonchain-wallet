@@ -50,6 +50,7 @@
         "from_address":"Mitte argentum pars",
         "to_address":"payee",
         "amount":"pecunia",
+        "gas":"gas",
         "send_all":"omnes Mitte",
         "data":"Data",
         "data_placeholder":"data veste hexadecimali ostendentur",
@@ -73,6 +74,7 @@
             "amount_error":"Please enter a quantum valet transaction",
             "address_err":"In forma oratio non esse legitimam,",
             "send_success":"Trading missum est",
+            "amount_exceeded":"In summa tantum rem excedit current propter statera",
 
             "decrypt_err":"Peram animi fallit peccatum sit ignoro",
             "send_error":"Rei deficit: vide si satis est ut Reprehendo et fossores feodo statera"

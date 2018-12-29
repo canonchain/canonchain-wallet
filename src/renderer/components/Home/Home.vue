@@ -335,7 +335,7 @@ export default {
                 .then(data => {
                     // return data.json;
                     let link = document.createElement("a");
-                    link.download = self.getNowTime() + "--" + accVal;
+                    link.download = accVal+'.json';
                     link.style.display = "none";
 
                     let blob = new Blob([data.json]);
@@ -353,21 +353,21 @@ export default {
                     self.$message.error("出错啦，建议重启钱包后再次操作");
                 });
         },
-        getNowTime() {
-            let date = new Date();
-            let addZero = this.addZero;
-            let LocalTime =
-                date.getFullYear() +
-                "-" +
-                addZero(date.getMonth() + 1) +
-                "-" +
-                addZero(date.getDate()) +
-                "-" +
-                addZero(date.getHours()) +
-                addZero(date.getMinutes()) +
-                addZero(date.getSeconds());
-            return LocalTime;
-        },
+        // getNowTime() {
+        //     let date = new Date();
+        //     let addZero = this.addZero;
+        //     let LocalTime =
+        //         date.getFullYear() +
+        //         "-" +
+        //         addZero(date.getMonth() + 1) +
+        //         "-" +
+        //         addZero(date.getDate()) +
+        //         "-" +
+        //         addZero(date.getHours()) +
+        //         addZero(date.getMinutes()) +
+        //         addZero(date.getSeconds());
+        //     return LocalTime;
+        // },
         addZero(val) {
             return val < 10 ? "0" + val : val;
         },

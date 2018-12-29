@@ -744,7 +744,7 @@ export default {
         //download
         downloadKeystore() {
             let link = document.createElement("a");
-            link.download = this.getNowTime() + "--" + this.address;
+            link.download = this.address+'.json';
             link.style.display = "none";
             // let blob = new Blob([JSON.stringify(this.accountInfo.keystore)]);
             let blob = new Blob([this.accountInfo.keystore]);
@@ -753,22 +753,7 @@ export default {
             link.click();
             document.body.removeChild(link);
             this.dialogSwitch.keystore = false;
-        },
-        getNowTime() {
-            let date = new Date();
-            let addZero = this.addZero;
-            let LocalTime =
-                date.getFullYear() +
-                "-" +
-                addZero(date.getMonth() + 1) +
-                "-" +
-                addZero(date.getDate()) +
-                "-" +
-                addZero(date.getHours()) +
-                addZero(date.getMinutes()) +
-                addZero(date.getSeconds());
-            return LocalTime;
-        },
+        }, 
         addZero(val) {
             return val < 10 ? "0" + val : val;
         }

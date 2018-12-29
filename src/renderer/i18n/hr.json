@@ -50,6 +50,7 @@
         "from_address":"Stranka koja šalje",
         "to_address":"primalac",
         "amount":"novac",
+        "gas":"plin",
         "send_all":"Pošalji sve",
         "data":"podaci",
         "data_placeholder":"Heksadecimalni podaci",
@@ -73,6 +74,7 @@
             "amount_error":"Unesite pravni iznos transakcije",
             "address_err":"Format prenesene adrese nije važeći.",
             "send_success":"Transakcija je poslana",
+            "amount_exceeded":"Ukupni ukupni iznos transakcije premašuje stanje na računu",
 
             "decrypt_err":"Uspješno raščlanjivanje lisnice nije uspjelo, možda je riječ o pogrešci zaporke",
             "send_error":"Transakcija nije uspjela: provjerite ima li dovoljno salda i rudarskih naknada"

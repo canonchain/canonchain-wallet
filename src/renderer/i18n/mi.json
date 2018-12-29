@@ -50,6 +50,7 @@
         "from_address":"Tukuna te rōpū",
         "to_address":"Payee",
         "amount":"Te nui",
+        "gas":"Gas",
         "send_all":"Tukua katoatia",
         "data":"Raraunga",
         "data_placeholder":"He raraunga Hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Tēnā koa whakauruhia he moni whakawhitinga ture",
             "address_err":"He muhu te whakatakotoranga o te wāhitau kua whakawhitia.",
             "send_success":"Tukuna te tukunga",
+            "amount_exceeded":"Ko te nui o te moni whakawhitinga tauwhitinga o teianei e nui atu ana i te putea",
 
             "decrypt_err":"I rahua te taraipa a te putea, he hapa kupuhipa pea",
             "send_error":"I rahua te mahi: tirohia mehemea he nui te utu me te utu minita"

@@ -50,6 +50,7 @@
         "from_address":"發款方",
         "to_address":"收款方",
         "amount":"金額",
+        "gas":"gas",
         "send_all":"發送全部",
         "data":"Data",
         "data_placeholder":"十六進制數據",
@@ -73,6 +74,7 @@
             "amount_error":"請輸入合法的交易金額",
             "address_err":"轉入的地址格式不合法",
             "send_success":"交易已發送",
+            "amount_exceeded":"當前交易總金額超出賬戶餘額",
 
             "decrypt_err":"錢包解析失敗，可能是密碼錯誤",
             "send_error":"交易失敗：請檢查是否有足量餘額和礦工費"

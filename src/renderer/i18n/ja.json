@@ -50,6 +50,7 @@
         "from_address":"送信パーティー",
         "to_address":"受取人",
         "amount":"金額",
+        "gas":"ガス",
         "send_all":"全部送る",
         "data":"データ",
         "data_placeholder":"16進データ",
@@ -73,6 +74,7 @@
             "amount_error":"法定取引金額を入力してください",
             "address_err":"転送されたアドレスの形式が無効です。",
             "send_success":"取引が送信されました",
+            "amount_exceeded":"現在の取引合計金額が口座残高を超えています",
 
             "decrypt_err":"Walletの解析に失敗しました。パスワードエラーの可能性があります",
             "send_error":"取引に失敗しました：十分な残高と鉱夫費があるかどうか確認してください"

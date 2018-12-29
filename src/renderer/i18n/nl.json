@@ -50,6 +50,7 @@
         "from_address":"Het verzenden van een feestje",
         "to_address":"begunstigde",
         "amount":"geld",
+        "gas":"gas",
         "send_all":"Stuur alles",
         "data":"gegevens",
         "data_placeholder":"Hexadecimale gegevens",
@@ -73,6 +74,7 @@
             "amount_error":"Voer een wettelijk transactiebedrag in",
             "address_err":"Het formaat van het overgedragen adres is ongeldig.",
             "send_success":"Transactie verzonden",
+            "amount_exceeded":"Het totale bedrag van de huidige transactie overschrijdt het rekeningsaldo",
 
             "decrypt_err":"Portefeuille parseren mislukt, dit kan een wachtwoordfout zijn",
             "send_error":"Transactie mislukt: controleer of er voldoende saldo en mineerkosten zijn"

@@ -50,6 +50,7 @@
         "from_address":"Menghantar pesta",
         "to_address":"Penerima",
         "amount":"Jumlah",
+        "gas":"Gas",
         "send_all":"Hantar semua",
         "data":"Data",
         "data_placeholder":"Data heksadesimal",
@@ -73,6 +74,7 @@
             "amount_error":"Sila masukkan jumlah urus niaga yang sah",
             "address_err":"Format alamat yang dipindahkan tidak sah.",
             "send_success":"Transaksi dihantar",
+            "amount_exceeded":"Jumlah jumlah transaksi semasa melebihi baki akaun",
 
             "decrypt_err":"Parsing Wallet gagal, mungkin ralat kata laluan",
             "send_error":"Urus niaga gagal: sila semak jika ada baki yang mencukupi dan yuran pelombong"

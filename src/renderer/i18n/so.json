@@ -50,6 +50,7 @@
         "from_address":"U dirista xaflad",
         "to_address":"Lacag bixiye",
         "amount":"Tirada",
+        "gas":"Gaas",
         "send_all":"Soo dir dhammaan",
         "data":"Macluumaadka",
         "data_placeholder":"Macluumaadka Hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Fadlan gali qadar lacageed oo sharci ah",
             "address_err":"Nidaamka cinwaanka la soo wareejiyay waa mid aan sharci ahayn.",
             "send_success":"Ganacsi ayaa loo diraa",
+            "amount_exceeded":"Tirada wadarta guud ee macaamilka waxay ka badan tahay hadhaaga xisaabta",
 
             "decrypt_err":"Qalabaynta jeebka ayaa ku fashilmay, waxay noqon kartaa qalad sir ah",
             "send_error":"Hawlgalku wuu ku fashilmay: fadlan iska hubi haddii ay jirto dheelitir ku filan iyo qarash yar"

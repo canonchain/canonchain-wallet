@@ -52,7 +52,7 @@ function getLanguage() {
     language = navigator.language;
   }
   language = (language =='zh-CN') ? language : 'en'
-  console.log("language",language)
+  // console.log("language",language)
   return language;
 }
 

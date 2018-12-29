@@ -50,6 +50,7 @@
         "from_address":"Páirtí seolta",
         "to_address":"Íocaíocht",
         "amount":"Méid",
+        "gas":"Gáis",
         "send_all":"Seol go léir",
         "data":"Sonraí",
         "data_placeholder":"Sonraí heicteachta",
@@ -73,6 +74,7 @@
             "amount_error":"Cuir isteach méid idirbhearta dlíthiúil",
             "address_err":"Tá formáid an seoladh aistrithe neamhbhailí.",
             "send_success":"Aistriú curtha",
+            "amount_exceeded":"Is ionann an méid iomlán idirbheart reatha ná cothromaíocht an chuntas",
 
             "decrypt_err":"Theip ar parsáil sparán, d'fhéadfadh sé gur earráid focal faire é",
             "send_error":"Theip ar an Idirbheart: seiceáil an bhfuil dóthain cothromaíochta agus táille miner ann"

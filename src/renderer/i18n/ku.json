@@ -50,6 +50,7 @@
         "from_address":"Partiya şandin",
         "to_address":"Payee",
         "amount":"Amount",
+        "gas":"Gaz",
         "send_all":"Hemî bişînin",
         "data":"Daneyên",
         "data_placeholder":"Daneyên hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Ji kerema xwe heqê veguherandina qanûnek qanûnî bike",
             "address_err":"Forma şîfreya veguhestinê ne çewt e.",
             "send_success":"Transaction şandin",
+            "amount_exceeded":"Gelek danûstandinê ya niha ya buhayê hesabê zêde dike",
 
             "decrypt_err":"Parsing failed, ew dibe ku çewtiyek şîfre be",
             "send_error":"Veguhastin têkelî: ger ji kerema xwe hebe ku heqê heqê heqê û heqê minerî ye"

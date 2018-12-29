@@ -50,6 +50,7 @@
         "from_address":"Hāʻawi i ka hui",
         "to_address":"Payee",
         "amount":"Ka nui",
+        "gas":"ʻO Gas",
         "send_all":"Hoʻouna i nā mea a pau",
         "data":"ʻIkepili",
         "data_placeholder":"Heʻikeʻike hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Eʻoluʻolu e hoʻokomo i ka nui o ka hihia",
             "address_err":"ʻAʻole pono keʻano o ka helu i hoʻololiʻia.",
             "send_success":"Hoʻounaʻia ka hana",
+            "amount_exceeded":"ʻO ke kaʻina o nā hōʻaia o kēia manawa eʻoi aʻe ana i ka uku pūnaewele",
 
             "decrypt_err":"Ua lakaʻole ka wallet, kahi hewa paha",
             "send_error":"Ua pau ka hana: eʻoluʻolu e nānā inā loaʻa ka uku kaulike a me ka uku miner"

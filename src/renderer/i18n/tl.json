@@ -50,6 +50,7 @@
         "from_address":"Nagpapadala ng partido",
         "to_address":"Pagbabayad",
         "amount":"Halaga",
+        "gas":"Gas",
         "send_all":"Ipadala lahat",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Mangyaring magpasok ng isang legal na halaga ng transaksyon",
             "address_err":"Di-wasto ang format ng nailipat na address.",
             "send_success":"Ipinadala ang transaksyon",
+            "amount_exceeded":"Lumampas ang kabuuang halaga ng kasalukuyang transaksyon sa balanse sa account",
 
             "decrypt_err":"Nabigo ang pag-parse ng Wallet, maaaring ito ay isang error sa password",
             "send_error":"Nabigo ang transaksyon: pakitingnan kung may sapat na balanse at bayad sa minero"

@@ -189,7 +189,7 @@ export default {
             self.conMsg = self.$t("page_config.content_msg.is_local_node");
             self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
             try {
-                console.log(options.directory)
+                // console.log(options.directory)
                 self.$startLogs.info(
                     "本地的节点文件",
                     path.join(
@@ -238,12 +238,12 @@ export default {
             self.$czr.request
                 .status()
                 .then(data => {
-                    console.log("已经有节点，不需要启动");
+                    // console.log("已经有节点，不需要启动");
                     self.$startLogs.info("已经有节点，不需要启动;");
                     self.$router.push({ path: "home" });
                 })
                 .catch(error => {
-                    console.log("本地没有节点，需要启动");
+                    // console.log("本地没有节点，需要启动");
                     self.$startLogs.info("本地没有节点，需要启动");
                     let ls = spawn(nodePath, [
                         "--daemon",

@@ -50,6 +50,7 @@
         "from_address":"Parti mittenti",
         "to_address":"Min jitħallas",
         "amount":"Ammont",
+        "gas":"Gass",
         "send_all":"Ibgħat kollox",
         "data":"Dejta",
         "data_placeholder":"Dejta esseċimali",
@@ -73,6 +74,7 @@
             "amount_error":"Jekk jogħġbok ikteb ammont ta 'transazzjoni legali",
             "address_err":"Il-format tal-indirizz trasferit huwa invalidu.",
             "send_success":"Tranżazzjoni mibgħuta",
+            "amount_exceeded":"L-ammont totali tat-transazzjoni kurrenti jaqbeż il-bilanċ tal-kont",
 
             "decrypt_err":"It-tqabbil tal-kartiera falza, jista 'jkun żball tal-password",
             "send_error":"It-transazzjoni falliet: jekk jogħġbok iċċekkja jekk hemmx biżżejjed bilanċ u miżata tal-minatur"

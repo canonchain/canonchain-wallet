@@ -50,6 +50,7 @@
         "from_address":"Gửi tiệc",
         "to_address":"Người được trả tiền",
         "amount":"Số tiền",
+        "gas":"Gas",
         "send_all":"Gửi tất cả",
         "data":"Dữ liệu",
         "data_placeholder":"Dữ liệu thập lục phân",
@@ -73,6 +74,7 @@
             "amount_error":"Vui lòng nhập số tiền giao dịch hợp pháp",
             "address_err":"Định dạng của địa chỉ được chuyển không hợp lệ.",
             "send_success":"Giao dịch đã được gửi",
+            "amount_exceeded":"Tổng số tiền giao dịch hiện tại vượt quá số dư tài khoản",
 
             "decrypt_err":"Phân tích ví không thành công, đó có thể là lỗi mật khẩu",
             "send_error":"Giao dịch thất bại: vui lòng kiểm tra xem có đủ số dư và phí khai thác không"

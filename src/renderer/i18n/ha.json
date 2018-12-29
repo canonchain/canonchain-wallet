@@ -50,6 +50,7 @@
         "from_address":"Aika jam'iyyar",
         "to_address":"Payee",
         "amount":"Adadin",
+        "gas":"Gas",
         "send_all":"Aika duk",
         "data":"Data",
         "data_placeholder":"Bayanin Hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Da fatan a shigar da adadin ma'amalar shari'a",
             "address_err":"Tsarin adireshin da aka canja shi ba daidai ba ne.",
             "send_success":"Ma'amalar aikawa",
+            "amount_exceeded":"Ƙimar yawan kuɗi na yau da kullum ya wuce daidaitattun asusun",
 
             "decrypt_err":"Kuskuren takalma ya kasa, yana iya zama kuskuren sirri",
             "send_error":"An gama aiki: don Allah a duba idan akwai daidaitattun daidaitattun kuɗin kuɗi"

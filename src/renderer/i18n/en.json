@@ -50,6 +50,7 @@
         "from_address":"Sending party",
         "to_address":"Beneficiary",
         "amount":"Amount",
+        "gas":"Gas",
         "send_all":"Send all",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Please enter a legal transaction amount",
             "address_err":"The format of the transferred address is invalid.",
             "send_success":"Transaction sent",
+            "amount_exceeded":"Current transaction total amount exceeds account balance",
 
             "decrypt_err":"Wallet parsing failed, it may be a password error",
             "send_error":"Transaction failed: please check if there is sufficient balance and miner fee"

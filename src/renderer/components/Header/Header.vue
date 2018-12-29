@@ -15,7 +15,8 @@
             </li>
         </ul>
         <div class="has-assets-czr">
-            <span class="testnet">{{ $t('model_header.testnet') }} -
+            <span class="testnet">
+                <!-- {{ $t('model_header.testnet') }} - -->
                 <span v-if="this.online" class="online">{{ $t('model_header.online') }}</span>
                 <span v-else class="unonline">{{ $t('model_header.offline') }}</span>
             </span>

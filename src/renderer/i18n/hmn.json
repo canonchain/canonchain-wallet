@@ -50,6 +50,7 @@
         "from_address":"Xa tog",
         "to_address":"Tus neeg txais kev pab",
         "amount":"Tus nqi",
+        "gas":"Roj",
         "send_all":"Xa tag nrho",
         "data":"Cov ntaub ntawv",
         "data_placeholder":"Hexadecimal cov ntaub ntawv",
@@ -73,6 +74,7 @@
             "amount_error":"Thov sau tus nqi raws li txoj cai",
             "address_err":"Cov hom ntawv ntawm qhov chaw nyob xa mus yog invalid.",
             "send_success":"Thauj xa tuaj",
+            "amount_exceeded":"Tam sim no lw nqi ntau tshaj li tus account tshuav",
 
             "decrypt_err":"Cov hnab parsing puav tsis tau, nws yuav ua tau yuam kev password",
             "send_error":"Hloov ua tsis tau zoo: thov xyuas seb puas muaj nqi txaus thiab cov nqi me me"

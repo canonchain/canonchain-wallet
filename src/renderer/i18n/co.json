@@ -50,6 +50,7 @@
         "from_address":"Mandatu",
         "to_address":"Payee",
         "amount":"Amount",
+        "gas":"Gas",
         "send_all":"Mandate tuttu",
         "data":"Dati",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Per piacè inserisce una quantità di transazzione legali",
             "address_err":"U formatu di l'indirizzu trasferitore hè invalidu.",
             "send_success":"A currezzione mandata",
+            "amount_exceeded":"A quantità totali di a transaccione correnti supera l'equilibriu di a basa",
 
             "decrypt_err":"L'analizazione di Wallet falla, pò esse un errore di password",
             "send_error":"A transaczione falleva: cuntene qualchì bastanza di equilibriu è minore"

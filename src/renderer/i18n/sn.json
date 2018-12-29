@@ -50,6 +50,7 @@
         "from_address":"Kutumira chikamu",
         "to_address":"Payee",
         "amount":"Nhamba",
+        "gas":"Gesi",
         "send_all":"Tumira zvose",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Ndapota nyora mukana wekutengesa mutemo",
             "address_err":"Mhando yekodzero yekutambirwa haina kuwanikwa.",
             "send_success":"Transaction yatumwa",
+            "amount_exceeded":"Nhasi kutengesa mari yakawanda kunodarika kubhadharira kwebhuku",
 
             "decrypt_err":"Kurapa kwechikwata kwakakundikana, ingangodaro isiri iyo password",
             "send_error":"Transaction yakakundikana: tapota tarisai kana pane mari yakakwana uye mari yevashandi"

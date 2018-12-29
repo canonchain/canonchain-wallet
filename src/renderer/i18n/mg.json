@@ -50,6 +50,7 @@
         "from_address":"Fandefasana antoko",
         "to_address":"Payee",
         "amount":"Money",
+        "gas":"mandatsa-dranomaso",
         "send_all":"Alefaso ny rehetra",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -73,6 +74,7 @@
             "amount_error":"Mampidira sanda ara-dalàna ny volavolan-dalàna",
             "address_err":"Tsy mety ny endriky ny adiresy nadika.",
             "send_success":"Nandefa transaction",
+            "amount_exceeded":"Ny vola maimaim-poana ankehitriny dia mihoatra ny fandanjalanjan'ny kaonty",
 
             "decrypt_err":"Tsy nahomby ny fanadihadiana ny kitapo, mety ho fahadisoana anaty tenimiafina izany",
             "send_error":"Tsy nahomby ny fanatanterahana: azafady raha ampy ny sanda sy ny sara-mineraly"

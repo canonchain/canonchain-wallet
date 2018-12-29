@@ -50,6 +50,7 @@
         "from_address":"Trimite părții",
         "to_address":"Payee",
         "amount":"bani",
+        "gas":"gaz",
         "send_all":"Trimiteți-le pe toate",
         "data":"date",
         "data_placeholder":"Date hexazecimale",
@@ -73,6 +74,7 @@
             "amount_error":"Introduceți o sumă legată de tranzacție",
             "address_err":"Formatul adresei transferate este nevalid.",
             "send_success":"Tranzacția a fost trimisă",
+            "amount_exceeded":"Suma totală a tranzacției actuale depășește soldul contului",
 
             "decrypt_err":"Parcelarea parolei nu a reușit, poate fi o eroare de parolă",
             "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și o taxă pentru mineri"

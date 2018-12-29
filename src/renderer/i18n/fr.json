@@ -50,6 +50,7 @@
         "from_address":"Partie d'envoi",
         "to_address":"Bénéficiaire",
         "amount":"Montant",
+        "gas":"Gaz",
         "send_all":"Envoyer tout",
         "data":"Les données",
         "data_placeholder":"Données hexadécimales",
@@ -73,6 +74,7 @@
             "amount_error":"Veuillez saisir un montant de transaction légal",
             "address_err":"Le format de l'adresse transférée est invalide.",
             "send_success":"Transaction envoyée",
+            "amount_exceeded":"Le montant total de la transaction actuelle dépasse le solde du compte",
 
             "decrypt_err":"L'analyse du portefeuille a échoué, il peut s'agir d'une erreur de mot de passe",
             "send_error":"Échec de la transaction: veuillez vérifier si le solde et les frais du mineur sont suffisants"

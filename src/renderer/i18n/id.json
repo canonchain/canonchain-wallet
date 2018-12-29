@@ -50,6 +50,7 @@
         "from_address":"Mengirim pesta",
         "to_address":"Penerima pembayaran",
         "amount":"Jumlah",
+        "gas":"Gas",
         "send_all":"Kirim semua",
         "data":"Data",
         "data_placeholder":"Data heksadesimal",
@@ -73,6 +74,7 @@
             "amount_error":"Silakan masukkan jumlah transaksi yang sah",
             "address_err":"Format alamat yang ditransfer tidak valid.",
             "send_success":"Transaksi terkirim",
+            "amount_exceeded":"Total transaksi saat ini melebihi saldo akun",
 
             "decrypt_err":"Penguraian dompet gagal, mungkin kesalahan kata sandi",
             "send_error":"Transaksi gagal: harap periksa apakah ada saldo dan biaya penambang yang memadai"

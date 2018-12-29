@@ -50,6 +50,7 @@
         "from_address":"Inatuma chama",
         "to_address":"Payee",
         "amount":"Kiasi",
+        "gas":"Gesi",
         "send_all":"Tuma yote",
         "data":"Takwimu",
         "data_placeholder":"Data ya hexadecimal",
@@ -73,6 +74,7 @@
             "amount_error":"Tafadhali ingiza kiasi cha malipo ya kisheria",
             "address_err":"Faili ya anwani ya kuhamishiwa ni batili.",
             "send_success":"Shughuli imetumwa",
+            "amount_exceeded":"Thamani ya sasa ya jumla ya shughuli huzidi usawa wa akaunti",
 
             "decrypt_err":"Mchanganyiko wa Wallet umeshindwa, inaweza kuwa kosa la nenosiri",
             "send_error":"Shughuli imeshindwa: tafadhali angalia ikiwa kuna usawa wa kutosha na ada ya mchimbaji"

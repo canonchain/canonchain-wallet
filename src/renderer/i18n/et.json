@@ -50,6 +50,7 @@
         "from_address":"Saatev pool",
         "to_address":"Saaja",
         "amount":"Summa",
+        "gas":"Gaas",
         "send_all":"Saada kõik",
         "data":"Andmed",
         "data_placeholder":"Hexadecimaalsed andmed",
@@ -73,6 +74,7 @@
             "amount_error":"Sisestage juriidilise tehingu summa",
             "address_err":"Üleantud aadressi formaat on kehtetu.",
             "send_success":"Tehing saadeti",
+            "amount_exceeded":"Praeguse tehingu kogusumma ületab konto saldo",
 
             "decrypt_err":"Rahakoti parsimine ebaõnnestus, see võib olla parooliviga",
             "send_error":"Tehing ebaõnnestus: kontrollige, kas tasu ja kaevandaja tasu on piisav"

@@ -50,6 +50,7 @@
         "from_address":"Gönderen parti",
         "to_address":"alacaklı",
         "amount":"para",
+        "gas":"gaz",
         "send_all":"Hepsini gönder",
         "data":"veri",
         "data_placeholder":"Onaltılık veri",
@@ -73,6 +74,7 @@
             "amount_error":"Lütfen yasal bir işlem tutarı girin",
             "address_err":"Aktarılan adresin formatı geçersiz.",
             "send_success":"İşlem gönderildi",
+            "amount_exceeded":"Geçerli işlem toplam tutarı hesap bakiyesini aşıyor",
 
             "decrypt_err":"Cüzdan ayrıştırma işlemi başarısız oldu, bir şifre hatası olabilir",
             "send_error":"İşlem başarısız oldu: Lütfen yeterli bakiye ve maden ücreti olup olmadığını kontrol edin"
