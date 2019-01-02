@@ -5,7 +5,7 @@
   "keywords": [
     "block-wallet"
   ],
-  "author": "CZR_DEV",
+  "author": "CanonChain",
   "description": "This project is a wallet of CZR , wetsite is http://www.canonchain.com/",
   "license": null,
   "main": "./dist/electron/main.js",

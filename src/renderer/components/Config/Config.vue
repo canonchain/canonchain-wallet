@@ -175,7 +175,9 @@ export default {
 
             let options = {
                 directory: path.join(this.userDataPath, "download"),
-                dirname: "filename",
+                headers:{
+                    'Connection':'keep-alive'
+                },
                 extract: true,
                 timeout: 1000 * 60
             };
