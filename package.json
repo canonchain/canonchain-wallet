@@ -1,6 +1,6 @@
 {
-  "name": "czr-wallet",
-  "productName": "czr-wallet",
+  "name": "CanonChain-Wallet",
+  "productName": "CanonChain-Wallet",
   "version": "0.1.2",
   "keywords": [
     "block-wallet"
@@ -21,7 +21,7 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "CanonChain Wallet",
+    "productName": "CanonChain-Wallet",
     "appId": "org.simulatedgreg.electron-vue",
     "directories": {
       "output": "build"

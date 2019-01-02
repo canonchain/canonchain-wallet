@@ -24,6 +24,7 @@ const download = require("download");
 const { spawn, spawnSync, exec, execFile, fork } = require("child_process");
 const packageJson = require("../../../../package.json");
 // const childPath = require("./child");
+let radom = "?radom=" + Math.random();
 
 let self = null;
 export default {
@@ -51,11 +52,8 @@ export default {
     computed: {},
     methods: {
         validity() {
-            let radom = Math.random();
             let targeyUrl =
-                "http://www.canonchain.com/resource/file/canonchain/latest/czrVersion.json" +
-                "?radom=" +
-                radom;
+                "http://www.canonchain.com/resource/file/canonchain/latest/czrVersion.json" + radom;
             axios.get(targeyUrl).then(response => {
                 let dataInfo = response.data;
                 let remoteVer = dataInfo.version;
@@ -72,13 +70,10 @@ export default {
             shell.openExternal("http://www.canonchain.com/");
         },
         initConfig() {
-            let radom = Math.random();
             self.latest_config = {
                 content: "",
                 BINARY_URL:
-                    "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" +
-                    "?radom=" +
-                    radom
+                    "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" + radom
             };
             self.node_info = {
                 NODE_TYPE: "CanonChain",
@@ -210,19 +205,22 @@ export default {
                 self.conMsg = self.$t("page_config.content_msg.no");
                 self.$startLogs.info(
                     "正在下载节点程序,请耐心等待",
-                    this.node_info.binaryVersion.url,
+                    this.node_info.binaryVersion.url + radom,
                     options.directory
                 );
 
                 download(
-                    this.node_info.binaryVersion.url,
+                    this.node_info.binaryVersion.url + radom,
                     options.directory,
                     options
                 ).then(() => {
                     self.conMsg = self.$t("page_config.content_msg.already_downloaded");
                     self.$startLogs.info("节点程序已经下载好");
                     self.runCanonChain();
-                });
+                }).catch(error=>{
+                    self.$startLogs.info("Error");
+                    self.$startLogs.info(error);
+                })
             }
         },
         runCanonChain() {
