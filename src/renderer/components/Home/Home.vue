@@ -312,6 +312,13 @@ export default {
                 return;
             }
 
+            if ( this.createInfo.pwd.length > 100) {
+                this.createInfo.error = this.$t(
+                    "page_home.create_dia.validate_long_password"
+                );
+                return;
+            }
+
             // console.log(self.createInfo.pwd);
             // console.log(self.$czr.accounts)
             // self.$czr.accounts.create(self.createInfo.pwd).then(data => {
@@ -520,7 +527,7 @@ export default {
                     interVal = 0;
                 }
                 self.getAccounts();
-            }, interVal || 5000);
+            }, interVal || 2000);
         },
         getAccountsBalances(accountAry) {
             self.$czr.request

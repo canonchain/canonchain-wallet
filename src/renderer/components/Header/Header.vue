@@ -27,7 +27,7 @@
 <script>
 import { setTimeout } from "timers";
 let self;
-let continued = 2000;
+let continued = 1500;
 export default {
     name: "Header",
     data() {
@@ -52,8 +52,8 @@ export default {
             self.$czr.request
                 .status()
                 .then(res => {
-                    if ((continued = 5000)) {
-                        continued = 2000;
+                    if ((continued = 2500)) {
+                        continued = 1500;
                     }
                     self.onlineTimer();
                     self.online = true;
@@ -61,8 +61,8 @@ export default {
                 .catch(error => {
                     self.onlineTimer();
                     self.online = false;
-                    if ((continued = 2000)) {
-                        continued = 5000;
+                    if ((continued = 1500)) {
+                        continued = 2500;
                     }
 
                     self.$walletLogs.error(
