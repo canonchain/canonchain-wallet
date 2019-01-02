@@ -1,14 +1,14 @@
 {
   "clients": {
     "CanonChain": {
-      "version": "0.8.1",
+      "version": "0.9.7",
       "platforms": {
         "mac": {
           "x64": {
             "download": {
               "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain-lastest.tar.gz",
               "type": "tar",
-              "bin": "canonchain-darwin-amd64-0.9.7/canonchain"
+              "bin": "canonchain"
             },
             "bin": "canonchain",
             "commands": {
@@ -27,9 +27,9 @@
         "win": {
           "x64": {
             "download": {
-              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain-windows-amd64-lastest.zip",
+              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip",
               "type": "zip",
-              "bin": "canonchain-windows-amd64-0.9.7\\canonchain.exe"
+              "bin": "canonchain.exe"
             },
             "bin": "canonchain.exe",
             "commands": {
