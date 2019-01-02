@@ -72,7 +72,7 @@
                 <el-alert v-if="importInfo.alert" :title="importInfo.alert.content" :closable="false" :type="importInfo.alert.type" show-icon>
                 </el-alert>
                 <template>
-                    <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop @drop.prevent.stop="importKeystore"> {{$t('page_home.import_dia.placeholder_keystore')}} </div>
+                    <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop @drop.prevent.stop="importKeystore" > {{$t('page_home.import_dia.placeholder_keystore')}} </div>
                     <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
                         <template slot="prepend">
                             <i class="el-icon-document"></i> {{$t('page_home.import_dia.create_tag')}}</template>
@@ -327,6 +327,7 @@ export default {
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
+                    console.log(data);
                     if(data.error){
                         self.$message.error("出错啦 : 可能是非法的密码格式");
                         return;
@@ -399,14 +400,42 @@ export default {
 
         //Import Start
         importKeystore(event) {
-            let path = event.dataTransfer.files[0].path;
-            fs.readFile(path, "utf8", (err, data) => {
+            let fileLength = event.dataTransfer.files.length;
+            console.log(fileLength);
+            if(fileLength!=1){
+                self.$message.error(
+                    self.$t(
+                        "page_home.import_dia.keystore_length_error"
+                    )
+                );
+                return;
+            }
+            let targetFile = event.dataTransfer.files[0];
+            console.log(targetFile.type)
+            if(targetFile.type!=='application/json'){
+                self.$message.error(
+                    self.$t(
+                        "page_home.import_dia.keystore_format_error"
+                    )
+                );
+                return;
+            }
+            fs.readFile(targetFile.path, "utf8", (err, data) => {
                 if (err) {
                     this.$message.error(
                         this.$t("page_home.import_dia.keystore_error") +
                             ":" +
                             err
                     );
+                }
+                let targetJson = JSON.parse(data);
+                if(!targetJson.account || targetJson.account.length!==54){
+                    self.$message.error(
+                        self.$t(
+                            "page_home.import_dia.keystore_format_error"
+                        )
+                    );
+                    return;
                 }
                 // this.importInfo.keystore = JSON.parse(data);
                 this.importInfo.keystore = data;
