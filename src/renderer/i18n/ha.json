@@ -138,6 +138,7 @@
             "validate_password":"Da fatan a shigar da kalmar wucewar da kuka saita",
             "validate_re_password":"Da fatan a shigar da kalmar sirrin da kuka sake saitawa",
             "validate_strong_password":"Da fatan a shigar da kalmar sirri na akalla 8 digiri",
+            "validate_long_password":"Kalmar kalmar sirri tana da tsawo, don Allah gyara",
             "validate_password_length":"Kalmomin da ba daidai ba sun shiga sau biyu",
 
             "create_success":"An yi nasara",
@@ -156,6 +157,8 @@
             "imported_account_success":"An shigo da shi cikin nasara",
             "exist":"Wannan lissafin ya wanzu, bayanin kula ne",
             "keystore_error":"Kuskure:",
+            "keystore_length_error":"Kusa ɗaya fayil ɗin asusun iya shigarwa, don Allah sake gwadawa!",
+            "keystore_format_error":"Da fatan a zaɓi fayil din asusun daidai",
             "imported_success":"An riga an zabi fayil"
         },
         "remove_dia": {

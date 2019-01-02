@@ -138,6 +138,7 @@
             "validate_password":"Sila masukkan kata laluan yang anda tetapkan",
             "validate_re_password":"Sila masukkan kata laluan yang anda tetapkan semula",
             "validate_strong_password":"Sila masukkan kata laluan sekurang-kurangnya 8 digit",
+            "validate_long_password":"Panjang kata laluan terlalu panjang, sila ubah suai",
             "validate_password_length":"Kata laluan tidak konsisten dimasukkan dua kali",
 
             "create_success":"Dibuat berjaya",
@@ -156,6 +157,8 @@
             "imported_account_success":"Berjaya diimport",
             "exist":"Akaun ini sudah ada, nota itu",
             "keystore_error":"Ralat:",
+            "keystore_length_error":"Hanya satu fail akaun yang boleh diimport, sila cuba lagi!",
+            "keystore_format_error":"Sila pilih fail akaun yang betul",
             "imported_success":"Telah dipilih fail"
         },
         "remove_dia": {

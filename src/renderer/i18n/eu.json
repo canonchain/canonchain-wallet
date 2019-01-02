@@ -138,6 +138,7 @@
             "validate_password":"Idatzi zehaztutako pasahitza",
             "validate_re_password":"Sartu berriro ezarri duzun pasahitza",
             "validate_strong_password":"Sartu gutxienez 8 digituko pasahitza",
+            "validate_long_password":"Pasahitzaren luzera luzeegia da, mesedez aldatu",
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Sortu arrakastaz",
@@ -156,6 +157,8 @@
             "imported_account_success":"Ondo inportatu da",
             "exist":"Kontua badago lehendik ere, oharra da",
             "keystore_error":"Akatsa:",
+            "keystore_length_error":"Kontu fitxategi bakarra inportatu daiteke, saiatu berriro!",
+            "keystore_format_error":"Hautatu kontu korrontearen fitxategia",
             "imported_success":"Dagoeneko hautatutako fitxategia"
         },
         "remove_dia": {

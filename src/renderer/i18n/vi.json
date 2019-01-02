@@ -138,6 +138,7 @@
             "validate_password":"Vui lòng nhập mật khẩu bạn đặt",
             "validate_re_password":"Vui lòng nhập lại mật khẩu bạn đã đặt lại",
             "validate_strong_password":"Vui lòng nhập mật khẩu ít nhất 8 chữ số",
+            "validate_long_password":"Độ dài mật khẩu quá dài, vui lòng sửa đổi",
             "validate_password_length":"Mật khẩu không nhất quán được nhập hai lần",
 
             "create_success":"Tạo thành công",
@@ -156,6 +157,8 @@
             "imported_account_success":"Nhập khẩu thành công",
             "exist":"Tài khoản này đã tồn tại, ghi chú là",
             "keystore_error":"Lỗi:",
+            "keystore_length_error":"Chỉ có thể nhập một tệp tài khoản, vui lòng thử lại!",
+            "keystore_format_error":"Vui lòng chọn đúng tài khoản",
             "imported_success":"Đã chọn tập tin"
         },
         "remove_dia": {

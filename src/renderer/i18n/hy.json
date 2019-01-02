@@ -138,6 +138,7 @@
             "validate_password":"Խնդրում ենք մուտքագրել գաղտնաբառը",
             "validate_re_password":"Խնդրում ենք մուտքագրել նորից հաստատված գաղտնաբառը",
             "validate_strong_password":"Խնդրում ենք մուտքագրել գոնե առնվազն 8 նիշ",
+            "validate_long_password":"Գաղտնաբառի երկարությունը չափազանց երկար է, փոփոխեք",
             "validate_password_length":"Անհամապատասխան գաղտնաբառ մուտքագրվել է երկու անգամ",
 
             "create_success":"Ստեղծված հաջողությամբ",
@@ -156,6 +157,8 @@
             "imported_account_success":"Ներկրվել է հաջողակ",
             "exist":"Այս հաշիվը արդեն գոյություն ունի, նշումը",
             "keystore_error":"Սխալ:",
+            "keystore_length_error":"Միայն մեկ հաշվի ֆայլ կարող է ներմուծվել, կրկին փորձեք:",
+            "keystore_format_error":"Խնդրում ենք ընտրել ճիշտ հաշիվը",
             "imported_success":"Արդեն ընտրված ֆայլը"
         },
         "remove_dia": {

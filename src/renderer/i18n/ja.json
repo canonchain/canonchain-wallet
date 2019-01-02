@@ -138,6 +138,7 @@
             "validate_password":"設定したパスワードを入力してください",
             "validate_re_password":"もう一度設定したパスワードを入力してください",
             "validate_strong_password":"8桁以上のパスワードを入力してください",
+            "validate_long_password":"パスワードの長さが長すぎます、変更してください",
             "validate_password_length":"パスワードが2回入力されています",
 
             "create_success":"作成しました",
@@ -156,6 +157,8 @@
             "imported_account_success":"正常にインポートされました",
             "exist":"このアカウントは既に存在します。メモは",
             "keystore_error":"エラー：",
+            "keystore_length_error":"インポートできるアカウントファイルは1つだけです。もう一度やり直してください。",
+            "keystore_format_error":"正しいアカウントファイルを選択してください",
             "imported_success":"選択済みファイル"
         },
         "remove_dia": {

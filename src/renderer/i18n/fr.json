@@ -77,7 +77,7 @@
             "amount_exceeded":"Le montant total de la transaction actuelle dépasse le solde du compte",
 
             "decrypt_err":"L'analyse du portefeuille a échoué, il peut s'agir d'une erreur de mot de passe",
-            "send_error":"Échec de la transaction: veuillez vérifier si le solde et les frais du mineur sont suffisants"
+            "send_error":"Échec de la transaction: vérifiez si le solde et les frais du mineur sont suffisants"
         }
     },
     "page_account": {
@@ -138,6 +138,7 @@
             "validate_password":"Veuillez saisir le mot de passe que vous avez défini",
             "validate_re_password":"Veuillez saisir le mot de passe que vous avez défini à nouveau.",
             "validate_strong_password":"Veuillez entrer un mot de passe d'au moins 8 chiffres",
+            "validate_long_password":"La longueur du mot de passe est trop longue, veuillez modifier",
             "validate_password_length":"Mot de passe incohérent entré deux fois",
 
             "create_success":"Créé avec succès",
@@ -156,6 +157,8 @@
             "imported_account_success":"Importé avec succès",
             "exist":"Ce compte existe déjà, la note est",
             "keystore_error":"Erreur:",
+            "keystore_length_error":"Un seul fichier de compte peut être importé. Veuillez réessayer!",
+            "keystore_format_error":"Veuillez sélectionner le bon fichier de compte.",
             "imported_success":"Fichier déjà sélectionné"
         },
         "remove_dia": {

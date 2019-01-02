@@ -138,6 +138,7 @@
             "validate_password":"Mangga ketik sandhi sing sampeyan setel",
             "validate_re_password":"Mangga ketik sandhi sing wis disetel maneh",
             "validate_strong_password":"Mangga ketik sandhi minimal 8 digit",
+            "validate_long_password":"Panjang tembung seng dawa banget, mangga dimodifikasi",
             "validate_password_length":"Tembung sing ora konsisten wis ping loro",
 
             "create_success":"Digawe sukses",
@@ -156,6 +157,8 @@
             "imported_account_success":"Kasil apik",
             "exist":"Akun iki wis ana, cathetan kasebut",
             "keystore_error":"Kesalahan:",
+            "keystore_length_error":"Mung siji file akun bisa diimpor, coba dicoba!",
+            "keystore_format_error":"Mangga pilih file akun sing bener",
             "imported_success":"Wis dipilih file"
         },
         "remove_dia": {

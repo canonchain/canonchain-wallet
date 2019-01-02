@@ -138,6 +138,7 @@
             "validate_password":"Sicela ufake iphasiwedi oyibekile",
             "validate_re_password":"Sicela ufake iphasiwedi oyisethayo futhi",
             "validate_strong_password":"Sicela ufake iphasiwedi okungenani amadijithi angu-8",
+            "validate_long_password":"Ubude bephasiwedi bude kakhulu, sicela uguqule",
             "validate_password_length":"Iphasiwedi engahambisani nayo ifakiwe kabili",
 
             "create_success":"Idalwe ngempumelelo",
@@ -156,6 +157,8 @@
             "imported_account_success":"Ukungeniswa ngempumelelo",
             "exist":"Le akhawunti ivele ikhona, inothi likhona",
             "keystore_error":"Iphutha:",
+            "keystore_length_error":"Ifayela elilodwa kuphela le-akhawunti lingeniswa, sicela uzame futhi!",
+            "keystore_format_error":"Sicela ukhethe ifayela le-akhawunti elungile",
             "imported_success":"Ifayela elikhethiwe kakade"
         },
         "remove_dia": {

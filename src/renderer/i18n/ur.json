@@ -138,6 +138,7 @@
             "validate_password":"اپنا پاس ورڈ درج کریں",
             "validate_re_password":"برائے مہربانی اپنا پاس ورڈ درج کریں",
             "validate_strong_password":"براہ کرم کم از کم 8 ہندسوں کا ایک پاس ورڈ درج کریں",
+            "validate_long_password":"پاس ورڈ کی لمبائی بہت طویل ہے، براہ کرم نظر ثانی کریں",
             "validate_password_length":"غیر متضاد پاسورڈ دو مرتبہ داخل ہوا",
 
             "create_success":"کامیابی سے تخلیق",
@@ -156,6 +157,8 @@
             "imported_account_success":"کامیابی سے درآمد",
             "exist":"یہ اکاؤنٹ پہلے ہی موجود ہے، نوٹ ہے",
             "keystore_error":"غلطی:",
+            "keystore_length_error":"صرف ایک اکاؤنٹ فائل درآمد کی جا سکتی ہے، براہ کرم دوبارہ کوشش کریں!",
+            "keystore_format_error":"براہ کرم درست اکاؤنٹ فائل منتخب کریں",
             "imported_success":"پہلے سے ہی منتخب کردہ فائل"
         },
         "remove_dia": {

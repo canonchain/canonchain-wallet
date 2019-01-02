@@ -138,6 +138,7 @@
             "validate_password":"Faamolemole ia ulufale i le uputatala na e seti",
             "validate_re_password":"Faamolemole ia ulufale mai i le uputatala na e toe faatulagaina",
             "validate_strong_password":"Faʻamolemole tuʻu mai se faʻaupuga o le itiiti ifo ma le 8 numera",
+            "validate_long_password":"E umi le umi o le upega tafailagi, faamolemole sui",
             "validate_password_length":"Faʻasalalau le faʻamaoni e le saʻo",
 
             "create_success":"Fausia lelei",
@@ -156,6 +157,8 @@
             "imported_account_success":"Suʻe ma le manuia",
             "exist":"O loʻo iai nei tala, o le tusi",
             "keystore_error":"Laʻasaga:",
+            "keystore_length_error":"E na o le tasi le faila faila e mafai ona faaulufale mai, faamolemole toe taumafai!",
+            "keystore_format_error":"Faamolemole filifili le faila faila saʻo",
             "imported_success":"Ua uma ona filifilia le faila"
         },
         "remove_dia": {

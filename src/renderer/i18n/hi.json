@@ -136,8 +136,9 @@
             "validate_tag_length":"नोट का नाम 8 अक्षरों से अधिक नहीं हो सकता है।",
 
             "validate_password":"कृपया अपने द्वारा निर्धारित पासवर्ड दर्ज करें",
-            "validate_re_password":"कृपया वह पासवर्ड दर्ज करें जिसे आपने फिर से सेट किया है",
+            "validate_re_password":"कृपया वह पासवर्ड डालें जो आपने फिर से सेट किया है",
             "validate_strong_password":"कृपया कम से कम 8 अंकों का एक पासवर्ड दर्ज करें",
+            "validate_long_password":"पासवर्ड की लंबाई बहुत लंबी है, कृपया संशोधित करें",
             "validate_password_length":"असंगत पासवर्ड दो बार दर्ज किया गया",
 
             "create_success":"सफलतापूर्वक बनाया गया",
@@ -156,6 +157,8 @@
             "imported_account_success":"सफलतापूर्वक आयात किया गया",
             "exist":"यह खाता पहले से मौजूद है, नोट है",
             "keystore_error":"त्रुटि:",
+            "keystore_length_error":"केवल एक खाता फ़ाइल आयात की जा सकती है, कृपया पुनः प्रयास करें!",
+            "keystore_format_error":"कृपया सही खाता फ़ाइल चुनें",
             "imported_success":"पहले से ही चयनित फ़ाइल"
         },
         "remove_dia": {

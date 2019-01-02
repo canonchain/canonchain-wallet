@@ -138,6 +138,7 @@
             "validate_password":"გთხოვთ შეიყვანოთ პაროლი",
             "validate_re_password":"გთხოვთ, შეიყვანოთ პაროლი, კვლავ შეიტანეთ",
             "validate_strong_password":"გთხოვთ შეიყვანოთ პაროლი მინიმუმ 8 ციფრი",
+            "validate_long_password":"პაროლი სიგრძე ძალიან გრძელია, გთხოვთ, შეცვალოთ",
             "validate_password_length":"შეუსაბამო პაროლი ორჯერ შევიდა",
 
             "create_success":"წარმატებით შეიქმნა",
@@ -156,6 +157,8 @@
             "imported_account_success":"წარმატებით იმპორტირებულია",
             "exist":"ეს ანგარიში უკვე არსებობს, შენიშვნა არის",
             "keystore_error":"შეცდომა:",
+            "keystore_length_error":"მხოლოდ ერთი ანგარიშის ფაილი შეიძლება შემოიტანოთ, გთხოვთ, ისევ სცადოთ!",
+            "keystore_format_error":"გთხოვთ, აირჩიოთ სწორი ანგარიშის ფაილი",
             "imported_success":"უკვე შერჩეული ფაილი"
         },
         "remove_dia": {

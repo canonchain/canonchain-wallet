@@ -138,6 +138,7 @@
             "validate_password":"કૃપા કરીને તમે સેટ કરેલો પાસવર્ડ દાખલ કરો",
             "validate_re_password":"કૃપા કરીને તમે ફરીથી સેટ કરેલો પાસવર્ડ દાખલ કરો",
             "validate_strong_password":"કૃપા કરીને ઓછામાં ઓછા 8 અંકોનો પાસવર્ડ દાખલ કરો",
+            "validate_long_password":"પાસવર્ડની લંબાઈ ખૂબ લાંબી છે, કૃપા કરીને સંશોધિત કરો",
             "validate_password_length":"અસંગત પાસવર્ડ બે વાર દાખલ થયો",
 
             "create_success":"સફળતાપૂર્વક બનાવ્યું",
@@ -156,6 +157,8 @@
             "imported_account_success":"સફળતાપૂર્વક આયાત કરી",
             "exist":"આ એકાઉન્ટ પહેલેથી અસ્તિત્વમાં છે, નોંધ છે",
             "keystore_error":"ભૂલ:",
+            "keystore_length_error":"ફક્ત એક એકાઉન્ટ ફાઇલ આયાત કરી શકાય છે, કૃપા કરીને ફરીથી પ્રયત્ન કરો!",
+            "keystore_format_error":"કૃપા કરી સાચી એકાઉન્ટ ફાઇલ પસંદ કરો",
             "imported_success":"પહેલેથી જ પસંદ કરેલી ફાઇલ"
         },
         "remove_dia": {

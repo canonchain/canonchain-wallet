@@ -123,8 +123,8 @@
             "create_tit":"Bir hesap oluştur",
             "backup_tit":"Yeni hesabınızı yedekleyin",
             "create_tag":"Hesap notu",
-            "create_pwd":"şifre",
-            "create_repwd":"şifreyi onayla",
+            "create_pwd":"Şifre ayarla",
+            "create_repwd":"Şifreyi onayla",
             "placeholder_tag":"Lütfen hesap not adını giriniz",
             "placeholder_pwd":"Lütfen hesap şifresini ayarlayın",
             "placeholder_repwd":"Lütfen hesap şifresini onaylayın",
@@ -138,6 +138,7 @@
             "validate_password":"Lütfen belirlediğiniz şifreyi giriniz",
             "validate_re_password":"Lütfen tekrar girdiğiniz şifreyi girin",
             "validate_strong_password":"Lütfen en az 8 basamaklı bir şifre girin",
+            "validate_long_password":"Şifre uzunluğu çok uzun, lütfen değiştirin",
             "validate_password_length":"Tutarsız şifre iki kez girildi",
 
             "create_success":"Başarıyla oluşturuldu",
@@ -156,6 +157,8 @@
             "imported_account_success":"Başarıyla içe aktarıldı",
             "exist":"Bu hesap zaten var, not",
             "keystore_error":"Hata:",
+            "keystore_length_error":"Yalnızca bir hesap dosyası alınabilir, lütfen tekrar deneyin!",
+            "keystore_format_error":"Lütfen doğru hesap dosyasını seçin",
             "imported_success":"Zaten seçilen dosya"
         },
         "remove_dia": {

@@ -138,6 +138,7 @@
             "validate_password":"請輸入您設置的密碼",
             "validate_re_password":"請再次輸入您設置的密碼",
             "validate_strong_password":"請輸入一個至少8位的密碼",
+            "validate_long_password":"密碼長度太長，請修改",
             "validate_password_length":"兩次輸入的密碼不一致",
 
             "create_success":"創建成功",
@@ -156,6 +157,8 @@
             "imported_account_success":"導入成功",
             "exist":"此賬戶已經存在,備註是",
             "keystore_error":"錯誤：",
+            "keystore_length_error":"只能導入一個賬戶文件，請重試！",
+            "keystore_format_error":"請選擇正確的賬戶文件",
             "imported_success":"已經選擇文件"
         },
         "remove_dia": {

@@ -138,6 +138,7 @@
             "validate_password":"يرجى إدخال كلمة المرور التي قمت بتعيينها",
             "validate_re_password":"يرجى إدخال كلمة المرور التي قمت بتعيينها مرة أخرى",
             "validate_strong_password":"يرجى إدخال كلمة مرور مكونة من 8 أرقام على الأقل",
+            "validate_long_password":"طول كلمة المرور طويل جدًا ، يرجى تعديله",
             "validate_password_length":"كلمة مرور غير متناسقة دخلت مرتين",
 
             "create_success":"تم الإنشاء بنجاح",
@@ -156,6 +157,8 @@
             "imported_account_success":"تم استيراده بنجاح",
             "exist":"هذا الحساب موجود بالفعل ، والملاحظة هي",
             "keystore_error":"خطأ:",
+            "keystore_length_error":"يمكن استيراد ملف حساب واحد فقط ، يرجى المحاولة مرة أخرى!",
+            "keystore_format_error":"يرجى تحديد ملف الحساب الصحيح",
             "imported_success":"بالفعل اختيار الملف"
         },
         "remove_dia": {

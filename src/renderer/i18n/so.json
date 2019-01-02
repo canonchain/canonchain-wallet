@@ -112,7 +112,7 @@
         },
         "msg_info": {
             "ads_copy_success":"Cinwaanka ayaa la daabacay",
-            "key_copy_success":"Koobi najax leh"
+            "key_copy_success":"Nuqul guul leh"
         }
     },
     "page_home": {
@@ -138,6 +138,7 @@
             "validate_password":"Fadlan gali sirta aad ku qortey",
             "validate_re_password":"Fadlan gali furaha ereyga aad ku qorto",
             "validate_strong_password":"Fadlan gali sirta ugu yaraan 8 lambar",
+            "validate_long_password":"Dhimashada erayga sirta ah waa mid aad u dheer, fadlan bedel",
             "validate_password_length":"Fariin aan badneyn ayaa laba jeer soo galay",
 
             "create_success":"Abuuray guul",
@@ -156,6 +157,8 @@
             "imported_account_success":"Si guul leh loogu soo dhoofiyo",
             "exist":"Koontadani hore ayay u jirtaa, qoraalku waa",
             "keystore_error":"Cilad:",
+            "keystore_length_error":"Kaliya hal fayl oo keli ah ayaa lagu soo dhoofi karaa, fadlan mar kale isku day!",
+            "keystore_format_error":"Fadlan dooro faylka saxda ah",
             "imported_success":"Horay loo soo doortay faylka"
         },
         "remove_dia": {

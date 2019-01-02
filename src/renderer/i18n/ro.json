@@ -138,6 +138,7 @@
             "validate_password":"Introduceți parola setată",
             "validate_re_password":"Introduceți din nou parola pe care o setați din nou",
             "validate_strong_password":"Introduceți o parolă cu cel puțin 8 cifre",
+            "validate_long_password":"Lungimea parolei este prea lungă, modificați-o",
             "validate_password_length":"Parola inconsistentă introdusă de două ori",
 
             "create_success":"Creat cu succes",
@@ -156,6 +157,8 @@
             "imported_account_success":"S-a importat cu succes",
             "exist":"Acest cont există deja, este nota",
             "keystore_error":"Eroare:",
+            "keystore_length_error":"Doar un singur fișier de cont poate fi importat, vă rugăm să încercați din nou!",
+            "keystore_format_error":"Selectați fișierul de cont corect",
             "imported_success":"Fișier deja selectat"
         },
         "remove_dia": {

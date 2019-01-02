@@ -138,6 +138,7 @@
             "validate_password":"သငျသညျ set password ကိုရိုက်ထည့်ပေးပါ",
             "validate_re_password":"သငျသညျတဖနျ set password ကိုရိုက်ထည့်ပေးပါ",
             "validate_strong_password":"အနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
+            "validate_long_password":"Password ကိုအရှည်ရှည်လွန်းနေသည်, ပြုပြင်မွမ်းမံကျေးဇူးပြုပြီး",
             "validate_password_length":"Passwords များကိုမတိုက်ဆိုင်ကြဘူး",
 
             "create_success":"အောင်မြင်မှု Creating",
@@ -156,6 +157,8 @@
             "imported_account_success":"သွင်းကုန်အောင်မြင်မှု",
             "exist":"ဒီအကောင့်ကိုပြီးသားကြောင်းမှတ်ချက်ပြု, တည်ရှိ",
             "keystore_error":"အမှား:",
+            "keystore_length_error":"သငျသညျတစ်ဦးတည်းသာအကောင့်ဖိုင်ကို import နိုငျသညျ, ကျေးဇူးပြု. ထပ်ကြိုးစားပါ!",
+            "keystore_format_error":"မှန်ကန်သောအကောင့်ဖိုင်ကိုရွေးပေးပါ",
             "imported_success":"file ကိုရှေးခယျြခဲ့သ"
         },
         "remove_dia": {

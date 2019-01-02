@@ -138,6 +138,7 @@
             "validate_password":"Biko tinye paswọọdụ ị debere",
             "validate_re_password":"Biko tinye paswọọdụ ị debere ọzọ",
             "validate_strong_password":"Biko tinye paswọọdụ nke ọbụlagodi 8 nọmba",
+            "validate_long_password":"Ogologo paswọọdụ dị ogologo, biko gbanwee",
             "validate_password_length":"Enweghi ike itinye paswọọdụ ugboro abụọ",
 
             "create_success":"Ejiri nke ọma",
@@ -156,6 +157,8 @@
             "imported_account_success":"Na-arụ ọrụ nke ọma",
             "exist":"Ihe ndekọ a adịlarịrị, ihe edeturu bụ",
             "keystore_error":"Njehie:",
+            "keystore_length_error":"Naanị otu faịlụ akaụntụ nwere ike ibubata, biko gbalịa ọzọ!",
+            "keystore_format_error":"Biko họrọ faịlụ ziri ezi",
             "imported_success":"Ndi ahọrọla faịlụ"
         },
         "remove_dia": {

@@ -138,6 +138,7 @@
             "validate_password":"Per favore inserisci la password che hai impostato",
             "validate_re_password":"Inserisci la password che hai impostato di nuovo",
             "validate_strong_password":"Si prega di inserire una password di almeno 8 cifre",
+            "validate_long_password":"La lunghezza della password è troppo lunga, si prega di modificare",
             "validate_password_length":"Password incoerente inserita due volte",
 
             "create_success":"Creato con successo",
@@ -156,6 +157,8 @@
             "imported_account_success":"Importato con successo",
             "exist":"Questo account esiste già, la nota è",
             "keystore_error":"Errore:",
+            "keystore_length_error":"È possibile importare solo un file di account, riprova!",
+            "keystore_format_error":"Si prega di selezionare il file dell'account corretto",
             "imported_success":"File già selezionato"
         },
         "remove_dia": {

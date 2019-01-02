@@ -138,6 +138,7 @@
             "validate_password":"설정 한 암호를 입력하십시오.",
             "validate_re_password":"다시 설정 한 암호를 입력하십시오.",
             "validate_strong_password":"암호를 8 자리 이상 입력하십시오.",
+            "validate_long_password":"암호 길이가 너무 깁니다. 수정하십시오.",
             "validate_password_length":"일치하지 않는 암호가 두 번 입력되었습니다.",
 
             "create_success":"성공적으로 생성되었습니다.",
@@ -156,6 +157,8 @@
             "imported_account_success":"수입 성공",
             "exist":"이 계정은 이미 존재하며 메모는",
             "keystore_error":"오류 :",
+            "keystore_length_error":"하나의 계정 파일 만 가져올 수 있습니다. 다시 시도하십시오!",
+            "keystore_format_error":"올바른 계정 파일을 선택하십시오.",
             "imported_success":"이미 선택된 파일"
         },
         "remove_dia": {

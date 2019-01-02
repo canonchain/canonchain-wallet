@@ -138,6 +138,7 @@
             "validate_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur",
             "validate_re_password":"Ju lutemi shkruani fjalëkalimin që keni vendosur përsëri",
             "validate_strong_password":"Ju lutemi shkruani një fjalëkalim të paktën 8 shifrorësh",
+            "validate_long_password":"Gjatësia e fjalëkalimit është shumë e gjatë, ju lutemi ndryshoni",
             "validate_password_length":"Fjalëkalimi i paqëndrueshëm hyri dy herë",
 
             "create_success":"Krijuar me sukses",
@@ -156,6 +157,8 @@
             "imported_account_success":"Importuar me sukses",
             "exist":"Kjo llogari tashmë ekziston, shënimi është",
             "keystore_error":"gabim:",
+            "keystore_length_error":"Mund të importohet vetëm një skedar llogarie, provo përsëri!",
+            "keystore_format_error":"Ju lutemi zgjidhni skedarin e saktë të llogarisë",
             "imported_success":"Skedari i përzgjedhur tashmë"
         },
         "remove_dia": {

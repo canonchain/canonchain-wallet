@@ -138,6 +138,7 @@
             "validate_password":"សូមបញ្ចូលពាក្យសម្ងាត់ដែលអ្នកបានកំណត់",
             "validate_re_password":"សូមបញ្ចូលពាក្យសម្ងាត់ដែលអ្នកកំណត់ម្តងទៀត",
             "validate_strong_password":"សូមបញ្ចូលពាក្យសម្ងាត់យ៉ាងតិច 8 ខ្ទង់",
+            "validate_long_password":"ប្រវែងពាក្យសម្ងាត់វែងពេកសូមកែប្រែ",
             "validate_password_length":"ពាក្យសម្ងាត់មិនត្រឹមត្រូវបានបញ្ចូលពីរដង",
 
             "create_success":"បានបង្កើតដោយជោគជ័យ",
@@ -156,6 +157,8 @@
             "imported_account_success":"បាននាំចូលដោយជោគជ័យ",
             "exist":"គណនីនេះមានរួចហើយ, ចំណាំគឺ",
             "keystore_error":"កំហុស:",
+            "keystore_length_error":"មានតែឯកសារគណនីតែមួយប៉ុណ្ណោះដែលអាចនាំចូលបានសូមព្យាយាមម្តងទៀត!",
+            "keystore_format_error":"សូមជ្រើសឯកសារគណនីត្រឹមត្រូវ",
             "imported_success":"ឯកសារដែលបានជ្រើសរួចហើយ"
         },
         "remove_dia": {

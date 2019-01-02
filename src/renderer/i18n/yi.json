@@ -138,6 +138,7 @@
             "validate_password":"ביטע אַרייַן די פּאַראָל איר שטעלן",
             "validate_re_password":"ביטע אַרייַן די פּאַראָל איר שטעלן ווידער",
             "validate_strong_password":"ביטע אַרייַן אַ פּאַראָל פון לפּחות 8 דידזשאַץ",
+            "validate_long_password":"די פּאַראָל לענג איז אויך לאַנג, ביטע מאָדיפיצירן",
             "validate_password_length":"ינקאַנסיסטאַנט פּאַראָל איז צוויי מאָל",
 
             "create_success":"Created successfully",
@@ -156,6 +157,8 @@
             "imported_account_success":"הצלחה ימפּאָרטיד",
             "exist":"דעם חשבון איז שוין יגזיסץ",
             "keystore_error":"Error:",
+            "keystore_length_error":"בלויז איין חשבון טעקע קענען זיין ימפּאָרטיד, ביטע פּרובירן ווידער!",
+            "keystore_format_error":"ביטע אויסקלייַבן דעם ריכטיק חשבון טעקע",
             "imported_success":"שוין אויסגעקליבן טעקע"
         },
         "remove_dia": {

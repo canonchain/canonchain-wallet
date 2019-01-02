@@ -138,6 +138,7 @@
             "validate_password":"Cuir isteach an focal faire a leagtar tú",
             "validate_re_password":"Cuir isteach an focal faire a leagtar tú arís",
             "validate_strong_password":"Cuir isteach focal faire de 8 dhigit ar a laghad",
+            "validate_long_password":"Tá fad an focal faire ró-fhada, le do thoil a mhodhnú",
             "validate_password_length":"Cuireadh pasfhocal neamhréireach isteach faoi dhó",
 
             "create_success":"Cruthaithe go rathúil",
@@ -156,6 +157,8 @@
             "imported_account_success":"Iompórtáil go rathúil",
             "exist":"Tá an cuntas seo ann cheana féin, is é an nóta",
             "keystore_error":"Earráid:",
+            "keystore_length_error":"Ní féidir ach comhad amháin cuntais a allmhairiú, déan iarracht arís!",
+            "keystore_format_error":"Roghnaigh an comhad cuntas ceart",
             "imported_success":"Comhad roghnaithe cheana féin"
         },
         "remove_dia": {

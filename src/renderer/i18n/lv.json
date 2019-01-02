@@ -138,6 +138,7 @@
             "validate_password":"Lūdzu, ievadiet savu iestatīto paroli",
             "validate_re_password":"Lūdzu, ievadiet paroli, kuru vēlreiz iestatījāt",
             "validate_strong_password":"Lūdzu, ievadiet vismaz 8 ciparu paroli",
+            "validate_long_password":"Paroles garums ir pārāk garš, lūdzu, modificējiet",
             "validate_password_length":"Divreiz ievadīta nekonsekventa parole",
 
             "create_success":"Izveidots veiksmīgi",
@@ -156,6 +157,8 @@
             "imported_account_success":"Veiksmīgi importēts",
             "exist":"Šis konts jau pastāv, piezīme ir",
             "keystore_error":"Kļūda:",
+            "keystore_length_error":"Var importēt tikai vienu konta failu, lūdzu, mēģiniet vēlreiz!",
+            "keystore_format_error":"Lūdzu, atlasiet pareizo konta failu",
             "imported_success":"Jau atlasīts fails"
         },
         "remove_dia": {

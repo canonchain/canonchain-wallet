@@ -138,6 +138,7 @@
             "validate_password":"Voer het wachtwoord in dat u heeft ingesteld",
             "validate_re_password":"Voer het wachtwoord dat u opnieuw hebt ingesteld opnieuw in",
             "validate_strong_password":"Voer een wachtwoord in van minimaal 8 cijfers",
+            "validate_long_password":"De wachtwoordlengte is te lang, wijzig deze",
             "validate_password_length":"Inconsistent wachtwoord twee keer ingevoerd",
 
             "create_success":"Met succes gemaakt",
@@ -156,6 +157,8 @@
             "imported_account_success":"Succesvol geïmporteerd",
             "exist":"Dit account bestaat al, de notitie is",
             "keystore_error":"fout:",
+            "keystore_length_error":"Er kan slechts één accountbestand worden geïmporteerd. Probeer het opnieuw!",
+            "keystore_format_error":"Selecteer het juiste accountbestand",
             "imported_success":"Al geselecteerd bestand"
         },
         "remove_dia": {

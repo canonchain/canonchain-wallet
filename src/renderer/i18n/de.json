@@ -138,6 +138,7 @@
             "validate_password":"Bitte geben Sie das von Ihnen eingestellte Passwort ein",
             "validate_re_password":"Bitte geben Sie das Passwort erneut ein",
             "validate_strong_password":"Bitte geben Sie ein Passwort mit mindestens 8 Ziffern ein",
+            "validate_long_password":"Die Passwortlänge ist zu lang, bitte ändern",
             "validate_password_length":"Inkonsistentes Passwort zweimal eingegeben",
 
             "create_success":"Erfolgreich erstellt",
@@ -156,6 +157,8 @@
             "imported_account_success":"Erfolgreich importiert",
             "exist":"Dieses Konto existiert bereits, die Notiz ist",
             "keystore_error":"Fehler:",
+            "keystore_length_error":"Es kann nur eine Kontodatei importiert werden. Bitte versuchen Sie es erneut.",
+            "keystore_format_error":"Bitte wählen Sie die richtige Kontodatei",
             "imported_success":"Bereits ausgewählte Datei"
         },
         "remove_dia": {

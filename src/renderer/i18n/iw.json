@@ -138,6 +138,7 @@
             "validate_password":"הזן את הסיסמה שהגדרת",
             "validate_re_password":"הזן את הסיסמה שהגדרת שוב",
             "validate_strong_password":"הזן סיסמה של 8 ספרות לפחות",
+            "validate_long_password":"אורך הסיסמה ארוך מדי, אנא שנה",
             "validate_password_length":"סיסמא לא עקבית נכנסה פעמיים",
 
             "create_success":"נוצר בהצלחה",
@@ -156,6 +157,8 @@
             "imported_account_success":"ייבא בהצלחה",
             "exist":"חשבון זה כבר קיים, הפתק הוא",
             "keystore_error":"שגיאה:",
+            "keystore_length_error":"ניתן לייבא רק קובץ חשבון אחד, נסה שוב!",
+            "keystore_format_error":"בחר את קובץ החשבון הנכון",
             "imported_success":"קובץ שנבחר כבר"
         },
         "remove_dia": {

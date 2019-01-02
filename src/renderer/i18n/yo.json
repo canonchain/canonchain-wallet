@@ -138,6 +138,7 @@
             "validate_password":"Jowo tẹ ọrọigbaniwọle ti o ṣeto",
             "validate_re_password":"Jọwọ tẹ ọrọigbaniwọle ti o tun ṣeto sii",
             "validate_strong_password":"Jowo tẹ ọrọ igbaniwọle ti o kere ju nọmba mẹjọ",
+            "validate_long_password":"Oṣuwọn igbaniwọle gun kukuru, jọwọ yipada",
             "validate_password_length":"Ọrọ aṣina ti ko tọ si tẹ lẹẹmeji",
 
             "create_success":"Ṣẹda ni ifijišẹ",
@@ -156,6 +157,8 @@
             "imported_account_success":"Ni ifiṣeyọri wọle",
             "exist":"Iroyin yii ti wa tẹlẹ, akọsilẹ jẹ",
             "keystore_error":"Aṣiṣe:",
+            "keystore_length_error":"Nikan faili akọọkan kan le ti wa ni wole, jọwọ gbiyanju lẹẹkansi!",
+            "keystore_format_error":"Jowo yan faili ti o tọ",
             "imported_success":"Faili ti yan tẹlẹ"
         },
         "remove_dia": {

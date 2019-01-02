@@ -138,6 +138,7 @@
             "validate_password":"Сіз енгізген парольді енгізіңіз",
             "validate_re_password":"Сіз қайта орнатқан парольді енгізіңіз",
             "validate_strong_password":"Кем дегенде 8 цифрды енгізіңіз",
+            "validate_long_password":"Құпия сөз ұзындығы тым ұзын, өзгертіңіз",
             "validate_password_length":"Қате құпия сөз екі рет енгізілді",
 
             "create_success":"Сәтті жасалған",
@@ -156,6 +157,8 @@
             "imported_account_success":"Сәтті импортталды",
             "exist":"Бұл есептік жазба бұрыннан бар, ескертпе",
             "keystore_error":"Қате:",
+            "keystore_length_error":"Тек бір тіркелгі файлы импортталуы мүмкін, қайталап көріңіз!",
+            "keystore_format_error":"Дұрыс есептік файлды таңдаңыз",
             "imported_success":"Таңдалған файл"
         },
         "remove_dia": {
@@ -189,7 +192,7 @@
             "enter_wallet":"Түйін сәтті басталды және әмиянға кіруге дайын"
         },
         "version_dialog":{
-            "version_tit":"Нұсқа нұсқасын жаңарту",
+            "version_tit":"Нұсқаны жаңарту сұрауы",
             "download_wallet":"Ақшаның соңғы нұсқасын жүктеу үшін ресми сайтқа өтіңіз",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }

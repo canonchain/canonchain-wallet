@@ -138,6 +138,7 @@
             "validate_password":"Mangga lebetkeun dina sandi geus disetel",
             "validate_re_password":"Mangga lebetkeun dina sandi geus disetel deui",
             "validate_strong_password":"Mangga lebetkeun a sandi tina sahanteuna dalapan",
+            "validate_long_password":"panjangna sandi panjang teuing, sumangga ngaropéa",
             "validate_password_length":"Kecap akses teu cocog",
 
             "create_success":"nyieun ayaan",
@@ -156,6 +157,8 @@
             "imported_account_success":"kasuksésan impor",
             "exist":"Akun ieu geus aya, catetan nu",
             "keystore_error":"kasalahan:",
+            "keystore_length_error":"Anjeun tiasa diimpor ngan hiji file akun, mangga cobian deui!",
+            "keystore_format_error":"Mangga pilih file akun bener",
             "imported_success":"Geus dipilih file"
         },
         "remove_dia": {

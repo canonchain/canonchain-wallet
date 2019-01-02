@@ -138,6 +138,7 @@
             "validate_password":"Kérjük, adja meg a beállított jelszót",
             "validate_re_password":"Kérjük, adja meg újra a megadott jelszót",
             "validate_strong_password":"Kérjük, adjon meg legalább 8 jegyű jelszót",
+            "validate_long_password":"A jelszó hossza túl hosszú, módosítsa",
             "validate_password_length":"Az inkonzisztens jelszó kétszer lépett be",
 
             "create_success":"Sikeresen létrehozott",
@@ -156,6 +157,8 @@
             "imported_account_success":"Sikeresen importált",
             "exist":"Ez a fiók már létezik, a megjegyzés",
             "keystore_error":"Hiba:",
+            "keystore_length_error":"Csak egy fiókfájl importálható, próbálkozzon újra!",
+            "keystore_format_error":"Kérjük, válassza ki a megfelelő fiókfájlt",
             "imported_success":"Már kiválasztott fájl"
         },
         "remove_dia": {

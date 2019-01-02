@@ -138,6 +138,7 @@
             "validate_password":"Por favor insira a senha que você definiu",
             "validate_re_password":"Por favor, digite a senha que você definiu novamente",
             "validate_strong_password":"Por favor digite uma senha de pelo menos 8 dígitos",
+            "validate_long_password":"O comprimento da senha é muito longo, por favor modifique",
             "validate_password_length":"Senha inconsistente digitada duas vezes",
 
             "create_success":"Criado com sucesso",
@@ -156,6 +157,8 @@
             "imported_account_success":"Importado com sucesso",
             "exist":"Esta conta já existe, a nota é",
             "keystore_error":"Erro:",
+            "keystore_length_error":"Apenas um arquivo de conta pode ser importado, por favor, tente novamente!",
+            "keystore_format_error":"Por favor, selecione o arquivo de conta correto",
             "imported_success":"Arquivo já selecionado"
         },
         "remove_dia": {

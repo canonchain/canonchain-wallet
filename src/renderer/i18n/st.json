@@ -138,6 +138,7 @@
             "validate_password":"Ka kopo kenya phasewete eo ue behileng",
             "validate_re_password":"Ka kopo kenya phasewete eo ue behileng hape",
             "validate_strong_password":"Ka kopo kenya phasewete ea bonyane lintlha tse 8",
+            "validate_long_password":"Bolelele ba password bo bolelele haholo, ka kopo fetola",
             "validate_password_length":"Phoso e sa lumellaneng e kenngoa habeli",
 
             "create_success":"E entsoe ka katleho",
@@ -156,6 +157,8 @@
             "imported_account_success":"E fetisitsoe ka katleho",
             "exist":"Tlaleho ena e se e ntse e le teng, lengolo ke",
             "keystore_error":"Phoso:",
+            "keystore_length_error":"Faele e le 'ngoe feela ea akhaonto e ka kenngoa, ka kōpo leka hape!",
+            "keystore_format_error":"Ka kopo khetha file e nepahetseng ea akhaonto",
             "imported_success":"Khetho e se e khethiloe"
         },
         "remove_dia": {

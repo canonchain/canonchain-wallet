@@ -138,6 +138,7 @@
             "validate_password":"Thov sau tus password koj tau teev tseg",
             "validate_re_password":"Thov sau tus password koj tau teem dua",
             "validate_strong_password":"Thov sau ib tug password ntawm yam tsawg 8 tus lej",
+            "validate_long_password":"Lo lus zais ntev ntev dhau lawm, thov hloov",
             "validate_password_length":"Inconsistent password nkag ob zaug",
 
             "create_success":"Tsim tau zoo",
@@ -156,6 +157,8 @@
             "imported_account_success":"Hloov tau zoo",
             "exist":"Cov nyiaj no twb muaj lawm, daim ntawv no yog",
             "keystore_error":"Yuam kev:",
+            "keystore_length_error":"Tsuas pub ib tus account cov ntaub ntawv tuaj yeem tuaj rau, thov rov sim dua!",
+            "keystore_format_error":"Thov xaiv cov ntaub ntawv kom yog",
             "imported_success":"Twb tau xaiv cov ntaub ntawv"
         },
         "remove_dia": {

@@ -138,6 +138,7 @@
             "validate_password":"Эгер белгиленген сырсөз",
             "validate_re_password":"Сураныч, сиз кайра сырсөз",
             "validate_strong_password":"Сураныч, жок дегенде сегиз сырсөз киргизгени",
+            "validate_long_password":"Сырсөз узундугу өтө узун болсо, сураныч, өзгөртүү",
             "validate_password_length":"Сырсөздөр дал келген жок",
 
             "create_success":"ийгилик түзүлүүдө",
@@ -156,6 +157,8 @@
             "imported_account_success":"Import ийгилик",
             "exist":"Бул каттоо эсеби мурунтан эле бар, жазып да",
             "keystore_error":"Error:",
+            "keystore_length_error":"Сиз бир гана эсеп билэни импорттой аласыз, сураныч, кайра аракет!",
+            "keystore_format_error":"Сураныч, туура эсеп билэни тандоо",
             "imported_success":"тандалып алынган билэни"
         },
         "remove_dia": {

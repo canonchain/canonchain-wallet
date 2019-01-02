@@ -138,6 +138,7 @@
             "validate_password":"Введіть пароль, який ви встановили",
             "validate_re_password":"Введіть пароль, який ви встановили знову",
             "validate_strong_password":"Введіть пароль не менше 8 цифр",
+            "validate_long_password":"Довжина пароля занадто довга",
             "validate_password_length":"Недійсний пароль вводиться двічі",
 
             "create_success":"Створено успішно",
@@ -156,6 +157,8 @@
             "imported_account_success":"Успішно імпортовано",
             "exist":"Цей обліковий запис вже існує",
             "keystore_error":"Помилка:",
+            "keystore_length_error":"Можна імпортувати лише один файл облікового запису. Повторіть спробу!",
+            "keystore_format_error":"Виберіть правильний файл облікового запису",
             "imported_success":"Вже вибраний файл"
         },
         "remove_dia": {

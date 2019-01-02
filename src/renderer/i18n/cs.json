@@ -138,6 +138,7 @@
             "validate_password":"Zadejte prosím heslo, které jste nastavili",
             "validate_re_password":"Zadejte znovu zadané heslo",
             "validate_strong_password":"Zadejte heslo alespoň 8 číslic",
+            "validate_long_password":"Délka hesla je příliš dlouhá, upravte prosím",
             "validate_password_length":"Nesouvislé zadání hesla dvakrát",
 
             "create_success":"Vytvořeno úspěšně",
@@ -156,6 +157,8 @@
             "imported_account_success":"Úspěšně importováno",
             "exist":"Tento účet již existuje, poznámka je",
             "keystore_error":"Chyba:",
+            "keystore_length_error":"Je možné importovat pouze jeden soubor účtu, zkuste to prosím znovu!",
+            "keystore_format_error":"Vyberte správný soubor účtu",
             "imported_success":"Již vybraný soubor"
         },
         "remove_dia": {

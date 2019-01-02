@@ -138,6 +138,7 @@
             "validate_password":"ਤੁਹਾਡੇ ਦੁਆਰਾ ਸੈੱਟ ਕੀਤੇ ਗਏ ਗੁਪਤ-ਕੋਡ ਨੂੰ ਭਰੋ",
             "validate_re_password":"ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਆਪਣਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
             "validate_strong_password":"ਕਿਰਪਾ ਕਰਕੇ ਘੱਟੋ ਘੱਟ 8 ਅੰਕਾਂ ਦਾ ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
+            "validate_long_password":"ਪਾਸਵਰਡ ਲੰਬਾਈ ਬਹੁਤ ਲੰਮੀ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਸੋਧ ਕਰੋ",
             "validate_password_length":"ਅਸਪਸ਼ਟ ਪਾਸਵਰਡ ਦੋ ਵਾਰ ਦਾਖਲ ਹੋਇਆ",
 
             "create_success":"ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ",
@@ -156,6 +157,8 @@
             "imported_account_success":"ਸਫਲਤਾਪੂਰਵਕ ਆਯਾਤ ਕੀਤਾ ਗਿਆ",
             "exist":"ਇਹ ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ, ਨੋਟ ਹੈ",
             "keystore_error":"ਗਲਤੀ:",
+            "keystore_length_error":"ਸਿਰਫ ਇੱਕ ਖਾਤਾ ਫਾਈਲ ਆਯਾਤ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ!",
+            "keystore_format_error":"ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਖਾਤਾ ਫਾਈਲ ਚੁਣੋ",
             "imported_success":"ਪਹਿਲਾਂ ਹੀ ਚੁਣੀ ਗਈ ਫਾਈਲ"
         },
         "remove_dia": {

@@ -138,6 +138,7 @@
             "validate_password":"مهرباني ڪري توهان جو پاسورڊ داخل ڪيو",
             "validate_re_password":"مهرباني ڪري ٻيهر پاسورڊ داخل ڪيو",
             "validate_strong_password":"مهرباني ڪري گهٽ ۾ گهٽ 8 اکرن جو پاسورڊ داخل ڪريو",
+            "validate_long_password":"پاسورڊ جي ڊيگهه تمام ڊگهو آهي، مهرباني ڪري تبديل ڪريو",
             "validate_password_length":"ناپسنديده پاسورڊ ٻه ڀيرا داخل ٿيو",
 
             "create_success":"ڪاميابي سان ٺهيل",
@@ -156,6 +157,8 @@
             "imported_account_success":"ڪاميابي سان درآمد ڪئي وئي",
             "exist":"هي اڪائونٽ اڳ ۾ موجود آهي، نوٽ آهي",
             "keystore_error":"غلطي",
+            "keystore_length_error":"صرف ھڪڙي اڪائونٽ فائل درآمد ڪري سگھجي ٿو، مھرباني ڪري ٻيھر ڪوشش ڪريو!",
+            "keystore_format_error":"مھرباني ڪري صحيح اڪائونٽ فائل چونڊيو",
             "imported_success":"اڳئين چونڊيل فائل"
         },
         "remove_dia": {

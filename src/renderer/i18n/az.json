@@ -138,6 +138,7 @@
             "validate_password":"Xahiş etdiyiniz parol daxil edin",
             "validate_re_password":"Yenidən təyin etdiyiniz parolunuzu daxil edin",
             "validate_strong_password":"Ən azı 8 rəqəmli parol daxil edin",
+            "validate_long_password":"Parolun uzunluğu çox uzun, dəyişiklik edin",
             "validate_password_length":"Tutarsız parol iki dəfə girdi",
 
             "create_success":"Tərəqqi yaradılıb",
@@ -156,6 +157,8 @@
             "imported_account_success":"Uğurla idxal edilib",
             "exist":"Bu hesab artıq mövcuddur, not deyil",
             "keystore_error":"Hata:",
+            "keystore_length_error":"Yalnız bir hesab faylı idxal edilə bilər, yenidən cəhd edin!",
+            "keystore_format_error":"Xahiş edirik doğru hesab faylını seçin",
             "imported_success":"Zaten seçilmiş fayl"
         },
         "remove_dia": {

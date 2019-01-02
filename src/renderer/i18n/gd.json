@@ -138,6 +138,7 @@
             "validate_password":"Cuir a-steach am facal-faire a shuidhich thu",
             "validate_re_password":"Cuir a-steach am facal-faire a shuidhich thu a-rithist",
             "validate_strong_password":"Cuir a-steach facal-faire de 8 dhigit co-dhiù",
+            "validate_long_password":"Tha fad an fhacail-fhaire ro fhada, feuch atharraich thu",
             "validate_password_length":"Chaidh facal-faire neo-chunbhalach a-steach dà thuras",
 
             "create_success":"Cruthaichte gu soirbheachail",
@@ -156,6 +157,8 @@
             "imported_account_success":"Chaidh a thoirt a-steach gu soirbheachail",
             "exist":"Tha an cunntas seo mu thràth, is e an nota",
             "keystore_error":"Mearachd:",
+            "keystore_length_error":"Chan urrainn ach aon fhaidhle cunntais a thoirt a-steach, feuch ris a-rithist!",
+            "keystore_format_error":"Tagh am faidhle cunntais ceart",
             "imported_success":"Faidhle air a thaghadh mar-thà"
         },
         "remove_dia": {

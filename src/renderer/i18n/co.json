@@ -138,6 +138,7 @@
             "validate_password":"Per piacè inserite u password chjode",
             "validate_re_password":"Per piacè inserite u password si trova à novu",
             "validate_strong_password":"Per piacè inserite una password di almenu 8i numeri",
+            "validate_long_password":"A durazione di u password hè troppu longa, per cambià",
             "validate_password_length":"A password in modu cuntenutu hè intesa in duie volte",
 
             "create_success":"Creatu successu",
@@ -156,6 +157,8 @@
             "imported_account_success":"Impurtatu importatu",
             "exist":"Stu cuntu esiste digià, a nota hè",
             "keystore_error":"Errore:",
+            "keystore_length_error":"Unu cartulare di cunghjettu pò esse impurtatu, pruvate una volta!",
+            "keystore_format_error":"Sceglite puru u schedariu di u contu",
             "imported_success":"Sceltu sta predefinita"
         },
         "remove_dia": {
