@@ -138,7 +138,7 @@
             "validate_password":"Bonvolu enmeti la pasvorton, kiun vi starigis",
             "validate_re_password":"Bonvolu enmeti la pasvorton, kiun vi starigis denove",
             "validate_strong_password":"Bonvolu enmeti pasvorton de almenaŭ 8 ciferoj",
-            "validate_long_password":"La pasvorto estas tro longa, bonvolu modifi",
+            "validate_long_password":"Pasvorto ne povas superi 100 ciferojn",
             "validate_password_length":"Nekonforma pasvorto eniris dufoje",
 
             "create_success":"Kreita sukcese",
@@ -159,6 +159,7 @@
             "keystore_error":"Eraro:",
             "keystore_length_error":"Nur unu konto-dosiero povas esti importita, bonvolu provi denove!",
             "keystore_format_error":"Bonvolu elekti la ĝustan konton-dosieron",
+            "keystore_is_has":"Jam ekzistas konton en la listo, kiun vi bezonas por importi.",
             "imported_success":"Elektita dosiero"
         },
         "remove_dia": {

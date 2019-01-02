@@ -138,7 +138,7 @@
             "validate_password":"لطفا هغه پټنوم ته داخل کړئ چې تاسو یې جوړ کړئ",
             "validate_re_password":"لطفا هغه شفر ورکړه چې تاسو یې بیا وټاکئ",
             "validate_strong_password":"مهرباني وکړئ لږترلږه 8 ګوتو کې پټنوم ولیکئ",
-            "validate_long_password":"د پاسورډ اوږدوالی ډیر اوږد دی، لطفا بدله کړئ",
+            "validate_long_password":"شفر د 100 ګوتو څخه په اوږدوالی کې نشي کولی",
             "validate_password_length":"ناقانونه پاسورډ دوه ځلې داخل کړ",
 
             "create_success":"په بریالیتوب سره جوړ شو",
@@ -159,6 +159,7 @@
             "keystore_error":"تېروتنه:",
             "keystore_length_error":"یوازې یو د دوتنې فایل وارد کیدی شي، مهرباني وکړئ بیا هڅه وکړئ!",
             "keystore_format_error":"مهرباني وکړئ د درست حساب فایل غوره کړئ",
+            "keystore_is_has":"په لیست کې لا دمخه یو حساب شتون لري چې تاسو واردولو ته اړتیا لرئ.",
             "imported_success":"د مخه ټاکل شوی دوتنه"
         },
         "remove_dia": {

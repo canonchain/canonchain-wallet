@@ -138,7 +138,7 @@
             "validate_password":"Iltimos, siz kiritgan parolni kiriting",
             "validate_re_password":"Iltimos, qaytadan o'rnatgan parolni kiriting",
             "validate_strong_password":"Iltimos, kamida 8 raqamdan iborat parolni kiriting",
-            "validate_long_password":"Parol uzunligi juda uzun, iltimos o'zgarishi kerak",
+            "validate_long_password":"Parol 100 belgidan oshmasligi kerak",
             "validate_password_length":"Mos kelmaydigan parol ikki marta kiritildi",
 
             "create_success":"Muvaffaqiyatli yaratildi",
@@ -159,6 +159,7 @@
             "keystore_error":"Xato:",
             "keystore_length_error":"Faqat bitta hisob fayli import qilinadi, qayta urinib ko'ring!",
             "keystore_format_error":"Iltimos, to'g'ri hisob faylini tanlang",
+            "keystore_is_has":"Ro'yxatda allaqachon import kerak bo'lgan hisob mavjud.",
             "imported_success":"Siz allaqachon tanlangan fayl"
         },
         "remove_dia": {
@@ -180,7 +181,7 @@
             "is_local":"Mahalliy tugunli fayl mavjudligini tekshiring",
             "already_local":"Tugun faylining konfiguratsiya fayli mavjud qurilmada mavjud.",
             "not_local":"Tugun faylining konfiguratsiya ma'lumotlari aniqlanmadi, u birinchi marta ishlayotgan bo'lishi mumkin.",
-            "config_write_local":"Olingan tugun ma'lumotlarini mahalliy diskka yozing",
+            "config_write_local":"Olingan tugun ma'lumot faylini mahalliy diskka yozing",
             "whether_update_node":"Yangilanish zarurligini tekshiring",
             "no_need":"本地 CanonChain 节点文件是最新的",
             "need":"本地 CanonChain 节点文件是老版本",

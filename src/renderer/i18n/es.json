@@ -138,7 +138,7 @@
             "validate_password":"Por favor ingrese la contraseña que estableció",
             "validate_re_password":"Por favor ingrese la contraseña que estableció de nuevo",
             "validate_strong_password":"Por favor, introduzca una contraseña de al menos 8 dígitos",
-            "validate_long_password":"La longitud de la contraseña es demasiado larga, por favor modifique",
+            "validate_long_password":"La contraseña no puede exceder los 100 dígitos de longitud",
             "validate_password_length":"Contraseña incoherente introducida dos veces",
 
             "create_success":"Creado exitosamente",
@@ -159,6 +159,7 @@
             "keystore_error":"Error",
             "keystore_length_error":"Solo se puede importar un archivo de cuenta, inténtalo de nuevo.",
             "keystore_format_error":"Por favor seleccione el archivo de cuenta correcto",
+            "keystore_is_has":"Ya hay una cuenta en la lista que necesita importar.",
             "imported_success":"Archivo ya seleccionado"
         },
         "remove_dia": {

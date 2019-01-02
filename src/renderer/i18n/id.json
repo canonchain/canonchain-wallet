@@ -138,7 +138,7 @@
             "validate_password":"Silakan masukkan kata sandi yang Anda atur",
             "validate_re_password":"Silakan masukkan kata sandi yang Anda atur lagi",
             "validate_strong_password":"Silakan masukkan kata sandi minimal 8 digit",
-            "validate_long_password":"Panjang kata sandi terlalu panjang, harap modifikasi",
+            "validate_long_password":"Panjang kata sandi tidak boleh melebihi 100 digit",
             "validate_password_length":"Kata sandi yang tidak konsisten dimasukkan dua kali",
 
             "create_success":"Diciptakan dengan sukses",
@@ -159,6 +159,7 @@
             "keystore_error":"Kesalahan:",
             "keystore_length_error":"Hanya satu file akun yang dapat diimpor, silakan coba lagi!",
             "keystore_format_error":"Silakan pilih file akun yang benar",
+            "keystore_is_has":"Sudah ada akun dalam daftar yang perlu Anda impor.",
             "imported_success":"File sudah dipilih"
         },
         "remove_dia": {

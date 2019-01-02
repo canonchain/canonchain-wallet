@@ -138,7 +138,7 @@
             "validate_password":"Introduïu la contrasenya que heu definit",
             "validate_re_password":"Introduïu la contrasenya que heu configurat de nou",
             "validate_strong_password":"Introduïu una contrasenya d'almenys 8 dígits",
-            "validate_long_password":"La longitud de la contrasenya és massa llarga; modifiqueu-la",
+            "validate_long_password":"La contrasenya no pot superar els 100 dígits de durada",
             "validate_password_length":"S'ha introduït una contrasenya inconsistent dues vegades",
 
             "create_success":"Creat amb èxit",
@@ -159,6 +159,7 @@
             "keystore_error":"Error:",
             "keystore_length_error":"Només es pot importar un fitxer de compte, torneu-ho a provar.",
             "keystore_format_error":"Seleccioneu el fitxer del compte correcte",
+            "keystore_is_has":"Ja hi ha un compte a la llista que heu d'importar.",
             "imported_success":"Arxiu ja seleccionat"
         },
         "remove_dia": {

@@ -138,7 +138,7 @@
             "validate_password":"Sisestage seadistatud parool",
             "validate_re_password":"Sisestage uuesti seadistatud parool",
             "validate_strong_password":"Sisestage vähemalt 8-kohaline parool",
-            "validate_long_password":"Parooli pikkus on liiga pikk, palun muutke",
+            "validate_long_password":"Parool ei tohi ületada 100 numbrit",
             "validate_password_length":"Vastuoluline parool sisestati kaks korda",
 
             "create_success":"Loodud edukalt",
@@ -159,6 +159,7 @@
             "keystore_error":"Viga:",
             "keystore_length_error":"Importida saab ainult ühe konto faili, proovige uuesti!",
             "keystore_format_error":"Valige õige konto fail",
+            "keystore_is_has":"Loendis on juba konto, mida peate importima.",
             "imported_success":"Juba valitud fail"
         },
         "remove_dia": {

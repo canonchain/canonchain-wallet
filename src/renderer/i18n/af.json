@@ -138,7 +138,7 @@
             "validate_password":"Voer asseblief die wagwoord in wat u ingestel het",
             "validate_re_password":"Voer asseblief die wagwoord in wat u weer ingestel het",
             "validate_strong_password":"Voer asseblief 'n wagwoord van ten minste 8 syfers in",
-            "validate_long_password":"Die wagwoordlengte is te lank, verander asseblief",
+            "validate_long_password":"Wagwoord kan nie meer as 100 syfers oorskry nie",
             "validate_password_length":"Inconsistente wagwoord het twee keer ingeskryf",
 
             "create_success":"Geskep suksesvol",
@@ -159,6 +159,7 @@
             "keystore_error":"fout:",
             "keystore_length_error":"Slegs een rekeninglêer kan ingevoer word, probeer asseblief weer!",
             "keystore_format_error":"Kies asseblief die korrekte rekeninglêer",
+            "keystore_is_has":"Daar is reeds 'n rekening in die lys wat u moet invoer.",
             "imported_success":"Reeds geselekteerde lêer"
         },
         "remove_dia": {

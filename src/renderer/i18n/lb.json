@@ -138,7 +138,7 @@
             "validate_password":"Gidd weg den Passwuert, deen Dir agefouert hutt",
             "validate_re_password":"Gidd weg den Passwuert, deen Dir erëm gesat hutt",
             "validate_strong_password":"Gitt weg e Passwuert vun mindestens 8 Zifferen",
-            "validate_long_password":"D'Passwuert laang ze laang an änneren",
+            "validate_long_password":"Passwuert kann net méi wéi 100 Zifferen",
             "validate_password_length":"Inconsistent Passwuert zweemol getraff",
 
             "create_success":"Erfolleg gemaach",
@@ -159,6 +159,7 @@
             "keystore_error":"Feeler:",
             "keystore_length_error":"Nëmmen eng eenzeg Kont Datei kann importéiert ginn, probéiert et nach eng Kéier!",
             "keystore_format_error":"Wielt weg déi richteg Konto-Datei",
+            "keystore_is_has":"Et gëtt schonn e Kont an der Lëscht déi Dir braucht ze importéieren.",
             "imported_success":"Elo gewielt Datei"
         },
         "remove_dia": {

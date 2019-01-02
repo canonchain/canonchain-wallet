@@ -138,7 +138,7 @@
             "validate_password":"Ndapota nyorai password yawakagadzirisa",
             "validate_re_password":"Ndapota nyorai password yawakamisa zvakare",
             "validate_strong_password":"Ndapota nyora pasi pepa password yeanenge madireji 8",
-            "validate_long_password":"Nguva yephasiwedi yakareba kwenguva refu, tapota shandura",
+            "validate_long_password":"Purogiramu haigone kudarika mazana zana murefu",
             "validate_password_length":"Izvo zvisina kufanira password yakaiswa kaviri",
 
             "create_success":"Yakagadzirwa zvakanaka",
@@ -159,6 +159,7 @@
             "keystore_error":"Mhosva:",
             "keystore_length_error":"Nhamba imwe chete yefaira inogona kutumirwa, tapota edza zvakare!",
             "keystore_format_error":"Ndapota sarudza iyo yekodhi faira",
+            "keystore_is_has":"Iko kune kakato nhoroondo mubhuku raunoda kutumira.",
             "imported_success":"Yakatosarudza faira"
         },
         "remove_dia": {

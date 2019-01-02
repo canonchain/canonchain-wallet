@@ -138,7 +138,7 @@
             "validate_password":"Fier hjir it wachtwurd yn",
             "validate_re_password":"Fier hjir it wachtwurd yn wêr jo wer opsette",
             "validate_strong_password":"Fier in wachtwurd yn op syn minst 8 sifers",
-            "validate_long_password":"De wachtwurdlange is te lang, kinne jo wizigje",
+            "validate_long_password":"Wachtwurd kin net mear as 100 sifers ynlange",
             "validate_password_length":"Inkonsistint wachtwurd is twa kear ynfierd",
 
             "create_success":"Súkses is makke",
@@ -159,6 +159,7 @@
             "keystore_error":"Flater:",
             "keystore_length_error":"Allinne ien account bestân kin ymportearre wurde, besykje it nochris te besykjen!",
             "keystore_format_error":"Selektearje jo it goede akkount triem selektearje",
+            "keystore_is_has":"Der is al in akkount yn 'e list dy't jo ymportearje moatte.",
             "imported_success":"Al selektearre triem"
         },
         "remove_dia": {

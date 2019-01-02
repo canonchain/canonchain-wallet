@@ -138,7 +138,7 @@
             "validate_password":"Ji kerema xwe hûn şîfreya xwe binivîse",
             "validate_re_password":"Ji kerema xwe hûn şîfreya xwe binivîse ku hûn dîsa careke din bikin",
             "validate_strong_password":"Ji kerema xwe şîfreyek herî kêm 8 hejmara navnîşan bike",
-            "validate_long_password":"Dîroka şîfre pir dirêj e, kerema xwe biguherînin",
+            "validate_long_password":"Nasnav nikare 100 hejmaran di dirêjahiyê de ne",
             "validate_password_length":"Şîfreyek nehevkirî du caran ket",
 
             "create_success":"Serkeftî çêkir",
@@ -159,6 +159,7 @@
             "keystore_error":"Çewtiya",
             "keystore_length_error":"Tenê pelê tenê hesabê veguhastin, ji kerema xwe dîsa dîsa biceribîne!",
             "keystore_format_error":"Ji kerema xwe pelê hesabê rast hilbijêre",
+            "keystore_is_has":"Di lîsteya ku niha hûn hewce bike, hesabek e.",
             "imported_success":"Peldanka hilbijartî"
         },
         "remove_dia": {

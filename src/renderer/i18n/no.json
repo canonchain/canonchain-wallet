@@ -138,7 +138,7 @@
             "validate_password":"Vennligst skriv inn passordet du angir",
             "validate_re_password":"Vennligst skriv inn passordet du angir igjen",
             "validate_strong_password":"Vennligst oppgi et passord med minst 8 sifre",
-            "validate_long_password":"Passordlengden er for lang, vennligst endre",
+            "validate_long_password":"Passordet kan ikke overstige 100 siffer i lengde",
             "validate_password_length":"Inkonsistent passord innført to ganger",
 
             "create_success":"Opprettet med hell",
@@ -159,6 +159,7 @@
             "keystore_error":"feil:",
             "keystore_length_error":"Bare en kontofil kan importeres, prøv igjen!",
             "keystore_format_error":"Vennligst velg riktig kontofil",
+            "keystore_is_has":"Det er allerede en konto i listen du må importere.",
             "imported_success":"Allerede valgt fil"
         },
         "remove_dia": {

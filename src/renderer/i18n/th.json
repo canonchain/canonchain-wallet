@@ -138,7 +138,7 @@
             "validate_password":"กรุณาใส่รหัสผ่านที่คุณตั้งไว้",
             "validate_re_password":"กรุณาใส่รหัสผ่านที่คุณตั้งอีกครั้ง",
             "validate_strong_password":"กรุณาใส่รหัสผ่านอย่างน้อย 8 หลัก",
-            "validate_long_password":"ความยาวรหัสผ่านยาวเกินไปโปรดแก้ไข",
+            "validate_long_password":"รหัสผ่านต้องมีความยาวไม่เกิน 100 หลัก",
             "validate_password_length":"รหัสผ่านไม่สอดคล้องกันป้อนสองครั้ง",
 
             "create_success":"สร้างสำเร็จแล้ว",
@@ -159,6 +159,7 @@
             "keystore_error":"ข้อผิดพลาด:",
             "keystore_length_error":"สามารถนำเข้าไฟล์บัญชีเดียวได้โปรดลองอีกครั้ง!",
             "keystore_format_error":"โปรดเลือกไฟล์บัญชีที่ถูกต้อง",
+            "keystore_is_has":"มีบัญชีอยู่ในรายการที่คุณต้องการนำเข้าแล้ว",
             "imported_success":"ไฟล์ที่เลือกไว้แล้ว"
         },
         "remove_dia": {

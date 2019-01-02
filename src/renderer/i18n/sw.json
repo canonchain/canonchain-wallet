@@ -138,7 +138,7 @@
             "validate_password":"Tafadhali ingiza nenosiri uliloweka",
             "validate_re_password":"Tafadhali ingiza nenosiri uliloweka tena",
             "validate_strong_password":"Tafadhali ingiza nenosiri la angalau tarakimu 8",
-            "validate_long_password":"Urefu wa nenosiri ni mrefu sana, tafadhali urekebishe",
+            "validate_long_password":"Nenosiri hawezi kuzidi tarakimu kumi kwa urefu",
             "validate_password_length":"Nenosiri lisilopatikana limeingia mara mbili",
 
             "create_success":"Imeundwa kwa ufanisi",
@@ -159,6 +159,7 @@
             "keystore_error":"Hitilafu:",
             "keystore_length_error":"Faili moja tu ya akaunti inaweza kuagizwa, tafadhali jaribu tena!",
             "keystore_format_error":"Tafadhali chagua faili sahihi ya akaunti",
+            "keystore_is_has":"Tayari kuna akaunti katika orodha ambayo unahitaji kuagiza.",
             "imported_success":"Tayari faili iliyochaguliwa"
         },
         "remove_dia": {

@@ -138,7 +138,7 @@
             "validate_password":"Nceda faka iphasiwedi oyimisile",
             "validate_re_password":"Nceda faka iphasiwedi oyifake kwakhona",
             "validate_strong_password":"Nceda faka iphasiwedi yeenombolo ezili-8",
-            "validate_long_password":"Ubude bephasiwedi bude kakhulu, nceda uguqule",
+            "validate_long_password":"Iphasiwedi ayikwazi ukudlula iidijithi eziyi-100 ubude",
             "validate_password_length":"Iphasiwedi engahambelaniyo ingenwe kabini",
 
             "create_success":"Yadalwa ngempumelelo",
@@ -159,6 +159,7 @@
             "keystore_error":"I mpazamo:",
             "keystore_length_error":"Ifayili enye ye-akhawunti ingeniswa, nceda uzame kwakhona!",
             "keystore_format_error":"Nceda ukhethe ifayile ye-akhawunti echanekileyo",
+            "keystore_is_has":"Kukho i-akhawunti kakade kuluhlu omele ulufake.",
             "imported_success":"Ikhefu ekhethiweyo"
         },
         "remove_dia": {

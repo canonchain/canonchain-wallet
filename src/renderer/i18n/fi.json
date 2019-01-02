@@ -138,7 +138,7 @@
             "validate_password":"Anna antamasi salasana",
             "validate_re_password":"Anna uudelleen asettamasi salasana",
             "validate_strong_password":"Anna vähintään 8-numeroinen salasana",
-            "validate_long_password":"Salasanan pituus on liian pitkä, muokkaa",
+            "validate_long_password":"Salasana voi olla enintään 100 numeroa",
             "validate_password_length":"Epäjohdonmukainen salasana syötettiin kahdesti",
 
             "create_success":"Luotu onnistuneesti",
@@ -159,6 +159,7 @@
             "keystore_error":"Virhe:",
             "keystore_length_error":"Vain yksi tilin tiedosto voidaan tuoda, yritä uudelleen!",
             "keystore_format_error":"Valitse oikea tilin tiedosto",
+            "keystore_is_has":"Luettelossa on jo tili, jonka haluat tuoda.",
             "imported_success":"Jo valittu tiedosto"
         },
         "remove_dia": {

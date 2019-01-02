@@ -283,6 +283,8 @@ export default {
                     "page_home.create_dia.validate_tag_length"
                 );
                 return;
+            }else{
+                this.createInfo.error = '';
             }
             if (!this.createInfo.pwd) {
                 this.createInfo.error = this.$t(
@@ -327,7 +329,6 @@ export default {
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
-                    console.log(data);
                     if(data.error){
                         self.$message.error("出错啦 : 可能是非法的密码格式");
                         return;
@@ -401,7 +402,6 @@ export default {
         //Import Start
         importKeystore(event) {
             let fileLength = event.dataTransfer.files.length;
-            console.log(fileLength);
             if(fileLength!=1){
                 self.$message.error(
                     self.$t(
@@ -411,7 +411,6 @@ export default {
                 return;
             }
             let targetFile = event.dataTransfer.files[0];
-            console.log(targetFile.type)
             if(targetFile.type!=='application/json'){
                 self.$message.error(
                     self.$t(
@@ -437,7 +436,17 @@ export default {
                     );
                     return;
                 }
-                // this.importInfo.keystore = JSON.parse(data);
+                let importObjec = this.$db .read() .get("czr_accounts") .find({ address:targetJson.account }).value() // this.importInfo.keystore = JSON.parse(data);
+                
+                if(importObjec){
+                    self.$message.error(
+                        self.$t(
+                            "page_home.import_dia.keystore_is_has"
+                        )+' : '+targetJson.account
+                    );
+                    return;
+                }
+                
                 this.importInfo.keystore = data;
                 this.importInfo.alert = {
                     content: this.$t("page_home.import_dia.imported_success"),

@@ -138,7 +138,7 @@
             "validate_password":"Biko tinye paswọọdụ ị debere",
             "validate_re_password":"Biko tinye paswọọdụ ị debere ọzọ",
             "validate_strong_password":"Biko tinye paswọọdụ nke ọbụlagodi 8 nọmba",
-            "validate_long_password":"Ogologo paswọọdụ dị ogologo, biko gbanwee",
+            "validate_long_password":"Okwuntughe agaghị agafe 100 digit n'ogologo",
             "validate_password_length":"Enweghi ike itinye paswọọdụ ugboro abụọ",
 
             "create_success":"Ejiri nke ọma",
@@ -159,6 +159,7 @@
             "keystore_error":"Njehie:",
             "keystore_length_error":"Naanị otu faịlụ akaụntụ nwere ike ibubata, biko gbalịa ọzọ!",
             "keystore_format_error":"Biko họrọ faịlụ ziri ezi",
+            "keystore_is_has":"Enwere akaụntụ na listi ị chọrọ mbubata.",
             "imported_success":"Ndi ahọrọla faịlụ"
         },
         "remove_dia": {
@@ -193,7 +194,7 @@
         },
         "version_dialog":{
             "version_tit":"Nwelite nsụgharị ozugbo",
-            "download_wallet":"Gaa na ebe nrụọrụ weebụ gọọmentị ka ibudata ụdị ego a kachasị ọhụrụ",
+            "download_wallet":"Gaa na ebe nrụọrụ weebụ gọọmentị iji budata ego ọhụrụ nke ego ahụ",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

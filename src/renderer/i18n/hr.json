@@ -138,7 +138,7 @@
             "validate_password":"Unesite zaporku koju ste postavili",
             "validate_re_password":"Unesite ponovo lozinku koju ste postavili",
             "validate_strong_password":"Unesite zaporku od najmanje 8 znamenki",
-            "validate_long_password":"Duljina lozinke je preduga, molimo izmijenite",
+            "validate_long_password":"Zaporka ne može biti dulja od 100 znamenki",
             "validate_password_length":"Dvaput je unesena nedosljedna zaporka",
 
             "create_success":"Uspješno je izrađeno",
@@ -159,6 +159,7 @@
             "keystore_error":"pogreška:",
             "keystore_length_error":"Može se uvesti samo jedna datoteka računa, pokušajte ponovno!",
             "keystore_format_error":"Odaberite ispravnu datoteku računa",
+            "keystore_is_has":"Na popisu već postoji račun koji morate uvesti.",
             "imported_success":"Već odabrana datoteka"
         },
         "remove_dia": {

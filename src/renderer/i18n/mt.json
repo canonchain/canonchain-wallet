@@ -138,7 +138,7 @@
             "validate_password":"Jekk jogħġbok ikteb il-password li tissettjah",
             "validate_re_password":"Jekk jogħġbok ikteb il-password li ssettjajt mill-ġdid",
             "validate_strong_password":"Jekk jogħġbok ikteb password ta 'mill-inqas 8 numri",
-            "validate_long_password":"It-tul tal-password huwa twil wisq, jekk jogħġbok modifika",
+            "validate_long_password":"Il-password ma tistax taqbeż il-100 ċifra fit-tul",
             "validate_password_length":"Password inkonsistenti mdaħħla darbtejn",
 
             "create_success":"Maħluqa b'suċċess",
@@ -159,6 +159,7 @@
             "keystore_error":"Żball:",
             "keystore_length_error":"Jista 'jiġi importat fajl tal-kont wieħed biss, jekk jogħġbok erġa' pprova!",
             "keystore_format_error":"Jekk jogħġbok agħżel il-fajl tal-kont korrett",
+            "keystore_is_has":"Diġà hemm kont fil-lista li għandek bżonn timporta.",
             "imported_success":"Fajl diġà magħżul"
         },
         "remove_dia": {

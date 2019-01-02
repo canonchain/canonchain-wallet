@@ -138,7 +138,7 @@
             "validate_password":"Ange det lösenord du ställde in",
             "validate_re_password":"Ange det lösenord du ställde in igen",
             "validate_strong_password":"Ange ett lösenord med minst 8 siffror",
-            "validate_long_password":"Lösenordslängden är för lång, var god ändra",
+            "validate_long_password":"Lösenordet får inte överstiga 100 siffror",
             "validate_password_length":"Inkonsekvent lösenord inmatades två gånger",
 
             "create_success":"Skapades framgångsrikt",
@@ -159,6 +159,7 @@
             "keystore_error":"fel:",
             "keystore_length_error":"Endast en kontofil kan importeras, försök igen!",
             "keystore_format_error":"Var god välj den rätta kontopilen",
+            "keystore_is_has":"Det finns redan ett konto i listan som du behöver importera.",
             "imported_success":"Redan vald fil"
         },
         "remove_dia": {

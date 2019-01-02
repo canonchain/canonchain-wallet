@@ -138,7 +138,7 @@
             "validate_password":"Pakipasok ang password na itinakda mo",
             "validate_re_password":"Pakipasok ang password na iyong itinakda muli",
             "validate_strong_password":"Mangyaring magpasok ng isang password ng hindi bababa sa 8 digit",
-            "validate_long_password":"Ang haba ng password ay masyadong mahaba, mangyaring baguhin",
+            "validate_long_password":"Ang password ay hindi maaaring lumagpas sa 100 digit na haba",
             "validate_password_length":"Ang hindi pantay na password ay ipinasok nang dalawang beses",
 
             "create_success":"Matagumpay na nalikha",
@@ -159,6 +159,7 @@
             "keystore_error":"Error:",
             "keystore_length_error":"Maaaring ma-import ang isang file ng account lamang, pakisubukang muli!",
             "keystore_format_error":"Pakipili ang tamang file ng account",
+            "keystore_is_has":"May isang account sa listahan na kailangan mong i-import.",
             "imported_success":"Pinili na file"
         },
         "remove_dia": {

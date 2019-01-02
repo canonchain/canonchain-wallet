@@ -138,7 +138,7 @@
             "validate_password":"PDF ponis signum",
             "validate_re_password":"PDF ponis signum est",
             "validate_strong_password":"Tesseram saltem octo PDF",
-            "validate_long_password":"Ignoro longitudo longior mitigare velit",
+            "validate_long_password":"Tesseras, non magis quam C",
             "validate_password_length":"Passwords non aequare",
 
             "create_success":"partum victoria",
@@ -159,6 +159,7 @@
             "keystore_error":"Error:",
             "keystore_length_error":"Te potest importare nisi una ratio lima, quaeso, iterum conare!",
             "keystore_format_error":"Placere eligere rectam rationem file",
+            "keystore_is_has":"Album quod debes importare rationem iam amicorum",
             "imported_success":"Lima iam electus"
         },
         "remove_dia": {

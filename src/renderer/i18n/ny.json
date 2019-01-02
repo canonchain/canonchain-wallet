@@ -138,7 +138,7 @@
             "validate_password":"Chonde lowetsani mawu achinsinsi omwe mwasankha",
             "validate_re_password":"Chonde lowetsani mawu achinsinsi omwe mumayikanso",
             "validate_strong_password":"Chonde lowetsani mawu achinsinsi a mawerengero osachepera 8",
-            "validate_long_password":"Kutsegula mawu achinsinsi ndizitali kwambiri, chonde musinthe",
+            "validate_long_password":"Mawu achinsinsi sangapitirire majindi 100 m'litali",
             "validate_password_length":"Chinthu chosasinthika chinalowa kawiri",
 
             "create_success":"Zapangidwa bwino",
@@ -159,6 +159,7 @@
             "keystore_error":"Cholakwika:",
             "keystore_length_error":"Fayilo imodzi ya akaunti ingatumizedwe, chonde yesaninso!",
             "keystore_format_error":"Chonde sankhani fayilo yolondola ya akaunti",
+            "keystore_is_has":"Pali kale ndondomeko mundandanda yomwe muyenera kuitumiza.",
             "imported_success":"Fayilo yosankhidwa kale"
         },
         "remove_dia": {

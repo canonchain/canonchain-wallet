@@ -138,7 +138,7 @@
             "validate_password":"Eʻoluʻolu e hoʻokau i ka hua'ōlelo āu e hoʻonoho ai",
             "validate_re_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i ka hua'ōlelo āu e hoʻonoho hou",
             "validate_strong_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i kahi hua'ōlelo o 8 mau hua",
-            "validate_long_password":"Ua lōʻihi ka lōʻihi o ka helu, eʻoluʻolu e hoʻololi",
+            "validate_long_password":"ʻAʻole hiki ke piʻi i ka 100 mau huahelu i ka lōʻihi",
             "validate_password_length":"ʻO ka'ōlelo kuhihewa i pāpāluaʻia",
 
             "create_success":"Hanaʻia me ka maikaʻi",
@@ -159,6 +159,7 @@
             "keystore_error":"Kuhi:",
             "keystore_length_error":"Hoʻokahi wale nō waihona pūnaewele hiki ke hoʻokomoʻia, e ho'āʻo hou!",
             "keystore_format_error":"Eʻoluʻolu e koho i ka pūnaeke pūnaewele kūpono",
+            "keystore_is_has":"Aia kahi moʻokāki ma ka papa inoa e pono aiʻoe e komo.",
             "imported_success":"Ua kohoʻia i kahi pūnaewele"
         },
         "remove_dia": {

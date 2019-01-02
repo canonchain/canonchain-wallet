@@ -138,7 +138,7 @@
             "validate_password":"Veuillez saisir le mot de passe que vous avez défini",
             "validate_re_password":"Veuillez saisir le mot de passe que vous avez défini à nouveau.",
             "validate_strong_password":"Veuillez entrer un mot de passe d'au moins 8 chiffres",
-            "validate_long_password":"La longueur du mot de passe est trop longue, veuillez modifier",
+            "validate_long_password":"Le mot de passe ne peut pas dépasser 100 chiffres",
             "validate_password_length":"Mot de passe incohérent entré deux fois",
 
             "create_success":"Créé avec succès",
@@ -159,6 +159,7 @@
             "keystore_error":"Erreur:",
             "keystore_length_error":"Un seul fichier de compte peut être importé. Veuillez réessayer!",
             "keystore_format_error":"Veuillez sélectionner le bon fichier de compte.",
+            "keystore_is_has":"Il y a déjà un compte dans la liste que vous devez importer.",
             "imported_success":"Fichier déjà sélectionné"
         },
         "remove_dia": {

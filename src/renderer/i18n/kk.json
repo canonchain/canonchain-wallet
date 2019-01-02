@@ -138,7 +138,7 @@
             "validate_password":"Сіз енгізген парольді енгізіңіз",
             "validate_re_password":"Сіз қайта орнатқан парольді енгізіңіз",
             "validate_strong_password":"Кем дегенде 8 цифрды енгізіңіз",
-            "validate_long_password":"Құпия сөз ұзындығы тым ұзын, өзгертіңіз",
+            "validate_long_password":"Құпия сөз ұзындығы 100 таңбадан аспауы керек",
             "validate_password_length":"Қате құпия сөз екі рет енгізілді",
 
             "create_success":"Сәтті жасалған",
@@ -159,6 +159,7 @@
             "keystore_error":"Қате:",
             "keystore_length_error":"Тек бір тіркелгі файлы импортталуы мүмкін, қайталап көріңіз!",
             "keystore_format_error":"Дұрыс есептік файлды таңдаңыз",
+            "keystore_is_has":"Тізімде импортты қажет ететін тіркелгі бар.",
             "imported_success":"Таңдалған файл"
         },
         "remove_dia": {

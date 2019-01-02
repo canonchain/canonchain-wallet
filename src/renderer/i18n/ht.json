@@ -138,7 +138,7 @@
             "validate_password":"Tanpri antre modpas la ou mete",
             "validate_re_password":"Tanpri antre modpas la ou mete ankò",
             "validate_strong_password":"Tanpri antre yon modpas nan omwen 8 chif",
-            "validate_long_password":"Longè a modpas se twò lontan, tanpri modifye",
+            "validate_long_password":"Modpas pa ka depase 100 chif nan longè",
             "validate_password_length":"Enkonsistan modpas antre nan de fwa",
 
             "create_success":"Kreye avèk siksè",
@@ -159,6 +159,7 @@
             "keystore_error":"Erè:",
             "keystore_length_error":"Ka sèlman yon sèl dosye kont dwe enpòte, tanpri eseye ankò!",
             "keystore_format_error":"Tanpri chwazi dosye a kont kòrèk",
+            "keystore_is_has":"Gen deja yon kont nan lis la ke ou bezwen enpòte.",
             "imported_success":"Deja chwazi dosye"
         },
         "remove_dia": {

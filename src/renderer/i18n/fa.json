@@ -138,7 +138,7 @@
             "validate_password":"لطفا گذرواژه را تنظیم کنید",
             "validate_re_password":"لطفا رمز عبور را که دوباره تنظیم کرده اید وارد کنید",
             "validate_strong_password":"لطفا یک رمز عبور حداقل 8 رقم را وارد کنید",
-            "validate_long_password":"طول رمز عبور خیلی طول می کشد، لطفا تغییر دهید",
+            "validate_long_password":"رمز عبور نمی تواند بیش از 100 رقم در طول باشد",
             "validate_password_length":"رمز عبور نامنظم دو بار وارد شده است",
 
             "create_success":"با موفقیت ساخته شد",
@@ -159,6 +159,7 @@
             "keystore_error":"خطا:",
             "keystore_length_error":"فقط یک فایل حساب کاربری می تواند وارد شود، لطفا دوباره امتحان کنید!",
             "keystore_format_error":"لطفا پرونده حساب صحیح را انتخاب کنید",
+            "keystore_is_has":"در حال حاضر یک حساب کاربری در لیست وجود دارد که باید وارد کنید.",
             "imported_success":"فایل قبلا انتخاب شده است"
         },
         "remove_dia": {

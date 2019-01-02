@@ -138,7 +138,7 @@
             "validate_password":"Lütfen belirlediğiniz şifreyi giriniz",
             "validate_re_password":"Lütfen tekrar girdiğiniz şifreyi girin",
             "validate_strong_password":"Lütfen en az 8 basamaklı bir şifre girin",
-            "validate_long_password":"Şifre uzunluğu çok uzun, lütfen değiştirin",
+            "validate_long_password":"Şifre uzunluğu 100 haneyi aşamaz.",
             "validate_password_length":"Tutarsız şifre iki kez girildi",
 
             "create_success":"Başarıyla oluşturuldu",
@@ -159,6 +159,7 @@
             "keystore_error":"Hata:",
             "keystore_length_error":"Yalnızca bir hesap dosyası alınabilir, lütfen tekrar deneyin!",
             "keystore_format_error":"Lütfen doğru hesap dosyasını seçin",
+            "keystore_is_has":"Listede içe aktarmanız gereken bir hesap zaten var.",
             "imported_success":"Zaten seçilen dosya"
         },
         "remove_dia": {

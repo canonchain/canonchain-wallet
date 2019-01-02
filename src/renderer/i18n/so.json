@@ -138,7 +138,7 @@
             "validate_password":"Fadlan gali sirta aad ku qortey",
             "validate_re_password":"Fadlan gali furaha ereyga aad ku qorto",
             "validate_strong_password":"Fadlan gali sirta ugu yaraan 8 lambar",
-            "validate_long_password":"Dhimashada erayga sirta ah waa mid aad u dheer, fadlan bedel",
+            "validate_long_password":"Furaha lambarkiisu kama badan karo 100 lambar oo dherer ah",
             "validate_password_length":"Fariin aan badneyn ayaa laba jeer soo galay",
 
             "create_success":"Abuuray guul",
@@ -159,6 +159,7 @@
             "keystore_error":"Cilad:",
             "keystore_length_error":"Kaliya hal fayl oo keli ah ayaa lagu soo dhoofi karaa, fadlan mar kale isku day!",
             "keystore_format_error":"Fadlan dooro faylka saxda ah",
+            "keystore_is_has":"Hore waxaa jira koonto liistada aad u baahan tahay inaad soo dejiso.",
             "imported_success":"Horay loo soo doortay faylka"
         },
         "remove_dia": {

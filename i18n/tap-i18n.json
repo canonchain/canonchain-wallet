@@ -138,7 +138,7 @@
             "validate_password": "请输入您设置的密码",
             "validate_re_password": "请再次输入您设置的密码",
             "validate_strong_password": "请输入一个至少8位的密码",
-            "validate_long_password":"密码长度太长，请修改",
+            "validate_long_password":"密码长度不能超过100位",
             "validate_password_length": "两次输入的密码不一致",
 
             "create_success": "创建成功",
@@ -159,6 +159,7 @@
             "keystore_error": "错误：",
             "keystore_length_error":"只能导入一个账户文件，请重试！",
             "keystore_format_error":"请选择正确的账户文件",
+            "keystore_is_has":"列表中已经有您需要导入的账户啦",
             "imported_success":"已经选择文件"
         },
         "remove_dia": {

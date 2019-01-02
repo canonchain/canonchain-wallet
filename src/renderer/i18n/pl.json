@@ -138,7 +138,7 @@
             "validate_password":"Wprowadź ustawione hasło",
             "validate_re_password":"Wprowadź ponownie ustawione hasło",
             "validate_strong_password":"Wprowadź hasło składające się z co najmniej 8 cyfr",
-            "validate_long_password":"Długość hasła jest zbyt długa, zmodyfikuj",
+            "validate_long_password":"Hasło nie może przekraczać 100 cyfr",
             "validate_password_length":"Niespójne hasło wpisane dwukrotnie",
 
             "create_success":"Utworzono pomyślnie",
@@ -159,6 +159,7 @@
             "keystore_error":"Błąd:",
             "keystore_length_error":"Można zaimportować tylko jeden plik konta, spróbuj ponownie!",
             "keystore_format_error":"Wybierz poprawny plik konta",
+            "keystore_is_has":"Na liście jest już konto, które musisz zaimportować.",
             "imported_success":"Już wybrany plik"
         },
         "remove_dia": {

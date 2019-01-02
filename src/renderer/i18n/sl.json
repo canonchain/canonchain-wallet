@@ -138,7 +138,7 @@
             "validate_password":"Vnesite geslo, ki ste ga nastavili",
             "validate_re_password":"Vnesite geslo, ki ga nastavite znova",
             "validate_strong_password":"Vnesite vsaj 8-mestno geslo",
-            "validate_long_password":"Dolžina gesla je predolga, spremenite",
+            "validate_long_password":"Geslo ne sme presegati 100 znakov",
             "validate_password_length":"Dvakrat je vneseno nedosledno geslo",
 
             "create_success":"Ustvarjeno uspešno",
@@ -159,6 +159,7 @@
             "keystore_error":"Napaka:",
             "keystore_length_error":"Uvožite lahko samo eno datoteko računa. Poskusite znova!",
             "keystore_format_error":"Izberite pravilno datoteko računa",
+            "keystore_is_has":"Na seznamu je že račun, ki ga morate uvoziti.",
             "imported_success":"Že izbrana datoteka"
         },
         "remove_dia": {

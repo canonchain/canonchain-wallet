@@ -138,7 +138,7 @@
             "validate_password":"Ampidiro azafady ny tenimiafinao",
             "validate_re_password":"Ampidiro azafady ny tenimiafinao averina",
             "validate_strong_password":"Mampidira tenimiafina farafaharatsiny farafahakeliny",
-            "validate_long_password":"Ny lavany fohy dia lava loatra, azafady manova",
+            "validate_long_password":"Ny tenimiafina dia tsy afaka mihoatra ny 100 isam-bolana",
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
@@ -159,6 +159,7 @@
             "keystore_error":"Error:",
             "keystore_length_error":"Solontenan'ny kaonty tokana monja no azo amporisihana, avereno indray!",
             "keystore_format_error":"Mifantena azafady ny rakitra fitantanana marina",
+            "keystore_is_has":"Efa misy ny kaonty eto amin'ny lisitra mila ilainao.",
             "imported_success":"Efa voafaritra ny rakitra"
         },
         "remove_dia": {

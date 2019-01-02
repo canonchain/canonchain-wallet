@@ -138,7 +138,7 @@
             "validate_password":"Palihug pasabta ang pasword nga imong gibutang",
             "validate_re_password":"Palihug pagsulod sa pasword nga imong gibutang pag-usab",
             "validate_strong_password":"Palihug pagsulod sa password nga labing menos 8 digit",
-            "validate_long_password":"Ang gitas-on sa password dugay kaayo, palihug usba",
+            "validate_long_password":"Ang password dili molapas sa 100 digit nga gitas-on",
             "validate_password_length":"Dili magkaparehas nga pasword nga gisudlan kaduha",
 
             "create_success":"Nahimo nga malampuson",
@@ -159,6 +159,7 @@
             "keystore_error":"Sayop:",
             "keystore_length_error":"Usa lamang ka file sa account mahimong i-import, palihug sulayi pag-usab!",
             "keystore_format_error":"Palihug pilia ang husto nga file sa account",
+            "keystore_is_has":"Adunay na usa ka account sa listahan nga kinahanglan nimo nga i-import.",
             "imported_success":"Na gipili nga file"
         },
         "remove_dia": {

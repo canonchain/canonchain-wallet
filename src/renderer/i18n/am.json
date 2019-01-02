@@ -138,7 +138,7 @@
             "validate_password":"እባክዎ ያዋቀሩትን የይለፍ ቃል ያስገቡ",
             "validate_re_password":"እባክህ በድጋሚ ያዋቀውን የይለፍ ቃል አስገባ",
             "validate_strong_password":"እባክዎ ቢያንስ 8 ዲጂት የይለፍ ቃል ያስገቡ",
-            "validate_long_password":"የይለፍ ቃል ርዝማኔው በጣም ረጅም ነው, እባክዎ ያሻሽሉ",
+            "validate_long_password":"የይለፍ ቃል ከ 100 አሃዝ በላይ ሊበልጥ አይችልም",
             "validate_password_length":"ያልተጣጣመ የይለፍ ቃል ሁለት ጊዜ ገብቷል",
 
             "create_success":"በተሳካ ሁኔታ ተፈጥሯል",
@@ -159,6 +159,7 @@
             "keystore_error":"ስህተት:",
             "keystore_length_error":"ከውጭ ለማስገባት አንድ የሂሳብ ፋይል ብቻ, እባክዎ እንደገና ይሞክሩ!",
             "keystore_format_error":"እባክህ ትክክለኛውን የመለያ ፋይል ምረጥ",
+            "keystore_is_has":"እርስዎ ሊያስመጡት በሚፈልጉት ዝርዝር ውስጥ አስቀድሞ መለያ አለ.",
             "imported_success":"ቀድሞውኑ የተመረጠ ፋይል"
         },
         "remove_dia": {

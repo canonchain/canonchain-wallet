@@ -138,7 +138,7 @@
             "validate_password":"Vinsamlegast sláðu inn lykilorðið sem þú setur",
             "validate_re_password":"Vinsamlegast sláðu inn lykilorðið sem þú stillir aftur",
             "validate_strong_password":"Vinsamlegast sláðu inn lykilorð að minnsta kosti 8 tölustafir",
-            "validate_long_password":"Lykilorð lengd er of langur, vinsamlegast breyttu",
+            "validate_long_password":"Lykilorðið getur ekki farið yfir 100 stafir að lengd",
             "validate_password_length":"Ósamræmi lykilorð slóst inn tvisvar",
 
             "create_success":"Búið til með góðum árangri",
@@ -159,6 +159,7 @@
             "keystore_error":"Villa:",
             "keystore_length_error":"Aðeins er hægt að flytja inn eina reikningsskrá, vinsamlegast reyndu aftur!",
             "keystore_format_error":"Vinsamlegast veldu réttan reikningsskrá",
+            "keystore_is_has":"Það er þegar reikningur á listanum sem þú þarft að flytja inn.",
             "imported_success":"Already selected file"
         },
         "remove_dia": {

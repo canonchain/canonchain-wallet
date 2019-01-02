@@ -138,7 +138,7 @@
             "validate_password":"Унесите лозинку коју сте поставили",
             "validate_re_password":"Унесите лозинку коју сте поново поставили",
             "validate_strong_password":"Унесите лозинку од најмање 8 знаменки",
-            "validate_long_password":"Дужина лозинке је предугачка",
+            "validate_long_password":"Лозинка не може бити дужа од 100 цифара",
             "validate_password_length":"Двапут је унета недоследна лозинка",
 
             "create_success":"Успешно креиран",
@@ -159,6 +159,7 @@
             "keystore_error":"Грешка:",
             "keystore_length_error":"Може се увести само једна датотека рачуна, покушајте поново!",
             "keystore_format_error":"Изаберите исправну датотеку рачуна",
+            "keystore_is_has":"На листи већ постоји налог који морате да увезете.",
             "imported_success":"Већ одабрана датотека"
         },
         "remove_dia": {

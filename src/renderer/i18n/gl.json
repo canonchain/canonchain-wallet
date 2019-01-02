@@ -138,7 +138,7 @@
             "validate_password":"Introduza o contrasinal que configurou",
             "validate_re_password":"Introduza o contrasinal que configurou de novo",
             "validate_strong_password":"Introduza un contrasinal de polo menos 8 díxitos",
-            "validate_long_password":"A lonxitude do contrasinal é demasiado longa, por favor, modifícaa",
+            "validate_long_password":"A contraseña non pode exceder os 100 díxitos",
             "validate_password_length":"Contrasinal inconsistente introducido dúas veces",
 
             "create_success":"Creado con éxito",
@@ -159,6 +159,7 @@
             "keystore_error":"Erro:",
             "keystore_length_error":"Só se pode importar un ficheiro de conta, téntao de novo.",
             "keystore_format_error":"Selecciona o ficheiro da conta correcta",
+            "keystore_is_has":"Xa hai unha conta na lista que precisa importar.",
             "imported_success":"Arquivo xa seleccionado"
         },
         "remove_dia": {

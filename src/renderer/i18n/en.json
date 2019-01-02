@@ -138,7 +138,7 @@
             "validate_password":"Please enter the password you set",
             "validate_re_password":"Please enter the password you set again",
             "validate_strong_password":"Please enter a password of at least 8 digits",
-            "validate_long_password":"The password length is too long, please modify",
+            "validate_long_password":"Password cannot exceed 100 digits in length",
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Created successfully",
@@ -159,6 +159,7 @@
             "keystore_error":"error:",
             "keystore_length_error":"Only one account file can be imported, please try again!",
             "keystore_format_error":"Please select the correct account file",
+            "keystore_is_has":"There is already an account in the list that you need to import.",
             "imported_success":"Already selected file"
         },
         "remove_dia": {

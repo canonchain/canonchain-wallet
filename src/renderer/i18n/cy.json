@@ -138,7 +138,7 @@
             "validate_password":"Rhowch y cyfrinair yr ydych yn gosod",
             "validate_re_password":"Rhowch y cyfrinair yr ydych yn gosod eto",
             "validate_strong_password":"Rhowch gyfrinair o leiaf wyth",
-            "validate_long_password":"hyd cyfrinair yn rhy hir, os gwelwch yn dda addasu",
+            "validate_long_password":"Ni all cyfrinair fod yn fwy na 100 digid o hyd",
             "validate_password_length":"Nid yw'r cyfrineiriau'n cydweddu",
 
             "create_success":"creu llwyddiant",
@@ -159,6 +159,7 @@
             "keystore_error":"gwall:",
             "keystore_length_error":"gallwch fewnforio dim ond un ffeil cyfrif, rhowch gynnig arni!",
             "keystore_format_error":"Dewiswch y ffeil cyfrif cywir",
+            "keystore_is_has":"Mae yna eisoes gyfrif yn y rhestr y mae angen i chi ei fewnforio.",
             "imported_success":"Wedi ei ddewis ffeil"
         },
         "remove_dia": {

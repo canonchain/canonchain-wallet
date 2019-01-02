@@ -138,7 +138,7 @@
             "validate_password":"Tomohia koa te kupuhipa i whakaturia e koe",
             "validate_re_password":"Tomohia koa te kupuhipa ka tautuhi ano koe",
             "validate_strong_password":"Tomohia he kupuhipa o te iti rawa atu i te 8 tau",
-            "validate_long_password":"He roa te roa o te kupuhipa, me whakarereke",
+            "validate_long_password":"Kaore e taea e te kupuhipa te neke atu i te 100 tau i te roa",
             "validate_password_length":"I whakauruhia te kupuhipa e rua",
 
             "create_success":"I waihangatia pai",
@@ -159,6 +159,7 @@
             "keystore_error":"Hapa:",
             "keystore_length_error":"Kotahi noa te kōnae ka taea te kawemai, me ngana ano!",
             "keystore_format_error":"Tēnā tīpakohia te kōnae pūkete tika",
+            "keystore_is_has":"Kua tohua he kaute i roto i te rarangi e hiahia ana koe ki te kawemai.",
             "imported_success":"Kua tīpakohia te kōnae"
         },
         "remove_dia": {
