@@ -411,14 +411,7 @@ export default {
                 return;
             }
             let targetFile = event.dataTransfer.files[0];
-            if(targetFile.type!=='application/json'){
-                self.$message.error(
-                    self.$t(
-                        "page_home.import_dia.keystore_format_error"
-                    )
-                );
-                return;
-            }
+
             fs.readFile(targetFile.path, "utf8", (err, data) => {
                 if (err) {
                     this.$message.error(
@@ -427,7 +420,22 @@ export default {
                             err
                     );
                 }
-                let targetJson = JSON.parse(data);
+                let targetJson;
+                try {
+                    targetJson = JSON.parse(data);
+                } catch(e) {
+                    targetJson = '';
+                }
+                console.log(targetJson);
+                if(!targetJson){
+                    self.$message.error(
+                        self.$t(
+                            "page_home.import_dia.keystore_format_error"
+                        )
+                    );
+                    return;
+                }
+
                 if(!targetJson.account || targetJson.account.length!==54){
                     self.$message.error(
                         self.$t(
