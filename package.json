@@ -1,12 +1,12 @@
 {
-  "name": "CanonChain-Wallet",
-  "productName": "CanonChain-Wallet",
+  "name": "CanonChain Wallet",
+  "productName": "CanonChain Wallet",
   "version": "0.9.6",
   "keywords": [
     "block-wallet"
   ],
   "author": "CanonChain",
-  "description": "This project is a wallet of CZR , wetsite is http://www.canonchain.com/",
+  "description": "CanonChain Wallet",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "CanonChain-Wallet",
+    "productName": "CanonChain Wallet",
     "appId": "org.simulatedgreg.electron-vue",
     "directories": {
       "output": "build"

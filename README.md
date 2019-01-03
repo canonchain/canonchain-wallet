@@ -1,11 +1,11 @@
-### Canonchain-Wallet
+### Canonchain Wallet
 
 标准链钱包
 
 ### Data Path
 
-MAC:`/Users/YouName/Library/Application Support/CanonChain-Wallet`;
-Win:`/c/Users/Administrator/AppData/Roaming/CanonChain-Wallet`;
+MAC:`/Users/YouName/Library/Application Support/CanonChain Wallet`;
+Win:`/c/Users/Administrator/AppData/Roaming/CanonChain Wallet`;
 
 ### Tips
 

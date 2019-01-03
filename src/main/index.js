@@ -33,7 +33,7 @@ function createWindow() {
     width: winWidth,
     height: 600,
     icon: "./static/icons/logo.png",
-    title: "CanonChain-Wallet",
+    title: "CanonChain Wallet",
     resizable: false,
     fullscreenable: false,
     autoHideMenuBar: true,
