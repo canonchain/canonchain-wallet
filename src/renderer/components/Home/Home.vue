@@ -58,7 +58,7 @@
             <template v-else-if="createInfo.step === 1">
                 <el-alert :title="$t('page_home.create_dia.create_success')" :description="$t('page_home.create_dia.create_success_des')" :closable="false" type="success" show-icon>
                 </el-alert>
-                <el-input type="textarea" :rows="2" :value="createInfo.address">
+                <el-input type="textarea" :rows="2" :value="createInfo.address" :disabled=true>
                 </el-input>
                 <div slot="footer">
                     <el-button type="primary" @click="downloadKeystore(createInfo.address)">{{$t('page_home.create_dia.account_download_keystore')}}</el-button>
@@ -272,6 +272,10 @@ export default {
 
         // Create Account Start
         createAccount() {
+            if(self.database.length>=50){
+                self.$message.error(self.$t("page_home.create_dia.account_quantity_error"));
+                return;
+            }
             if (!this.createInfo.tag) {
                 this.createInfo.error = this.$t(
                     "page_home.create_dia.validate_tag"
@@ -329,6 +333,8 @@ export default {
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
+                    console.log("密码",self.createInfo.pwd,typeof self.createInfo.pwd)
+                    console.log(data);
                     if(data.error){
                         self.$message.error("出错啦 : 可能是非法的密码格式");
                         return;

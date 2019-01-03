@@ -43,6 +43,7 @@
             "no_address":"Vnesite naslov svojega računa",
             "valid_address":"Naslov stika je nezakonit",
             "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
+            "contacts_quantity_error":"Število stikov ne sme presegati 50",
             "exist":"Stik že obstaja,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Dvakrat je vneseno nedosledno geslo",
 
             "create_success":"Ustvarjeno uspešno",
+            "account_quantity_error":"Število računov ne sme preseči 50",
             "create_success_des":"Shranite datoteko računa in je ne delite z nikomer!"
         },
         "import_dia": {

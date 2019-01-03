@@ -43,6 +43,7 @@
             "no_address":"Palihug pagsulod sa imong account address",
             "valid_address":"Ang address sa contact mao ang illegal",
             "validate_tag_length":"Ang ngalan sa pangalan sa nota dili labaw kay sa 8 ka karakter.",
+            "contacts_quantity_error":"Ang gidaghanon sa mga kontak dili molabaw sa 50",
             "exist":"Ang kontak nga anaa na,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Dili magkaparehas nga pasword nga gisudlan kaduha",
 
             "create_success":"Nahimo nga malampuson",
+            "account_quantity_error":"Ang gidaghanon sa mga account dili molabaw sa 50",
             "create_success_des":"Palihug i-save ang file sa imong account ug ayaw ipaambit kini sa bisan kinsa!"
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"Tafadhali ingiza anwani yako ya akaunti",
             "valid_address":"Anwani ya kuwasiliana ni kinyume cha sheria",
             "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+            "contacts_quantity_error":"Idadi ya anwani haiwezi kuzidi 50",
             "exist":"Mawasiliano tayari iko,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Nenosiri lisilopatikana limeingia mara mbili",
 
             "create_success":"Imeundwa kwa ufanisi",
+            "account_quantity_error":"Idadi ya akaunti haiwezi kupitisha 50",
             "create_success_des":"Tafadhali salama faili yako ya akaunti na usishiriki na mtu yeyote!"
         },
         "import_dia": {

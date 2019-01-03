@@ -43,6 +43,7 @@
             "no_address":"Fier jo adresadres yn",
             "valid_address":"It adres fan it kontakt is illegal",
             "validate_tag_length":"De namme fan de notysje namme kin net grutter wêze as 8 tekens.",
+            "contacts_quantity_error":"It oantal kontakten kin net mear wêze as 50",
             "exist":"It kontakt is al bestiet,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inkonsistint wachtwurd is twa kear ynfierd",
 
             "create_success":"Súkses is makke",
+            "account_quantity_error":"It tal akkounts kin net mear as 50",
             "create_success_des":"Graach jo akkount triem bewarje en jo it net mei elk te dielen!"
         },
         "import_dia": {

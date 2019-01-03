@@ -42,7 +42,8 @@
             "no_tag":"Lütfen bir hesap notu girin",
             "no_address":"Lütfen hesap adresinizi giriniz",
             "valid_address":"Kişinin adresi yasa dışı",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
+            "contacts_quantity_error":"Kişi sayısı 50'yi aşamaz.",
             "exist":"Kişi zaten var,"
         }
     },
@@ -92,7 +93,7 @@
             "tit":"Notu değiştir",
             "subtit":"Hesabınız için bir not işaretleyin",
             "no_tag":"Lütfen bir hesap notu girin",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz."
+            "validate_tag_length":"Not adı 8 karakterden uzun olamaz"
         },
         "dia_tx":{
             "tit":"İşlem bilgileri",
@@ -133,7 +134,7 @@
             "account_download_keystore":"Hesap dosyasını indir",
 
             "validate_tag":"Lütfen hesap not adını giriniz",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
 
             "validate_password":"Lütfen belirlediğiniz şifreyi giriniz",
             "validate_re_password":"Lütfen tekrar girdiğiniz şifreyi girin",
@@ -142,6 +143,7 @@
             "validate_password_length":"Tutarsız şifre iki kez girildi",
 
             "create_success":"Başarıyla oluşturuldu",
+            "account_quantity_error":"Hesap sayısı 50'yi aşamaz",
             "create_success_des":"Lütfen hesap dosyanızı kaydedin ve kimseyle paylaşmayın!"
         },
         "import_dia": {
@@ -151,7 +153,7 @@
             "placeholder_tag":"Lütfen hesap not adını giriniz",
 
             "validate_tag":"Lütfen hesap not adını giriniz",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+            "validate_tag_length":"Not adı 8 karakterden uzun olamaz",
             "validate_enter_keystore":"Lütfen önce hesap dosyasını alın",
             "validate_error_keystore":"Hesap içe aktarma başarısız oldu, hesap dosyası hatası olabilir",
             "imported_account_success":"Başarıyla içe aktarıldı",
@@ -165,7 +167,7 @@
         "remove_dia": {
             "tit":"Kaldırmak istediğinden emin misin?",
             "remove_confrim":"Kaldırmak için eminim",
-            "backup":"Maddi zararlardan kaçınmak için lütfen bu hesabın yedeğine dikkat edin.",
+            "backup":"Mal hasarını önlemek için lütfen bu hesabın yedeğine dikkat edin.",
             "input_pwd":"şifre",
             "placeholder_pwd":"Lütfen bu hesap için şifreyi girin",
             "validate_password":"Lütfen hesap için şifreyi girin",

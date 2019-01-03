@@ -43,6 +43,7 @@
             "no_address":"Fadlan gali cinwaanka koontadaada",
             "valid_address":"Cinwaanka xidhiidhka waa sharci darro",
             "validate_tag_length":"Magaca magaca qoraalka ahi ma noqon karo mid ka badan 8 xuruuf.",
+            "contacts_quantity_error":"Tirada xiriirka kama badan karo 50",
             "exist":"Xiriirkii hore u jirey,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Fariin aan badneyn ayaa laba jeer soo galay",
 
             "create_success":"Abuuray guul",
+            "account_quantity_error":"Tirada xisaabtu kama badan karto 50",
             "create_success_des":"Fadlan kaydi feylkaaga xisaabta oo ha la wadaagin qof kale!"
         },
         "import_dia": {

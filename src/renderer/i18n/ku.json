@@ -43,6 +43,7 @@
             "no_address":"Ji kerema xwe navnîşana hesabê xwe binivîse",
             "valid_address":"Navnîşa têkiliyê neqanûn e",
             "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "contacts_quantity_error":"Numreya peywendî nikarin 50 salî ne",
             "exist":"Têkilî niha heye,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Şîfreyek nehevkirî du caran ket",
 
             "create_success":"Serkeftî çêkir",
+            "account_quantity_error":"Hejmarek hesab dikare 50 salî ne",
             "create_success_des":"Ji kerema xwe pelê xwe re tomar bike û ne bi kesek re parve bike!"
         },
         "import_dia": {

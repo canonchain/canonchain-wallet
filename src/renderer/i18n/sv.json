@@ -43,6 +43,7 @@
             "no_address":"Ange din kontonadress",
             "valid_address":"Adressens adress är olaglig",
             "validate_tag_length":"Namn på anteckningsnamnet får inte vara större än 8 tecken.",
+            "contacts_quantity_error":"Antalet kontakter kan inte överstiga 50",
             "exist":"Kontakten existerar redan,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inkonsekvent lösenord inmatades två gånger",
 
             "create_success":"Skapades framgångsrikt",
+            "account_quantity_error":"Antalet konton kan inte överstiga 50",
             "create_success_des":"Spara din kontofil och dela den inte med någon!"
         },
         "import_dia": {

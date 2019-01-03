@@ -43,6 +43,7 @@
             "no_address":"Eʻoluʻolu e tomo i kāu helu helu helu",
             "valid_address":"ʻO ke kūlana o ka hulina he kānāwaiʻole",
             "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
+            "contacts_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā lemu ma mua o 50",
             "exist":"Loaʻa ka hulina,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"ʻO ka'ōlelo kuhihewa i pāpāluaʻia",
 
             "create_success":"Hanaʻia me ka maikaʻi",
+            "account_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā kālā ma mua o 50",
             "create_success_des":"Eʻoluʻolu e mālama i kāu pūnaewele pūnaewele a 'aʻole e puʻunaue i kekahi me kekahi!"
         },
         "import_dia": {

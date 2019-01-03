@@ -43,6 +43,7 @@
             "no_address":"Tomo koa koa ki to tautuhinga putea",
             "valid_address":"Ko te waahi o te whakapā he ture kore",
             "validate_tag_length":"Ko te ingoa o te ingoa tuhipoka e kore e nui ake i te 8 nga tahua.",
+            "contacts_quantity_error":"Kaore e nui atu i te 50 te maha o nga hoapapatanga",
             "exist":"Kua noho tonu te whakapiri,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"I whakauruhia te kupuhipa e rua",
 
             "create_success":"I waihangatia pai",
+            "account_quantity_error":"Kaore e nui atu i te 50 te maha o nga kaute",
             "create_success_des":"Whakaorangia koa te kōnae pūkete me te kore e tuwha atu ki tetahi!"
         },
         "import_dia": {

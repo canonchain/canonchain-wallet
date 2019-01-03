@@ -43,6 +43,7 @@
             "no_address":"Jowo tẹ adirẹsi adirẹsi rẹ sii",
             "valid_address":"Adirẹsi ti olubasọrọ naa jẹ arufin",
             "validate_tag_length":"Orukọ orukọ akọsilẹ ko le jẹ tobi ju awọn ohun kikọ 8 lọ.",
+            "contacts_quantity_error":"Nọmba awọn olubasọrọ ko le ju 50 lọ",
             "exist":"Olubasọrọ naa ti wa tẹlẹ,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Ọrọ aṣina ti ko tọ si tẹ lẹẹmeji",
 
             "create_success":"Ṣẹda ni ifijišẹ",
+            "account_quantity_error":"Nọmba awọn iroyin ko le ju 50 lọ",
             "create_success_des":"Jowo fi faili akọọlẹ rẹ pamọ ki o ma ṣe pin pẹlu ẹnikẹni!"
         },
         "import_dia": {

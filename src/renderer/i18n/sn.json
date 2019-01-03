@@ -43,6 +43,7 @@
             "no_address":"Ndapota nyora kero yako kero",
             "valid_address":"Kero yekutaurirana haisi pamutemo",
             "validate_tag_length":"Zita rezita rekunyorera haringagoni kudarika vanhu vatatu.",
+            "contacts_quantity_error":"Nhamba yevateresi haigone kudarika 50",
             "exist":"Kukurukurirana kwave kuripo,"
         }
     },
@@ -63,7 +64,7 @@
             "select_placeholder":"Ndapota sarudza"
         },
         "confirm_dia": {
-            "title":"Ndapota fungidzira",
+            "title":"Ndapota chengetedza",
             "enter_passworld_tit":"Ndapota nyora password yako",
             "enter_passworld_place":"Ndapota nyora password yako"
         },
@@ -142,6 +143,7 @@
             "validate_password_length":"Izvo zvisina kufanira password yakaiswa kaviri",
 
             "create_success":"Yakagadzirwa zvakanaka",
+            "account_quantity_error":"Nhamba yeakaunti haigone kudarika 50",
             "create_success_des":"Ndapota chengetedza kadhi yako yekodha uye usagovana nayo kune ani zvake!"
         },
         "import_dia": {

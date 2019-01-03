@@ -43,6 +43,7 @@
             "no_address":"Hisob manzilingizni kiriting",
             "valid_address":"Kontakt manzili noqonuniy hisoblanadi",
             "validate_tag_length":"Izoh nomining nomi 8 ta belgidan oshmasligi kerak.",
+            "contacts_quantity_error":"Kontaktlar soni 50 dan oshmasligi kerak",
             "exist":"Kontakt allaqachon mavjud,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Mos kelmaydigan parol ikki marta kiritildi",
 
             "create_success":"Muvaffaqiyatli yaratildi",
+            "account_quantity_error":"Hisob raqamlari soni 50 dan oshmasligi kerak",
             "create_success_des":"Iltimos, hisob qaydnomangizni saqlang va uni hech kim bilan baham ko'rmang!"
         },
         "import_dia": {

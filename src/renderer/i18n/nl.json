@@ -43,6 +43,7 @@
             "no_address":"Voer alstublieft uw accountadres in",
             "valid_address":"Het adres van het contact is illegaal",
             "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
+            "contacts_quantity_error":"Het aantal contacten kan niet groter zijn dan 50",
             "exist":"De contactpersoon bestaat al,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistent wachtwoord twee keer ingevoerd",
 
             "create_success":"Met succes gemaakt",
+            "account_quantity_error":"Het aantal accounts kan niet groter zijn dan 50",
             "create_success_des":"Bewaar uw accountbestand en deel het met niemand!"
         },
         "import_dia": {

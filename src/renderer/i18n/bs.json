@@ -43,6 +43,7 @@
             "no_address":"Unesite adresu svog računa",
             "valid_address":"Adresa kontakta je nezakonita",
             "validate_tag_length":"Ime naziva bilješke ne može biti veće od 8 znakova.",
+            "contacts_quantity_error":"Broj kontakata ne može biti veći od 50",
             "exist":"Kontakt već postoji,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Dvaput je unesena nedosljedna lozinka",
 
             "create_success":"Uspješno kreiran",
+            "account_quantity_error":"Broj računa ne može biti veći od 50",
             "create_success_des":"Sačuvajte svoj račun i nemojte ga dijeliti ni s kim!"
         },
         "import_dia": {

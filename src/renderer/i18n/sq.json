@@ -43,6 +43,7 @@
             "no_address":"Ju lutemi shkruani adresën tuaj të llogarisë",
             "valid_address":"Adresa e kontaktit është e paligjshme",
             "validate_tag_length":"Emri i emrit të shënimit nuk mund të jetë më i madh se 8 shkronja.",
+            "contacts_quantity_error":"Numri i kontakteve nuk mund të kalojë 50",
             "exist":"Kontakti tashmë ekziston,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Fjalëkalimi i paqëndrueshëm hyri dy herë",
 
             "create_success":"Krijuar me sukses",
+            "account_quantity_error":"Numri i llogarive nuk mund të kalojë 50",
             "create_success_des":"Ruani skedarin tuaj të llogarisë dhe mos e ndani me askënd!"
         },
         "import_dia": {

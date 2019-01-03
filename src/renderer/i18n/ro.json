@@ -43,6 +43,7 @@
             "no_address":"Introduceți adresa dvs. de cont",
             "valid_address":"Adresa de contact este ilegală",
             "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
+            "contacts_quantity_error":"Numărul de persoane de contact nu poate depăși 50",
             "exist":"Contactul există deja,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Parola inconsistentă introdusă de două ori",
 
             "create_success":"Creat cu succes",
+            "account_quantity_error":"Numărul conturilor nu poate depăși 50",
             "create_success_des":"Salvați fișierul contului dvs. și nu îl distribuiți nimănui!"
         },
         "import_dia": {

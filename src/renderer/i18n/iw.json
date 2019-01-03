@@ -43,6 +43,7 @@
             "no_address":"הזן את כתובת החשבון שלך",
             "valid_address":"הכתובת של איש הקשר אינה חוקית",
             "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
+            "contacts_quantity_error":"מספר אנשי הקשר לא יעלה על 50",
             "exist":"איש הקשר כבר קיים,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"סיסמא לא עקבית נכנסה פעמיים",
 
             "create_success":"נוצר בהצלחה",
+            "account_quantity_error":"מספר החשבונות לא יעלה על 50",
             "create_success_des":"שמור את קובץ החשבון שלך ואל תשתף אותו עם אף אחד!"
         },
         "import_dia": {

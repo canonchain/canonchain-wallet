@@ -43,6 +43,7 @@
             "no_address":"Please enter your account address",
             "valid_address":"The address of the contact is illegal",
             "validate_tag_length":"The name of the note name cannot be greater than 8 characters.",
+            "contacts_quantity_error":"The number of contacts cannot exceed 50",
             "exist":"The contact already exists,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Created successfully",
+            "account_quantity_error":"The number of accounts cannot exceed 50",
             "create_success_des":"Please save your account file and don't share it with anyone!"
         },
         "import_dia": {

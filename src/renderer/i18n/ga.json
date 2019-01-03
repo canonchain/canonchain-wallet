@@ -43,6 +43,7 @@
             "no_address":"Cuir isteach do sheoladh chuntais",
             "valid_address":"Tá seoladh an teagmhála neamhdhleathach",
             "validate_tag_length":"Ní féidir ainm an nóta a bheith níos mó ná 8 carachtar.",
+            "contacts_quantity_error":"Ní féidir le líon na dteagmhálacha a bheith níos mó ná 50",
             "exist":"Tá an teagmháil ann cheana féin,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Cuireadh pasfhocal neamhréireach isteach faoi dhó",
 
             "create_success":"Cruthaithe go rathúil",
+            "account_quantity_error":"Ní féidir le líon na gcuntas a bheith níos mó ná 50",
             "create_success_des":"Sábháil do chomhad cuntais le do thoil agus ná é a roinnt le duine ar bith!"
         },
         "import_dia": {

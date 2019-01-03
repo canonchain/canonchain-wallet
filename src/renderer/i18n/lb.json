@@ -43,6 +43,7 @@
             "no_address":"Gidd weg Är Kontoun Adress",
             "valid_address":"D'Adress vum Kontakt ass illegal",
             "validate_tag_length":"Den Numm vum Note Numm kënnt net méi wéi 8 Zeechen.",
+            "contacts_quantity_error":"D'Zuel vu Kontakter däerf net méi wéi 50",
             "exist":"De Kontakt existéiert schonn,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistent Passwuert zweemol getraff",
 
             "create_success":"Erfolleg gemaach",
+            "account_quantity_error":"D'Zuel vun de Konten däerf net méi wéi 50",
             "create_success_des":"Dir kënnt Är Kontaccount späicheren an net mat jiddereen ze deelen!"
         },
         "import_dia": {
@@ -159,7 +161,7 @@
             "keystore_error":"Feeler:",
             "keystore_length_error":"Nëmmen eng eenzeg Kont Datei kann importéiert ginn, probéiert et nach eng Kéier!",
             "keystore_format_error":"Wielt weg déi richteg Konto-Datei",
-            "keystore_is_has":"Et gëtt schonn e Kont an der Lëscht déi Dir braucht ze importéieren.",
+            "keystore_is_has":"Et gëtt schonn en Account an der Lëscht déi Dir braucht ze importéieren.",
             "imported_success":"Elo gewielt Datei"
         },
         "remove_dia": {
@@ -188,7 +190,7 @@
             "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
             "have":"当前设备已存在 CanonChain 节点文件",
             "no":"Kuckt de Knot Programm, da sidd Dir Gedold",
-            "already_downloaded":"De Knuedungsprogramm gouf erofgelueden a se fäerdeg ze starten.",
+            "already_downloaded":"De Knuedungsprogramm gouf erofgelueden an fäerdeg ze starten.",
             "ready_start":"Bereet de Knäif un",
             "enter_wallet":"Den Knuedner ass erfollegräich ugefaang a fäerdeg fir de Portemonnaie opzemaachen"
         },

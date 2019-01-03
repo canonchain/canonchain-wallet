@@ -43,6 +43,7 @@
             "no_address":"Introduce o enderezo da túa conta",
             "valid_address":"O enderezo do contacto é ilegal",
             "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
+            "contacts_quantity_error":"O número de contactos non pode superar os 50",
             "exist":"O contacto xa existe,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Contrasinal inconsistente introducido dúas veces",
 
             "create_success":"Creado con éxito",
+            "account_quantity_error":"O número de contas non pode superar os 50",
             "create_success_des":"Garda o ficheiro da túa conta e non o comparte con ninguén."
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"Voer asseblief jou rekening adres in",
             "valid_address":"Die adres van die kontak is onwettig",
             "validate_tag_length":"Die naam van die nootnaam mag nie groter as 8 karakters wees nie.",
+            "contacts_quantity_error":"Die aantal kontakte kan nie meer as 50 wees nie",
             "exist":"Die kontak bestaan ​​reeds,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistente wagwoord het twee keer ingeskryf",
 
             "create_success":"Geskep suksesvol",
+            "account_quantity_error":"Die aantal rekeninge kan nie meer as 50 wees nie",
             "create_success_des":"Slaan asseblief jou rekeninglêer op en deel dit nie met enigiemand nie!"
         },
         "import_dia": {

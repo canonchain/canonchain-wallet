@@ -43,6 +43,7 @@
             "no_address":"Mangga lebetkeun alamat akun",
             "valid_address":"Alamat kontak urang henteu sah",
             "validate_tag_length":"Ngaran Catetan moal kaci ti 8 karakter",
+            "contacts_quantity_error":"Jumlah kontak teu kaci leuwih ti 50",
             "exist":"Kontak geus aya,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Kecap akses teu cocog",
 
             "create_success":"nyieun ayaan",
+            "account_quantity_error":"Jumlah rekening teu kaci leuwih ti 50",
             "create_success_des":"Mangga simpen file akun anjeun, ulah babagi kalawan saha!"
         },
         "import_dia": {

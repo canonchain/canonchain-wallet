@@ -43,6 +43,7 @@
             "no_address":"Ka kopo kenya aterese ea hau ea akhaonto",
             "valid_address":"Aterese ea ho kopana ha e molaong",
             "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
+            "contacts_quantity_error":"Palo ea mabitso a ke ke a feta 50",
             "exist":"Mesebetsi e se e ntse e le teng,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Phoso e sa lumellaneng e kenngoa habeli",
 
             "create_success":"E entsoe ka katleho",
+            "account_quantity_error":"Palo ea litlaleho e ke ke ea feta 50",
             "create_success_des":"Ka kopo boloka file ea hau ea akhaonto mme u se ke ua e arolelana le mang kapa mang!"
         },
         "import_dia": {

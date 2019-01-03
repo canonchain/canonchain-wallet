@@ -43,6 +43,7 @@
             "no_address":"Thov sau koj tus account chaw nyob",
             "valid_address":"Qhov chaw nyob ntawm tus xov tooj yog tsis raug cai",
             "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
+            "contacts_quantity_error":"Cov naj npawb ntawm cov neeg tsis muaj peev xwm tshaj li 50 leej",
             "exist":"Qhov kev sib cuag twb tshwm sim lawm,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistent password nkag ob zaug",
 
             "create_success":"Tsim tau zoo",
+            "account_quantity_error":"Tus naj npawb ntawm cov nyiaj yuav tsis pub dhau 50",
             "create_success_des":"Thov txuag koj cov ntaub ntawv nyiaj thiab tsis txhob koom nrog leej twg!"
         },
         "import_dia": {

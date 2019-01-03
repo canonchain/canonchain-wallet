@@ -43,6 +43,7 @@
             "no_address":"Introduïu l'adreça del vostre compte",
             "valid_address":"L'adreça del contacte és il·legal",
             "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
+            "contacts_quantity_error":"El nombre de contactes no pot superar els 50",
             "exist":"El contacte ja existeix,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"S'ha introduït una contrasenya inconsistent dues vegades",
 
             "create_success":"Creat amb èxit",
+            "account_quantity_error":"El nombre de comptes no pot superar els 50",
             "create_success_des":"Deseu el fitxer del vostre compte i no el compartiu amb ningú."
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"あなたのアカウントアドレスを入力してください",
             "valid_address":"連絡先の住所が違法です",
             "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
+            "contacts_quantity_error":"連絡先の数は50を超えることはできません",
             "exist":"連絡先は既に存在します"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"パスワードが2回入力されています",
 
             "create_success":"作成しました",
+            "account_quantity_error":"アカウント数は50を超えることはできません",
             "create_success_des":"アカウントファイルを保存して他の人と共有しないでください。"
         },
         "import_dia": {

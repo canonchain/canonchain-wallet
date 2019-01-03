@@ -43,6 +43,7 @@
             "no_address":"Faʻamolemole ulufale i lau tuatusi faʻamatalaga",
             "valid_address":"O le tuatusi o le faafesootaiga e le tusa ai ma le tulafono",
             "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 mataitusi.",
+            "contacts_quantity_error":"Ole numera o fesoʻotaʻiga e le mafai ona silia le 50",
             "exist":"Ua i ai nei le fesootaiga,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Faʻasalalau le faʻamaoni e le saʻo",
 
             "create_success":"Fausia lelei",
+            "account_quantity_error":"Ole numera o faʻamatalaga e le sili atu ma le 50",
             "create_success_des":"Faʻamolemole faʻasaʻo lau faila faila ma aua nei faʻasoa atu i soʻo se tasi!"
         },
         "import_dia": {

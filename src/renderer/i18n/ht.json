@@ -43,6 +43,7 @@
             "no_address":"Tanpri antre adrès kont ou",
             "valid_address":"Adrès la nan kontak la se ilegal",
             "validate_tag_length":"Non an nan non an nòt pa ka pi gran pase 8 karaktè.",
+            "contacts_quantity_error":"Nimewo a nan kontak pa ka depase 50",
             "exist":"Kontak la deja egziste,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Enkonsistan modpas antre nan de fwa",
 
             "create_success":"Kreye avèk siksè",
+            "account_quantity_error":"Nimewo a nan kont pa ka depase 50",
             "create_success_des":"Tanpri sove dosye kont ou epi pa pataje li avèk nenpòt moun!"
         },
         "import_dia": {

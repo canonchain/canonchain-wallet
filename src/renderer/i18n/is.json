@@ -43,6 +43,7 @@
             "no_address":"Vinsamlegast sláðu inn netfangið þitt",
             "valid_address":"Heimilisfang tengiliðs er ólöglegt",
             "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
+            "contacts_quantity_error":"Fjöldi tengiliða má ekki fara yfir 50",
             "exist":"Tengiliðurinn er þegar til,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Ósamræmi lykilorð slóst inn tvisvar",
 
             "create_success":"Búið til með góðum árangri",
+            "account_quantity_error":"Fjöldi reikninga má ekki fara yfir 50",
             "create_success_des":"Vinsamlegast vista reikningsskrána þína og deildu því ekki með neinum!"
         },
         "import_dia": {

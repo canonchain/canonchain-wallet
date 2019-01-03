@@ -43,6 +43,7 @@
             "no_address":"Vui lòng nhập địa chỉ tài khoản của bạn",
             "valid_address":"Địa chỉ liên lạc là bất hợp pháp",
             "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
+            "contacts_quantity_error":"Số lượng liên lạc không thể vượt quá 50",
             "exist":"Liên hệ đã tồn tại,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Mật khẩu không nhất quán được nhập hai lần",
 
             "create_success":"Tạo thành công",
+            "account_quantity_error":"Số lượng tài khoản không thể vượt quá 50",
             "create_success_des":"Vui lòng lưu tệp tài khoản của bạn và không chia sẻ nó với bất cứ ai!"
         },
         "import_dia": {

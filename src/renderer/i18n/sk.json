@@ -43,6 +43,7 @@
             "no_address":"Zadajte adresu svojho účtu",
             "valid_address":"Adresa kontaktu je neplatná",
             "validate_tag_length":"Názov mena mena nemôže byť väčší ako 8 znakov.",
+            "contacts_quantity_error":"Počet kontaktov nesmie presiahnuť 50",
             "exist":"Kontakt už existuje,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Nekonzistentné zadanie hesla dvakrát",
 
             "create_success":"Vytvorené úspešne",
+            "account_quantity_error":"Počet účtov nesmie presiahnuť 50",
             "create_success_des":"Uložte súbor svojho účtu a neskúšajte ho nikomu!"
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"Sisestage oma konto aadress",
             "valid_address":"Kontakti aadress on ebaseaduslik",
             "validate_tag_length":"Märkme nime nimi ei tohi olla suurem kui 8 tähemärki.",
+            "contacts_quantity_error":"Kontaktide arv ei tohi ületada 50%",
             "exist":"Kontakt on juba olemas,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Vastuoluline parool sisestati kaks korda",
 
             "create_success":"Loodud edukalt",
+            "account_quantity_error":"Kontode arv ei tohi ületada 50%",
             "create_success_des":"Palun salvestage oma konto fail ja ära jaga seda kellelegi!"
         },
         "import_dia": {

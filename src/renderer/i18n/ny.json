@@ -43,6 +43,7 @@
             "no_address":"Chonde lowetsani adilesi yanu ya akaunti",
             "valid_address":"Adilesi yothandizirayi ndi yotsutsa",
             "validate_tag_length":"Dzinalo la dzina lolembera silingakhale lalikulu kuposa malemba 8.",
+            "contacts_quantity_error":"Chiwerengero cha ochezera sichikhoza kupitirira 50",
             "exist":"Ulalowo ulipo kale,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Chinthu chosasinthika chinalowa kawiri",
 
             "create_success":"Zapangidwa bwino",
+            "account_quantity_error":"Chiwerengero cha akaunti sizingapitirire 50",
             "create_success_des":"Chonde sungani fayilo yanu ya akaunti ndipo musawagawane ndi wina aliyense!"
         },
         "import_dia": {

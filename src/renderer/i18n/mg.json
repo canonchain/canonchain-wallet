@@ -43,6 +43,7 @@
             "no_address":"Ampidiro azafady ny adiresinao",
             "valid_address":"Tsy ara-dalàna ny adiresin'ny fifandraisana",
             "validate_tag_length":"Ny anaran'ny anarana fanamarihana dia tsy afaka mihoatra ny 8.",
+            "contacts_quantity_error":"Ny isan'ny fifandraisana dia tsy afaka mihoatra 50",
             "exist":"Efa misy ny fifandraisana,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
+            "account_quantity_error":"Ny isan'ireo kaonty dia tsy mihoatra ny 50",
             "create_success_des":"Azafady saveo ny rakitra ao amin'ny kaontinao ary aza mizara izany amin'ny olona rehetra!"
         },
         "import_dia": {

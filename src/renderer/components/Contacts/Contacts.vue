@@ -100,6 +100,10 @@ export default {
         },
 
         addContact() {
+            if(self.database.length>=50){
+                self.$message.error(self.$t("page_contacts.msg_info.contacts_quantity_error"));
+                return;
+            }
             if (!self.createInfo.tag) {
                 self.$message.error(self.$t("page_contacts.msg_info.no_tag"));
                 return;

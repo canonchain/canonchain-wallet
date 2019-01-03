@@ -43,6 +43,7 @@
             "no_address":"계정 주소를 입력하십시오.",
             "valid_address":"연락처의 주소가 불법입니다.",
             "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
+            "contacts_quantity_error":"연락처의 수는 50을 초과 할 수 없습니다.",
             "exist":"연락처가 이미 있습니다."
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"일치하지 않는 암호가 두 번 입력되었습니다.",
 
             "create_success":"성공적으로 생성되었습니다.",
+            "account_quantity_error":"계정 수는 50을 초과 할 수 없습니다.",
             "create_success_des":"계정 파일을 저장하고 누구와도 공유하지 마십시오!"
         },
         "import_dia": {

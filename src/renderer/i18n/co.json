@@ -43,6 +43,7 @@
             "no_address":"Intrazate l'indirizzu vostru indirizzu",
             "valid_address":"L'indirizzu di u cuntattu hè illegale",
             "validate_tag_length":"U nome di u nome di nota ùn pò esse più grande di 8 caratteri.",
+            "contacts_quantity_error":"U numaru di cuntatti ùn pò micca esse più di 50",
             "exist":"U cuntattu hè digià esiste,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"A password in modu cuntenutu hè intesa in duie volte",
 
             "create_success":"Creatu successu",
+            "account_quantity_error":"U numaru di cunti ùn pò micca esse più di 50",
             "create_success_des":"Sàlvate u vostru articulu di u vostru contu è micca sparte cù qualcosa!"
         },
         "import_dia": {

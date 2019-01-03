@@ -43,6 +43,7 @@
             "no_address":"Por favor ingrese la dirección de su cuenta",
             "valid_address":"La dirección del contacto es ilegal.",
             "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
+            "contacts_quantity_error":"El número de contactos no puede exceder de 50.",
             "exist":"El contacto ya existe,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Contraseña incoherente introducida dos veces",
 
             "create_success":"Creado exitosamente",
+            "account_quantity_error":"El número de cuentas no puede exceder de 50.",
             "create_success_des":"Por favor, guarde el archivo de su cuenta y no lo comparta con nadie!"
         },
         "import_dia": {
@@ -153,7 +155,7 @@
             "validate_tag":"Por favor ingrese el nombre de la nota de cuenta",
             "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
             "validate_enter_keystore":"Por favor importe el archivo de cuenta primero",
-            "validate_error_keystore":"Error en la importación de la cuenta, puede haber error en el archivo de la cuenta",
+            "validate_error_keystore":"Error en la importación de la cuenta, puede haber un error en el archivo de la cuenta",
             "imported_account_success":"Exitosamente importado",
             "exist":"Esta cuenta ya existe, la nota es",
             "keystore_error":"Error",

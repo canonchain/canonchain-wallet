@@ -43,6 +43,7 @@
             "no_address":"Sila masukkan alamat akaun anda",
             "valid_address":"Alamat kenalan adalah haram",
             "validate_tag_length":"Nama nama nota tidak boleh melebihi 8 aksara.",
+            "contacts_quantity_error":"Bilangan kenalan tidak boleh melebihi 50",
             "exist":"Kenalan sudah wujud,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Kata laluan tidak konsisten dimasukkan dua kali",
 
             "create_success":"Dibuat berjaya",
+            "account_quantity_error":"Bilangan akaun tidak boleh melebihi 50",
             "create_success_des":"Sila simpan fail akaun anda dan jangan kongsi dengan sesiapa!"
         },
         "import_dia": {

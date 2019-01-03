@@ -43,6 +43,7 @@
             "no_address":"Xahiş edirik hesab ünvanınızı daxil edin",
             "valid_address":"Kontaktın ünvanı qanunsuzdur",
             "validate_tag_length":"Qeyd adının adı 8 simvoldan çox ola bilməz.",
+            "contacts_quantity_error":"Əlaqələrin sayı 50-dən çox ola bilməz",
             "exist":"Əlaqə artıq mövcuddur,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Tutarsız parol iki dəfə girdi",
 
             "create_success":"Tərəqqi yaradılıb",
+            "account_quantity_error":"Hesabların sayı 50-dən çox ola bilməz",
             "create_success_des":"Xahiş edirik hesab dosyanızı saxlasın və onu hər kəslə bölüşməyin!"
         },
         "import_dia": {

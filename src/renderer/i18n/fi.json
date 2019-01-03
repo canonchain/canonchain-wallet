@@ -43,6 +43,7 @@
             "no_address":"Anna tilisi osoite",
             "valid_address":"Yhteystiedon osoite on laiton",
             "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
+            "contacts_quantity_error":"Yhteystietojen määrä voi olla enintään 50",
             "exist":"Yhteystieto on jo olemassa,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Epäjohdonmukainen salasana syötettiin kahdesti",
 
             "create_success":"Luotu onnistuneesti",
+            "account_quantity_error":"Tilien lukumäärä ei voi olla yli 50",
             "create_success_des":"Tallenna tilin tiedosto ja älä jaa sitä kenenkään kanssa!"
         },
         "import_dia": {

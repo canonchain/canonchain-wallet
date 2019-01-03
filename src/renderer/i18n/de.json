@@ -43,6 +43,7 @@
             "no_address":"Bitte geben Sie Ihre Kontoadresse ein",
             "valid_address":"Die Adresse des Kontakts ist illegal",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
+            "contacts_quantity_error":"Die Anzahl der Kontakte darf 50 nicht überschreiten",
             "exist":"Der Kontakt existiert bereits"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inkonsistentes Passwort zweimal eingegeben",
 
             "create_success":"Erfolgreich erstellt",
+            "account_quantity_error":"Die Anzahl der Konten darf 50 nicht überschreiten",
             "create_success_des":"Bitte speichern Sie Ihre Kontodatei und geben Sie sie nicht an Dritte weiter!"
         },
         "import_dia": {

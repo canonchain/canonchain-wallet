@@ -43,6 +43,7 @@
             "no_address":"Biko tinye adreesị akaụntụ gị",
             "valid_address":"Adreesị nke kọntaktị ahụ bụ iwu na-akwadoghị",
             "validate_tag_length":"Aha aha akwukwo apughi ibu ihe kariri ihe odide asatọ.",
+            "contacts_quantity_error":"Ọnụ ọgụgụ kọntaktị agaghị agafe 50",
             "exist":"Kpọtụrụ onye ahụ,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Enweghi ike itinye paswọọdụ ugboro abụọ",
 
             "create_success":"Ejiri nke ọma",
+            "account_quantity_error":"Ọnụ ọgụgụ nke akụkọ enweghị ike karịa 50",
             "create_success_des":"Biko chekwaa faịlụ akaụntụ gị ma ghara ịkekọrịta ya na onye ọ bụla!"
         },
         "import_dia": {
@@ -194,7 +196,7 @@
         },
         "version_dialog":{
             "version_tit":"Nwelite nsụgharị ozugbo",
-            "download_wallet":"Gaa na ebe nrụọrụ weebụ gọọmentị iji budata ego ọhụrụ nke ego ahụ",
+            "download_wallet":"Gaa na ebe nrụọrụ weebụ gọọmentị ka ibudata ụdị ego a kachasị ọhụrụ",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

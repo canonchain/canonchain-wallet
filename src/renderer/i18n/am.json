@@ -43,6 +43,7 @@
             "no_address":"እባክዎ የመለያዎን አድራሻ ያስገቡ",
             "valid_address":"የእውቂያ አድራሻው ህገወጥ ነው",
             "validate_tag_length":"የማሳወቂያ ስም ከ 8 ቁምፊዎች በላይ መሆን አይችልም.",
+            "contacts_quantity_error":"የእውቂያዎች ብዛት ከ 50 መብለጥ አይችልም",
             "exist":"እውቅያው አስቀድሞም ይገኛል,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"ያልተጣጣመ የይለፍ ቃል ሁለት ጊዜ ገብቷል",
 
             "create_success":"በተሳካ ሁኔታ ተፈጥሯል",
+            "account_quantity_error":"የሂሳብ ቁጥር ከ 50 መብለጥ አይችልም",
             "create_success_des":"እባክዎ የመለያ ፋይልዎን ያስቀምጡና ከማንም ጋር አያጋሩት!"
         },
         "import_dia": {

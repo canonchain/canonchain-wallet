@@ -43,6 +43,7 @@
             "no_address":"Mangyaring ipasok ang iyong account address",
             "valid_address":"Ang address ng contact ay ilegal",
             "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
+            "contacts_quantity_error":"Ang bilang ng mga contact ay hindi maaaring lumampas sa 50",
             "exist":"Ang contact ay umiiral na,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Ang hindi pantay na password ay ipinasok nang dalawang beses",
 
             "create_success":"Matagumpay na nalikha",
+            "account_quantity_error":"Ang bilang ng mga account ay hindi maaaring lumampas sa 50",
             "create_success_des":"Mangyaring i-save ang file ng iyong account at huwag ibahagi ito sa sinuman!"
         },
         "import_dia": {

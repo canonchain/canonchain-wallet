@@ -43,6 +43,7 @@
             "no_address":"Sartu zure kontuaren helbidea",
             "valid_address":"Kontaktuaren helbidea legez kanpokoa da",
             "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
+            "contacts_quantity_error":"Kontaktu kopurua ezin da 50 baino gehiago izan",
             "exist":"Kontaktua lehendik ere badago,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Sortu arrakastaz",
+            "account_quantity_error":"Kontuen kopurua ezin da 50 baino gehiago izan",
             "create_success_des":"Mesedez, gorde zure kontuaren fitxategia eta ez partekatu inorekin!"
         },
         "import_dia": {

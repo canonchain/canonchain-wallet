@@ -43,6 +43,7 @@
             "no_address":"Mangga ketik alamat akun sampeyan",
             "valid_address":"Alamat kontak iku ilegal",
             "validate_tag_length":"Jeneng jeneng cathetan ora bisa luwih saka 8 karakter.",
+            "contacts_quantity_error":"Jumlah kontak ora bisa ngluwihi 50",
             "exist":"Kontak wis ana,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Tembung sing ora konsisten wis ping loro",
 
             "create_success":"Digawe sukses",
+            "account_quantity_error":"Jumlah akun ora bisa ngluwihi 50",
             "create_success_des":"Monggo simpen file akun sampeyan lan aja bareng karo sapa wae!"
         },
         "import_dia": {

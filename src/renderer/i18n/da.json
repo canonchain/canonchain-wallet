@@ -43,6 +43,7 @@
             "no_address":"Indtast venligst din kontoadresse",
             "valid_address":"Adressens adresse er ulovlig",
             "validate_tag_length":"Navnet på notenavnet må ikke være større end 8 tegn.",
+            "contacts_quantity_error":"Antallet af kontakter kan ikke overstige 50",
             "exist":"Kontakten eksisterer allerede,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Inkonsekvent adgangskode indtastet to gange",
 
             "create_success":"Oprettet succesfuldt",
+            "account_quantity_error":"Antallet af konti må ikke overstige 50",
             "create_success_des":"Gem venligst din kontofil og del det ikke med nogen!"
         },
         "import_dia": {

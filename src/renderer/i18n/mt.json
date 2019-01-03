@@ -43,6 +43,7 @@
             "no_address":"Jekk jogħġbok ikteb l-indirizz tal-kont tiegħek",
             "valid_address":"L-indirizz tal-kuntatt huwa illegali",
             "validate_tag_length":"L-isem tal-isem tan-nota ma jistax ikun ikbar minn 8 karattri.",
+            "contacts_quantity_error":"In - numru ta 'kuntatti ma jistax jaqbeż il - 50",
             "exist":"Il-kuntatt diġà jeżisti,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Password inkonsistenti mdaħħla darbtejn",
 
             "create_success":"Maħluqa b'suċċess",
+            "account_quantity_error":"In - numru ta 'kontijiet ma jistax jaqbeż il - 50%. T",
             "create_success_des":"Jekk jogħġbok ħlief il-fajl tal-kont tiegħek u ma taqsamx ma 'ħadd!"
         },
         "import_dia": {

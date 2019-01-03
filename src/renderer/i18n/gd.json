@@ -43,6 +43,7 @@
             "no_address":"Cuir a-steach do sheòladh cunntais",
             "valid_address":"Tha seòladh a 'chonaltraidh mì-laghail",
             "validate_tag_length":"Chan fhaod ainm an t-ainm a bhith nas motha na 8 caractaran.",
+            "contacts_quantity_error":"Chan urrainn don àireamh de luchd-aithne a bhith nas àirde na 50",
             "exist":"Tha an ceangal a-cheana ann,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Chaidh facal-faire neo-chunbhalach a-steach dà thuras",
 
             "create_success":"Cruthaichte gu soirbheachail",
+            "account_quantity_error":"Chan urrainn don àireamh de chunntasan a bhith nas àirde na 50",
             "create_success_des":"Sàbhail am faidhle cunntais agad agus na rannsaich e le neach sam bith!"
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"Bonvolu eniri vian adreson",
             "valid_address":"La adreso de la kontakto estas neleĝa",
             "validate_tag_length":"La nomo de la nota nomo ne povas esti pli ol 8 karakteroj.",
+            "contacts_quantity_error":"La nombro da kontaktoj ne povas superi 50",
             "exist":"La kontakto jam ekzistas,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Nekonforma pasvorto eniris dufoje",
 
             "create_success":"Kreita sukcese",
+            "account_quantity_error":"La nombro da kontoj ne povas superi 50",
             "create_success_des":"Bonvolu konservi vian konton-dosieron kaj ne dividu ĝin kun iu ajn!"
         },
         "import_dia": {

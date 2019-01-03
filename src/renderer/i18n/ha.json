@@ -43,6 +43,7 @@
             "no_address":"Da fatan a shigar adireshin adireshinku",
             "valid_address":"Adireshin lambar sadarwa ba bisa doka ba ne",
             "validate_tag_length":"Sunan sunan martaba ba zai iya girma fiye da haruffa 8 ba.",
+            "contacts_quantity_error":"Adadin lambobin sadarwa ba zasu iya wuce 50 ba",
             "exist":"Lambar ta rigaya ta kasance,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Kalmomin da ba daidai ba sun shiga sau biyu",
 
             "create_success":"An yi nasara",
+            "account_quantity_error":"Lambar asusun ba zai wuce 50 ba",
             "create_success_des":"Da fatan a ajiye fayil ɗin asusunku kuma kada ku raba shi da kowa!"
         },
         "import_dia": {

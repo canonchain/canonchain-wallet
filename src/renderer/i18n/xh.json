@@ -43,6 +43,7 @@
             "no_address":"Nceda ufake idilesi yeakhawunti yakho",
             "valid_address":"Idilesi yoqhagamshelwano ayikho mthethweni",
             "validate_tag_length":"Igama legama leenqaku alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
+            "contacts_quantity_error":"Inombolo yabafownelwa ayikwazi ukudlula i-50",
             "exist":"Uqhagamshelwano lukhona kakade,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Iphasiwedi engahambelaniyo ingenwe kabini",
 
             "create_success":"Yadalwa ngempumelelo",
+            "account_quantity_error":"Inombolo yeakhawunti ayikwazi ukudlula i-50",
             "create_success_des":"Nceda ugcine ifayile yakho ye-akhawunti kwaye ungawabelani nabani na!"
         },
         "import_dia": {

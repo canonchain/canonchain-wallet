@@ -43,6 +43,7 @@
             "no_address":"Oratio pro PDF",
             "valid_address":"Oratio contactus, non est legitimum scriptor",
             "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
+            "contacts_quantity_error":"Contactus numerus non magis quam L",
             "exist":"Iam enim Contact:"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Passwords non aequare",
 
             "create_success":"partum victoria",
+            "account_quantity_error":"Numerus autem rationes non potest esse magis quam L",
             "create_success_des":"Placere nisi ob gratiam tui file: ne participes quis est?"
         },
         "import_dia": {

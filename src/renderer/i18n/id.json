@@ -43,6 +43,7 @@
             "no_address":"Silakan masukkan alamat akun Anda",
             "valid_address":"Alamat kontak itu ilegal",
             "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
+            "contacts_quantity_error":"Jumlah kontak tidak boleh melebihi 50",
             "exist":"Kontak sudah ada,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Kata sandi yang tidak konsisten dimasukkan dua kali",
 
             "create_success":"Diciptakan dengan sukses",
+            "account_quantity_error":"Jumlah akun tidak boleh melebihi 50",
             "create_success_des":"Harap simpan file akun Anda dan jangan bagikan dengan siapa pun!"
         },
         "import_dia": {

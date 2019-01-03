@@ -43,6 +43,7 @@
             "no_address": "请输入账户地址",
             "valid_address": "联系人的地址不合法",
             "validate_tag_length": "备注名长度不能大于8个字符",
+            "contacts_quantity_error":"联系人数量不能超过50个",
             "exist": "联系人已经存在,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length": "两次输入的密码不一致",
 
             "create_success": "创建成功",
+            "account_quantity_error":"账号数量不能超过50个",
             "create_success_des": "请保存你的账户文件，不要分享给任何人！"
         },
         "import_dia": {

@@ -43,6 +43,7 @@
             "no_address":"Kérjük, adja meg fiókjának címét",
             "valid_address":"A kapcsolat címe illegális",
             "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
+            "contacts_quantity_error":"A névjegyek száma nem haladhatja meg az 50-et",
             "exist":"A kapcsolat már létezik,"
         }
     },
@@ -142,6 +143,7 @@
             "validate_password_length":"Az inkonzisztens jelszó kétszer lépett be",
 
             "create_success":"Sikeresen létrehozott",
+            "account_quantity_error":"A számlák száma nem haladhatja meg az 50-et",
             "create_success_des":"Kérjük, mentse el a fiókfájlját, és ne ossza meg senkivel!"
         },
         "import_dia": {
