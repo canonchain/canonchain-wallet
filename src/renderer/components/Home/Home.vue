@@ -324,17 +324,9 @@ export default {
                 );
                 return;
             }
-
-            // console.log(self.createInfo.pwd);
-            // console.log(self.$czr.accounts)
-            // self.$czr.accounts.create(self.createInfo.pwd).then(data => {
-            //     console.log(data);
-            // })
             self.$czr.request
                 .accountCreate(self.createInfo.pwd)
                 .then(data => {
-                    console.log("密码",self.createInfo.pwd,typeof self.createInfo.pwd)
-                    console.log(data);
                     if(data.error){
                         self.$message.error("出错啦 : 可能是非法的密码格式");
                         return;
@@ -432,7 +424,7 @@ export default {
                 } catch(e) {
                     targetJson = '';
                 }
-                console.log(targetJson);
+                
                 if(!targetJson){
                     self.$message.error(
                         self.$t(
