@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <div class="home-content">
+        <div class="home-content" v-loading.fullscreen.lock="fullscreenLoading">
             <div class="account-wrap b-flex">
                 <template v-for="account in database">
                     <router-link :to="'/account/' + account.address" tag="div" class="accounrt-item ">
@@ -117,8 +117,7 @@ const { spawn, spawnSync } = require("child_process");
 let self = null;
 let getAccountTimer = null;
 let accountErrorTimer = null;
-let interVal = 1000;
-let flagNum = 0;
+let interVal = 500;
 let updataBlockTimer={
     start:null,
     error:null
@@ -166,6 +165,7 @@ export default {
                 import: false,
                 remove: false
             },
+            fullscreenLoading:false,
             database: [],
             createInfo: {},
             importInfo: {},
@@ -561,11 +561,8 @@ export default {
         //get Account start
         runAccountsTimer() {
             getAccountTimer = setTimeout(() => {
-                if (interVal) {
-                    interVal = 0;
-                }
                 self.getAccounts();
-            }, interVal || 2000);
+            }, interVal || 5000);
         },
         getAccountsBalances(accountAry) {
             self.$czr.request
@@ -594,18 +591,34 @@ export default {
             self.$czr.request
                 .accountList()
                 .then(data => {
-                    self.$walletLogs.info("收到accountList结果了", ++flagNum);
+                    self.$walletLogs.info("收到accountList结果了");
                     return data.accounts;
                 })
                 .catch(error => {
                     self.$walletLogs.error("Account List Error", error.message);
                     accountErrorTimer = setTimeout(()=>{
                         self.runAccountsTimer();
-                    },1000*5)
+                    },10)
                 })
                 .then(data => {
-                    if (!data) {
+                    if(data ==undefined){
+                        self.fullscreenLoading = true;
+                        return;
+                    }else{
+                        // loading 结束
+                        if (interVal) {
+                            interVal = 0;
+                        }
+                        self.fullscreenLoading = false;
+                    }
+                    if (data=='') {
                         data = [];
+                        self.$db
+                            .read()
+                            .set("czr_accounts", [])
+                            .write();
+                        self.runAccountsTimer();
+                        return
                     }
                     //先把本地数据库存在，但是 data 里不存在的账户 删除
                     let database = self.$db.get("czr_accounts").value();
@@ -686,8 +699,7 @@ export default {
             self.$czr.request
                 .getBlocks(updataBlockData.targetAry)
                 .then(data => {
-                    //把稳定的写入
-                    let obtainData = data.blocks;
+                    let obtainData = data.blocks || [];
                     obtainData.forEach(ele=>{
                         if(ele.is_stable==="1"){
                             self.$db.get("send_list."+ele.from).find({ hash: ele.hash })
