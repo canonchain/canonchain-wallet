@@ -27,7 +27,7 @@
 <script>
 import { setTimeout } from "timers";
 let self;
-let continued = 500;
+let continued = 1000;
 export default {
     name: "Header",
     data() {
@@ -52,7 +52,7 @@ export default {
             self.$czr.request
                 .status()
                 .then(res => {
-                    if (continued==500) {
+                    if (continued==1000) {
                         continued = 5000;
                     }
                     self.onlineTimer();

@@ -25,6 +25,9 @@ const { spawn, spawnSync, exec, execFile, fork } = require("child_process");
 const packageJson = require("../../../../package.json");
 // const childPath = require("./child");
 let radom = "?radom=" + Math.random();
+// 检测是否在线
+import { setTimeout } from "timers";
+let continued = 500;
 
 let self = null;
 export default {
@@ -50,7 +53,7 @@ export default {
         this.validity();
     },
     computed: {},
-    methods: {
+    methods: { 
         validity() {
             let targeyUrl =
                 "http://www.canonchain.com/resource/file/canonchain/latest/czrVersion.json" + radom;
@@ -240,7 +243,7 @@ export default {
                 .then(data => {
                     // console.log("已经有节点，不需要启动");
                     self.$startLogs.info("已经有节点，不需要启动;");
-                    self.$router.push({ path: "home" });
+                    self.onlineTimer()
                 })
                 .catch(error => {
                     // console.log("本地没有节点，需要启动");
@@ -259,8 +262,30 @@ export default {
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     //进程守护
                     self.guardNode(ls, nodePath);
-                    self.$router.push({ path: "home" });
+                    self.onlineTimer();
+                    // self.$router.push({ path: "home" });
                 });
+        },
+        onlineTimer() {
+            self.timer = setTimeout(() => {
+                self.$czr.request
+                    .status()
+                    .then(res => {
+                        //清除定时器，
+                        clearTimeout(self.timer);
+                        self.timer = null;
+                        self.$startLogs.error( "Page Config : Online Success");
+                         self.$router.push({ path: "home" });
+                    })
+                    .catch(error => {
+                        self.onlineTimer();
+                        self.online = false;
+                        self.$startLogs.error(
+                            "Page Config : Online Error",
+                            error.message
+                        );
+                    });
+            }, continued);
         },
         guardNode(ls, nodePath) {
             self.$nodeLogs.info("守护进程开启", ls.pid);
