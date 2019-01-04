@@ -6,8 +6,8 @@
         "mac": {
           "x64": {
             "download": {
-              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain.zip",
-              "type": "zip",
+              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain.tar.gz",
+              "type": "tar",
               "bin": "canonchain"
             },
             "bin": "canonchain",
