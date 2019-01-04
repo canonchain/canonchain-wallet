@@ -73,10 +73,6 @@
                 </el-alert>
                 <template>
                     <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop @drop.prevent.stop="importKeystore" > {{$t('page_home.import_dia.placeholder_keystore')}} </div>
-                    <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
-                        <template slot="prepend">
-                            <i class="el-icon-document"></i> {{$t('page_home.import_dia.create_tag')}}</template>
-                    </el-input>
                 </template>
                 <div slot="footer">
                     <el-button @click="dialogSwitch.import = false">{{ $t('cancel') }}</el-button>
@@ -461,23 +457,6 @@ export default {
             });
         },
         importAccount() {
-            if (!this.importInfo.tag) {
-                this.importInfo.alert = {
-                    content: this.$t("page_home.import_dia.validate_tag"),
-                    type: "error"
-                };
-                return;
-            }
-            if (this.importInfo.tag.length > 8) {
-                this.importInfo.alert = {
-                    content: this.$t(
-                        "page_home.import_dia.validate_tag_length"
-                    ),
-                    type: "error"
-                };
-                return;
-            }
-
             let account = null;
             if (!this.importInfo.keystore) {
                 this.importInfo.alert = {
