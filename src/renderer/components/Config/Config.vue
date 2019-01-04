@@ -275,7 +275,6 @@ export default {
                         clearTimeout(self.timer);
                         self.timer = null;
                         self.$startLogs.error( "Page Config : Online Success");
-                        self.$startLogs.error(res);
                         self.$router.push({ path: "home" });
                     })
                     .catch(error => {

@@ -15,7 +15,8 @@ if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
 
-let mainWindow;// Preserve the global reference of a window object
+let mainWindow=null;// Preserve the global reference of a window object
+const gotTheLock = app.requestSingleInstanceLock()
 
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
@@ -23,9 +24,25 @@ const winURL = process.env.NODE_ENV === 'development'
 
 const winWidth = process.env.NODE_ENV === 'development' ? (815 + 580) : 815;
 
-app.on('ready', createWindow);// Called when Electron finishes, initializes and prepares to create a browser window. Some APIs can only be used after this event occurs.
-app.on('window-all-closed', windowAllClose);// Exit when all windows are closed.
-app.on('activate', activateFn);//On OS X, when you click the Dock icon and no other window is open, a window is usually recreated in the application.
+if (!gotTheLock) {
+  app.quit()
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, we should focus our window.
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) {
+        mainWindow.restore()
+      }
+      mainWindow.focus()
+    }
+  })
+
+  // Create myWindow, load the rest of the app, etc...
+  app.on('ready', createWindow);// Called when Electron finishes, initializes and prepares to create a browser window. Some APIs can only be used after this event occurs.
+  app.on('window-all-closed', windowAllClose);// Exit when all windows are closed.
+  app.on('activate', activateFn);//On OS X, when you click the Dock icon and no other window is open, a window is usually recreated in the application.
+}
+
 
 function createWindow() {
   // Create browser window
