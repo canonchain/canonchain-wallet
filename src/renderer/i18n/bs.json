@@ -192,7 +192,7 @@
             "no":"Preuzmite program za čvor, budite strpljivi",
             "already_downloaded":"Program čvora je preuzet i spreman za početak.",
             "ready_start":"Pripremite se za pokretanje čvora",
-            "enter_wallet":"Čvor je uspješno pokrenut i spreman za ulazak u novčanik"
+            "enter_wallet":"Čvor počinje otkrivanje, spreman za ulazak u novčanik"
         },
         "version_dialog":{
             "version_tit":"Upit za ažuriranje verzije",

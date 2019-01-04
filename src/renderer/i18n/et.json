@@ -192,7 +192,7 @@
             "no":"Allalaadimine sõlme programm, palun kannatlik",
             "already_downloaded":"Sõlme programm on alla laaditud ja käivitamiseks valmis.",
             "ready_start":"Valmistuge sõlme käivitamiseks",
-            "enter_wallet":"Sõlm on edukalt käivitunud ja valmis rahakoti sisenemiseks"
+            "enter_wallet":"Sõlm algab avastamiseks, mis on valmis rahakotti sisenemiseks"
         },
         "version_dialog":{
             "version_tit":"Versiooni värskenduse küsi",

@@ -64,7 +64,7 @@
             "select_placeholder":"Ndapota sarudza"
         },
         "confirm_dia": {
-            "title":"Ndapota chengetedza",
+            "title":"Ndapota fungidzira",
             "enter_passworld_tit":"Ndapota nyora password yako",
             "enter_passworld_place":"Ndapota nyora password yako"
         },
@@ -192,7 +192,7 @@
             "no":"Kuchengeta purogiramu yenhamba, ndapota ivai nemoyo murefu",
             "already_downloaded":"Purogiramu yechirungu yakaderedzwa uye yakagadzirira kutanga.",
             "ready_start":"Gadzirira kutanga node",
-            "enter_wallet":"Node yacho inotanga kubudirira uye yakagadzirira kupinda muhomwe"
+            "enter_wallet":"Node inotanga kuona, yakagadzirira kupinda muhomwe"
         },
         "version_dialog":{
             "version_tit":"Version update prompt",

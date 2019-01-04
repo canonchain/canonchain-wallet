@@ -192,7 +192,7 @@
             "no":"Elŝuta nodo programo, bonvolu pacienca",
             "already_downloaded":"La nodo programo estis elŝutita kaj preta por komenci.",
             "ready_start":"Preparu por komenci la nodo",
-            "enter_wallet":"La nodo sukcese komenciĝis kaj pretas eniri la monujon"
+            "enter_wallet":"Nodo komencas detekti, preta por eniri la monujon"
         },
         "version_dialog":{
             "version_tit":"Versio ĝisdatigilo",

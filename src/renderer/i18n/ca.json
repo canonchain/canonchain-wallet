@@ -192,7 +192,7 @@
             "no":"S'està baixant el programa de nodes, tingueu paciència",
             "already_downloaded":"S'ha baixat el programa del node i està llest per començar.",
             "ready_start":"Prepara't per iniciar el node",
-            "enter_wallet":"El node s'ha iniciat amb èxit i està preparat per entrar a la cartera"
+            "enter_wallet":"El node comença a detectar, llest per entrar a la cartera"
         },
         "version_dialog":{
             "version_tit":"Indicador d'actualització de la versió",

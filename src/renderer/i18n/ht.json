@@ -192,7 +192,7 @@
             "no":"Download pwogram ne, tanpri pran pasyans",
             "already_downloaded":"Pwogram nan ne te telechaje epi li pare yo kòmanse.",
             "ready_start":"Prepare pou kòmanse ne la",
-            "enter_wallet":"Nœud la siksè te kòmanse ak pare yo antre nan bous la"
+            "enter_wallet":"Node kòmanse deteksyon, pare yo antre nan bous la"
         },
         "version_dialog":{
             "version_tit":"Version aktyalizasyon rapid",

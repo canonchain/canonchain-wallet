@@ -192,7 +192,7 @@
             "no":"正在下载节点程序,请耐心等待",
             "already_downloaded":"节点程序已经下载好，准备启动",
             "ready_start":"准备启动节点",
-            "enter_wallet":"节点启动成功，准备进入钱包"
+            "enter_wallet":"节点启动检测，准备进入钱包"
         },
         "version_dialog":{
             "version_tit":"版本更新提示",

@@ -192,7 +192,7 @@
             "no":"Sťahovanie programu uzlov, prosím, buďte trpezliví",
             "already_downloaded":"Program uzla bol stiahnutý a pripravený na spustenie.",
             "ready_start":"Pripravte sa na spustenie uzla",
-            "enter_wallet":"Uzol bol úspešne spustený a pripravený na vstup do peňaženky"
+            "enter_wallet":"Uzol začne zisťovať, je pripravený vstúpiť do peňaženky"
         },
         "version_dialog":{
             "version_tit":"Príkaz na aktualizáciu verzie",

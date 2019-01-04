@@ -192,7 +192,7 @@
             "no":"Koperani pulogalamu ya ndondomeko, chonde khalani oleza mtima",
             "already_downloaded":"Pulogalamu ya ndondomeko yamasulidwa ndipo yatsala pang'ono kuyamba.",
             "ready_start":"Konzani kuyamba mfundo",
-            "enter_wallet":"Nodeyi imayambitsidwa bwino ndi yokonzeka kulowa mu chikwama"
+            "enter_wallet":"Node ikuyamba kudziwika, yokonzeka kulowa mu chikwama"
         },
         "version_dialog":{
             "version_tit":"Kusintha kwawamasinthidwe mwamsanga",

@@ -192,7 +192,7 @@
             "no":"Laai knoopprogram, wees asseblief geduldig",
             "already_downloaded":"Die knoopprogram is afgelaai en gereed om te begin.",
             "ready_start":"Berei voor om die node te begin",
-            "enter_wallet":"Die knoop is suksesvol begin en gereed om die beursie te betree"
+            "enter_wallet":"Node begin opsporing, gereed om die beursie te betree"
         },
         "version_dialog":{
             "version_tit":"Weergawe opdateringsprompt",

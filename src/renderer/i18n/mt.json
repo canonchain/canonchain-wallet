@@ -192,7 +192,7 @@
             "no":"Tniżżil il-programm node, jekk jogħġbok kun paċenz",
             "already_downloaded":"Il-programm node ġie mniżżel u lest biex jibda.",
             "ready_start":"Ipprepara biex tibda n-nodu",
-            "enter_wallet":"In-nodu huwa b'suċċess u lest biex jidħol fil-portafoll"
+            "enter_wallet":"Node jibda sejbien, lest biex jidħol fil-kartiera"
         },
         "version_dialog":{
             "version_tit":"Pront aġġornament tal-verżjoni",

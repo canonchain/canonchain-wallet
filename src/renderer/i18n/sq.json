@@ -192,7 +192,7 @@
             "no":"Shkarkimi i programit të nyjeve, ju lutemi të jeni të duruar",
             "already_downloaded":"Programi i nyjeve është shkarkuar dhe gati për të filluar.",
             "ready_start":"Përgatituni për të filluar nyjen",
-            "enter_wallet":"Nyja është nisur me sukses dhe gati për të hyrë në portofolin"
+            "enter_wallet":"Nyja fillon zbulimin, gati për të hyrë në portofolin"
         },
         "version_dialog":{
             "version_tit":"Përditësim i versionit të shpejtë",

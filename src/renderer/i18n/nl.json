@@ -192,7 +192,7 @@
             "no":"Knoopprogramma downloaden, wees geduldig",
             "already_downloaded":"Het knooppuntprogramma is gedownload en klaar om te starten.",
             "ready_start":"Bereid je voor om het knooppunt te starten",
-            "enter_wallet":"Het knooppunt is met succes gestart en klaar om de portefeuille te betreden"
+            "enter_wallet":"Knooppunt start detectie, klaar om de portefeuille te betreden"
         },
         "version_dialog":{
             "version_tit":"Update van de versieupdate",

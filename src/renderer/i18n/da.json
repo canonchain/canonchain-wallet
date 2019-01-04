@@ -192,7 +192,7 @@
             "no":"Downloading nodeprogram, vær så tålmodig",
             "already_downloaded":"Knudeprogrammet er downloadet og klar til at starte.",
             "ready_start":"Forbered dig på at starte noden",
-            "enter_wallet":"Knuden er startet og klar til at komme ind i tegnebogen"
+            "enter_wallet":"Node starter afsløring, klar til at komme ind i tegnebogen"
         },
         "version_dialog":{
             "version_tit":"Version opdateringsprompt",

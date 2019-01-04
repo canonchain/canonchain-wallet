@@ -43,7 +43,7 @@
             "no_address":"Fier jo adresadres yn",
             "valid_address":"It adres fan it kontakt is illegal",
             "validate_tag_length":"De namme fan de notysje namme kin net grutter wêze as 8 tekens.",
-            "contacts_quantity_error":"It oantal kontakten kin net mear wêze as 50",
+            "contacts_quantity_error":"It oantal kontakten kin net mear as 50",
             "exist":"It kontakt is al bestiet,"
         }
     },
@@ -192,7 +192,7 @@
             "no":"It programma fan it kodearjen fan it nodeljen, kinne geduld wêze",
             "already_downloaded":"It nodprogramma is ynladen en klear om te begjinnen.",
             "ready_start":"Meitsje om de knooppel te begjinnen",
-            "enter_wallet":"De knooppunt is mei súkses begon en klear om de wallet te ynfoljen"
+            "enter_wallet":"Knooppunt begjint te finkjen, klear om de wallet te hanneljen"
         },
         "version_dialog":{
             "version_tit":"Ferzje update prompt",

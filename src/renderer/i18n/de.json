@@ -192,7 +192,7 @@
             "no":"Das Knotenprogramm wird heruntergeladen, bitte haben Sie etwas Geduld",
             "already_downloaded":"Das Knotenprogramm wurde heruntergeladen und kann gestartet werden.",
             "ready_start":"Bereiten Sie sich vor, den Knoten zu starten",
-            "enter_wallet":"Der Knoten ist erfolgreich gestartet und bereit, die Brieftasche zu betreten"
+            "enter_wallet":"Knoten startet die Erkennung und ist bereit, die Brieftasche zu betreten"
         },
         "version_dialog":{
             "version_tit":"Versionsaktualisierungsaufforderung",

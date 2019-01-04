@@ -192,7 +192,7 @@
             "no":"Bernameya node daxistin, ji kerema xwe re bîhnfireh bikin",
             "already_downloaded":"Bernameya node daxuyanî û amade ye ku dest pê bikin.",
             "ready_start":"Preparing start to stop",
-            "enter_wallet":"Node bi serkeftî dest pê kir û amade ye ku li walletê bike"
+            "enter_wallet":"Node destnîşan dike, amadekarî ji bo walletê bike"
         },
         "version_dialog":{
             "version_tit":"Guhertoya Nûveçûna lezgîn",

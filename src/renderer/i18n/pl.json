@@ -192,11 +192,11 @@
             "no":"Pobieram program węzłowy, proszę o cierpliwość",
             "already_downloaded":"Program węzłowy został pobrany i gotowy do uruchomienia.",
             "ready_start":"Przygotuj się do uruchomienia węzła",
-            "enter_wallet":"Węzeł został pomyślnie uruchomiony i gotowy do wejścia do portfela"
+            "enter_wallet":"Węzeł rozpoczyna wykrywanie, gotowy do wejścia do portfela"
         },
         "version_dialog":{
-            "version_tit":"Monit aktualizacji wersji",
-            "download_wallet":"Przejdź na oficjalną stronę internetową, aby pobrać najnowszą wersję pieniędzy",
+            "version_tit":"szybka zmiana wersja",
+            "download_wallet":"Quguan sieci, aby pobrać najnowszą wersję Pieniądze",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

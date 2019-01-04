@@ -192,7 +192,7 @@
             "no":"Node proqramını yükləyin, səbr edin",
             "already_downloaded":"Node proqramı endirildi və başlamağa hazırdı.",
             "ready_start":"Düğümü başlamaq üçün hazırlayın",
-            "enter_wallet":"Node uğurla başlamış və cüzdana daxil etməyə hazırdır"
+            "enter_wallet":"Node aşkar etməyə başlayır, cüzdana daxil etməyə hazırdır"
         },
         "version_dialog":{
             "version_tit":"Version yeniləmə istemi",

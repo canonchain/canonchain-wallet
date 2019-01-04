@@ -192,7 +192,7 @@
             "no":"Downloading node program, please be patient",
             "already_downloaded":"The node program has been downloaded and ready to start.",
             "ready_start":"Prepare to start the node",
-            "enter_wallet":"The node is successfully started and ready to enter the wallet"
+            "enter_wallet":"Node starts detection, ready to enter the wallet"
         },
         "version_dialog":{
             "version_tit":"Version update prompt",

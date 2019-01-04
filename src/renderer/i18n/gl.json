@@ -192,7 +192,7 @@
             "no":"Descargando o programa de nodos, ten paciencia",
             "already_downloaded":"O programa do nodo foi descargado e listo para comezar.",
             "ready_start":"Prepárese para iniciar o nodo",
-            "enter_wallet":"O nodo comezou con éxito e listo para entrar na carteira"
+            "enter_wallet":"O nodo comeza a detección, listo para entrar na carteira"
         },
         "version_dialog":{
             "version_tit":"Solicitude de actualización da versión",

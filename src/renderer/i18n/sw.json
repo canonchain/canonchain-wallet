@@ -192,7 +192,7 @@
             "no":"Inapakua mpango wa nodi, tafadhali subira",
             "already_downloaded":"Programu ya node imepakuliwa na tayari kuanza.",
             "ready_start":"Jitayarishe kuanza node",
-            "enter_wallet":"Node imeanza vizuri na tayari kuingia kwenye mkoba"
+            "enter_wallet":"Node itaanza kugundua, tayari kuingia kwenye mkoba"
         },
         "version_dialog":{
             "version_tit":"Sasisho la toleo la haraka",

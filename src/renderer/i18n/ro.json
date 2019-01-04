@@ -192,7 +192,7 @@
             "no":"Descărcarea programului de noduri, vă rugăm să aveți răbdare",
             "already_downloaded":"Programul de noduri a fost descărcat și gata să înceapă.",
             "ready_start":"Pregătește-te pentru a porni nodul",
-            "enter_wallet":"Nodul a fost pornit cu succes și este gata să intre în portofel"
+            "enter_wallet":"Nodul începe detectarea, gata să intre în portofel"
         },
         "version_dialog":{
             "version_tit":"Versiunea de actualizare a promptului",

@@ -192,7 +192,7 @@
             "no":"Prògram nòta luchdaich sìos, bi euslainteach",
             "already_downloaded":"Chaidh am prògram nód a luchdachadh sìos agus deiseil airson tòiseachadh.",
             "ready_start":"Dèan ullachadh airson an nód a thòiseachadh",
-            "enter_wallet":"Tha an nòta air tòiseachadh gu soirbheachail agus deiseil gus a dhol a-steach don phasg"
+            "enter_wallet":"Tòisichidh nòdan, deiseil gus a dhol a-steach don bhileag"
         },
         "version_dialog":{
             "version_tit":"Ùrachadh tionndadh gu luath",

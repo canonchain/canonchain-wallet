@@ -192,7 +192,7 @@
             "no":"Mengunduh program nod, bersabarlah",
             "already_downloaded":"Program nod telah dimuat turun dan bersedia untuk bermula.",
             "ready_start":"Bersedia untuk memulakan nod",
-            "enter_wallet":"Node berjaya dimulakan dan bersedia untuk memasuki dompet"
+            "enter_wallet":"Node bermula pengesanan, bersedia untuk memasuki dompet"
         },
         "version_dialog":{
             "version_tit":"Promosi kemas kini versi",

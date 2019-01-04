@@ -192,7 +192,7 @@
             "no":"Scaricare il programma del nodo, sii paziente",
             "already_downloaded":"Il programma del nodo è stato scaricato e pronto per l'avvio.",
             "ready_start":"Prepararsi ad avviare il nodo",
-            "enter_wallet":"Il nodo è stato avviato correttamente e pronto per l'accesso al portafoglio"
+            "enter_wallet":"Il nodo inizia il rilevamento, pronto per entrare nel portafoglio"
         },
         "version_dialog":{
             "version_tit":"Richiesta di aggiornamento della versione",

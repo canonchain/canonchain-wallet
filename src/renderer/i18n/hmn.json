@@ -192,7 +192,7 @@
             "no":"Tawm ntawm qhov kev pab cuam, thov ua siab ntev",
             "already_downloaded":"Cov kev pab cuam ntawm node twb raug downloaded thiab npaj txhij pib.",
             "ready_start":"Npaj los pib qhov ntawm",
-            "enter_wallet":"Lub hauv paus yog pib pib thiab npaj kom nkag mus rau hauv lub hnab nyiaj"
+            "enter_wallet":"Pib pib, nrhiav kev nkag mus rau hauv lub hnab nyiaj"
         },
         "version_dialog":{
             "version_tit":"Version kho kom sai",

@@ -192,7 +192,7 @@
             "no":"Ngundhuh program simpul, please sabar",
             "already_downloaded":"Program simpul wis diundhuh lan siap diwiwiti.",
             "ready_start":"Siapake miwiti simpul kasebut",
-            "enter_wallet":"Simpul kasebut kasil diwiwiti lan siap ngetik dompet"
+            "enter_wallet":"Node wiwit deteksi, siap mlebu dompet"
         },
         "version_dialog":{
             "version_tit":"Ganti update versi",

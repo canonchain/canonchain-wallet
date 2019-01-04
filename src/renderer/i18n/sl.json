@@ -192,7 +192,7 @@
             "no":"Prenos programa vozlišča, bodite potrpežljivi",
             "already_downloaded":"Program vozlišča je bil prenesen in pripravljen za zagon.",
             "ready_start":"Pripravite se na zagon vozlišča",
-            "enter_wallet":"Vozlišče je uspešno zagnano in pripravljeno za vstop v denarnico"
+            "enter_wallet":"Vozlišče začne zaznavati in je pripravljeno za vstop v denarnico"
         },
         "version_dialog":{
             "version_tit":"Poziv za posodobitev različice",

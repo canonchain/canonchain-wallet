@@ -192,7 +192,7 @@
             "no":"Nedlasting av nodeprogram, vær så tålmodig",
             "already_downloaded":"Knuteprogrammet er lastet ned og klar til å starte.",
             "ready_start":"Forbered deg på å starte noden",
-            "enter_wallet":"Koden er vellykket startet og klar til å gå inn i lommeboken"
+            "enter_wallet":"Node starter deteksjon, klar til å gå inn i lommeboken"
         },
         "version_dialog":{
             "version_tit":"Versjonsoppdateringsprompt",

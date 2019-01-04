@@ -192,7 +192,7 @@
             "no":"Đang tải xuống chương trình nút, hãy kiên nhẫn",
             "already_downloaded":"Chương trình nút đã được tải xuống và sẵn sàng để bắt đầu.",
             "ready_start":"Chuẩn bị khởi động nút",
-            "enter_wallet":"Nút được khởi động thành công và sẵn sàng để nhập ví"
+            "enter_wallet":"Nút bắt đầu phát hiện, sẵn sàng để vào ví"
         },
         "version_dialog":{
             "version_tit":"Lời nhắc cập nhật phiên bản",

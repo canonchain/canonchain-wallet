@@ -192,7 +192,7 @@
             "no":"Nodoa programa deskargatzen, pazientzia izan",
             "already_downloaded":"Nodoaren programa deskargatu da eta hasierarako prest dago.",
             "ready_start":"Prestatu nodoa abiarazteko",
-            "enter_wallet":"Nodoa ongi hasi eta zorroan sartzeko prest dago"
+            "enter_wallet":"Nodoa detekzioa hasten da, zorroan sartzeko prest"
         },
         "version_dialog":{
             "version_tit":"Eguneratzeen bertsioaren jarraipena",

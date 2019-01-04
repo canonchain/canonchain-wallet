@@ -192,7 +192,7 @@
             "no":"Tugun dasturini yuklab oling, iltimos, sabr qiling",
             "already_downloaded":"Tugunli dastur yuklab olingan va ishga tushirishga tayyor.",
             "ready_start":"Tugunni boshlashga tayyorgarlik ko'ring",
-            "enter_wallet":"Tugun muvaffaqiyatli boshlandi va hamyonni kiritish uchun tayyor"
+            "enter_wallet":"Nod aniqlashni boshlaydi, hamyonni kiritish uchun tayyor"
         },
         "version_dialog":{
             "version_tit":"Versiya yangilanish so'rovi",

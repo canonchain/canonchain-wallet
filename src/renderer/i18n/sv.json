@@ -192,7 +192,7 @@
             "no":"Nedladdning av nodprogram, var patient",
             "already_downloaded":"Nodprogrammet har laddats ner och redo att starta.",
             "ready_start":"Förbered dig för att starta noden",
-            "enter_wallet":"Noden har startats framgångsrikt och redo att komma in i plånboken"
+            "enter_wallet":"Node startar upptäckt, redo att gå in i plånboken"
         },
         "version_dialog":{
             "version_tit":"Versionsuppdateringsprompten",

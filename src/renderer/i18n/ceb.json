@@ -192,7 +192,7 @@
             "no":"Pag-download sa node nga programa, palihug pagpailub",
             "already_downloaded":"Ang node nga programa na-download ug andam nga magsugod.",
             "ready_start":"Pag-andam sa pagsugod sa node",
-            "enter_wallet":"Ang node malampuson nga nagsugod ug andam nga mosulod sa pitaka"
+            "enter_wallet":"Ang pagsugod sa pagsugod sa pagsugod, nga andam nga mosulod sa pitaka"
         },
         "version_dialog":{
             "version_tit":"Ang pag-update sa update prompt",

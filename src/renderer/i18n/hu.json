@@ -192,7 +192,7 @@
             "no":"Csomópont-program letöltése, legyen türelmes",
             "already_downloaded":"A csomópont programot letöltötték és készen áll az indításra.",
             "ready_start":"Készítse elő a csomópont indítását",
-            "enter_wallet":"A csomópont sikeresen elindult, és készen áll a pénztárca belépésére"
+            "enter_wallet":"A csomópont elkezdi észlelni, készen áll a mobiltárca belépésére"
         },
         "version_dialog":{
             "version_tit":"Verziófrissítés",

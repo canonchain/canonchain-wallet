@@ -192,7 +192,7 @@
             "no":"Nagda-download ng programa ng node, mangyaring maging matiyaga",
             "already_downloaded":"Na-download na ang program ng node at handa nang magsimula.",
             "ready_start":"Maghanda upang simulan ang node",
-            "enter_wallet":"Matagumpay na nagsimula ang node at handa nang pumasok sa wallet"
+            "enter_wallet":"Nagsisimula ang pag-detect ng node, handa nang pumasok sa wallet"
         },
         "version_dialog":{
             "version_tit":"Prompt na i-update ang bersyon",

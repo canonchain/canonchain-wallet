@@ -192,7 +192,7 @@
             "no":"Ukulanda uhlelo lwe-node, sicela ubekezele",
             "already_downloaded":"Uhlelo lwe-noode lulayishiwe futhi lungele ukuqala.",
             "ready_start":"Lungiselela ukuqala i-node",
-            "enter_wallet":"I-node iqalwe ngempumelelo futhi ilungele ukungena esikhwameni"
+            "enter_wallet":"I-noode iqala ukuthola, ilungele ukungena esikhwameni"
         },
         "version_dialog":{
             "version_tit":"Ukuvuselelwa kokubuyekeza kwe-version",

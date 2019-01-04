@@ -192,7 +192,7 @@
             "no":"node ကိုဒေါင်းလုဒ်လုပ်ခြင်း, စိတ်ရှည်ကျေးဇူးပြုပြီး",
             "already_downloaded":"node program ကို download လုပ်များနှင့်စတင်ရန်အဆင်သင့်မရထားသည်",
             "ready_start":"node ကိုစတင်ရန်အဆင်သင့်ဖြစ်နေ",
-            "enter_wallet":"node, အောင်မြင်စွာပိုက်ဆံအိတ်ထည့်သွင်းဖို့အဆင်သင့်စတင်သည်"
+            "enter_wallet":"အဆိုပါပိုက်ဆံအိတ်ထည့်သွင်းဖို့အဆင်သင့်, node ကိုထောက်လှမ်း Start"
         },
         "version_dialog":{
             "version_tit":"ဗားရှင်း update ကို prompt ကို",

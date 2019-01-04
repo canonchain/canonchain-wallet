@@ -192,7 +192,7 @@
             "no":"Raiso ny programa nodia, ataovy marary",
             "already_downloaded":"Ny tetikasa nodidiana dia navoaka ary vonona ny hanomboka.",
             "ready_start":"Manomàna hanombohana ny kodiarana",
-            "enter_wallet":"Ny fantsom-pahombiazana dia efa manomboka ary vonona ny hiditra ny kitapo"
+            "enter_wallet":"Ny fanombohana ny fanandramana dia manomboka mahita azy, vonona ny hiditra ny kitapo"
         },
         "version_dialog":{
             "version_tit":"Version prompt",

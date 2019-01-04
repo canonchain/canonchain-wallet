@@ -192,7 +192,7 @@
             "no":"Mengunduh program simpul, harap bersabar",
             "already_downloaded":"Program simpul telah diunduh dan siap untuk memulai.",
             "ready_start":"Bersiaplah untuk memulai node",
-            "enter_wallet":"Node berhasil dimulai dan siap untuk memasuki dompet"
+            "enter_wallet":"Node mulai deteksi, siap memasuki dompet"
         },
         "version_dialog":{
             "version_tit":"Versi pembaruan cepat",

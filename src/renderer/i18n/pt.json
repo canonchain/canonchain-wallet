@@ -192,7 +192,7 @@
             "no":"Baixando programa de nó, por favor seja paciente",
             "already_downloaded":"O programa do nó foi baixado e pronto para iniciar.",
             "ready_start":"Prepare-se para iniciar o nó",
-            "enter_wallet":"O nó foi iniciado com sucesso e pronto para entrar na carteira"
+            "enter_wallet":"Node inicia a detecção, pronto para entrar na carteira"
         },
         "version_dialog":{
             "version_tit":"Prompt de atualização de versão",

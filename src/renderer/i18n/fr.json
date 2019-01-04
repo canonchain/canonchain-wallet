@@ -192,7 +192,7 @@
             "no":"Programme de téléchargement, veuillez patienter",
             "already_downloaded":"Le programme de nœud a été téléchargé et prêt à démarrer.",
             "ready_start":"Préparez-vous à démarrer le noeud",
-            "enter_wallet":"Le nœud est démarré avec succès et prêt à entrer dans le portefeuille"
+            "enter_wallet":"Le nœud commence la détection, prêt à entrer dans le portefeuille"
         },
         "version_dialog":{
             "version_tit":"Mise à jour de la version",

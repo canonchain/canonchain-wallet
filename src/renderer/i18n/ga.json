@@ -192,7 +192,7 @@
             "no":"Clár nód a íoslódáil, bíodh othar ort",
             "already_downloaded":"Tá an clár nód á íoslódáil agus réidh le tosú.",
             "ready_start":"Ullmhaigh chun an nód a thosú",
-            "enter_wallet":"Tá an nód ar siúl go rathúil agus réidh chun dul isteach sa sparán"
+            "enter_wallet":"Tosaíonn an nód a bhrath, réidh le dul isteach sa sparán"
         },
         "version_dialog":{
             "version_tit":"Nuashonrú ar an leagan go pras",

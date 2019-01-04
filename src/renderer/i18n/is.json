@@ -192,7 +192,7 @@
             "no":"Hlaða niður hnút forrit, vinsamlegast vertu þolinmóð",
             "already_downloaded":"Hnútaforritið hefur verið hlaðið niður og tilbúið til að byrja.",
             "ready_start":"Undirbúið að hefja hnútinn",
-            "enter_wallet":"Hnúturinn tókst að byrja og tilbúinn til að koma inn í veskið"
+            "enter_wallet":"Hnútur byrjar uppgötvun, tilbúinn til að slá inn veskið"
         },
         "version_dialog":{
             "version_tit":"Útgáfa uppfærsla hvetja",

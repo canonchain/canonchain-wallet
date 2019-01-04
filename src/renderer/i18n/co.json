@@ -192,7 +192,7 @@
             "no":"Scaricate u prugrammu in node, per esse pazienti",
             "already_downloaded":"U schedariu di u node hè stata scaricata è pronta per cumincià.",
             "ready_start":"Preparate per inizià u node",
-            "enter_wallet":"U node hè riesce bè è pronto per entre in a billetula"
+            "enter_wallet":"U node detalla a deteccion, pronta per entre in a billetula"
         },
         "version_dialog":{
             "version_tit":"A pàgina di aghjurnamentu di versione",

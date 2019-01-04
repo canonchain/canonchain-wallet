@@ -192,7 +192,7 @@
             "no":"Ukukhuphela inkqubo ye-node, nceda ube nomonde",
             "already_downloaded":"Inkqubo ye-node ikhutshwe kwaye ikulungele ukuqala.",
             "ready_start":"Lungiselela ukuqala le node",
-            "enter_wallet":"I-node iqalwe ngempumelelo kwaye ilungele ukungena esikhwameni"
+            "enter_wallet":"I-Node iqalisa ukufumana, ilungele ukungena esikhwameni"
         },
         "version_dialog":{
             "version_tit":"Ukuhlaziywa kwesiqendu",

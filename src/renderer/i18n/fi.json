@@ -192,7 +192,7 @@
             "no":"Solmuohjelman lataaminen, ole kärsivällinen",
             "already_downloaded":"Solmuohjelma on ladattu ja valmis käynnistymään.",
             "ready_start":"Valmistaudu solmun käynnistämiseen",
-            "enter_wallet":"Solmu käynnistyy onnistuneesti ja on valmis syöttämään lompakon"
+            "enter_wallet":"Solmu alkaa havaita, valmiina syöttämään lompakon"
         },
         "version_dialog":{
             "version_tit":"Versiopäivityskehote",

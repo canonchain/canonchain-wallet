@@ -192,7 +192,7 @@
             "no":"Lejupielādējiet mezglu programmu, lūdzu, esiet pacietīgs",
             "already_downloaded":"Mezgla programma ir lejupielādēta un gatava sākt.",
             "ready_start":"Sagatavojiet mezglu",
-            "enter_wallet":"Mezgls ir veiksmīgi startēts un gatavs ievadīt seifu"
+            "enter_wallet":"Mezgls sāk atklāt, gatavs ievadīt seifu"
         },
         "version_dialog":{
             "version_tit":"Versijas atjaunināšanas uzvedne",
