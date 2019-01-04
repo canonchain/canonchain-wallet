@@ -53,15 +53,6 @@ function createWindow() {
   createMenu()
 }
 // 只开一个实例
-const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
-  if (mainWindow) {
-    if (mainWindow.isMinimized()) mainWindow.restore()
-    mainWindow.focus()
-  }
-})
-if (shouldQuit) {
-  app.quit()
-}
 // 只开一个实例
 
 function windowAllClose() {
