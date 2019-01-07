@@ -48,8 +48,8 @@
         }
     },
     "page_transfer": {
-        "from_address":"Sending party",
-        "to_address":"Beneficiary",
+        "from_address":"send-account",
+        "to_address":"send-account",
         "amount":"Amount",
         "gas":"Gas",
         "send_all":"Send all",
@@ -99,8 +99,8 @@
             "tit":"Trading Information",
             "block_hash":"Transaction number",
             "status":"status",
-            "from":"Sending party",
-            "to":"Beneficiary",
+            "from":"send-account",
+            "to":"send-account",
             "amount":"Amount",
             "data":"data",
             "send_time":"Sending time",

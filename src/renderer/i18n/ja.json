@@ -10,7 +10,7 @@
     "model_header": {
         "home":"ホーム",
         "transfer":"転送する",
-        "contacts":"お問い合わせ",
+        "contacts":"連絡先",
         "setting":"設定",
         "total":"合計",
         "testnet":"テストネットワーク",
@@ -24,11 +24,11 @@
         "version_number":"財布バージョン"
     },
     "page_contacts": {
-        "tit":"お問い合わせ",
+        "tit":"連絡先",
         "add_dialog":"新しい連絡先",
         "add_cont": {
             "tit":"新しい連絡先",
-            "tag":"お問い合わせ",
+            "tag":"連絡先",
             "address":"アカウントアドレス",
             "tag_placeholder":"連絡先の名前を入力してください",
             "address_placeholder":"連絡先のアカウントアドレスを入力してください",
