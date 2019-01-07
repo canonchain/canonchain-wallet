@@ -100,7 +100,7 @@ export default {
         },
 
         addContact() {
-            if(self.database.length>=50){
+            if((!!self.database) && (self.database.length>=50)){
                 self.$message.error(self.$t("page_contacts.msg_info.contacts_quantity_error"));
                 return;
             }
