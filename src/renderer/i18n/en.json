@@ -49,7 +49,7 @@
     },
     "page_transfer": {
         "from_address":"send-account",
-        "to_address":"send-account",
+        "to_address":"receive-account",
         "amount":"Amount",
         "gas":"Gas",
         "send_all":"Send all",
@@ -100,7 +100,7 @@
             "block_hash":"Transaction number",
             "status":"status",
             "from":"send-account",
-            "to":"send-account",
+            "to":"receive-account",
             "amount":"Amount",
             "data":"data",
             "send_time":"Sending time",
