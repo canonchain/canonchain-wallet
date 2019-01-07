@@ -6,9 +6,9 @@
         "mac": {
           "x64": {
             "download": {
-              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain-lastest.tar.gz",
+              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain.tar.gz",
               "type": "tar",
-              "bin": "canonchain-darwin-amd64-0.9.7/canonchain" 
+              "bin": "canonchain"
             },
             "bin": "canonchain",
             "commands": {
