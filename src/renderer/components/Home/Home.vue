@@ -351,7 +351,7 @@ export default {
                 self.createInfo.step = 1;
             }else{
                 self.$walletLogs.error( "Account Create Error");
-                self.$message.error("出错啦，建议重启钱包后再次操作");
+                self.$message.error("Account Create Error");
             }
         },
         downloadKeystore(accVal) {
