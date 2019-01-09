@@ -73,6 +73,11 @@
                 </el-alert>
                 <template>
                     <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop @drop.prevent.stop="importKeystore" > {{$t('page_home.import_dia.placeholder_keystore')}} </div>
+                    <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
+                        <template slot="prepend">
+                            <i class="el-icon-document"></i> {{$t('page_home.import_dia.create_tag')}}</template>
+                    </el-input>
+                    
                 </template>
                 <div slot="footer">
                     <el-button @click="dialogSwitch.import = false">{{ $t('cancel') }}</el-button>
@@ -91,14 +96,10 @@
                 <p class="remove-acc">
                     {{this.removeInfo.address}}
                 </p>
-                <el-input v-model="removeInfo.pwd" :placeholder="$t('page_home.remove_dia.placeholder_pwd')" type="password">
-                    <template slot="prepend">
-                        <i class="el-icon-edit"></i> {{$t('page_home.remove_dia.input_pwd')}}</template>
-                </el-input>
             </span>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogSwitch.remove = false">{{ $t('cancel') }}</el-button>
-                <el-button type="danger" @click="removeAccountFn(removeInfo.address,removeInfo.pwd)">{{ $t('page_home.remove_dia.remove_confrim') }}</el-button>
+                <el-button type="danger" @click="removeAccountFn()">{{ $t('page_home.remove_dia.remove_confrim') }}</el-button>
             </span>
         </el-dialog>
 
@@ -109,11 +110,15 @@
 <script>
 const fs = require("fs");
 import { setInterval, clearInterval, clearTimeout, setTimeout } from "timers";
+import { sep } from 'path';
+import { constants } from 'http2';
 const { spawn, spawnSync } = require("child_process");
+const {ipcRenderer} = require('electron')
+
 let self = null;
-let getAccountTimer = null;
+let getBalancesTimer = null;
+let aryForBalans = [];
 let accountErrorTimer = null;
-let interVal = 500;
 let updataBlockTimer={
     start:null,
     error:null
@@ -182,8 +187,8 @@ export default {
     },
     mounted() {
         self.$walletLogs.info("HOME:页面渲染成功");
-        if (!getAccountTimer) {
-            self.runAccountsTimer();
+        if (!getBalancesTimer) {
+            self.runBalancesTimer();
             self.$walletLogs.info("HOME:需要新建 Account 定时器");
         } else {
             self.$walletLogs.info("HOME:Account定时器已经存在，无需新建");
@@ -216,7 +221,7 @@ export default {
                 error: "",
 
                 address: "",
-                keystore: null
+                keystore: ""
             };
         },
         initImportInfo() {
@@ -264,6 +269,12 @@ export default {
             }
 
             this.initDatabase();
+        },
+        pushKeystore(keystore){
+            self.$db
+                .get("accounts_keystore")
+                .push(keystore)
+                .write();
         },
 
         // Create Account Start
@@ -320,76 +331,40 @@ export default {
                 );
                 return;
             }
-            self.$czr.request
-                .accountCreate(self.createInfo.pwd)
-                .then(data => {
-                    if(data.error){
-                        self.$message.error("出错啦 : 可能是非法的密码格式");
-                        return;
-                    }
-                    self.createInfo.address = data.account;
-                    let params = {
-                        address: data.account,
-                        tag:
-                            self.createInfo.tag ||
-                            self.$t("page_home.acc") +
-                                (self.database.length + 1),
-                        balance: 0,
-                        send_list: []
-                    };
 
-                    self.initAccount(params);
-                    self.createInfo.step = 1;
-                })
-                .catch(error => {
-                    self.$walletLogs.error(
-                        "Account Create Error",
-                        error.message
-                    );
-                    self.$message.error("出错啦，建议重启钱包后再次操作");
-                });
+            const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
+            self.createInfo.pwd = "";//初始化密码
+            if(accountResult.account){
+                self.createInfo.keystore = JSON.stringify(accountResult);
+                self.createInfo.address = accountResult.account;
+                let params = {
+                    address: accountResult.account,
+                    tag:
+                        self.createInfo.tag ||
+                        self.$t("page_home.acc") +
+                            (self.database.length + 1),
+                    balance: 0,
+                    send_list: []
+                }; 
+                self.initAccount(params);
+                self.pushKeystore(accountResult);
+                self.createInfo.step = 1;
+            }else{
+                self.$walletLogs.error( "Account Create Error");
+                self.$message.error("Account Create Error");
+            }
         },
         downloadKeystore(accVal) {
-            self.$czr.request
-                .accountExport(accVal)
-                .then(data => {
-                    // return data.json;
-                    let link = document.createElement("a");
-                    link.download = accVal+'.json';
-                    link.style.display = "none";
+            let link = document.createElement("a");
+            link.download = accVal+'.json';
+            link.style.display = "none";
 
-                    let blob = new Blob([data.json]);
-                    link.href = URL.createObjectURL(blob);
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    self.dialogSwitch.create = false;
-                })
-                .catch(error => {
-                    self.$walletLogs.error(
-                        "Account Export Error",
-                        error.message
-                    );
-                    self.$message.error("出错啦，建议重启钱包后再次操作");
-                });
-        },
-        // getNowTime() {
-        //     let date = new Date();
-        //     let addZero = this.addZero;
-        //     let LocalTime =
-        //         date.getFullYear() +
-        //         "-" +
-        //         addZero(date.getMonth() + 1) +
-        //         "-" +
-        //         addZero(date.getDate()) +
-        //         "-" +
-        //         addZero(date.getHours()) +
-        //         addZero(date.getMinutes()) +
-        //         addZero(date.getSeconds());
-        //     return LocalTime;
-        // },
-        addZero(val) {
-            return val < 10 ? "0" + val : val;
+            let blob = new Blob([self.createInfo.keystore]);
+            link.href = URL.createObjectURL(blob);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            self.dialogSwitch.create = false;
         },
         // Create Account End
 
@@ -457,7 +432,24 @@ export default {
             });
         },
         importAccount() {
+            if (!this.importInfo.tag) {
+                this.importInfo.alert = {
+                    content: this.$t("page_home.import_dia.validate_tag"),
+                    type: "error"
+                };
+                return;
+            }
+            if (this.importInfo.tag.length > 8) {
+                this.importInfo.alert = {
+                    content: this.$t(
+                        "page_home.import_dia.validate_tag_length"
+                    ),
+                    type: "error"
+                };
+                return;
+            }
             let account = null;
+            let importObj =  JSON.parse(self.importInfo.keystore);
             if (!this.importInfo.keystore) {
                 this.importInfo.alert = {
                     content: this.$t(
@@ -467,34 +459,25 @@ export default {
                 };
                 return;
             }
-
-            self.$czr.request
-                .accountImport(self.importInfo.keystore)
-                .then(data => {
-                    if (data.success == "1") {
-                        self.$message.success(
-                            self.$t(
-                                "page_home.import_dia.imported_account_success"
-                            )
-                        );
-                        self.initDatabase();
-                        self.importInfo.address = data.account;
-                        self.dialogSwitch.import = false;
-                    } else if (data.success == "0") {
-                        self.$message.error(
-                            self.$t(
-                                "page_home.import_dia.validate_error_keystore"
-                            )
-                        );
-                    }
-                })
-                .catch(error => {
-                    self.$walletLogs.error(
-                        "Account Import Error",
-                        error.message
-                    );
-                    self.$message.error("出错啦，可能是不正确的钱包文件，请检查后再次操作");
-                });
+            //TODO 导入账户备注
+            let params = {
+                    address: importObj.account,
+                    tag:
+                        self.importInfo.tag ||
+                        self.$t("page_home.acc") +
+                            (self.database.length + 1),
+                    balance: 0,
+                    send_list: []
+                }; 
+            self.initAccount(params);
+            self.pushKeystore(JSON.parse(self.importInfo.keystore));
+            self.dialogSwitch.import = false;
+            self.$message.success(
+                self.$t(
+                    "page_home.import_dia.imported_account_success"
+                )
+            );
+            self.initDatabase();
         },
         //Import End
 
@@ -502,56 +485,51 @@ export default {
         showRemoveDia(currentAcc) {
             this.removeInfo = {
                 address: currentAcc,
-                pwd: "",
                 alert: ""
             };
             this.dialogSwitch.remove = true;
         },
         removeAccountFn() {
-            if (!this.removeInfo.pwd) {
-                this.removeInfo.alert = {
-                    content: this.$t("page_home.remove_dia.validate_password"),
-                    type: "error"
-                };
-                return;
+            //判断keystore是否在本地，如果在本地，删除本地账号系统；否则请求节点删除
+            let isKeystoreAccount = this.$db
+                .get("accounts_keystore")
+                .find({ account: self.removeInfo.address })
+                .value();
+            if (isKeystoreAccount) {
+                //删除本地账户
+                self.removeSuccess();
+            }else{
+                self.$message.error("不存在账户："+self.removeInfo.address);
             }
-            self.$czr.request
-                .accountRemove(self.removeInfo.address, self.removeInfo.pwd)
-                .then(data => {
-                    // return data;
-                    if (data.success == "1") {
-                        self.$db
-                            .get("czr_accounts")
-                            .remove({ address: self.removeInfo.address })
-                            .write();
-                        self.$message.success(
-                            self.$t("page_home.remove_dia.remove_success")
-                        );
-                        self.initDatabase();
-                        self.dialogSwitch.remove = false;
-                    } else {
-                        self.$message.error(self.$t(data.error));
-                    }
-                })
-                .catch(error => {
-                    self.$walletLogs.error(
-                        "Account Remove Error",
-                        error.message
-                    );
-                    self.$message.error("出错啦，建议重启钱包后再次操作");
-                });
+        },
+        removeSuccess(){
+            self.$db
+                .get("czr_accounts")
+                .remove({ address: self.removeInfo.address })
+                .write();
+            self.$db
+                .get("accounts_keystore")
+                .remove({ account: self.removeInfo.address })
+                .write();
+            self.$message.success( self.$t("page_home.remove_dia.remove_success"));
+            self.initDatabase();
+            self.dialogSwitch.remove = false;
         },
         // Remove End
 
-        //get Account start
-        runAccountsTimer() {
-            getAccountTimer = setTimeout(() => {
-                self.getAccounts();
-            }, interVal || 5000);
+        //get Balcances start
+        runBalancesTimer() {
+            aryForBalans =[];
+            getBalancesTimer = setTimeout(() => {
+                self.database.forEach(item =>{
+                    aryForBalans.push(item.address)
+                })
+                self.getAccountsBalances(aryForBalans);
+            }, 5000);
         },
-        getAccountsBalances(accountAry) {
+        getAccountsBalances(aryForBalans) {
             self.$czr.request
-                .accountsBalances(accountAry)
+                .accountsBalances(aryForBalans)
                 .then(data => {
                     return data.balances;
                 })
@@ -569,93 +547,10 @@ export default {
                             .assign({ balance: parseInt(data[acc]["balance"]) })
                             .write();
                     }
-                    self.runAccountsTimer();
+                    self.runBalancesTimer();
                 });
         },
-        getAccounts() {
-            self.$czr.request
-                .accountList()
-                .then(data => {
-                    self.$walletLogs.info("收到accountList结果了");
-                    return data.accounts;
-                })
-                .catch(error => {
-                    self.$walletLogs.error("Account List Error", error.message);
-                    accountErrorTimer = setTimeout(()=>{
-                        self.runAccountsTimer();
-                    },10)
-                })
-                .then(data => {
-                    if(data ==undefined){
-                        self.fullscreenLoading = true;
-                        return;
-                    }else{
-                        // loading 结束
-                        if (interVal) {
-                            interVal = 0;
-                        }
-                        self.fullscreenLoading = false;
-                    }
-                    if (data=='') {
-                        data = [];
-                        self.$db
-                            .read()
-                            .set("czr_accounts", [])
-                            .write();
-                        self.runAccountsTimer();
-                        return
-                    }
-                    //先把本地数据库存在，但是 data 里不存在的账户 删除
-                    let database = self.$db.get("czr_accounts").value();
-                    let databaseAry = [];
-                    let localAcc;
-                    for (let i = 0; i < database.length; i++) {
-                        localAcc = database[i];
-                        if (data.indexOf(localAcc.address) < 0) {
-                            //不存在
-                            self.$db
-                                .get("czr_accounts")
-                                .remove({ address: localAcc.address })
-                                .write();
-                            i--;
-                        } else {
-                            databaseAry.push(localAcc.address);
-                        }
-                    }
-
-                    self.getAccountsBalances(data);
-                    //获取余额
-                    let flagLeng = databaseAry.length;
-                    data.forEach((reqAry, index) => {
-                        if (databaseAry.indexOf(reqAry) < 0) {
-                            //数据库不存 在
-                            let params = {
-                                address: reqAry,
-                                tag: "账号-" + ++flagLeng,
-                                balance: 0,
-                                send_list: []
-                            };
-                            self.$db
-                                .get("czr_accounts")
-                                .push(params)
-                                .write();
-                            //轮询节点下的账户，并写入send_list的对应key
-                            if (
-                                !self.$db
-                                    .read()
-                                    .has("send_list."+reqAry)
-                                    .value()
-                            ) {
-                                self.$db
-                                    .read()
-                                    .set("send_list."+reqAry, [])
-                                    .write();
-                            }
-                        }
-                    });
-                });
-        },
-        //get Account End
+        //get Balcances end
 
         // Update send block start
         runUpdateBlocksTimer(){
@@ -671,6 +566,10 @@ export default {
             updataBlockData.targetAry=[];
             for(let key in updataBlockData.sourcesObj){
                 curentAry = curentAry.concat(updataBlockData.sourcesObj[key]);
+            }
+            if(curentAry.length<1){
+                self.runUpdateBlocksTimer();
+                return;
             }
             curentAry.forEach(ele=>{
                 if(ele.is_stable==="0"){
