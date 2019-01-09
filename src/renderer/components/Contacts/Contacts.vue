@@ -126,6 +126,7 @@ export default {
             self.$czr.request
                 .accountValidate(self.createInfo.address)
                 .then(data => {
+                    console.log(data);
                     return data.valid;
                 })
                 .then(data => {
@@ -147,12 +148,12 @@ export default {
                                 .write();
                         }
                         self.initAddContact(tempCon);
-                    } else if (data == "0") {
+                    } else {
                         self.$message.error(
                             self.$t("page_contacts.msg_info.valid_address")
                         );
                     }
-                });
+                })
         },
 
         initAddContact: params => {
