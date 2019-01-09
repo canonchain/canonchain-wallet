@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, dialog } from 'electron'
+import { app, BrowserWindow, Menu, dialog ,ipcMain } from 'electron'
 // import { app, BrowserWindow, Tray, Menu, Notification, clipboard, ipcMain, globalShortcut, dialog } from 'electron'
 // const ClientBinaryManager = require('../../modules/clientBinaryManager');
 
@@ -6,6 +6,19 @@ let menu;
 // const path          = require('path');
 // const url           = require('url');
 
+// czr账号
+const Czr = require("czr");
+const czr = new Czr();
+ipcMain.on('sync', (event, arg) => {
+  if(typeof arg ==='string'){
+    czr.accounts.create(arg).then(data=>{
+      event.returnValue = data
+    })
+  }else{
+      event.returnValue = 'Need string type'
+  }
+})
+// czr账号
 
 /**
  * Set `__static` path to static files in production

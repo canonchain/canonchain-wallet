@@ -110,6 +110,13 @@
 const fs = require("fs");
 import { setInterval, clearInterval, clearTimeout, setTimeout } from "timers";
 const { spawn, spawnSync } = require("child_process");
+
+const {ipcRenderer} = require('electron')
+const syncResult = ipcRenderer.sendSync('sync', "123456");
+console.log("Home")
+console.log(syncResult) // prints "pong"
+console.log(syncResult.account);
+
 let self = null;
 let getAccountTimer = null;
 let accountErrorTimer = null;
