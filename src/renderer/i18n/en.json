@@ -140,6 +140,7 @@
             "validate_re_password":"Please enter the password you set again",
             "validate_strong_password":"Please enter a password of at least 8 digits",
             "validate_long_password":"Password cannot exceed 100 digits in length",
+            "validate_type_password":"Invalid password! A valid password must contain characters from letters (a-Z, A-Z), digits (0-9) and special characters (!@#$%^&*).",
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Created successfully",
@@ -170,7 +171,7 @@
             "backup":"Please pay attention to the backup of this account to avoid property damage.",
             "input_pwd":"password",
             "placeholder_pwd":"Please enter the password for this account",
-            "validate_password":"Please enter the password for the account",
+            "validate_password":"The password you entered is wrong",
             "remove_success":"Successfully removed"
         }
     },

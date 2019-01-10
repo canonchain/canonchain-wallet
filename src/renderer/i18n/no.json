@@ -140,6 +140,7 @@
             "validate_re_password":"Vennligst skriv inn passordet du angir igjen",
             "validate_strong_password":"Vennligst oppgi et passord med minst 8 sifre",
             "validate_long_password":"Passordet kan ikke overstige 100 siffer i lengde",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inkonsistent passord innført to ganger",
 
             "create_success":"Opprettet med hell",
@@ -170,7 +171,7 @@
             "backup":"Vær oppmerksom på sikkerhetskopien av denne kontoen for å unngå skade på eiendom.",
             "input_pwd":"passord",
             "placeholder_pwd":"Vennligst skriv inn passordet for denne kontoen",
-            "validate_password":"Vennligst skriv inn passordet for kontoen",
+            "validate_password":"Passordet du skrev inn er feil",
             "remove_success":"Ble fjernet"
         }
     },

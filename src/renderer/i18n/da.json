@@ -140,6 +140,7 @@
             "validate_re_password":"Indtast venligst den adgangskode, du har angivet igen",
             "validate_strong_password":"Indtast venligst et kodeord på mindst 8 cifre",
             "validate_long_password":"Adgangskoden må ikke overstige 100 cifre i længden",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inkonsekvent adgangskode indtastet to gange",
 
             "create_success":"Oprettet succesfuldt",
@@ -170,7 +171,7 @@
             "backup":"Vær opmærksom på backup af denne konto for at undgå skade på ejendommen.",
             "input_pwd":"adgangskode",
             "placeholder_pwd":"Indtast venligst adgangskoden til denne konto",
-            "validate_password":"Indtast venligst adgangskoden til kontoen",
+            "validate_password":"Den indtastede adgangskode er forkert",
             "remove_success":"Fjernet succesfuldt"
         }
     },

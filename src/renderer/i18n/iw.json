@@ -140,6 +140,7 @@
             "validate_re_password":"הזן את הסיסמה שהגדרת שוב",
             "validate_strong_password":"הזן סיסמה של 8 ספרות לפחות",
             "validate_long_password":"הסיסמה לא יכולה לעלות על 100 ספרות באורך",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"סיסמא לא עקבית נכנסה פעמיים",
 
             "create_success":"נוצר בהצלחה",
@@ -170,7 +171,7 @@
             "backup":"אנא שים לב לגיבוי של חשבון זה כדי למנוע נזק לרכוש.",
             "input_pwd":"סיסמה",
             "placeholder_pwd":"הזן את הסיסמה עבור חשבון זה",
-            "validate_password":"הזן את הסיסמה עבור החשבון",
+            "validate_password":"הסיסמה שהזנת שגויה",
             "remove_success":"הוסר בהצלחה"
         }
     },

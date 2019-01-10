@@ -140,6 +140,7 @@
             "validate_re_password":"Cuir isteach an focal faire a leagtar tú arís",
             "validate_strong_password":"Cuir isteach focal faire de 8 dhigit ar a laghad",
             "validate_long_password":"Ní féidir le pasfhocal 100 dhigit a fhad",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Cuireadh pasfhocal neamhréireach isteach faoi dhó",
 
             "create_success":"Cruthaithe go rathúil",
@@ -161,7 +162,7 @@
             "keystore_error":"Earráid:",
             "keystore_length_error":"Ní féidir ach comhad amháin cuntais a allmhairiú, déan iarracht arís!",
             "keystore_format_error":"Roghnaigh an comhad cuntas ceart",
-            "keystore_is_has":"Tá cuntas ann cheana sa liosta gur gá duit a allmhairiú.",
+            "keystore_is_has":"Tá cuntas cheana sa liosta gur gá duit a allmhairiú.",
             "imported_success":"Comhad roghnaithe cheana féin"
         },
         "remove_dia": {
@@ -170,7 +171,7 @@
             "backup":"Tabhair aird ar chúltaca an chuntas seo chun damáiste maoine a sheachaint.",
             "input_pwd":"Pasfhocal",
             "placeholder_pwd":"Cuir isteach an focal faire don chuntas seo",
-            "validate_password":"Cuir isteach an focal faire don chuntas",
+            "validate_password":"Tá an focal faire a d'iontráil tú mícheart",
             "remove_success":"Bainte amach go rathúil"
         }
     },

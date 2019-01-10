@@ -140,6 +140,7 @@
             "validate_re_password":"Sicela ufake iphasiwedi oyisethayo futhi",
             "validate_strong_password":"Sicela ufake iphasiwedi okungenani amadijithi angu-8",
             "validate_long_password":"Iphasiwedi ayikwazi ukudlula amadijithi angu-100 ubude",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Iphasiwedi engahambisani nayo ifakiwe kabili",
 
             "create_success":"Idalwe ngempumelelo",
@@ -170,7 +171,7 @@
             "backup":"Sicela unake isipele salesi akhawunti ukuze ugweme ukulimala kwempahla.",
             "input_pwd":"Iphasiwedi",
             "placeholder_pwd":"Sicela ufake iphasiwedi yale akhawunti",
-            "validate_password":"Sicela ufake iphasiwedi ye-akhawunti",
+            "validate_password":"Iphasiwedi oyifakile ayilungile",
             "remove_success":"Kususiwe ngempumelelo"
         }
     },

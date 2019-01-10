@@ -140,6 +140,7 @@
             "validate_re_password":"Bonvolu enmeti la pasvorton, kiun vi starigis denove",
             "validate_strong_password":"Bonvolu enmeti pasvorton de almenaŭ 8 ciferoj",
             "validate_long_password":"Pasvorto ne povas superi 100 ciferojn",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Nekonforma pasvorto eniris dufoje",
 
             "create_success":"Kreita sukcese",
@@ -170,7 +171,7 @@
             "backup":"Bonvolu prunti atenton al la rezervo de ĉi tiu konto por eviti nemoveblaĵojn.",
             "input_pwd":"Pasvorto",
             "placeholder_pwd":"Bonvolu enmeti la pasvorton por ĉi tiu konto",
-            "validate_password":"Bonvolu enmeti la pasvorton por la konto",
+            "validate_password":"La pasvorto, kiun vi eniris, estas malĝusta",
             "remove_success":"Sukcese forigita"
         }
     },

@@ -140,6 +140,7 @@
             "validate_re_password":"Per piacè inserite u password si trova à novu",
             "validate_strong_password":"Per piacè inserite una password di almenu 8i numeri",
             "validate_long_password":"U password ùn pò esse più di 100 ciddi in u largu",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"A password in modu cuntenutu hè intesa in duie volte",
 
             "create_success":"Creatu successu",
@@ -170,7 +171,7 @@
             "backup":"Pè attentu à a copia di salvezza di stu cuntu per evità di danni à a pruprietà.",
             "input_pwd":"Password",
             "placeholder_pwd":"Per piacè inserite u password per stu cuntu",
-            "validate_password":"Per piacè inserite u password per u contu",
+            "validate_password":"A password ch'hà intesu hè sbagliatu",
             "remove_success":"Successfully eliminata"
         }
     },

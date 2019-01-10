@@ -140,6 +140,7 @@
             "validate_re_password":"Mangga lebetkeun dina sandi geus disetel deui",
             "validate_strong_password":"Mangga lebetkeun a sandi tina sahanteuna dalapan",
             "validate_long_password":"sandi éta henteu leuwih ti 100",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Kecap akses teu cocog",
 
             "create_success":"nyieun ayaan",
@@ -170,7 +171,7 @@
             "backup":"Perhatikeun yén deui nepi akun ieu, keur ngahindarkeun karuksakan sipat",
             "input_pwd":"sandi",
             "placeholder_pwd":"Mangga lebetkeun sandi pikeun akun ieu",
-            "validate_password":"Mangga lebetkeun sandi akun",
+            "validate_password":"The sandi anjeun diasupkeun téh lepat",
             "remove_success":"dipupus junun"
         }
     },

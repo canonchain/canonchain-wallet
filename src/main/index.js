@@ -18,6 +18,13 @@ ipcMain.on('sync', (event, arg) => {
       event.returnValue = 'Need string type'
   }
 })
+ipcMain.on('remove_account', (event, file , pwd) => {
+  czr.accounts.validate_account(file , pwd).then(data=>{
+    event.returnValue = data
+  }).catch(error=>{
+    event.returnValue = error.message
+  })
+})
 // czr账号
 
 /**

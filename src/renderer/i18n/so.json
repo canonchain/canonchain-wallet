@@ -13,7 +13,7 @@
         "contacts":"La xiriir",
         "setting":"Dejinta",
         "total":"Wadarta",
-        "testnet":"Shabakad tijaabo ah",
+        "testnet":"Shabakadda imtixaanka",
         "online":"Online",
         "offline":"Isbeddel"
     },
@@ -113,7 +113,7 @@
         },
         "msg_info": {
             "ads_copy_success":"Cinwaanka ayaa la daabacay",
-            "key_copy_success":"Nuqul guul leh"
+            "key_copy_success":"Koobi najax leh"
         }
     },
     "page_home": {
@@ -140,6 +140,7 @@
             "validate_re_password":"Fadlan gali furaha ereyga aad ku qorto",
             "validate_strong_password":"Fadlan gali sirta ugu yaraan 8 lambar",
             "validate_long_password":"Furaha lambarkiisu kama badan karo 100 lambar oo dherer ah",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Fariin aan badneyn ayaa laba jeer soo galay",
 
             "create_success":"Abuuray guul",
@@ -170,7 +171,7 @@
             "backup":"Fadlan u fiirso nuqulka koontadan si aad isaga ilaaliso khasaaraha hantida.",
             "input_pwd":"Furaha",
             "placeholder_pwd":"Fadlan gali erayga sirta ah ee koontadan",
-            "validate_password":"Fadlan gali ereyga sirta ee koontada",
+            "validate_password":"Furaha aad soo gashay waa qalad",
             "remove_success":"Si guul leh ayaa loo saaray"
         }
     },
@@ -181,7 +182,7 @@
             "network_latest":"检测是否有新的 CanonChain 节点文件",
             "get_latest":"Macluumaadka habka ugu danbeeya ee node-ka ayaa la helay",
             "is_local":"Hubi haddii uu jiro faylka codka ee deegaanka",
-            "already_local":"Faylka habka faylka ah ee faylka ayaa ku jira qalabka hadda jira.",
+            "already_local":"Faylka habka faylka ah ee faylka ayaa ku yaala qalabka hadda jira.",
             "not_local":"Macluumaadka qaabeynta faylka nootka lama helin, waxay noqon kartaa markii ugu horeysay ee soconaya.",
             "config_write_local":"Fadlan feylka macluumaadka noodhka ee la helay si aad u heshid diskka deegaanka",
             "whether_update_node":"Hubi haddii loo baahdo cusbooneysiin",

@@ -42,7 +42,7 @@
             "no_tag":"Silakan masukkan catatan akun",
             "no_address":"Silakan masukkan alamat akun Anda",
             "valid_address":"Alamat kontak itu ilegal",
-            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
+            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
             "contacts_quantity_error":"Jumlah kontak tidak boleh melebihi 50",
             "exist":"Kontak sudah ada,"
         }
@@ -93,7 +93,7 @@
             "tit":"Ubah catatan",
             "subtit":"Tandai catatan untuk akun Anda",
             "no_tag":"Silakan masukkan catatan akun",
-            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter."
+            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter"
         },
         "dia_tx":{
             "tit":"Informasi transaksi",
@@ -134,12 +134,13 @@
             "account_download_keystore":"Unduh file akun",
 
             "validate_tag":"Silakan masukkan nama catatan akun",
-            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
+            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
 
             "validate_password":"Silakan masukkan kata sandi yang Anda atur",
             "validate_re_password":"Silakan masukkan kata sandi yang Anda atur lagi",
             "validate_strong_password":"Silakan masukkan kata sandi minimal 8 digit",
             "validate_long_password":"Panjang kata sandi tidak boleh melebihi 100 digit",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Kata sandi yang tidak konsisten dimasukkan dua kali",
 
             "create_success":"Diciptakan dengan sukses",
@@ -153,7 +154,7 @@
             "placeholder_tag":"Silakan tentukan nama catatan akun",
 
             "validate_tag":"Silakan masukkan nama catatan akun",
-            "validate_tag_length":"Nama nama catatan tidak boleh lebih dari 8 karakter.",
+            "validate_tag_length":"Nama memo tidak boleh lebih dari 8 karakter",
             "validate_enter_keystore":"Harap impor file akun terlebih dahulu",
             "validate_error_keystore":"Impor akun gagal, mungkin kesalahan file akun",
             "imported_account_success":"Berhasil diimpor",
@@ -170,7 +171,7 @@
             "backup":"Harap perhatikan cadangan akun ini untuk menghindari kerusakan properti.",
             "input_pwd":"Kata sandi",
             "placeholder_pwd":"Silakan masukkan kata sandi untuk akun ini",
-            "validate_password":"Silakan masukkan kata sandi untuk akun tersebut",
+            "validate_password":"Kata sandi yang Anda masukkan salah",
             "remove_success":"Berhasil dihapus"
         }
     },

@@ -140,6 +140,7 @@
             "validate_re_password":"Ange det lösenord du ställde in igen",
             "validate_strong_password":"Ange ett lösenord med minst 8 siffror",
             "validate_long_password":"Lösenordet får inte överstiga 100 siffror",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inkonsekvent lösenord inmatades två gånger",
 
             "create_success":"Skapades framgångsrikt",
@@ -170,7 +171,7 @@
             "backup":"Var vänlig uppmärksam på säkerhetskopiering av det här kontot för att undvika skador på egendom.",
             "input_pwd":"lösenord",
             "placeholder_pwd":"Vänligen ange lösenordet för det här kontot",
-            "validate_password":"Vänligen ange lösenordet för kontot",
+            "validate_password":"Lösenordet du skrev in är fel",
             "remove_success":"Avlägsnades framgångsrikt"
         }
     },

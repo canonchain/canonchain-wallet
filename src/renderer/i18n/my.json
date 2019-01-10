@@ -140,6 +140,7 @@
             "validate_re_password":"သငျသညျတဖနျ set password ကိုရိုက်ထည့်ပေးပါ",
             "validate_strong_password":"အနည်းဆုံးရှစ်တစ် password ကိုရိုက်ထည့်ပေးပါ",
             "validate_long_password":"စကားဝှက်ကို 100 ထက်မပိုဖြစ်ပါတယ်",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Passwords များကိုမတိုက်ဆိုင်ကြဘူး",
 
             "create_success":"အောင်မြင်မှု Creating",
@@ -170,7 +171,7 @@
             "backup":"ပစ္စည်းဥစ္စာပိုင်ဆိုင်မှုပျက်စီးဆုံးရှုံးမှုရှောင်ရှားရန်, ဒီအကောင့်ဖွင့်ကြောင်းပြန် ကျေးဇူးပြု. သတိပြုပါ",
             "input_pwd":"Password ကို",
             "placeholder_pwd":"ဒီအကောင့်စကားဝှက်ကိုရိုက်ထည့်ပေးပါ",
-            "validate_password":"အကောင့် password ကိုရိုက်ထည့်ပေးပါ",
+            "validate_password":"သင်ထည့်သွင်းစကားဝှက်မမှန်ကန်",
             "remove_success":"အောင်မြင်စွာဖယ်ရှား"
         }
     },

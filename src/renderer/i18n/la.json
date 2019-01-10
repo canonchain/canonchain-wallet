@@ -140,6 +140,7 @@
             "validate_re_password":"PDF ponis signum est",
             "validate_strong_password":"Tesseram saltem octo PDF",
             "validate_long_password":"Tesseras, non magis quam C",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Passwords non aequare",
 
             "create_success":"partum victoria",
@@ -170,7 +171,7 @@
             "backup":"Lorem quod rursum ob rem ne patiamini",
             "input_pwd":"Password",
             "placeholder_pwd":"Hoc enim signum PDF",
-            "validate_password":"PDF rationem ignoro",
+            "validate_password":"Tesseras ingressus falsa",
             "remove_success":"remota feliciter"
         }
     },

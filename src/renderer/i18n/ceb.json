@@ -140,6 +140,7 @@
             "validate_re_password":"Palihug pagsulod sa pasword nga imong gibutang pag-usab",
             "validate_strong_password":"Palihug pagsulod sa password nga labing menos 8 digit",
             "validate_long_password":"Ang password dili molapas sa 100 digit nga gitas-on",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Dili magkaparehas nga pasword nga gisudlan kaduha",
 
             "create_success":"Nahimo nga malampuson",
@@ -170,7 +171,7 @@
             "backup":"Palihug pagtagad sa pag-backup sa niini nga account aron malikayan ang kadaot sa propyedad.",
             "input_pwd":"Sala",
             "placeholder_pwd":"Palihug pasabta ang pasword alang niini nga account",
-            "validate_password":"Palihug ipasulod ang password alang sa account",
+            "validate_password":"Sayop ang pasword nga imong gisulod",
             "remove_success":"Malampuson nga gikuha"
         }
     },

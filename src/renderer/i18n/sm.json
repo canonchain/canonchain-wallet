@@ -140,6 +140,7 @@
             "validate_re_password":"Faamolemole ia ulufale mai i le uputatala na e toe faatulagaina",
             "validate_strong_password":"Faʻamolemole tuʻu mai se faʻaupuga o le itiiti ifo ma le 8 numera",
             "validate_long_password":"E le mafai e le upu motusi ona sili atu i le 100 laina i le uumi",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Faʻasalalau le faʻamaoni e le saʻo",
 
             "create_success":"Fausia lelei",
@@ -170,7 +171,7 @@
             "backup":"Faʻamolemole faʻalogo i le faʻamaumauga o lenei tala e aloese ai mai le faʻaleagaina o meatotino.",
             "input_pwd":"Motugaafa",
             "placeholder_pwd":"Faamolemole ia ulufale i le upega tafailagi mo lenei tala",
-            "validate_password":"Faʻamolemole tuʻu mai le faʻaupuga mo le teugatupe",
+            "validate_password":"O le faʻaumauga na e ulufale ai e sese",
             "remove_success":"Aveese ma le manuia"
         }
     },
