@@ -21,7 +21,7 @@ const path = require("path");
 const { remote, app, shell } = require("electron");
 const axios = require("axios");
 const download = require("download");
-const { spawn, spawnSync, exec, execFile, fork } = require("child_process");
+const { spawn, spawnSync} = require("child_process");
 const packageJson = require("../../../../package.json");
 // const childPath = require("./child");
 let radom = "?radom=" + Math.random();
@@ -276,9 +276,6 @@ export default {
                         "--rpc_enable",
                         "--rpc_enable_control"
                     ]);
-                    // let ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
-
-                    // let ls = fork("./child");
 
                     self.conMsg = self.$t("page_config.content_msg.enter_wallet");
                     self.$startLogs.info("CanonChainPid", ls.pid);

@@ -58,7 +58,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "bignumber.js": "^7.2.1",
-    "czr": "^0.0.207",
+    "czr": "^0.0.208.1",
     "download": "^7.0.0",
     "element-ui": "^2.3.3",
     "fs-extra": "^5.0.0",
