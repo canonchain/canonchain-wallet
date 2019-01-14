@@ -140,6 +140,7 @@
             "validate_re_password":"Sila masukkan kata laluan yang anda tetapkan semula",
             "validate_strong_password":"Sila masukkan kata laluan sekurang-kurangnya 8 digit",
             "validate_long_password":"Kata laluan tidak boleh melebihi 100 digit panjang",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Kata laluan tidak konsisten dimasukkan dua kali",
 
             "create_success":"Dibuat berjaya",
@@ -170,7 +171,7 @@
             "backup":"Sila beri perhatian kepada sandaran akaun ini untuk mengelakkan kerosakan harta benda.",
             "input_pwd":"Kata laluan",
             "placeholder_pwd":"Sila masukkan kata laluan untuk akaun ini",
-            "validate_password":"Sila masukkan kata laluan untuk akaun tersebut",
+            "validate_password":"Kata laluan yang anda masukkan adalah salah",
             "remove_success":"Berjaya dikeluarkan"
         }
     },

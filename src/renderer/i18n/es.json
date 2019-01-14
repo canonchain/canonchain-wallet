@@ -140,6 +140,7 @@
             "validate_re_password":"Por favor ingrese la contraseña que estableció de nuevo",
             "validate_strong_password":"Por favor, introduzca una contraseña de al menos 8 dígitos",
             "validate_long_password":"La contraseña no puede exceder los 100 dígitos de longitud",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Contraseña incoherente introducida dos veces",
 
             "create_success":"Creado exitosamente",
@@ -155,7 +156,7 @@
             "validate_tag":"Por favor ingrese el nombre de la nota de cuenta",
             "validate_tag_length":"El nombre del nombre de la nota no puede tener más de 8 caracteres.",
             "validate_enter_keystore":"Por favor importe el archivo de cuenta primero",
-            "validate_error_keystore":"Error en la importación de la cuenta, puede haber error en el archivo de la cuenta",
+            "validate_error_keystore":"Error en la importación de la cuenta, puede haber un error en el archivo de la cuenta",
             "imported_account_success":"Exitosamente importado",
             "exist":"Esta cuenta ya existe, la nota es",
             "keystore_error":"Error",
@@ -170,7 +171,7 @@
             "backup":"Preste atención a la copia de seguridad de esta cuenta para evitar daños a la propiedad.",
             "input_pwd":"Contraseña",
             "placeholder_pwd":"Por favor ingrese la contraseña para esta cuenta",
-            "validate_password":"Por favor ingrese la contraseña de la cuenta",
+            "validate_password":"La contraseña que ingresaste es incorrecta",
             "remove_success":"Eliminado exitosamente"
         }
     },

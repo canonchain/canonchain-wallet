@@ -140,6 +140,7 @@
             "validate_re_password":"Zadejte znovu zadané heslo",
             "validate_strong_password":"Zadejte heslo alespoň 8 číslic",
             "validate_long_password":"Heslo nesmí překročit 100 číslic",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Nesouvislé zadání hesla dvakrát",
 
             "create_success":"Vytvořeno úspěšně",
@@ -170,7 +171,7 @@
             "backup":"Věnujte prosím pozornost zálohám tohoto účtu, abyste zabránili poškození majetku.",
             "input_pwd":"Heslo",
             "placeholder_pwd":"Zadejte heslo pro tento účet",
-            "validate_password":"Zadejte prosím heslo pro účet",
+            "validate_password":"Zadané heslo je nesprávné",
             "remove_success":"Úspěšně byla odebrána"
         }
     },

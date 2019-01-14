@@ -717,19 +717,16 @@ export default {
         //export Keystore
         exportKeystore() {
             let self = this;
-            self.$czr.request
-                .accountExport(self.accountInfo.address)
-                .then(data => {
-                    self.accountInfo.keystore = data.json;
-                    self.dialogSwitch.keystore = true;
-                })
-                .catch(error => {
-                    self.$walletLogs.error(
-                        "Account Export Error",
-                        error.message
-                    );
-                    self.$message.error("出错啦，建议重启钱包后再次操作");
-                });
+            let accountKeystore = self.$db
+                .get("accounts_keystore")
+                .find({ account: self.accountInfo.address })
+                .value();
+            if(accountKeystore){
+                self.accountInfo.keystore = JSON.stringify(accountKeystore);
+                self.dialogSwitch.keystore = true;
+            }else{
+                self.$message.error( "Account Export Error");
+            }
         },
 
         //copy

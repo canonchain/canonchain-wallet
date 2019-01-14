@@ -42,7 +42,7 @@
             "no_tag":"Ji kerema xwe ji bîr nekin",
             "no_address":"Ji kerema xwe navnîşana hesabê xwe binivîse",
             "valid_address":"Navnîşa têkiliyê neqanûn e",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
             "contacts_quantity_error":"Numreya peywendî nikarin 50 salî ne",
             "exist":"Têkilî niha heye,"
         }
@@ -78,7 +78,7 @@
             "amount_exceeded":"Gelek danûstandinê ya niha ya buhayê hesabê zêde dike",
 
             "decrypt_err":"Parsing failed, ew dibe ku çewtiyek şîfre be",
-            "send_error":"Veguhastin têkelî: ger ji kerema xwe hebe ku heqê heqê heqê û heqê minerî ye"
+            "send_error":"Veguhastin têkelî: ger ji kerema xwe hebe ku heqê heqê heqê û heqê minerî tête ye"
         }
     },
     "page_account": {
@@ -93,7 +93,7 @@
             "tit":"Şirovekirin",
             "subtit":"Ji bo hesabê we re gotarek binivîse",
             "no_tag":"Ji kerema xwe ji bîr nekin",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne."
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê"
         },
         "dia_tx":{
             "tit":"Agahdariya danûstendinê",
@@ -134,12 +134,13 @@
             "account_download_keystore":"Pelê hesab bike",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
 
             "validate_password":"Ji kerema xwe hûn şîfreya xwe binivîse",
             "validate_re_password":"Ji kerema xwe hûn şîfreya xwe binivîse ku hûn dîsa careke din bikin",
             "validate_strong_password":"Ji kerema xwe şîfreyek herî kêm 8 hejmara navnîşan bike",
             "validate_long_password":"Nasnav nikare 100 hejmaran di dirêjahiyê de ne",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Şîfreyek nehevkirî du caran ket",
 
             "create_success":"Serkeftî çêkir",
@@ -153,7 +154,7 @@
             "placeholder_tag":"Ji kerema xwe navê navnîşa hesabê binivîse",
 
             "validate_tag":"Ji kerema xwe navê navnîşa hesabê xwe binivîse",
-            "validate_tag_length":"Navê navnîşê navnîşê 8 ji hêla mezintirîn ne.",
+            "validate_tag_length":"Navê navê Memo nikare ji 8 celebî neyê",
             "validate_enter_keystore":"Ji kerema xwe pelê yekem hesab bike",
             "validate_error_keystore":"Import import failed, dibe ku çewtiyek pelê hesab bike",
             "imported_account_success":"Bi serkeftî veguhestin",
@@ -170,7 +171,7 @@
             "backup":"Ji kerema xwe veguhestina vê hesabê bikişîne ku ji ber zirarê zirarê bistînin.",
             "input_pwd":"Şîfreya",
             "placeholder_pwd":"Ji kerema xwe ji vê hesabê şîfreya xwe binivîse",
-            "validate_password":"Ji kerema xwe ji hesabê şîfreya xwe binivîse",
+            "validate_password":"Şîfreya ku te gotiye çewt e",
             "remove_success":"Serkeftî jêbirin"
         }
     },
@@ -182,7 +183,7 @@
             "get_latest":"Agahdariya danûstandinên dawî ya dawî ya dawî ye",
             "is_local":"Heke ku liverek pelê navek heye heye",
             "already_local":"Vebijêrk pelê ya node pelê li cîhaza heyî ye.",
-            "not_local":"Agahdariya danûstandinê ya pelê node nayê dîtin, ew dibe ku cara yekem diçin.",
+            "not_local":"Agahiya danûstandinê ya pelê node nayê zanîn, ew dibe ku cara yekem dibe ku dihêle.",
             "config_write_local":"Dîska agahdariya pelê ji bo dîska herêmî binivîse",
             "whether_update_node":"Heke ku rojnav hewce ye",
             "no_need":"本地 CanonChain 节点文件是最新的",

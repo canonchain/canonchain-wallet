@@ -42,7 +42,7 @@
             "no_tag":"Vnesite beležko računa",
             "no_address":"Vnesite naslov svojega računa",
             "valid_address":"Naslov stika je nezakonit",
-            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
+            "validate_tag_length":"Ime opombe ne sme biti daljše od 8 znakov",
             "contacts_quantity_error":"Število stikov ne sme presegati 50",
             "exist":"Stik že obstaja,"
         }
@@ -93,7 +93,7 @@
             "tit":"Spremeni beležko",
             "subtit":"Označite beležko za svoj račun",
             "no_tag":"Vnesite beležko računa",
-            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov."
+            "validate_tag_length":"Ime opombe ne sme biti daljše od 8 znakov"
         },
         "dia_tx":{
             "tit":"Informacije o transakcijah",
@@ -134,12 +134,13 @@
             "account_download_keystore":"Prenesite datoteko računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
+            "validate_tag_length":"Ime opombe ne sme biti daljše od 8 znakov",
 
             "validate_password":"Vnesite geslo, ki ste ga nastavili",
             "validate_re_password":"Vnesite geslo, ki ga nastavite znova",
             "validate_strong_password":"Vnesite vsaj 8-mestno geslo",
             "validate_long_password":"Geslo ne sme presegati 100 znakov",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Dvakrat je vneseno nedosledno geslo",
 
             "create_success":"Ustvarjeno uspešno",
@@ -153,7 +154,7 @@
             "placeholder_tag":"Nastavite ime beležke računa",
 
             "validate_tag":"Vnesite ime beležke računa",
-            "validate_tag_length":"Ime imena beležke ne sme biti daljše od 8 znakov.",
+            "validate_tag_length":"Ime opombe ne sme biti daljše od 8 znakov",
             "validate_enter_keystore":"Najprej uvozite datoteko računa",
             "validate_error_keystore":"Uvoz računa ni uspel, napaka v računu",
             "imported_account_success":"Uspešno uvoženo",
@@ -170,7 +171,7 @@
             "backup":"Prosimo, bodite pozorni na varnostno kopijo tega računa, da se izognete materialni škodi.",
             "input_pwd":"Geslo",
             "placeholder_pwd":"Vnesite geslo za ta račun",
-            "validate_password":"Vnesite geslo za račun",
+            "validate_password":"Vneseno geslo je napačno",
             "remove_success":"Uspešno odstranjena"
         }
     },
@@ -192,7 +193,7 @@
             "no":"Prenos programa vozlišča, bodite potrpežljivi",
             "already_downloaded":"Program vozlišča je bil prenesen in pripravljen za zagon.",
             "ready_start":"Pripravite se na zagon vozlišča",
-            "enter_wallet":"Vozlišče začne zaznavati in je pripravljeno za vstop v denarnico"
+            "enter_wallet":"Vozlišče začne zaznati, pripravljeno za vstop v denarnico"
         },
         "version_dialog":{
             "version_tit":"Poziv za posodobitev različice",

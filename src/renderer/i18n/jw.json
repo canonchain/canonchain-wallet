@@ -140,6 +140,7 @@
             "validate_re_password":"Mangga ketik sandhi sing wis disetel maneh",
             "validate_strong_password":"Mangga ketik sandhi minimal 8 digit",
             "validate_long_password":"Pangguna ora bisa ngluwihi 100 digit",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Tembung sing ora konsisten wis ping loro",
 
             "create_success":"Digawe sukses",
@@ -170,7 +171,7 @@
             "backup":"Mangga nyedhiyakake cadangan serep akun kasebut kanggo nyegah karusakan.",
             "input_pwd":"Pangguna Sandi",
             "placeholder_pwd":"Mangga ketik sandhi kanggo akun iki",
-            "validate_password":"Mangga ketik sandhi kanggo akun kasebut",
+            "validate_password":"Tembung sandhi sing panjenengan tulis salah",
             "remove_success":"Kanthi sukses dibusak"
         }
     },

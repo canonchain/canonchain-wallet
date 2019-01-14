@@ -140,6 +140,7 @@
             "validate_re_password":"Sartu berriro ezarri duzun pasahitza",
             "validate_strong_password":"Sartu gutxienez 8 digituko pasahitza",
             "validate_long_password":"Pasahitzak ezin du 100 luzera gainditzen",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inconsistent password entered twice",
 
             "create_success":"Sortu arrakastaz",
@@ -170,7 +171,7 @@
             "backup":"Kontu honen babeskopia egin arretaz kalteak saihesteko.",
             "input_pwd":"Pasahitza",
             "placeholder_pwd":"Sartu pasahitza kontu honetarako",
-            "validate_password":"Idatzi kontuaren pasahitza",
+            "validate_password":"Sartutako pasahitza gaizki dago",
             "remove_success":"Behar bezala kendu da"
         }
     },

@@ -140,6 +140,7 @@
             "validate_re_password":"Sisestage uuesti seadistatud parool",
             "validate_strong_password":"Sisestage vähemalt 8-kohaline parool",
             "validate_long_password":"Parool ei tohi ületada 100 numbrit",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Vastuoluline parool sisestati kaks korda",
 
             "create_success":"Loodud edukalt",
@@ -170,7 +171,7 @@
             "backup":"Pöörake tähelepanu selle konto varukoopiale, et vältida vara kahjustamist.",
             "input_pwd":"Parool",
             "placeholder_pwd":"Palun sisestage selle konto parool",
-            "validate_password":"Palun sisestage konto parool",
+            "validate_password":"Sisestatud parool on vale",
             "remove_success":"Edukalt eemaldatud"
         }
     },

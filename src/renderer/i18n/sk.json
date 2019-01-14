@@ -139,7 +139,8 @@
             "validate_password":"Zadajte heslo, ktoré ste nastavili",
             "validate_re_password":"Zadajte znova zadané heslo",
             "validate_strong_password":"Zadajte heslo s minimálne 8 číslicami",
-            "validate_long_password":"Heslo nie je väčšia ako 100",
+            "validate_long_password":"Heslo nemôže presiahnuť 100 číslic",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Nekonzistentné zadanie hesla dvakrát",
 
             "create_success":"Vytvorené úspešne",
@@ -161,7 +162,7 @@
             "keystore_error":"chyba:",
             "keystore_length_error":"Je možné importovať len jeden súbor účtu, skúste to znova!",
             "keystore_format_error":"Vyberte správny súbor účtu",
-            "keystore_is_has":"Zoznam už máte účet, ktorý potrebujete importovať svojich priateľov",
+            "keystore_is_has":"V zozname už existuje účet, ktorý musíte importovať.",
             "imported_success":"Už vybraný súbor"
         },
         "remove_dia": {
@@ -170,7 +171,7 @@
             "backup":"Dbajte na zálohu tohto účtu, aby ste predišli poškodeniu majetku.",
             "input_pwd":"heslo",
             "placeholder_pwd":"Zadajte heslo pre tento účet",
-            "validate_password":"Zadajte heslo pre účet",
+            "validate_password":"Zadané heslo je nesprávne",
             "remove_success":"Úspešne odstránené"
         }
     },

@@ -140,6 +140,7 @@
             "validate_re_password":"Cuir a-steach am facal-faire a shuidhich thu a-rithist",
             "validate_strong_password":"Cuir a-steach facal-faire de 8 dhigit co-dhiù",
             "validate_long_password":"Chan fhaod am facal-faire a bhith nas fhaide na 100 digit de dh'fhaid",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Chaidh facal-faire neo-chunbhalach a-steach dà thuras",
 
             "create_success":"Cruthaichte gu soirbheachail",
@@ -170,7 +171,7 @@
             "backup":"Thoir aire gu cùl-taice a 'chunntais seo gus milleadh thogalaichean a sheachnadh.",
             "input_pwd":"Facal-faire",
             "placeholder_pwd":"Cuir a-steach am facal-faire airson a 'chunntais seo",
-            "validate_password":"Cuir a-steach am facal-faire airson a 'chunntais",
+            "validate_password":"Tha am facal-faire a chuir thu a-steach ceàrr",
             "remove_success":"Chaidh a thoirt air falbh gu soirbheachail"
         }
     },

@@ -140,6 +140,7 @@
             "validate_re_password":"Jekk jogħġbok ikteb il-password li ssettjajt mill-ġdid",
             "validate_strong_password":"Jekk jogħġbok ikteb password ta 'mill-inqas 8 numri",
             "validate_long_password":"Il-password ma tistax taqbeż il-100 ċifra fit-tul",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Password inkonsistenti mdaħħla darbtejn",
 
             "create_success":"Maħluqa b'suċċess",
@@ -170,7 +171,7 @@
             "backup":"Jekk jogħġbok oqgħod attent għall-backup ta 'dan il-kont biex tevita ħsara lill-proprjetà.",
             "input_pwd":"Password",
             "placeholder_pwd":"Jekk jogħġbok ikteb il-password għal dan il-kont",
-            "validate_password":"Jekk jogħġbok ikteb il-password għall-kont",
+            "validate_password":"Il-password li daħħalt hija ħażina",
             "remove_success":"Imneħħija b’suċċess"
         }
     },

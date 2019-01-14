@@ -140,6 +140,7 @@
             "validate_re_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i ka hua'ōlelo āu e hoʻonoho hou",
             "validate_strong_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i kahi hua'ōlelo o 8 mau hua",
             "validate_long_password":"ʻAʻole hiki ke piʻi i ka 100 mau huahelu i ka lōʻihi",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"ʻO ka'ōlelo kuhihewa i pāpāluaʻia",
 
             "create_success":"Hanaʻia me ka maikaʻi",
@@ -170,7 +171,7 @@
             "backup":"Eʻoluʻolu e nānā i ka waihona o kēia moʻokāki e pale i kaʻinoʻino o ka waiwai.",
             "input_pwd":"Manaʻo",
             "placeholder_pwd":"Eʻoluʻolu, e hoʻokomo i ka hua'ōlelo no kēia pūnaewele",
-            "validate_password":"Eʻoluʻolu eʻoluʻolu e hoʻokomo i ka hua'ōlelo no ka helu",
+            "validate_password":"Ua hewa ka hua'ōlelo āu i komo ai",
             "remove_success":"Ua hoʻopau 'ia me ka hoʻoholo"
         }
     },

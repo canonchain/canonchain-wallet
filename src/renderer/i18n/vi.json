@@ -140,6 +140,7 @@
             "validate_re_password":"Vui lòng nhập lại mật khẩu bạn đã đặt lại",
             "validate_strong_password":"Vui lòng nhập mật khẩu ít nhất 8 chữ số",
             "validate_long_password":"Mật khẩu không thể vượt quá 100 chữ số",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Mật khẩu không nhất quán được nhập hai lần",
 
             "create_success":"Tạo thành công",
@@ -170,7 +171,7 @@
             "backup":"Vui lòng chú ý sao lưu tài khoản này để tránh thiệt hại tài sản.",
             "input_pwd":"Mật khẩu",
             "placeholder_pwd":"Vui lòng nhập mật khẩu cho tài khoản này",
-            "validate_password":"Vui lòng nhập mật khẩu cho tài khoản",
+            "validate_password":"Mật khẩu bạn đã nhập sai",
             "remove_success":"Xóa thành công"
         }
     },

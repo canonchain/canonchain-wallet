@@ -140,6 +140,7 @@
             "validate_re_password":"Thov sau tus password koj tau teem dua",
             "validate_strong_password":"Thov sau ib tug password ntawm yam tsawg 8 tus lej",
             "validate_long_password":"Lo lus zais tsis pub tshaj 100 tus lej nyob ntev",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inconsistent password nkag ob zaug",
 
             "create_success":"Tsim tau zoo",
@@ -170,7 +171,7 @@
             "backup":"Thov them nyiaj rau lub thaub qab ntawm no kom tsis txhob muaj kev puas tsuaj khoom.",
             "input_pwd":"Lo lus zais",
             "placeholder_pwd":"Thov sau tus password rau qhov no",
-            "validate_password":"Thov sau tus password rau tus as khauj",
+            "validate_password":"Tus password uas koj nkag mus yog qhov tsis ncaj ncees lawm",
             "remove_success":"Hloov tawm zoo"
         }
     },

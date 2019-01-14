@@ -139,7 +139,8 @@
             "validate_password":"Ampidiro azafady ny tenimiafinao",
             "validate_re_password":"Ampidiro azafady ny tenimiafinao averina",
             "validate_strong_password":"Mampidira tenimiafina farafaharatsiny farafahakeliny",
-            "validate_long_password":"Ny tenimiafina dia tsy afaka mihoatra ny 100 isam-bolana",
+            "validate_long_password":"Ny tenimiafina dia tsy mihoatra ny 100 isa",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Niditra indroa ny tenimiafina tsy mifanaraka",
 
             "create_success":"Noforonina tsara",
@@ -167,10 +168,10 @@
         "remove_dia": {
             "tit":"Tena tianao ve ny manala azy?",
             "remove_confrim":"Azoko antoka fa tokony hesorina aho",
-            "backup":"Tandremo tsara ny fametrahana ity kaonty ity mba hisorohana ny fahavoazan'ny fananana.",
+            "backup":"Tandremo tsara ny fametrahana ity kaonty ity mba hialana amin'ny fahavoazana.",
             "input_pwd":"Password",
             "placeholder_pwd":"Ampidiro azafady ny tenimiafinao amin'ity kaonty ity",
-            "validate_password":"Ampidiro azafady ny tenimiafin'ilay kaonty",
+            "validate_password":"Tsy mety ny tenimiafinao",
             "remove_success":"Nesorina tamim-pahombiazana"
         }
     },
@@ -192,7 +193,7 @@
             "no":"Raiso ny programa nodia, ataovy marary",
             "already_downloaded":"Ny tetikasa nodidiana dia navoaka ary vonona ny hanomboka.",
             "ready_start":"Manomàna hanombohana ny kodiarana",
-            "enter_wallet":"Ny fanombohana ny fanandramana dia manomboka mahita azy, vonona ny hiditra ny kitapo"
+            "enter_wallet":"Ny fanombohana ny fanombohana, dia vonona ny hiditra ny kitapo"
         },
         "version_dialog":{
             "version_tit":"Version prompt",

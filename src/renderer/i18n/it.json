@@ -140,6 +140,7 @@
             "validate_re_password":"Inserisci la password che hai impostato di nuovo",
             "validate_strong_password":"Si prega di inserire una password di almeno 8 cifre",
             "validate_long_password":"La password non può superare le 100 cifre in lunghezza",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Password incoerente inserita due volte",
 
             "create_success":"Creato con successo",
@@ -170,7 +171,7 @@
             "backup":"Si prega di prestare attenzione al backup di questo account per evitare danni alla proprietà.",
             "input_pwd":"password",
             "placeholder_pwd":"Si prega di inserire la password per questo account",
-            "validate_password":"Si prega di inserire la password per l'account",
+            "validate_password":"La password che hai inserito è sbagliata",
             "remove_success":"Rimosso con successo"
         }
     },
@@ -182,7 +183,7 @@
             "get_latest":"Le informazioni sulla configurazione del nodo più recenti sono state ottenute",
             "is_local":"Controlla se c'è un file di nodo localmente",
             "already_local":"Il file di configurazione del file di nodo esiste sul dispositivo corrente.",
-            "not_local":"Le informazioni di configurazione del file di nodo non vengono rilevate, potrebbe essere la prima volta in esecuzione.",
+            "not_local":"Le informazioni di configurazione del file nodo non vengono rilevate, potrebbe essere la prima volta in esecuzione.",
             "config_write_local":"Scrivi il file di informazioni sul nodo ottenuto sul disco locale",
             "whether_update_node":"Controlla se è necessario un aggiornamento",
             "no_need":"本地 CanonChain 节点文件是最新的",

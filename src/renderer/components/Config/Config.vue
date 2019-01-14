@@ -21,7 +21,7 @@ const path = require("path");
 const { remote, app, shell } = require("electron");
 const axios = require("axios");
 const download = require("download");
-const { spawn, spawnSync, exec, execFile, fork } = require("child_process");
+const { spawn, spawnSync} = require("child_process");
 const packageJson = require("../../../../package.json");
 // const childPath = require("./child");
 let radom = "?radom=" + Math.random();
@@ -159,11 +159,10 @@ export default {
             } else {
                 self.conMsg = self.$t("page_config.content_msg.need");
                 self.$startLogs.info("本地 CanonChain 节点文件是老版本");
-                this.writeLocalConfig(this.latest_config.content);
-                this.isDownload();
+                this.isDownload(true);
             }
         },
-        isDownload() {
+        isDownload(flag) {
             let self = this;
             // 准备节点信息
             const platform = process.platform
@@ -185,28 +184,7 @@ export default {
                 timeout: 1000 * 60
             };
 
-            //判断是否有 CanonChain
-            self.conMsg = self.$t("page_config.content_msg.is_local_node");
-            self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
-            try {
-                // console.log(options.directory)
-                self.$startLogs.info(
-                    "本地的节点文件",
-                    path.join(
-                        options.directory,
-                        this.node_info.binaryVersion.bin
-                    )
-                );
-                let stats = fs.statSync(
-                    path.join(
-                        options.directory,
-                        this.node_info.binaryVersion.bin
-                    )
-                );
-                self.conMsg = self.$t("page_config.content_msg.have");
-                self.$startLogs.info("当前设备已存在 CanonChain 节点文件");
-                self.runCanonChain();
-            } catch (err) {
+            if(flag){
                 self.conMsg = self.$t("page_config.content_msg.no");
                 self.$startLogs.info(
                     "正在下载节点程序,请耐心等待",
@@ -219,6 +197,7 @@ export default {
                     options.directory,
                     options
                 ).then(() => {
+                    this.writeLocalConfig(this.latest_config.content);
                     self.conMsg = self.$t("page_config.content_msg.already_downloaded");
                     self.$startLogs.info("节点程序已经下载好");
                     self.runCanonChain();
@@ -226,7 +205,51 @@ export default {
                     self.$startLogs.info("Error");
                     self.$startLogs.info(error);
                 })
+            }else{
+                //判断是否有 CanonChain
+                self.conMsg = self.$t("page_config.content_msg.is_local_node");
+                self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
+                try {
+                    // console.log(options.directory)
+                    self.$startLogs.info(
+                        "本地的节点文件",
+                        path.join(
+                            options.directory,
+                            this.node_info.binaryVersion.bin
+                        )
+                    );
+                    let stats = fs.statSync(
+                        path.join(
+                            options.directory,
+                            this.node_info.binaryVersion.bin
+                        )
+                    );
+                    self.conMsg = self.$t("page_config.content_msg.have");
+                    self.$startLogs.info("当前设备已存在 CanonChain 节点文件");
+                    self.runCanonChain();
+                } catch (err) {
+                    self.conMsg = self.$t("page_config.content_msg.no");
+                    self.$startLogs.info(
+                        "正在下载节点程序,请耐心等待",
+                        this.node_info.binaryVersion.url + radom,
+                        options.directory
+                    );
+
+                    download(
+                        this.node_info.binaryVersion.url + radom,
+                        options.directory,
+                        options
+                    ).then(() => {
+                        self.conMsg = self.$t("page_config.content_msg.already_downloaded");
+                        self.$startLogs.info("节点程序已经下载好");
+                        self.runCanonChain();
+                    }).catch(error=>{
+                        self.$startLogs.info("Error");
+                        self.$startLogs.info(error);
+                    })
+                }
             }
+            
         },
         runCanonChain() {
             let nodePath = path.join(
@@ -253,9 +276,6 @@ export default {
                         "--rpc_enable",
                         "--rpc_enable_control"
                     ]);
-                    // let ls = exec(nodePath+' --daemon --rpc_enable --rpc_enable_control');
-
-                    // let ls = fork("./child");
 
                     self.conMsg = self.$t("page_config.content_msg.enter_wallet");
                     self.$startLogs.info("CanonChainPid", ls.pid);
