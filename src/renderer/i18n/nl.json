@@ -140,6 +140,7 @@
             "validate_re_password":"Voer het wachtwoord dat u opnieuw hebt ingesteld opnieuw in",
             "validate_strong_password":"Voer een wachtwoord in van minimaal 8 cijfers",
             "validate_long_password":"Wachtwoord mag niet langer zijn dan 100 cijfers",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inconsistent wachtwoord twee keer ingevoerd",
 
             "create_success":"Met succes gemaakt",
@@ -170,7 +171,7 @@
             "backup":"Let op de back-up van dit account om schade aan eigendommen te voorkomen.",
             "input_pwd":"wachtwoord",
             "placeholder_pwd":"Voer het wachtwoord in voor dit account",
-            "validate_password":"Voer het wachtwoord voor het account in",
+            "validate_password":"Het wachtwoord dat je hebt ingevoerd is verkeerd",
             "remove_success":"Succesvol verwijderd"
         }
     },

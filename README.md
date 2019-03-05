@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/canonchain/canonchain-wallet.svg?branch=master)](https://travis-ci.org/canonchain/canonchain-wallet)
 ### Canonchain Wallet
 
 标准链钱包

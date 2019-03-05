@@ -140,6 +140,7 @@
             "validate_re_password":"Biko tinye paswọọdụ ị debere ọzọ",
             "validate_strong_password":"Biko tinye paswọọdụ nke ọbụlagodi 8 nọmba",
             "validate_long_password":"Okwuntughe agaghị agafe 100 digit n'ogologo",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Enweghi ike itinye paswọọdụ ugboro abụọ",
 
             "create_success":"Ejiri nke ọma",
@@ -170,7 +171,7 @@
             "backup":"Biko ṅaa ntị na ndabere nke akaụntụ a iji zere mmebi ihe onwunwe.",
             "input_pwd":"Okwuntughe",
             "placeholder_pwd":"Biko tinye paswọọdụ maka akaụntụ a",
-            "validate_password":"Biko tinye paswọọdụ maka akaụntụ ahụ",
+            "validate_password":"Okwuntughe ị banyere abaghị uru",
             "remove_success":"Wepụrụ nke ọma"
         }
     },

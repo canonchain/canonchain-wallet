@@ -140,6 +140,7 @@
             "validate_re_password":"もう一度設定したパスワードを入力してください",
             "validate_strong_password":"8桁以上のパスワードを入力してください",
             "validate_long_password":"パスワードは100桁を超えてはいけません",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"パスワードが2回入力されています",
 
             "create_success":"作成しました",
@@ -170,7 +171,7 @@
             "backup":"物的損害を避けるために、このアカウントのバックアップに注意を払ってください。",
             "input_pwd":"パスワード",
             "placeholder_pwd":"このアカウントのパスワードを入力してください",
-            "validate_password":"アカウントのパスワードを入力してください",
+            "validate_password":"入力したパスワードが間違っています",
             "remove_success":"削除しました"
         }
     },

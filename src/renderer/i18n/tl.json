@@ -140,6 +140,7 @@
             "validate_re_password":"Pakipasok ang password na iyong itinakda muli",
             "validate_strong_password":"Mangyaring magpasok ng isang password ng hindi bababa sa 8 digit",
             "validate_long_password":"Ang password ay hindi maaaring lumagpas sa 100 digit na haba",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Ang hindi pantay na password ay ipinasok nang dalawang beses",
 
             "create_success":"Matagumpay na nalikha",
@@ -170,7 +171,7 @@
             "backup":"Mangyaring bigyang-pansin ang backup ng account na ito upang maiwasan ang pinsala sa ari-arian.",
             "input_pwd":"Password",
             "placeholder_pwd":"Pakipasok ang password para sa account na ito",
-            "validate_password":"Pakipasok ang password para sa account",
+            "validate_password":"Mali ang ipinasok mong password",
             "remove_success":"Matagumpay na naalis"
         }
     },

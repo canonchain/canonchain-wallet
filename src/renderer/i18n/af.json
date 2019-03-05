@@ -140,6 +140,7 @@
             "validate_re_password":"Voer asseblief die wagwoord in wat u weer ingestel het",
             "validate_strong_password":"Voer asseblief 'n wagwoord van ten minste 8 syfers in",
             "validate_long_password":"Wagwoord kan nie meer as 100 syfers oorskry nie",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inconsistente wagwoord het twee keer ingeskryf",
 
             "create_success":"Geskep suksesvol",
@@ -170,7 +171,7 @@
             "backup":"Let asseblief op die rugsteun van hierdie rekening om skade aan eiendom te voorkom.",
             "input_pwd":"wagwoord",
             "placeholder_pwd":"Voer asseblief die wagwoord vir hierdie rekening in",
-            "validate_password":"Voer asseblief die wagwoord vir die rekening in",
+            "validate_password":"Die wagwoord wat jy ingevoer het, is verkeerd",
             "remove_success":"Suksesvol verwyder"
         }
     },

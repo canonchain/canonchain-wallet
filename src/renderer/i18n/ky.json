@@ -140,6 +140,7 @@
             "validate_re_password":"Сураныч, сиз кайра сырсөз",
             "validate_strong_password":"Сураныч, жок дегенде сегиз сырсөз киргизгени",
             "validate_long_password":"Сырсөз 100дөн ашык эмес,",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Сырсөздөр дал келген жок",
 
             "create_success":"ийгилик түзүлүүдө",
@@ -170,7 +171,7 @@
             "backup":"Бул билдирүүдөн кайра кетчү нерсе, мүлктүк зыянга учуратпоо үчүн",
             "input_pwd":"пароль",
             "placeholder_pwd":"Бул каттоо эсеби үчүн сырсөз",
-            "validate_password":"Сураныч, эсеп сырсөз",
+            "validate_password":"Сиз киргизген сырсөз туура эмес",
             "remove_success":"ийгиликтүү алынып салынды"
         }
     },

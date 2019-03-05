@@ -140,6 +140,7 @@
             "validate_re_password":"Iltimos, qaytadan o'rnatgan parolni kiriting",
             "validate_strong_password":"Iltimos, kamida 8 raqamdan iborat parolni kiriting",
             "validate_long_password":"Parol 100 belgidan oshmasligi kerak",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Mos kelmaydigan parol ikki marta kiritildi",
 
             "create_success":"Muvaffaqiyatli yaratildi",
@@ -170,7 +171,7 @@
             "backup":"Mol-mulkka zarar yetkazmaslik uchun ushbu hisobni zaxira qilishga e'tibor bering.",
             "input_pwd":"Parol",
             "placeholder_pwd":"Iltimos, ushbu hisob uchun parolni kiriting",
-            "validate_password":"Iltimos, hisob uchun parolni kiriting",
+            "validate_password":"Siz kiritgan parol noto'g'ri",
             "remove_success":"Muvaffaqiyatli olib tashlandi"
         }
     },

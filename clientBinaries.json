@@ -1,7 +1,7 @@
 {
   "clients": {
     "CanonChain": {
-      "version": "0.9.7",
+      "version": "0.9.7r",
       "platforms": {
         "mac": {
           "x64": {
@@ -18,7 +18,7 @@
                 ],
                 "output": [
                   "CanonChain",
-                  "0.9.7"
+                  "0.9.7r"
                 ]
               }
             }
@@ -39,7 +39,7 @@
                 ],
                 "output": [
                   "CanonChain",
-                  "0.9.7"
+                  "0.9.7r"
                 ]
               }
             }

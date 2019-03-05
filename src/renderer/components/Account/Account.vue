@@ -205,7 +205,6 @@
 const { clipboard } = require("electron");
 import QRCode from "qrcode";
 import { setInterval, clearInterval, setTimeout, clearTimeout } from "timers";
-import { constants } from 'http2';
 
 let self = null;
 let CONTINUATION = 5000; //定时器间隔时间

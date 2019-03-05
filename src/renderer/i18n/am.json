@@ -140,6 +140,7 @@
             "validate_re_password":"እባክህ በድጋሚ ያዋቀውን የይለፍ ቃል አስገባ",
             "validate_strong_password":"እባክዎ ቢያንስ 8 ዲጂት የይለፍ ቃል ያስገቡ",
             "validate_long_password":"የይለፍ ቃል ከ 100 አሃዝ በላይ ሊበልጥ አይችልም",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"ያልተጣጣመ የይለፍ ቃል ሁለት ጊዜ ገብቷል",
 
             "create_success":"በተሳካ ሁኔታ ተፈጥሯል",
@@ -170,7 +171,7 @@
             "backup":"የንብረት አለመበላትን ለማስወገድ እባክዎ ለዚህ መለያ ምትኬ ትኩረት ይስጡ.",
             "input_pwd":"የይለፍ ቃል",
             "placeholder_pwd":"እባክዎ ለእዚህ መለያ የይለፍ ቃሉን ያስገቡ",
-            "validate_password":"እባክዎ ለመለያው የይለፍ ቃል ያስገቡ",
+            "validate_password":"ያስገቡት የይለፍ ቃል ስህተት ነው",
             "remove_success":"በተሳካ ሁኔታ ተወግዷል"
         }
     },

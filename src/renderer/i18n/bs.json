@@ -140,6 +140,7 @@
             "validate_re_password":"Unesite ponovo lozinku koju ste postavili",
             "validate_strong_password":"Unesite lozinku od najmanje 8 znamenki",
             "validate_long_password":"Lozinka ne može biti duža od 100 znamenki",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Dvaput je unesena nedosljedna lozinka",
 
             "create_success":"Uspješno kreiran",
@@ -170,7 +171,7 @@
             "backup":"Obratite pažnju na sigurnosnu kopiju ovog računa kako biste izbjegli oštećenje imovine.",
             "input_pwd":"Lozinka",
             "placeholder_pwd":"Unesite lozinku za ovaj račun",
-            "validate_password":"Unesite lozinku za račun",
+            "validate_password":"Lozinka koju ste unijeli je pogrešna",
             "remove_success":"Uspješno uklonjeno"
         }
     },

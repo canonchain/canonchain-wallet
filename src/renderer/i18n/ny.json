@@ -140,6 +140,7 @@
             "validate_re_password":"Chonde lowetsani mawu achinsinsi omwe mumayikanso",
             "validate_strong_password":"Chonde lowetsani mawu achinsinsi a mawerengero osachepera 8",
             "validate_long_password":"Mawu achinsinsi sangapitirire majindi 100 m'litali",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Chinthu chosasinthika chinalowa kawiri",
 
             "create_success":"Zapangidwa bwino",
@@ -170,7 +171,7 @@
             "backup":"Chonde mvetserani kusungidwa kwa akauntiyi kuti muteteze katundu.",
             "input_pwd":"Chinsinsi",
             "placeholder_pwd":"Chonde lowetsani mawu achinsinsi pa akauntiyi",
-            "validate_password":"Chonde lowetsani mawu achinsinsi pa akaunti",
+            "validate_password":"Mawu achinsinsi omwe mwawalemba ndi olakwika",
             "remove_success":"Ichotsedwa bwino"
         }
     },

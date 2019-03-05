@@ -78,7 +78,7 @@
             "amount_exceeded":"Der Gesamtbetrag der aktuellen Transaktion übersteigt den Kontostand",
 
             "decrypt_err":"Die Analyse der Brieftasche ist fehlgeschlagen. Es kann sich um einen Kennwortfehler handeln",
-            "send_error":"Transaktion fehlgeschlagen: Bitte überprüfen Sie, ob ein ausreichendes Guthaben und eine Minergebühr vorhanden sind"
+            "send_error":"Transaktion fehlgeschlagen: Bitte überprüfen Sie, ob ein ausreichendes Guthaben und eine Miner-Gebühr vorhanden sind"
         }
     },
     "page_account": {
@@ -140,6 +140,7 @@
             "validate_re_password":"Bitte geben Sie das Passwort erneut ein",
             "validate_strong_password":"Bitte geben Sie ein Passwort mit mindestens 8 Ziffern ein",
             "validate_long_password":"Das Passwort darf nicht länger als 100 Zeichen sein",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Inkonsistentes Passwort zweimal eingegeben",
 
             "create_success":"Erfolgreich erstellt",
@@ -155,7 +156,7 @@
             "validate_tag":"Bitte geben Sie den Kontonamen ein",
             "validate_tag_length":"Der Name des Notennamens darf nicht länger als 8 Zeichen sein.",
             "validate_enter_keystore":"Bitte importieren Sie zuerst die Kontodatei",
-            "validate_error_keystore":"Kontoimport fehlgeschlagen, möglicherweise ist ein Kontodateifehler",
+            "validate_error_keystore":"Kontoimport fehlgeschlagen, möglicherweise ist ein Kontodateifehler aufgetreten",
             "imported_account_success":"Erfolgreich importiert",
             "exist":"Dieses Konto existiert bereits, die Notiz ist",
             "keystore_error":"Fehler:",
@@ -170,7 +171,7 @@
             "backup":"Bitte achten Sie auf die Sicherung dieses Kontos, um Sachschäden zu vermeiden.",
             "input_pwd":"Passwort",
             "placeholder_pwd":"Bitte geben Sie das Passwort für dieses Konto ein",
-            "validate_password":"Bitte geben Sie das Passwort für das Konto ein",
+            "validate_password":"Das eingegebene Passwort ist falsch",
             "remove_success":"Erfolgreich entfernt"
         }
     },

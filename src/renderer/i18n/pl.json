@@ -140,6 +140,7 @@
             "validate_re_password":"Wprowadź ponownie ustawione hasło",
             "validate_strong_password":"Wprowadź hasło składające się z co najmniej 8 cyfr",
             "validate_long_password":"Hasło nie może przekraczać 100 cyfr",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Niespójne hasło wpisane dwukrotnie",
 
             "create_success":"Utworzono pomyślnie",
@@ -170,7 +171,7 @@
             "backup":"Zwróć uwagę na kopię zapasową tego konta, aby uniknąć uszkodzenia własności.",
             "input_pwd":"Hasło",
             "placeholder_pwd":"Wprowadź hasło do tego konta",
-            "validate_password":"Wprowadź hasło do konta",
+            "validate_password":"Podane hasło jest nieprawidłowe",
             "remove_success":"Pomyślnie usunięto"
         }
     },
@@ -195,8 +196,8 @@
             "enter_wallet":"Węzeł rozpoczyna wykrywanie, gotowy do wejścia do portfela"
         },
         "version_dialog":{
-            "version_tit":"szybka zmiana wersja",
-            "download_wallet":"Quguan sieci, aby pobrać najnowszą wersję Pieniądze",
+            "version_tit":"Monit aktualizacji wersji",
+            "download_wallet":"Przejdź na oficjalną stronę internetową, aby pobrać najnowszą wersję pieniędzy",
             "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }

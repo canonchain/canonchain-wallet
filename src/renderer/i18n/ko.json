@@ -140,6 +140,7 @@
             "validate_re_password":"다시 설정 한 암호를 입력하십시오.",
             "validate_strong_password":"암호를 8 자리 이상 입력하십시오.",
             "validate_long_password":"암호의 길이는 100 자리를 초과 할 수 없습니다.",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"일치하지 않는 암호가 두 번 입력되었습니다.",
 
             "create_success":"성공적으로 생성되었습니다.",
@@ -170,7 +171,7 @@
             "backup":"재산 피해를 막기 위해이 계좌의 백업에주의하십시오.",
             "input_pwd":"비밀번호",
             "placeholder_pwd":"이 계정의 비밀번호를 입력하십시오.",
-            "validate_password":"계정의 비밀번호를 입력하십시오.",
+            "validate_password":"입력 한 암호가 잘못되었습니다.",
             "remove_success":"삭제 완료"
         }
     },

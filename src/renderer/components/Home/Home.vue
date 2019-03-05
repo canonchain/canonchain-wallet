@@ -96,6 +96,10 @@
                 <p class="remove-acc">
                     {{this.removeInfo.address}}
                 </p>
+                <el-input v-model="removeInfo.pwd" :placeholder="$t('page_home.create_dia.placeholder_repwd')" type="password">
+                    <template slot="prepend">
+                        <i class="el-icon-edit"></i> {{$t('page_home.create_dia.create_repwd')}}</template>
+                </el-input>
             </span>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogSwitch.remove = false">{{ $t('cancel') }}</el-button>
@@ -111,7 +115,6 @@
 const fs = require("fs");
 import { setInterval, clearInterval, clearTimeout, setTimeout } from "timers";
 import { sep } from 'path';
-import { constants } from 'http2';
 const { spawn, spawnSync } = require("child_process");
 const {ipcRenderer} = require('electron')
 
@@ -331,6 +334,13 @@ export default {
                 );
                 return;
             }
+            let reg =/^[0-9a-zA-Z!@#$%^&*]{8,100}$/g;
+            if(!reg.test(this.createInfo.pwd)){
+                this.createInfo.error = this.$t('page_home.create_dia.validate_type_password');
+                return;
+            }
+
+            //正则验证仅仅支持 数字 大小写英文字母 和!@#$%^&*半角字符
 
             const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
             self.createInfo.pwd = "";//初始化密码
@@ -459,7 +469,8 @@ export default {
                 };
                 return;
             }
-            //TODO 导入账户备注
+            //验证账户文件
+
             let params = {
                     address: importObj.account,
                     tag:
@@ -485,6 +496,7 @@ export default {
         showRemoveDia(currentAcc) {
             this.removeInfo = {
                 address: currentAcc,
+                pwd:"",
                 alert: ""
             };
             this.dialogSwitch.remove = true;
@@ -497,10 +509,15 @@ export default {
                 .value();
             if (isKeystoreAccount) {
                 //删除本地账户
-                self.removeSuccess();
+                const accountResult = ipcRenderer.sendSync('remove_account', isKeystoreAccount, self.removeInfo.pwd);
+                self.removeInfo.pwd = "";//初始化密码
+                if(accountResult){
+                    self.removeSuccess();
+                }else{
+                    self.$message.error(self.$t( "page_home.remove_dia.validate_password"));
+                }
             }else{
-                self.$message.error("不存在账户："+self.removeInfo.address);
-            }
+                self.$message.error("不存在账户："+self.removeInfo.address);            }
         },
         removeSuccess(){
             self.$db

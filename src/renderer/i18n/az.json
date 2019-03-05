@@ -140,6 +140,7 @@
             "validate_re_password":"Yenidən təyin etdiyiniz parolunuzu daxil edin",
             "validate_strong_password":"Ən azı 8 rəqəmli parol daxil edin",
             "validate_long_password":"Şifrə uzunluğu 100 rəqəmdən artıq ola bilməz",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Tutarsız parol iki dəfə girdi",
 
             "create_success":"Tərəqqi yaradılıb",
@@ -170,7 +171,7 @@
             "backup":"Zərərin qarşısını almaq üçün bu hesabın zəmanətinə diqqət yetirin.",
             "input_pwd":"Şifrə",
             "placeholder_pwd":"Bu hesab üçün parol daxil edin",
-            "validate_password":"Xahiş edirik hesab üçün parol daxil edin",
+            "validate_password":"Daxil etdiyiniz parol səhvdir",
             "remove_success":"Uğurla silindi"
         }
     },

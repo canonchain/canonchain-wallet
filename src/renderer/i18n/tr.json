@@ -140,6 +140,7 @@
             "validate_re_password":"Lütfen tekrar girdiğiniz şifreyi girin",
             "validate_strong_password":"Lütfen en az 8 basamaklı bir şifre girin",
             "validate_long_password":"Şifre uzunluğu 100 haneyi aşamaz.",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Tutarsız şifre iki kez girildi",
 
             "create_success":"Başarıyla oluşturuldu",
@@ -170,7 +171,7 @@
             "backup":"Maddi zararlardan kaçınmak için lütfen bu hesabın yedeğine dikkat edin.",
             "input_pwd":"şifre",
             "placeholder_pwd":"Lütfen bu hesap için şifreyi girin",
-            "validate_password":"Lütfen hesap için şifreyi girin",
+            "validate_password":"Girdiğiniz şifre yanlış",
             "remove_success":"Başarıyla kaldırıldı"
         }
     },

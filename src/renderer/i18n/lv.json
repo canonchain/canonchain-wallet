@@ -140,6 +140,7 @@
             "validate_re_password":"Lūdzu, ievadiet paroli, kuru vēlreiz iestatījāt",
             "validate_strong_password":"Lūdzu, ievadiet vismaz 8 ciparu paroli",
             "validate_long_password":"Parole nedrīkst pārsniegt 100 ciparus",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Divreiz ievadīta nekonsekventa parole",
 
             "create_success":"Izveidots veiksmīgi",
@@ -170,7 +171,7 @@
             "backup":"Lai izvairītos no īpašuma bojājumiem, lūdzu, pievērsiet uzmanību šī konta dublējumkopijai.",
             "input_pwd":"Parole",
             "placeholder_pwd":"Lūdzu, ievadiet šī konta paroli",
-            "validate_password":"Lūdzu, ievadiet konta paroli",
+            "validate_password":"Ievadītā parole ir nepareiza",
             "remove_success":"Veiksmīgi noņemta"
         }
     },

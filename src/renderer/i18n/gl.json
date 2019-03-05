@@ -140,6 +140,7 @@
             "validate_re_password":"Introduza o contrasinal que configurou de novo",
             "validate_strong_password":"Introduza un contrasinal de polo menos 8 díxitos",
             "validate_long_password":"A contraseña non pode exceder os 100 díxitos",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"Contrasinal inconsistente introducido dúas veces",
 
             "create_success":"Creado con éxito",
@@ -170,7 +171,7 @@
             "backup":"Preste atención á copia de seguridade desta conta para evitar danos á propiedade.",
             "input_pwd":"Contrasinal",
             "placeholder_pwd":"Introduza o contrasinal para esta conta",
-            "validate_password":"Introduce o contrasinal da conta",
+            "validate_password":"O contrasinal que introduciu está mal",
             "remove_success":"Eliminouse con éxito"
         }
     },

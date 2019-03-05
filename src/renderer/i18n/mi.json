@@ -140,6 +140,7 @@
             "validate_re_password":"Tomohia koa te kupuhipa ka tautuhi ano koe",
             "validate_strong_password":"Tomohia he kupuhipa o te iti rawa atu i te 8 tau",
             "validate_long_password":"Kaore e taea e te kupuhipa te neke atu i te 100 tau i te roa",
+            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
             "validate_password_length":"I whakauruhia te kupuhipa e rua",
 
             "create_success":"I waihangatia pai",
@@ -170,7 +171,7 @@
             "backup":"Tena koa whakarongo ki te tahua o tenei kaute hei karo i nga kino o te whare.",
             "input_pwd":"Kupuhipa",
             "placeholder_pwd":"Tomohia te kupuhipa mo tenei kaute",
-            "validate_password":"Tomohia koa te kupuhipa mo te kaute",
+            "validate_password":"He hapa te kupuhipa i uru mai koe",
             "remove_success":"Tangohia angitu ana"
         }
     },
@@ -182,7 +183,7 @@
             "get_latest":"Kua whiwhi nga korero whirihoranga whakamau hou",
             "is_local":"Tirohia mēnā he kōnae kōpaki kei te rohe",
             "already_local":"Kei te noho te kōnae whirihoranga o te kōnae kōpuku i runga i te pūrere o nāianei.",
-            "not_local":"Kaore i te kitea te korero whirihoranga o te kōnae kōpuku, koinei te wa tuatahi e rere ana.",
+            "not_local":"Kaore i kitea te korero whirihoranga o te kōnae kōpuku, ko te wa tuatahi te rere.",
             "config_write_local":"Tuhia te kōnae mōhiohio pungae kua whiwhi ki te kōpae o te rohe",
             "whether_update_node":"Tirohia mehemea he hiahia whakahou",
             "no_need":"本地 CanonChain 节点文件是最新的",
