@@ -56,7 +56,7 @@ BrandingText "CanonChain Wallet"
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File /r "canonchain-wallet\build\win-unpacked\*.*"
+  File /r  /x d3dcompiler_47.dll "canonchain-wallet\build\win-unpacked\*.*"
   CreateShortCut "$DESKTOP\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
 SectionEnd
 

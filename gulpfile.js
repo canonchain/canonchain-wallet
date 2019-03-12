@@ -29,3 +29,16 @@ gulp.task('default', function () {
 gulp.task('watch', function () {
     gulp.watch('i18n/tap-i18n.json', ['default']);
 })
+
+gulp.task('win-build', function () {
+    /**
+     * use build_config/canonchain-new.nsi to
+     * 1.删除d3dcompiler_47.dll
+     * 2.use MakeNSISW to create .exe file
+     */
+
+    /**
+     * 计算exe的sha512，替换latest.yml中的sha512、size字段
+     */
+    
+})
