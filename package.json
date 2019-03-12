@@ -25,7 +25,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://192.168.10.70:3000"
+        "url": "http://axihe-img.test.upcdn.net/demo/canonchain/"
       }
     ],
     "productName": "CanonChain Wallet",

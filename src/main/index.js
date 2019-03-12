@@ -161,8 +161,8 @@ autoUpdater.on('update-not-available', info => {
     mainLogs.info("没有新的钱包程序");
 })
 
-autoUpdater.on('download-progress', (progress, bytesPerSecond, percent, total, transferred) => {
-    mainLogs.info(`progress: ${progress}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
+autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, transferred}) => {
+    mainLogs.info(`delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
 })
 
 autoUpdater.on('update-downloaded', info => {
