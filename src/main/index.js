@@ -154,19 +154,19 @@ autoUpdater.on('checking-for-update', () => {
 })
 
 autoUpdater.on('update-available', info => {
-    mainLogs.info("有新的钱包程序可用");
+    mainLogs.info(`有新的钱包程序可用 info:${JSON.stringify(info)}`);
 })
 
 autoUpdater.on('update-not-available', info => {
-    mainLogs.info("没有新的钱包程序");
+    mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
 })
 
-autoUpdater.on('download-progress', (progress, bytesPerSecond, percent, total, transferred) => {
-    mainLogs.info(`progress: ${progress}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
+autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, transferred}) => {
+    mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
 })
 
 autoUpdater.on('update-downloaded', info => {
-    mainLogs.info("开始更新钱包程序");
+    mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
     setImmediate(() => autoUpdater.quitAndInstall())
 })
 
