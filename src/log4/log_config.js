@@ -8,11 +8,13 @@ const basePath = path.join(utility.userDataPath, 'wallet_logs')
 1.启动时检测日志 start_check
 2.节点状态日志 node_status
 3.操作钱包记录
+4.主进程日志
 */
 let defaultPath     = path.join(basePath, '/default/');
 let startCheck      = path.join(basePath, '/start_check/');
 let nodeStatus      = path.join(basePath, '/node_status/');
 let walletOperate   = path.join(basePath, '/wallet_operate/');
+let mainProcess     = path.join(basePath, '/main_process/');
 
 let confirmPath = function (pathStr) {
     if (!fs.existsSync(pathStr)) {
@@ -27,6 +29,7 @@ if (basePath) {
     confirmPath(startCheck);
     confirmPath(nodeStatus);
     confirmPath(walletOperate);
+    confirmPath(mainProcess);
 }
 
 log4js.configure({
@@ -55,6 +58,12 @@ log4js.configure({
             filename: walletOperate,
             "pattern": "yyyy-MM-dd.log",
             alwaysIncludePattern: true
+        },
+        main_process: {
+            type: 'dateFile',
+            filename: mainProcess,
+            "pattern": "yyyy-MM-dd.log",
+            alwaysIncludePattern: true
         }
     },
     categories: {
@@ -72,6 +81,10 @@ log4js.configure({
         },
         wallet_operate: {
             appenders: ['wallet_operate'],
+            level: 'info'
+        },
+        main_process: {
+            appenders: ['main_process'],
             level: 'info'
         }
     },
