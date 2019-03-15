@@ -1,7 +1,7 @@
 {
   "name": "CanonChain-Wallet",
   "productName": "CanonChain Wallet",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "keywords": [
     "block-wallet"
   ],
@@ -26,7 +26,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://axihe-img.test.upcdn.net/demo/canonchain/"
+        "url": "http://172.16.1.70:3000/"
       }
     ],
     "productName": "CanonChain Wallet",
@@ -108,6 +108,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
     "html-webpack-plugin": "^2.30.1",
+    "js-yaml": "^3.12.2",
     "md5": "^2.2.1",
     "multispinner": "^0.2.1",
     "node-loader": "^0.6.0",
