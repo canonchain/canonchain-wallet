@@ -97,6 +97,6 @@ gulp.task('win-build', function () {
             sha512: hash,
             releaseDate: new Date()
         }
-        outputFile(path.join(__dirname, "latest.yml"),serializeToYaml(pulishConfig))
+        outputFile(path.join(__dirname, "build", "latest.yml"),serializeToYaml(pulishConfig))
     })
 })

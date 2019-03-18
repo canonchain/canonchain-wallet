@@ -47,7 +47,7 @@ SetCompressor lzma
 ; ------ MUI 现代界面定义结束 ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "CanonChain-Wallet-Setup.exe"
+OutFile "..\build\CanonChain-Wallet-Setup.exe"
 InstallDir "$PROGRAMFILES\CanonChain Wallet"
 ShowInstDetails show
 ShowUnInstDetails show
@@ -56,7 +56,7 @@ BrandingText "CanonChain Wallet"
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File /r  /x d3dcompiler_47.dll "canonchain-wallet\build\win-unpacked\*.*"
+  File /r  /x d3dcompiler_47.dll "..\build\win-unpacked\*.*"
   CreateShortCut "$DESKTOP\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
 SectionEnd
 
