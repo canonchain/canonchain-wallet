@@ -3,7 +3,7 @@ os:
   - osx
   - windows
 node_js:
-  - "8.15.0"
+  - "8.4.0"
 install: npm install
 before_script:
   - npm run-script rebuild && npm run-script build
