@@ -9,5 +9,3 @@ npm-debug.log.*
 thumbs.db
 !.gitkeep
 .idea
-package-lock.json
-package-lock.json
