@@ -42,7 +42,7 @@ const winURL = process.env.NODE_ENV === 'development'
     ? `http://localhost:9080`
     : `file://${__dirname}/index.html`
 
-const winWidth = process.env.NODE_ENV === 'development' ? (815 + 580) : 815;
+// const winWidth = process.env.NODE_ENV === 'development' ? (815 + 580) : 815;
 
 if (!gotTheLock) {
     app.quit()
@@ -67,7 +67,7 @@ if (!gotTheLock) {
 function createWindow() {
     // Create browser window
     mainWindow = new BrowserWindow({
-        width: winWidth,
+        width: 815,
         height: 600,
         icon: "./static/icons/logo.png",
         title: "CanonChain Wallet",

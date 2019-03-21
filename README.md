@@ -14,6 +14,6 @@ Win:`/c/Users/Administrator/AppData/Roaming/CanonChain Wallet`;
 
 ### 推荐版本号
 
-> Nodejs：`v8.4.0`
+> Nodejs：`v10.15.3`
 
-> npm:`5.3.0`
+> npm:`6.4.0`
