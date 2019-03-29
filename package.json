@@ -1,7 +1,7 @@
 {
   "name": "CanonChain-Wallet",
   "productName": "CanonChain Wallet",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "keywords": [
     "block-wallet"
   ],
@@ -26,7 +26,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://172.16.1.70:3000/"
+        "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/wallet/latest/"
       }
     ],
     "productName": "CanonChain Wallet",
