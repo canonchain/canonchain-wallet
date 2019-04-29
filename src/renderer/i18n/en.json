@@ -21,7 +21,11 @@
         "tit":"Setting",
         "lang":"Language",
         "select":"please choose",
-        "version_number":"Wallet version"
+        "version_number":"Wallet version",
+        "data_path":"Node data path",
+        "change":"Change",
+        "changeDirNote":"Please move the files under the original path to the new directory, otherwise the data will be lost.",
+        "note":"Note"
     },
     "page_contacts": {
         "tit":"Contact",
@@ -59,6 +63,7 @@
         "total":"total",
         "select":"please choose",
         "no_account_info":"No account yet, please create or import account",
+        "no_keystore_file":"No account file for the corresponding account was found",
         "contacts_dig": {
             "title":"Select a contact account",
             "select_placeholder":"please choose"
@@ -78,7 +83,10 @@
             "amount_exceeded":"Current transaction total amount exceeds account balance",
 
             "decrypt_err":"Wallet parsing failed, it may be a password error",
-            "send_error":"Transaction failed: please check if there is sufficient balance and miner fee"
+            "send_error":"Transaction failed: please check if there is sufficient balance and miner fee",
+            "generate_offline_block_err":"Failure to generate unsigned transactions",
+            "sign_err":"Signature failed",
+            "send_offline_block_err":"Failed to send signed transaction"
         }
     },
     "page_account": {
@@ -129,8 +137,8 @@
             "placeholder_tag":"Please set the account note name",
             "placeholder_pwd":"Please set the account password",
             "placeholder_repwd":"Please confirm the account password",
-            
-            
+
+
             "account_download_keystore":"Download account file",
 
             "validate_tag":"Please enter the account note name",
@@ -148,7 +156,7 @@
             "create_success_des":"Please save your account file and don't share it with anyone!"
         },
         "import_dia": {
-            "tit":"Import account",    
+            "tit":"Import account",
             "placeholder_keystore":"Please drag the account file here",
             "create_tag":"Account note",
             "placeholder_tag":"Please set the account note name",
@@ -193,7 +201,8 @@
             "no":"Downloading node program, please be patient",
             "already_downloaded":"The node program has been downloaded and ready to start.",
             "ready_start":"Prepare to start the node",
-            "enter_wallet":"Node starts detection, ready to enter the wallet"
+            "enter_wallet":"Node starts detection, ready to enter the wallet",
+            "specifyDataDir":"Please select the storage path for node data"
         },
         "version_dialog":{
             "version_tit":"Version update prompt",

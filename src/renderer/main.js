@@ -17,9 +17,9 @@ import languges from '../../i18n/languges_conf'
 
 //log4js
 let logConfig = require('../log4/log_config.js');
-let startLogs = logConfig.getLogger('start_check') ;        //此处使用category的值
-let nodeLogs = logConfig.getLogger('node_status') ;        //此处使用category的值
-let walletLogs = logConfig.getLogger('wallet_operate')    ;      //此处使用category的值 
+let startLogs = logConfig.getLogger('start_check');        //此处使用category的值
+let nodeLogs = logConfig.getLogger('node_status');        //此处使用category的值
+let walletLogs = logConfig.getLogger('wallet_operate');      //此处使用category的值
 Vue.prototype.$startLogs = startLogs
 Vue.prototype.$nodeLogs = nodeLogs
 Vue.prototype.$walletLogs = walletLogs
@@ -31,7 +31,9 @@ Vue.use(VueI18n);
 Vue.use(ElementUI);
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 
-let czr = new Czr();
+let czr = new Czr({
+    dev: process.env.NODE_ENV !== 'production'
+});
 Vue.czr = Vue.prototype.$czr = czr;
 
 Vue.prototype.$db = db
@@ -49,7 +51,6 @@ const i18n = new VueI18n({
     locale: locale,// set locale
     messages,       // set locale messages 
 });
-
 
 
 /* eslint-disable no-new */

@@ -30,6 +30,8 @@
     // 检测是否在线
     import {setTimeout} from "timers";
 
+    const dialog = remote.dialog
+
 
     let continued = 500;
 
@@ -259,6 +261,16 @@
                 }
 
             },
+            specifyNodeDir() {
+                // dialog.showOpenDialog @return {String[] | undefined}
+                const res = dialog.showOpenDialog({
+                    title: self.$t("page_config.content_msg.specifyDataDir"),
+                    // defaultPath: '',
+                    properties: ['openDirectory'],
+                })
+                if(!res) return
+                return res[0]
+            },
             runCanonChain() {
                 let nodePath = path.join(
                     this.userDataPath,
@@ -279,11 +291,25 @@
                     .catch(error => {
                         // console.log("本地没有节点，需要启动");
                         self.$startLogs.info("本地没有节点，需要启动");
+                        let dir
+                        // 读取设置中的节点数据存储路径
+                        const dirSet = self.$db.get('czr_setting.canonchain_data_path').value()
+                        if (dirSet) {
+                            dir = dirSet
+                        } else {
+                            dir = self.specifyNodeDir()
+                        }
+                        if (!dir) {
+                            dir = path.join(remote.app.getPath('appData'), "Canonchain")
+                        }
                         let ls = spawn(nodePath, [
                             "--daemon",
-                            "--rpc_enable",
-                            "--rpc_enable_control"
+                            "--rpc",
+                            "--rpc_control",
+                            "--data_path",
+                            dir
                         ]);
+                        self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
                         self.conMsg = self.$t("page_config.content_msg.enter_wallet");
                         self.$startLogs.info("CanonChainPid", ls.pid);
@@ -319,10 +345,13 @@
             guardNode(ls, nodePath) {
                 self.$nodeLogs.info("守护进程开启", ls.pid);
                 ls.on("exit", () => {
+                    const dir = self.$db.get('czr_setting.canonchain_data_path').value()
                     ls = spawn(path.join(nodePath), [
                         "--daemon",
-                        "--rpc_enable",
-                        "--rpc_enable_control"
+                        "--rpc",
+                        "--rpc_control",
+                        "--data_path",
+                        dir
                     ]);
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);

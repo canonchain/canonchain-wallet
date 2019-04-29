@@ -4,7 +4,8 @@
             <el-form ref="form" label-width="100px" v-if="this.database.length>0">
                 <el-form-item :label="$t('page_transfer.from_address')">
                     <el-select v-model="fromInfo.account" :placeholder="$t('page_transfer.select')" style="width:100%;">
-                        <el-option v-for="item in database" :key="item.address" :label="item.address" :value="item.address">
+                        <el-option v-for="item in database" :key="item.address" :label="item.address"
+                                   :value="item.address">
                             <span style="float: left">{{ item.tag }}</span>
                             <span style="float: right; color: #8492a6; font-size: 13px">{{ item.address }}</span>
                         </el-option>
@@ -35,7 +36,8 @@
                 </el-form-item>
 
                 <el-form-item>
-                    <el-input type="textarea" :rows="4" :placeholder="$t('page_transfer.data_placeholder')" v-model="extraData"></el-input>
+                    <el-input type="textarea" :rows="4" :placeholder="$t('page_transfer.data_placeholder')"
+                              v-model="extraData"></el-input>
                 </el-form-item>
 
                 <el-form-item>
@@ -52,7 +54,8 @@
         <!-- Dialog select contacts -->
         <el-dialog :title="$t('page_transfer.contacts_dig.title')" :visible.sync="dialogSwitch.contacts" width="70%">
             <span>
-                <el-select v-model="selectedContact" :placeholder="$t('page_transfer.contacts_dig.select_placeholder')" style="width:100%;">
+                <el-select v-model="selectedContact" :placeholder="$t('page_transfer.contacts_dig.select_placeholder')"
+                           style="width:100%;">
                     <el-option v-for="item in contacts" :key="item.address" :label="item.tag" :value="item.address">
                         <span style="float: left">{{ item.tag }}</span>
                         <span style="float: right; color: #8492a6; font-size: 13px">{{ item.address }}</span>
@@ -91,9 +94,12 @@
                     <el-button type="primary" @click="dialogSwitch.password = true">{{$t('confirm')}}</el-button>
                 </div>
 
-                <el-dialog width="60%" :title="$t('page_transfer.confirm_dia.enter_passworld_tit')" :visible.sync="dialogSwitch.password" @open='openPwd' append-to-body>
+                <el-dialog width="60%" :title="$t('page_transfer.confirm_dia.enter_passworld_tit')"
+                           :visible.sync="dialogSwitch.password" @open='openPwd' append-to-body>
                     <el-form ref="form" label-width="100px">
-                        <el-input v-model="fromInfo.password" :placeholder="$t('page_transfer.confirm_dia.enter_passworld_place')" type="password"></el-input>
+                        <el-input v-model="fromInfo.password"
+                                  :placeholder="$t('page_transfer.confirm_dia.enter_passworld_place')"
+                                  type="password"></el-input>
                     </el-form>
 
                     <div slot="footer" class="dialog-footer">
@@ -109,297 +115,379 @@
 </template>
 
 <script>
-import { setInterval, clearInterval } from "timers";
-let self = null;
-export default {
-    name: "Transfer",
-    data() {
-        return {
-            dialogSwitch: {
-                contacts: false,
-                confrim: false,
-                password: false
-            },
+    import {setInterval, clearInterval} from "timers";
 
-            database: [],
-            contacts: [],
+    let self = null;
+    export default {
+        name: "Transfer",
+        data() {
+            return {
+                dialogSwitch: {
+                    contacts: false,
+                    confrim: false,
+                    password: false
+                },
 
-            checkedAll: false,
-            selectedContact: "",
+                database: [],
+                contacts: [],
 
-            fromInfo: {
-                account: "",
-                password: ""
-            },
-            submitInfo: {},
-            isSubmit: false,
+                checkedAll: false,
+                selectedContact: "",
 
-            toAccount: "",
-            amount: 0,
-            gas:0,
-            gasPrice: "",
-            feePercent: 100,
-            gasLimit: 200000, //参考  myetherwallet
-            extraData: ""
-        };
-    },
+                fromInfo: {
+                    account: "",
+                    password: ""
+                },
+                submitInfo: {},
+                isSubmit: false,
 
-    created() {
-        self = this;
-        this.contacts = this.$db.get("czr_contacts.contact_ary").value();
+                toAccount: "",
+                amount: 0,
+                gas: 0,
+                gasPrice: "",
+                feePercent: 100,
+                gasLimit: 200000, //参考  myetherwallet
+                extraData: ""
+            };
+        },
 
-        self.initDatabase();
-        if (this.database.length) {
-            this.fromInfo = {
-                account:
+        created() {
+            self = this;
+            this.contacts = this.$db.get("czr_contacts.contact_ary").value();
+
+            self.initDatabase();
+            if (this.database.length) {
+                this.fromInfo = {
+                    account:
                     this.$route.query.account || this.database[0].address || "",
-                password: ""
-            };
-            self.intervalId = setInterval(() => {
-                self.initDatabase();
-            }, 2000);
-        }
-    },
-    beforeDestroy() {
-        clearInterval(self.intervalId);
-    },
-    computed: {
-        //Init
-        accountInfo() {
-            if (this.fromInfo.account) {
-                return this.database.find(
-                    item => item.address === this.fromInfo.account
-                );
-            } else {
-                return {};
-            }
-        }
-    },
-    methods: {
-        //Init data
-        initDatabase() {
-            this.database = this.$db.get("czr_accounts").value();
-        },
-        //选择联系人
-        confrimContacts() {
-            this.toAccount = this.selectedContact;
-            this.dialogSwitch.contacts = false;
-        },
-
-        //发送全部金额
-        sendAllAmount() {
-            if (this.checkedAll) {
-                let weiVal = this.accountInfo.balance;
-                let targetVal = self.$czr.utils.fromWei(weiVal, "czr");
-                this.amount = Number(targetVal) >= 0 ? targetVal : 0;
-            } else {
-                this.amount = 0;
+                    password: ""
+                };
+                self.intervalId = setInterval(() => {
+                    self.initDatabase();
+                }, 2000);
             }
         },
-
-        //确认验证
-        validateForm() {
-            let self = this;
-            let reg = /^\d+(\.\d{1,18})?$/;
-            let regObj = reg.exec(self.amount);
-            let czrAmount = parseFloat(
-                self.$czr.utils.toWei(self.amount, "czr")
-            );
-
-            if (!self.toAccount) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.address_null")
-                );
-                return;
+        beforeDestroy() {
+            clearInterval(self.intervalId);
+        },
+        computed: {
+            //Init
+            accountInfo() {
+                if (this.fromInfo.account) {
+                    return this.database.find(
+                        item => item.address === this.fromInfo.account
+                    );
+                } else {
+                    return {};
+                }
             }
+        },
+        methods: {
+            //Init data
+            initDatabase() {
+                this.database = this.$db.get("czr_accounts").value();
+            },
+            //选择联系人
+            confrimContacts() {
+                this.toAccount = this.selectedContact;
+                this.dialogSwitch.contacts = false;
+            },
 
-            //发送金额 非数字，不可发送
-            if (!regObj) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.amount_error")
+            //发送全部金额
+            sendAllAmount() {
+                if (this.checkedAll) {
+                    let weiVal = this.accountInfo.balance;
+                    let targetVal = self.$czr.utils.fromWei(weiVal, "czr");
+                    this.amount = Number(targetVal) >= 0 ? targetVal : 0;
+                } else {
+                    this.amount = 0;
+                }
+            },
+
+            //确认验证
+            validateForm() {
+                let self = this;
+                let reg = /^\d+(\.\d{1,18})?$/;
+                let regObj = reg.exec(self.amount);
+                let czrAmount = parseFloat(
+                    self.$czr.utils.toWei(self.amount, "czr")
                 );
-                return;
-            }
 
-            // 账户余额为0不可以发
-            if (!parseFloat(self.accountInfo.balance)) {
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.balance_zero")
-                );
-                return;
-            }
+                if (!self.toAccount) {
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.address_null")
+                    );
+                    return;
+                }
 
-            // 金额 + gas*price <= balance  !!  self.accountInfo.balance
-            let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-            let gasValue = self.$czr.utils.toWei(this.gas, "czr");
-            if((amountValue+gasValue)>self.accountInfo.balance){
-                self.$message.error(
-                    self.$t("page_transfer.msg_info.amount_exceeded")
-                );
-                return;
-            }
+                //发送金额 非数字，不可发送
+                if (!regObj) {
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.amount_error")
+                    );
+                    return;
+                }
 
-            self.$czr.request
-                .accountValidate(self.toAccount)
-                .then(data => {
-                    // console.log("accountValidate then", data);
-                    return data.valid;
-                })
-                .catch(error => {
-                    // console.log("accountValidate catch", error);
-                })
-                .then(data => {
-                    // console.log("then", data);
-                    if (data == "1") {
-                        self.dialogSwitch.confrim = true;
-                    } else if (data == "0") {
-                        self.$message.error(
-                            self.$t("page_transfer.msg_info.address_err")
-                        );
+                // 账户余额为0不可以发
+                // if (!parseFloat(self.accountInfo.balance)) {
+                //     self.$message.error(
+                //         self.$t("page_transfer.msg_info.balance_zero")
+                //     );
+                //     return;
+                // }
+
+                // 金额 + gas*price <= balance  !!  self.accountInfo.balance
+                let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+                let gasValue = self.$czr.utils.toWei(this.gas, "czr");
+                if ((amountValue + gasValue) > self.accountInfo.balance) {
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.amount_exceeded")
+                    );
+                    return;
+                }
+
+                self.$czr.request
+                    .accountValidate(self.toAccount)
+                    .then(data => {
+                        // console.log("accountValidate then", data);
+                        return data.valid;
+                    })
+                    .catch(error => {
+                        // console.log("accountValidate catch", error);
+                    })
+                    .then(data => {
+                        // console.log("then", data);
+                        if (data == "1") {
+                            self.dialogSwitch.confrim = true;
+                        } else if (data == "0") {
+                            self.$message.error(
+                                self.$t("page_transfer.msg_info.address_err")
+                            );
+                        }
+                    });
+            },
+            openPwd() {
+                self.fromInfo.password = "";
+            },
+            async sendTransaction() {
+                let self = this;
+                if (!self.isSubmit) {
+                    self.isSubmit = true;
+                } else {
+                    return;
+                }
+                let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+                let gasValue = self.$czr.utils.toWei(this.gas, "czr");
+                let id = Math.random();
+// TODO change this flow to Sign tran first then send to czr node
+                const keystore = self.$db.get("accounts_keystore")
+                    .filter(keystore => keystore.account === self.fromInfo.account)
+                    .value()
+                if (!keystore.length) {
+                    self.$message.error(self.$t('page_transfer.no_keystore_file'));
+                    self.isSubmit = false;
+                    return
+                }
+                let privateKey;
+                try {
+                    privateKey = await self.$czr.accounts.decrypt(keystore[0], self.fromInfo.password)
+                } catch (e) {
+                    self.$message.error(self.$t('page_transfer.msg_info.decrypt_err'))
+                    self.isSubmit = false;
+                    return
+                }
+
+                let sendObj = {
+                    from: self.fromInfo.account,
+                    to: self.toAccount,
+                    amount: amountValue,
+                    gas: +gasValue,
+                    gas_price: '1000', // for test
+                    password: self.fromInfo.password,
+                    data: self.extraData,
+                    id: id
+                }, transaction, signature, res;
+console.log('sendObj',sendObj)
+                try {
+                    res = await self.$czr.request.generateOfflineBlock(sendObj)
+                    if(res.code !== 0) {
+                        throw new Error(res.msg)
                     }
-                });
-        },
-        openPwd() {
-            self.fromInfo.password = "";
-        },
-        sendTransaction() {
-            let self = this;
-            if (!self.isSubmit) {
-                self.isSubmit = true;
-            } else {
-                return;
-            }
-            let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-            let gasValue = self.$czr.utils.toWei(this.gas, "czr");
-            let id = Math.random();
-
-            let sendObj = {
-                from: self.fromInfo.account,
-                to: self.toAccount,
-                amount: amountValue,
-                gas: gasValue,
-                password: self.fromInfo.password,
-                data: self.extraData, 
-                id: id
-            };
-            self.$czr.request
-                .send(sendObj)
-                .then(data => {
-                    return data;
-                })
-                .then(data => {
-                    if (!data.error) {
-                        self.$message.success(
-                            self.$t("page_transfer.msg_info.send_success")
-                        );
-                        //Clear data
-                        self.dialogSwitch.confrim = false;
-                        self.dialogSwitch.password = false;
-                        //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
-                        let sendBlockInfo = {
-                            hash: data.block,
-                            from: self.fromInfo.account,
-                            to: self.toAccount,
-                            amount: amountValue,
-                            gas : gasValue,
-                            is_stable:"0",
-                            exec_timestamp: Math.ceil(
-                                new Date().getTime() / 1000
-                            )
-                        };
-                        self.writeTransToSql(sendBlockInfo);
-                        // console.log(data);
-                        // self.$router.push("/account/" + self.fromInfo.account);
-                    } else {
-                        self.isSubmit = false;
-                        self.$message.error(data.error);
+                    transaction = res
+                } catch (e) {
+                    self.$message.error(self.$t('page_transfer.msg_info.generate_offline_block_err'))
+                    self.isSubmit = false;
+                    console.log(e)
+                    return
+                }
+console.log('transaction',transaction)
+                try {
+                    res = await self.$czr.accounts.sign(transaction, privateKey)
+                    if(res.code !== 0) {
+                        throw new Error(res.msg)
                     }
-                });
+                    signature = res
+                } catch (e) {
+                    self.$message.error(self.$t('page_transfer.msg_info.sign_err'))
+                    self.isSubmit = false;
+                    console.log(e)
+                    return
+                }
+
+                transaction.signature = signature
+
+                try {
+                    res = await self.$czr.request.sendOfflineBlock(transaction)
+                } catch (e) {
+                    self.$message.error(self.$t('page_transfer.msg_info.send_offline_block_err'))
+                    self.isSubmit = false;
+                    console.log(e)
+                    return
+                }
+
+                if (res.code === 0) {
+                    self.$message.success(
+                        self.$t("page_transfer.msg_info.send_success")
+                    );
+                    //Clear data
+                    self.dialogSwitch.confrim = false;
+                    self.dialogSwitch.password = false;
+                    //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
+                    let sendBlockInfo = {
+                        hash: res.hash,
+                        from: self.fromInfo.account,
+                        to: self.toAccount,
+                        amount: amountValue,
+                        gas: gasValue,
+                        is_stable: "0",
+                        exec_timestamp: Math.ceil(
+                            new Date().getTime() / 1000
+                        )
+                    };
+                    self.writeTransToSql(sendBlockInfo);
+                    // console.log(res);
+                    // self.$router.push("/account/" + self.fromInfo.account);
+                } else {
+                    self.isSubmit = false;
+                    self.$message.error(res.error);
+                }
+
+                // self.$czr.request
+                //     .send(sendObj)
+                //     .then(data => {
+                //         return data;
+                //     })
+                //     .then(data => {
+                //         if (!data.error) {
+                //             self.$message.success(
+                //                 self.$t("page_transfer.msg_info.send_success")
+                //             );
+                //             //Clear data
+                //             self.dialogSwitch.confrim = false;
+                //             self.dialogSwitch.password = false;
+                //             //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
+                //             let sendBlockInfo = {
+                //                 hash: data.block,
+                //                 from: self.fromInfo.account,
+                //                 to: self.toAccount,
+                //                 amount: amountValue,
+                //                 gas: gasValue,
+                //                 is_stable: "0",
+                //                 exec_timestamp: Math.ceil(
+                //                     new Date().getTime() / 1000
+                //                 )
+                //             };
+                //             self.writeTransToSql(sendBlockInfo);
+                //             // console.log(data);
+                //             // self.$router.push("/account/" + self.fromInfo.account);
+                //         } else {
+                //             self.isSubmit = false;
+                //             self.$message.error(data.error);
+                //         }
+                //     });
+            },
+            writeTransToSql(blockInfo) {
+                //写入sendlist
+                self.$db
+                    .get("send_list." + blockInfo.from)
+                    .push(blockInfo)
+                    .write();
+                self.$router.push("/account/" + self.fromInfo.account);
+            }
         },
-        writeTransToSql(blockInfo) {
-            //写入sendlist
-            self.$db
-                .get("send_list."+blockInfo.from)
-                .push(blockInfo)
-                .write();
-            self.$router.push("/account/" + self.fromInfo.account);
+        filters: {
+            toCzrVal(val) {
+                let tempVal = self.$czr.utils.fromWei(val, "czr");
+                return tempVal;
+            }
         }
-    },
-    filters: {
-        toCzrVal(val) {
-            let tempVal = self.$czr.utils.fromWei(val, "czr");
-            return tempVal;
-        }
-    }
-};
+    };
 </script>
 <style scoped>
-.page-transfer {
-    text-align: left;
-    background: #fff;
-    border-top: 1px solid rgba(0, 0, 0, 0.25);
-    padding: 40px 0 35px;
-}
-.transfer-cont {
-    padding: 0 90px;
-    min-height: 450px;
-}
-.page-transfer .bui-form-selector {
-    width: 420px;
-    font-size: 14px;
-}
-.page-transfer .bui-form-item {
-    padding-left: 220px;
-}
-.tran_input {
-    width: 300px;
-}
-.select-none {
-    -webkit-user-select: none;
-}
-.expected-assets {
-    margin-top: 14px;
-}
-
-.trigger-contacts {
-    width: 50px;
-    height: 38px;
-    background: #fff;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    z-index: 2;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.trigger-contacts .el-icon-tickets {
-    font-size: 24px;
-    padding-left: 13px;
-    padding-top: 7px;
-    color: #a7aaaf;
-}
-.trigger-contacts:hover {
-    background: #dbdbff;
-}
-.trigger-contacts:hover .el-icon-tickets {
-    color: #5a59a0;
-}
-
-.send-all-assets {
-    margin-left: 20px;
-    font-size: 16px;
-}
-.speculate-wrap {
-    color: rgb(168, 168, 168);
-}
-.no-account-icon {
-    font-size: 100px;
-    display: block;
-    text-align: center;
-    margin-top: 50px;
-}
-.no-account-des {
-    text-align: center;
-    margin-top: 40px;
-}
+    .page-transfer {
+        text-align: left;
+        background: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
+        padding: 40px 0 35px;
+    }
+    .transfer-cont {
+        padding: 0 90px;
+        min-height: 450px;
+    }
+    .page-transfer .bui-form-selector {
+        width: 420px;
+        font-size: 14px;
+    }
+    .page-transfer .bui-form-item {
+        padding-left: 220px;
+    }
+    .tran_input {
+        width: 300px;
+    }
+    .select-none {
+        -webkit-user-select: none;
+    }
+    .expected-assets {
+        margin-top: 14px;
+    }
+    .trigger-contacts {
+        width: 50px;
+        height: 38px;
+        background: #fff;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 2;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .trigger-contacts .el-icon-tickets {
+        font-size: 24px;
+        padding-left: 13px;
+        padding-top: 7px;
+        color: #a7aaaf;
+    }
+    .trigger-contacts:hover {
+        background: #dbdbff;
+    }
+    .trigger-contacts:hover .el-icon-tickets {
+        color: #5a59a0;
+    }
+    .send-all-assets {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    .speculate-wrap {
+        color: rgb(168, 168, 168);
+    }
+    .no-account-icon {
+        font-size: 100px;
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .no-account-des {
+        text-align: center;
+        margin-top: 40px;
+    }
 </style>

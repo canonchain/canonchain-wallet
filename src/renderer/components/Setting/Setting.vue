@@ -20,6 +20,10 @@
                         </el-option>
                     </el-select>
                 </el-form-item>
+                <el-form-item :label="$t('page_setting.data_path')">
+                    <p>{{data_path}}</p>
+                    <el-button @click="changeDataPath">{{$t('page_setting.change')}}</el-button>
+                </el-form-item>
                 <el-form-item :label="$t('page_setting.version_number')">
                     <p>{{walletVer}}</p>
                 </el-form-item>
@@ -30,13 +34,16 @@
 
 <script>
 const packageJson = require("../../../../package.json");
+import {remote} from 'electron'
+const dialog = remote.dialog
 
 export default {
     name: "Setting",
     data() {
         return {
             walletVer: packageJson.version,
-            value: this.$db.get("czr_setting.lang").value()
+            value: this.$db.get("czr_setting.lang").value(),
+            data_path:this.$db.get('czr_setting.canonchain_data_path').value()
         };
     },
     computed: {
@@ -53,6 +60,21 @@ export default {
         }
     },
     methods: {
+        changeDataPath(){
+            this.$alert(this.$t('page_setting.changeDirNote'),this.$t('page_setting.note'))
+                .then(()=>{
+                    const res = dialog.showOpenDialog({
+                        title: this.$t("page_config.content_msg.specifyDataDir"),
+                        defaultPath: this.data_path,
+                        properties: ['openDirectory'],
+                    })
+                    if(!res) return
+                    const dir = res[0]
+                    this.$db.set('czr_setting.canonchain_data_path', dir).write()
+                    remote.app.relaunch()
+                    remote.app.quit()
+                })
+        },
         selectVal(val) {
             //Write to the database
             this.$db

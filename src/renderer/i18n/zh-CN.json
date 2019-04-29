@@ -21,7 +21,11 @@
         "tit":"设置",
         "lang":"语言",
         "select":"请选择",
-        "version_number":"钱包版本"
+        "version_number":"钱包版本",
+        "data_path":"节点数据路径",
+        "change":"更改",
+        "changeDirNote":"请将原路径下的文件移动到新目录下，否则会造成数据丢失",
+        "note":"注意"
     },
     "page_contacts": {
         "tit":"联系人",
@@ -59,6 +63,7 @@
         "total":"合计",
         "select":"请选择",
         "no_account_info":"暂无账号，请创建或者导入账号",
+        "no_keystore_file":"未找到对应账号的账户文件",
         "contacts_dig": {
             "title":"选择联系人账号",
             "select_placeholder":"请选择"
@@ -78,7 +83,10 @@
             "amount_exceeded":"当前交易总金额超出账户余额",
 
             "decrypt_err":"钱包解析失败，可能是密码错误",
-            "send_error":"交易失败：请检查是否有足量余额和矿工费"
+            "send_error":"交易失败：请检查是否有足量余额和矿工费",
+            "generate_offline_block_err":"生成未签名的交易失败",
+            "sign_err":"签名失败",
+            "send_offline_block_err":"发送已签名交易失败"
         }
     },
     "page_account": {
@@ -193,7 +201,8 @@
             "no":"正在下载节点程序,请耐心等待",
             "already_downloaded":"节点程序已经下载好，准备启动",
             "ready_start":"准备启动节点",
-            "enter_wallet":"节点启动检测，准备进入钱包"
+            "enter_wallet":"节点启动检测，准备进入钱包",
+            "specifyDataDir":"请选择节点数据的存储路径"
         },
         "version_dialog":{
             "version_tit":"版本更新提示",
