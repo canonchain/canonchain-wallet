@@ -77,7 +77,7 @@
                         <template slot="prepend">
                             <i class="el-icon-document"></i> {{$t('page_home.import_dia.create_tag')}}</template>
                     </el-input>
-                    
+
                 </template>
                 <div slot="footer">
                     <el-button @click="dialogSwitch.import = false">{{ $t('cancel') }}</el-button>
@@ -132,6 +132,10 @@ let updataBlockData={
 }
 
 const app = require("electron").remote.app;
+
+app.on('before-quit', () => {
+    self.$nodeLogs.info("before-quit start");
+})
 
 app.on("will-quit", () => {
     //应用程序的窗口已经关闭，应用即将退出
@@ -355,7 +359,7 @@ export default {
                             (self.database.length + 1),
                     balance: 0,
                     send_list: []
-                }; 
+                };
                 self.initAccount(params);
                 self.pushKeystore(accountResult);
                 self.createInfo.step = 1;
@@ -405,7 +409,7 @@ export default {
                 } catch(e) {
                     targetJson = '';
                 }
-                
+
                 if(!targetJson){
                     self.$message.error(
                         self.$t(
@@ -424,7 +428,7 @@ export default {
                     return;
                 }
                 let importObjec = this.$db .read() .get("czr_accounts") .find({ address:targetJson.account }).value() // this.importInfo.keystore = JSON.parse(data);
-                
+
                 if(importObjec){
                     self.$message.error(
                         self.$t(
@@ -433,7 +437,7 @@ export default {
                     );
                     return;
                 }
-                
+
                 this.importInfo.keystore = data;
                 this.importInfo.alert = {
                     content: this.$t("page_home.import_dia.imported_success"),
@@ -479,7 +483,7 @@ export default {
                             (self.database.length + 1),
                     balance: 0,
                     send_list: []
-                }; 
+                };
             self.initAccount(params);
             self.pushKeystore(JSON.parse(self.importInfo.keystore));
             self.dialogSwitch.import = false;
@@ -616,7 +620,7 @@ export default {
 
         }
         // Update send block end
-        
+
     },
     filters: {
         toCzrVal(val) {
@@ -710,7 +714,7 @@ export default {
   width: 64px;
   height: 64px;
   border-radius:50%;
-  text-align: center; 
+  text-align: center;
   background-color: #1E8FAA ;
 } */
 .accounrt-item .account-avatar {

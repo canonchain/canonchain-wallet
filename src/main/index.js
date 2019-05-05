@@ -2,6 +2,12 @@ import {app, BrowserWindow, Menu, dialog, ipcMain} from 'electron'
 // import { app, BrowserWindow, Tray, Menu, Notification, clipboard, ipcMain, globalShortcut, dialog } from 'electron'
 // const ClientBinaryManager = require('../../modules/clientBinaryManager');
 
+
+let logConfig = require('../log4/log_config.js');
+let mainLogs = logConfig.getLogger('main_process');
+mainLogs.info("********** 主进程开始 ********** ");
+
+
 let menu;
 // const path          = require('path');
 // const url           = require('url');
@@ -140,9 +146,6 @@ const createMenu = () => {
 
 
 import {autoUpdater} from 'electron-updater'
-
-let logConfig = require('../log4/log_config.js');
-let mainLogs = logConfig.getLogger('main_process');
 
 autoUpdater.on('error', (error) => {
     mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
