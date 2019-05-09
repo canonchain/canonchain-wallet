@@ -175,7 +175,9 @@ export default {
             },
             fullscreenLoading:false,
             database: [],
-            createInfo: {},
+            createInfo: {
+                address:'',
+            },
             importInfo: {},
             removeInfo: {},
             timerSwitch:{
@@ -285,7 +287,7 @@ export default {
         },
 
         // Create Account Start
-        createAccount() {
+        async createAccount() {
             if(self.database.length>=50){
                 self.$message.error(self.$t("page_home.create_dia.account_quantity_error"));
                 return;
@@ -346,7 +348,8 @@ export default {
 
             //正则验证仅仅支持 数字 大小写英文字母 和!@#$%^&*半角字符
 
-            const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
+            // const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
+            const accountResult = await self.$czr.accounts.create(self.createInfo.pwd)
             self.createInfo.pwd = "";//初始化密码
             if(accountResult.account){
                 self.createInfo.keystore = JSON.stringify(accountResult);
@@ -505,7 +508,7 @@ export default {
             };
             this.dialogSwitch.remove = true;
         },
-        removeAccountFn() {
+        async removeAccountFn() {
             //判断keystore是否在本地，如果在本地，删除本地账号系统；否则请求节点删除
             let isKeystoreAccount = this.$db
                 .get("accounts_keystore")
@@ -513,7 +516,8 @@ export default {
                 .value();
             if (isKeystoreAccount) {
                 //删除本地账户
-                const accountResult = ipcRenderer.sendSync('remove_account', isKeystoreAccount, self.removeInfo.pwd);
+                // const accountResult = ipcRenderer.sendSync('remove_account', isKeystoreAccount, self.removeInfo.pwd);
+                const accountResult = await self.$czr.accounts.validate_account(isKeystoreAccount, self.removeInfo.pwd)
                 self.removeInfo.pwd = "";//初始化密码
                 if(accountResult){
                     self.removeSuccess();

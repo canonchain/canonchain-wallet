@@ -237,6 +237,7 @@
                 // }
 
                 // 金额 + gas*price <= balance  !!  self.accountInfo.balance
+                // TODO gas_price待确定
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
                 let gasValue = self.$czr.utils.toWei(this.gas, "czr");
                 if ((amountValue + gasValue) > self.accountInfo.balance) {
@@ -279,7 +280,7 @@
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
                 let gasValue = self.$czr.utils.toWei(this.gas, "czr");
                 let id = Math.random();
-// TODO change this flow to Sign tran first then send to czr node
+
                 const keystore = self.$db.get("accounts_keystore")
                     .filter(keystore => keystore.account === self.fromInfo.account)
                     .value()
@@ -302,12 +303,12 @@
                     to: self.toAccount,
                     amount: amountValue,
                     gas: +gasValue,
-                    gas_price: '1000', // for test
+                    gas_price: '1000', // TODO this is for test
                     password: self.fromInfo.password,
                     data: self.extraData,
                     id: id
                 }, transaction, signature, res;
-console.log('sendObj',sendObj)
+
                 try {
                     res = await self.$czr.request.generateOfflineBlock(sendObj)
                     if(res.code !== 0) {
@@ -320,13 +321,10 @@ console.log('sendObj',sendObj)
                     console.log(e)
                     return
                 }
-console.log('transaction',transaction)
+
                 try {
-                    res = await self.$czr.accounts.sign(transaction, privateKey)
-                    if(res.code !== 0) {
-                        throw new Error(res.msg)
-                    }
-                    signature = res
+                    res = await self.$czr.accounts.sign(transaction.hash, privateKey)
+                    transaction.signature = res
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.sign_err'))
                     self.isSubmit = false;
@@ -334,10 +332,11 @@ console.log('transaction',transaction)
                     return
                 }
 
-                transaction.signature = signature
-
                 try {
                     res = await self.$czr.request.sendOfflineBlock(transaction)
+                    if(res.code !== 0) {
+                        throw new Error(res.msg)
+                    }
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.send_offline_block_err'))
                     self.isSubmit = false;
