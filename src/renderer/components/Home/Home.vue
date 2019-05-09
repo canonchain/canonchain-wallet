@@ -58,7 +58,7 @@
             <template v-else-if="createInfo.step === 1">
                 <el-alert :title="$t('page_home.create_dia.create_success')" :description="$t('page_home.create_dia.create_success_des')" :closable="false" type="success" show-icon>
                 </el-alert>
-                <el-input type="textarea" :rows="2" :value="createInfo.address" :disabled=true>
+                <el-input type="textarea" :rows="2" v-model="createInfo.address" disabled>
                 </el-input>
                 <div slot="footer">
                     <el-button type="primary" @click="downloadKeystore(createInfo.address)">{{$t('page_home.create_dia.account_download_keystore')}}</el-button>
@@ -186,6 +186,8 @@ export default {
             },
             intervalId: null
         };
+    },
+    watch:{
     },
     created() {
         self = this;
