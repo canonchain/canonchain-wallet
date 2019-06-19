@@ -35,6 +35,11 @@
                     <span>{{$t('unit.czr')}}</span>
                 </el-form-item>
 
+                <el-form-item :label="$t('page_transfer.gasPrice')">
+                    <el-input v-model="gasPrice" :min="0" :max="accountInfo.balance" class="width-180"></el-input>
+                    <span>{{$t('unit.czr')}}</span>
+                </el-form-item>
+
                 <el-form-item>
                     <el-input type="textarea" :rows="4" :placeholder="$t('page_transfer.data_placeholder')"
                               v-model="extraData"></el-input>
@@ -85,6 +90,9 @@
                     <el-form-item :label="$t('page_transfer.gas')">
                         <p>{{gas}} {{$t('unit.czr')}}</p>
                     </el-form-item>
+                    <el-form-item :label="$t('page_transfer.gasPrice')">
+                        <p>{{gasPrice}} {{$t('unit.czr')}}</p>
+                    </el-form-item>
                     <el-form-item :label="$t('page_transfer.data')">
                         <p>{{extraData || '-'}}</p>
                     </el-form-item>
@@ -116,6 +124,7 @@
 
 <script>
     import {setInterval, clearInterval} from "timers";
+    import BigNumber from 'bignumber.js/bignumber.mjs'
 
     let self = null;
     export default {
@@ -228,6 +237,20 @@
                     return;
                 }
 
+                if(!reg.test(this.gas)){
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.gas_error")
+                    );
+                    return;
+                }
+
+                if(!reg.test(this.gasPrice)){
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.gasPrice_error")
+                    );
+                    return;
+                }
+
                 // 账户余额为0不可以发
                 // if (!parseFloat(self.accountInfo.balance)) {
                 //     self.$message.error(
@@ -239,7 +262,7 @@
                 // 金额 + gas*price <= balance  !!  self.accountInfo.balance
                 // TODO gas_price待确定
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-                let gasValue = self.$czr.utils.toWei(this.gas, "czr");
+                let gasValue = self.$czr.utils.toWei(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).toString(), "czr");
                 if ((amountValue + gasValue) > self.accountInfo.balance) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.amount_exceeded")
@@ -279,6 +302,7 @@
                 }
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
                 let gasValue = self.$czr.utils.toWei(this.gas, "czr");
+                let gasPrice = self.$czr.utils.toWei(this.gasPrice, "czr");
                 let id = Math.random();
 
                 const keystore = self.$db.get("accounts_keystore")
@@ -303,7 +327,7 @@
                     to: self.toAccount,
                     amount: amountValue,
                     gas: +gasValue,
-                    gas_price: '1000', // TODO this is for test
+                    gas_price: gasPrice,
                     password: self.fromInfo.password,
                     data: self.extraData,
                     id: id

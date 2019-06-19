@@ -56,6 +56,7 @@
         "to_address":"receive-account",
         "amount":"Amount",
         "gas":"Gas",
+        "gasPrice":"Gas Price",
         "send_all":"Send all",
         "data":"Data",
         "data_placeholder":"Hexadecimal data",
@@ -79,6 +80,8 @@
             "amount_zero":"Transfer amount must be greater than 0",
             "amount_error":"Please enter a legal transaction amount",
             "address_err":"The format of the transferred address is invalid.",
+            "gas_error":"Please enter a legal transaction gas",
+            "gasPrice_error":"Please enter a legal transaction gas price",
             "send_success":"Transaction sent",
             "amount_exceeded":"Current transaction total amount exceeds account balance",
 
@@ -89,9 +92,17 @@
             "send_offline_block_err":"Failed to send signed transaction"
         }
     },
+    "pager":{
+        "next":"Next",
+        "prev":"Previous"
+    },
     "page_account": {
         "transfer_log":"Transaction Record",
         "transfer_log_null":"No transaction history",
+        "txSent":"Transactions sent",
+        "txAll":"All transactions",
+        "txNew":"Current account has new transaction information",
+        "checkNow":"Check now",
         "active_icon": {
             "go_transfer":"Initiate a transfer",
             "import_keystore":"Account file",
@@ -104,14 +115,14 @@
             "validate_tag_length":"The name of the note name cannot be greater than 8 characters."
         },
         "dia_tx":{
-            "tit":"Trading Information",
-            "block_hash":"Transaction number",
+            "tit":"Transaction Information",
+            "block_hash":"Transaction hash",
             "status":"status",
             "from":"send-account",
             "to":"receive-account",
             "amount":"Amount",
             "data":"data",
-            "send_time":"Sending time",
+            "send_time":"Sent time",
             "mac_time":"Main chain time"
         },
         "keystore": {

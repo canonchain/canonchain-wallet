@@ -66,7 +66,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bignumber.js": "^7.2.1",
-    "czr": "^1.0.1",
+    "czr": "git+https://github.com/canonchain/czr.js.git",
     "download": "^7.0.0",
     "electron-updater": "^4.0.6",
     "element-ui": "^2.8.2",

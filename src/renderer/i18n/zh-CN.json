@@ -56,6 +56,7 @@
         "to_address":"收款方",
         "amount":"金额",
         "gas":"gas",
+        "gasPrice":"gas单价",
         "send_all":"发送全部",
         "data":"Data",
         "data_placeholder":"十六进制数据",
@@ -79,6 +80,8 @@
             "amount_zero":"转账金额必须大于0",
             "amount_error":"请输入合法的交易金额",
             "address_err":"转入的地址格式不合法",
+            "gas_error":"请输入合法的交易gas",
+            "gasPrice_error":"请输入合法的交易gas单价",
             "send_success":"交易已发送",
             "amount_exceeded":"当前交易总金额超出账户余额",
 
@@ -89,9 +92,17 @@
             "send_offline_block_err":"发送已签名交易失败"
         }
     },
+    "pager":{
+        "next":"下一页",
+        "prev":"上一页"
+    },
     "page_account": {
         "transfer_log":"交易记录",
         "transfer_log_null":"暂无交易记录",
+        "txSent":"发送的交易",
+        "txAll":"全部交易",
+        "txNew":"当前账户有新的交易信息",
+        "checkNow":"立即查看",
         "active_icon": {
             "go_transfer":"发起转账",
             "import_keystore":"账户文件",

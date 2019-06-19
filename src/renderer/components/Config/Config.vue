@@ -268,7 +268,7 @@
                     // defaultPath: '',
                     properties: ['openDirectory'],
                 })
-                if(!res) return
+                if (!res) return
                 return res[0]
             },
             runCanonChain() {
@@ -308,7 +308,9 @@
                             "--rpc_control",
                             "--data_path",
                             dir
-                        ]);
+                        ], {
+                            stdio: 'ignore'
+                        });
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
                         self.conMsg = self.$t("page_config.content_msg.enter_wallet");
@@ -352,7 +354,9 @@
                         "--rpc_control",
                         "--data_path",
                         dir
-                    ]);
+                    ], {
+                        stdio: 'ignore'
+                    });
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);
                     self.guardNode(ls, nodePath);
