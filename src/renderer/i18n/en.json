@@ -1,224 +1,236 @@
 {
-    "confirm":"confirm",
-    "cancel":"cancel",
-    "dialog_tit":"prompt",
-    "close":"shut down",
-    "confirm_you_active":"Please confirm your operation",
+    "confirm": "confirm",
+    "cancel": "cancel",
+    "dialog_tit": "prompt",
+    "close": "shut down",
+    "confirm_you_active": "Please confirm your operation",
+    "rpcErrors": {
+        "invalidFromAccount": "Invalid From Account",
+        "invalidToAccount": "Invalid To Account",
+        "invalidAmountFormat": "Invalid Amount Format",
+        "invalidGasFormat": "Invalid Gas Format",
+        "invalidDataFormat": "Invalid Data Format",
+        "dataSizeTooLarge": "Data Size Too Large",
+        "invalidGasPriceFormat": "Invalid Gas Price Format",
+        "invalidMciFormat": "Invalid Mci Format",
+        "notEnoughFail": "Gas Not Enough Or Excute Fail"
+    },
     "unit": {
-        "czr":"CZR"
+        "czr": "CZR",
+        "wei": "10<sup>-18</sup>CZR"
     },
     "model_header": {
-        "home":"Home",
-        "transfer":"Transfer",
-        "contacts":"Contact",
-        "setting":"Setting",
-        "total":"total",
-        "testnet":"Test network",
-        "online":"Online",
-        "offline":"Offline"
+        "home": "Home",
+        "transfer": "Transfer",
+        "contacts": "Contact",
+        "setting": "Setting",
+        "total": "total",
+        "testnet": "Test network",
+        "online": "Online",
+        "offline": "Offline",
+        "syncing": "Syncing"
     },
     "page_setting": {
-        "tit":"Setting",
-        "lang":"Language",
-        "select":"please choose",
-        "version_number":"Wallet version",
-        "data_path":"Node data path",
-        "change":"Change",
-        "changeDirNote":"Please move the files under the original path to the new directory, otherwise the data will be lost.",
-        "note":"Note"
+        "tit": "Setting",
+        "lang": "Language",
+        "select": "please choose",
+        "version_number": "Wallet version",
+        "data_path": "Node data path",
+        "change": "Change",
+        "changeDirNote": "Please move the files under the original path to the new directory, otherwise the data will be lost.",
+        "note": "Note"
     },
     "page_contacts": {
-        "tit":"Contact",
-        "add_dialog":"New contact",
+        "tit": "Contact",
+        "add_dialog": "New contact",
         "add_cont": {
-            "tit":"New contact",
-            "tag":"Contact",
-            "address":"Account address",
-            "tag_placeholder":"Please enter the name of the contact",
-            "address_placeholder":"Please enter the contact's account address",
-            "add_success":"Added successfully"
+            "tit": "New contact",
+            "tag": "Contact",
+            "address": "Account address",
+            "tag_placeholder": "Please enter the name of the contact",
+            "address_placeholder": "Please enter the contact's account address",
+            "add_success": "Added successfully"
         },
         "delete_dialog": {
-            "title":"You are removing",
-            "remove_success":"Successfully removed"
+            "title": "You are removing",
+            "remove_success": "Successfully removed"
         },
         "msg_info": {
-            "no_tag":"Please enter an account note",
-            "no_address":"Please enter your account address",
-            "valid_address":"The address of the contact is illegal",
-            "validate_tag_length":"The name of the note name cannot be greater than 8 characters.",
-            "contacts_quantity_error":"The number of contacts cannot exceed 50",
-            "exist":"The contact already exists,"
+            "no_tag": "Please enter an account note",
+            "no_address": "Please enter your account address",
+            "valid_address": "The address of the contact is illegal",
+            "validate_tag_length": "The name of the note name cannot be greater than 8 characters.",
+            "contacts_quantity_error": "The number of contacts cannot exceed 50",
+            "exist": "The contact already exists,"
         }
     },
     "page_transfer": {
-        "from_address":"send-account",
-        "to_address":"receive-account",
-        "amount":"Amount",
-        "gas":"Gas",
-        "gasPrice":"Gas Price",
-        "send_all":"Send all",
-        "data":"Data",
-        "data_placeholder":"Hexadecimal data",
-        "fees":"Handling fee",
-        "total":"total",
-        "select":"please choose",
-        "no_account_info":"No account yet, please create or import account",
-        "no_keystore_file":"No account file for the corresponding account was found",
+        "from_address": "send-account",
+        "to_address": "receive-account",
+        "amount": "Amount",
+        "gas": "Gas",
+        "gasPrice": "Gas Price",
+        "send_all": "Send all",
+        "data": "Data",
+        "data_placeholder": "Hexadecimal data",
+        "fees": "Handling fee",
+        "txFee": "Transaction fee",
+        "total": "total",
+        "select": "please choose",
+        "no_account_info": "No account yet, please create or import account",
+        "no_keystore_file": "No account file for the corresponding account was found",
         "contacts_dig": {
-            "title":"Select a contact account",
-            "select_placeholder":"please choose"
+            "title": "Select a contact account",
+            "select_placeholder": "please choose"
         },
         "confirm_dia": {
-            "title":"please confirm",
-            "enter_passworld_tit":"Please enter your password",
-            "enter_passworld_place":"Please enter your password"
+            "title": "please confirm",
+            "enter_passworld_tit": "Please enter your password",
+            "enter_passworld_place": "Please enter your password"
         },
         "msg_info": {
-            "address_null":"Please enter the other party's account",
-            "balance_zero":"Insufficient balance, unable to continue",
-            "amount_zero":"Transfer amount must be greater than 0",
-            "amount_error":"Please enter a legal transaction amount",
-            "address_err":"The format of the transferred address is invalid.",
-            "gas_error":"Please enter a legal transaction gas",
-            "gasPrice_error":"Please enter a legal transaction gas price",
-            "send_success":"Transaction sent",
-            "amount_exceeded":"Current transaction total amount exceeds account balance",
-
-            "decrypt_err":"Wallet parsing failed, it may be a password error",
-            "send_error":"Transaction failed: please check if there is sufficient balance and miner fee",
-            "generate_offline_block_err":"Failure to generate unsigned transactions",
-            "sign_err":"Signature failed",
-            "send_offline_block_err":"Failed to send signed transaction"
+            "address_null": "Please enter the other party's account",
+            "balance_zero": "Insufficient balance, unable to continue",
+            "amount_zero": "Transfer amount must be greater than 0",
+            "amount_error": "Please enter a legal transaction amount",
+            "address_err": "The format of the transferred address is invalid.",
+            "gas_error": "Please enter a legal transaction gas",
+            "gasPrice_error": "Please enter a legal transaction gas price",
+            "send_success": "Transaction sent",
+            "amount_exceeded": "Current transaction total amount exceeds account balance",
+            "txFeeTooLow": "Transaction fee too low",
+            "decrypt_err": "Wallet parsing failed, it may be a password error",
+            "send_error": "Transaction failed: please check if there is sufficient balance and miner fee",
+            "generate_offline_block_err": "Failure to generate unsigned transactions",
+            "sign_err": "Signature failed",
+            "send_offline_block_err": "Failed to send signed transaction",
+            "syncingWaitTitle": "Node are synchronizing",
+            "syncingWait": "Node are synchronizing, transaction confirmation time may be longer, please wait patiently"
         }
     },
-    "pager":{
-        "next":"Next",
-        "prev":"Previous"
+    "pager": {
+        "next": "Next",
+        "prev": "Previous"
     },
     "page_account": {
-        "transfer_log":"Transaction Record",
-        "transfer_log_null":"No transaction history",
-        "txSent":"Transactions sent",
-        "txAll":"All transactions",
-        "txNew":"Current account has new transaction information",
-        "checkNow":"Check now",
+        "transfer_log": "Transaction Record",
+        "transfer_log_null": "No transaction history",
+        "txSent": "Transactions sent",
+        "txAll": "All transactions",
+        "txNew": "Current account has new transaction information",
+        "checkNow": "Check now",
         "active_icon": {
-            "go_transfer":"Initiate a transfer",
-            "import_keystore":"Account file",
-            "qrcode":"QR code"
+            "go_transfer": "Initiate a transfer",
+            "import_keystore": "Account file",
+            "qrcode": "QR code"
         },
         "edit_dia": {
-            "tit":"Modify note",
-            "subtit":"Mark a note for your account",
-            "no_tag":"Please enter an account note",
-            "validate_tag_length":"The name of the note name cannot be greater than 8 characters."
+            "tit": "Modify note",
+            "subtit": "Mark a note for your account",
+            "no_tag": "Please enter an account note",
+            "validate_tag_length": "The name of the note name cannot be greater than 8 characters."
         },
-        "dia_tx":{
-            "tit":"Transaction Information",
-            "block_hash":"Transaction hash",
-            "status":"status",
-            "from":"send-account",
-            "to":"receive-account",
-            "amount":"Amount",
-            "data":"data",
-            "send_time":"Sent time",
-            "mac_time":"Main chain time"
+        "dia_tx": {
+            "tit": "Transaction Information",
+            "block_hash": "Transaction hash",
+            "status": "status",
+            "from": "send-account",
+            "to": "receive-account",
+            "amount": "Amount",
+            "data": "data",
+            "send_time": "Sent time",
+            "mac_time": "Main chain time",
+            "gasPrice": "Gas Price(10<sup>-18</sup>CZR)",
+            "gasUsed": "Gas Used"
         },
         "keystore": {
-            "tit":"Backup wallet file",
-            "copy":"copy",
-            "download":"Download wallet file"
+            "tit": "Backup wallet file",
+            "copy": "copy",
+            "download": "Download wallet file"
         },
         "msg_info": {
-            "ads_copy_success":"Address has been copied",
-            "key_copy_success":"Successful copy"
+            "ads_copy_success": "Address has been copied",
+            "key_copy_success": "Successful copy"
         }
     },
     "page_home": {
-        "import_account":"Import account",
-        "add_account":"New account",
-        "acc":"Account",
+        "import_account": "Import account",
+        "add_account": "New account",
+        "acc": "Account",
         "create_dia": {
-            "create_tit":"create Account",
-            "backup_tit":"Back up your new account",
-            "create_tag":"Account note",
-            "create_pwd":"set password",
-            "create_repwd":"confirm password",
-            "placeholder_tag":"Please set the account note name",
-            "placeholder_pwd":"Please set the account password",
-            "placeholder_repwd":"Please confirm the account password",
-
-
-            "account_download_keystore":"Download account file",
-
-            "validate_tag":"Please enter the account note name",
-            "validate_tag_length":"The name of the note name cannot be greater than 8 characters.",
-
-            "validate_password":"Please enter the password you set",
-            "validate_re_password":"Please enter the password you set again",
-            "validate_strong_password":"Please enter a password of at least 8 digits",
-            "validate_long_password":"Password cannot exceed 100 digits in length",
-            "validate_type_password":"Invalid password! A valid password must contain characters from letters (a-Z, A-Z), digits (0-9) and special characters (!@#$%^&*).",
-            "validate_password_length":"Inconsistent password entered twice",
-
-            "create_success":"Created successfully",
-            "account_quantity_error":"The number of accounts cannot exceed 50",
-            "create_success_des":"Please save your account file and don't share it with anyone!"
+            "create_tit": "create Account",
+            "backup_tit": "Back up your new account",
+            "create_tag": "Account note",
+            "create_pwd": "set password",
+            "create_repwd": "confirm password",
+            "placeholder_tag": "Please set the account note name",
+            "placeholder_pwd": "Please set the account password",
+            "placeholder_repwd": "Please confirm the account password",
+            "account_download_keystore": "Download account file",
+            "validate_tag": "Please enter the account note name",
+            "validate_tag_length": "The name of the note name cannot be greater than 8 characters.",
+            "validate_password": "Please enter the password you set",
+            "validate_re_password": "Please enter the password you set again",
+            "validate_strong_password": "Please enter a password of at least 8 digits",
+            "validate_long_password": "Password cannot exceed 100 digits in length",
+            "validate_type_password": "Invalid password! A valid password must contain characters from letters (a-Z, A-Z), digits (0-9) and special characters (!@#$%^&*).",
+            "validate_password_length": "Inconsistent password entered twice",
+            "create_success": "Created successfully",
+            "account_quantity_error": "The number of accounts cannot exceed 50",
+            "create_success_des": "Please save your account file and don't share it with anyone!"
         },
         "import_dia": {
-            "tit":"Import account",
-            "placeholder_keystore":"Please drag the account file here",
-            "create_tag":"Account note",
-            "placeholder_tag":"Please set the account note name",
-
-            "validate_tag":"Please enter the account note name",
-            "validate_tag_length":"The name of the note name cannot be greater than 8 characters.",
-            "validate_enter_keystore":"Please import the account file first",
-            "validate_error_keystore":"Account import failed, may be account file error",
-            "imported_account_success":"Successfully imported",
-            "exist":"This account already exists, the note is",
-            "keystore_error":"error:",
-            "keystore_length_error":"Only one account file can be imported, please try again!",
-            "keystore_format_error":"Please select the correct account file",
-            "keystore_is_has":"There is already an account in the list that you need to import.",
-            "imported_success":"Already selected file"
+            "tit": "Import account",
+            "placeholder_keystore": "Please drag the account file here",
+            "create_tag": "Account note",
+            "placeholder_tag": "Please set the account note name",
+            "validate_tag": "Please enter the account note name",
+            "validate_tag_length": "The name of the note name cannot be greater than 8 characters.",
+            "validate_enter_keystore": "Please import the account file first",
+            "validate_error_keystore": "Account import failed, may be account file error",
+            "imported_account_success": "Successfully imported",
+            "exist": "This account already exists, the note is",
+            "keystore_error": "error:",
+            "keystore_length_error": "Only one account file can be imported, please try again!",
+            "keystore_format_error": "Please select the correct account file",
+            "keystore_is_has": "There is already an account in the list that you need to import.",
+            "imported_success": "Already selected file"
         },
         "remove_dia": {
-            "tit":"Are you sure you want to remove it?",
-            "remove_confrim":"I am sure to remove",
-            "backup":"Please pay attention to the backup of this account to avoid property damage.",
-            "input_pwd":"password",
-            "placeholder_pwd":"Please enter the password for this account",
-            "validate_password":"The password you entered is wrong",
-            "remove_success":"Successfully removed"
+            "tit": "Are you sure you want to remove it?",
+            "remove_confrim": "I am sure to remove",
+            "backup": "Please pay attention to the backup of this account to avoid property damage.",
+            "input_pwd": "password",
+            "placeholder_pwd": "Please enter the password for this account",
+            "validate_password": "The password you entered is wrong",
+            "remove_success": "Successfully removed"
         }
     },
     "page_config": {
-        "config_detection":"Configuration detection",
-        "content_msg":{
-            "ready_test":"Prepare to detect the configuration file",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"The latest node configuration information has been obtained",
-            "is_local":"Check if there is a node file locally",
-            "already_local":"The configuration file of the node file exists on the current device.",
-            "not_local":"The configuration information of the node file is not detected, it may be the first time running.",
-            "config_write_local":"Write the obtained node information file to the local disk",
-            "whether_update_node":"Check if an update is needed",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Downloading node program, please be patient",
-            "already_downloaded":"The node program has been downloaded and ready to start.",
-            "ready_start":"Prepare to start the node",
-            "enter_wallet":"Node starts detection, ready to enter the wallet",
-            "specifyDataDir":"Please select the storage path for node data"
+        "config_detection": "Configuration detection",
+        "content_msg": {
+            "ready_test": "Prepare to detect the configuration file",
+            "network_latest": "检测是否有新的 CanonChain 节点文件",
+            "get_latest": "The latest node configuration information has been obtained",
+            "is_local": "Check if there is a node file locally",
+            "already_local": "The configuration file of the node file exists on the current device.",
+            "not_local": "The configuration information of the node file is not detected, it may be the first time running.",
+            "config_write_local": "Write the obtained node information file to the local disk",
+            "whether_update_node": "Check if an update is needed",
+            "no_need": "本地 CanonChain 节点文件是最新的",
+            "need": "本地 CanonChain 节点文件是老版本",
+            "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+            "have": "当前设备已存在 CanonChain 节点文件",
+            "no": "Downloading node program, please be patient",
+            "already_downloaded": "The node program has been downloaded and ready to start.",
+            "ready_start": "Prepare to start the node",
+            "enter_wallet": "Node starts detection, ready to enter the wallet",
+            "specifyDataDir": "Please select the storage path for node data"
         },
-        "version_dialog":{
-            "version_tit":"Version update prompt",
-            "download_wallet":"Go to the official website to download the latest version of the money",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+        "version_dialog": {
+            "version_tit": "Version update prompt",
+            "download_wallet": "Go to the official website to download the latest version of the money",
+            "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
         }
     }
 }

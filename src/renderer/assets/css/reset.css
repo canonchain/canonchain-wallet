@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, th, var, i {
+  font-weight: normal;
+  font-style: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 18px; }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 14px; }
+
+h4 {
+  font-size: 14px; }
+
+h5 {
+  font-size: 12px; }
+
+h6 {
+  font-size: 12px; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+hr {
+  clear: both;
+  display: block;
+  height: 1px;
+  border: 0 none;
+  border-bottom: 1px solid #e7e7eb; }
+
+blockquote {
+  color: #666;
+  font-style: italic; }
+
+sup, sub {
+  line-height: 0; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666; }
+
+pre {
+  white-space: pre; }
+
+pre, code, tt {
+  font: 12px 'andale mono', 'lucida console', monospace;
+  line-height: 1.5; }
+
+/*clear clearfix*/
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both; }
+
+.sd-left {
+  display: inline;
+  float: left; }
+
+.sd-right {
+  display: inline;
+  float: right; }
+
+.cf {
+  *zoom: 1; }
+
+.cf:after {
+  clear: both; }
+
+.tac {
+  text-align: center; }
+
+.tar {
+  text-align: right; }
+
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+
+.mat20 {
+  margin-top: 20px; }
+
+.mab20 {
+  margin-bottom: 20px; }
+
+.ma20 {
+  margin: 20px; }
+
+body {
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC" , "Hiragino Sans GB","Microsoft YaHei","微软雅黑","Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+  color: #333333; }
+
+/* Links */
+a {
+  color: #459ae9;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:focus, a:hover, a:active {
+  outline: 0; }
+
+/* flex Start */
+.b-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.b-flex .b-flex-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.b-flex.b-flex-vertical {
+  flex-direction: column; }
+
+.b-flex.b-flex-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.b-flex.b-flex-right {
+  justify-content: flex-end; }
+
+.b-flex.b-flex-stretch {
+  align-items: stretch; }
+
+.b-flex.b-flex-hcenter {
+  align-items: center; }
+
+.b-flex.b-flex-vcenter {
+  justify-content: center; }
+
+.b-flex.b-flex-center {
+  align-items: center;
+  flex-direction: column;
+  color: #333333; }
+
+/* flex End */
+.txt-color {
+  color: #5a59a0; }
+
+.text-sub-color {
+  color: #e7e7ff; }
+
+.b-btn {
+  padding: 5px 14px;
+  font-size: 12px; }
+
+.czr-button * {
+  margin: 0;
+  padding: 0; }
+
+.czr-button {
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  *display: inline;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 3px 14px;
+  /* for old alice button style conflict */
+  border: 0 none; }
+
+.czr-button .iconfont {
+  font-size: 18px;
+  vertical-align: middle; }
+
+.czr-button:hover {
+  text-decoration: none;
+  background-image: none;
+  /* for old alice button style conflict */
+  outline: 0; }
+
+.czr-button:visited, .czr-button:focus {
+  outline: 0; }
+
+.czr-button:active {
+  position: relative;
+  top: 1px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  outline: 0;
+  /*box-shadow: 1px 1px 3px #999 inset;*/ }
+
+/* el-style */
+.width-180 {
+  width: 180px; }
+
+.margin-left {
+  margin-left: 20px; }
+
+/* Font file */
+@font-face {
+  font-family: 'iconfont';
+  /* IE9*/
+  src: url("http://at.alicdn.com/t/font_611009_blqtus7uba9k9.eot");
+  /* IE6-IE8 */
+  src: url("http://at.alicdn.com/t/font_611009_blqtus7uba9k9.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_611009_blqtus7uba9k9.woff") format("woff"), url("http://at.alicdn.com/t/font_611009_blqtus7uba9k9.ttf") format("truetype"), url("http://at.alicdn.com/t/font_611009_blqtus7uba9k9.svg#iconfont") format("svg"); }
+.iconfont {
+  display: inline-block;
+  font-family: 'iconfont';
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-text-stroke-width: 0.2px; }
+
+.czr-button-green {
+  color: #fff;
+  background-color: #5a59a0; }
+
+.czr-button-l {
+  height: 32px;
+  line-height: 32px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 14px;
+  border-radius: 4px; }
+
+/*Text and link color*/
+.czr-txt-default {
+  color: #333333; }
+
+.czr-txt-info {
+  color: #808080; }
+
+.czr-txt-muted {
+  color: #a6a6a6; }
+
+.czr-txt-primary {
+  color: #0e90d2; }
+
+.czr-txt-primary:visited {
+  color: #0e90d2; }
+
+.czr-txt-secondary {
+  color: #3bb4f2; }
+
+.czr-txt-secondary:visited {
+  color: #3bb4f2; }
+
+.czr-txt-purple {
+  color: #9C80C9; }
+
+.czr-txt-purple:visited {
+  color: #9C80C9; }
+
+.czr-txt-success {
+  color: #5eb95e; }
+
+.czr-txt-success:visited {
+  color: #5eb95e; }
+
+.czr-txt-warning {
+  color: #f37b1d; }
+
+.czr-txt-warning:visited {
+  color: #f37b1d; }
+
+.czr-txt-danger {
+  color: #dd514c; }
+
+.czr-txt-danger:visited {
+  color: #dd514c; }
+
+a.czr-txt-decoration:hover {
+  text-decoration: underline; }
+
+/* font size */
+.czr-txt-9 {
+  font-size: 9px; }
+
+.czr-txt-12 {
+  font-size: 12px; }
+
+.czr-txt-14 {
+  font-size: 14px; }
+
+.czr-txt-16 {
+  font-size: 16px; }
+
+.czr-txt-18 {
+  font-size: 18px; }
+
+.czr-txt-22 {
+  font-size: 22px; }
+
+.czr-txt-24 {
+  font-size: 24px; }
+
+.czr-txt-32 {
+  font-size: 32px; }
+
+.czr-txt-48 {
+  font-size: 48px; }
+
+/*# sourceMappingURL=reset.css.map */

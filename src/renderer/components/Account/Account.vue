@@ -202,6 +202,14 @@
                     <span class="tx-item-info">{{transactionInfo.data || '-'}}</span>
                 </li>
                 <li class="b-flex b-flex-justify tx-item">
+                    <strong class="tx-item-des">{{$t('page_account.dia_tx.gasUsed')}}</strong>
+                    <span class="tx-item-info">{{transactionInfo.gas_used || '-'}}</span>
+                </li>
+                <li class="b-flex b-flex-justify tx-item">
+                    <strong class="tx-item-des" v-html="$t('page_account.dia_tx.gasPrice')"></strong>
+                    <span class="tx-item-info">{{transactionInfo.gas_price || '-'}}</span>
+                </li>
+                <li class="b-flex b-flex-justify tx-item">
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>
                     <span class="tx-item-info">{{transactionInfo.exec_timestamp|toDate}}</span>
                 </li>
@@ -287,7 +295,7 @@
 
             this.timerSwitch.initData = setInterval(() => {
                 self.initDatabase();
-            }, 3000);
+            }, 5000);
         },
         computed: {},
         beforeDestroy() {
@@ -318,6 +326,7 @@
                         tempLastBlock
                     )
                     .then(data => {
+                        // console.log('accountBlockList', data)
                         if (data.error) {
                             self.$message({
                                 message: data.error,
@@ -626,7 +635,12 @@
                     last_summary_block: "",
                     data: "",
                     exec_timestamp: "",
-                    signature: ""
+                    signature: "",
+                    is_stable: '',
+                    status: '',
+                    stable_timestamp: '',
+                    mc_timestamp: '',
+                    gas_used: '',
                 };
             },
             initDatabase() {
@@ -637,6 +651,12 @@
                     keystoreFile = this.accountInfo.keystore;
                     txListAry = this.accountInfo.tx_list;
                     currentList = self.accountInfo.currentTxList;
+                }
+                if (!txListAry.length) {
+                    txListAry = this.$db.get(`send_list.${this.address}`).value()
+                }
+                if (!currentList.length) {
+                    currentList = this.$db.get(`send_list.${this.address}`).value()
                 }
                 this.accountInfo = this.$db
                     .read()
@@ -652,6 +672,7 @@
                     }
                 });
                 this.accountInfo.tx_list = txListAry;
+                // console.log('accountInfo.tx_list, currentTxList', txListAry, currentList)
             },
             //Init End
 
@@ -659,25 +680,94 @@
                 self.$czr.request
                     .getBlockState(hash)
                     .then(data => {
+                        // console.log('getBlockState data', data)
+                        /**
+                         * {
+    "code": 0,
+    "msg": "OK",
+    "block_state": {
+        "type": 2,
+        "content": {
+            "level": 21
+        },
+        "is_stable": 1,
+        "stable_content": { // 不稳定时为null
+            "status": 0,
+            "stable_index": 3638,
+            "mc_timestamp": 1526568538,
+            "stable_timestamp": 1526568543,
+            "mci": 3155,
+            "from_state": "DF27E98aBD2D322E688836561E1B65D19D31FDE215D6A243F46F57A8769DBB87",
+            "to_states": ["412254AB895FD2E6ADE6F9076CA8297516F2845C989A13AC008CD5D70157AFFB"],
+            "gas_used": 21000,
+            "log": [],
+            "log_bloom": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "contract_address": null
+        }
+    }
+}
+                         * */
                         const blockState = data.block_state
-                        if (blockState.is_stable == "1") {
-                            self.accountInfo.tx_list.forEach((ele, index) => {
-                                if (data.hash == ele.hash) {
-                                    //写回去 TODO
-                                    self.accountInfo.tx_list[index] = data;
-                                    //如果当前是 transactionInfo 则也些过去
-                                    if ((data.hash = self.transactionInfo.hash)) {
-                                        self.transactionInfo = data;
-                                    }
-                                }
-                            });
-                            //current也需要更改
-                            self.accountInfo.currentTxList.forEach((ele, index) => {
-                                if (data.hash == ele.hash) {
-                                    //写回去
-                                    self.accountInfo.currentTxList[index] = data;
-                                }
-                            });
+                        if (blockState.is_stable === 1) {
+                            const {stable_timestamp, gas_used, status, mc_timestamp} = data.block_state.stable_content // TODO save to db
+                            const tx = this.accountInfo.tx_list.find(tx => {
+                                return tx.hash === hash
+                            })
+                            if (tx) {
+                                tx.is_stable = '1'
+                                tx.status = status
+                                tx.stable_timestamp = stable_timestamp
+                                tx.mc_timestamp = mc_timestamp
+                                tx.gas_used = gas_used
+                            }
+                            const tx2 = this.accountInfo.currentTxList.find(tx => {
+                                return tx.hash === hash
+                            })
+                            if (tx2) {
+                                tx2.is_stable = '1'
+                                tx2.status = status
+                                tx2.stable_timestamp = stable_timestamp
+                                tx.mc_timestamp = mc_timestamp
+                                tx2.gas_used = gas_used
+                            }
+                            this.$db.get(`send_list.${this.address}`)
+                                .find({hash: hash})
+                                .assign({
+                                    is_stable: '1',
+                                    status: status,
+                                    stable_timestamp: stable_timestamp,
+                                    mc_timestamp: mc_timestamp,
+                                    gas_used: gas_used,
+                                })
+                                .write()
+                            if ((hash === this.transactionInfo.hash)) {
+                                this.transactionInfo = Object.assign({},this.transactionInfo,{
+                                    is_stable: '1',
+                                    status: status,
+                                    stable_timestamp: stable_timestamp,
+                                    mc_timestamp: mc_timestamp,
+                                    gas_used: gas_used,
+                                });
+                            }
+                            this.initSendTrans(true)
+
+                            // self.accountInfo.tx_list.forEach((ele, index) => {
+                            //     if (data.hash == ele.hash) {
+                            //         //写回去 TODO
+                            //         self.accountInfo.tx_list[index] = data;
+                            //         //如果当前是 transactionInfo 则也些过去
+                            //         if ((data.hash = self.transactionInfo.hash)) {
+                            //             self.transactionInfo = data;
+                            //         }
+                            //     }
+                            // });
+                            // //current也需要更改
+                            // self.accountInfo.currentTxList.forEach((ele, index) => {
+                            //     if (data.hash == ele.hash) {
+                            //         //写回去
+                            //         self.accountInfo.currentTxList[index] = data;
+                            //     }
+                            // });
                         }
                     })
                     .catch(error => {

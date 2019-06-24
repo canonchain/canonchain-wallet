@@ -133,7 +133,7 @@
 
 <script>
     const fs = require("fs");
-    import {setInterval, clearInterval, clearTimeout, setTimeout} from "timers";
+    // import {setInterval, clearInterval, clearTimeout, setTimeout} from "timers";
     import {sep} from 'path';
 
     const {spawn, spawnSync} = require("child_process");
@@ -155,15 +155,15 @@
 
     const app = require("electron").remote.app;
 
-    app.on('before-quit', () => {
-        self.$nodeLogs.info("before-quit start");
-    })
+    // app.on('before-quit', () => {
+    //     self.$nodeLogs.info("before-quit start");
+    // })
 
     app.on("will-quit", () => {
         //应用程序的窗口已经关闭，应用即将退出
         self.$nodeLogs.info("will-quit start");
         self.$czr.request.stop().then(data => {
-            self.$nodeLogs.info("Stop成功");
+            self.$nodeLogs.info("Stop成功 !");
             self.$nodeLogs.info(data);
         }).catch(error => {
             self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
@@ -573,6 +573,7 @@
                     self.database.forEach(item => {
                         aryForBalans.push(item.address)
                     })
+                    // console.log('getAccountsBalances aryForBalans', aryForBalans)
                     self.getAccountsBalances(aryForBalans);
                 }, 5000);
             },
@@ -580,6 +581,7 @@
                 self.$czr.request
                     .accountsBalances(aryForBalans)
                     .then(res => {
+                        // console.log('accountsBalances2', res)
                         if (res.code !== 0) {
                             return self.$walletLogs.info(
                                 `Accounts Balances Error ${res.msg}`
@@ -593,12 +595,14 @@
                                 .assign({balance: new BigNumber(balance).toString()})
                                 .write()
                         })
-                        self.runBalancesTimer();
                     })
                     .catch(error => {
                         self.$walletLogs.info(
                             `Accounts Balances Error ${error.message}`
                         );
+                    })
+                    .finally(() => {
+                        self.runBalancesTimer();
                     })
             },
             //get Balcances end
@@ -632,7 +636,7 @@
             startUpdateBlocks() {
                 //拿到最新数据，写入数据库，并准备下次
                 self.$czr.request
-                    .getBlocks(updataBlockData.targetAry)
+                    .getBlocks(updataBlockData.targetAry) // TODO data change
                     .then(data => {
                         let obtainData = data.blocks || [];
                         obtainData.forEach(ele => {
@@ -658,16 +662,17 @@
                     return 0;
                 }
                 let tempVal = self.$czr.utils.fromWei(val, "czr");
-                let reg = /(\d+(?:\.)?)(\d{0,4})/;
-                let regAry = reg.exec(tempVal);
-                let integer = regAry[1];
-                let decimal = regAry[2];
-                if (decimal) {
-                    while (decimal.length < 4) {
-                        decimal += "0";
-                    }
-                }
-                return integer + decimal;
+                return new BigNumber(tempVal).toFixed(4)
+                // let reg = /(\d+(?:\.)?)(\d{0,4})/;
+                // let regAry = reg.exec(tempVal);
+                // let integer = regAry[1];
+                // let decimal = regAry[2];
+                // if (decimal) {
+                //     while (decimal.length < 4) {
+                //         decimal += "0";
+                //     }
+                // }
+                // return integer + decimal;
             }
         }
     };

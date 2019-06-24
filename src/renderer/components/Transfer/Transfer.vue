@@ -31,13 +31,16 @@
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gas')">
-                    <el-input v-model="gas" :min="0" :max="accountInfo.balance" class="width-180"></el-input>
-                    <span>{{$t('unit.czr')}}</span>
+                    <el-input v-model="gas" :min="0" :max="accountInfo.balance / gasPrice" class="width-180"></el-input>
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gasPrice')">
-                    <el-input v-model="gasPrice" :min="0" :max="accountInfo.balance" class="width-180"></el-input>
-                    <span>{{$t('unit.czr')}}</span>
+                    <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
+                               :max="+gasPriceRange.high" show-input
+                               input-size="mini"
+                               :show-tooltip="true" :format-tooltip="formatTooltip"
+                    ></el-slider>
+                    <span>10<sup>-18</sup>CZR</span>
                 </el-form-item>
 
                 <el-form-item>
@@ -74,57 +77,54 @@
         </el-dialog>
 
         <!-- confirm tran -->
-        <template>
-            <el-dialog :title="$t('page_transfer.confirm_dia.title')" width="85%" :visible.sync="dialogSwitch.confrim">
+        <el-dialog :title="$t('page_transfer.confirm_dia.title')"
+                   width="85%" :visible.sync="dialogSwitch.confrim"
+        >
+            <el-form ref="form" label-width="120px">
+                <el-form-item :label="$t('page_transfer.from_address')">
+                    <p>{{fromInfo.account}}</p>
+                </el-form-item>
+                <el-form-item :label="$t('page_transfer.to_address')">
+                    <p>{{toAccount || "-"}}</p>
+                </el-form-item>
+                <el-form-item :label="$t('page_transfer.amount')">
+                    <p>{{amount}} {{$t('unit.czr')}}</p>
+                </el-form-item>
+                <el-form-item :label="$t('page_transfer.txFee')">
+                    <p>{{txFee}} <span>10<sup>-18</sup>CZR</span></p>
+                </el-form-item>
+                <el-form-item :label="$t('page_transfer.data')">
+                    <p>{{extraData || '-'}}</p>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogSwitch.confrim = false">{{$t('cancel')}}</el-button>
+                <el-button type="primary" @click="dialogSwitch.password = true">{{$t('confirm')}}</el-button>
+            </div>
 
-                <el-form ref="form" label-width="120px">
-                    <el-form-item :label="$t('page_transfer.from_address')">
-                        <p>{{fromInfo.account}}</p>
-                    </el-form-item>
-                    <el-form-item :label="$t('page_transfer.to_address')">
-                        <p>{{toAccount || "-"}}</p>
-                    </el-form-item>
-                    <el-form-item :label="$t('page_transfer.amount')">
-                        <p>{{amount}} {{$t('unit.czr')}}</p>
-                    </el-form-item>
-                    <el-form-item :label="$t('page_transfer.gas')">
-                        <p>{{gas}} {{$t('unit.czr')}}</p>
-                    </el-form-item>
-                    <el-form-item :label="$t('page_transfer.gasPrice')">
-                        <p>{{gasPrice}} {{$t('unit.czr')}}</p>
-                    </el-form-item>
-                    <el-form-item :label="$t('page_transfer.data')">
-                        <p>{{extraData || '-'}}</p>
-                    </el-form-item>
+            <el-dialog width="60%" :title="$t('page_transfer.confirm_dia.enter_passworld_tit')"
+                       :visible.sync="dialogSwitch.password" @open='openPwd' append-to-body>
+                <el-form ref="form" label-width="100px">
+                    <el-input v-model="fromInfo.password"
+                              :placeholder="$t('page_transfer.confirm_dia.enter_passworld_place')"
+                              type="password"></el-input>
                 </el-form>
+
                 <div slot="footer" class="dialog-footer">
-                    <el-button @click="dialogSwitch.confrim = false">{{$t('cancel')}}</el-button>
-                    <el-button type="primary" @click="dialogSwitch.password = true">{{$t('confirm')}}</el-button>
+                    <el-button @click="dialogSwitch.password = false">{{$t('cancel')}}</el-button>
+                    <el-button type="primary" @click.prevent="sendTransaction">{{$t('confirm')}}</el-button>
                 </div>
-
-                <el-dialog width="60%" :title="$t('page_transfer.confirm_dia.enter_passworld_tit')"
-                           :visible.sync="dialogSwitch.password" @open='openPwd' append-to-body>
-                    <el-form ref="form" label-width="100px">
-                        <el-input v-model="fromInfo.password"
-                                  :placeholder="$t('page_transfer.confirm_dia.enter_passworld_place')"
-                                  type="password"></el-input>
-                    </el-form>
-
-                    <div slot="footer" class="dialog-footer">
-                        <el-button @click="dialogSwitch.password = false">{{$t('cancel')}}</el-button>
-                        <el-button type="primary" @click.prevent="sendTransaction">{{$t('confirm')}}</el-button>
-                    </div>
-                </el-dialog>
-
             </el-dialog>
-        </template>
+
+        </el-dialog>
 
     </div>
 </template>
 
 <script>
-    import {setInterval, clearInterval} from "timers";
+    import {setInterval, clearInterval} from "timers"
     import BigNumber from 'bignumber.js/bignumber.mjs'
+    import axios from 'axios'
 
     let self = null;
     export default {
@@ -152,10 +152,13 @@
 
                 toAccount: "",
                 amount: 0,
-                gas: 0,
-                gasPrice: "",
-                feePercent: 100,
-                gasLimit: 200000, //参考  myetherwallet
+                gas: '21000',
+                gasPrice: 0,
+                gasPriceRange: {
+                    low: '10000000',
+                    medium: '15000000',
+                    high: '20000000',
+                },
                 extraData: ""
             };
         },
@@ -167,14 +170,39 @@
             self.initDatabase();
             if (this.database.length) {
                 this.fromInfo = {
-                    account:
-                    this.$route.query.account || this.database[0].address || "",
+                    account: this.$route.query.account || this.database[0].address || "",
                     password: ""
                 };
                 self.intervalId = setInterval(() => {
                     self.initDatabase();
                 }, 2000);
             }
+            // fetch gas price
+            axios.get('http://39.105.126.14:50615/apis?apikey=YourApiKeyToken&module=stats&action=gas_price')
+                .then(res => {
+                    if (res.status !== 200) {
+                        this.$message.error(new Error(res.statusText))
+                        return
+                    }
+                    if (res.data.status !== 100) {
+                        this.$message.error(new Error(res.statusText))
+                        return
+                    }
+                    const {
+                        cheapest_gas_price,
+                        median_gas_price,
+                        highest_gas_price
+                    } = res.data.result
+                    this.gasPriceRange.low = cheapest_gas_price
+                    this.gasPriceRange.medium = median_gas_price
+                    this.gasPriceRange.high = highest_gas_price
+                })
+                .catch(err => {
+                    this.$message.error(new Error(err.message))
+                })
+                .finally(() => {
+                    this.gasPrice = +this.gasPriceRange.medium
+                })
         },
         beforeDestroy() {
             clearInterval(self.intervalId);
@@ -189,9 +217,15 @@
                 } else {
                     return {};
                 }
-            }
+            },
+            txFee() {
+                return new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).toString()
+            },
         },
         methods: {
+            formatTooltip(val) {
+                return new BigNumber(val).div('1e18').toString() + ' CZR'
+            },
             //Init data
             initDatabase() {
                 this.database = this.$db.get("czr_accounts").value();
@@ -214,7 +248,7 @@
             },
 
             //确认验证
-            validateForm() {
+            async validateForm() {
                 let self = this;
                 let reg = /^\d+(\.\d{1,18})?$/;
                 let regObj = reg.exec(self.amount);
@@ -237,18 +271,85 @@
                     return;
                 }
 
-                if(!reg.test(this.gas)){
+                if (!reg.test(this.gas)) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.gas_error")
                     );
                     return;
                 }
 
-                if(!reg.test(this.gasPrice)){
+                if (!reg.test(this.gasPrice)) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.gasPrice_error")
                     );
                     return;
+                }
+
+                let gasValue = new BigNumber(this.gas).times(new BigNumber(this.gasPrice));
+                if (gasValue.lt(new BigNumber('1e7'))) {
+                    self.$message.error(
+                        self.$t("page_transfer.msg_info.txFeeTooLow")
+                    )
+                    return
+                }
+
+                // estimate gas
+                try {
+                    const req = {
+                        from: this.fromInfo.account,
+                        to: this.toAccount,
+                        amount: this.$czr.utils.toWei(this.amount, "czr"),
+                        gas: this.gas,
+                        gas_price: '' + this.gasPrice,
+                        data: this.extraData,
+                        mci: 'latest',
+                    }
+                    // console.log('estimateGas req', req)
+                    const res = await this.$czr.request.estimateGas(req)
+                    if (res.code !== 0) {
+                        switch (res.code){
+                            case 1:
+                                this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                                break
+                            case 2:
+                                this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                                break
+                            case 3:
+                                this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                                break
+                            case 4:
+                                this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                                break
+                            case 5:
+                                this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                                break
+                            case 6:
+                                this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                                break
+                            case 7:
+                                this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                                break
+                            case 8:
+                                this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                                break
+                            case 9:
+                                this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                                break
+                            default:
+                                this.$message.error(res.msg)
+                                break
+                        }
+                        console.error(res.msg)
+                        return
+                    }
+                    if (this.gas < res.gas) {
+                        this.$message.error('gas too low')
+                        console.error('gas too low')
+                        return
+                    }
+                } catch (e) {
+                    console.error(e)
+                    return
                 }
 
                 // 账户余额为0不可以发
@@ -262,8 +363,7 @@
                 // 金额 + gas*price <= balance  !!  self.accountInfo.balance
                 // TODO gas_price待确定
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-                let gasValue = self.$czr.utils.toWei(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).toString(), "czr");
-                if ((amountValue + gasValue) > self.accountInfo.balance) {
+                if (new BigNumber(amountValue).plus(new BigNumber(gasValue)).gt(this.accountInfo.balance)) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.amount_exceeded")
                     );
@@ -277,6 +377,7 @@
                         return data.valid;
                     })
                     .catch(error => {
+                        this.$message.error('Failed to validate account')
                         // console.log("accountValidate catch", error);
                     })
                     .then(data => {
@@ -301,8 +402,8 @@
                     return;
                 }
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
-                let gasValue = self.$czr.utils.toWei(this.gas, "czr");
-                let gasPrice = self.$czr.utils.toWei(this.gasPrice, "czr");
+                let gasValue = this.gas
+                let gasPrice = '' + this.gasPrice
                 let id = Math.random();
 
                 const keystore = self.$db.get("accounts_keystore")
@@ -314,8 +415,14 @@
                     return
                 }
                 let privateKey;
+
                 try {
-                    privateKey = await self.$czr.accounts.decrypt(keystore[0], self.fromInfo.password)
+                    if (await self.$czr.accounts.validate_account(keystore[0], self.fromInfo.password)) {
+                        privateKey = await self.$czr.accounts.decrypt(keystore[0], self.fromInfo.password)
+                    } else {
+                        throw new Error(this.$t("page_home.remove_dia.validate_password"))
+                    }
+                    // console.log('privateKey',privateKey)
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.decrypt_err'))
                     self.isSubmit = false;
@@ -326,7 +433,7 @@
                     from: self.fromInfo.account,
                     to: self.toAccount,
                     amount: amountValue,
-                    gas: +gasValue,
+                    gas: gasValue,
                     gas_price: gasPrice,
                     password: self.fromInfo.password,
                     data: self.extraData,
@@ -335,14 +442,14 @@
 
                 try {
                     res = await self.$czr.request.generateOfflineBlock(sendObj)
-                    if(res.code !== 0) {
+                    if (res.code !== 0) {
                         throw new Error(res.msg)
                     }
                     transaction = res
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.generate_offline_block_err'))
                     self.isSubmit = false;
-                    console.log(e)
+                    // console.log(e)
                     return
                 }
 
@@ -352,23 +459,24 @@
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.sign_err'))
                     self.isSubmit = false;
-                    console.log(e)
+                    // console.log(e)
                     return
                 }
 
                 try {
                     res = await self.$czr.request.sendOfflineBlock(transaction)
-                    if(res.code !== 0) {
+                    if (res.code !== 0) {
                         throw new Error(res.msg)
                     }
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.send_offline_block_err'))
                     self.isSubmit = false;
-                    console.log(e)
+                    // console.log(e)
                     return
                 }
 
                 if (res.code === 0) {
+                    // console.log('sendOfflineBlock res', res);
                     self.$message.success(
                         self.$t("page_transfer.msg_info.send_success")
                     );
@@ -379,55 +487,29 @@
                     let sendBlockInfo = {
                         hash: res.hash,
                         from: self.fromInfo.account,
+                        previous: transaction.previous,
                         to: self.toAccount,
                         amount: amountValue,
-                        gas: gasValue,
+                        gas: transaction.gas,
+                        gas_price: transaction.gas_price,
+                        data: transaction.data,
+                        work: transaction.work,
                         is_stable: "0",
-                        exec_timestamp: Math.ceil(
-                            new Date().getTime() / 1000
-                        )
+                        exec_timestamp: transaction.exec_timestamp
                     };
+                    // console.log('writeTransToSql', sendBlockInfo)
                     self.writeTransToSql(sendBlockInfo);
-                    // console.log(res);
-                    // self.$router.push("/account/" + self.fromInfo.account);
+                    if (this.$store.state.NodeStatus.status.syncing) {
+                        // console.log('节点正在同步中，交易确认时间可能较长，请耐心等待')
+                        this.$alert(
+                            this.$t('page_transfer.msg_info.syncingWait'),
+                            this.$t('page_transfer.msg_info.syncingWaitTitle'),
+                        )
+                    }
                 } else {
                     self.isSubmit = false;
                     self.$message.error(res.error);
                 }
-
-                // self.$czr.request
-                //     .send(sendObj)
-                //     .then(data => {
-                //         return data;
-                //     })
-                //     .then(data => {
-                //         if (!data.error) {
-                //             self.$message.success(
-                //                 self.$t("page_transfer.msg_info.send_success")
-                //             );
-                //             //Clear data
-                //             self.dialogSwitch.confrim = false;
-                //             self.dialogSwitch.password = false;
-                //             //data = {block: "9696FCB3B3BD232B26470AF06839139474DA28C644408CE9BBD9CEC8D8440833"}
-                //             let sendBlockInfo = {
-                //                 hash: data.block,
-                //                 from: self.fromInfo.account,
-                //                 to: self.toAccount,
-                //                 amount: amountValue,
-                //                 gas: gasValue,
-                //                 is_stable: "0",
-                //                 exec_timestamp: Math.ceil(
-                //                     new Date().getTime() / 1000
-                //                 )
-                //             };
-                //             self.writeTransToSql(sendBlockInfo);
-                //             // console.log(data);
-                //             // self.$router.push("/account/" + self.fromInfo.account);
-                //         } else {
-                //             self.isSubmit = false;
-                //             self.$message.error(data.error);
-                //         }
-                //     });
             },
             writeTransToSql(blockInfo) {
                 //写入sendlist
@@ -436,7 +518,8 @@
                     .push(blockInfo)
                     .write();
                 self.$router.push("/account/" + self.fromInfo.account);
-            }
+            },
+
         },
         filters: {
             toCzrVal(val) {

@@ -262,12 +262,14 @@
 
             },
             specifyNodeDir() {
+                this.conMsg = this.$t("page_config.content_msg.specifyDataDir");
                 // dialog.showOpenDialog @return {String[] | undefined}
                 const res = dialog.showOpenDialog({
                     title: self.$t("page_config.content_msg.specifyDataDir"),
                     // defaultPath: '',
                     properties: ['openDirectory'],
                 })
+                this.conMsg = this.$t("page_config.content_msg.ready_start");
                 if (!res) return
                 return res[0]
             },
