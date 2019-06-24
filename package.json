@@ -125,7 +125,7 @@
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
-    "js-yaml": "^3.12.2",
+    "js-yaml": "^3.13.1",
     "through2": "^2.0.3",
     "translation.js": "^0.7.3"
   }
