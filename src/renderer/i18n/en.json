@@ -141,7 +141,13 @@
             "send_time": "Sent time",
             "mac_time": "Main chain time",
             "gasPrice": "Gas Price(10<sup>-18</sup>CZR)",
-            "gasUsed": "Gas Used"
+            "gasUsed": "Gas Used",
+            "waiting": "等待确认",
+            "success": "成功",
+            "sendFail": "发送失败",
+            "fail1": "失败(1)",
+            "fail2": "失败(2)",
+            "fail3": "失败(3)"
         },
         "keystore": {
             "tit": "Backup wallet file",

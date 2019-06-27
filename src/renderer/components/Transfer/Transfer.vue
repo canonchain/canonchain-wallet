@@ -19,28 +19,31 @@
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.amount')">
-                    <el-input v-model="amount" :min="0" :max="accountInfo.balance" class="width-180"></el-input>
-                    <span>{{$t('unit.czr')}}</span>
+                    <el-input v-model="amount" :min="0" :max="accountInfo.balance" class="width-180 amount"></el-input>
+                    <span class="inline-block">{{$t('unit.czr')}}</span>
                     <el-checkbox v-model="checkedAll" @change='sendAllAmount' class="send-all-assets">
                         {{$t('page_transfer.send_all')}}&nbsp;
                         <span class="czr-txt-muted">
                             (&nbsp;{{accountInfo.balance | toCzrVal}} {{$t('unit.czr')}}&nbsp;)
                         </span>
-
                     </el-checkbox>
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gas')">
-                    <el-input v-model="gas" :min="0" :max="accountInfo.balance / gasPrice" class="width-180"></el-input>
+                    <el-input v-model="gas" :min="0" :max="accountInfo.balance / (gasPrice * 1000000000)"
+                              class="width-180"></el-input>
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gasPrice')">
                     <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
                                :max="+gasPriceRange.high" show-input
-                               input-size="mini"
-                               :show-tooltip="true" :format-tooltip="formatTooltip"
+                               input-size="mini" :step="0.001"
+                               @change="changeSlider"
+                               class="gas-slider"
                     ></el-slider>
-                    <span>10<sup>-18</sup>CZR</span>
+                    <span class="wei-unit">
+                        10<sup>-9</sup>CZR
+                    </span>
                 </el-form-item>
 
                 <el-form-item>
@@ -91,7 +94,7 @@
                     <p>{{amount}} {{$t('unit.czr')}}</p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.txFee')">
-                    <p>{{txFee}} <span>10<sup>-18</sup>CZR</span></p>
+                    <p>{{txFee}} <span>10<sup>-9</sup>CZR</span></p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.data')">
                     <p>{{extraData || '-'}}</p>
@@ -112,7 +115,8 @@
 
                 <div slot="footer" class="dialog-footer">
                     <el-button @click="dialogSwitch.password = false">{{$t('cancel')}}</el-button>
-                    <el-button type="primary" @click.prevent="sendTransaction">{{$t('confirm')}}</el-button>
+                    <el-button type="primary" :loading="sending" @click.prevent="sendTransaction">{{$t('confirm')}}
+                    </el-button>
                 </div>
             </el-dialog>
 
@@ -131,6 +135,7 @@
         name: "Transfer",
         data() {
             return {
+                sending: false,
                 dialogSwitch: {
                     contacts: false,
                     confrim: false,
@@ -155,9 +160,9 @@
                 gas: '21000',
                 gasPrice: 0,
                 gasPriceRange: {
-                    low: '10000000',
-                    medium: '15000000',
-                    high: '20000000',
+                    low: '0.010',
+                    medium: '0.015',
+                    high: '0.020',
                 },
                 extraData: ""
             };
@@ -193,9 +198,9 @@
                         median_gas_price,
                         highest_gas_price
                     } = res.data.result
-                    this.gasPriceRange.low = cheapest_gas_price
-                    this.gasPriceRange.medium = median_gas_price
-                    this.gasPriceRange.high = highest_gas_price
+                    this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
+                    this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
+                    this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
                 })
                 .catch(err => {
                     this.$message.error(new Error(err.message))
@@ -223,6 +228,13 @@
             },
         },
         methods: {
+            changeSlider(val) {
+                if (this.checkedAll) {
+                    let weiVal = this.accountInfo.balance;
+                    let targetVal = self.$czr.utils.fromWei(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(val)).times('1e9')).toString(), "czr");
+                    this.amount = Number(targetVal) >= 0 ? targetVal : 0;
+                }
+            },
             formatTooltip(val) {
                 return new BigNumber(val).div('1e18').toString() + ' CZR'
             },
@@ -240,7 +252,7 @@
             sendAllAmount() {
                 if (this.checkedAll) {
                     let weiVal = this.accountInfo.balance;
-                    let targetVal = self.$czr.utils.fromWei(weiVal, "czr");
+                    let targetVal = self.$czr.utils.fromWei(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).times('1e9')).toString(), "czr");
                     this.amount = Number(targetVal) >= 0 ? targetVal : 0;
                 } else {
                     this.amount = 0;
@@ -278,14 +290,14 @@
                     return;
                 }
 
-                if (!reg.test(this.gasPrice)) {
+                if (!/^\d+(\.\d{1,9})?$/.test(this.gasPrice)) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.gasPrice_error")
                     );
                     return;
                 }
 
-                let gasValue = new BigNumber(this.gas).times(new BigNumber(this.gasPrice));
+                let gasValue = new BigNumber(this.gas).times(new BigNumber(this.gasPrice).times('1e9'));
                 if (gasValue.lt(new BigNumber('1e7'))) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.txFeeTooLow")
@@ -300,14 +312,14 @@
                         to: this.toAccount,
                         amount: this.$czr.utils.toWei(this.amount, "czr"),
                         gas: this.gas,
-                        gas_price: '' + this.gasPrice,
+                        gas_price: new BigNumber(this.gasPrice).times('1e9').toString(),
                         data: this.extraData,
                         mci: 'latest',
                     }
                     // console.log('estimateGas req', req)
                     const res = await this.$czr.request.estimateGas(req)
                     if (res.code !== 0) {
-                        switch (res.code){
+                        switch (res.code) {
                             case 1:
                                 this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
                                 break
@@ -395,15 +407,17 @@
                 self.fromInfo.password = "";
             },
             async sendTransaction() {
+                this.sending = true
                 let self = this;
                 if (!self.isSubmit) {
                     self.isSubmit = true;
                 } else {
+                    this.sending = false
                     return;
                 }
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
                 let gasValue = this.gas
-                let gasPrice = '' + this.gasPrice
+                let gasPrice = new BigNumber(this.gasPrice).times('1e9').toString()
                 let id = Math.random();
 
                 const keystore = self.$db.get("accounts_keystore")
@@ -412,6 +426,7 @@
                 if (!keystore.length) {
                     self.$message.error(self.$t('page_transfer.no_keystore_file'));
                     self.isSubmit = false;
+                    this.sending = false
                     return
                 }
                 let privateKey;
@@ -420,12 +435,15 @@
                     if (await self.$czr.accounts.validate_account(keystore[0], self.fromInfo.password)) {
                         privateKey = await self.$czr.accounts.decrypt(keystore[0], self.fromInfo.password)
                     } else {
+                        this.sending = false
+                        self.isSubmit = false
                         throw new Error(this.$t("page_home.remove_dia.validate_password"))
                     }
                     // console.log('privateKey',privateKey)
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.decrypt_err'))
                     self.isSubmit = false;
+                    this.sending = false
                     return
                 }
 
@@ -443,12 +461,15 @@
                 try {
                     res = await self.$czr.request.generateOfflineBlock(sendObj)
                     if (res.code !== 0) {
+                        this.sending = false
+                        self.isSubmit = false
                         throw new Error(res.msg)
                     }
                     transaction = res
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.generate_offline_block_err'))
                     self.isSubmit = false;
+                    this.sending = false
                     // console.log(e)
                     return
                 }
@@ -459,6 +480,7 @@
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.sign_err'))
                     self.isSubmit = false;
+                    this.sending = false
                     // console.log(e)
                     return
                 }
@@ -466,11 +488,14 @@
                 try {
                     res = await self.$czr.request.sendOfflineBlock(transaction)
                     if (res.code !== 0) {
+                        self.isSubmit = false
+                        this.sending = false
                         throw new Error(res.msg)
                     }
                 } catch (e) {
                     self.$message.error(self.$t('page_transfer.msg_info.send_offline_block_err'))
                     self.isSubmit = false;
+                    this.sending = false
                     // console.log(e)
                     return
                 }
@@ -508,6 +533,7 @@
                     }
                 } else {
                     self.isSubmit = false;
+                    this.sending = false
                     self.$message.error(res.error);
                 }
             },
@@ -580,7 +606,7 @@
         color: #5a59a0;
     }
     .send-all-assets {
-        margin-left: 20px;
+        /*margin-left: 20px;*/
         font-size: 16px;
     }
     .speculate-wrap {
@@ -596,4 +622,8 @@
         text-align: center;
         margin-top: 40px;
     }
+    .amount {width: 90%;}
+    .inline-block {display: inline-block;width: 9%;text-align: center;}
+    .gas-slider {display: inline-block;width: 85%;}
+    .wei-unit {display: inline-block;line-height: 38px;vertical-align: top;width: 14%;text-align: center;}
 </style>

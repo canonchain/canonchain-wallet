@@ -167,20 +167,23 @@
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.status')}}</strong>
                     <span class="tx-item-info">
                         <template v-if='transactionInfo.is_stable == "0"'>
-                            <span class="txt-warning"> 等待确认 </span>
+                            <span class="txt-warning"> {{$t('page_account.dia_tx.waiting')}} </span>
                         </template>
                         <template v-else-if='transactionInfo.is_stable == "1"'>
                             <template v-if='transactionInfo.status == "0"'>
-                                <span class="txt-success"> 成功 </span>
+                                <span class="txt-success"> {{$t('page_account.dia_tx.success')}} </span>
+                            </template>
+                            <template v-else-if='transactionInfo.status == "100"'>
+                                <span class="txt-danger"> {{$t('page_account.dia_tx.sendFail')}} </span>
                             </template>
                             <template v-else-if='transactionInfo.status == "1"'>
-                                <span class="txt-danger"> 失败(1) </span>
+                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail1')}} </span>
                             </template>
                             <template v-else-if='transactionInfo.status == "2"'>
-                                <span class="txt-danger"> 失败(2) </span>
+                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail2')}} </span>
                             </template>
                             <template v-else-if='transactionInfo.status == "3"'>
-                                <span class="txt-danger"> 失败(3) </span>
+                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail3')}} </span>
                             </template>
                         </template>
                     </span>
@@ -768,6 +771,43 @@
                             //         self.accountInfo.currentTxList[index] = data;
                             //     }
                             // });
+                        }else{
+                            // 检查交易详情，如果不存在，说明交易失败
+                            this.$czr.request.getBlock(hash)
+                                .then(res=>{
+                                    if(res.code === 0){
+                                        if(res.block === null){
+                                            const tx = this.accountInfo.tx_list.find(tx => {
+                                                return tx.hash === hash
+                                            })
+                                            if (tx) {
+                                                tx.is_stable = '1'
+                                                tx.status = '100'
+                                            }
+                                            const tx2 = this.accountInfo.currentTxList.find(tx => {
+                                                return tx.hash === hash
+                                            })
+                                            if (tx2) {
+                                                tx2.is_stable = '1'
+                                                tx2.status = '100'
+                                            }
+                                            this.$db.get(`send_list.${this.address}`)
+                                                .find({hash: hash})
+                                                .assign({
+                                                    is_stable: '1',
+                                                    status: '100',
+                                                })
+                                                .write()
+                                            if ((hash === this.transactionInfo.hash)) {
+                                                this.transactionInfo = Object.assign({},this.transactionInfo,{
+                                                    is_stable: '1',
+                                                    status: '100',
+                                                });
+                                            }
+                                            this.initSendTrans(true)
+                                        }
+                                    }
+                                })
                         }
                     })
                     .catch(error => {

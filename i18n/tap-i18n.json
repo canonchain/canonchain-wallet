@@ -141,7 +141,13 @@
       "send_time": "发送时间",
       "mac_time": "主链时间",
       "gasPrice": "Gas单价(10<sup>-18</sup>CZR)",
-      "gasUsed": "Gas使用"
+      "gasUsed": "Gas使用",
+      "waiting": "等待确认",
+      "success": "成功",
+      "sendFail": "发送失败",
+      "fail1": "失败(1)",
+      "fail2": "失败(2)",
+      "fail3": "失败(3)"
     },
     "keystore": {
       "tit": "备份钱包文件",

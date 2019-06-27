@@ -8,7 +8,7 @@ const gulp = require('gulp'),
     languges = require('./i18n/languges_conf'),
     rename = require('gulp-rename');
 // The task of translating files
-gulp.task('default', function () {
+gulp.task('i18n', function () {
     for (const languge in languges) {
         // console.log(languge,languges[languge])
         gulp.src('./i18n/tap-i18n.json')
@@ -26,8 +26,8 @@ gulp.task('default', function () {
     }
 });
 
-gulp.task('watch', function () {
-    gulp.watch('i18n/tap-i18n.json', ['default']);
+gulp.task('i18n-watch', function () {
+    gulp.watch('i18n/tap-i18n.json', ['i18n']);
 })
 
 const createHash = require('crypto').createHash

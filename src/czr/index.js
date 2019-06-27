@@ -7,4 +7,5 @@ import Czr from 'czr'
 
 export default new Czr({
     dev: process.env.NODE_ENV !== 'production'
+    // dev: true
 })

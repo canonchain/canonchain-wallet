@@ -6,8 +6,7 @@ import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/element-ui.css';
 
-// import Czr from './czr/index.js';
-import Czr from 'czr'
+import czr from '../czr'
 
 //Introducing db database
 import db from '../datastore/index'
@@ -32,10 +31,7 @@ Vue.use(VueI18n);
 Vue.use(ElementUI);
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 
-let czr = new Czr({
-    dev: process.env.NODE_ENV !== 'production'
-});
-Vue.czr = Vue.prototype.$czr = czr;
+Vue.prototype.$czr = czr;
 
 Vue.prototype.$db = db
 Vue.prototype.$isOnline = true;

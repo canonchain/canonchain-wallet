@@ -13,10 +13,7 @@ let menu;
 // const url           = require('url');
 
 // czr账号
-const Czr = require("czr");
-const czr = new Czr({
-    dev: process.env.NODE_ENV !== 'production'
-});
+const czr = require('../czr')
 ipcMain.on('sync', (event, arg) => {
     if (typeof arg === 'string') {
         czr.accounts.create(arg).then(data => {
