@@ -1,204 +1,242 @@
 {
-    "confirm":"ырастоо",
-    "cancel":"жокко чыгарылды",
-    "dialog_tit":"тез",
-    "close":"жакын",
-    "confirm_you_active":"Сураныч, операция болушу керек",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"ырастоо",
+  "cancel":"жокко чыгарылды",
+  "dialog_tit":"тез",
+  "close":"жакын",
+  "confirm_you_active":"Сураныч, операция болушу керек",
+  "rpcErrors": {
+    "invalidFromAccount":"акча партия эсебин жараксыз жөнөтүү",
+    "invalidToAccount":"Жараксыз алуучунун каттоо эсеби",
+    "invalidAmountFormat":"Жараксыз суммасы формат",
+    "invalidGasFormat":"Жараксыз Газ формат",
+    "invalidDataFormat":"алтылык түрүндө Жараксыз маалымат",
+    "dataSizeTooLarge":"Алтылык маалыматтар да",
+    "invalidGasPriceFormat":"Газ баасы жараксыз формат",
+    "invalidMciFormat":"MCI жараксыз формат",
+    "notEnoughFail":"Газ жетишпестиги же өзгөчө бөлүштүрүү"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <Sup> -18 </ Sup> CZR"
+  },
+  "model_header": {
+    "home":"үй",
+    "transfer":"ташуу",
+    "contacts":"Байланыш",
+    "setting":"орнотуу",
+    "total":"Бардыгы болуп",
+    "testnet":"Test Network",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"Мезгилдештирүү"
+  },
+  "page_setting": {
+    "tit":"орнотуу",
+    "lang":"тил",
+    "select":"Сураныч, тандоо",
+    "version_number":"Purse версия",
+    "data_path":"Node маалыматтар жол",
+    "change":"өзгөртүү",
+    "changeDirNote":"Сураныч, жаңы жетекчилигинин жолунда түп тамырынан көчүп, эгерде бул маалыматтар бир жоготуу алып келет",
+    "note":"кулак салгыла"
+  },
+  "page_contacts": {
+    "tit":"Байланыш",
+    "add_dialog":"Болумушту Байланыш",
+    "add_cont": {
+      "tit":"Болумушту Байланыш",
+      "tag":"Байланыш",
+      "address":"каттоо дареги",
+      "tag_placeholder":"Сураныч, байланыштын атын",
+      "address_placeholder":"Сураныч, эсепти дареги кирет",
+      "add_success":"ийгиликтүү кошулду"
     },
-    "model_header": {
-        "home":"үй",
-        "transfer":"ташуу",
-        "contacts":"Байланыш",
-        "setting":"орнотуу",
-        "total":"Бардыгы болуп",
-        "testnet":"Test Network",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Сиз алып жатышат",
+      "remove_success":"ийгиликтүү алынып салынды"
     },
-    "page_setting": {
-        "tit":"орнотуу",
-        "lang":"тил",
-        "select":"Сураныч, тандоо",
-        "version_number":"Purse версия"
-    },
-    "page_contacts": {
-        "tit":"Байланыш",
-        "add_dialog":"Болумушту Байланыш",
-        "add_cont": {
-            "tit":"Болумушту Байланыш",
-            "tag":"Байланыш",
-            "address":"каттоо дареги",
-            "tag_placeholder":"Сураныч, байланыштын атын",
-            "address_placeholder":"Сураныч, эсепти дареги кирет",
-            "add_success":"ийгиликтүү кошулду"
-        },
-        "delete_dialog": {
-            "title":"Сиз алып жатышат",
-            "remove_success":"ийгиликтүү алынып салынды"
-        },
-        "msg_info": {
-            "no_tag":"Сураныч, эсеп Эскертүүлөр кирет",
-            "no_address":"Сураныч, эсеп дарегин киргизүү",
-            "valid_address":"Байланыш дареги мыйзамдуу эмес,",
-            "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
-            "contacts_quantity_error":"байланыштардын саны 50дөн ашык болушу мүмкүн эмес",
-            "exist":"Байланыш мурунтан эле бар,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"акча партиясын жөнөтүү",
-        "to_address":"алуучу",
-        "amount":"акча",
-        "gas":"газ",
-        "send_all":"бардык жөнөтүү",
-        "data":"маалыматтар",
-        "data_placeholder":"алтылык маалыматтар",
-        "fees":"Алымдар",
-        "total":"Бардыгы болуп",
-        "select":"Сураныч, тандоо",
-        "no_account_info":"Эсеби жок, эсеп же импорт сураныч түзүү",
-        "contacts_dig": {
-            "title":"байланыш каттоо эсебин тандоо",
-            "select_placeholder":"Сураныч, тандоо"
-        },
-        "confirm_dia": {
-            "title":"Сураныч, ырастоо",
-            "enter_passworld_tit":"Сураныч, сөздү киргизип",
-            "enter_passworld_place":"Сураныч, сөздү киргизип"
-        },
-        "msg_info": {
-            "address_null":"Сураныч, бири-биринин каттоо кирет",
-            "balance_zero":"тең салмактуулук жетишсиз, мындан ары мүмкүн эмес",
-            "amount_zero":"Которуу суммасы 0 көбүрөөк болушу керек",
-            "amount_error":"Сураныч, жарактуу бүтүм сумманы киргизүү",
-            "address_err":"дареги түрдө кирип, мыйзамдуу эмес,",
-            "send_success":"Соода жөнөтүлдү",
-            "amount_exceeded":"жалпы бүтүм суммасы учурдагы эсеп балансын ашат",
-
-            "decrypt_err":"Капчык чечим болбой, бул туура эмес сөз болушу мүмкүн",
-            "send_error":"бүтүм санааркап: жетиштүү балансы жана кенчилер акысы бар-жетпесин билиш үчүн, текшерүү"
-        }
-    },
-    "page_account": {
-        "transfer_log":"бүтүмдүн Record",
-        "transfer_log_null":"эч кандай бүтүмдөр",
-        "active_icon": {
-            "go_transfer":"которууну демилгелөө",
-            "import_keystore":"каттоо билэ",
-            "qrcode":"Эки өлчөмдүү коду"
-        },
-        "edit_dia": {
-            "tit":"Edit Note",
-            "subtit":"сиздин каттоо үчүн сөз белгилейт",
-            "no_tag":"Сураныч, эсеп Эскертүүлөр кирет",
-            "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес"
-        },
-        "dia_tx":{
-            "tit":"соода маалыматтар",
-            "block_hash":"бүтүм саны",
-            "status":"мамлекет",
-            "from":"акча партиясын жөнөтүү",
-            "to":"алуучу",
-            "amount":"акча",
-            "data":"маалыматтар",
-            "send_time":"жөнөтүү Time",
-            "mac_time":"убакыт омуртка"
-        },
-        "keystore": {
-            "tit":"Камдык капчык билэ",
-            "copy":"копия",
-            "download":"Download капчыгы билэ"
-        },
-        "msg_info": {
-            "ads_copy_success":"Дареги көчүрүлдү",
-            "key_copy_success":"ийгиликтүү көчүрүлдү"
-        }
-    },
-    "page_home": {
-        "import_account":"Import каттоо эсеби",
-        "add_account":"жаңы каттоо эсеби",
-        "acc":"каттоо",
-        "create_dia": {
-            "create_tit":"Эсеп жазуусун жаратуу",
-            "backup_tit":"Сиздин жаңы эсеп камдык",
-            "create_tag":"Эскертүүлөр каттоо",
-            "create_pwd":"пароль",
-            "create_repwd":"Сырсөздү ырастоо",
-            "placeholder_tag":"эсеп аты Эскертүүлөр коюу",
-            "placeholder_pwd":"Set эсеп пароль",
-            "placeholder_repwd":"эсеп-сөздү баамдагыла",
-            
-            
-            "account_download_keystore":"эсеп билэни Download",
-
-            "validate_tag":"Сураныч, эсеп аты Эскертүүлөр кирет",
-            "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
-
-            "validate_password":"Эгер белгиленген сырсөз",
-            "validate_re_password":"Сураныч, сиз кайра сырсөз",
-            "validate_strong_password":"Сураныч, жок дегенде сегиз сырсөз киргизгени",
-            "validate_long_password":"Сырсөз 100дөн ашык эмес,",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Сырсөздөр дал келген жок",
-
-            "create_success":"ийгилик түзүлүүдө",
-            "account_quantity_error":"эсеп саны 50дөн ашык болушу мүмкүн эмес",
-            "create_success_des":"Сураныч, сиздин каттоо сактап, эч ким менен бөлүшө жок!"
-        },
-        "import_dia": {
-            "tit":"Import каттоо эсеби",    
-            "placeholder_keystore":"Сураныч, бул жерде эске берүүгө",
-            "create_tag":"Эскертүүлөр каттоо",
-            "placeholder_tag":"эсеп аты Эскертүүлөр коюу",
-
-            "validate_tag":"Сураныч, эсеп аты Эскертүүлөр кирет",
-            "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
-            "validate_enter_keystore":"Эсебин билэни импорттоо",
-            "validate_error_keystore":"Каттоо импорт албаса, эсеп туура билэ болушу мүмкүн",
-            "imported_account_success":"Import ийгилик",
-            "exist":"Бул каттоо эсеби мурунтан эле бар, жазып да",
-            "keystore_error":"Error:",
-            "keystore_length_error":"Сиз бир гана эсеп билэни импорттой аласыз, сураныч, кайра аракет!",
-            "keystore_format_error":"Сураныч, туура эсеп билэни тандоо",
-            "keystore_is_has":"тизме мурунтан эле сиздин Досторду импорттоо керек жазууну",
-            "imported_success":"тандалып алынган билэни"
-        },
-        "remove_dia": {
-            "tit":"Чын эле, аны алып келеби?",
-            "remove_confrim":"Мен алып ишенем",
-            "backup":"Бул билдирүүдөн кайра кетчү нерсе, мүлктүк зыянга учуратпоо үчүн",
-            "input_pwd":"пароль",
-            "placeholder_pwd":"Бул каттоо эсеби үчүн сырсөз",
-            "validate_password":"Сиз киргизген сырсөз туура эмес",
-            "remove_success":"ийгиликтүү алынып салынды"
-        }
-    },
-    "page_config": {
-        "config_detection":"аныктоо Тарам орнотуусу",
-        "content_msg":{
-            "ready_test":"тарам билэни аныктоо даяр",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Бул акыркы түйүн тарам маалымат алган",
-            "is_local":"жергиликтүү түйүн билэ бар же жок экенин аныктоо",
-            "already_local":"Учурда бир тарам билэ маалымат түйүнү түзмөк жок",
-            "not_local":"Эмес, түйүн тарам материалдары табылды, ал биринчи жолу Нускасы болушу мүмкүн",
-            "config_write_local":"ээ түйүн маалымат жергиликтүү дискке жазылган Files",
-            "whether_update_node":"аныктоо кабарлоону керек болобу?",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"түйүн жүктөлүп, сабыр ыраазы болсун",
-            "already_downloaded":"Node программа жүктөлүп алынган жана баштоого даяр",
-            "ready_start":"түйүн баштоого даяр",
-            "enter_wallet":"түйүн аныктоону баштоо, капчыкты кирүүгө даяр"
-        },
-        "version_dialog":{
-            "version_tit":"Версия өзгөртүү киргизүүгө чакыруу",
-            "download_wallet":"Quguan тармак Акча акыркы нускасын жүктөп алуу",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Сураныч, эсеп Эскертүүлөр кирет",
+      "no_address":"Сураныч, эсеп дарегин киргизүү",
+      "valid_address":"Байланыш дареги мыйзамдуу эмес,",
+      "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
+      "contacts_quantity_error":"байланыштардын саны 50дөн ашык болушу мүмкүн эмес",
+      "exist":"Байланыш мурунтан эле бар,"
     }
+  },
+  "page_transfer": {
+    "from_address":"акча партиясын жөнөтүү",
+    "to_address":"алуучу",
+    "amount":"акча",
+    "gas":"газ",
+    "gasPrice":"газ бирдиги баасы",
+    "send_all":"бардык жөнөтүү",
+    "data":"маалыматтар",
+    "data_placeholder":"алтылык маалыматтар",
+    "fees":"Алымдар",
+    "txFee":"бүтүм чыгымдар",
+    "total":"Бардыгы болуп",
+    "select":"Сураныч, тандоо",
+    "no_account_info":"Эсеби жок, эсеп же импорт сураныч түзүү",
+    "no_keystore_file":"Тиешелүү каттоо эсеби File табылган жок",
+    "contacts_dig": {
+      "title":"байланыш каттоо эсебин тандоо",
+      "select_placeholder":"Сураныч, тандоо"
+    },
+    "confirm_dia": {
+      "title":"Сураныч, ырастоо",
+      "enter_passworld_tit":"Сураныч, сөздү киргизип",
+      "enter_passworld_place":"Сураныч, сөздү киргизип"
+    },
+    "msg_info": {
+      "address_null":"Сураныч, бири-биринин каттоо кирет",
+      "balance_zero":"тең салмактуулук жетишсиз, мындан ары мүмкүн эмес",
+      "amount_zero":"Которуу суммасы 0 көбүрөөк болушу керек",
+      "amount_error":"Сураныч, жарактуу бүтүм сумманы киргизүү",
+      "address_err":"дареги түрдө кирип, мыйзамдуу эмес,",
+      "gas_error":"Сураныч, жарактуу газ келишимин түзүүгө",
+      "gasPrice_error":"Сураныч, жарактуу газ соода бирдиги баасын кирет",
+      "send_success":"Соода жөнөтүлдү",
+      "amount_exceeded":"жалпы бүтүм суммасы учурдагы эсеп балансын ашат",
+      "txFeeTooLow":"Бүтүм чыгымдар өтө төмөн болуп саналат",
+      "decrypt_err":"Капчык чечим болбой, бул туура эмес сөз болушу мүмкүн",
+      "send_error":"бүтүм санааркап: жетиштүү балансы жана кенчилер акысы бар-жетпесин билиш үчүн, текшерүү",
+      "generate_offline_block_err":"коюлбаган бүтүм чыгаруу албаса",
+      "sign_err":"Кол сөзсүз",
+      "send_offline_block_err":"кол бүтүм болбой жөнөтүү",
+      "syncingWaitTitle":"Node шайкештештирилип турат",
+      "syncingWait":"Nodes шайкештештирилет, бүтүм ырастоо убакыт талап кылынышы мүмкүн, сабыр ыраазы болсун"
+    }
+  },
+  "pager": {
+    "next":"Кийинки бет",
+    "prev":"Мурунку"
+  },
+  "page_account": {
+    "transfer_log":"бүтүмдүн Record",
+    "transfer_log_null":"эч кандай бүтүмдөр",
+    "txSent":"бүтүмдү жөнөтүү",
+    "txAll":"Бардык бүтүмдөр",
+    "txNew":"күндөлүк эсептин бир бүтүм жөнүндө маалымат бар",
+    "checkNow":"көрүү алуу",
+    "active_icon": {
+      "go_transfer":"которууну демилгелөө",
+      "import_keystore":"каттоо билэ",
+      "qrcode":"Эки өлчөмдүү коду"
+    },
+    "edit_dia": {
+      "tit":"Edit Note",
+      "subtit":"сиздин каттоо үчүн сөз белгилейт",
+      "no_tag":"Сураныч, эсеп Эскертүүлөр кирет",
+      "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес"
+    },
+    "dia_tx": {
+      "tit":"соода маалыматтар",
+      "block_hash":"бүтүм саны",
+      "status":"мамлекет",
+      "from":"акча партиясын жөнөтүү",
+      "to":"алуучу",
+      "amount":"акча",
+      "data":"маалыматтар",
+      "send_time":"жөнөтүү Time",
+      "mac_time":"убакыт омуртка",
+      "gasPrice":"Газ баасы (10 <макса> -18 </ макса> CZR)",
+      "gasUsed":"Газ колдонуу",
+      "waiting":"ырастоо үчүн күтүүдө",
+      "success":"ийгилик",
+      "sendFail":"жөнөтүлбөй калды",
+      "fail1":"Бузуу (1)",
+      "fail2":"(2)",
+      "fail3":"Аткарбоо (3)"
+    },
+    "keystore": {
+      "tit":"Камдык капчык билэ",
+      "copy":"копия",
+      "download":"Download капчыгы билэ"
+    },
+    "msg_info": {
+      "ads_copy_success":"Дареги көчүрүлдү",
+      "key_copy_success":"ийгиликтүү көчүрүлдү"
+    }
+  },
+  "page_home": {
+    "import_account":"Import каттоо эсеби",
+    "add_account":"жаңы каттоо эсеби",
+    "acc":"каттоо",
+    "create_dia": {
+      "create_tit":"Эсеп жазуусун жаратуу",
+      "backup_tit":"Сиздин жаңы эсеп камдык",
+      "create_tag":"Эскертүүлөр каттоо",
+      "create_pwd":"пароль",
+      "create_repwd":"Сырсөздү ырастоо",
+      "placeholder_tag":"эсеп аты Эскертүүлөр коюу",
+      "placeholder_pwd":"Set эсеп пароль",
+      "placeholder_repwd":"эсеп-сөздү баамдагыла",
+      "account_download_keystore":"эсеп билэни Download",
+      "validate_tag":"Сураныч, эсеп аты Эскертүүлөр кирет",
+      "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
+      "validate_password":"Эгер белгиленген сырсөз",
+      "validate_re_password":"Сураныч, сиз кайра сырсөз",
+      "validate_strong_password":"Сураныч, жок дегенде сегиз сырсөз киргизгени",
+      "validate_long_password":"Сырсөз 100дөн ашык эмес,",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Сырсөздөр дал келген жок",
+      "create_success":"ийгилик түзүлүүдө",
+      "account_quantity_error":"эсеп саны 50дөн ашык болушу мүмкүн эмес",
+      "create_success_des":"Сураныч, сиздин каттоо сактап, эч ким менен бөлүшө жок!"
+    },
+    "import_dia": {
+      "tit":"Import каттоо эсеби",
+      "placeholder_keystore":"Сураныч, бул жерде эске берүүгө",
+      "create_tag":"Эскертүүлөр каттоо",
+      "placeholder_tag":"эсеп аты Эскертүүлөр коюу",
+      "validate_tag":"Сураныч, эсеп аты Эскертүүлөр кирет",
+      "validate_tag_length":"Заметки аты ары 8 белгиден болушу мүмкүн эмес",
+      "validate_enter_keystore":"Эсебин билэни импорттоо",
+      "validate_error_keystore":"Каттоо импорт албаса, эсеп туура билэ болушу мүмкүн",
+      "imported_account_success":"Import ийгилик",
+      "exist":"Бул каттоо эсеби мурунтан эле бар, жазып да",
+      "keystore_error":"Error:",
+      "keystore_length_error":"Сиз бир гана эсеп билэни импорттой аласыз, сураныч, кайра аракет!",
+      "keystore_format_error":"Сураныч, туура эсеп билэни тандоо",
+      "keystore_is_has":"тизме мурунтан эле сиздин Досторду импорттоо керек жазууну",
+      "imported_success":"тандалып алынган билэни"
+    },
+    "remove_dia": {
+      "tit":"Чын эле, аны алып келеби?",
+      "remove_confrim":"Мен алып ишенем",
+      "backup":"Бул билдирүүдөн кайра кетчү нерсе, мүлктүк зыянга учуратпоо үчүн",
+      "input_pwd":"пароль",
+      "placeholder_pwd":"Бул каттоо эсеби үчүн сырсөз",
+      "validate_password":"Сиз киргизген сырсөз туура эмес",
+      "remove_success":"ийгиликтүү алынып салынды"
+    }
+  },
+  "page_config": {
+    "config_detection":"аныктоо Тарам орнотуусу",
+    "content_msg": {
+      "ready_test":"тарам билэни аныктоо даяр",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Бул акыркы түйүн тарам маалымат алган",
+      "is_local":"жергиликтүү түйүн билэ бар же жок экенин аныктоо",
+      "already_local":"Учурда бир тарам билэ маалымат түйүнү түзмөк жок",
+      "not_local":"Эмес, түйүн тарам материалдары табылды, ал биринчи жолу Нускасы болушу мүмкүн",
+      "config_write_local":"ээ түйүн маалымат жергиликтүү дискке жазылган Files",
+      "whether_update_node":"аныктоо кабарлоону керек болобу?",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"түйүн жүктөлүп, сабыр ыраазы болсун",
+      "already_downloaded":"Node программа жүктөлүп алынган жана баштоого даяр",
+      "ready_start":"түйүн баштоого даяр",
+      "enter_wallet":"түйүн аныктоону баштоо, капчыкты кирүүгө даяр",
+      "specifyDataDir":"сактоо түйүн маалымат жолун тандоо"
+    },
+    "version_dialog": {
+      "version_tit":"Версия өзгөртүү киргизүүгө чакыруу",
+      "download_wallet":"Quguan тармак Акча акыркы нускасын жүктөп алуу",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

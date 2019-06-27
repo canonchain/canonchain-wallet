@@ -1,204 +1,242 @@
 {
-    "confirm":"vahvistaa",
-    "cancel":"peruttu",
-    "dialog_tit":"nopea",
-    "close":"lähellä",
-    "confirm_you_active":"Vahvista toiminta",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"vahvistaa",
+  "cancel":"peruttu",
+  "dialog_tit":"nopea",
+  "close":"lähellä",
+  "confirm_you_active":"Vahvista toiminta",
+  "rpcErrors": {
+    "invalidFromAccount":"Lähettäjän tili on virheellinen",
+    "invalidToAccount":"Saapuva tili on virheellinen",
+    "invalidAmountFormat":"Virheellinen määrän muoto",
+    "invalidGasFormat":"Virheellinen kaasumuoto",
+    "invalidDataFormat":"Virheellinen heksadesimaalinen tietomuoto",
+    "dataSizeTooLarge":"Heksadesimaaliset tiedot ovat liian suuria",
+    "invalidGasPriceFormat":"Kaasun yksikköhinnan muoto on virheellinen",
+    "invalidMciFormat":"MCI-muoto on virheellinen",
+    "notEnoughFail":"Riittämätön kaasu tai epänormaali vika"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"koti",
+    "transfer":"siirto",
+    "contacts":"kosketus",
+    "setting":"perustettu",
+    "total":"kokonais-",
+    "testnet":"Testiverkko",
+    "online":"Online",
+    "offline":"Poissa",
+    "syncing":"Synkronoinnissa"
+  },
+  "page_setting": {
+    "tit":"perustettu",
+    "lang":"kieli",
+    "select":"Valitse",
+    "version_number":"Lompakon versio",
+    "data_path":"Solmun tietopolku",
+    "change":"muutos",
+    "changeDirNote":"Siirrä tiedostot alkuperäiseen polkuun uuteen hakemistoon, muuten se aiheuttaa tietojen häviämisen.",
+    "note":"huomioida"
+  },
+  "page_contacts": {
+    "tit":"kosketus",
+    "add_dialog":"Uusi yhteystieto",
+    "add_cont": {
+      "tit":"Uusi yhteystieto",
+      "tag":"kosketus",
+      "address":"Tilin osoite",
+      "tag_placeholder":"Anna yhteystiedon nimi",
+      "address_placeholder":"Anna yhteystiedon tilin osoite",
+      "add_success":"Lisätty onnistuneesti"
     },
-    "model_header": {
-        "home":"koti",
-        "transfer":"siirto",
-        "contacts":"kosketus",
-        "setting":"perustettu",
-        "total":"kokonais-",
-        "testnet":"Testiverkko",
-        "online":"Online",
-        "offline":"Poissa"
+    "delete_dialog": {
+      "title":"Olet poistamassa",
+      "remove_success":"Poistettu onnistuneesti"
     },
-    "page_setting": {
-        "tit":"perustettu",
-        "lang":"kieli",
-        "select":"Valitse",
-        "version_number":"Lompakon versio"
-    },
-    "page_contacts": {
-        "tit":"kosketus",
-        "add_dialog":"Uusi yhteystieto",
-        "add_cont": {
-            "tit":"Uusi yhteystieto",
-            "tag":"kosketus",
-            "address":"Tilin osoite",
-            "tag_placeholder":"Anna yhteystiedon nimi",
-            "address_placeholder":"Anna yhteystiedon tilin osoite",
-            "add_success":"Lisätty onnistuneesti"
-        },
-        "delete_dialog": {
-            "title":"Olet poistamassa",
-            "remove_success":"Poistettu onnistuneesti"
-        },
-        "msg_info": {
-            "no_tag":"Anna tilin huomautus",
-            "no_address":"Anna tilisi osoite",
-            "valid_address":"Yhteystiedon osoite on laiton",
-            "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
-            "contacts_quantity_error":"Yhteystietojen määrä voi olla enintään 50",
-            "exist":"Yhteystieto on jo olemassa,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Lähetysosapuoli",
-        "to_address":"saaja",
-        "amount":"raha",
-        "gas":"kaasu",
-        "send_all":"Lähetä kaikki",
-        "data":"data",
-        "data_placeholder":"Heksadesimaaliset tiedot",
-        "fees":"Käsittelymaksu",
-        "total":"kokonais-",
-        "select":"Valitse",
-        "no_account_info":"Ei vielä tiliä, luo tai tuo tili",
-        "contacts_dig": {
-            "title":"Valitse yhteystili",
-            "select_placeholder":"Valitse"
-        },
-        "confirm_dia": {
-            "title":"Vahvista",
-            "enter_passworld_tit":"Anna salasana",
-            "enter_passworld_place":"Anna salasana"
-        },
-        "msg_info": {
-            "address_null":"Anna toisen osapuolen tili",
-            "balance_zero":"Riittämätön tasapaino, jota ei voi jatkaa",
-            "amount_zero":"Siirron määrän on oltava suurempi kuin 0",
-            "amount_error":"Anna oikeudellinen tapahtuma",
-            "address_err":"Siirretyn osoitteen muoto on virheellinen.",
-            "send_success":"Transaktio lähetetty",
-            "amount_exceeded":"Nykyinen liiketoimen kokonaismäärä ylittää tilin saldon",
-
-            "decrypt_err":"Lompakon jäsentäminen epäonnistui, se voi olla salasanavirhe",
-            "send_error":"Tapahtuma epäonnistui: tarkista, onko saldo ja kaivosmaksu riittävä"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transaktiotietue",
-        "transfer_log_null":"Ei tapahtumahistoriaa",
-        "active_icon": {
-            "go_transfer":"Aloita siirto",
-            "import_keystore":"Tilitiedosto",
-            "qrcode":"QR-koodi"
-        },
-        "edit_dia": {
-            "tit":"Muokkaa muistiinpanoa",
-            "subtit":"Merkitse tiliisi merkintä",
-            "no_tag":"Anna tilin huomautus",
-            "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä."
-        },
-        "dia_tx":{
-            "tit":"Transaktiotiedot",
-            "block_hash":"Tapahtuman numero",
-            "status":"tila",
-            "from":"Lähetysosapuoli",
-            "to":"saaja",
-            "amount":"raha",
-            "data":"data",
-            "send_time":"Lähetysaika",
-            "mac_time":"Tärkein ketjun aika"
-        },
-        "keystore": {
-            "tit":"Varmuuskopioi lompakon tiedosto",
-            "copy":"kopio",
-            "download":"Lataa lompakon tiedosto"
-        },
-        "msg_info": {
-            "ads_copy_success":"Osoite on kopioitu",
-            "key_copy_success":"Onnistunut kopio"
-        }
-    },
-    "page_home": {
-        "import_account":"Tuo tili",
-        "add_account":"Uusi tili",
-        "acc":"tili",
-        "create_dia": {
-            "create_tit":"Luo tili",
-            "backup_tit":"Varmuuskopioi uusi tili",
-            "create_tag":"Tilin huomautus",
-            "create_pwd":"Aseta salasana",
-            "create_repwd":"Vahvista salasana",
-            "placeholder_tag":"Määritä tilin huomautuksen nimi",
-            "placeholder_pwd":"Määritä tilin salasana",
-            "placeholder_repwd":"Vahvista tilin salasana",
-            
-            
-            "account_download_keystore":"Lataa tilitiedosto",
-
-            "validate_tag":"Anna tilin huomautuksen nimi",
-            "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
-
-            "validate_password":"Anna antamasi salasana",
-            "validate_re_password":"Anna uudelleen asettamasi salasana",
-            "validate_strong_password":"Anna vähintään 8-numeroinen salasana",
-            "validate_long_password":"Salasana voi olla enintään 100 numeroa",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Epäjohdonmukainen salasana syötettiin kahdesti",
-
-            "create_success":"Luotu onnistuneesti",
-            "account_quantity_error":"Tilien lukumäärä ei voi olla yli 50",
-            "create_success_des":"Tallenna tilin tiedosto ja älä jaa sitä kenenkään kanssa!"
-        },
-        "import_dia": {
-            "tit":"Tuo tili",    
-            "placeholder_keystore":"Vedä tilin tiedosto täältä",
-            "create_tag":"Tilin huomautus",
-            "placeholder_tag":"Määritä tilin huomautuksen nimi",
-
-            "validate_tag":"Anna tilin huomautuksen nimi",
-            "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
-            "validate_enter_keystore":"Tuo ensin tilitiedosto",
-            "validate_error_keystore":"Tilin tuonti epäonnistui, voi olla tilitiedoston virhe",
-            "imported_account_success":"Tuonti onnistui",
-            "exist":"Tämä tili on jo olemassa, huomautus on",
-            "keystore_error":"Virhe:",
-            "keystore_length_error":"Vain yksi tilin tiedosto voidaan tuoda, yritä uudelleen!",
-            "keystore_format_error":"Valitse oikea tilin tiedosto",
-            "keystore_is_has":"Luettelossa on jo tili, jonka haluat tuoda.",
-            "imported_success":"Jo valittu tiedosto"
-        },
-        "remove_dia": {
-            "tit":"Haluatko varmasti poistaa sen?",
-            "remove_confrim":"Olen varmasti poistettava",
-            "backup":"Huomioi tämän tilin varmuuskopio, jotta vältät omaisuusvahingot.",
-            "input_pwd":"salasana",
-            "placeholder_pwd":"Anna tämän tilin salasana",
-            "validate_password":"Antamasi salasana on väärä",
-            "remove_success":"Poistettu onnistuneesti"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfigurointitunnistus",
-        "content_msg":{
-            "ready_test":"Valmistaudu tunnistamaan määritystiedosto",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Viimeisimmät solmun määritystiedot on saatu",
-            "is_local":"Tarkista, onko paikan päällä solmutiedosto",
-            "already_local":"Solmutiedoston kokoonpanotiedosto on nykyisessä laitteessa.",
-            "not_local":"Solmutiedoston määritystietoja ei havaita, se voi olla ensimmäinen kerta.",
-            "config_write_local":"Kirjoita vastaanotettu solmuinformaatiotiedosto paikalliselle levylle",
-            "whether_update_node":"Tarkista, tarvitaanko päivitystä",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Solmuohjelman lataaminen, ole kärsivällinen",
-            "already_downloaded":"Solmuohjelma on ladattu ja valmis käynnistymään.",
-            "ready_start":"Valmistaudu solmun käynnistämiseen",
-            "enter_wallet":"Solmu alkaa havaita, valmiina syöttämään lompakon"
-        },
-        "version_dialog":{
-            "version_tit":"Versiopäivityskehote",
-            "download_wallet":"Siirry viralliselle verkkosivustolle ladataksesi viimeisimmän rahan version",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Anna tilin huomautus",
+      "no_address":"Anna tilin osoite",
+      "valid_address":"Yhteystiedon osoite on laiton",
+      "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
+      "contacts_quantity_error":"Yhteystietojen määrä voi olla enintään 50",
+      "exist":"Yhteystieto on jo olemassa,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Lähetysosapuoli",
+    "to_address":"saaja",
+    "amount":"raha",
+    "gas":"kaasu",
+    "gasPrice":"Kaasun yksikköhinta",
+    "send_all":"Lähetä kaikki",
+    "data":"data",
+    "data_placeholder":"Heksadesimaaliset tiedot",
+    "fees":"Käsittelymaksu",
+    "txFee":"Transaktiomaksu",
+    "total":"kokonais-",
+    "select":"Valitse",
+    "no_account_info":"Ei vielä tiliä, luo tai tuo tili",
+    "no_keystore_file":"Vastaavaa tiliä ei löytynyt tilitiedostosta",
+    "contacts_dig": {
+      "title":"Valitse yhteystili",
+      "select_placeholder":"Valitse"
+    },
+    "confirm_dia": {
+      "title":"Vahvista",
+      "enter_passworld_tit":"Anna salasana",
+      "enter_passworld_place":"Anna salasana"
+    },
+    "msg_info": {
+      "address_null":"Anna toisen osapuolen tili",
+      "balance_zero":"Riittämätön tasapaino, jota ei voi jatkaa",
+      "amount_zero":"Siirron määrän on oltava suurempi kuin 0",
+      "amount_error":"Anna oikeudellinen tapahtuma",
+      "address_err":"Siirretyn osoitteen muoto on virheellinen.",
+      "gas_error":"Anna oikeudellinen transaktiokaasu",
+      "gasPrice_error":"Anna oikeudellinen kauppahinta",
+      "send_success":"Transaktio lähetetty",
+      "amount_exceeded":"Nykyinen kokonaismäärä ylittää tilin saldon",
+      "txFeeTooLow":"Transaktiokustannukset ovat liian alhaiset",
+      "decrypt_err":"Lompakon jäsentäminen epäonnistui, se voi olla salasanavirhe",
+      "send_error":"Tapahtuma epäonnistui: tarkista, onko saldo ja kaivosmaksu riittävä",
+      "generate_offline_block_err":"Luo allekirjoittamaton tapahtuma epäonnistui",
+      "sign_err":"Allekirjoitus epäonnistui",
+      "send_offline_block_err":"Allekirjoitetun tapahtuman lähettäminen epäonnistui",
+      "syncingWaitTitle":"Solmu on synkronoitu",
+      "syncingWait":"Solmu on synkronoitu, tapahtuman vahvistusaika voi olla pidempi, ole kärsivällinen"
+    }
+  },
+  "pager": {
+    "next":"Seuraava sivu",
+    "prev":"Edellinen sivu"
+  },
+  "page_account": {
+    "transfer_log":"Transaktiotietue",
+    "transfer_log_null":"Ei tapahtumahistoriaa",
+    "txSent":"Lähetetty tapahtuma",
+    "txAll":"Kaikki tapahtumat",
+    "txNew":"Nykyisellä tilillä on uutta tapahtumainformaatiota",
+    "checkNow":"Näytä nyt",
+    "active_icon": {
+      "go_transfer":"Aloita siirto",
+      "import_keystore":"Tilitiedosto",
+      "qrcode":"QR-koodi"
+    },
+    "edit_dia": {
+      "tit":"Muokkaa muistiinpanoja",
+      "subtit":"Merkitse tiliisi merkintä",
+      "no_tag":"Anna tilin huomautus",
+      "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä."
+    },
+    "dia_tx": {
+      "tit":"Transaktiotiedot",
+      "block_hash":"Tapahtuman numero",
+      "status":"tila",
+      "from":"Lähetysosapuoli",
+      "to":"saaja",
+      "amount":"raha",
+      "data":"data",
+      "send_time":"Lähetysaika",
+      "mac_time":"Tärkein ketjun aika",
+      "gasPrice":"Kaasuyksikön hinta (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Kaasun käyttö",
+      "waiting":"Odotetaan vahvistusta",
+      "success":"menestys",
+      "sendFail":"Lähetä epäonnistui",
+      "fail1":"Vika (1)",
+      "fail2":"Epäonnistuminen (2)",
+      "fail3":"Epäonnistuminen (3)"
+    },
+    "keystore": {
+      "tit":"Varmuuskopioi lompakon tiedosto",
+      "copy":"kopio",
+      "download":"Lataa lompakon tiedosto"
+    },
+    "msg_info": {
+      "ads_copy_success":"Osoite on kopioitu",
+      "key_copy_success":"Onnistunut kopio"
+    }
+  },
+  "page_home": {
+    "import_account":"Tuo tili",
+    "add_account":"Uusi tili",
+    "acc":"tili",
+    "create_dia": {
+      "create_tit":"Luo tili",
+      "backup_tit":"Varmuuskopioi uusi tili",
+      "create_tag":"Tilin huomautus",
+      "create_pwd":"Aseta salasana",
+      "create_repwd":"Vahvista salasana",
+      "placeholder_tag":"Määritä tilin huomautuksen nimi",
+      "placeholder_pwd":"Määritä tilin salasana",
+      "placeholder_repwd":"Vahvista tilin salasana",
+      "account_download_keystore":"Lataa tilitiedosto",
+      "validate_tag":"Anna tilin huomautuksen nimi",
+      "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
+      "validate_password":"Anna antamasi salasana",
+      "validate_re_password":"Anna uudelleen asettamasi salasana",
+      "validate_strong_password":"Anna vähintään 8-numeroinen salasana",
+      "validate_long_password":"Salasana voi olla enintään 100 numeroa",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Epäjohdonmukainen salasana syötettiin kahdesti",
+      "create_success":"Luotu onnistuneesti",
+      "account_quantity_error":"Tilien lukumäärä ei voi olla yli 50",
+      "create_success_des":"Tallenna tilin tiedosto ja älä jaa sitä kenenkään kanssa!"
+    },
+    "import_dia": {
+      "tit":"Tuo tili",
+      "placeholder_keystore":"Vedä tilin tiedosto täältä",
+      "create_tag":"Tilin huomautus",
+      "placeholder_tag":"Määritä tilin huomautuksen nimi",
+      "validate_tag":"Anna tilin huomautuksen nimi",
+      "validate_tag_length":"Huomautuksen nimen nimi ei voi olla yli 8 merkkiä.",
+      "validate_enter_keystore":"Tuo ensin tilin tiedosto",
+      "validate_error_keystore":"Tilin tuonti epäonnistui, voi olla tilitiedoston virhe",
+      "imported_account_success":"Tuonti onnistui",
+      "exist":"Tämä tili on jo olemassa, huomautus on",
+      "keystore_error":"Virhe:",
+      "keystore_length_error":"Vain yksi tilin tiedosto voidaan tuoda, yritä uudelleen!",
+      "keystore_format_error":"Valitse oikea tilin tiedosto",
+      "keystore_is_has":"Luettelossa on jo tili, jonka haluat tuoda.",
+      "imported_success":"Valittu tiedosto"
+    },
+    "remove_dia": {
+      "tit":"Haluatko varmasti poistaa sen?",
+      "remove_confrim":"Olen varmasti poistanut",
+      "backup":"Huomioi tämän tilin varmuuskopio, jotta vältät omaisuusvahingot.",
+      "input_pwd":"salasana",
+      "placeholder_pwd":"Anna tämän tilin salasana",
+      "validate_password":"Antamasi salasana on väärä",
+      "remove_success":"Poistettu onnistuneesti"
+    }
+  },
+  "page_config": {
+    "config_detection":"Konfigurointitunnistus",
+    "content_msg": {
+      "ready_test":"Valmistaudu tunnistamaan määritystiedosto",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Viimeisimmät solmun määritystiedot on saatu",
+      "is_local":"Tarkista, onko paikan päällä solmutiedosto",
+      "already_local":"Solmutiedoston kokoonpanotiedosto on nykyisessä laitteessa.",
+      "not_local":"Solmutiedoston määritystietoja ei havaita, se voi olla ensimmäinen kerta.",
+      "config_write_local":"Kirjoita vastaanotettu solmuinformaatiotiedosto paikalliselle levylle",
+      "whether_update_node":"Tarkista, tarvitaanko päivitystä",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Solmuohjelman lataaminen, ole kärsivällinen",
+      "already_downloaded":"Solmuohjelma on ladattu ja valmis käynnistymään.",
+      "ready_start":"Valmistaudu aloittamaan solmu",
+      "enter_wallet":"Solmu alkaa havaita, valmiina syöttämään lompakon",
+      "specifyDataDir":"Valitse solmutietojen tallennusreitti"
+    },
+    "version_dialog": {
+      "version_tit":"Versiopäivityskehote",
+      "download_wallet":"Siirry viralliselle verkkosivustolle ladataksesi viimeisimmän version versiosta",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

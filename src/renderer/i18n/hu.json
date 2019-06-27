@@ -1,204 +1,242 @@
 {
-    "confirm":"Erősítse",
-    "cancel":"törölve",
-    "dialog_tit":"azonnali",
-    "close":"közel",
-    "confirm_you_active":"Kérjük, erősítse meg a műveletet",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Erősítse",
+  "cancel":"törölve",
+  "dialog_tit":"azonnali",
+  "close":"közel",
+  "confirm_you_active":"Kérjük, erősítse meg a műveletet",
+  "rpcErrors": {
+    "invalidFromAccount":"A feladó fiókja érvénytelen",
+    "invalidToAccount":"A bejövő fiók érvénytelen",
+    "invalidAmountFormat":"Érvénytelen összegformátum",
+    "invalidGasFormat":"Érvénytelen gázformátum",
+    "invalidDataFormat":"Érvénytelen hexadecimális adatformátum",
+    "dataSizeTooLarge":"A hexadecimális adatok túl nagyok",
+    "invalidGasPriceFormat":"A gázegység ár formátuma érvénytelen",
+    "invalidMciFormat":"Az MCI formátum érvénytelen",
+    "notEnoughFail":"Elégtelen gáz vagy rendellenes hiba"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"otthon",
+    "transfer":"átutalás",
+    "contacts":"érintkezés",
+    "setting":"beállítása",
+    "total":"teljes",
+    "testnet":"Teszthálózat",
+    "online":"online",
+    "offline":"Offline",
+    "syncing":"Szinkronizálás"
+  },
+  "page_setting": {
+    "tit":"beállítása",
+    "lang":"nyelv",
+    "select":"Kérem válasszon",
+    "version_number":"Mobiltárca verzió",
+    "data_path":"Csomópont adatút",
+    "change":"változás",
+    "changeDirNote":"Kérjük, mozgassa a fájlokat az eredeti elérési útra az új könyvtárba, különben az adatveszteséget okoz.",
+    "note":"figyel"
+  },
+  "page_contacts": {
+    "tit":"érintkezés",
+    "add_dialog":"Új kapcsolat",
+    "add_cont": {
+      "tit":"Új kapcsolat",
+      "tag":"érintkezés",
+      "address":"Fiók címe",
+      "tag_placeholder":"Kérjük, adja meg a név nevét",
+      "address_placeholder":"Kérjük, adja meg a partner fiókjának címét",
+      "add_success":"Sikeresen hozzáadva"
     },
-    "model_header": {
-        "home":"otthon",
-        "transfer":"átutalás",
-        "contacts":"érintkezés",
-        "setting":"beállítása",
-        "total":"teljes",
-        "testnet":"Teszthálózat",
-        "online":"online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Ön eltávolítja",
+      "remove_success":"Sikeresen eltávolítva"
     },
-    "page_setting": {
-        "tit":"beállítása",
-        "lang":"nyelv",
-        "select":"Kérem válasszon",
-        "version_number":"Mobiltárca verzió"
-    },
-    "page_contacts": {
-        "tit":"érintkezés",
-        "add_dialog":"Új kapcsolat",
-        "add_cont": {
-            "tit":"Új kapcsolat",
-            "tag":"érintkezés",
-            "address":"Fiók címe",
-            "tag_placeholder":"Kérjük, adja meg a név nevét",
-            "address_placeholder":"Kérjük, adja meg a partner fiókjának címét",
-            "add_success":"Sikeresen hozzáadva"
-        },
-        "delete_dialog": {
-            "title":"Ön eltávolítja",
-            "remove_success":"Sikeresen eltávolítva"
-        },
-        "msg_info": {
-            "no_tag":"Kérjük, adjon meg egy fiókot",
-            "no_address":"Kérjük, adja meg fiókjának címét",
-            "valid_address":"A kapcsolat címe illegális",
-            "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
-            "contacts_quantity_error":"A névjegyek száma nem haladhatja meg az 50-et",
-            "exist":"A kapcsolat már létezik,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Küldő fél",
-        "to_address":"kedvezményezett",
-        "amount":"pénz",
-        "gas":"gáz",
-        "send_all":"Küldj mindet",
-        "data":"adat",
-        "data_placeholder":"Hexadecimális adatok",
-        "fees":"Kezelési díj",
-        "total":"teljes",
-        "select":"Kérem válasszon",
-        "no_account_info":"Még nincs fiók, kérjük, hozzon létre vagy importáljon fiókot",
-        "contacts_dig": {
-            "title":"Válasszon ki egy névjegyfiókot",
-            "select_placeholder":"Kérem válasszon"
-        },
-        "confirm_dia": {
-            "title":"Kérjük, erősítse meg",
-            "enter_passworld_tit":"Kérjük, adja meg a jelszavát",
-            "enter_passworld_place":"Kérjük, adja meg a jelszavát"
-        },
-        "msg_info": {
-            "address_null":"Kérjük, adja meg a másik fél fiókját",
-            "balance_zero":"Nem kielégítő egyensúly, nem folytatható",
-            "amount_zero":"Az átviteli mennyiségnek 0-nál nagyobbnak kell lennie",
-            "amount_error":"Kérjük, adja meg a jogi tranzakció összegét",
-            "address_err":"Az átadott cím formátuma érvénytelen.",
-            "send_success":"Elküldött tranzakció",
-            "amount_exceeded":"A jelenlegi tranzakció összege meghaladja a számlaegyenleget",
-
-            "decrypt_err":"A mobiltárca elemzése sikertelen, lehet, hogy jelszóhiba",
-            "send_error":"Tranzakció sikertelen: ellenőrizze, hogy van-e elegendő egyenleg és bányászati ​​díj"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Tranzakciós rekord",
-        "transfer_log_null":"Nincs tranzakciós előzmény",
-        "active_icon": {
-            "go_transfer":"Átvitel kezdeményezése",
-            "import_keystore":"Fiókfájl",
-            "qrcode":"QR-kód"
-        },
-        "edit_dia": {
-            "tit":"Megjegyzés módosítása",
-            "subtit":"Jegyezze fel a fiókját",
-            "no_tag":"Kérjük, adjon meg egy fiókot",
-            "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb."
-        },
-        "dia_tx":{
-            "tit":"Tranzakciós információk",
-            "block_hash":"Tranzakció száma",
-            "status":"állami",
-            "from":"Küldő fél",
-            "to":"kedvezményezett",
-            "amount":"pénz",
-            "data":"adat",
-            "send_time":"Küldés ideje",
-            "mac_time":"Fő láncidő"
-        },
-        "keystore": {
-            "tit":"Biztonsági másolat fájl",
-            "copy":"másolat",
-            "download":"A pénztárca fájl letöltése"
-        },
-        "msg_info": {
-            "ads_copy_success":"A cím másolása megtörtént",
-            "key_copy_success":"Sikeres másolás"
-        }
-    },
-    "page_home": {
-        "import_account":"Fiók importálása",
-        "add_account":"Új fiók",
-        "acc":"számla",
-        "create_dia": {
-            "create_tit":"Fiók létrehozása",
-            "backup_tit":"Készítsen biztonsági másolatot az új fiókról",
-            "create_tag":"Fiókjegyzet",
-            "create_pwd":"Jelszó beállítása",
-            "create_repwd":"Jelszó megerősítése",
-            "placeholder_tag":"Kérjük, állítsa be a fiók megjegyzésének nevét",
-            "placeholder_pwd":"Kérjük, állítsa be a fiók jelszavát",
-            "placeholder_repwd":"Kérjük, erősítse meg a fiók jelszavát",
-            
-            
-            "account_download_keystore":"Fiókfájl letöltése",
-
-            "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
-            "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
-
-            "validate_password":"Kérjük, adja meg a beállított jelszót",
-            "validate_re_password":"Kérjük, adja meg újra a megadott jelszót",
-            "validate_strong_password":"Kérjük, adjon meg legalább 8 jegyű jelszót",
-            "validate_long_password":"A jelszó nem haladhatja meg a 100 számjegyet",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Az inkonzisztens jelszó kétszer lépett be",
-
-            "create_success":"Sikeresen létrehozott",
-            "account_quantity_error":"A számlák száma nem haladhatja meg az 50-et",
-            "create_success_des":"Kérjük, mentse el a fiókfájlját, és ne ossza meg senkivel!"
-        },
-        "import_dia": {
-            "tit":"Fiók importálása",    
-            "placeholder_keystore":"Kérjük, húzza ide a fiókfájlt",
-            "create_tag":"Fiókjegyzet",
-            "placeholder_tag":"Kérjük, állítsa be a fiók megjegyzésének nevét",
-
-            "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
-            "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
-            "validate_enter_keystore":"Először importálja a fiókfájlt",
-            "validate_error_keystore":"A fiók importálása sikertelen, fiókfájlhiba lehet",
-            "imported_account_success":"Sikeresen importált",
-            "exist":"Ez a fiók már létezik, a megjegyzés",
-            "keystore_error":"Hiba:",
-            "keystore_length_error":"Csak egy fiókfájl importálható, próbálkozzon újra!",
-            "keystore_format_error":"Kérjük, válassza ki a megfelelő fiókfájlt",
-            "keystore_is_has":"Már van egy fiók a listán, amelyet be kell importálni.",
-            "imported_success":"Már kiválasztott fájl"
-        },
-        "remove_dia": {
-            "tit":"Biztosan el akarja távolítani?",
-            "remove_confrim":"Biztosan eltávolítom",
-            "backup":"Kérjük, vegye figyelembe a fiók biztonsági mentését, hogy elkerülje az anyagi kárt.",
-            "input_pwd":"jelszó",
-            "placeholder_pwd":"Kérjük, adja meg a fiók jelszavát",
-            "validate_password":"A megadott jelszó hibás",
-            "remove_success":"Sikeresen eltávolítva"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfiguráció észlelése",
-        "content_msg":{
-            "ready_test":"Készüljön fel a konfigurációs fájl észlelésére",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"A legfrissebb csomópont-konfigurációs információkat szereztük be",
-            "is_local":"Ellenőrizze, hogy helyben van-e csomópontfájl",
-            "already_local":"A csomópontfájl konfigurációs fájlja létezik az aktuális eszközön.",
-            "not_local":"A csomópontfájl konfigurációs információi nem észlelhetők, előfordulhat, hogy először fut.",
-            "config_write_local":"Írja be a kapott csomópont információfájlt a helyi lemezre",
-            "whether_update_node":"Ellenőrizze, hogy szükséges-e frissítés",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Csomópont-program letöltése, legyen türelmes",
-            "already_downloaded":"A csomópont programot letöltötték és készen áll az indításra.",
-            "ready_start":"Készítse elő a csomópont indítását",
-            "enter_wallet":"A csomópont elkezdi észlelni, készen áll a mobiltárca belépésére"
-        },
-        "version_dialog":{
-            "version_tit":"Verziófrissítés",
-            "download_wallet":"A legfrissebb verzió letöltéséhez látogasson el a hivatalos honlapra",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Kérjük, adjon meg egy fiókot",
+      "no_address":"Kérjük, adja meg a fiók címét",
+      "valid_address":"A kapcsolat címe illegális",
+      "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
+      "contacts_quantity_error":"A névjegyek száma nem haladhatja meg az 50-et",
+      "exist":"A kapcsolat már létezik,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Küldő fél",
+    "to_address":"kedvezményezett",
+    "amount":"pénz",
+    "gas":"gáz",
+    "gasPrice":"Gáz egységár",
+    "send_all":"Küldj mindet",
+    "data":"adat",
+    "data_placeholder":"Hexadecimális adatok",
+    "fees":"Kezelési díj",
+    "txFee":"Tranzakciós díj",
+    "total":"teljes",
+    "select":"Kérem válasszon",
+    "no_account_info":"Még nincs fiók, kérjük, hozzon létre vagy importáljon fiókot",
+    "no_keystore_file":"A megfelelő fiókhoz nem található fiókfájl",
+    "contacts_dig": {
+      "title":"Válassza ki a kapcsolati fiókot",
+      "select_placeholder":"Kérem válasszon"
+    },
+    "confirm_dia": {
+      "title":"Kérjük, erősítse meg",
+      "enter_passworld_tit":"Kérjük, adja meg a jelszavát",
+      "enter_passworld_place":"Kérjük, adja meg a jelszavát"
+    },
+    "msg_info": {
+      "address_null":"Kérjük, adja meg a másik fél fiókját",
+      "balance_zero":"Nem elegendő egyensúly, nem lehet folytatni",
+      "amount_zero":"Az átviteli mennyiségnek 0-nál nagyobbnak kell lennie",
+      "amount_error":"Kérjük, adja meg a jogi tranzakció összegét",
+      "address_err":"Az átadott cím formátuma érvénytelen.",
+      "gas_error":"Kérjük, adjon meg egy jogi tranzakciós gázt",
+      "gasPrice_error":"Kérjük, adja meg a jogi tranzakciós árat",
+      "send_success":"Elküldött tranzakció",
+      "amount_exceeded":"Az aktuális tranzakció összege meghaladja a számlaegyenleget",
+      "txFeeTooLow":"A tranzakciós költség túl alacsony",
+      "decrypt_err":"A mobiltárca elemzése sikertelen, lehet, hogy jelszóhiba",
+      "send_error":"Tranzakció sikertelen: ellenőrizze, hogy van-e elegendő egyenleg és bányász díj",
+      "generate_offline_block_err":"Nem aláírt tranzakció létrehozása sikertelen",
+      "sign_err":"Az aláírás sikertelen",
+      "send_offline_block_err":"Aláírt tranzakció küldése sikertelen",
+      "syncingWaitTitle":"A csomópont szinkronban van",
+      "syncingWait":"A csomópont szinkronban van, a tranzakció megerősítési ideje hosszabb lehet, legyen türelmes"
+    }
+  },
+  "pager": {
+    "next":"Következő oldal",
+    "prev":"Előző oldal"
+  },
+  "page_account": {
+    "transfer_log":"Tranzakciós rekord",
+    "transfer_log_null":"Nincs tranzakciós előzmény",
+    "txSent":"Átküldött tranzakció",
+    "txAll":"Minden tranzakció",
+    "txNew":"A folyószámla új tranzakciós információkat tartalmaz",
+    "checkNow":"Nézd meg most",
+    "active_icon": {
+      "go_transfer":"Átvitel kezdeményezése",
+      "import_keystore":"Fiókfájl",
+      "qrcode":"QR-kód"
+    },
+    "edit_dia": {
+      "tit":"Jegyzetek módosítása",
+      "subtit":"Jegyezze fel a fiókját",
+      "no_tag":"Kérjük, adjon meg egy fiókot",
+      "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb."
+    },
+    "dia_tx": {
+      "tit":"Tranzakciós információk",
+      "block_hash":"Tranzakció száma",
+      "status":"állami",
+      "from":"Küldő fél",
+      "to":"kedvezményezett",
+      "amount":"pénz",
+      "data":"adat",
+      "send_time":"Küldés ideje",
+      "mac_time":"Fő láncidő",
+      "gasPrice":"Gázegységár (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Gázhasználat",
+      "waiting":"Várakozás a megerősítésre",
+      "success":"siker",
+      "sendFail":"A küldés sikertelen",
+      "fail1":"Hiba (1)",
+      "fail2":"Hiba (2)",
+      "fail3":"Hiba (3)"
+    },
+    "keystore": {
+      "tit":"Biztonsági másolat fájl",
+      "copy":"másolat",
+      "download":"A pénztárca fájl letöltése"
+    },
+    "msg_info": {
+      "ads_copy_success":"A cím másolása megtörtént",
+      "key_copy_success":"Sikeres másolás"
+    }
+  },
+  "page_home": {
+    "import_account":"Fiók importálása",
+    "add_account":"Új fiók",
+    "acc":"számla",
+    "create_dia": {
+      "create_tit":"Fiók létrehozása",
+      "backup_tit":"Készítsen biztonsági másolatot az új fiókról",
+      "create_tag":"Fiókjegyzet",
+      "create_pwd":"Jelszó beállítása",
+      "create_repwd":"Jelszó megerősítése",
+      "placeholder_tag":"Kérjük, állítsa be a fiók megjegyzésének nevét",
+      "placeholder_pwd":"Kérjük, állítsa be a fiók jelszavát",
+      "placeholder_repwd":"Kérjük, erősítse meg a fiók jelszavát",
+      "account_download_keystore":"Fiókfájl letöltése",
+      "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
+      "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
+      "validate_password":"Kérjük, adja meg a beállított jelszót",
+      "validate_re_password":"Kérjük, adja meg újra a megadott jelszót",
+      "validate_strong_password":"Kérjük, adjon meg legalább 8 jegyű jelszót",
+      "validate_long_password":"A jelszó nem haladhatja meg a 100 számjegyet",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Az inkonzisztens jelszó kétszer lépett be",
+      "create_success":"Sikeresen létrehozott",
+      "account_quantity_error":"A számlák száma nem haladhatja meg az 50-et",
+      "create_success_des":"Kérjük, mentse el a fiókfájlját, és ne ossza meg senkivel!"
+    },
+    "import_dia": {
+      "tit":"Fiók importálása",
+      "placeholder_keystore":"Kérjük, húzza ide a fiókfájlt",
+      "create_tag":"Fiókjegyzet",
+      "placeholder_tag":"Kérjük, állítsa be a fiók megjegyzésének nevét",
+      "validate_tag":"Kérjük, adja meg a fiók megjegyzésének nevét",
+      "validate_tag_length":"A jegyzet neve nem lehet 8 karakternél nagyobb.",
+      "validate_enter_keystore":"Először importálja a fiókfájlt",
+      "validate_error_keystore":"A fiók importálása sikertelen, fiókfájlhiba lehet",
+      "imported_account_success":"Sikeresen importált",
+      "exist":"Ez a fiók már létezik, a megjegyzés",
+      "keystore_error":"Hiba:",
+      "keystore_length_error":"Csak egy fiókfájl importálható, próbálkozzon újra!",
+      "keystore_format_error":"Kérjük, válassza ki a megfelelő fiókfájlt",
+      "keystore_is_has":"Már van egy fiók a listán, amelyet importálni kell.",
+      "imported_success":"A kiválasztott fájl"
+    },
+    "remove_dia": {
+      "tit":"Biztosan el akarja távolítani?",
+      "remove_confrim":"Biztosan eltávolítom",
+      "backup":"Kérjük, vegye figyelembe a fiók biztonsági mentését, hogy elkerülje az anyagi kárt.",
+      "input_pwd":"jelszó",
+      "placeholder_pwd":"Kérjük, adja meg a fiók jelszavát",
+      "validate_password":"A megadott jelszó hibás",
+      "remove_success":"Sikeresen eltávolítva"
+    }
+  },
+  "page_config": {
+    "config_detection":"Konfiguráció észlelése",
+    "content_msg": {
+      "ready_test":"Készüljön fel a konfigurációs fájl észlelésére",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"A legfrissebb csomópont-konfigurációs információkat szereztük be",
+      "is_local":"Ellenőrizze, hogy helyben van-e csomópontfájl",
+      "already_local":"A csomópontfájl konfigurációs fájlja létezik az aktuális eszközön.",
+      "not_local":"A csomópontfájl konfigurációs információi nem észlelhetők, előfordulhat, hogy először fut.",
+      "config_write_local":"Írja be a kapott csomópont információfájlt a helyi lemezre",
+      "whether_update_node":"Ellenőrizze, hogy szükséges-e frissítés",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Csomópont-program letöltése, legyen türelmes",
+      "already_downloaded":"A csomópont programot letöltötték és készen áll az indításra.",
+      "ready_start":"Készítse elő a csomópont indítását",
+      "enter_wallet":"A csomópont elkezdi észlelni, készen áll a pénztárcába való belépéshez",
+      "specifyDataDir":"Kérjük, válassza ki a csomópontadatok tárolási útvonalát"
+    },
+    "version_dialog": {
+      "version_tit":"Verziófrissítés",
+      "download_wallet":"Ugrás a hivatalos honlapra a pénz legújabb verziójának letöltéséhez",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

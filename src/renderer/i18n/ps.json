@@ -1,204 +1,242 @@
 {
-    "confirm":"تایید کړئ",
-    "cancel":"لغوه کړه",
-    "dialog_tit":"ژبړئ",
-    "close":"بنده",
-    "confirm_you_active":"مهرباني وکړئ خپل عملیات تایید کړئ",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"تایید کړئ",
+  "cancel":"لغوه کړه",
+  "dialog_tit":"ژمنھ کړئ",
+  "close":"بنده",
+  "confirm_you_active":"مهرباني وکړئ خپل عملیات تایید کړئ",
+  "rpcErrors": {
+    "invalidFromAccount":"د لیږونکي حساب غلط دی",
+    "invalidToAccount":"راتلونکی حساب ناباوره دی",
+    "invalidAmountFormat":"ناسمه بڼه بڼه",
+    "invalidGasFormat":"د ګازو ناسمه بڼه",
+    "invalidDataFormat":"ناباوره د ایکسینډایډیلټ ډاټا بڼه",
+    "dataSizeTooLarge":"د هایډایډایډالټ ډاټا خورا لوی دی",
+    "invalidGasPriceFormat":"د ګاز واحد واحد نرخ ناباوره دی",
+    "invalidMciFormat":"د MCI بڼه ناباوره ده",
+    "notEnoughFail":"ناکافي ګاز یا غیر عادي غلطي"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"کور",
+    "transfer":"انتقال",
+    "contacts":"اړیکه",
+    "setting":"ترتیب",
+    "total":"ټول",
+    "testnet":"د ازموینې شبکه",
+    "online":"آنلاین",
+    "offline":"ناباوره",
+    "syncing":"په همغږۍ کې"
+  },
+  "page_setting": {
+    "tit":"ترتیب",
+    "lang":"ژبه",
+    "select":"لطفا غوره کړئ",
+    "version_number":"د بڼې نسخه",
+    "data_path":"د نوډ ډاټا لاره",
+    "change":"بدل کړئ",
+    "changeDirNote":"مهرباني وکړئ فایلونه نوي لارښود ته اصلي لاره کې لاړ شئ، بلکه دا به د معلوماتو له لاسه ورکولو المل شي.",
+    "note":"پاملرنه"
+  },
+  "page_contacts": {
+    "tit":"اړیکه",
+    "add_dialog":"نوی تماس",
+    "add_cont": {
+      "tit":"نوی تماس",
+      "tag":"اړیکه",
+      "address":"د ګڼون پته",
+      "tag_placeholder":"مهرباني وکړئ د اړیکو نوم ولیکئ",
+      "address_placeholder":"مهرباني وکړئ د اړیکو د حساب پته ولیکئ",
+      "add_success":"په بریالیتوب سره اضافه شوی"
     },
-    "model_header": {
-        "home":"کور",
-        "transfer":"انتقال",
-        "contacts":"اړیکه",
-        "setting":"ترتیب",
-        "total":"ټول",
-        "testnet":"د ازموینې شبکه",
-        "online":"آنلاین",
-        "offline":"ناباوره"
+    "delete_dialog": {
+      "title":"تاسو لرې کول",
+      "remove_success":"په بریالیتوب سره لرې کړای شو"
     },
-    "page_setting": {
-        "tit":"ترتیب",
-        "lang":"ژبه",
-        "select":"لطفا غوره کړئ",
-        "version_number":"د بڼې نسخه"
-    },
-    "page_contacts": {
-        "tit":"اړیکه",
-        "add_dialog":"نوی تماس",
-        "add_cont": {
-            "tit":"نوی تماس",
-            "tag":"اړیکه",
-            "address":"د ګڼون پته",
-            "tag_placeholder":"مهرباني وکړئ د اړیکو نوم ولیکئ",
-            "address_placeholder":"مهرباني وکړئ د اړیکو د حساب پته ولیکئ",
-            "add_success":"په بریالیتوب سره اضافه شوی"
-        },
-        "delete_dialog": {
-            "title":"تاسو لرې کول",
-            "remove_success":"په بریالیتوب سره لرې کړای شو"
-        },
-        "msg_info": {
-            "no_tag":"لطفا د حساب یادښت ولیکئ",
-            "no_address":"مهرباني وکړئ خپل د حساب پته ولیکۍ",
-            "valid_address":"د اړیکو پته غیرقانوني ده",
-            "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه ډیری وي.",
-            "contacts_quantity_error":"د اړیکو شمیره د 50 څخه زیاتوالی نشي",
-            "exist":"اړیکې لا دمخه شتون لري،"
-        }
-    },
-    "page_transfer": {
-        "from_address":"ګوند لیږل",
-        "to_address":"پیسی",
-        "amount":"مقدار",
-        "gas":"ګاز",
-        "send_all":"ټول ولېږل",
-        "data":"ډاټا",
-        "data_placeholder":"د هکسډایډالټ ډاټا",
-        "fees":"د لرې کولو فیس",
-        "total":"ټول",
-        "select":"لطفا غوره کړئ",
-        "no_account_info":"لا تر اوسه کوم حساب نه دی ورکړئ، لطفا حساب جوړ کړئ یا واردوئ",
-        "contacts_dig": {
-            "title":"د اړیکو حساب ولیکئ",
-            "select_placeholder":"لطفا غوره کړئ"
-        },
-        "confirm_dia": {
-            "title":"مهرباني وکړئ تایید کړئ",
-            "enter_passworld_tit":"لطفا خپل پټنوم داخلیږی",
-            "enter_passworld_place":"لطفا خپل پټنوم داخلیږی"
-        },
-        "msg_info": {
-            "address_null":"مهرباني وکړئ د بل ګوند حساب ولیکئ",
-            "balance_zero":"ناکافي توازن، دوام نلري",
-            "amount_zero":"د لېږد رقم باید د 0 څخه ډیر وي",
-            "amount_error":"مهرباني وکړئ د قانوني راکړې ورکړې مقدار درج کړئ",
-            "address_err":"د لیږد پتې بڼه ناباوره ده.",
-            "send_success":"انتقاليږي",
-            "amount_exceeded":"د اوسني لیږد معامله د حساب توازن تیریږي",
-
-            "decrypt_err":"د پوټک پوست ناکام شو، دا کیدی شي د شفر غلطی وي",
-            "send_error":"معامله ناکامه شوه: لطفا وګورئ که چیرې کافی اندازه توازن او د کانونو فیس شتون ولري"
-        }
-    },
-    "page_account": {
-        "transfer_log":"د راکړې ورکړې ریکارډ",
-        "transfer_log_null":"د لیږد تاریخ نه",
-        "active_icon": {
-            "go_transfer":"لیږد پیل کړئ",
-            "import_keystore":"د کارن دوتنه",
-            "qrcode":"د QR کود"
-        },
-        "edit_dia": {
-            "tit":"تعدیل یادښت",
-            "subtit":"د خپل حساب لپاره یوه نښه نښه کړئ",
-            "no_tag":"لطفا د حساب یادښت ولیکئ",
-            "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه ډیری وي."
-        },
-        "dia_tx":{
-            "tit":"د راکړې ورکړې معلومات",
-            "block_hash":"د راکړې ورکړې شمیره",
-            "status":"دولت",
-            "from":"ګوند لیږل",
-            "to":"پیسی",
-            "amount":"مقدار",
-            "data":"ډاټا",
-            "send_time":"وخت استول",
-            "mac_time":"د اصلي سلسلې وخت"
-        },
-        "keystore": {
-            "tit":"د بیک اپ والټ دوتنه",
-            "copy":"کاپی",
-            "download":"د بالیټ دوتنې ډاونلوډ کړئ"
-        },
-        "msg_info": {
-            "ads_copy_success":"پته نقل شوی",
-            "key_copy_success":"بریالی کاپی"
-        }
-    },
-    "page_home": {
-        "import_account":"حساب وارد کړئ",
-        "add_account":"نوی حساب",
-        "acc":"ګڼون",
-        "create_dia": {
-            "create_tit":"ګڼون جوړول",
-            "backup_tit":"خپل نوی حساب بیرته پورته کړئ",
-            "create_tag":"د حساب یادښت",
-            "create_pwd":"پټنوم ولیکه",
-            "create_repwd":"پټنوم تایید کړه",
-            "placeholder_tag":"مهرباني وکړئ د حساب نوم نوم وټاکئ",
-            "placeholder_pwd":"مهرباني وکړئ د حساب پټنوم ولیکئ",
-            "placeholder_repwd":"مهرباني وکړئ د حساب پټنوم تایید کړئ",
-            
-            
-            "account_download_keystore":"د ګڼون د دوتنې فایل",
-
-            "validate_tag":"مهرباني وکړئ د حساب نوم نوم وليکئ",
-            "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه ډیری وي.",
-
-            "validate_password":"لطفا هغه پټنوم ته داخل کړئ چې تاسو یې جوړ کړئ",
-            "validate_re_password":"لطفا هغه شفر ورکړه چې تاسو یې بیا وټاکئ",
-            "validate_strong_password":"مهرباني وکړئ لږترلږه 8 ګوتو کې پټنوم ولیکئ",
-            "validate_long_password":"شفر د 100 ګوتو څخه په اوږدوالی کې نشي کولی",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"ناقانونه پاسورډ دوه ځلې داخل کړ",
-
-            "create_success":"په بریالیتوب سره جوړ شو",
-            "account_quantity_error":"د حسابونو شمیر د 50 څخه زیاتوالی نشي",
-            "create_success_des":"لطفا خپل د حساب فایل وساتئ او د چا سره یې شریک نه کړئ!"
-        },
-        "import_dia": {
-            "tit":"حساب وارد کړئ",    
-            "placeholder_keystore":"لطفا د حساب فايل دلته وځنډئ",
-            "create_tag":"د حساب یادښت",
-            "placeholder_tag":"مهرباني وکړئ د حساب نوم نوم وټاکئ",
-
-            "validate_tag":"مهرباني وکړئ د حساب نوم نوم وليکئ",
-            "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه ډیری وي.",
-            "validate_enter_keystore":"مهرباني وکړئ لومړی د حساب فایل وارد کړئ",
-            "validate_error_keystore":"د حساب واردولو ناکامي، کیدی شي د دوتنې تېروتنه وي",
-            "imported_account_success":"په بریالیتوب سره وارد شوی",
-            "exist":"دا حساب لا دمخه شتون لري، یاداښت دی",
-            "keystore_error":"تېروتنه:",
-            "keystore_length_error":"یوازې یو د دوتنې فایل وارد کیدی شي، مهرباني وکړئ بیا هڅه وکړئ!",
-            "keystore_format_error":"مهرباني وکړئ د درست حساب فایل غوره کړئ",
-            "keystore_is_has":"په لیست کې لا دمخه یو حساب شتون لري چې تاسو واردولو ته اړتیا لرئ.",
-            "imported_success":"د مخه ټاکل شوی دوتنه"
-        },
-        "remove_dia": {
-            "tit":"ایا ته باوري یې چې تاسو یې لیرې کول غواړئ؟",
-            "remove_confrim":"زه ډاډه یم چې لیرې کړم",
-            "backup":"مهرباني وکړئ د شتمنیو د زیانونو څخه د مخنیوي لپاره د دې حساب بیکار ته پام وکړئ.",
-            "input_pwd":"شفر",
-            "placeholder_pwd":"لطفا د دې ګڼون لپاره پټنوم وليکئ",
-            "validate_password":"هغه شفر چې تاسو یې درکړل غلط دي",
-            "remove_success":"په بریالیتوب سره لرې کړای شو"
-        }
-    },
-    "page_config": {
-        "config_detection":"د تفتیش موندنه",
-        "content_msg":{
-            "ready_test":"د ترتیب کولو دوتنه کشفولو لپاره تیار کړئ",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"د نوډ نوډ تمدید معلومات ترلاسه شوي",
-            "is_local":"وګورئ که چیرې په محلي توګه یوډډ فایل شتون ولري",
-            "already_local":"د اوسنی وسیلو په اړه د نوډ فایل فایل فاکس شتون لري.",
-            "not_local":"د نوډ دوتنې کنټرول معلومات ندی معلوم شوی، دا کیدای شي دا لومړی ځل وي.",
-            "config_write_local":"د ترلاسه شوي نوډ معلومات د سیمی ډیسک ته ولیکئ",
-            "whether_update_node":"وګوره که یو تازه اړتیا وي",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"د نوډ پروګرام ډاونلوډ، مهربانی وکړئ صبر وکړئ",
-            "already_downloaded":"د نوډ پروګرام ډاونلوډ شوی او د پیل لپاره چمتو دی.",
-            "ready_start":"د نوډ د پیلولو لپاره چمتووالی",
-            "enter_wallet":"نوډ د کشف پیل کوي، د والټ داخل کولو لپاره چمتو دی"
-        },
-        "version_dialog":{
-            "version_tit":"د نسخه تازه اوسمهال",
-            "download_wallet":"د پیسو وروستی نسخه ډکولو لپاره رسمي ویب پاڼې ته لاړ شئ",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"مهرباني وکړئ د حساب یادښت ولیکئ",
+      "no_address":"مهرباني وکړئ د حساب پته ولیکئ",
+      "valid_address":"د اړیکو پته غیرقانوني ده",
+      "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه زیات وي.",
+      "contacts_quantity_error":"د اړیکو شمیره د 50 څخه زیاتې نشي",
+      "exist":"اړیکې لا دمخه شتون لري،"
     }
+  },
+  "page_transfer": {
+    "from_address":"ګوند لیږل",
+    "to_address":"پیسی",
+    "amount":"مقدار",
+    "gas":"ګاز",
+    "gasPrice":"د ګاز واحد واحد",
+    "send_all":"ټول ولېږه",
+    "data":"ډاټا",
+    "data_placeholder":"د هکسډایډالټ ډاټا",
+    "fees":"د لرې کولو فیس",
+    "txFee":"د راکړې ورکړې فیس",
+    "total":"ټول",
+    "select":"لطفا غوره کړئ",
+    "no_account_info":"لا تر اوسه کوم حساب نه دی ورکړئ، مهربانه وکړئ یا حساب ورکړو",
+    "no_keystore_file":"د دې حساب لپاره د محاسبې دوسیه موندل نه ده",
+    "contacts_dig": {
+      "title":"د اړیکو حساب غوره کړئ",
+      "select_placeholder":"لطفا غوره کړئ"
+    },
+    "confirm_dia": {
+      "title":"مهرباني وکړئ تایید کړئ",
+      "enter_passworld_tit":"لطفا خپل پټنوم داخلیږی",
+      "enter_passworld_place":"لطفا خپل پټنوم داخلیږی"
+    },
+    "msg_info": {
+      "address_null":"مهرباني وکړئ د بل ګوند حساب ولیکئ",
+      "balance_zero":"ناکافي توازن، دوام نلري",
+      "amount_zero":"د لېږد رقم باید د 0 څخه ډیر وي",
+      "amount_error":"مهرباني وکړئ د قانوني معاملو مقدار درج کړئ",
+      "address_err":"د لیږل شوي پتې بڼه ناباوره ده.",
+      "gas_error":"مهرباني وکړئ د قانوني معاملو ګاز ولیکئ",
+      "gasPrice_error":"مهرباني وکړئ د قانوني لیږد قیمت ولیکئ",
+      "send_success":"انتقاليږي",
+      "amount_exceeded":"د لیږد اوسنی رقم د حساب توازن زیاتوي",
+      "txFeeTooLow":"د لیږد لګښت خورا ټیټ دی",
+      "decrypt_err":"د والې پوستونه ناکام شوي، دا کیدی شي د شفر غلطی وي",
+      "send_error":"معامله ناکامه شوه: لطفا وګورئ که چیرې کافی اندازه توازن او د منرال فیس موجود وي",
+      "generate_offline_block_err":"د غیرقانوني معاملو تولیدول ناکام شول",
+      "sign_err":"لاسلیک ناکام شو",
+      "send_offline_block_err":"یو لاسلیک شوی لیږل ناکام شو",
+      "syncingWaitTitle":"نوډ په هماغه وخت کې دی",
+      "syncingWait":"نوډ په هماغه وخت کې دی، د لیږد تایید وخت ممکن اوږد وي، مهربانی وکړئ صبر وکړئ"
+    }
+  },
+  "pager": {
+    "next":"بله پاڼه",
+    "prev":"مخکینی مخ"
+  },
+  "page_account": {
+    "transfer_log":"د راکړې ورکړې ریکارډ",
+    "transfer_log_null":"د لیږد تاریخ نه",
+    "txSent":"لېږد شوي لیږد",
+    "txAll":"ټول انتقالونه",
+    "txNew":"اوسني حساب د لیږدول نوی معلومات لري",
+    "checkNow":"اوس وګوره",
+    "active_icon": {
+      "go_transfer":"لیږد پیل کړئ",
+      "import_keystore":"د کارن دوتنه",
+      "qrcode":"د QR کود"
+    },
+    "edit_dia": {
+      "tit":"د یادونې یادښتونه",
+      "subtit":"د خپل حساب لپاره یوه نښه نښه کړئ",
+      "no_tag":"مهرباني وکړئ د حساب یادښت ولیکئ",
+      "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه زیات وي."
+    },
+    "dia_tx": {
+      "tit":"د راکړې ورکړې معلومات",
+      "block_hash":"د راکړې ورکړې شمیره",
+      "status":"دولت",
+      "from":"ګوند لیږل",
+      "to":"پیسی",
+      "amount":"مقدار",
+      "data":"ډاټا",
+      "send_time":"وخت استول",
+      "mac_time":"د اصلي ځلي وخت",
+      "gasPrice":"د ګاز واحد واحد (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"د ګاز کارول",
+      "waiting":"د تایید لپاره انتظار",
+      "success":"بریالیتوب",
+      "sendFail":"استول ناکام شول",
+      "fail1":"ناکامي (1)",
+      "fail2":"ناکامي (2)",
+      "fail3":"ناکامي (3)"
+    },
+    "keystore": {
+      "tit":"د بیک اپ والټ دوتنه",
+      "copy":"کاپی",
+      "download":"د بالیټ دوتنه ډاونلوډ کړئ"
+    },
+    "msg_info": {
+      "ads_copy_success":"پته نقل شوی",
+      "key_copy_success":"بریالی کاپی"
+    }
+  },
+  "page_home": {
+    "import_account":"حساب وارد کړئ",
+    "add_account":"نوی حساب",
+    "acc":"ګڼون",
+    "create_dia": {
+      "create_tit":"ګڼون جوړول",
+      "backup_tit":"خپل نوی حساب بیرته پورته کړئ",
+      "create_tag":"د حساب حساب",
+      "create_pwd":"پټنځای برابر کړئ",
+      "create_repwd":"پټنوم تایید کړه",
+      "placeholder_tag":"مهرباني وکړئ د حساب نوم نوم وټاکئ",
+      "placeholder_pwd":"مهرباني وکړئ د حساب پټنوم ولیکئ",
+      "placeholder_repwd":"مهرباني وکړئ د حساب پټنوم تایید کړئ",
+      "account_download_keystore":"د ګڼون د دوتنې فایل",
+      "validate_tag":"مهرباني وکړئ د حساب نوم نوم وليکئ",
+      "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه زیات وي.",
+      "validate_password":"لطفا هغه پټنوم ته داخل کړئ چې تاسو یې جوړ کړئ",
+      "validate_re_password":"لطفا هغه شفر ورکړه چې تاسو یې بیا وټاکئ",
+      "validate_strong_password":"مهرباني وکړئ لږترلږه 8 ګوتو کې پټنوم ولیکئ",
+      "validate_long_password":"شفر د 100 ګوتو څخه په اوږدوالی کې نشي کولی",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"ناقانونه پاسورډ دوه ځلې داخل کړ",
+      "create_success":"په بریالیتوب سره جوړ شو",
+      "account_quantity_error":"د حسابونو شمیر د 50 څخه زیاتوالی نشي",
+      "create_success_des":"مهرباني وکړئ خپل د حساب فایل وساتئ او د چا سره یې شریک نه کړئ!"
+    },
+    "import_dia": {
+      "tit":"حساب وارد کړئ",
+      "placeholder_keystore":"لطفا د حساب فایل دلته ولیکئ",
+      "create_tag":"د حساب حساب",
+      "placeholder_tag":"مهرباني وکړئ د حساب نوم نوم وټاکئ",
+      "validate_tag":"مهرباني وکړئ د حساب نوم نوم وليکئ",
+      "validate_tag_length":"د یادښت نوم نوم نشي کولی د 8 کالو څخه زیات وي.",
+      "validate_enter_keystore":"مهرباني وکړئ لومړی د حساب فایل وارد کړئ",
+      "validate_error_keystore":"د حساب واردولو ناکامي، کیدی شي د دوتنې تېروتنه وي",
+      "imported_account_success":"په بریالیتوب سره وارد شوی",
+      "exist":"دا حساب لا دمخه شتون لري، یاداښت دی",
+      "keystore_error":"تېروتنه:",
+      "keystore_length_error":"یوازې یو د دوتنې فایل وارد کیدی شي، مهرباني وکړئ بیا هڅه وکړئ!",
+      "keystore_format_error":"مهرباني وکړئ د درست حساب فایل غوره کړئ",
+      "keystore_is_has":"په لیست کې لا دمخه یو حساب شتون لري چې تاسو واردولو ته اړتیا لرئ.",
+      "imported_success":"دوتنه غوره شوی"
+    },
+    "remove_dia": {
+      "tit":"ایا ته باوري یې چې تاسو یې لیرې کول غواړئ؟",
+      "remove_confrim":"زه ډاډه یم چې ليرې کړم",
+      "backup":"مهرباني وکړئ د شتمنیو د زیانونو څخه د مخنیوي لپاره د دې حساب بیکار ته پام وکړئ.",
+      "input_pwd":"شفر",
+      "placeholder_pwd":"لطفا د دې ګڼون لپاره پټ نوم ولیکئ",
+      "validate_password":"هغه شفر چې تاسو یې درکړل غلط دي",
+      "remove_success":"په بریالیتوب سره لرې کړای شو"
+    }
+  },
+  "page_config": {
+    "config_detection":"د تفتیش موندنه",
+    "content_msg": {
+      "ready_test":"د ترتیب کولو دوتنه کشفولو لپاره تیار کړئ",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"وروستی نوډ ترتیبات معلومات ترلاسه شوي",
+      "is_local":"وګورئ که چیرې په محلي توګه یوډډ فایل شتون ولري",
+      "already_local":"د اوسنی وسیلو په اړه د نوډ دوتنې کنټرول دوتنه شتون لري.",
+      "not_local":"د نوډ دوتنې کنټرول معلومات ندی معلوم شوی، دا کیدای شي دا لومړی ځل وي.",
+      "config_write_local":"د ترلاسه شویو نوډ معلوماتو فایل ځايي ځای ته ولیکئ",
+      "whether_update_node":"وګوره که یو تازه اړتیا وي",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"د نوډ پروګرام ډکولو، مهربانی وکړئ صبر وکړئ",
+      "already_downloaded":"د نوډ پروګرام ډاونلوډ شوی او د پیل لپاره چمتو دی.",
+      "ready_start":"د نوډ د پیلولو لپاره چمتووالی",
+      "enter_wallet":"نوډ د کشف پیل کوي، د والټ داخل کولو لپاره چمتو دی",
+      "specifyDataDir":"مهرباني وکړئ د نوډ ډاټا د ذخیرې لاره وټاکئ"
+    },
+    "version_dialog": {
+      "version_tit":"د نسخه تازه اوسمهال",
+      "download_wallet":"د پیسو وروستی نسخه ډکولو لپاره رسمي ویب پاڼې ته لاړ شئ",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

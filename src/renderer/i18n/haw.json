@@ -1,204 +1,242 @@
 {
-    "confirm":"E hōʻoia",
-    "cancel":"Hoʻokahuli",
-    "dialog_tit":"Hoʻonui",
-    "close":"Kūkā",
-    "confirm_you_active":"Eʻoluʻolu e hōʻoia i kāu hana",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"E hōʻoia",
+  "cancel":"Hoʻokahuli",
+  "dialog_tit":"Kūkala",
+  "close":"Kūkā",
+  "confirm_you_active":"Eʻoluʻolu e hōʻoia i kāu hana",
+  "rpcErrors": {
+    "invalidFromAccount":"ʻAʻole pono ka pūnaewele o ka mea hoʻouna",
+    "invalidToAccount":"ʻAʻole i pono ka helu pūnaewele",
+    "invalidAmountFormat":"Ka hōʻuluʻulu nuiʻole",
+    "invalidGasFormat":"Hōʻalepa Gasʻole",
+    "invalidDataFormat":"Hōʻaleʻaʻikepili hexadecimal halaʻole",
+    "dataSizeTooLarge":"He nui nāʻike hexadecimal",
+    "invalidGasPriceFormat":"ʻAʻole kūpono ka hōʻaia o ke kumu kūʻai kālā",
+    "invalidMciFormat":"ʻAʻole pono ka hōʻano MCI",
+    "notEnoughFail":"Ke kino kūpono a iʻole ka hewa kūpono"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Home",
+    "transfer":"Hoʻololi",
+    "contacts":"Hoʻokaʻaʻike",
+    "setting":"Hoʻonohonoho",
+    "total":"Hōʻuluʻulu",
+    "testnet":"Ka ho'āʻo ho'āʻo",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"I ka lohi"
+  },
+  "page_setting": {
+    "tit":"Hoʻonohonoho",
+    "lang":"'Ōlelo",
+    "select":"E koho",
+    "version_number":"ʻO ka paku pēlā",
+    "data_path":"Ka 'ōleloʻikepili Node",
+    "change":"Hoʻololi",
+    "changeDirNote":"Eʻoluʻolu, e hoʻoneʻe i nā peʻe ma ke ala kumu i ka papa kuhikuhi hou, iʻole e hanaʻia ka pohō kālā.",
+    "note":"E nānā"
+  },
+  "page_contacts": {
+    "tit":"Hoʻokaʻaʻike",
+    "add_dialog":"Hoʻohui hou",
+    "add_cont": {
+      "tit":"Hoʻohui hou",
+      "tag":"Hoʻokaʻaʻike",
+      "address":"Ka helu pūnaewele",
+      "tag_placeholder":"Eʻoluʻolu e kau i ka inoa o ka hulina",
+      "address_placeholder":"Eʻoluʻolu eʻoluʻolu, e hoʻokomo i ka helu helu pūnaewele",
+      "add_success":"Ua hoʻopau maikaʻiʻia"
     },
-    "model_header": {
-        "home":"Home",
-        "transfer":"Hoʻololi",
-        "contacts":"Hoʻokaʻaʻike",
-        "setting":"Hoʻonohonoho",
-        "total":"Hōʻuluʻulu",
-        "testnet":"Ka ho'āʻo ho'āʻo",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Ke wehe neiʻoe",
+      "remove_success":"Ua hoʻopau 'ia i kahi hoʻoneʻe"
     },
-    "page_setting": {
-        "tit":"Hoʻonohonoho",
-        "lang":"'Ōlelo",
-        "select":"E koho",
-        "version_number":"ʻO ka paku pēlā"
-    },
-    "page_contacts": {
-        "tit":"Hoʻokaʻaʻike",
-        "add_dialog":"Hoʻohui hou",
-        "add_cont": {
-            "tit":"Hoʻohui hou",
-            "tag":"Hoʻokaʻaʻike",
-            "address":"Ka helu pūnaewele",
-            "tag_placeholder":"Eʻoluʻolu e hōʻoia i ka inoa o ka hulina",
-            "address_placeholder":"Eʻoluʻolu eʻoluʻolu e hoʻokomo i ka helu helu pūnaewele",
-            "add_success":"Ua hoʻopau maikaʻiʻia"
-        },
-        "delete_dialog": {
-            "title":"Ke wehe neiʻoe",
-            "remove_success":"Ua hoʻopau 'ia me ka hoʻoholo"
-        },
-        "msg_info": {
-            "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
-            "no_address":"Eʻoluʻolu e tomo i kāu helu helu helu",
-            "valid_address":"ʻO ke kūlana o ka hulina he kānāwaiʻole",
-            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
-            "contacts_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā lemu ma mua o 50",
-            "exist":"Loaʻa ka hulina,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Hāʻawi i ka hui",
-        "to_address":"Payee",
-        "amount":"Ka nui",
-        "gas":"ʻO Gas",
-        "send_all":"Hoʻouna i nā mea a pau",
-        "data":"ʻIkepili",
-        "data_placeholder":"Heʻikeʻike hexadecimal",
-        "fees":"Ka uku lima lima",
-        "total":"Hōʻuluʻulu",
-        "select":"E koho",
-        "no_account_info":"'Aʻohe mea i loaʻa, eʻoluʻolu e hoʻokumu a hoʻokomo i kaʻike",
-        "contacts_dig": {
-            "title":"E koho i kahi helu pilikino",
-            "select_placeholder":"E koho"
-        },
-        "confirm_dia": {
-            "title":"Eʻoluʻolu e hōʻike",
-            "enter_passworld_tit":"Eʻoluʻolu e kau i kāu hua'ōlelo",
-            "enter_passworld_place":"Eʻoluʻolu e kau i kāu hua'ōlelo"
-        },
-        "msg_info": {
-            "address_null":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i ka pūʻuluʻaoʻao'ē aʻe",
-            "balance_zero":"Loaʻa ka palekana, hikiʻole ke hoʻomau",
-            "amount_zero":"Pono ka nui o ka hoʻoiliʻana ma mua o ka 0",
-            "amount_error":"Eʻoluʻolu e hoʻokomo i ka nui o ka hihia",
-            "address_err":"ʻAʻole pono keʻano o ka helu i hoʻololiʻia.",
-            "send_success":"Hoʻounaʻia ka hana",
-            "amount_exceeded":"ʻO ke kaʻina o nā hōʻaia o kēia manawa eʻoi aʻe ana i ka uku pūnaewele",
-
-            "decrypt_err":"Ua lakaʻole ka wallet, kahi hewa paha",
-            "send_error":"Ua pau ka hana: eʻoluʻolu e nānā inā loaʻa ka uku kaulike a me ka uku miner"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Ka palapala 'ana i ka palapala",
-        "transfer_log_null":"ʻAʻohe kūkena maʻamau",
-        "active_icon": {
-            "go_transfer":"E hoʻomaka i kahi hoʻololi",
-            "import_keystore":"Pūnae pūnaewele",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Hoʻololi i ka memo",
-            "subtit":"E kākau i kahi leka no kāu helu",
-            "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
-            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona."
-        },
-        "dia_tx":{
-            "tit":"Kaʻike pilina",
-            "block_hash":"Helu helu",
-            "status":"Moku'āina",
-            "from":"Hāʻawi i ka hui",
-            "to":"Payee",
-            "amount":"Ka nui",
-            "data":"ʻIkepili",
-            "send_time":"Hāʻawi manawa",
-            "mac_time":"ʻO ka laina maʻamau nui"
-        },
-        "keystore": {
-            "tit":"Kōnae putele pūnaewele",
-            "copy":"E kope",
-            "download":"E kiʻi i kahi faile putele"
-        },
-        "msg_info": {
-            "ads_copy_success":"Ua kāpiliʻia ka helu",
-            "key_copy_success":"Kaomi hoʻopuka"
-        }
-    },
-    "page_home": {
-        "import_account":"Ka lawe pūʻana i kaʻike",
-        "add_account":"Pūʻulu hou",
-        "acc":"Pūnaewele",
-        "create_dia": {
-            "create_tit":"Hana i kahi moʻokāki",
-            "backup_tit":"E mālama i kāu moʻokāki hou",
-            "create_tag":"Kākauʻike",
-            "create_pwd":"E hoʻonoho i ka memo",
-            "create_repwd":"Hōʻoia i ka memo",
-            "placeholder_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa inoa",
-            "placeholder_pwd":"Eʻoluʻolu e hoʻopaʻa i ka'ōlelo kuhi pūnaewele",
-            "placeholder_repwd":"Eʻoluʻolu e hōʻoia i ka'ōlelo'ōlelo pūnaewele",
-            
-            
-            "account_download_keystore":"Hoʻoiho i ka waihona pūnaewele",
-
-            "validate_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa memo",
-            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
-
-            "validate_password":"Eʻoluʻolu e hoʻokau i ka hua'ōlelo āu e hoʻonoho ai",
-            "validate_re_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i ka hua'ōlelo āu e hoʻonoho hou",
-            "validate_strong_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i kahi hua'ōlelo o 8 mau hua",
-            "validate_long_password":"ʻAʻole hiki ke piʻi i ka 100 mau huahelu i ka lōʻihi",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"ʻO ka'ōlelo kuhihewa i pāpāluaʻia",
-
-            "create_success":"Hanaʻia me ka maikaʻi",
-            "account_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā kālā ma mua o 50",
-            "create_success_des":"Eʻoluʻolu e mālama i kāu pūnaewele pūnaewele a 'aʻole e puʻunaue i kekahi me kekahi!"
-        },
-        "import_dia": {
-            "tit":"Ka lawe pūʻana i kaʻike",    
-            "placeholder_keystore":"Eʻoluʻolu e kiʻi i kahi waihona pūnaewele iʻaneʻi",
-            "create_tag":"Kākauʻike",
-            "placeholder_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa inoa",
-
-            "validate_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa memo",
-            "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻona.",
-            "validate_enter_keystore":"E hoʻokomo i ka waihona pūnaewele mua",
-            "validate_error_keystore":"Ua laka ka hōʻoia kālā, hiki ke hana hewa i ka pūnaewele",
-            "imported_account_success":"Ua hoʻokomo 'ia i kahi komo",
-            "exist":"Ua hala kēia pūʻulu,ʻo ka pane",
-            "keystore_error":"Kuhi:",
-            "keystore_length_error":"Hoʻokahi wale nō waihona pūnaewele hiki ke hoʻokomoʻia, e ho'āʻo hou!",
-            "keystore_format_error":"Eʻoluʻolu e koho i ka pūnaeke pūnaewele kūpono",
-            "keystore_is_has":"Aia kahi moʻokāki ma ka papa inoa e pono aiʻoe e komo.",
-            "imported_success":"Ua kohoʻia i kahi pūnaewele"
-        },
-        "remove_dia": {
-            "tit":"Makemakeʻoe makemake e wehe i kahi?",
-            "remove_confrim":"Makemake wau e wehe",
-            "backup":"Eʻoluʻolu e nānā i ka waihona o kēia moʻokāki e pale i kaʻinoʻino o ka waiwai.",
-            "input_pwd":"Manaʻo",
-            "placeholder_pwd":"Eʻoluʻolu, e hoʻokomo i ka hua'ōlelo no kēia pūnaewele",
-            "validate_password":"Ua hewa ka hua'ōlelo āu i komo ai",
-            "remove_success":"Ua hoʻopau 'ia me ka hoʻoholo"
-        }
-    },
-    "page_config": {
-        "config_detection":"ʻImi ke koho",
-        "content_msg":{
-            "ready_test":"E hoʻomākaukau eʻike i ka'ōnaehana hoʻonohonoho",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Loaʻaʻia kaʻike o ka hoʻonohonoho kūwaho hou",
-            "is_local":"E hōʻoia inā loaʻa kahi'ōpili pani ma kahi",
-            "already_local":"Kuhi ka'ōnaehana hoʻonohonoho o ke kōpena'īpona ma ka polokalamu i kēia manawa.",
-            "not_local":"ʻAʻoleʻikeʻia kaʻike hoʻonohonohoʻana o ka pūnaewele'ōpena,ʻo ia ka manawa mua e holo ai.",
-            "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi",
-            "whether_update_node":"E nānā i kahi e pono ai ka loiloi",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Ke hoʻoukaʻana i ka papa'ōpili, eʻoluʻolu e hoʻomanawanui",
-            "already_downloaded":"Ua hoʻopukaʻia ka polokalamu hoʻohoka a ua hoʻomakaʻia e hoʻomaka.",
-            "ready_start":"E hoʻomākaukau e hoʻomaka i ke kiko",
-            "enter_wallet":"Hoʻomaka ka hoʻomakaʻana o Node, e komo i ka putele"
-        },
-        "version_dialog":{
-            "version_tit":"Hoʻopuka hou i ka hoʻololi",
-            "download_wallet":"E hele i ka pūnaewele official e kiʻi ai i ka hōʻailona hou loa o ke kālā",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
+      "no_address":"Eʻoluʻolu e helu i kahi helu wahi helu",
+      "valid_address":"ʻO ke kūlana o ka hulina he kānāwaiʻole",
+      "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻali.",
+      "contacts_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā lemu ma mua o 50",
+      "exist":"Loaʻa ka hulina,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Hāʻawi i ka hui",
+    "to_address":"Payee",
+    "amount":"Ka nui",
+    "gas":"ʻO Gas",
+    "gasPrice":"ʻO ke kumu kūʻai kālā",
+    "send_all":"Hoʻouna i nā mea a pau",
+    "data":"ʻIkepili",
+    "data_placeholder":"Heʻikeʻike hexadecimal",
+    "fees":"Ka uku lima lima",
+    "txFee":"Ka uku hana",
+    "total":"Hōʻuluʻulu",
+    "select":"E koho",
+    "no_account_info":"'Āʻohe inoa i kēia manawa, eʻoluʻolu e hoʻokumu a hoʻokomo i kaʻike",
+    "no_keystore_file":"ʻAʻohe pūnaewele pūnaewele i loaʻa no ka helu pūnaewele",
+    "contacts_dig": {
+      "title":"E koho i ka helu pilikino",
+      "select_placeholder":"E koho"
+    },
+    "confirm_dia": {
+      "title":"Eʻoluʻolu e hōʻike",
+      "enter_passworld_tit":"Eʻoluʻolu e kau i kāu hua'ōlelo",
+      "enter_passworld_place":"Eʻoluʻolu e kau i kāu hua'ōlelo"
+    },
+    "msg_info": {
+      "address_null":"Eʻoluʻolu e hōʻoia i ka pūʻulu o kaʻaoʻao'ē aʻe",
+      "balance_zero":"Loaʻa ka palekana, hikiʻole ke hoʻomau",
+      "amount_zero":"Pono ka nui o ka hoʻoiliʻana ma mua o ka 0",
+      "amount_error":"Eʻoluʻolu e hoʻokaʻawale i kahi kālā maʻamau",
+      "address_err":"ʻAʻole pono ka palapala o ka helu i hoʻololiʻia.",
+      "gas_error":"Eʻoluʻolu, e hoʻokomo i kahi kinoea kālā",
+      "gasPrice_error":"Eʻoluʻolu e komo i ka uku kūʻai",
+      "send_success":"Hoʻounaʻia ka hana",
+      "amount_exceeded":"ʻO ka nui o ka hoʻolālā kālā o ka manawa iʻoi aʻe i ka pale kālā",
+      "txFeeTooLow":"ʻO ka hoʻolālāʻoihana he haʻahaʻa loa",
+      "decrypt_err":"Ua lakaʻole ka wallet, kahi hewa paha",
+      "send_error":"Ua pau ka hana: eʻoluʻolu e nānā inā loaʻa ka uku kaulike a me ka uku miner",
+      "generate_offline_block_err":"Hoʻopiliʻia ka hana hanaʻole",
+      "sign_err":"Ua hewa ka hōʻailona",
+      "send_offline_block_err":"ʻAʻole i pohō ka hoʻounaʻana i kahi palapala i kākauʻia",
+      "syncingWaitTitle":"Ua hoʻokauʻia ka puka",
+      "syncingWait":"Ua lokahi ka'īlio, hiki ke lōʻihi o ka hoʻopaʻaʻana i ka manawa, eʻoluʻolu e hoʻomanawanui"
+    }
+  },
+  "pager": {
+    "next":"ʻO kaʻaoʻao aʻe",
+    "prev":"ʻO kaʻaoʻao mua"
+  },
+  "page_account": {
+    "transfer_log":"Kaʻina moʻolelo",
+    "transfer_log_null":"ʻAʻohe kūkena maʻamau",
+    "txSent":"Ka hana i hoʻounaʻia",
+    "txAll":"Nā hana a pau",
+    "txNew":"Loaʻa nāʻike kuhi kālā i kēia manawa",
+    "checkNow":"E nānā i kēia manawa",
+    "active_icon": {
+      "go_transfer":"E hoʻomaka i kahi hoʻololi",
+      "import_keystore":"Pūnae pūnaewele",
+      "qrcode":"QR code"
+    },
+    "edit_dia": {
+      "tit":"Hoʻololi i nā memo",
+      "subtit":"E kaha i kahi leka no kāu helu",
+      "no_tag":"Eʻoluʻolu e komo i ka helu moʻokāki",
+      "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻali."
+    },
+    "dia_tx": {
+      "tit":"Kaʻike pilina",
+      "block_hash":"Helu helu",
+      "status":"Moku'āina",
+      "from":"Hāʻawi i ka hui",
+      "to":"Payee",
+      "amount":"Ka nui",
+      "data":"ʻIkepili",
+      "send_time":"Hāʻawi manawa",
+      "mac_time":"ʻO ka laina maʻamau nui",
+      "gasPrice":"ʻO ke kumukūʻai uku kālā (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Ke hoʻohanaʻia ka lāʻau",
+      "waiting":"Ke kali nei no ka hōʻoia",
+      "success":"Ka lanakila",
+      "sendFail":"Ua pau ka hoʻouna",
+      "fail1":"Kāleka (1)",
+      "fail2":"ʻAʻohe (2)",
+      "fail3":"ʻAʻohe (3)"
+    },
+    "keystore": {
+      "tit":"Kōnae putele pūnaewele",
+      "copy":"E kope",
+      "download":"E kiʻi i kahi faile putele"
+    },
+    "msg_info": {
+      "ads_copy_success":"Ua kāpiliʻia ka helu",
+      "key_copy_success":"ʻO ke kope kope"
+    }
+  },
+  "page_home": {
+    "import_account":"Ka lawe pūʻana i ka helu",
+    "add_account":"Pūʻulu hou",
+    "acc":"Pūnaewele",
+    "create_dia": {
+      "create_tit":"E hana i kahi moʻokāki",
+      "backup_tit":"E mālama i kāu moʻokāki hou",
+      "create_tag":"Kākauʻike",
+      "create_pwd":"E hoʻonoho i ka memo",
+      "create_repwd":"E hōʻoia i ka memo",
+      "placeholder_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa inoa",
+      "placeholder_pwd":"Eʻoluʻolu e hoʻopaʻa i ka'ōlelo kuhi pūnaewele",
+      "placeholder_repwd":"Eʻoluʻolu e hōʻoia i ka'ōlelo'ōlelo pūʻali",
+      "account_download_keystore":"Hoʻoiho i ka waihona pūnaewele",
+      "validate_tag":"Eʻoluʻolu e helu i ka inoa o ka helu inoa",
+      "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻali.",
+      "validate_password":"Eʻoluʻolu e hoʻokau i ka hua'ōlelo āu i hoʻonoho ai",
+      "validate_re_password":"Eʻoluʻolu e hōʻoia i ka hua'ōlelo āu i hoʻonoho hou ai",
+      "validate_strong_password":"Eʻoluʻolu eʻoluʻoluʻoe e hoʻokomo i kahi hua'ōlelo o 8 mau helu",
+      "validate_long_password":"ʻAʻole hiki ke piʻi i ka 100 mau huahelu i ka lōʻihi",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"ʻO ka hua'ōlelo kuhihewa i pāpāluaʻia",
+      "create_success":"Hanaʻia me ka maikaʻi",
+      "account_quantity_error":"ʻAʻole hiki ke piʻi aku ka helu o nā kālā ma mua o 50",
+      "create_success_des":"Eʻoluʻolu e mālama i kāu pūnaewele pūnaewele a 'aʻole e puʻunaue i kekahi me kekahi!"
+    },
+    "import_dia": {
+      "tit":"Ka lawe pūʻana i ka helu",
+      "placeholder_keystore":"Eʻoluʻolu e kiʻi i kahi pūnaewele maʻaneʻi",
+      "create_tag":"Kākauʻike",
+      "placeholder_tag":"Eʻoluʻolu e hōʻoia i ka inoa inoa inoa",
+      "validate_tag":"Eʻoluʻolu e helu i ka inoa o ka helu inoa",
+      "validate_tag_length":"ʻO ka inoa o ka inoa inoaʻaʻole hiki keʻoi aku ma mua o 8 mau pūʻali.",
+      "validate_enter_keystore":"E hoʻokomo i ka waihona pūnaewele mua",
+      "validate_error_keystore":"Ua laka ka hōʻoia kālā, hiki ke hana i ka hewa pūnaewele",
+      "imported_account_success":"Ua hoʻokomo 'ia i kahi komo",
+      "exist":"Ua hala kēia pūʻulu,ʻo ka pane",
+      "keystore_error":"Kuhi:",
+      "keystore_length_error":"Hoʻokahi wale nō waihona pūnaewele hiki ke hoʻokomoʻia, e ho'āʻo hou!",
+      "keystore_format_error":"E koho i kahi pūnaewele pūnaewele kūpono",
+      "keystore_is_has":"Aia kahi moʻokāki ma ka papa inoa e pono aiʻoe e komo.",
+      "imported_success":"Kōnae i kohoʻia"
+    },
+    "remove_dia": {
+      "tit":"Makemakeʻoe makemake e wehe iā ia?",
+      "remove_confrim":"Makemake wau e wehe",
+      "backup":"Eʻoluʻolu e nānā i ka waihona o kēia moʻokāki e pale i kaʻinoʻino o ka waiwai.",
+      "input_pwd":"Manaʻo",
+      "placeholder_pwd":"Eʻoluʻolu, e hoʻokomo i ka hua'ōlelo no kēia pūnaewele",
+      "validate_password":"Ua hewa ka hua'ōlelo āu i komo ai",
+      "remove_success":"Ua hoʻopau 'ia i kahi hoʻoneʻe"
+    }
+  },
+  "page_config": {
+    "config_detection":"ʻImi ke koho",
+    "content_msg": {
+      "ready_test":"E hoʻomākaukau eʻike i ka'ōnaehana hoʻonohonoho",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Ua loaʻa i kaʻike o ka hoʻonohonoho kūwaho hou",
+      "is_local":"E hōʻoia inā he kōpena'ōpena kahi",
+      "already_local":"Kuhi ka'ōnaehana hoʻonohonoho o ke kōpena'īpona ma ka polokalamu i kēia manawa.",
+      "not_local":"ʻAʻoleʻikeʻia kaʻike hoʻonohonohoʻana o ka pūnaewele'ōpena, hiki paha i ka manawa mua ke holo.",
+      "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi",
+      "whether_update_node":"Eʻike i kahi e pono ai ka loiloi",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Ke hoʻoukaʻana i ka polokalamu hoʻopuka, eʻoluʻolu e hoʻomanawanui",
+      "already_downloaded":"Ua hoʻopukaʻia ka polokalamu hoʻohoka a ua hoʻomakaʻia e hoʻomaka.",
+      "ready_start":"E hoʻomākaukau e hoʻomaka i ke kiko",
+      "enter_wallet":"Hoʻomaka ka hoʻomakaʻana o Node, e komo i ka putele",
+      "specifyDataDir":"Eʻoluʻolu e koho i kahi alanaewele pale o kaʻikepili node"
+    },
+    "version_dialog": {
+      "version_tit":"Hoʻopuka hou i ka hoʻololi",
+      "download_wallet":"E hele i ka pūnaewele official e kiʻi ai i ka pūnaewele hou loa",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

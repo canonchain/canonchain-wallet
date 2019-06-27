@@ -1,204 +1,242 @@
 {
-    "confirm":"Tiisa",
-    "cancel":"Khaola",
-    "dialog_tit":"Tsoela pele",
-    "close":"E haufi",
-    "confirm_you_active":"Ka kopo netefatsa ts'ebetso ea hau",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Tiisa",
+  "cancel":"Khaola",
+  "dialog_tit":"Tsoela pele",
+  "close":"E haufi",
+  "confirm_you_active":"Ka kopo netefatsa ts'ebetso ea hau",
+  "rpcErrors": {
+    "invalidFromAccount":"Tlaleho ea moemeli ha e na thuso",
+    "invalidToAccount":"Ak'haonte e sa keneng ha e na thuso",
+    "invalidAmountFormat":"Tsela e sa nepahaleng ea chelete",
+    "invalidGasFormat":"Setšoantšo sa Gas se sa lokelang",
+    "invalidDataFormat":"Tsela e sa nepahaleng ea data ea hexadecimal",
+    "dataSizeTooLarge":"Dintlha tsa hexadecimal li kholo haholo",
+    "invalidGasPriceFormat":"Sebopeho sa thepa ea thepa ea khase ha e sebetse",
+    "invalidMciFormat":"Tlhahlobo ea MCI ha e na thuso",
+    "notEnoughFail":"Khase e sa lekaneng kapa phoso e sa tloaelehang"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Lehae",
+    "transfer":"Fetisetsa",
+    "contacts":"Iteanye",
+    "setting":"Ho beha",
+    "total":"Kakaretso",
+    "testnet":"Lenaneo la teko",
+    "online":"Inthaneteng",
+    "offline":"Offline",
+    "syncing":"Ka ho lumellana"
+  },
+  "page_setting": {
+    "tit":"Ho beha",
+    "lang":"Puo",
+    "select":"Ka kopo khetha",
+    "version_number":"Sengoliloeng sa Wallet",
+    "data_path":"Tsela ea data ea tsela",
+    "change":"Fetoha",
+    "changeDirNote":"Ka kopo tlosa lifaele tseleng ea pele ho ea moqolo o mocha, ho seng joalo o tla baka tahlehelo ea data.",
+    "note":"Hlokomela"
+  },
+  "page_contacts": {
+    "tit":"Iteanye",
+    "add_dialog":"Puisano e ncha",
+    "add_cont": {
+      "tit":"Puisano e ncha",
+      "tag":"Iteanye",
+      "address":"Aterese ea akhaonto",
+      "tag_placeholder":"Ka kopo kenya lebitso la ho ikopanya",
+      "address_placeholder":"Ka kopo kenya aterese ea aterese ea motho eo",
+      "add_success":"E atitsoe ka katleho"
     },
-    "model_header": {
-        "home":"Lehae",
-        "transfer":"Fetisetsa",
-        "contacts":"Iteanye",
-        "setting":"Ho beha",
-        "total":"Kakaretso",
-        "testnet":"Inthanete ea teko",
-        "online":"Inthaneteng",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Ua tlosa",
+      "remove_success":"E tlosoa ka katleho"
     },
-    "page_setting": {
-        "tit":"Ho beha",
-        "lang":"Puo",
-        "select":"Ka kopo khetha",
-        "version_number":"Phatlalatso ea lichelete"
-    },
-    "page_contacts": {
-        "tit":"Iteanye",
-        "add_dialog":"Puisano e ncha",
-        "add_cont": {
-            "tit":"Puisano e ncha",
-            "tag":"Iteanye",
-            "address":"Aterese ea akhaonto",
-            "tag_placeholder":"Ka kopo kenya lebitso la ho ikopanya",
-            "address_placeholder":"Ka kopo kenya aterese ea ak'haonte ea aterese",
-            "add_success":"E atitsoe ka katleho"
-        },
-        "delete_dialog": {
-            "title":"Ua tlosa",
-            "remove_success":"E tlosoa ka katleho"
-        },
-        "msg_info": {
-            "no_tag":"Ka kopo kenya tlaleho ea akhaonto",
-            "no_address":"Ka kopo kenya aterese ea hau ea akhaonto",
-            "valid_address":"Aterese ea ho kopana ha e molaong",
-            "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
-            "contacts_quantity_error":"Palo ea mabitso a ke ke a feta 50",
-            "exist":"Mesebetsi e se e ntse e le teng,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Ho romella mokga",
-        "to_address":"Payee",
-        "amount":"Chelete",
-        "gas":"Gesi",
-        "send_all":"Romela tsohle",
-        "data":"Lintlha",
-        "data_placeholder":"Dintlha tsa hexadecimal",
-        "fees":"Ho lefella litšenyehelo",
-        "total":"Kakaretso",
-        "select":"Ka kopo khetha",
-        "no_account_info":"Ha ho na leha ho le joalo, ka kōpo u bōpe kapa u kene akhaonto",
-        "contacts_dig": {
-            "title":"Khetha akhaonto ea puisano",
-            "select_placeholder":"Ka kopo khetha"
-        },
-        "confirm_dia": {
-            "title":"Ka kopo netefatsa",
-            "enter_passworld_tit":"Ka kopo kenya phasewete ea hau",
-            "enter_passworld_place":"Ka kopo kenya phasewete ea hau"
-        },
-        "msg_info": {
-            "address_null":"Ka kopo kenya tlaleho ea motho e mong",
-            "balance_zero":"Ho leka-lekaneng ho lekane, ho sitoa ho tsoela pele",
-            "amount_zero":"Chelete ea ho fetisa e tlameha ho ba kholo ho feta 0",
-            "amount_error":"Ka kopo kenya chelete ea tefiso ea molao",
-            "address_err":"Sebopeho sa aterese e fetisitsoeng ha e na thuso.",
-            "send_success":"Transaction e rometsoe",
-            "amount_exceeded":"Chelete ea chelete ea morao tjena e feta phallo ea akhaonto",
-
-            "decrypt_err":"Ho tsamaisa lichelete ho hlōlehile, e ka 'na ea e-ba phoso ea password",
-            "send_error":"Transaction e ile ea hlōleha: ka kōpo hlahloba hore na ho na le tekanyo e leka-lekaneng le tefo ea merafo"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transaction rekoto",
-        "transfer_log_null":"Ha ho histori ea ho rekisa",
-        "active_icon": {
-            "go_transfer":"Qala ho fetisetsa",
-            "import_keystore":"Faki ea akhaonto",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Fetola tsebiso",
-            "subtit":"Ngola lengolo bakeng sa akhaonto ea hau",
-            "no_tag":"Ka kopo kenya tlaleho ea akhaonto",
-            "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8."
-        },
-        "dia_tx":{
-            "tit":"Boitsebiso ba transaction",
-            "block_hash":"Nomoro ea transaction",
-            "status":"Naha",
-            "from":"Ho romella mokga",
-            "to":"Payee",
-            "amount":"Chelete",
-            "data":"Lintlha",
-            "send_time":"Ho romella nako",
-            "mac_time":"Nako e khōlō ea ketane"
-        },
-        "keystore": {
-            "tit":"Boloka file ea sepache",
-            "copy":"Kopitsa",
-            "download":"Fokotsa faele ea sepache"
-        },
-        "msg_info": {
-            "ads_copy_success":"Aterese e kopitsoe",
-            "key_copy_success":"Kopi e atlehileng"
-        }
-    },
-    "page_home": {
-        "import_account":"Kenya akhaonto",
-        "add_account":"Tlaleho e ncha",
-        "acc":"Account",
-        "create_dia": {
-            "create_tit":"Bōpa akhaonto",
-            "backup_tit":"Khutlisa akhaonto ea hau e ncha",
-            "create_tag":"Tlaleho ea akhaonto",
-            "create_pwd":"Beha phasewete",
-            "create_repwd":"Netefatsa password",
-            "placeholder_tag":"Ka kopo, beha lebitso la lebokose la akhaonto",
-            "placeholder_pwd":"Ka kopo, beha password ea akhaonto",
-            "placeholder_repwd":"Ka kopo netefatsa password ea akhaonto",
-            
-            
-            "account_download_keystore":"Fumana faele ea akhaonto",
-
-            "validate_tag":"Ka kopo kenya lebitso la moqolo oa akhaonto",
-            "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
-
-            "validate_password":"Ka kopo kenya phasewete eo ue behileng",
-            "validate_re_password":"Ka kopo kenya phasewete eo ue behileng hape",
-            "validate_strong_password":"Ka kopo kenya phasewete ea bonyane lintlha tse 8",
-            "validate_long_password":"Netewete e ke ke ea feta likhaolo tse 100 ka bolelele",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Phoso e sa lumellaneng e kenngoa habeli",
-
-            "create_success":"E entsoe ka katleho",
-            "account_quantity_error":"Palo ea litlaleho e ke ke ea feta 50",
-            "create_success_des":"Ka kopo boloka file ea hau ea akhaonto mme u se ke ua e arolelana le mang kapa mang!"
-        },
-        "import_dia": {
-            "tit":"Kenya akhaonto",    
-            "placeholder_keystore":"Ka kopo o hula faele ea akhaonto mona",
-            "create_tag":"Tlaleho ea akhaonto",
-            "placeholder_tag":"Ka kopo, beha lebitso la lebokose la akhaonto",
-
-            "validate_tag":"Ka kopo kenya lebitso la moqolo oa akhaonto",
-            "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
-            "validate_enter_keystore":"Ka kopo kenya ka pele faele ea akhaonto",
-            "validate_error_keystore":"Ho kenya ka akhaonto ho hlōlehile, e ka 'na ea e-ba phoso ea faele ea akhaonto",
-            "imported_account_success":"E fetisitsoe ka katleho",
-            "exist":"Tlaleho ena e se e ntse e le teng, lengolo ke",
-            "keystore_error":"Phoso:",
-            "keystore_length_error":"Faele e le 'ngoe feela ea akhaonto e ka kenngoa, ka kōpo leka hape!",
-            "keystore_format_error":"Ka kopo khetha file e nepahetseng ea akhaonto",
-            "keystore_is_has":"Ho se ho ntse ho e-na le lengolo lethathamong leo u lokelang ho le kenya.",
-            "imported_success":"Khetho e se e khethiloe"
-        },
-        "remove_dia": {
-            "tit":"Na u netefatsa hore u batla ho e tlosa?",
-            "remove_confrim":"Ke kholisehile ho tlosa",
-            "backup":"Ka kopo ela hloko ho boloka tlaleho ea akhaonto ena ho qoba tšenyo ea thepa.",
-            "input_pwd":"Netewete",
-            "placeholder_pwd":"Ka kopo kenya phasewete bakeng sa akhaonto ena",
-            "validate_password":"Netewete eo u e kentseng e fosahetse",
-            "remove_success":"E tlosoa ka katleho"
-        }
-    },
-    "page_config": {
-        "config_detection":"Tlhokomeliso ea ho etsa",
-        "content_msg":{
-            "ready_test":"Itokisetse ho bona faele ea phetoho",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Lintlha tsa morao-rao tsa tlhahlobo ea node li fumanoe",
-            "is_local":"Hlahloba hore na ho na le fensetere ea node sebakeng sa heno",
-            "already_local":"Fupete ea tlhomamiso ea faele ea hau ea node e teng ho sesebelisoa sa hona joale.",
-            "not_local":"Boitsebiso ba tlhahlobo ea faele ea node ha bo fumanehe, e ka 'na ea e-ba ea pele e sebetsa.",
-            "config_write_local":"Ngola faele ea tlhahisoleseding ea node e fumanoang disk ea sebakeng seo",
-            "whether_update_node":"Hlahloba hore na tlhahlobo e hlokahalang",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Ho ts'oara lenaneo la khoeli, ka kōpo e-ba le mamello",
-            "already_downloaded":"Lenaneo la manono le khutsitsoe mme le itokiselitse ho qala.",
-            "ready_start":"Lokisetsa ho qala node",
-            "enter_wallet":"Node e qala ho tseba, e itokiselitse ho kenya sepache"
-        },
-        "version_dialog":{
-            "version_tit":"Phetolelo ea tlhahiso ea tlhahiso",
-            "download_wallet":"E-ea ho websaeteng ea molao e le hore u fumane chelete ea morao-rao ea chelete",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Ka kopo kenya tlaleho ea akhaonto",
+      "no_address":"Ka kopo kenya aterese ea akhaonto",
+      "valid_address":"Aterese ea ho kopana ha e molaong",
+      "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
+      "contacts_quantity_error":"Palo ea mabitso a ke ke a feta 50",
+      "exist":"Mesebetsi e se e ntse e le teng,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Ho romella mokga",
+    "to_address":"Payee",
+    "amount":"Chelete",
+    "gas":"Gesi",
+    "gasPrice":"Sekhahla sa thepa ea khase",
+    "send_all":"Romela tsohle",
+    "data":"Lintlha",
+    "data_placeholder":"Dintlha tsa hexadecimal",
+    "fees":"Ho lefella litšenyehelo",
+    "txFee":"Tefiso ea ts'ebetso",
+    "total":"Kakaretso",
+    "select":"Ka kopo khetha",
+    "no_account_info":"Ha ho na leha ho le joalo, ka kōpo u bōpe kapa u kenye akhaonto",
+    "no_keystore_file":"Ha ho faele ea akhaonto e fumanehang bakeng sa akhaonto e tšoanang",
+    "contacts_dig": {
+      "title":"Khetha kopo ea puisano",
+      "select_placeholder":"Ka kopo khetha"
+    },
+    "confirm_dia": {
+      "title":"Ka kopo netefatsa",
+      "enter_passworld_tit":"Ka kopo kenya phasewete ea hau",
+      "enter_passworld_place":"Ka kopo kenya phasewete ea hau"
+    },
+    "msg_info": {
+      "address_null":"Ka kopo kenya tlaleho ea motho e mong",
+      "balance_zero":"Ho leka-lekana ho lekane, ho sitoa ho tsoela pele",
+      "amount_zero":"Chelete ea ho fetisa e tlameha ho ba kholo ho feta 0",
+      "amount_error":"Ka kopo kenya chelete ea tekanyo ea molao",
+      "address_err":"Sebopeho sa aterese e fetisitsoeng ha e na thuso.",
+      "gas_error":"Ka kopo kenya khalase ea molao",
+      "gasPrice_error":"Ka kopo kenya chelete ea thekiso ea molao",
+      "send_success":"Transaction e rometsoe",
+      "amount_exceeded":"Chelete ea morao-rao ea transaction e feta tekanyo ea akhaonto",
+      "txFeeTooLow":"Chelete ea theko e tlase haholo",
+      "decrypt_err":"Ho tsamaisa lichelete ho hlōlehile, e ka 'na ea e-ba phoso ea password",
+      "send_error":"Transaction e ile ea hlōleha: ka kōpo hlahloba hore na ho na le tekanyo e leka-lekaneng le tefo ea merafo",
+      "generate_offline_block_err":"Ho hlahisa thekiso e sa ngolisoang e ile ea hlōleha",
+      "sign_err":"Letšoao le ile la hlōleha",
+      "send_offline_block_err":"Ho romella ketso e saennweng e hlōlehile",
+      "syncingWaitTitle":"Node e ho sync",
+      "syncingWait":"Node e ka ho lumellana, nako ea bopaki ba ts'ebetso e ka ba telele, ka kopo e-ba le mamello"
+    }
+  },
+  "pager": {
+    "next":"Leqephe le hlahlamang",
+    "prev":"Leqephe le fetileng"
+  },
+  "page_account": {
+    "transfer_log":"Transaction rekoto",
+    "transfer_log_null":"Ha ho na histori ea ho rekisa",
+    "txSent":"Transaction trans transaction",
+    "txAll":"Litšebelisano tsohle",
+    "txNew":"Tlaleho ea hona joale e na le tlhahisoleseding e ncha ea transaction",
+    "checkNow":"Bona hona joale",
+    "active_icon": {
+      "go_transfer":"Qala ho fetisetsa",
+      "import_keystore":"Fumana akhaonto",
+      "qrcode":"QR code"
+    },
+    "edit_dia": {
+      "tit":"Fetola lintlha",
+      "subtit":"Ngola lengolo bakeng sa akhaonto ea hau",
+      "no_tag":"Ka kopo kenya tlaleho ea akhaonto",
+      "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8."
+    },
+    "dia_tx": {
+      "tit":"Boitsebiso ba litaba",
+      "block_hash":"Nomoro ea transaction",
+      "status":"Naha",
+      "from":"Ho romella mokga",
+      "to":"Payee",
+      "amount":"Chelete",
+      "data":"Lintlha",
+      "send_time":"Ho romella nako",
+      "mac_time":"Nako e khōlō ea ketane",
+      "gasPrice":"Sekhahla sa theko ea khase (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Tšebeliso ea khase",
+      "waiting":"E emetse ho netefatsa",
+      "success":"Katleho",
+      "sendFail":"Romela ho hlōleha",
+      "fail1":"Ho hloleha (1)",
+      "fail2":"Ho hloleha (2)",
+      "fail3":"Ho hloleha (3)"
+    },
+    "keystore": {
+      "tit":"Boloka file ea sepache",
+      "copy":"Kopitsa",
+      "download":"Fokotsa faele ea sepache"
+    },
+    "msg_info": {
+      "ads_copy_success":"Aterese e kopitsoe",
+      "key_copy_success":"Kopi e atlehileng"
+    }
+  },
+  "page_home": {
+    "import_account":"Kenya akhaonto",
+    "add_account":"Tlaleho e ncha",
+    "acc":"Account",
+    "create_dia": {
+      "create_tit":"Etsa akhaonto",
+      "backup_tit":"Khutlisa akhaonto ea hau e ncha",
+      "create_tag":"Tlaleho ea akhaonto",
+      "create_pwd":"Beha phasewete",
+      "create_repwd":"Netefatsa password",
+      "placeholder_tag":"Ka kopo, beha lebitso la lebokose la akhaonto",
+      "placeholder_pwd":"Ka kopo, beha phasewete ea akhaonto",
+      "placeholder_repwd":"Ka kopo netefatsa password ea akhaonto",
+      "account_download_keystore":"Fumana faele ea akhaonto",
+      "validate_tag":"Ka kopo kenya lebitso la note ea akhaonto",
+      "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
+      "validate_password":"Ka kopo kenya phasewete eo ue behileng",
+      "validate_re_password":"Ka kopo kenya phasewete eo ue behileng hape",
+      "validate_strong_password":"Ka kopo kenya phasewete ea bonyane lintlha tse 8",
+      "validate_long_password":"Netewete e ke ke ea feta likhaolo tse 100 ka bolelele",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Phoso e sa lumellaneng e kenngoa habeli",
+      "create_success":"E entsoe ka katleho",
+      "account_quantity_error":"Palo ea litlaleho e ke ke ea feta 50",
+      "create_success_des":"Ka kopo boloka faele ea hau ea akhaonto mme u se ke ua e arolelana le mang kapa mang!"
+    },
+    "import_dia": {
+      "tit":"Kenya akhaonto",
+      "placeholder_keystore":"Ka kopo o hula faele ea akhaonto mona",
+      "create_tag":"Tlaleho ea akhaonto",
+      "placeholder_tag":"Ka kopo, beha lebitso la lebokose la akhaonto",
+      "validate_tag":"Ka kopo kenya lebitso la note ea akhaonto",
+      "validate_tag_length":"Lebitso la lebitso la letšoao ha le khone ho feta litlhaku tse 8.",
+      "validate_enter_keystore":"Ka kopo kenya ka pele faele ea akhaonto",
+      "validate_error_keystore":"Ho kenya ka akhaonto ho hlōlehile, e ka 'na ea e-ba phoso ea faele ea akhaonto",
+      "imported_account_success":"E fetisitsoe ka katleho",
+      "exist":"Tlaleho ena e se e ntse e le teng, lengolo ke",
+      "keystore_error":"Phoso:",
+      "keystore_length_error":"Faele e le 'ngoe feela ea akhaonto e ka kenngoa, ka kōpo leka hape!",
+      "keystore_format_error":"Ka kopo khetha file e nepahetseng ea akhaonto",
+      "keystore_is_has":"Ho se ho ntse ho e-na le lengolo lethathamong leo u lokelang ho le kenya.",
+      "imported_success":"Faele e khethiloeng"
+    },
+    "remove_dia": {
+      "tit":"Na u netefatsa hore u batla ho e tlosa?",
+      "remove_confrim":"Ke kholisehile hore ke tla tlosa",
+      "backup":"Ka kopo ela hloko ho boloka tlaleho ea akhaonto ena ho qoba tšenyo ea thepa.",
+      "input_pwd":"Netewete",
+      "placeholder_pwd":"Ka kopo kenya phasewete bakeng sa akhaonto ena",
+      "validate_password":"Ponete ea hau eo u e kentseng e fosahetse",
+      "remove_success":"E tlosoa ka katleho"
+    }
+  },
+  "page_config": {
+    "config_detection":"Ho khetholla",
+    "content_msg": {
+      "ready_test":"Itokisetse ho lemoha faele ea tlhophiso",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Lintlha tsa morao-rao tsa tlhahlobo ea node li fumanoe",
+      "is_local":"Hlahloba hore na ho na le faele ea node sebakeng sa heno",
+      "already_local":"Fupete ea tlhomamiso ea faele ea node e teng mochine o teng hona joale.",
+      "not_local":"Boitsebiso bo hlophisitsoeng ba file ya node ha bo fumanehe, e ka 'na ea e-ba ea pele e sebetsa.",
+      "config_write_local":"Ngola faele ea tlhahisoleseding ea boitsebiso bo fumanehang ho disk ea sebakeng seo",
+      "whether_update_node":"Hlahloba hore na tlhahlobo e hlokahalang",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Ho ts'oara lenaneo la node, ka kōpo e-ba le mamello",
+      "already_downloaded":"Lenaneo la manono le khutsitsoe mme le itokiselitse ho qala.",
+      "ready_start":"Lokisetsa ho qala node",
+      "enter_wallet":"Node e qala ho tseba, e itokiselitse ho kenya sepache",
+      "specifyDataDir":"Ka kopo khetha tsela ea polokelo ea data ea node"
+    },
+    "version_dialog": {
+      "version_tit":"Phetolelo ea tlhahiso ea tlhahiso",
+      "download_wallet":"E ea ho websaeteng ea molao ho fumana lits'ebeletso tsa morao-rao tsa chelete",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

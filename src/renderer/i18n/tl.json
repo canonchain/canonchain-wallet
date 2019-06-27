@@ -1,204 +1,242 @@
 {
-    "confirm":"Kumpirmahin",
-    "cancel":"Kanselahin",
-    "dialog_tit":"Prompt",
-    "close":"Isara",
-    "confirm_you_active":"Mangyaring kumpirmahin ang iyong operasyon",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Kumpirmahin",
+  "cancel":"Kanselahin",
+  "dialog_tit":"Prompt",
+  "close":"Isara",
+  "confirm_you_active":"Mangyaring kumpirmahin ang iyong operasyon",
+  "rpcErrors": {
+    "invalidFromAccount":"Di-wasto ang account ng nagpadala",
+    "invalidToAccount":"Di-wasto ang papasok na account",
+    "invalidAmountFormat":"Hindi wastong format ng halaga",
+    "invalidGasFormat":"Di-wastong format ng Gas",
+    "invalidDataFormat":"Hindi wastong hexadecimal na format ng data",
+    "dataSizeTooLarge":"Napakalaki ng hexadecimal data",
+    "invalidGasPriceFormat":"Di-wasto ang format ng presyo ng yunit ng gas",
+    "invalidMciFormat":"Di-wasto ang format ng MCI",
+    "notEnoughFail":"Hindi sapat ang gas o abnormal na kasalanan"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Bahay",
+    "transfer":"Maglipat",
+    "contacts":"Makipag-ugnay sa",
+    "setting":"Pagtatakda",
+    "total":"Kabuuang",
+    "testnet":"Test network",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"Sa pag-synchronize"
+  },
+  "page_setting": {
+    "tit":"Pagtatakda",
+    "lang":"Wika",
+    "select":"Mangyaring pumili",
+    "version_number":"Bersyon ng Wallet",
+    "data_path":"Path ng data ng node",
+    "change":"Baguhin",
+    "changeDirNote":"Mangyaring ilipat ang mga file sa orihinal na landas patungo sa bagong direktoryo, kung hindi man ito magdudulot ng pagkawala ng data.",
+    "note":"Pansin"
+  },
+  "page_contacts": {
+    "tit":"Makipag-ugnay sa",
+    "add_dialog":"Bagong contact",
+    "add_cont": {
+      "tit":"Bagong contact",
+      "tag":"Makipag-ugnay sa",
+      "address":"Address ng account",
+      "tag_placeholder":"Mangyaring ipasok ang pangalan ng contact",
+      "address_placeholder":"Pakipasok ang address account ng contact",
+      "add_success":"Matagumpay na naidagdag"
     },
-    "model_header": {
-        "home":"Bahay",
-        "transfer":"Maglipat",
-        "contacts":"Makipag-ugnay sa",
-        "setting":"Pagtatakda",
-        "total":"Kabuuang",
-        "testnet":"Test network",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Nag-aalis ka",
+      "remove_success":"Matagumpay na naalis"
     },
-    "page_setting": {
-        "tit":"Pagtatakda",
-        "lang":"Wika",
-        "select":"Mangyaring pumili",
-        "version_number":"Bersyon ng Wallet"
-    },
-    "page_contacts": {
-        "tit":"Makipag-ugnay sa",
-        "add_dialog":"Bagong contact",
-        "add_cont": {
-            "tit":"Bagong contact",
-            "tag":"Makipag-ugnay sa",
-            "address":"Address ng account",
-            "tag_placeholder":"Mangyaring ipasok ang pangalan ng contact",
-            "address_placeholder":"Mangyaring ipasok ang address account ng contact",
-            "add_success":"Matagumpay na naidagdag"
-        },
-        "delete_dialog": {
-            "title":"Inaalis mo",
-            "remove_success":"Matagumpay na naalis"
-        },
-        "msg_info": {
-            "no_tag":"Mangyaring magpasok ng tala ng account",
-            "no_address":"Mangyaring ipasok ang iyong account address",
-            "valid_address":"Ang address ng contact ay ilegal",
-            "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
-            "contacts_quantity_error":"Ang bilang ng mga contact ay hindi maaaring lumampas sa 50",
-            "exist":"Ang contact ay umiiral na,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Nagpapadala ng partido",
-        "to_address":"Pagbabayad",
-        "amount":"Halaga",
-        "gas":"Gas",
-        "send_all":"Ipadala lahat",
-        "data":"Data",
-        "data_placeholder":"Hexadecimal data",
-        "fees":"Bayarin sa paghawak",
-        "total":"Kabuuang",
-        "select":"Mangyaring pumili",
-        "no_account_info":"Wala pang account, mangyaring lumikha o mag-import ng account",
-        "contacts_dig": {
-            "title":"Pumili ng contact account",
-            "select_placeholder":"Mangyaring pumili"
-        },
-        "confirm_dia": {
-            "title":"Mangyaring kumpirmahin",
-            "enter_passworld_tit":"Pakipasok ang iyong password",
-            "enter_passworld_place":"Pakipasok ang iyong password"
-        },
-        "msg_info": {
-            "address_null":"Mangyaring ipasok ang account ng iba pang partido",
-            "balance_zero":"Hindi sapat ang balanse, hindi na magpatuloy",
-            "amount_zero":"Ang halaga ng paglipat ay dapat na higit sa 0",
-            "amount_error":"Mangyaring magpasok ng isang legal na halaga ng transaksyon",
-            "address_err":"Di-wasto ang format ng nailipat na address.",
-            "send_success":"Ipinadala ang transaksyon",
-            "amount_exceeded":"Lumampas ang kabuuang halaga ng kasalukuyang transaksyon sa balanse sa account",
-
-            "decrypt_err":"Nabigo ang pag-parse ng Wallet, maaaring ito ay isang error sa password",
-            "send_error":"Nabigo ang transaksyon: pakitingnan kung may sapat na balanse at bayad sa minero"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Rekord ng transaksyon",
-        "transfer_log_null":"Walang kasaysayan ng transaksyon",
-        "active_icon": {
-            "go_transfer":"Magpasimula ng isang transfer",
-            "import_keystore":"File ng account",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Baguhin ang tala",
-            "subtit":"Markahan ang isang tala para sa iyong account",
-            "no_tag":"Mangyaring magpasok ng tala ng account",
-            "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character."
-        },
-        "dia_tx":{
-            "tit":"Impormasyon sa transaksyon",
-            "block_hash":"Numero ng transaksyon",
-            "status":"Estado",
-            "from":"Nagpapadala ng partido",
-            "to":"Pagbabayad",
-            "amount":"Halaga",
-            "data":"Data",
-            "send_time":"Nagpapadala ng oras",
-            "mac_time":"Pangunahing oras ng kadena"
-        },
-        "keystore": {
-            "tit":"Backup wallet file",
-            "copy":"Kopyahin",
-            "download":"Mag-download ng wallet file"
-        },
-        "msg_info": {
-            "ads_copy_success":"Nakopya ang address",
-            "key_copy_success":"Ang matagumpay na kopya"
-        }
-    },
-    "page_home": {
-        "import_account":"Mag-import ng account",
-        "add_account":"Bagong account",
-        "acc":"Account",
-        "create_dia": {
-            "create_tit":"Gumawa ng isang account",
-            "backup_tit":"I-back up ang iyong bagong account",
-            "create_tag":"Tala ng account",
-            "create_pwd":"Itakda ang password",
-            "create_repwd":"Kumpirmahin ang password",
-            "placeholder_tag":"Mangyaring itakda ang pangalan ng tala ng account",
-            "placeholder_pwd":"Mangyaring itakda ang password ng account",
-            "placeholder_repwd":"Mangyaring kumpirmahin ang password ng account",
-            
-            
-            "account_download_keystore":"Mag-download ng file ng account",
-
-            "validate_tag":"Mangyaring ipasok ang pangalan ng tala ng account",
-            "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
-
-            "validate_password":"Pakipasok ang password na itinakda mo",
-            "validate_re_password":"Pakipasok ang password na iyong itinakda muli",
-            "validate_strong_password":"Mangyaring magpasok ng isang password ng hindi bababa sa 8 digit",
-            "validate_long_password":"Ang password ay hindi maaaring lumagpas sa 100 digit na haba",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Ang hindi pantay na password ay ipinasok nang dalawang beses",
-
-            "create_success":"Matagumpay na nalikha",
-            "account_quantity_error":"Ang bilang ng mga account ay hindi maaaring lumampas sa 50",
-            "create_success_des":"Mangyaring i-save ang file ng iyong account at huwag ibahagi ito sa sinuman!"
-        },
-        "import_dia": {
-            "tit":"Mag-import ng account",    
-            "placeholder_keystore":"Mangyaring i-drag ang file ng account dito",
-            "create_tag":"Tala ng account",
-            "placeholder_tag":"Mangyaring itakda ang pangalan ng tala ng account",
-
-            "validate_tag":"Mangyaring ipasok ang pangalan ng tala ng account",
-            "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
-            "validate_enter_keystore":"Mangyaring i-import muna ang file ng account",
-            "validate_error_keystore":"Nabigo ang pag-import ng account, maaaring error sa file ng account",
-            "imported_account_success":"Matagumpay na na-import",
-            "exist":"Mayroon nang account na ito, ang tala ay",
-            "keystore_error":"Error:",
-            "keystore_length_error":"Maaaring ma-import ang isang file ng account lamang, pakisubukang muli!",
-            "keystore_format_error":"Pakipili ang tamang file ng account",
-            "keystore_is_has":"May isang account sa listahan na kailangan mong i-import.",
-            "imported_success":"Pinili na file"
-        },
-        "remove_dia": {
-            "tit":"Sigurado ka bang gusto mong alisin ito?",
-            "remove_confrim":"Sigurado ako na mag-alis",
-            "backup":"Mangyaring bigyang-pansin ang backup ng account na ito upang maiwasan ang pinsala sa ari-arian.",
-            "input_pwd":"Password",
-            "placeholder_pwd":"Pakipasok ang password para sa account na ito",
-            "validate_password":"Mali ang ipinasok mong password",
-            "remove_success":"Matagumpay na naalis"
-        }
-    },
-    "page_config": {
-        "config_detection":"Pagtukoy sa pag-configure",
-        "content_msg":{
-            "ready_test":"Maghanda upang makita ang configuration file",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Ang pinakabagong impormasyon sa configuration ng node ay nakuha",
-            "is_local":"Suriin kung mayroong node file nang lokal",
-            "already_local":"Ang configuration file ng node file ay umiiral sa kasalukuyang aparato.",
-            "not_local":"Ang impormasyon ng pagsasaayos ng node na file ay hindi nakita, maaaring ito ang unang pagkakataon na tumatakbo.",
-            "config_write_local":"Isulat ang nakuha node na impormasyon file sa lokal na disk",
-            "whether_update_node":"Suriin kung kinakailangan ang pag-update",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Nagda-download ng programa ng node, mangyaring maging matiyaga",
-            "already_downloaded":"Na-download na ang program ng node at handa nang magsimula.",
-            "ready_start":"Maghanda upang simulan ang node",
-            "enter_wallet":"Nagsisimula ang pag-detect ng node, handa nang pumasok sa wallet"
-        },
-        "version_dialog":{
-            "version_tit":"Prompt na i-update ang bersyon",
-            "download_wallet":"Pumunta sa opisyal na website upang i-download ang pinakabagong bersyon ng pera",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Mangyaring maglagay ng account note",
+      "no_address":"Mangyaring ipasok ang address ng account",
+      "valid_address":"Ang address ng contact ay ilegal",
+      "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
+      "contacts_quantity_error":"Ang bilang ng mga contact ay hindi maaaring lumagpas sa 50",
+      "exist":"Ang contact ay umiiral na,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Nagpapadala ng partido",
+    "to_address":"Bayad",
+    "amount":"Halaga",
+    "gas":"Gas",
+    "gasPrice":"Presyo ng yunit ng gas",
+    "send_all":"Ipadala ang lahat",
+    "data":"Data",
+    "data_placeholder":"Hexadecimal data",
+    "fees":"Bayarin sa paghawak",
+    "txFee":"Transaksyon fee",
+    "total":"Kabuuang",
+    "select":"Mangyaring pumili",
+    "no_account_info":"Wala pang account, mangyaring lumikha o mag-import ng account",
+    "no_keystore_file":"Walang nakitang file ng account para sa kaukulang account",
+    "contacts_dig": {
+      "title":"Pumili ng contact account",
+      "select_placeholder":"Mangyaring pumili"
+    },
+    "confirm_dia": {
+      "title":"Mangyaring kumpirmahin",
+      "enter_passworld_tit":"Mangyaring ipasok ang iyong password",
+      "enter_passworld_place":"Mangyaring ipasok ang iyong password"
+    },
+    "msg_info": {
+      "address_null":"Mangyaring ipasok ang account ng iba pang partido",
+      "balance_zero":"Hindi sapat ang balanse, hindi na magpatuloy",
+      "amount_zero":"Ang halaga ng paglipat ay dapat na higit sa 0",
+      "amount_error":"Mangyaring magpasok ng isang legal na halaga ng transaksyon",
+      "address_err":"Di-wasto ang format ng nailipat na address.",
+      "gas_error":"Mangyaring magpasok ng isang legal na gas transaksyon",
+      "gasPrice_error":"Mangyaring ipasok ang legal na presyo ng transaksyon",
+      "send_success":"Nagpadala ng transaksyon",
+      "amount_exceeded":"Ang kasalukuyang kabuuang halaga ng transaksyon ay lumampas sa balanse sa account",
+      "txFeeTooLow":"Masyadong mababa ang halaga ng transaksyon",
+      "decrypt_err":"Nabigo ang pag-parse ng Wallet, maaaring ito ay isang error sa password",
+      "send_error":"Nabigo ang transaksyon: mangyaring suriin kung may sapat na balanse at bayad sa minero",
+      "generate_offline_block_err":"Nabigo ang hindi nagbigay ng unsigned transaksyon",
+      "sign_err":"Nabigo ang lagda",
+      "send_offline_block_err":"Nabigo ang pagpapadala ng naka-sign na transaksyon",
+      "syncingWaitTitle":"Ang node ay naka-sync",
+      "syncingWait":"Ang node ay naka-sync, ang oras ng pagkumpirma ng transaksyon ay maaaring mas mahaba, mangyaring maging matiyaga"
+    }
+  },
+  "pager": {
+    "next":"Susunod na pahina",
+    "prev":"Nakaraang pahina"
+  },
+  "page_account": {
+    "transfer_log":"Rekord ng transaksyon",
+    "transfer_log_null":"Walang kasaysayan ng transaksyon",
+    "txSent":"Transmisyon na ipinadala",
+    "txAll":"Lahat ng mga transaksyon",
+    "txNew":"May bagong impormasyon sa transaksyon ang kasalukuyang account",
+    "checkNow":"Tingnan ngayon",
+    "active_icon": {
+      "go_transfer":"Magpasimula ng isang transfer",
+      "import_keystore":"File ng account",
+      "qrcode":"QR code"
+    },
+    "edit_dia": {
+      "tit":"Baguhin ang mga tala",
+      "subtit":"Markahan ang isang tala para sa iyong account",
+      "no_tag":"Mangyaring maglagay ng account note",
+      "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character."
+    },
+    "dia_tx": {
+      "tit":"Impormasyon sa transaksyon",
+      "block_hash":"Numero ng transaksyon",
+      "status":"Estado",
+      "from":"Nagpapadala ng partido",
+      "to":"Bayad",
+      "amount":"Halaga",
+      "data":"Data",
+      "send_time":"Nagpapadala ng oras",
+      "mac_time":"Main chain time",
+      "gasPrice":"Halaga ng yunit ng gas (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Paggamit ng gas",
+      "waiting":"Naghihintay ng kumpirmasyon",
+      "success":"Tagumpay",
+      "sendFail":"Nabigo ang pagpapadala",
+      "fail1":"Pagkabigo (1)",
+      "fail2":"Pagkabigo (2)",
+      "fail3":"Pagkabigo (3)"
+    },
+    "keystore": {
+      "tit":"Backup wallet file",
+      "copy":"Kopyahin",
+      "download":"Mag-download ng wallet file"
+    },
+    "msg_info": {
+      "ads_copy_success":"Nakopya ang address",
+      "key_copy_success":"Ang matagumpay na kopya"
+    }
+  },
+  "page_home": {
+    "import_account":"Mag-import ng account",
+    "add_account":"Bagong account",
+    "acc":"Account",
+    "create_dia": {
+      "create_tit":"Lumikha ng isang account",
+      "backup_tit":"I-back up ang iyong bagong account",
+      "create_tag":"Tala ng account",
+      "create_pwd":"Itakda ang password",
+      "create_repwd":"Kumpirmahin ang password",
+      "placeholder_tag":"Mangyaring itakda ang pangalan ng tala ng account",
+      "placeholder_pwd":"Mangyaring itakda ang password ng account",
+      "placeholder_repwd":"Mangyaring kumpirmahin ang password ng account",
+      "account_download_keystore":"I-download ang file ng account",
+      "validate_tag":"Mangyaring ipasok ang pangalan ng tala ng account",
+      "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
+      "validate_password":"Pakipasok ang password na itinakda mo",
+      "validate_re_password":"Pakipasok ang password na iyong itinakda muli",
+      "validate_strong_password":"Mangyaring magpasok ng isang password ng hindi bababa sa 8 digit",
+      "validate_long_password":"Ang password ay hindi maaaring lumagpas sa 100 digit na haba",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Ang hindi pantay na password ay ipinasok nang dalawang beses",
+      "create_success":"Matagumpay na nalikha",
+      "account_quantity_error":"Ang bilang ng mga account ay hindi maaaring lumampas sa 50",
+      "create_success_des":"Mangyaring i-save ang iyong account file at huwag ibahagi ito sa sinuman!"
+    },
+    "import_dia": {
+      "tit":"Mag-import ng account",
+      "placeholder_keystore":"Mangyaring i-drag ang file ng account dito",
+      "create_tag":"Tala ng account",
+      "placeholder_tag":"Mangyaring itakda ang pangalan ng tala ng account",
+      "validate_tag":"Mangyaring ipasok ang pangalan ng tala ng account",
+      "validate_tag_length":"Ang pangalan ng pangalan ng tala ay hindi maaaring mas mataas sa 8 character.",
+      "validate_enter_keystore":"Mangyaring i-import muna ang file ng account",
+      "validate_error_keystore":"Nabigo ang pag-import ng account, ay maaaring error sa file ng account",
+      "imported_account_success":"Matagumpay na na-import",
+      "exist":"Mayroon nang account na ito, ang tala ay",
+      "keystore_error":"Error:",
+      "keystore_length_error":"Maaaring ma-import ang isang file ng account lamang, pakisubukang muli!",
+      "keystore_format_error":"Pakipili ang tamang file ng account",
+      "keystore_is_has":"May isang account sa listahan na kailangan mong i-import.",
+      "imported_success":"Napili ang file"
+    },
+    "remove_dia": {
+      "tit":"Sigurado ka bang gusto mong alisin ito?",
+      "remove_confrim":"Sigurado akong mag-alis",
+      "backup":"Mangyaring bigyang-pansin ang backup ng account na ito upang maiwasan ang pinsala sa ari-arian.",
+      "input_pwd":"Password",
+      "placeholder_pwd":"Pakipasok ang password para sa account na ito",
+      "validate_password":"Mali ang ipinasok mong password",
+      "remove_success":"Matagumpay na naalis"
+    }
+  },
+  "page_config": {
+    "config_detection":"Pag-detect ng configuration",
+    "content_msg": {
+      "ready_test":"Maghanda upang makita ang configuration file",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Ang pinakabagong impormasyon sa configuration ng node ay nakuha",
+      "is_local":"Suriin kung mayroong isang node file nang lokal",
+      "already_local":"Ang configuration file ng node file ay umiiral sa kasalukuyang aparato.",
+      "not_local":"Ang impormasyon ng pagsasaayos ng node file ay hindi nakita, maaaring ito ang unang pagkakataon na tumatakbo.",
+      "config_write_local":"Isulat ang nakuha node na impormasyon file sa lokal na disk",
+      "whether_update_node":"Suriin kung kinakailangan ang pag-update",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Nagda-download ng programa ng node, mangyaring maging matiyaga",
+      "already_downloaded":"Ang node na programa ay na-download at handa nang magsimula.",
+      "ready_start":"Maghanda upang simulan ang node",
+      "enter_wallet":"Nagsisimula ang pag-detect ng node, handa nang pumasok sa wallet",
+      "specifyDataDir":"Pakipili ang path ng imbakan ng data ng node"
+    },
+    "version_dialog": {
+      "version_tit":"Prompt na i-update ang bersyon",
+      "download_wallet":"Pumunta sa opisyal na website upang i-download ang pinakabagong bersyon ng pera",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

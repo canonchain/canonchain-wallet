@@ -1,204 +1,242 @@
 {
-    "confirm":"Deimhnigh",
-    "cancel":"Cealaigh",
-    "dialog_tit":"Pras",
-    "close":"Dún",
-    "confirm_you_active":"Deimhnigh d'oibriú le do thoil",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Deimhnigh",
+  "cancel":"Cealaigh",
+  "dialog_tit":"Pras",
+  "close":"Dún",
+  "confirm_you_active":"Deimhnigh le do thoil do oibríocht",
+  "rpcErrors": {
+    "invalidFromAccount":"Tá cuntas an tseoltóra neamhbhailí",
+    "invalidToAccount":"Tá an cuntas atá ag teacht isteach neamhbhailí",
+    "invalidAmountFormat":"Formáid méid neamhbhailí",
+    "invalidGasFormat":"Formáid Gáis Neamhbhailí",
+    "invalidDataFormat":"Formáid sonraí neamhbhailí heicsidheachúla",
+    "dataSizeTooLarge":"Tá sonraí heicsidheachúla ró-mhór",
+    "invalidGasPriceFormat":"Tá formáid praghsanna aonaid gháis neamhbhailí",
+    "invalidMciFormat":"Tá formáid MCI neamhbhailí",
+    "notEnoughFail":"Gás neamhleor nó locht neamhghnácha"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Baile",
+    "transfer":"Aistriú",
+    "contacts":"Teagmháil",
+    "setting":"Suíomh",
+    "total":"Iomlán",
+    "testnet":"Líonra tástála",
+    "online":"Ar Líne",
+    "offline":"Líne",
+    "syncing":"I sioncrónú"
+  },
+  "page_setting": {
+    "tit":"Suíomh",
+    "lang":"Teanga",
+    "select":"Roghnaigh le do thoil",
+    "version_number":"Leagan Sparán",
+    "data_path":"Conair sonraí nód",
+    "change":"Athrú",
+    "changeDirNote":"Bog na comhaid sa bhunbhealach go dtí an t-eolaire nua, ar shlí eile beidh sé ina chúis le caillteanas sonraí.",
+    "note":"Aire"
+  },
+  "page_contacts": {
+    "tit":"Teagmháil",
+    "add_dialog":"Teagmháil nua",
+    "add_cont": {
+      "tit":"Teagmháil nua",
+      "tag":"Teagmháil",
+      "address":"Seoladh an chuntais",
+      "tag_placeholder":"Cuir isteach ainm an teagmháil",
+      "address_placeholder":"Cuir isteach seoladh an chuntais teagmhála",
+      "add_success":"Cuireadh leis go rathúil"
     },
-    "model_header": {
-        "home":"Baile",
-        "transfer":"Aistriú",
-        "contacts":"Teagmháil",
-        "setting":"Socrú",
-        "total":"Iomlán",
-        "testnet":"Líonra tástála",
-        "online":"Ar Líne",
-        "offline":"Líne"
+    "delete_dialog": {
+      "title":"Tá tú ag baint",
+      "remove_success":"Baineadh go rathúil é"
     },
-    "page_setting": {
-        "tit":"Socrú",
-        "lang":"Teanga",
-        "select":"Roghnaigh",
-        "version_number":"Leagan saoire"
-    },
-    "page_contacts": {
-        "tit":"Teagmháil",
-        "add_dialog":"Teagmhála nua",
-        "add_cont": {
-            "tit":"Teagmhála nua",
-            "tag":"Teagmháil",
-            "address":"Seoladh cuntais",
-            "tag_placeholder":"Cuir isteach ainm an teagmhála",
-            "address_placeholder":"Cuir isteach seoladh cuntas an teagmhála",
-            "add_success":"Curtha go rathúil"
-        },
-        "delete_dialog": {
-            "title":"Tá tú ag baint úsáide as",
-            "remove_success":"Bainte amach go rathúil"
-        },
-        "msg_info": {
-            "no_tag":"Cuir nóta cuntas isteach",
-            "no_address":"Cuir isteach do sheoladh chuntais",
-            "valid_address":"Tá seoladh an teagmhála neamhdhleathach",
-            "validate_tag_length":"Ní féidir ainm an nóta a bheith níos mó ná 8 carachtar.",
-            "contacts_quantity_error":"Ní féidir le líon na dteagmhálacha a bheith níos mó ná 50",
-            "exist":"Tá an teagmháil ann cheana féin,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Páirtí seolta",
-        "to_address":"Íocaíocht",
-        "amount":"Méid",
-        "gas":"Gáis",
-        "send_all":"Seol go léir",
-        "data":"Sonraí",
-        "data_placeholder":"Sonraí heicteachta",
-        "fees":"Táille láimhseála",
-        "total":"Iomlán",
-        "select":"Roghnaigh",
-        "no_account_info":"Níl cuntas agat go fóill, déan cuntas a chruthú nó a iompórtáil",
-        "contacts_dig": {
-            "title":"Roghnaigh cuntas teagmhála",
-            "select_placeholder":"Roghnaigh"
-        },
-        "confirm_dia": {
-            "title":"Deimhnigh le do thoil",
-            "enter_passworld_tit":"Cuir isteach do phasfhocal",
-            "enter_passworld_place":"Cuir isteach do phasfhocal"
-        },
-        "msg_info": {
-            "address_null":"Cuir isteach cuntas an pháirtí eile",
-            "balance_zero":"Comhardú neamhleor, in ann leanúint ar aghaidh",
-            "amount_zero":"Ní mór an méid aistrithe a bheith níos mó ná 0",
-            "amount_error":"Cuir isteach méid idirbhearta dlíthiúil",
-            "address_err":"Tá formáid an seoladh aistrithe neamhbhailí.",
-            "send_success":"Aistriú curtha",
-            "amount_exceeded":"Is ionann an méid iomlán idirbheart reatha ná cothromaíocht an chuntas",
-
-            "decrypt_err":"Theip ar parsáil sparán, d'fhéadfadh sé gur earráid focal faire é",
-            "send_error":"Theip ar an Idirbheart: seiceáil an bhfuil dóthain cothromaíochta agus táille miner ann"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Taifead idirbheart",
-        "transfer_log_null":"Uimh stair idirbheart",
-        "active_icon": {
-            "go_transfer":"Aistriú a thionscnamh",
-            "import_keystore":"Comhad cuntais",
-            "qrcode":"QR cód"
-        },
-        "edit_dia": {
-            "tit":"Nóta a mhodhnú",
-            "subtit":"Nóta a mharcáil le do chuntas",
-            "no_tag":"Cuir nóta cuntas isteach",
-            "validate_tag_length":"Ní féidir ainm an nóta a bheith níos mó ná 8 carachtar."
-        },
-        "dia_tx":{
-            "tit":"Faisnéis idirbhirt",
-            "block_hash":"Uimhir idirbhirt",
-            "status":"Stáit",
-            "from":"Páirtí seolta",
-            "to":"Íocaíocht",
-            "amount":"Méid",
-            "data":"Sonraí",
-            "send_time":"Am seolta",
-            "mac_time":"An t-am príomhshlabhra"
-        },
-        "keystore": {
-            "tit":"Comhad sparán cúltaca",
-            "copy":"Cóip",
-            "download":"Íoslódáil comhad sparán"
-        },
-        "msg_info": {
-            "ads_copy_success":"Tá an seoladh cóipeáilte",
-            "key_copy_success":"Cóip rathúil"
-        }
-    },
-    "page_home": {
-        "import_account":"Cuntas iompórtála",
-        "add_account":"Cuntas nua",
-        "acc":"Cuntas",
-        "create_dia": {
-            "create_tit":"Cruthaigh cuntas",
-            "backup_tit":"Cuir suas do chuntas nua ar ais",
-            "create_tag":"Nóta cuntais",
-            "create_pwd":"Socraigh focal faire",
-            "create_repwd":"Dearbhaigh focal faire",
-            "placeholder_tag":"Socraigh ainm nóta an chuntas le do thoil",
-            "placeholder_pwd":"Socraigh an focal faire cuntas le do thoil",
-            "placeholder_repwd":"Dearbhaigh an focal faire chuntais",
-            
-            
-            "account_download_keystore":"Íoslódáil an comhad cuntais",
-
-            "validate_tag":"Cuir isteach an t-ainm nóta cuntais",
-            "validate_tag_length":"Ní féidir ainm an nóta a bheith níos mó ná 8 carachtar.",
-
-            "validate_password":"Cuir isteach an focal faire a leagtar tú",
-            "validate_re_password":"Cuir isteach an focal faire a leagtar tú arís",
-            "validate_strong_password":"Cuir isteach focal faire de 8 dhigit ar a laghad",
-            "validate_long_password":"Ní féidir le pasfhocal 100 dhigit a fhad",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Cuireadh pasfhocal neamhréireach isteach faoi dhó",
-
-            "create_success":"Cruthaithe go rathúil",
-            "account_quantity_error":"Ní féidir le líon na gcuntas a bheith níos mó ná 50",
-            "create_success_des":"Sábháil do chomhad cuntais le do thoil agus ná é a roinnt le duine ar bith!"
-        },
-        "import_dia": {
-            "tit":"Cuntas iompórtála",    
-            "placeholder_keystore":"Tarraing an comhad cuntais anseo",
-            "create_tag":"Nóta cuntais",
-            "placeholder_tag":"Socraigh ainm nóta an chuntas le do thoil",
-
-            "validate_tag":"Cuir isteach an t-ainm nóta cuntais",
-            "validate_tag_length":"Ní féidir ainm an nóta a bheith níos mó ná 8 carachtar.",
-            "validate_enter_keystore":"Cuir isteach an comhad cuntas ar dtús",
-            "validate_error_keystore":"Theip ar allmhairiú an chuntas, d'fhéadfadh earráid comhaid a bheith san áireamh",
-            "imported_account_success":"Iompórtáil go rathúil",
-            "exist":"Tá an cuntas seo ann cheana féin, is é an nóta",
-            "keystore_error":"Earráid:",
-            "keystore_length_error":"Ní féidir ach comhad amháin cuntais a allmhairiú, déan iarracht arís!",
-            "keystore_format_error":"Roghnaigh an comhad cuntas ceart",
-            "keystore_is_has":"Tá cuntas cheana sa liosta gur gá duit a allmhairiú.",
-            "imported_success":"Comhad roghnaithe cheana féin"
-        },
-        "remove_dia": {
-            "tit":"An bhfuil tú cinnte gur mhaith leat é a bhaint?",
-            "remove_confrim":"Táim cinnte go mbainfí as",
-            "backup":"Tabhair aird ar chúltaca an chuntas seo chun damáiste maoine a sheachaint.",
-            "input_pwd":"Pasfhocal",
-            "placeholder_pwd":"Cuir isteach an focal faire don chuntas seo",
-            "validate_password":"Tá an focal faire a d'iontráil tú mícheart",
-            "remove_success":"Bainte amach go rathúil"
-        }
-    },
-    "page_config": {
-        "config_detection":"Brath cumraíochta",
-        "content_msg":{
-            "ready_test":"Ullmhaigh an comhad cumraíochta a bhrath",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Tá an fhaisnéis chumraíochta nód is déanaí faighte",
-            "is_local":"Seiceáil an bhfuil comhad nód ann go háitiúil",
-            "already_local":"Tá comhad cumraíochta an chomhaid nód ann ar an bhfeiste atá ann faoi láthair.",
-            "not_local":"Ní bhfaightear faisnéis chumraíochta an chomhaid nód, b'fhéidir gurb é an chéad uair a bhí sé ag rith.",
-            "config_write_local":"Scríobh an comhad faisnéise nód a fhaightear chuig an diosca áitiúil",
-            "whether_update_node":"Seiceáil an bhfuil gá le nuashonrú",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Clár nód a íoslódáil, bíodh othar ort",
-            "already_downloaded":"Tá an clár nód á íoslódáil agus réidh le tosú.",
-            "ready_start":"Ullmhaigh chun an nód a thosú",
-            "enter_wallet":"Tosaíonn an nód a bhrath, réidh le dul isteach sa sparán"
-        },
-        "version_dialog":{
-            "version_tit":"Nuashonrú ar an leagan go pras",
-            "download_wallet":"Téigh go dtí an láithreán gréasáin oifigiúil chun an leagan is déanaí den airgead a íoslódáil",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Iontráil nóta cuntais",
+      "no_address":"Cuir isteach seoladh an chuntais le do thoil",
+      "valid_address":"Tá seoladh an teagmháil neamhdhleathach",
+      "validate_tag_length":"Ní féidir le hainm an nóta a bheith níos mó ná 8 gcarachtar.",
+      "contacts_quantity_error":"Ní féidir le líon na dteagmhálacha dul thar 50",
+      "exist":"Tá an teagmháil ann cheana,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Páirtí seolta",
+    "to_address":"Íocaí",
+    "amount":"Méid",
+    "gas":"Gás",
+    "gasPrice":"Praghas aonaid gháis",
+    "send_all":"Seol gach ceann",
+    "data":"Sonraí",
+    "data_placeholder":"Sonraí heicsidheachúla",
+    "fees":"Táille láimhseála",
+    "txFee":"Táille idirbhirt",
+    "total":"Iomlán",
+    "select":"Roghnaigh le do thoil",
+    "no_account_info":"Gan cuntas go fóill, cruthaigh nó iompórtáil cuntas",
+    "no_keystore_file":"Níor aimsíodh aon chomhad cuntais don chuntas comhfhreagrach",
+    "contacts_dig": {
+      "title":"Roghnaigh cuntas teagmhála",
+      "select_placeholder":"Roghnaigh le do thoil"
+    },
+    "confirm_dia": {
+      "title":"Deimhnigh le do thoil",
+      "enter_passworld_tit":"Cuir isteach do phasfhocal le do thoil",
+      "enter_passworld_place":"Cuir isteach do phasfhocal le do thoil"
+    },
+    "msg_info": {
+      "address_null":"Cuir isteach cuntas an pháirtí eile",
+      "balance_zero":"Iarmhéid neamhleor, nach bhfuil in ann leanúint ar aghaidh",
+      "amount_zero":"Caithfidh an méid aistrithe a bheith níos mó ná 0",
+      "amount_error":"Cuir isteach méid an idirbhirt dhlíthiúil",
+      "address_err":"Tá formáid an tseolta aistrithe neamhbhailí.",
+      "gas_error":"Cuir isteach gás idirbhirt dlí",
+      "gasPrice_error":"Cuir isteach praghas an idirbhirt dhlíthiúil",
+      "send_success":"Idirbheart seolta",
+      "amount_exceeded":"Sáraíonn méid iomlán an idirbhirt reatha iarmhéid an chuntais",
+      "txFeeTooLow":"Tá costas an idirbhirt ró-íseal",
+      "decrypt_err":"Theip ar pharsáil sparán, d'fhéadfadh sé a bheith ina earráid phasfhocal",
+      "send_error":"Theip ar an idirbheart: seiceáil an bhfuil cothromaíocht leordhóthanach agus táille mhionaoisigh ann",
+      "generate_offline_block_err":"Theip ar idirbheart neamhshínithe a ghiniúint",
+      "sign_err":"Theip ar shíniú",
+      "send_offline_block_err":"Theip ar idirbheart sínithe a sheoladh",
+      "syncingWaitTitle":"Tá an nód i gcomhthráth",
+      "syncingWait":"Tá an nód i gcomhthráth, is féidir go mbeidh an t-am daingnithe idirbhirt níos faide, bíodh foighneach agat le do thoil"
+    }
+  },
+  "pager": {
+    "next":"An chéad leathanach eile",
+    "prev":"Leathanach roimhe seo"
+  },
+  "page_account": {
+    "transfer_log":"Taifead idirbhirt",
+    "transfer_log_null":"Gan stair idirbhirt",
+    "txSent":"Idirbheart tarchurtha",
+    "txAll":"Gach idirbheart",
+    "txNew":"Tá faisnéis nua idirbhirt sa chuntas reatha",
+    "checkNow":"Féach anois",
+    "active_icon": {
+      "go_transfer":"Cuir aistriú i bhfeidhm",
+      "import_keystore":"Comhad cuntais",
+      "qrcode":"Cód QR"
+    },
+    "edit_dia": {
+      "tit":"Athraigh nótaí",
+      "subtit":"Marcáil nóta do do chuntas",
+      "no_tag":"Iontráil nóta cuntais",
+      "validate_tag_length":"Ní féidir le hainm an nóta a bheith níos mó ná 8 gcarachtar."
+    },
+    "dia_tx": {
+      "tit":"Faisnéis faoi idirbhearta",
+      "block_hash":"Uimhir an idirbhirt",
+      "status":"Stát",
+      "from":"Páirtí seolta",
+      "to":"Íocaí",
+      "amount":"Méid",
+      "data":"Sonraí",
+      "send_time":"Am a sheoladh",
+      "mac_time":"Am an phríomhshlabhra",
+      "gasPrice":"Praghas aonaid gháis (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Úsáid gháis",
+      "waiting":"Ag feitheamh le deimhniú",
+      "success":"Rath",
+      "sendFail":"Theip ar sheol",
+      "fail1":"Teip (1)",
+      "fail2":"Teip (2)",
+      "fail3":"Teip (3)"
+    },
+    "keystore": {
+      "tit":"Comhad sparán cúltaca",
+      "copy":"Cóip",
+      "download":"Íoslódáil comhad sparán"
+    },
+    "msg_info": {
+      "ads_copy_success":"Rinneadh cóip den seoladh",
+      "key_copy_success":"Cóip rathúil"
+    }
+  },
+  "page_home": {
+    "import_account":"Cuntas iompórtála",
+    "add_account":"Cuntas nua",
+    "acc":"Cuntas",
+    "create_dia": {
+      "create_tit":"Cruthaigh cuntas",
+      "backup_tit":"Cuir suas le do chuntas nua",
+      "create_tag":"Nóta cuntais",
+      "create_pwd":"Socraigh focal faire",
+      "create_repwd":"Deimhnigh an focal faire",
+      "placeholder_tag":"Socraigh ainm an chuntais le do thoil",
+      "placeholder_pwd":"Leag pasfhocal an chuntais le do thoil",
+      "placeholder_repwd":"Deimhnigh le do thoil pasfhocal an chuntais",
+      "account_download_keystore":"Íoslódáil comhad an chuntais",
+      "validate_tag":"Cuir isteach ainm an nóta cuntais",
+      "validate_tag_length":"Ní féidir le hainm an nóta a bheith níos mó ná 8 gcarachtar.",
+      "validate_password":"Cuir isteach an focal faire a shocraigh tú",
+      "validate_re_password":"Cuir isteach an focal faire a shocraigh tú arís",
+      "validate_strong_password":"Cuir isteach focal faire de 8 ndigit ar a laghad",
+      "validate_long_password":"Ní féidir le pasfhocal a bheith níos faide ná 100 dhigit",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Cuireadh pasfhocal neamhréireach faoi dhó",
+      "create_success":"Cruthaithe go rathúil",
+      "account_quantity_error":"Ní féidir le líon na gcuntas dul thar 50",
+      "create_success_des":"Coinnigh do chomhad cuntais agus ná roinn é le duine ar bith!"
+    },
+    "import_dia": {
+      "tit":"Cuntas iompórtála",
+      "placeholder_keystore":"Tarraing comhad an chuntais anseo",
+      "create_tag":"Nóta cuntais",
+      "placeholder_tag":"Socraigh ainm an chuntais le do thoil",
+      "validate_tag":"Cuir isteach ainm an nóta cuntais",
+      "validate_tag_length":"Ní féidir le hainm an nóta a bheith níos mó ná 8 gcarachtar.",
+      "validate_enter_keystore":"Cuir an comhad cuntais ar allmhairí ar dtús",
+      "validate_error_keystore":"Theip ar allmhairiú na gcuntas, is féidir gur earráid chomhad cuntais é",
+      "imported_account_success":"Iompórtáladh go rathúil é",
+      "exist":"Tá an cuntas seo ann cheana féin",
+      "keystore_error":"Earráid:",
+      "keystore_length_error":"Ní féidir ach comhad cuntais amháin a iompórtáil, bain triail as arís!",
+      "keystore_format_error":"Roghnaigh an comhad ceart cuntais",
+      "keystore_is_has":"Tá cuntas ann cheana féin sa liosta gur gá duit a allmhairiú.",
+      "imported_success":"Comhad roghnaithe"
+    },
+    "remove_dia": {
+      "tit":"An bhfuil tú cinnte gur mian leat é a bhaint?",
+      "remove_confrim":"Táim cinnte go mbainfí amach",
+      "backup":"Tabhair aird ar chúltaca an chuntais seo chun damáiste maoine a sheachaint.",
+      "input_pwd":"Pasfhocal",
+      "placeholder_pwd":"Cuir isteach an focal faire don chuntas seo",
+      "validate_password":"Tá an focal faire a chuir tú isteach mícheart",
+      "remove_success":"Baineadh go rathúil é"
+    }
+  },
+  "page_config": {
+    "config_detection":"Brath cumraíochta",
+    "content_msg": {
+      "ready_test":"Ullmhaigh chun an comhad cumraíochta a bhrath",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Fuarthas an fhaisnéis chumraíochta nód is déanaí",
+      "is_local":"Seiceáil an bhfuil comhad nód ann go háitiúil",
+      "already_local":"Tá comhad cumraíochta an chomhaid nód ar an bhfeiste reatha.",
+      "not_local":"Ní bhraitear faisnéis chumraíochta an chomhaid nód, d’fhéadfadh sé gurb é an chéad uair é.",
+      "config_write_local":"Scríobh an comhad eolais nód faighte chuig an diosca áitiúil",
+      "whether_update_node":"Seiceáil an bhfuil gá le nuashonrú",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Íoslódáil clár na nód, bí foighneach le do thoil",
+      "already_downloaded":"Tá an clár nód íoslódáil agus réidh le tosú.",
+      "ready_start":"Ullmhaigh chun an nód a thosú",
+      "enter_wallet":"Tosaíonn an nód ag brath, réidh le dul isteach sa sparán",
+      "specifyDataDir":"Roghnaigh cosán stórála na sonraí nód le do thoil"
+    },
+    "version_dialog": {
+      "version_tit":"Nuashonraítear an leagan go pras",
+      "download_wallet":"Téigh go dtí an láithreán gréasáin oifigiúil chun an leagan is déanaí den airgead a íoslódáil",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

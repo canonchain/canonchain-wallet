@@ -1,204 +1,242 @@
 {
-    "confirm":"Potwierdź",
-    "cancel":"Anuluj",
-    "dialog_tit":"Pytaj",
-    "close":"Zamknij",
-    "confirm_you_active":"Proszę potwierdzić swoją operację",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Potwierdź",
+  "cancel":"Anuluj",
+  "dialog_tit":"Monituj",
+  "close":"Zamknij",
+  "confirm_you_active":"Potwierdź swoją operację",
+  "rpcErrors": {
+    "invalidFromAccount":"Konto nadawcy jest nieprawidłowe",
+    "invalidToAccount":"Konto przychodzące jest nieprawidłowe",
+    "invalidAmountFormat":"Nieprawidłowy format kwoty",
+    "invalidGasFormat":"Nieprawidłowy format gazu",
+    "invalidDataFormat":"Nieprawidłowy format danych szesnastkowych",
+    "dataSizeTooLarge":"Dane szesnastkowe są za duże",
+    "invalidGasPriceFormat":"Format ceny jednostki gazowej jest nieprawidłowy",
+    "invalidMciFormat":"Format MCI jest nieprawidłowy",
+    "notEnoughFail":"Niewystarczająca ilość gazu lub nieprawidłowa usterka"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Dom",
+    "transfer":"Transfer",
+    "contacts":"Kontakt",
+    "setting":"Ustawienie",
+    "total":"Razem",
+    "testnet":"Testuj sieć",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"Synchronicznie"
+  },
+  "page_setting": {
+    "tit":"Ustawienie",
+    "lang":"Język",
+    "select":"Wybierz",
+    "version_number":"Wersja portfela",
+    "data_path":"Ścieżka danych węzła",
+    "change":"Zmień",
+    "changeDirNote":"Przenieś pliki w oryginalnej ścieżce do nowego katalogu, w przeciwnym razie spowoduje to utratę danych.",
+    "note":"Uwaga"
+  },
+  "page_contacts": {
+    "tit":"Kontakt",
+    "add_dialog":"Nowy kontakt",
+    "add_cont": {
+      "tit":"Nowy kontakt",
+      "tag":"Kontakt",
+      "address":"Adres konta",
+      "tag_placeholder":"Wprowadź nazwę kontaktu",
+      "address_placeholder":"Wprowadź adres konta kontaktu",
+      "add_success":"Dodano pomyślnie"
     },
-    "model_header": {
-        "home":"Strona główna",
-        "transfer":"Przenieś",
-        "contacts":"Kontakt",
-        "setting":"Ustawienie",
-        "total":"Razem",
-        "testnet":"Sieć testowa",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Usuwasz",
+      "remove_success":"Pomyślnie usunięto"
     },
-    "page_setting": {
-        "tit":"Ustawienie",
-        "lang":"Język",
-        "select":"Proszę wybrać",
-        "version_number":"Wersja portfela"
-    },
-    "page_contacts": {
-        "tit":"Kontakt",
-        "add_dialog":"Nowy kontakt",
-        "add_cont": {
-            "tit":"Nowy kontakt",
-            "tag":"Kontakt",
-            "address":"Adres konta",
-            "tag_placeholder":"Wprowadź nazwę kontaktu",
-            "address_placeholder":"Wprowadź adres konta kontaktu",
-            "add_success":"Dodano pomyślnie"
-        },
-        "delete_dialog": {
-            "title":"Usuwasz",
-            "remove_success":"Pomyślnie usunięto"
-        },
-        "msg_info": {
-            "no_tag":"Proszę wprowadzić uwagę na koncie",
-            "no_address":"Wprowadź adres swojego konta",
-            "valid_address":"Adres kontaktu jest niezgodny z prawem",
-            "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
-            "contacts_quantity_error":"Liczba kontaktów nie może przekraczać 50",
-            "exist":"Kontakt już istnieje,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Wysyłanie strony",
-        "to_address":"Płatnik",
-        "amount":"Kwota",
-        "gas":"Gaz",
-        "send_all":"Wyślij wszystko",
-        "data":"Dane",
-        "data_placeholder":"Dane szesnastkowe",
-        "fees":"Opłata manipulacyjna",
-        "total":"Razem",
-        "select":"Proszę wybrać",
-        "no_account_info":"Brak konta, proszę utworzyć lub zaimportować konto",
-        "contacts_dig": {
-            "title":"Wybierz konto kontaktowe",
-            "select_placeholder":"Proszę wybrać"
-        },
-        "confirm_dia": {
-            "title":"Proszę potwierdzić",
-            "enter_passworld_tit":"Wprowadź swoje hasło",
-            "enter_passworld_place":"Wprowadź swoje hasło"
-        },
-        "msg_info": {
-            "address_null":"Proszę podać konto drugiej strony",
-            "balance_zero":"Niewystarczające saldo, nie można kontynuować",
-            "amount_zero":"Kwota transferu musi być większa niż 0",
-            "amount_error":"Wprowadź kwotę transakcji prawnej",
-            "address_err":"Format przesłanego adresu jest nieprawidłowy.",
-            "send_success":"Transakcja wysłana",
-            "amount_exceeded":"Łączna kwota bieżącej transakcji przekracza saldo konta",
-
-            "decrypt_err":"Nie udało się przetworzyć portfela, może to być błąd hasła",
-            "send_error":"Transakcja nie powiodła się: proszę sprawdzić, czy istnieje wystarczająca opłata bilansowa i górnicza"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Rejestr transakcji",
-        "transfer_log_null":"Brak historii transakcji",
-        "active_icon": {
-            "go_transfer":"Rozpocznij przelew",
-            "import_keystore":"Plik konta",
-            "qrcode":"Kod QR"
-        },
-        "edit_dia": {
-            "tit":"Zmodyfikuj notatkę",
-            "subtit":"Zaznacz notatkę dla swojego konta",
-            "no_tag":"Proszę wprowadzić uwagę na koncie",
-            "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków."
-        },
-        "dia_tx":{
-            "tit":"Informacje o transakcji",
-            "block_hash":"Numer transakcji",
-            "status":"Państwo",
-            "from":"Wysyłanie strony",
-            "to":"Płatnik",
-            "amount":"Kwota",
-            "data":"Dane",
-            "send_time":"Wysyłanie czasu",
-            "mac_time":"Czas w łańcuchu głównym"
-        },
-        "keystore": {
-            "tit":"Utwórz kopię zapasową pliku portfela",
-            "copy":"Kopiuj",
-            "download":"Pobierz plik portfela"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adres został skopiowany",
-            "key_copy_success":"Pomyślna kopia"
-        }
-    },
-    "page_home": {
-        "import_account":"Importuj konto",
-        "add_account":"Nowe konto",
-        "acc":"Konto",
-        "create_dia": {
-            "create_tit":"Utwórz konto",
-            "backup_tit":"Utwórz kopię zapasową nowego konta",
-            "create_tag":"Notatka konta",
-            "create_pwd":"Ustaw hasło",
-            "create_repwd":"Potwierdź hasło",
-            "placeholder_tag":"Ustaw nazwę notatki konta",
-            "placeholder_pwd":"Ustaw hasło do konta",
-            "placeholder_repwd":"Potwierdź hasło do konta",
-            
-            
-            "account_download_keystore":"Pobierz plik konta",
-
-            "validate_tag":"Wprowadź nazwę notatki konta",
-            "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
-
-            "validate_password":"Wprowadź ustawione hasło",
-            "validate_re_password":"Wprowadź ponownie ustawione hasło",
-            "validate_strong_password":"Wprowadź hasło składające się z co najmniej 8 cyfr",
-            "validate_long_password":"Hasło nie może przekraczać 100 cyfr",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Niespójne hasło wpisane dwukrotnie",
-
-            "create_success":"Utworzono pomyślnie",
-            "account_quantity_error":"Liczba kont nie może przekroczyć 50",
-            "create_success_des":"Zapisz plik konta i nie udostępniaj go nikomu!"
-        },
-        "import_dia": {
-            "tit":"Importuj konto",    
-            "placeholder_keystore":"Przeciągnij tutaj plik konta",
-            "create_tag":"Notatka konta",
-            "placeholder_tag":"Ustaw nazwę notatki konta",
-
-            "validate_tag":"Wprowadź nazwę notatki konta",
-            "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
-            "validate_enter_keystore":"Najpierw zaimportuj plik konta",
-            "validate_error_keystore":"Import konta nie powiódł się, może to być błąd pliku konta",
-            "imported_account_success":"Pomyślnie zaimportowano",
-            "exist":"To konto już istnieje, notatka jest",
-            "keystore_error":"Błąd:",
-            "keystore_length_error":"Można zaimportować tylko jeden plik konta, spróbuj ponownie!",
-            "keystore_format_error":"Wybierz poprawny plik konta",
-            "keystore_is_has":"Na liście jest już konto, które musisz zaimportować.",
-            "imported_success":"Już wybrany plik"
-        },
-        "remove_dia": {
-            "tit":"Czy na pewno chcesz go usunąć?",
-            "remove_confrim":"Jestem pewien, że usunę",
-            "backup":"Zwróć uwagę na kopię zapasową tego konta, aby uniknąć uszkodzenia własności.",
-            "input_pwd":"Hasło",
-            "placeholder_pwd":"Wprowadź hasło do tego konta",
-            "validate_password":"Podane hasło jest nieprawidłowe",
-            "remove_success":"Pomyślnie usunięto"
-        }
-    },
-    "page_config": {
-        "config_detection":"Wykrywanie konfiguracji",
-        "content_msg":{
-            "ready_test":"Przygotuj się do wykrycia pliku konfiguracyjnego",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Otrzymano najnowsze informacje o konfiguracji węzła",
-            "is_local":"Sprawdź lokalnie, czy istnieje plik węzła",
-            "already_local":"Plik konfiguracyjny pliku węzła istnieje na bieżącym urządzeniu.",
-            "not_local":"Informacje o konfiguracji pliku węzła nie są wykrywane, może to być pierwszy raz.",
-            "config_write_local":"Zapisz otrzymany plik informacji o węźle na dysku lokalnym",
-            "whether_update_node":"Sprawdź, czy wymagana jest aktualizacja",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Pobieram program węzłowy, proszę o cierpliwość",
-            "already_downloaded":"Program węzłowy został pobrany i gotowy do uruchomienia.",
-            "ready_start":"Przygotuj się do uruchomienia węzła",
-            "enter_wallet":"Węzeł rozpoczyna wykrywanie, gotowy do wejścia do portfela"
-        },
-        "version_dialog":{
-            "version_tit":"Monit aktualizacji wersji",
-            "download_wallet":"Przejdź na oficjalną stronę internetową, aby pobrać najnowszą wersję pieniędzy",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Wprowadź notatkę konta",
+      "no_address":"Wprowadź adres konta",
+      "valid_address":"Adres kontaktu jest nielegalny",
+      "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
+      "contacts_quantity_error":"Liczba kontaktów nie może przekraczać 50",
+      "exist":"Kontakt już istnieje,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Strona wysyłająca",
+    "to_address":"Odbiorca",
+    "amount":"Kwota",
+    "gas":"Gaz",
+    "gasPrice":"Cena jednostkowa gazu",
+    "send_all":"Wyślij wszystko",
+    "data":"Dane",
+    "data_placeholder":"Dane szesnastkowe",
+    "fees":"Opłata manipulacyjna",
+    "txFee":"Opłata transakcyjna",
+    "total":"Razem",
+    "select":"Wybierz",
+    "no_account_info":"Nie masz jeszcze konta, utwórz lub zaimportuj konto",
+    "no_keystore_file":"Nie znaleziono pliku konta dla odpowiedniego konta",
+    "contacts_dig": {
+      "title":"Wybierz konto kontaktowe",
+      "select_placeholder":"Wybierz"
+    },
+    "confirm_dia": {
+      "title":"Proszę potwierdzić",
+      "enter_passworld_tit":"Podaj swoje hasło",
+      "enter_passworld_place":"Podaj swoje hasło"
+    },
+    "msg_info": {
+      "address_null":"Wprowadź konto drugiej strony",
+      "balance_zero":"Niedostateczna równowaga, nie można kontynuować",
+      "amount_zero":"Kwota przelewu musi być większa niż 0",
+      "amount_error":"Wprowadź kwotę transakcji prawnej",
+      "address_err":"Format przesłanego adresu jest nieprawidłowy.",
+      "gas_error":"Proszę podać gaz transakcji prawnej",
+      "gasPrice_error":"Wprowadź prawną cenę transakcji",
+      "send_success":"Wysłano transakcję",
+      "amount_exceeded":"Aktualna łączna kwota transakcji przekracza saldo konta",
+      "txFeeTooLow":"Koszt transakcji jest zbyt niski",
+      "decrypt_err":"Parsowanie portfela nie powiodło się, może to być błąd hasła",
+      "send_error":"Transakcja nie powiodła się: sprawdź, czy istnieje wystarczająca równowaga i opłata za wydobycie",
+      "generate_offline_block_err":"Generowanie niepodpisanej transakcji nie powiodło się",
+      "sign_err":"Podpis nie powiódł się",
+      "send_offline_block_err":"Wysłanie podpisanej transakcji nie powiodło się",
+      "syncingWaitTitle":"Węzeł jest zsynchronizowany",
+      "syncingWait":"Węzeł jest zsynchronizowany, czas potwierdzenia transakcji może być dłuższy, prosimy o cierpliwość"
+    }
+  },
+  "pager": {
+    "next":"Następna strona",
+    "prev":"Poprzednia strona"
+  },
+  "page_account": {
+    "transfer_log":"Rekord transakcji",
+    "transfer_log_null":"Brak historii transakcji",
+    "txSent":"Transakcja przesłana",
+    "txAll":"Wszystkie transakcje",
+    "txNew":"Rachunek bieżący zawiera nowe informacje o transakcji",
+    "checkNow":"Wyświetl teraz",
+    "active_icon": {
+      "go_transfer":"Rozpocznij przelew",
+      "import_keystore":"Plik konta",
+      "qrcode":"Kod QR"
+    },
+    "edit_dia": {
+      "tit":"Zmień notatki",
+      "subtit":"Zaznacz notatkę dla swojego konta",
+      "no_tag":"Wprowadź notatkę konta",
+      "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków."
+    },
+    "dia_tx": {
+      "tit":"Informacje o transakcji",
+      "block_hash":"Numer transakcji",
+      "status":"Stan",
+      "from":"Strona wysyłająca",
+      "to":"Odbiorca",
+      "amount":"Kwota",
+      "data":"Dane",
+      "send_time":"Wysyłanie czasu",
+      "mac_time":"Główny czas łańcucha",
+      "gasPrice":"Cena jednostkowa gazu (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Wykorzystanie gazu",
+      "waiting":"Czekam na potwierdzenie",
+      "success":"Sukces",
+      "sendFail":"Wyślij nie powiodło się",
+      "fail1":"Awaria (1)",
+      "fail2":"Niepowodzenie (2)",
+      "fail3":"Niepowodzenie (3)"
+    },
+    "keystore": {
+      "tit":"Plik portfela zapasowego",
+      "copy":"Kopiuj",
+      "download":"Pobierz plik portfela"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adres został skopiowany",
+      "key_copy_success":"Udana kopia"
+    }
+  },
+  "page_home": {
+    "import_account":"Importuj konto",
+    "add_account":"Nowe konto",
+    "acc":"Konto",
+    "create_dia": {
+      "create_tit":"Utwórz konto",
+      "backup_tit":"Utwórz kopię zapasową nowego konta",
+      "create_tag":"Nota konta",
+      "create_pwd":"Ustaw hasło",
+      "create_repwd":"Potwierdź hasło",
+      "placeholder_tag":"Ustaw nazwę notatki konta",
+      "placeholder_pwd":"Ustaw hasło do konta",
+      "placeholder_repwd":"Potwierdź hasło do konta",
+      "account_download_keystore":"Pobierz plik konta",
+      "validate_tag":"Wprowadź nazwę notatki konta",
+      "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
+      "validate_password":"Wprowadź ustawione hasło",
+      "validate_re_password":"Wprowadź ponownie ustawione hasło",
+      "validate_strong_password":"Wprowadź hasło o długości co najmniej 8 cyfr",
+      "validate_long_password":"Hasło nie może przekraczać 100 cyfr",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Niespójne hasło zostało wprowadzone dwukrotnie",
+      "create_success":"Utworzono pomyślnie",
+      "account_quantity_error":"Liczba kont nie może przekroczyć 50",
+      "create_success_des":"Zapisz plik swojego konta i nie udostępniaj go nikomu!"
+    },
+    "import_dia": {
+      "tit":"Importuj konto",
+      "placeholder_keystore":"Proszę przeciągnij plik konta tutaj",
+      "create_tag":"Nota konta",
+      "placeholder_tag":"Ustaw nazwę notatki konta",
+      "validate_tag":"Wprowadź nazwę notatki konta",
+      "validate_tag_length":"Nazwa nazwy notatki nie może być większa niż 8 znaków.",
+      "validate_enter_keystore":"Najpierw zaimportuj plik konta",
+      "validate_error_keystore":"Import konta nie powiódł się, może to być błąd pliku konta",
+      "imported_account_success":"Pomyślnie zaimportowano",
+      "exist":"To konto już istnieje, notatka jest",
+      "keystore_error":"Błąd:",
+      "keystore_length_error":"Można zaimportować tylko jeden plik konta, spróbuj ponownie!",
+      "keystore_format_error":"Wybierz właściwy plik konta",
+      "keystore_is_has":"Istnieje już konto na liście, które należy zaimportować.",
+      "imported_success":"Wybrano plik"
+    },
+    "remove_dia": {
+      "tit":"Czy na pewno chcesz go usunąć?",
+      "remove_confrim":"Jestem pewien, że usunę",
+      "backup":"Zwróć uwagę na kopię zapasową tego konta, aby uniknąć uszkodzenia mienia.",
+      "input_pwd":"Hasło",
+      "placeholder_pwd":"Wprowadź hasło do tego konta",
+      "validate_password":"Wprowadzone hasło jest nieprawidłowe",
+      "remove_success":"Pomyślnie usunięto"
+    }
+  },
+  "page_config": {
+    "config_detection":"Wykrywanie konfiguracji",
+    "content_msg": {
+      "ready_test":"Przygotuj się do wykrycia pliku konfiguracyjnego",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Uzyskano najnowsze informacje o konfiguracji węzła",
+      "is_local":"Sprawdź, czy lokalnie nie ma pliku węzła",
+      "already_local":"Plik konfiguracyjny pliku węzła istnieje na bieżącym urządzeniu.",
+      "not_local":"Informacje o konfiguracji pliku węzła nie są wykrywane, może to być pierwszy raz.",
+      "config_write_local":"Zapisz uzyskany plik informacji o węźle na dysku lokalnym",
+      "whether_update_node":"Sprawdź, czy potrzebna jest aktualizacja",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Pobieranie programu węzła, prosimy o cierpliwość",
+      "already_downloaded":"Program węzłowy został pobrany i gotowy do uruchomienia.",
+      "ready_start":"Przygotuj się do uruchomienia węzła",
+      "enter_wallet":"Węzeł rozpoczyna wykrywanie, gotowy do wejścia do portfela",
+      "specifyDataDir":"Wybierz ścieżkę przechowywania danych węzła"
+    },
+    "version_dialog": {
+      "version_tit":"Monit o aktualizację wersji",
+      "download_wallet":"Przejdź na oficjalną stronę, aby pobrać najnowszą wersję pieniędzy",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

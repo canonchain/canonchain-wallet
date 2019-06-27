@@ -1,204 +1,242 @@
 {
-    "confirm":"Staðfestu",
-    "cancel":"Hætta við",
-    "dialog_tit":"Hvetja",
-    "close":"Loka",
-    "confirm_you_active":"Vinsamlegast staðfestu aðgerðina þína",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Staðfestu",
+  "cancel":"Hætta við",
+  "dialog_tit":"Hvetja",
+  "close":"Loka",
+  "confirm_you_active":"Vinsamlegast staðfestu aðgerðina þína",
+  "rpcErrors": {
+    "invalidFromAccount":"Reikningur sendanda er ógildur",
+    "invalidToAccount":"Komandi reikningur er ógildur",
+    "invalidAmountFormat":"Ógilt magnupphæð",
+    "invalidGasFormat":"Ógilt gasformi",
+    "invalidDataFormat":"Ógilt hexadecimal gagnasnið",
+    "dataSizeTooLarge":"Hexadecimal gögn eru of stór",
+    "invalidGasPriceFormat":"Verðverð fyrir gashyfa er ógilt",
+    "invalidMciFormat":"MCI sniði er ógilt",
+    "notEnoughFail":"Ófullnægjandi gas eða óeðlileg bilun"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Heim",
+    "transfer":"Flytja",
+    "contacts":"Hafa samband",
+    "setting":"Stillingar",
+    "total":"Samtals",
+    "testnet":"Prófunarnet",
+    "online":"Online",
+    "offline":"Ótengdur",
+    "syncing":"Í samstillingu"
+  },
+  "page_setting": {
+    "tit":"Stillingar",
+    "lang":"Tungumál",
+    "select":"Vinsamlegast veljið",
+    "version_number":"Veski útgáfa",
+    "data_path":"Hnútur gagnaslóð",
+    "change":"Breyta",
+    "changeDirNote":"Vinsamlegast farðu skrárnar á upprunalegu slóðinni í nýja möppuna, annars mun það valda gögnum tap.",
+    "note":"Athygli"
+  },
+  "page_contacts": {
+    "tit":"Hafa samband",
+    "add_dialog":"Nýr tengiliður",
+    "add_cont": {
+      "tit":"Nýr tengiliður",
+      "tag":"Hafa samband",
+      "address":"Reikningsnúmer",
+      "tag_placeholder":"Vinsamlegast sláðu inn nafn tengiliðar",
+      "address_placeholder":"Vinsamlegast sláðu inn netfang tengiliðarins",
+      "add_success":"Bætt við með góðum árangri"
     },
-    "model_header": {
-        "home":"Heim",
-        "transfer":"Flytja",
-        "contacts":"Hafa samband",
-        "setting":"Stillingar",
-        "total":"Samtals",
-        "testnet":"Prófunarnet",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Þú ert að fjarlægja",
+      "remove_success":"Tókst að fjarlægja"
     },
-    "page_setting": {
-        "tit":"Stillingar",
-        "lang":"Tungumál",
-        "select":"Vinsamlegast veljið",
-        "version_number":"Veski útgáfa"
-    },
-    "page_contacts": {
-        "tit":"Hafa samband",
-        "add_dialog":"Nýr tengiliður",
-        "add_cont": {
-            "tit":"Nýr tengiliður",
-            "tag":"Hafa samband",
-            "address":"Reikningsnúmer",
-            "tag_placeholder":"Vinsamlegast sláðu inn nafn tengiliðar",
-            "address_placeholder":"Vinsamlegast sláðu inn netfang tengiliðarins",
-            "add_success":"Bætt við með góðum árangri"
-        },
-        "delete_dialog": {
-            "title":"Þú ert að fjarlægja",
-            "remove_success":"Tókst að fjarlægja"
-        },
-        "msg_info": {
-            "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
-            "no_address":"Vinsamlegast sláðu inn netfangið þitt",
-            "valid_address":"Heimilisfang tengiliðs er ólöglegt",
-            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
-            "contacts_quantity_error":"Fjöldi tengiliða má ekki fara yfir 50",
-            "exist":"Tengiliðurinn er þegar til,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Sendandi aðila",
-        "to_address":"Greiðanda",
-        "amount":"Upphæð",
-        "gas":"Gas",
-        "send_all":"Senda allt",
-        "data":"Gögn",
-        "data_placeholder":"Hexadecimal gögn",
-        "fees":"Meðhöndlunargjald",
-        "total":"Samtals",
-        "select":"Vinsamlegast veljið",
-        "no_account_info":"Engar reikningar ennþá, vinsamlegast búðu til eða flytja inn reikning",
-        "contacts_dig": {
-            "title":"Veldu tengiliðareikning",
-            "select_placeholder":"Vinsamlegast veljið"
-        },
-        "confirm_dia": {
-            "title":"Vinsamlegast staðfestu",
-            "enter_passworld_tit":"Vinsamlegast sláðu inn lykilorðið þitt",
-            "enter_passworld_place":"Vinsamlegast sláðu inn lykilorðið þitt"
-        },
-        "msg_info": {
-            "address_null":"Vinsamlegast sláðu inn reikning annarra aðila",
-            "balance_zero":"Ófullnægjandi jafnvægi, ófær um að halda áfram",
-            "amount_zero":"Flutningsfjárhæð verður að vera meiri en 0",
-            "amount_error":"Vinsamlegast sláðu inn lagalega viðskiptabréf",
-            "address_err":"Sniðið á yfirfærðu heimilisfangi er ógilt.",
-            "send_success":"Viðskipti send",
-            "amount_exceeded":"Núverandi heildarfjárhæð viðskipta er yfir reikningsjöfnuði",
-
-            "decrypt_err":"Pappaþáttun mistókst, það gæti verið lykilorðsvilla",
-            "send_error":"Viðskipti mistókst: Vinsamlegast athugaðu hvort það sé nægjanlegt jafnvægi og jarðvegsgjald"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Viðskiptaskrá",
-        "transfer_log_null":"Engin viðskiptasaga",
-        "active_icon": {
-            "go_transfer":"Hefja flutning",
-            "import_keystore":"Reikningsskrá",
-            "qrcode":"QR kóða"
-        },
-        "edit_dia": {
-            "tit":"Breyta athugasemd",
-            "subtit":"Merktu athugasemd fyrir reikninginn þinn",
-            "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
-            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir."
-        },
-        "dia_tx":{
-            "tit":"Upplýsingar um viðskipti",
-            "block_hash":"Viðskiptarnúmer",
-            "status":"Ríki",
-            "from":"Sendandi aðila",
-            "to":"Greiðanda",
-            "amount":"Upphæð",
-            "data":"Gögn",
-            "send_time":"Sendingartími",
-            "mac_time":"Aðal keðja tími"
-        },
-        "keystore": {
-            "tit":"Veggfóður fyrir öryggisafrit",
-            "copy":"Afrita",
-            "download":"Hlaða niður veskisskrá"
-        },
-        "msg_info": {
-            "ads_copy_success":"Heimilisfang hefur verið afritað",
-            "key_copy_success":"Árangursrík afrit"
-        }
-    },
-    "page_home": {
-        "import_account":"Innflutningur reikningur",
-        "add_account":"Nýr reikningur",
-        "acc":"Reikningur",
-        "create_dia": {
-            "create_tit":"Búðu til reikning",
-            "backup_tit":"Afritaðu nýja reikninginn þinn",
-            "create_tag":"Reikningur minnispunktur",
-            "create_pwd":"Stilltu lykilorð",
-            "create_repwd":"Staðfestu lykilorð",
-            "placeholder_tag":"Vinsamlegast settu nafn reikningsnota",
-            "placeholder_pwd":"Vinsamlegast settu lykilorð reikningsins",
-            "placeholder_repwd":"Vinsamlegast staðfestu lykilorð reikningsins",
-            
-            
-            "account_download_keystore":"Hlaða niður reikningsskrá",
-
-            "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
-            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
-
-            "validate_password":"Vinsamlegast sláðu inn lykilorðið sem þú setur",
-            "validate_re_password":"Vinsamlegast sláðu inn lykilorðið sem þú stillir aftur",
-            "validate_strong_password":"Vinsamlegast sláðu inn lykilorð að minnsta kosti 8 tölustafir",
-            "validate_long_password":"Lykilorðið getur ekki farið yfir 100 stafir að lengd",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Ósamræmi lykilorð slóst inn tvisvar",
-
-            "create_success":"Búið til með góðum árangri",
-            "account_quantity_error":"Fjöldi reikninga má ekki fara yfir 50",
-            "create_success_des":"Vinsamlegast vista reikningsskrána þína og deildu því ekki með neinum!"
-        },
-        "import_dia": {
-            "tit":"Innflutningur reikningur",    
-            "placeholder_keystore":"Vinsamlegast dragðu inn reikningsskrána hér",
-            "create_tag":"Reikningur minnispunktur",
-            "placeholder_tag":"Vinsamlegast settu nafn reikningsnota",
-
-            "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
-            "validate_tag_length":"Nafn nafnsheitisins má ekki vera stærri en 8 stafir.",
-            "validate_enter_keystore":"Vinsamlegast flytðu inn reikningsskráin fyrst",
-            "validate_error_keystore":"Reikningur innflutnings mistókst, gæti verið villa skráar villa",
-            "imported_account_success":"Innflutt með góðum árangri",
-            "exist":"Þessi reikningur er þegar til, minnismiðinn er",
-            "keystore_error":"Villa:",
-            "keystore_length_error":"Aðeins er hægt að flytja inn eina reikningsskrá, vinsamlegast reyndu aftur!",
-            "keystore_format_error":"Vinsamlegast veldu réttan reikningsskrá",
-            "keystore_is_has":"Það er þegar reikningur á listanum sem þú þarft að flytja inn.",
-            "imported_success":"Already selected file"
-        },
-        "remove_dia": {
-            "tit":"Ertu viss um að þú viljir fjarlægja það?",
-            "remove_confrim":"Ég er viss um að fjarlægja",
-            "backup":"Vinsamlegast athugaðu öryggisafrit af þessum reikningi til að koma í veg fyrir eignatjón.",
-            "input_pwd":"Lykilorð",
-            "placeholder_pwd":"Vinsamlegast sláðu inn lykilorðið fyrir þennan reikning",
-            "validate_password":"Lykilorðið sem þú slóst inn er rangt",
-            "remove_success":"Tókst að fjarlægja"
-        }
-    },
-    "page_config": {
-        "config_detection":"Stilling uppgötvun",
-        "content_msg":{
-            "ready_test":"Undirbúið að uppgötva stillingarskrána",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Nýjustu upplýsingar um hnút stillingar hafa verið fengnar",
-            "is_local":"Athugaðu hvort það sé hnútskrá á staðnum",
-            "already_local":"Stillingarskráin á hnútskránni er til staðar á núverandi tæki.",
-            "not_local":"Stillingarupplýsingarnar á hnútskránni eru ekki greindar, það kann að vera í fyrsta sinn í gangi.",
-            "config_write_local":"Skrifaðu hnútupplýsingaskrána á staðbundna diskinn",
-            "whether_update_node":"Athugaðu hvort uppfærsla sé þörf",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Hlaða niður hnút forrit, vinsamlegast vertu þolinmóð",
-            "already_downloaded":"Hnútaforritið hefur verið hlaðið niður og tilbúið til að byrja.",
-            "ready_start":"Undirbúið að hefja hnútinn",
-            "enter_wallet":"Hnútur byrjar uppgötvun, tilbúinn til að slá inn veskið"
-        },
-        "version_dialog":{
-            "version_tit":"Útgáfa uppfærsla hvetja",
-            "download_wallet":"Farðu á opinbera vefsíðu til að hlaða niður nýjustu útgáfunni af peningunum",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
+      "no_address":"Vinsamlegast sláðu inn netfangið",
+      "valid_address":"Heimilisfang tengiliðs er ólöglegt",
+      "validate_tag_length":"Nafnið á heiti nafnsins má ekki vera stærri en 8 stafir.",
+      "contacts_quantity_error":"Fjöldi tengiliða má ekki fara yfir 50",
+      "exist":"Tengiliðurinn er þegar til,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Sendingarmaður",
+    "to_address":"Greiðanda",
+    "amount":"Upphæð",
+    "gas":"Gas",
+    "gasPrice":"Gasverðsverð",
+    "send_all":"Senda allt",
+    "data":"Gögn",
+    "data_placeholder":"Hexadecimal gögn",
+    "fees":"Meðhöndlunargjald",
+    "txFee":"Viðskiptagjald",
+    "total":"Samtals",
+    "select":"Vinsamlegast veljið",
+    "no_account_info":"Engar reikningar ennþá, vinsamlegast búðu til eða flytja inn reikning",
+    "no_keystore_file":"Engin reikningsskrá fannst fyrir samsvarandi reikning",
+    "contacts_dig": {
+      "title":"Veldu tengiliðareikning",
+      "select_placeholder":"Vinsamlegast veljið"
+    },
+    "confirm_dia": {
+      "title":"Vinsamlegast staðfestu",
+      "enter_passworld_tit":"Vinsamlegast sláðu inn lykilorðið þitt",
+      "enter_passworld_place":"Vinsamlegast sláðu inn lykilorðið þitt"
+    },
+    "msg_info": {
+      "address_null":"Vinsamlegast sláðu inn reikning annarra aðila",
+      "balance_zero":"Ófullnægjandi jafnvægi, ófær um að halda áfram",
+      "amount_zero":"Flutningsfjárhæð verður að vera meiri en 0",
+      "amount_error":"Vinsamlegast sláðu inn lagalega viðskiptabréf",
+      "address_err":"Sniðið á yfirfærðu heimilisfangi er ógilt.",
+      "gas_error":"Vinsamlegast sláðu inn lagaleg viðskipti gas",
+      "gasPrice_error":"Vinsamlegast sláðu inn lagalegan viðskiptaverð",
+      "send_success":"Viðskipti send",
+      "amount_exceeded":"Núverandi heildarfjárhæðin er yfir reikningsjöfnuði",
+      "txFeeTooLow":"Viðskiptakostnaður er of lágur",
+      "decrypt_err":"Pappaþáttun mistókst, það gæti verið lykilorðsvilla",
+      "send_error":"Viðskipti mistókst: Vinsamlegast athugaðu hvort nægjanlegt jafnvægi og jarðvegsgjald sé fyrir hendi",
+      "generate_offline_block_err":"Búa til óskráð viðskipti mistókst",
+      "sign_err":"Undirskrift mistókst",
+      "send_offline_block_err":"Sending undirritaðs viðskipta mistókst",
+      "syncingWaitTitle":"Hnútinn er í samstillingu",
+      "syncingWait":"Hnúturinn er í samstillingu, viðskiptin staðfestingartími getur verið lengur, vinsamlegast vertu þolinmóð"
+    }
+  },
+  "pager": {
+    "next":"Næsta síða",
+    "prev":"Fyrri síða"
+  },
+  "page_account": {
+    "transfer_log":"Viðskiptaskrá",
+    "transfer_log_null":"Engin viðskiptasaga",
+    "txSent":"Sendt viðskipti",
+    "txAll":"Öll viðskipti",
+    "txNew":"Núverandi reikningur hefur nýjar upplýsingar um viðskipti",
+    "checkNow":"Skoða núna",
+    "active_icon": {
+      "go_transfer":"Hefja flutning",
+      "import_keystore":"Reikningsskrá",
+      "qrcode":"QR kóða"
+    },
+    "edit_dia": {
+      "tit":"Breyta athugasemdum",
+      "subtit":"Merktu athugasemd fyrir reikninginn þinn",
+      "no_tag":"Vinsamlegast sláðu inn reikningsskýringu",
+      "validate_tag_length":"Nafnið á heiti nafnsins má ekki vera stærri en 8 stafir."
+    },
+    "dia_tx": {
+      "tit":"Upplýsingar um viðskipti",
+      "block_hash":"Viðskiptarnúmer",
+      "status":"Ríki",
+      "from":"Sendingarmaður",
+      "to":"Greiðanda",
+      "amount":"Upphæð",
+      "data":"Gögn",
+      "send_time":"Sendingartími",
+      "mac_time":"Helstu keðjutími",
+      "gasPrice":"Gengisverð (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Notkun gas",
+      "waiting":"Bíð eftir staðfestingu",
+      "success":"Velgengni",
+      "sendFail":"Sending mistókst",
+      "fail1":"Bilun (1)",
+      "fail2":"Bilun (2)",
+      "fail3":"Bilun (3)"
+    },
+    "keystore": {
+      "tit":"Veskisskrá í öryggisafriti",
+      "copy":"Afrita",
+      "download":"Hlaða niður veskisskrá"
+    },
+    "msg_info": {
+      "ads_copy_success":"Heimilisfang hefur verið afritað",
+      "key_copy_success":"Árangursrík afrit"
+    }
+  },
+  "page_home": {
+    "import_account":"Innflutningur reikningur",
+    "add_account":"Nýr reikningur",
+    "acc":"Reikningur",
+    "create_dia": {
+      "create_tit":"Búðu til reikning",
+      "backup_tit":"Afritaðu nýja reikninginn þinn",
+      "create_tag":"Reikningur minnispunktur",
+      "create_pwd":"Stilltu lykilorð",
+      "create_repwd":"Staðfestu lykilorð",
+      "placeholder_tag":"Vinsamlegast settu nafn reikningsnota",
+      "placeholder_pwd":"Vinsamlegast settu lykilorð reikningsins",
+      "placeholder_repwd":"Vinsamlegast staðfestu lykilorð reikningsins",
+      "account_download_keystore":"Hlaða niður reikningsskrá",
+      "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
+      "validate_tag_length":"Nafnið á heiti nafnsins má ekki vera stærri en 8 stafir.",
+      "validate_password":"Vinsamlegast sláðu inn lykilorðið sem þú setur",
+      "validate_re_password":"Vinsamlegast sláðu inn lykilorðið sem þú stillir aftur",
+      "validate_strong_password":"Vinsamlegast sláðu inn lykilorð að minnsta kosti 8 tölustafir",
+      "validate_long_password":"Lykilorðið má ekki fara yfir 100 stafir að lengd",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Ósamræmi lykilorðið var tvisvar sinnum innritað",
+      "create_success":"Búið til með góðum árangri",
+      "account_quantity_error":"Fjöldi reikninga má ekki fara yfir 50",
+      "create_success_des":"Vinsamlegast vista reikningsskrána þína og deildu því ekki með neinum!"
+    },
+    "import_dia": {
+      "tit":"Innflutningur reikningur",
+      "placeholder_keystore":"Vinsamlegast dragðu inn reikningsskrána hér",
+      "create_tag":"Reikningur minnispunktur",
+      "placeholder_tag":"Vinsamlegast settu nafn reikningsnota",
+      "validate_tag":"Vinsamlegast sláðu inn nafn reikningsins",
+      "validate_tag_length":"Nafnið á heiti nafnsins má ekki vera stærri en 8 stafir.",
+      "validate_enter_keystore":"Vinsamlegast flytðu inn reikningsskráin fyrst",
+      "validate_error_keystore":"Reikningur innflutnings mistókst, gæti verið villa skráar villa",
+      "imported_account_success":"Innflutt með góðum árangri",
+      "exist":"Þessi reikningur er þegar til, minnismiðinn er",
+      "keystore_error":"Villa:",
+      "keystore_length_error":"Aðeins er hægt að flytja inn eina reikningsskrá, vinsamlegast reyndu aftur!",
+      "keystore_format_error":"Vinsamlegast veldu réttan reikningsskrá",
+      "keystore_is_has":"Það er þegar reikningur á listanum sem þú þarft að flytja inn.",
+      "imported_success":"Skrá valin"
+    },
+    "remove_dia": {
+      "tit":"Ertu viss um að þú viljir fjarlægja það?",
+      "remove_confrim":"Ég er viss um að fjarlægja",
+      "backup":"Vinsamlegast athugaðu öryggisafrit af þessum reikningi til að koma í veg fyrir eignatjón.",
+      "input_pwd":"Lykilorð",
+      "placeholder_pwd":"Vinsamlegast sláðu inn lykilorðið fyrir þennan reikning",
+      "validate_password":"Lykilorðið sem þú slóst inn er rangt",
+      "remove_success":"Tókst að fjarlægja"
+    }
+  },
+  "page_config": {
+    "config_detection":"Stilling uppgötvun",
+    "content_msg": {
+      "ready_test":"Undirbúið að uppgötva stillingarskrána",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Nýjustu upplýsingar um hnút stillingar hafa verið fengnar",
+      "is_local":"Athugaðu hvort það sé hnútskrá á staðnum",
+      "already_local":"Stillingarskrá hnútskrárinnar er til staðar á núverandi tæki.",
+      "not_local":"Stillingarupplýsingarnar á hnútskránni eru ekki greindar, það kann að vera í fyrsta skipti sem keyrir.",
+      "config_write_local":"Skrifaðu hnútupplýsingaskrána sem þú fékkst á staðbundna diskinn",
+      "whether_update_node":"Athugaðu hvort uppfærsla sé þörf",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Hlaða niður hnút program, vinsamlegast vertu þolinmóður",
+      "already_downloaded":"Hnútaforritið hefur verið hlaðið niður og tilbúið til að byrja.",
+      "ready_start":"Undirbúið að hefja hnútinn",
+      "enter_wallet":"Hnútur byrjar uppgötvun, tilbúinn til að slá inn veskið",
+      "specifyDataDir":"Vinsamlegast veldu geymsluslóð hnútagagna"
+    },
+    "version_dialog": {
+      "version_tit":"Útgáfa uppfærsla hvetja",
+      "download_wallet":"Farðu á opinbera vefsíðu til að hlaða niður nýjustu útgáfunni af peningunum",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

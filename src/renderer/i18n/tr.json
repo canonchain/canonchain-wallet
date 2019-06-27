@@ -1,204 +1,242 @@
 {
-    "confirm":"onaylamak",
-    "cancel":"iptal edildi",
-    "dialog_tit":"çabuk",
-    "close":"yakın",
-    "confirm_you_active":"Lütfen işleminizi onaylayın",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"onaylamak",
+  "cancel":"iptal edildi",
+  "dialog_tit":"çabuk",
+  "close":"yakın",
+  "confirm_you_active":"Lütfen işleminizi onaylayın",
+  "rpcErrors": {
+    "invalidFromAccount":"Gönderenin hesabı geçersiz",
+    "invalidToAccount":"Gelen hesap geçersiz",
+    "invalidAmountFormat":"Geçersiz tutar biçimi",
+    "invalidGasFormat":"Geçersiz Gaz formatı",
+    "invalidDataFormat":"Geçersiz onaltılık veri formatı",
+    "dataSizeTooLarge":"Onaltılık veriler çok büyük",
+    "invalidGasPriceFormat":"Gaz birim fiyat biçimi geçersiz",
+    "invalidMciFormat":"MCI formatı geçersiz",
+    "notEnoughFail":"Yetersiz gaz veya anormal arıza"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"ev",
+    "transfer":"transfer",
+    "contacts":"temas",
+    "setting":"kurmak",
+    "total":"toplam",
+    "testnet":"Test ağı",
+    "online":"çevrimiçi",
+    "offline":"Çevrimdışı",
+    "syncing":"Senkronizasyonda"
+  },
+  "page_setting": {
+    "tit":"kurmak",
+    "lang":"dil",
+    "select":"Lütfen seçiniz",
+    "version_number":"Cüzdan sürümü",
+    "data_path":"Düğüm veri yolu",
+    "change":"değişim",
+    "changeDirNote":"Lütfen orijinal yoldaki dosyaları yeni dizine taşıyın, aksi takdirde veri kaybına neden olur.",
+    "note":"dikkat"
+  },
+  "page_contacts": {
+    "tit":"temas",
+    "add_dialog":"Yeni iletişim",
+    "add_cont": {
+      "tit":"Yeni iletişim",
+      "tag":"temas",
+      "address":"Hesap adresi",
+      "tag_placeholder":"Lütfen kişinin adını girin",
+      "address_placeholder":"Lütfen kişinin hesap adresini girin",
+      "add_success":"Başarıyla eklendi"
     },
-    "model_header": {
-        "home":"ev",
-        "transfer":"transfer",
-        "contacts":"temas",
-        "setting":"kurmak",
-        "total":"toplam",
-        "testnet":"Test ağı",
-        "online":"çevrimiçi",
-        "offline":"Çevrimdışı"
+    "delete_dialog": {
+      "title":"Kaldırıyorsunuz",
+      "remove_success":"Başarıyla kaldırıldı"
     },
-    "page_setting": {
-        "tit":"kurmak",
-        "lang":"dil",
-        "select":"Lütfen seçiniz",
-        "version_number":"Cüzdan sürümü"
-    },
-    "page_contacts": {
-        "tit":"temas",
-        "add_dialog":"Yeni iletişim",
-        "add_cont": {
-            "tit":"Yeni iletişim",
-            "tag":"temas",
-            "address":"Hesap adresi",
-            "tag_placeholder":"Lütfen kişinin adını girin",
-            "address_placeholder":"Lütfen kişinin hesap adresini girin",
-            "add_success":"Başarıyla eklendi"
-        },
-        "delete_dialog": {
-            "title":"Kaldırıyorsunuz",
-            "remove_success":"Başarıyla kaldırıldı"
-        },
-        "msg_info": {
-            "no_tag":"Lütfen bir hesap notu girin",
-            "no_address":"Lütfen hesap adresinizi giriniz",
-            "valid_address":"Kişinin adresi yasa dışı",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
-            "contacts_quantity_error":"Kişi sayısı 50'yi aşamaz.",
-            "exist":"Kişi zaten var,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Gönderen parti",
-        "to_address":"alacaklı",
-        "amount":"para",
-        "gas":"gaz",
-        "send_all":"Hepsini gönder",
-        "data":"veri",
-        "data_placeholder":"Onaltılık veri",
-        "fees":"Taşıma ücreti",
-        "total":"toplam",
-        "select":"Lütfen seçiniz",
-        "no_account_info":"Henüz bir hesap yok, lütfen hesap oluşturun veya alın",
-        "contacts_dig": {
-            "title":"Bir kişi hesabı seçin",
-            "select_placeholder":"Lütfen seçiniz"
-        },
-        "confirm_dia": {
-            "title":"Lütfen onayla",
-            "enter_passworld_tit":"Lütfen şifrenizi girin",
-            "enter_passworld_place":"Lütfen şifrenizi girin"
-        },
-        "msg_info": {
-            "address_null":"Lütfen diğer tarafın hesabını girin",
-            "balance_zero":"Yetersiz bakiye, devam edilemiyor",
-            "amount_zero":"Transfer tutarı 0'dan büyük olmalıdır",
-            "amount_error":"Lütfen yasal bir işlem tutarı girin",
-            "address_err":"Aktarılan adresin formatı geçersiz.",
-            "send_success":"İşlem gönderildi",
-            "amount_exceeded":"Geçerli işlem toplam tutarı hesap bakiyesini aşıyor",
-
-            "decrypt_err":"Cüzdan ayrıştırma işlemi başarısız oldu, bir şifre hatası olabilir",
-            "send_error":"İşlem başarısız oldu: Lütfen yeterli bakiye ve maden ücreti olup olmadığını kontrol edin"
-        }
-    },
-    "page_account": {
-        "transfer_log":"İşlem kaydı",
-        "transfer_log_null":"İşlem geçmişi yok",
-        "active_icon": {
-            "go_transfer":"Bir transfer başlat",
-            "import_keystore":"Hesap dosyası",
-            "qrcode":"QR kodu"
-        },
-        "edit_dia": {
-            "tit":"Notu değiştir",
-            "subtit":"Hesabınız için bir not işaretleyin",
-            "no_tag":"Lütfen bir hesap notu girin",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz."
-        },
-        "dia_tx":{
-            "tit":"İşlem bilgileri",
-            "block_hash":"İşlem numarası",
-            "status":"devlet",
-            "from":"Gönderen parti",
-            "to":"alacaklı",
-            "amount":"para",
-            "data":"veri",
-            "send_time":"Zaman gönderme",
-            "mac_time":"Ana zincir süresi"
-        },
-        "keystore": {
-            "tit":"Yedek cüzdan dosyası",
-            "copy":"kopya",
-            "download":"M-cüzdan dosyasını indir"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adres kopyalandı",
-            "key_copy_success":"Başarılı kopya"
-        }
-    },
-    "page_home": {
-        "import_account":"Hesabı içe aktar",
-        "add_account":"Yeni hesap",
-        "acc":"hesap",
-        "create_dia": {
-            "create_tit":"Bir hesap oluştur",
-            "backup_tit":"Yeni hesabınızı yedekleyin",
-            "create_tag":"Hesap notu",
-            "create_pwd":"Şifre ayarla",
-            "create_repwd":"Şifreyi onayla",
-            "placeholder_tag":"Lütfen hesap not adını giriniz",
-            "placeholder_pwd":"Lütfen hesap şifresini ayarlayın",
-            "placeholder_repwd":"Lütfen hesap şifresini onaylayın",
-            
-            
-            "account_download_keystore":"Hesap dosyasını indir",
-
-            "validate_tag":"Lütfen hesap not adını giriniz",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
-
-            "validate_password":"Lütfen belirlediğiniz şifreyi giriniz",
-            "validate_re_password":"Lütfen tekrar girdiğiniz şifreyi girin",
-            "validate_strong_password":"Lütfen en az 8 basamaklı bir şifre girin",
-            "validate_long_password":"Şifre uzunluğu 100 haneyi aşamaz.",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Tutarsız şifre iki kez girildi",
-
-            "create_success":"Başarıyla oluşturuldu",
-            "account_quantity_error":"Hesap sayısı 50'yi aşamaz",
-            "create_success_des":"Lütfen hesap dosyanızı kaydedin ve kimseyle paylaşmayın!"
-        },
-        "import_dia": {
-            "tit":"Hesabı içe aktar",    
-            "placeholder_keystore":"Lütfen hesap dosyasını buraya sürükleyin",
-            "create_tag":"Hesap notu",
-            "placeholder_tag":"Lütfen hesap not adını giriniz",
-
-            "validate_tag":"Lütfen hesap not adını giriniz",
-            "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
-            "validate_enter_keystore":"Lütfen önce hesap dosyasını alın",
-            "validate_error_keystore":"Hesap içe aktarma başarısız oldu, hesap dosyası hatası olabilir",
-            "imported_account_success":"Başarıyla içe aktarıldı",
-            "exist":"Bu hesap zaten var, not",
-            "keystore_error":"Hata:",
-            "keystore_length_error":"Yalnızca bir hesap dosyası alınabilir, lütfen tekrar deneyin!",
-            "keystore_format_error":"Lütfen doğru hesap dosyasını seçin",
-            "keystore_is_has":"Listede içe aktarmanız gereken bir hesap zaten var.",
-            "imported_success":"Zaten seçilen dosya"
-        },
-        "remove_dia": {
-            "tit":"Kaldırmak istediğinden emin misin?",
-            "remove_confrim":"Kaldırmak için eminim",
-            "backup":"Maddi zararlardan kaçınmak için lütfen bu hesabın yedeğine dikkat edin.",
-            "input_pwd":"şifre",
-            "placeholder_pwd":"Lütfen bu hesap için şifreyi girin",
-            "validate_password":"Girdiğiniz şifre yanlış",
-            "remove_success":"Başarıyla kaldırıldı"
-        }
-    },
-    "page_config": {
-        "config_detection":"Yapılandırma algılama",
-        "content_msg":{
-            "ready_test":"Yapılandırma dosyasını algılamaya hazırlanın",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"En son düğüm yapılandırma bilgisi elde edildi",
-            "is_local":"Yerel olarak bir düğüm dosyası olup olmadığını kontrol edin",
-            "already_local":"Düğüm dosyasının yapılandırma dosyası geçerli aygıtta var.",
-            "not_local":"Düğüm dosyasının yapılandırma bilgileri algılanmadı, ilk kez çalışıyor olabilir.",
-            "config_write_local":"Elde edilen düğüm bilgi dosyasını yerel diske yazın",
-            "whether_update_node":"Güncelleme gerekip gerekmediğini kontrol edin",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Düğüm programı indiriliyor, lütfen sabırlı olun",
-            "already_downloaded":"Düğüm programı indirildi ve başlatılmaya hazır.",
-            "ready_start":"Düğümü başlatmaya hazırlanın",
-            "enter_wallet":"Düğüm algılamaya başlar, cüzdanı girmeye hazır"
-        },
-        "version_dialog":{
-            "version_tit":"Sürüm güncelleme istemi",
-            "download_wallet":"Paranın en son sürümünü indirmek için resmi web sitesine gidin.",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Lütfen bir hesap notu girin",
+      "no_address":"Lütfen hesap adresini giriniz",
+      "valid_address":"Kişinin adresi yasa dışı",
+      "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+      "contacts_quantity_error":"Kişi sayısı 50'yi aşamaz.",
+      "exist":"Kişi zaten var,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Gönderen parti",
+    "to_address":"alacaklı",
+    "amount":"para",
+    "gas":"gaz",
+    "gasPrice":"Gaz birim fiyatı",
+    "send_all":"Hepsini gönder",
+    "data":"veri",
+    "data_placeholder":"Onaltılık veri",
+    "fees":"Taşıma ücreti",
+    "txFee":"İşlem ücreti",
+    "total":"toplam",
+    "select":"Lütfen seçiniz",
+    "no_account_info":"Henüz bir hesap yok, lütfen hesap oluşturun veya alın",
+    "no_keystore_file":"İlgili hesap için hesap dosyası bulunamadı",
+    "contacts_dig": {
+      "title":"Kişi hesabı seç",
+      "select_placeholder":"Lütfen seçiniz"
+    },
+    "confirm_dia": {
+      "title":"Lütfen onayla",
+      "enter_passworld_tit":"Lütfen şifrenizi girin",
+      "enter_passworld_place":"Lütfen şifrenizi girin"
+    },
+    "msg_info": {
+      "address_null":"Lütfen diğer tarafın hesabını girin",
+      "balance_zero":"Yetersiz bakiye, devam edilemiyor",
+      "amount_zero":"Transfer tutarı 0'dan büyük olmalıdır",
+      "amount_error":"Lütfen yasal bir işlem tutarı girin",
+      "address_err":"Aktarılan adresin formatı geçersiz.",
+      "gas_error":"Lütfen bir yasal işlem gazı giriniz",
+      "gasPrice_error":"Lütfen yasal işlem fiyatını girin",
+      "send_success":"İşlem gönderildi",
+      "amount_exceeded":"Geçerli toplam işlem tutarı hesap bakiyesini aşıyor",
+      "txFeeTooLow":"İşlem maliyeti çok düşük",
+      "decrypt_err":"Cüzdan ayrıştırma işlemi başarısız oldu, bir şifre hatası olabilir",
+      "send_error":"İşlem başarısız oldu: Lütfen yeterli bakiye ve maden ücreti olup olmadığını kontrol edin",
+      "generate_offline_block_err":"İmzasız işlem oluşturulamadı",
+      "sign_err":"İmza başarısız oldu",
+      "send_offline_block_err":"İmzalı bir işlem gönderilemedi",
+      "syncingWaitTitle":"Düğüm senkronize ediyor",
+      "syncingWait":"Düğüm senkronize, işlem onay süresi daha uzun olabilir, lütfen sabırlı olun"
+    }
+  },
+  "pager": {
+    "next":"Sonraki sayfa",
+    "prev":"Önceki sayfa"
+  },
+  "page_account": {
+    "transfer_log":"İşlem kaydı",
+    "transfer_log_null":"İşlem geçmişi yok",
+    "txSent":"İletilen işlem",
+    "txAll":"Tüm işlemler",
+    "txNew":"Cari hesapta yeni işlem bilgileri var",
+    "checkNow":"Şimdi göster",
+    "active_icon": {
+      "go_transfer":"Bir transfer başlat",
+      "import_keystore":"Hesap dosyası",
+      "qrcode":"QR kodu"
+    },
+    "edit_dia": {
+      "tit":"Notları değiştir",
+      "subtit":"Hesabınız için bir not işaretleyin",
+      "no_tag":"Lütfen bir hesap notu girin",
+      "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz."
+    },
+    "dia_tx": {
+      "tit":"İşlem bilgileri",
+      "block_hash":"İşlem numarası",
+      "status":"devlet",
+      "from":"Gönderen parti",
+      "to":"alacaklı",
+      "amount":"para",
+      "data":"veri",
+      "send_time":"Zaman gönderme",
+      "mac_time":"Ana zincir süresi",
+      "gasPrice":"Gaz birim fiyatı (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Gaz kullanımı",
+      "waiting":"Onay bekliyorum",
+      "success":"başarı",
+      "sendFail":"Gönderme başarısız oldu",
+      "fail1":"Başarısızlık (1)",
+      "fail2":"Başarısızlık (2)",
+      "fail3":"Başarısızlık (3)"
+    },
+    "keystore": {
+      "tit":"Yedekleme cüzdanı dosyası",
+      "copy":"kopya",
+      "download":"M-cüzdan dosyasını indir"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adres kopyalandı",
+      "key_copy_success":"Başarılı kopya"
+    }
+  },
+  "page_home": {
+    "import_account":"Hesabı içe aktar",
+    "add_account":"Yeni hesap",
+    "acc":"hesap",
+    "create_dia": {
+      "create_tit":"Bir hesap oluştur",
+      "backup_tit":"Yeni hesabınızı yedekleyin",
+      "create_tag":"Hesap notu",
+      "create_pwd":"Şifre ayarla",
+      "create_repwd":"Şifreyi onayla",
+      "placeholder_tag":"Lütfen hesap not adını giriniz",
+      "placeholder_pwd":"Lütfen hesap şifresini ayarlayın",
+      "placeholder_repwd":"Lütfen hesap şifresini onaylayın",
+      "account_download_keystore":"Hesap dosyasını indir",
+      "validate_tag":"Lütfen hesap not adını giriniz",
+      "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+      "validate_password":"Lütfen belirlediğiniz şifreyi giriniz",
+      "validate_re_password":"Lütfen tekrar belirlediğiniz şifreyi girin",
+      "validate_strong_password":"Lütfen en az 8 basamaklı bir şifre girin",
+      "validate_long_password":"Şifre uzunluğu 100 haneyi aşamaz.",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Tutarsız şifre iki kez girildi",
+      "create_success":"Başarıyla oluşturuldu",
+      "account_quantity_error":"Hesap sayısı 50'yi aşamaz",
+      "create_success_des":"Lütfen hesap dosyanızı kaydedin ve kimseyle paylaşmayın!"
+    },
+    "import_dia": {
+      "tit":"Hesabı içe aktar",
+      "placeholder_keystore":"Lütfen hesap dosyasını buraya sürükleyin",
+      "create_tag":"Hesap notu",
+      "placeholder_tag":"Lütfen hesap not adını giriniz",
+      "validate_tag":"Lütfen hesap not adını giriniz",
+      "validate_tag_length":"Not adının adı 8 karakterden büyük olamaz.",
+      "validate_enter_keystore":"Lütfen önce hesap dosyasını alın",
+      "validate_error_keystore":"Hesap içe aktarma başarısız oldu, hesap dosyası hatası olabilir",
+      "imported_account_success":"Başarıyla içe aktarıldı",
+      "exist":"Bu hesap zaten var, not",
+      "keystore_error":"Hata:",
+      "keystore_length_error":"Yalnızca bir hesap dosyası alınabilir, lütfen tekrar deneyin!",
+      "keystore_format_error":"Lütfen doğru hesap dosyasını seçin",
+      "keystore_is_has":"Listede içe aktarmanız gereken bir hesap zaten var.",
+      "imported_success":"Dosya seçildi"
+    },
+    "remove_dia": {
+      "tit":"Kaldırmak istediğinden emin misin?",
+      "remove_confrim":"Kaldırmak için eminim",
+      "backup":"Maddi zararlardan kaçınmak için lütfen bu hesabın yedeğine dikkat edin.",
+      "input_pwd":"şifre",
+      "placeholder_pwd":"Lütfen bu hesap için şifreyi girin",
+      "validate_password":"Girdiğiniz şifre yanlış",
+      "remove_success":"Başarıyla kaldırıldı"
+    }
+  },
+  "page_config": {
+    "config_detection":"Yapılandırma algılama",
+    "content_msg": {
+      "ready_test":"Yapılandırma dosyasını algılamaya hazırlanın",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"En son düğüm yapılandırma bilgisi elde edildi",
+      "is_local":"Yerel olarak bir düğüm dosyası olup olmadığını kontrol edin",
+      "already_local":"Düğüm dosyasının yapılandırma dosyası mevcut aygıtta var.",
+      "not_local":"Düğüm dosyasının yapılandırma bilgileri algılanmadı, ilk kez çalışıyor olabilir.",
+      "config_write_local":"Elde edilen düğüm bilgi dosyasını yerel diske yazın.",
+      "whether_update_node":"Güncelleme gerekip gerekmediğini kontrol edin",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Düğüm programı indiriliyor, lütfen sabırlı olun",
+      "already_downloaded":"Düğüm programı indirildi ve başlatılmaya hazır.",
+      "ready_start":"Düğümü başlatmaya hazırlanın",
+      "enter_wallet":"Düğüm algılamaya başlar, cüzdanı girmeye hazır",
+      "specifyDataDir":"Lütfen düğüm verilerinin depolama yolunu seçin"
+    },
+    "version_dialog": {
+      "version_tit":"Sürüm güncelleme istemi",
+      "download_wallet":"Paranın en son sürümünü indirmek için resmi web sitesine gidin.",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

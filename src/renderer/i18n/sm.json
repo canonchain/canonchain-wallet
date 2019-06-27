@@ -1,204 +1,242 @@
 {
-    "confirm":"Faʻamaonia",
-    "cancel":"Faaleaoga",
-    "dialog_tit":"Usiusitai",
-    "close":"Katia",
-    "confirm_you_active":"Faʻamolemole faʻamaonia lau taotoga",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Faamautu",
+  "cancel":"Faaleaoga",
+  "dialog_tit":"Totogi",
+  "close":"Katia",
+  "confirm_you_active":"Faʻamolemole faʻamaonia lau taotoga",
+  "rpcErrors": {
+    "invalidFromAccount":"E le aoga le tala a le faʻailoga",
+    "invalidToAccount":"E le aoga le tala mai",
+    "invalidAmountFormat":"Faʻasologa o le tau le aoga",
+    "invalidGasFormat":"Faʻataunuʻuga o Gas",
+    "invalidDataFormat":"Faʻataunuʻuga o faʻamaumauga o le hexadecimal leiloloa",
+    "dataSizeTooLarge":"Ua tele naua faamaumauga o Hexadecimal",
+    "invalidGasPriceFormat":"Le faʻasologa o le tau o le iunite gas e le aoga",
+    "invalidMciFormat":"O le faatulagaga MCI e le aoga",
+    "notEnoughFail":"Le lava le gas poo le sese le lelei"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Aiga",
+    "transfer":"Fesuiaiga",
+    "contacts":"Faʻamatalaga",
+    "setting":"Faʻatonu",
+    "total":"Aofaʻi",
+    "testnet":"Tofiga o suʻega",
+    "online":"Online",
+    "offline":"Lafoaʻi",
+    "syncing":"I le fesoʻotaʻiga"
+  },
+  "page_setting": {
+    "tit":"Faʻatonu",
+    "lang":"Gagana",
+    "select":"Faamolemole filifili",
+    "version_number":"Faʻamatalaga vaʻavaʻa",
+    "data_path":"Node auala faʻamatalaga",
+    "change":"Suiga",
+    "changeDirNote":"Faamolemole lafo le faila i le ala muamua i le lisi fou, a leai o le a mafua ai le leiloa o le data.",
+    "note":"Faʻalogo"
+  },
+  "page_contacts": {
+    "tit":"Faʻamatalaga",
+    "add_dialog":"Fesootaiga fou",
+    "add_cont": {
+      "tit":"Fesootaiga fou",
+      "tag":"Faʻamatalaga",
+      "address":"Tuatusi faʻamatalaga",
+      "tag_placeholder":"Faʻamolemole tuʻu le igoa o le fesoʻotaʻiga",
+      "address_placeholder":"Faamolemole ia ulufale i le tuatusi o le tuatusi o fesootaiga",
+      "add_success":"Faʻaopoopo faʻaopoopo"
     },
-    "model_header": {
-        "home":"Aiga",
-        "transfer":"Fesuiaiga",
-        "contacts":"Fesoʻotaʻiga",
-        "setting":"Faʻatonu",
-        "total":"Aofaʻi",
-        "testnet":"Tofiga o suʻega",
-        "online":"Initaneti",
-        "offline":"Lafoaʻi"
+    "delete_dialog": {
+      "title":"O loʻo e vaʻavaʻa",
+      "remove_success":"Aveese ma le manuia"
     },
-    "page_setting": {
-        "tit":"Faʻatonu",
-        "lang":"Gagana",
-        "select":"Faamolemole filifili",
-        "version_number":"Faʻamatalaga faiva"
-    },
-    "page_contacts": {
-        "tit":"Fesoʻotaʻiga",
-        "add_dialog":"Fesootaiga fou",
-        "add_cont": {
-            "tit":"Fesootaiga fou",
-            "tag":"Fesoʻotaʻiga",
-            "address":"Tuatusi o tala",
-            "tag_placeholder":"Faʻamolemole tuʻu le igoa o le fesoʻotaʻiga",
-            "address_placeholder":"Faʻamolemole faʻafesoʻotaʻi le tuatusi o le faʻamatalaga a le tagata",
-            "add_success":"Faʻaopoopo faʻaopoopo"
-        },
-        "delete_dialog": {
-            "title":"O loʻo e vaʻavaʻa",
-            "remove_success":"Aveese ma le manuia"
-        },
-        "msg_info": {
-            "no_tag":"Faʻamolemole tuʻu se tusi tala",
-            "no_address":"Faʻamolemole ulufale i lau tuatusi faʻamatalaga",
-            "valid_address":"O le tuatusi o le faafesootaiga e le tusa ai ma le tulafono",
-            "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 mataitusi.",
-            "contacts_quantity_error":"Ole numera o fesoʻotaʻiga e le mafai ona silia le 50",
-            "exist":"Ua i ai nei le fesootaiga,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Tuuina atu o le pati",
-        "to_address":"Payee",
-        "amount":"Aofaʻi",
-        "gas":"Gas",
-        "send_all":"Auina uma",
-        "data":"Faʻamatalaga",
-        "data_placeholder":"Hexadecimal data",
-        "fees":"Totogi taulimaina",
-        "total":"Aofaʻi",
-        "select":"Faamolemole filifili",
-        "no_account_info":"Leai se tala, faamolemole ia fatuina pe faaulufale mai le teugatupe",
-        "contacts_dig": {
-            "title":"Filifili se faʻamatalaga fesoʻotaʻiga",
-            "select_placeholder":"Faamolemole filifili"
-        },
-        "confirm_dia": {
-            "title":"Faʻamolemole faʻamaonia",
-            "enter_passworld_tit":"Faʻamolemole ulufale i lau faʻaupuga",
-            "enter_passworld_place":"Faʻamolemole ulufale i lau faʻaupuga"
-        },
-        "msg_info": {
-            "address_null":"Faʻamolemole tuʻu le tala a le isi pati",
-            "balance_zero":"Le paleni le lava, le mafai ona faaauau",
-            "amount_zero":"Tupe faʻaalu e tatau ona sili atu i le 0",
-            "amount_error":"Faʻamolemole ulufale i se tau faʻatulafonoina",
-            "address_err":"O le faatulagaga o le tuatusi o le tuatusi ua le aoga.",
-            "send_success":"Faʻatonuina o feʻau",
-            "amount_exceeded":"O le aofai o le aofaʻiga o fefaʻatauaʻiga i le taimi nei e sili atu i le paleni o tupe",
-
-            "decrypt_err":"Ua le manuia le pusa faila, atonu o se sese ole palakalafa",
-            "send_error":"Ua le manuia le gaioiga: faamolemole siaki pe afai e lava le paleni ma le totogi o le miner"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Faʻamaumauga o galuega",
-        "transfer_log_null":"Leai se tala faʻasolopito",
-        "active_icon": {
-            "go_transfer":"Amata se suiga",
-            "import_keystore":"Faʻamaumauga faila",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Suia le tusi",
-            "subtit":"Faailoga se tusi mo lau teugatupe",
-            "no_tag":"Faʻamolemole tuʻu se tusi tala",
-            "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 mataitusi."
-        },
-        "dia_tx":{
-            "tit":"Faamatalaga o galuega",
-            "block_hash":"Numera o galuega",
-            "status":"Malo",
-            "from":"Tuuina atu o le pati",
-            "to":"Payee",
-            "amount":"Aofaʻi",
-            "data":"Faʻamatalaga",
-            "send_time":"Tuuina atu taimi",
-            "mac_time":"Faʻasologa o taimi umi"
-        },
-        "keystore": {
-            "tit":"Lautusi faila tuatusi",
-            "copy":"Kopi",
-            "download":"Maua le faila faila"
-        },
-        "msg_info": {
-            "ads_copy_success":"Ua uma ona kopi le tuatusi",
-            "key_copy_success":"Taga manuia"
-        }
-    },
-    "page_home": {
-        "import_account":"Faʻamatalaga o oloa mai fafo",
-        "add_account":"Tala fou",
-        "acc":"Tala",
-        "create_dia": {
-            "create_tit":"Fausia se tala",
-            "backup_tit":"Faʻasolo i luga lau tala fou",
-            "create_tag":"Faʻamatalaga tusi",
-            "create_pwd":"Seti le upu faʻamaonia",
-            "create_repwd":"Faʻamaonia le faʻamaonia",
-            "placeholder_tag":"Faʻamolemole seti le igoa o le tala",
-            "placeholder_pwd":"Faʻamolemole seti le upega tafaʻi tala",
-            "placeholder_repwd":"Faʻamolemole faʻamaonia le upega tafailautusi o tala",
-            
-            
-            "account_download_keystore":"Tikiala faila faila",
-
-            "validate_tag":"Faamolemole ia tusia le igoa o le tala o le tala",
-            "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 mataitusi.",
-
-            "validate_password":"Faamolemole ia ulufale i le uputatala na e seti",
-            "validate_re_password":"Faamolemole ia ulufale mai i le uputatala na e toe faatulagaina",
-            "validate_strong_password":"Faʻamolemole tuʻu mai se faʻaupuga o le itiiti ifo ma le 8 numera",
-            "validate_long_password":"E le mafai e le upu motusi ona sili atu i le 100 laina i le uumi",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Faʻasalalau le faʻamaoni e le saʻo",
-
-            "create_success":"Fausia lelei",
-            "account_quantity_error":"Ole numera o faʻamatalaga e le sili atu ma le 50",
-            "create_success_des":"Faʻamolemole faʻasaʻo lau faila faila ma aua nei faʻasoa atu i soʻo se tasi!"
-        },
-        "import_dia": {
-            "tit":"Faʻamatalaga o oloa mai fafo",    
-            "placeholder_keystore":"Faamolemole toso mai le faila faila iinei",
-            "create_tag":"Faʻamatalaga tusi",
-            "placeholder_tag":"Faʻamolemole seti le igoa o le tala",
-
-            "validate_tag":"Faamolemole ia tusia le igoa o le tala o le tala",
-            "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 mataitusi.",
-            "validate_enter_keystore":"Faamolemole faaulu muamua le faila faila",
-            "validate_error_keystore":"Faʻataunuʻu le faʻamatalaga o tala, atonu o le faʻailoga faila faila",
-            "imported_account_success":"Suʻe ma le manuia",
-            "exist":"O loʻo iai nei tala, o le tusi",
-            "keystore_error":"Laʻasaga:",
-            "keystore_length_error":"E na o le tasi le faila faila e mafai ona faaulufale mai, faamolemole toe taumafai!",
-            "keystore_format_error":"Faamolemole filifili le faila faila saʻo",
-            "keystore_is_has":"Ua i ai se tala i le lisi e te manaʻomia e faaulufale mai.",
-            "imported_success":"Ua uma ona filifilia le faila"
-        },
-        "remove_dia": {
-            "tit":"E te mautinoa e te manaʻo e aveese?",
-            "remove_confrim":"Ou te mautinoa e aveese",
-            "backup":"Faʻamolemole faʻalogo i le faʻamaumauga o lenei tala e aloese ai mai le faʻaleagaina o meatotino.",
-            "input_pwd":"Motugaafa",
-            "placeholder_pwd":"Faamolemole ia ulufale i le upega tafailagi mo lenei tala",
-            "validate_password":"O le faʻaumauga na e ulufale ai e sese",
-            "remove_success":"Aveese ma le manuia"
-        }
-    },
-    "page_config": {
-        "config_detection":"Faʻamatalaga o le folasia",
-        "content_msg":{
-            "ready_test":"Saunia e suʻe le faila faatulagaina",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Ua maua le faʻamatalaga fou o le faʻatulagaga o le node",
-            "is_local":"Siaki pe i ai se faila node i le lotoifale",
-            "already_local":"O le faila faatulagaina o le faila node o loʻo i luga o le masini faʻaoga nei.",
-            "not_local":"E le o iloa le faʻamatalaga faʻasologa o le faila pusa, atonu o le taimi muamua lea e tamoe ai.",
-            "config_write_local":"Tusi le faila faʻamatalaga o le faʻailoga maua i le disasite i le lotoifale",
-            "whether_update_node":"Siaki pe manaʻomia se faʻalauiloa",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Faʻapipiʻiina o le pona polokalama, faamolemole ia onosai",
-            "already_downloaded":"Ua uma ona sii mai le polokalama o le pona ma sauni e amata.",
-            "ready_start":"Saunia e amata le nato",
-            "enter_wallet":"Node amata amataina, saunia e ulufale i le atotupe"
-        },
-        "version_dialog":{
-            "version_tit":"Faʻafouina le faʻafouina o lomiga",
-            "download_wallet":"Alu i luga o le upega tafaʻilagi aloaia e ave ai le lomiga lata mai o le tupe",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Faʻamolemole tuʻu mai se faʻamatalaga tala",
+      "no_address":"Faamolemole ia ulufale i le tuatusi o le tala",
+      "valid_address":"O le tuatusi o le faafesootaiga e le tusa ai ma le tulafono",
+      "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 tagata.",
+      "contacts_quantity_error":"Ole numera o fesoʻotaʻiga e le mafai ona silia le 50",
+      "exist":"Ua i ai nei le fesootaiga,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Tuuina atu o le pati",
+    "to_address":"Payee",
+    "amount":"Aofaʻi",
+    "gas":"Gas",
+    "gasPrice":"Tau o le iunite gas",
+    "send_all":"Auina uma",
+    "data":"Faʻamatalaga",
+    "data_placeholder":"Hexadecimal data",
+    "fees":"Totogi taulimaina",
+    "txFee":"Totogi o galuega",
+    "total":"Aofaʻi",
+    "select":"Faamolemole filifili",
+    "no_account_info":"Leai se tala, faamolemole ia fatufatu pe faaulufale mai le teugatupe",
+    "no_keystore_file":"Leai se faila faila mo le tala tutusa",
+    "contacts_dig": {
+      "title":"Filifili faʻamatalaga fesoʻotaʻiga",
+      "select_placeholder":"Faamolemole filifili"
+    },
+    "confirm_dia": {
+      "title":"Faʻamolemole faʻamaonia",
+      "enter_passworld_tit":"Faʻamolemole ulufale i lau faʻaupuga",
+      "enter_passworld_place":"Faʻamolemole ulufale i lau faʻaupuga"
+    },
+    "msg_info": {
+      "address_null":"Faʻamolemole tuʻu le tala a le isi pati",
+      "balance_zero":"Le paleni le lava, le mafai ona faaauau",
+      "amount_zero":"O le tau o le tau e sili atu nai lo le 0",
+      "amount_error":"Faʻamolemole tuʻu mai se tau faʻatulafonoina",
+      "address_err":"O le faatulagaga o le tuatusi o le tuatusi ua le aoga.",
+      "gas_error":"Faamolemole ia ulufale i se gaioiga tau fefaatauaiga",
+      "gasPrice_error":"Faamolemole ia ulufale i le tau o fefaatauaiga",
+      "send_success":"Gaoioiga na auina mai",
+      "amount_exceeded":"O le aofaʻiga o le aofai o fefaʻatauaiga o loʻo sili atu i le paleni o tupe",
+      "txFeeTooLow":"O tau o fefaʻatauaiga e maualalo tele",
+      "decrypt_err":"Ua le manuia le pusa faila, atonu o se sese ole palakalafa",
+      "send_error":"Ua le manuia le gaioiga: faamolemole siaki pe a lava le paleni paleni ma le tau o le miner",
+      "generate_offline_block_err":"Faʻataunuʻu le faʻatautaia o fefaʻatauaiga",
+      "sign_err":"Sa le manuia le Saini",
+      "send_offline_block_err":"Faʻalēaogāina le faʻatagaina o se faʻasalaga saini",
+      "syncingWaitTitle":"O le pona o loʻo galulue faʻatasi",
+      "syncingWait":"O le pona o loʻo galulue faʻatasi, o le taimi faʻamaonia o fefaʻatauaiga e mafai ona umi, faamolemole ia onosai"
+    }
+  },
+  "pager": {
+    "next":"Laisi itulau",
+    "prev":"Itulau muamua"
+  },
+  "page_account": {
+    "transfer_log":"Faʻamaumauga o galuega",
+    "transfer_log_null":"Leai se tala faʻasolopito",
+    "txSent":"Fefaʻatauaiga faʻasalalau",
+    "txAll":"O fefaʻatauaiga uma",
+    "txNew":"O loʻo i ai i le taimi nei le faʻamatalaga faʻatautaia fou",
+    "checkNow":"Vaʻai nei",
+    "active_icon": {
+      "go_transfer":"Amata se suiga",
+      "import_keystore":"Faʻamaumauga faila",
+      "qrcode":"QR code"
+    },
+    "edit_dia": {
+      "tit":"Suia faamatalaga",
+      "subtit":"Faailoga se tusi mo lau teugatupe",
+      "no_tag":"Faʻamolemole tuʻu mai se faʻamatalaga tala",
+      "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 tagata."
+    },
+    "dia_tx": {
+      "tit":"Faamatalaga o galuega",
+      "block_hash":"Numera o galuega",
+      "status":"Malo",
+      "from":"Tuuina atu o le pati",
+      "to":"Payee",
+      "amount":"Aofaʻi",
+      "data":"Faʻamatalaga",
+      "send_time":"Tuuina atu taimi",
+      "mac_time":"Faʻasologa o le taimi umi",
+      "gasPrice":"Totogi o le iunite gas (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Faʻaaogaina kesi",
+      "waiting":"Faatali mo se faʻamaoniga",
+      "success":"Manuia",
+      "sendFail":"Faʻailoa le faʻailoa",
+      "fail1":"Le manuia (1)",
+      "fail2":"Le manuia (2)",
+      "fail3":"Le toilalo (3)"
+    },
+    "keystore": {
+      "tit":"Lautusi faila tuatusi",
+      "copy":"Kopi",
+      "download":"Maua le faila faila"
+    },
+    "msg_info": {
+      "ads_copy_success":"Ua uma ona kopi le tuatusi",
+      "key_copy_success":"Pusa manuia"
+    }
+  },
+  "page_home": {
+    "import_account":"Faʻamatalaga o oloa mai fafo",
+    "add_account":"Tala fou",
+    "acc":"Tala",
+    "create_dia": {
+      "create_tit":"Fausia se tala",
+      "backup_tit":"Faʻasolo i luga lau tala fou",
+      "create_tag":"Tusi faʻamaumauga",
+      "create_pwd":"Seti le upu faʻamaonia",
+      "create_repwd":"Faʻamaonia le faʻamaonia",
+      "placeholder_tag":"Faʻamolemole tuʻu le igoa o le tala o le igoa",
+      "placeholder_pwd":"Faʻamolemole seti le upega tafaʻi tala",
+      "placeholder_repwd":"Faʻamolemole faʻamaonia le upega tafaʻi tala",
+      "account_download_keystore":"Tikiala faila faila",
+      "validate_tag":"Faamolemole ia tusia le igoa o le tala o le tala",
+      "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 tagata.",
+      "validate_password":"Faamolemole ia ulufale mai i le uputatala na e faatulagaina",
+      "validate_re_password":"Faamolemole ia ulufale mai i le uputatala na e toe faatulagaina",
+      "validate_strong_password":"Faʻamolemole tuʻu mai se faʻaupuga o le itiiti ifo ma le 8 numera",
+      "validate_long_password":"E le sili atu i le 100 digits le umi o le upu motusia",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Faʻasalalau le faʻamaoni e lua",
+      "create_success":"Fausia lelei",
+      "account_quantity_error":"Ole numera o faʻamatalaga e le sili atu ma le 50",
+      "create_success_des":"Faʻamolemole faʻasaʻo lau faila faila ma aua nei faʻasoa atu i soʻo se tasi!"
+    },
+    "import_dia": {
+      "tit":"Faʻamatalaga o oloa mai fafo",
+      "placeholder_keystore":"Faamolemole toso mai le faila faila iinei",
+      "create_tag":"Tusi faʻamaumauga",
+      "placeholder_tag":"Faʻamolemole tuʻu le igoa o le tala o le igoa",
+      "validate_tag":"Faamolemole ia tusia le igoa o le tala o le tala",
+      "validate_tag_length":"O le igoa o le igoa tusi e le mafai ona sili atu nai lo le 8 tagata.",
+      "validate_enter_keystore":"Faamolemole faaulu muamua le faila faila",
+      "validate_error_keystore":"Faʻataunuʻu le faʻamatalaga o tusi, atonu o le faila o faila faila",
+      "imported_account_success":"Suʻe ma le manuia",
+      "exist":"O loʻo iai nei tala, o le tusi",
+      "keystore_error":"Laʻasaga:",
+      "keystore_length_error":"E na o le tasi le faila faila e mafai ona faaulufale mai, faamolemole toe taumafai!",
+      "keystore_format_error":"Faamolemole filifili le faila faila saʻo",
+      "keystore_is_has":"Ua i ai se tala i le lisi e te manaʻomia e faaulufale mai.",
+      "imported_success":"Filifili le filifiliga"
+    },
+    "remove_dia": {
+      "tit":"E te mautinoa e te manaʻo e aveese?",
+      "remove_confrim":"Ou te mautinoa e aveese",
+      "backup":"Faʻamolemole faʻalogo i le faʻamaumauga o lenei tala e aloese ai mai le faʻaleagaina o meatotino.",
+      "input_pwd":"Motugaafa",
+      "placeholder_pwd":"Faamolemole ia ulufale i le uputatala mo lenei tala",
+      "validate_password":"O le faʻaumauga na e ulufale ai e sese",
+      "remove_success":"Aveese ma le manuia"
+    }
+  },
+  "page_config": {
+    "config_detection":"Faʻamatalaga o le folasia",
+    "content_msg": {
+      "ready_test":"Saunia e suʻe le faila faatulagaina",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Ua maua le faʻamatalaga fou o le faʻatulagaga o le node",
+      "is_local":"Siaki pe iai se faila node i le lotoifale",
+      "already_local":"O le faila faatulagaina o le faila node o loʻo i luga o le masini faʻaoga nei.",
+      "not_local":"E le o iloa le faʻasologa o faʻamatalaga o le faila fusi, atonu o le taimi muamua lea e tamoe ai.",
+      "config_write_local":"Tusi le faila faʻamatalaga o le pona faʻapipiʻi i le disasite i le lotoifale",
+      "whether_update_node":"Siaki pe manaʻomia se faʻamatalaga",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Faʻapipiʻiina o le pona polokalama, faamolemole ia onosai",
+      "already_downloaded":"Ua uma ona sii mai le polokalame o le pona ma sauni e amata.",
+      "ready_start":"Saunia e amata le nato",
+      "enter_wallet":"Node amata ona iloa, saunia e ulufale i le atotupe",
+      "specifyDataDir":"Faʻamolemole filifili le ala e teu ai le faʻailoga data"
+    },
+    "version_dialog": {
+      "version_tit":"Faʻamatalaga lata mai o le lomiga",
+      "download_wallet":"Alu i le 'upega tafaʻilagi aloaia e download ai le lomiga lata mai o le tupe",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

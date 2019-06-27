@@ -1,204 +1,242 @@
 {
-    "confirm":"Thibitisha",
-    "cancel":"Futa",
-    "dialog_tit":"Fungua",
-    "close":"Funga",
-    "confirm_you_active":"Tafadhali thibitisha operesheni yako",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Thibitisha",
+  "cancel":"Futa",
+  "dialog_tit":"Furahisha",
+  "close":"Funga",
+  "confirm_you_active":"Tafadhali thibitisha operesheni yako",
+  "rpcErrors": {
+    "invalidFromAccount":"Akaunti ya mtumaji ni batili",
+    "invalidToAccount":"Akaunti inayoingia ni batili",
+    "invalidAmountFormat":"Muundo wa kiasi cha batili",
+    "invalidGasFormat":"Fomu ya Gesi isiyo sahihi",
+    "invalidDataFormat":"Fomu ya data ya hexadecimal isiyo sahihi",
+    "dataSizeTooLarge":"Data ya hexadecimal ni kubwa mno",
+    "invalidGasPriceFormat":"Fomu ya bei ya gesi ya kitengo ni batili",
+    "invalidMciFormat":"Fomu ya MCI ni batili",
+    "notEnoughFail":"Gesi haitoshi au kosa isiyo ya kawaida"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Nyumbani",
+    "transfer":"Uhamisho",
+    "contacts":"Wasiliana",
+    "setting":"Kuweka",
+    "total":"Jumla",
+    "testnet":"Mtihani wa mtandao",
+    "online":"Online",
+    "offline":"Hifadhi ya mbali",
+    "syncing":"Katika maingiliano"
+  },
+  "page_setting": {
+    "tit":"Kuweka",
+    "lang":"Lugha",
+    "select":"Tafadhali chagua",
+    "version_number":"Toleo la Mkoba",
+    "data_path":"Node data data",
+    "change":"Badilisha",
+    "changeDirNote":"Tafadhali safisha faili kwenye njia ya awali kwenye saraka mpya, vinginevyo itasababisha kupoteza data.",
+    "note":"Tazama"
+  },
+  "page_contacts": {
+    "tit":"Wasiliana",
+    "add_dialog":"Mawasiliano mpya",
+    "add_cont": {
+      "tit":"Mawasiliano mpya",
+      "tag":"Wasiliana",
+      "address":"Anwani ya Akaunti",
+      "tag_placeholder":"Tafadhali ingiza jina la anwani",
+      "address_placeholder":"Tafadhali ingiza anwani ya anwani ya anwani",
+      "add_success":"Imeongezwa kwa mafanikio"
     },
-    "model_header": {
-        "home":"Nyumbani",
-        "transfer":"Uhamisho",
-        "contacts":"Wasiliana",
-        "setting":"Kuweka",
-        "total":"Jumla",
-        "testnet":"Mtihani wa mtandao",
-        "online":"Online",
-        "offline":"Hifadhi ya mbali"
+    "delete_dialog": {
+      "title":"Unaondoa",
+      "remove_success":"Imeondolewa kwa ufanisi"
     },
-    "page_setting": {
-        "tit":"Kuweka",
-        "lang":"Lugha",
-        "select":"Tafadhali chagua",
-        "version_number":"Toleo la Mkoba"
-    },
-    "page_contacts": {
-        "tit":"Wasiliana",
-        "add_dialog":"Mawasiliano mpya",
-        "add_cont": {
-            "tit":"Mawasiliano mpya",
-            "tag":"Wasiliana",
-            "address":"Anwani ya Akaunti",
-            "tag_placeholder":"Tafadhali ingiza jina la anwani",
-            "address_placeholder":"Tafadhali ingiza anwani ya anwani ya anwani",
-            "add_success":"Imeongezwa kwa mafanikio"
-        },
-        "delete_dialog": {
-            "title":"Unaondoa",
-            "remove_success":"Imeondolewa kwa ufanisi"
-        },
-        "msg_info": {
-            "no_tag":"Tafadhali ingiza maelezo ya akaunti",
-            "no_address":"Tafadhali ingiza anwani yako ya akaunti",
-            "valid_address":"Anwani ya kuwasiliana ni kinyume cha sheria",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
-            "contacts_quantity_error":"Idadi ya anwani haiwezi kuzidi 50",
-            "exist":"Mawasiliano tayari iko,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Inatuma chama",
-        "to_address":"Payee",
-        "amount":"Kiasi",
-        "gas":"Gesi",
-        "send_all":"Tuma yote",
-        "data":"Takwimu",
-        "data_placeholder":"Data ya hexadecimal",
-        "fees":"Malipo ya kushughulikia",
-        "total":"Jumla",
-        "select":"Tafadhali chagua",
-        "no_account_info":"Hakuna akaunti bado, tafadhali unda au uingize akaunti",
-        "contacts_dig": {
-            "title":"Chagua akaunti ya kuwasiliana",
-            "select_placeholder":"Tafadhali chagua"
-        },
-        "confirm_dia": {
-            "title":"Tafadhali thibitisha",
-            "enter_passworld_tit":"Tafadhali ingiza nenosiri lako",
-            "enter_passworld_place":"Tafadhali ingiza nenosiri lako"
-        },
-        "msg_info": {
-            "address_null":"Tafadhali ingiza akaunti ya chama kingine",
-            "balance_zero":"Usawa usio na ufanisi, hauwezi kuendelea",
-            "amount_zero":"Kiasi cha uhamisho lazima kiwe zaidi ya 0",
-            "amount_error":"Tafadhali ingiza kiasi cha malipo ya kisheria",
-            "address_err":"Faili ya anwani ya kuhamishiwa ni batili.",
-            "send_success":"Shughuli imetumwa",
-            "amount_exceeded":"Thamani ya sasa ya jumla ya shughuli huzidi usawa wa akaunti",
-
-            "decrypt_err":"Mchanganyiko wa Wallet umeshindwa, inaweza kuwa kosa la nenosiri",
-            "send_error":"Shughuli imeshindwa: tafadhali angalia ikiwa kuna usawa wa kutosha na ada ya mchimbaji"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Rekodi ya ushirikiano",
-        "transfer_log_null":"Hakuna historia ya shughuli",
-        "active_icon": {
-            "go_transfer":"Anza uhamisho",
-            "import_keystore":"Faili ya Akaunti",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Badilisha maelezo",
-            "subtit":"Andika alama kwa akaunti yako",
-            "no_tag":"Tafadhali ingiza maelezo ya akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8."
-        },
-        "dia_tx":{
-            "tit":"Maelezo ya ushirikiano",
-            "block_hash":"Namba ya ushirikiano",
-            "status":"Hali",
-            "from":"Inatuma chama",
-            "to":"Payee",
-            "amount":"Kiasi",
-            "data":"Takwimu",
-            "send_time":"Inatuma muda",
-            "mac_time":"Muda wa mnyororo kuu"
-        },
-        "keystore": {
-            "tit":"Faili ya mkoba wa Backup",
-            "copy":"Nakala",
-            "download":"Pakua faili ya mkoba"
-        },
-        "msg_info": {
-            "ads_copy_success":"Anwani imechapishwa",
-            "key_copy_success":"Hati ya kufanikiwa"
-        }
-    },
-    "page_home": {
-        "import_account":"Ingiza akaunti",
-        "add_account":"Akaunti mpya",
-        "acc":"Akaunti",
-        "create_dia": {
-            "create_tit":"Unda akaunti",
-            "backup_tit":"Rudirisha akaunti yako mpya",
-            "create_tag":"Maelezo ya Akaunti",
-            "create_pwd":"Weka nenosiri",
-            "create_repwd":"Thibitisha nenosiri",
-            "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
-            "placeholder_pwd":"Tafadhali weka nenosiri la akaunti",
-            "placeholder_repwd":"Tafadhali thibitisha nenosiri la akaunti",
-            
-            
-            "account_download_keystore":"Pakua faili ya akaunti",
-
-            "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
-
-            "validate_password":"Tafadhali ingiza nenosiri uliloweka",
-            "validate_re_password":"Tafadhali ingiza nenosiri uliloweka tena",
-            "validate_strong_password":"Tafadhali ingiza nenosiri la angalau tarakimu 8",
-            "validate_long_password":"Nenosiri hawezi kuzidi tarakimu kumi kwa urefu",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Nenosiri lisilopatikana limeingia mara mbili",
-
-            "create_success":"Imeundwa kwa ufanisi",
-            "account_quantity_error":"Idadi ya akaunti haiwezi kupitisha 50",
-            "create_success_des":"Tafadhali salama faili yako ya akaunti na usishiriki na mtu yeyote!"
-        },
-        "import_dia": {
-            "tit":"Ingiza akaunti",    
-            "placeholder_keystore":"Tafadhali gusa faili ya akaunti hapa",
-            "create_tag":"Maelezo ya Akaunti",
-            "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
-
-            "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
-            "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
-            "validate_enter_keystore":"Tafadhali ingiza faili ya akaunti kwanza",
-            "validate_error_keystore":"Kuagiza kwa Akaunti kushindwa, inaweza kuwa kosa la faili la akaunti",
-            "imported_account_success":"Imeingizwa kwa mafanikio",
-            "exist":"Akaunti hii tayari imepo, maelezo ni",
-            "keystore_error":"Hitilafu:",
-            "keystore_length_error":"Faili moja tu ya akaunti inaweza kuagizwa, tafadhali jaribu tena!",
-            "keystore_format_error":"Tafadhali chagua faili sahihi ya akaunti",
-            "keystore_is_has":"Tayari kuna akaunti katika orodha ambayo unahitaji kuagiza.",
-            "imported_success":"Tayari faili iliyochaguliwa"
-        },
-        "remove_dia": {
-            "tit":"Una uhakika unataka kuiondoa?",
-            "remove_confrim":"Nina uhakika kuondoa",
-            "backup":"Tafadhali makini na hifadhi ya akaunti hii ili kuepuka uharibifu wa mali.",
-            "input_pwd":"Nenosiri",
-            "placeholder_pwd":"Tafadhali ingiza nenosiri kwa akaunti hii",
-            "validate_password":"Nenosiri uliloingiza ni sahihi",
-            "remove_success":"Imeondolewa kwa ufanisi"
-        }
-    },
-    "page_config": {
-        "config_detection":"Kugundua upangilio",
-        "content_msg":{
-            "ready_test":"Jitayarisha kuchunguza faili ya usanidi",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Taarifa ya upya ya node ya hivi karibuni imepatikana",
-            "is_local":"Angalia kama kuna faili ya node ndani ya nchi",
-            "already_local":"Faili ya usanidi wa faili ya node ipo kwenye kifaa cha sasa.",
-            "not_local":"Maelezo ya usanidi wa faili ya node haipatikani, inaweza kuwa mara ya kwanza kukimbia.",
-            "config_write_local":"Andika faili ya habari ya node iliyopatikana kwenye disk ya ndani",
-            "whether_update_node":"Angalia kama sasisho linahitajika",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Inapakua mpango wa nodi, tafadhali subira",
-            "already_downloaded":"Programu ya node imepakuliwa na tayari kuanza.",
-            "ready_start":"Jitayarishe kuanza node",
-            "enter_wallet":"Node itaanza kugundua, tayari kuingia kwenye mkoba"
-        },
-        "version_dialog":{
-            "version_tit":"Sasisho la toleo la haraka",
-            "download_wallet":"Nenda kwenye tovuti rasmi ili kupakua toleo la hivi karibuni la fedha",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Tafadhali ingiza maelezo ya akaunti",
+      "no_address":"Tafadhali ingiza anwani ya akaunti",
+      "valid_address":"Anwani ya mawasiliano ni kinyume cha sheria",
+      "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+      "contacts_quantity_error":"Idadi ya anwani haiwezi kuzidi 50",
+      "exist":"Mawasiliano tayari iko,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Inatuma chama",
+    "to_address":"Payee",
+    "amount":"Kiasi",
+    "gas":"Gesi",
+    "gasPrice":"Gesi ya bei ya kitengo",
+    "send_all":"Tuma yote",
+    "data":"Takwimu",
+    "data_placeholder":"Data ya hexadecimal",
+    "fees":"Malipo ya kushughulikia",
+    "txFee":"Malipo ya malipo",
+    "total":"Jumla",
+    "select":"Tafadhali chagua",
+    "no_account_info":"Hakuna akaunti bado, tafadhali unda au uingize akaunti",
+    "no_keystore_file":"Hakuna faili ya akaunti iliyopatikana kwa akaunti husika",
+    "contacts_dig": {
+      "title":"Chagua akaunti ya wasiliana",
+      "select_placeholder":"Tafadhali chagua"
+    },
+    "confirm_dia": {
+      "title":"Tafadhali thibitisha",
+      "enter_passworld_tit":"Tafadhali ingiza nenosiri lako",
+      "enter_passworld_place":"Tafadhali ingiza nenosiri lako"
+    },
+    "msg_info": {
+      "address_null":"Tafadhali ingiza akaunti ya chama kingine",
+      "balance_zero":"Usawa usio na uwezo, hauwezi kuendelea",
+      "amount_zero":"Kiasi cha uhamisho lazima kiwe zaidi ya 0",
+      "amount_error":"Tafadhali ingiza kiasi cha malipo ya kisheria",
+      "address_err":"Aina ya anwani ya kuhamishiwa ni batili.",
+      "gas_error":"Tafadhali ingiza gesi ya manunuzi ya kisheria",
+      "gasPrice_error":"Tafadhali ingiza bei ya ushuru wa kisheria",
+      "send_success":"Shughuli imetumwa",
+      "amount_exceeded":"Kiwango cha sasa cha malipo ya jumla kinazidi usawa wa akaunti",
+      "txFeeTooLow":"Gharama ya ushirikiano ni ndogo sana",
+      "decrypt_err":"Mchanganyiko wa Wallet umeshindwa, inaweza kuwa kosa la nenosiri",
+      "send_error":"Shughuli imeshindwa: tafadhali angalia ikiwa kuna usawa wa kutosha na ada ya mchimbaji",
+      "generate_offline_block_err":"Unda shughuli isiyosajiliwa imeshindwa",
+      "sign_err":"Saini imeshindwa",
+      "send_offline_block_err":"Kutuma huduma iliyosainiwa imeshindwa",
+      "syncingWaitTitle":"Node iko katika usawazishaji",
+      "syncingWait":"Node iko katika kusawazisha, muda wa kuthibitisha shughuli inaweza kuwa mrefu, tafadhali subira"
+    }
+  },
+  "pager": {
+    "next":"Ukurasa uliofuata",
+    "prev":"Ukurasa uliopita"
+  },
+  "page_account": {
+    "transfer_log":"Rekodi ya shughuli",
+    "transfer_log_null":"Hakuna historia ya shughuli",
+    "txSent":"Shughuli iliyosafirishwa",
+    "txAll":"Shughuli zote",
+    "txNew":"Akaunti ya sasa ina maelezo mapya ya shughuli",
+    "checkNow":"Angalia sasa",
+    "active_icon": {
+      "go_transfer":"Anza uhamisho",
+      "import_keystore":"Faili ya Akaunti",
+      "qrcode":"Msimbo wa QR"
+    },
+    "edit_dia": {
+      "tit":"Badilisha maelezo",
+      "subtit":"Andika alama kwa akaunti yako",
+      "no_tag":"Tafadhali ingiza maelezo ya akaunti",
+      "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8."
+    },
+    "dia_tx": {
+      "tit":"Maelezo ya ushirikiano",
+      "block_hash":"Namba ya ushirikiano",
+      "status":"Hali",
+      "from":"Inatuma chama",
+      "to":"Payee",
+      "amount":"Kiasi",
+      "data":"Takwimu",
+      "send_time":"Inatuma muda",
+      "mac_time":"Muda wa mnyororo kuu",
+      "gasPrice":"Gesi ya bei ya bei (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Matumizi ya gesi",
+      "waiting":"Inasubiri uthibitisho",
+      "success":"Mafanikio",
+      "sendFail":"Tuma kushindwa",
+      "fail1":"Kushindwa (1)",
+      "fail2":"Kushindwa (2)",
+      "fail3":"Kushindwa (3)"
+    },
+    "keystore": {
+      "tit":"Faili ya mkoba wa Backup",
+      "copy":"Nakala",
+      "download":"Pakua faili ya mkoba"
+    },
+    "msg_info": {
+      "ads_copy_success":"Anwani imechapishwa",
+      "key_copy_success":"Hati ya kufanikiwa"
+    }
+  },
+  "page_home": {
+    "import_account":"Ingiza akaunti",
+    "add_account":"Akaunti mpya",
+    "acc":"Akaunti",
+    "create_dia": {
+      "create_tit":"Unda akaunti",
+      "backup_tit":"Rudirisha akaunti yako mpya",
+      "create_tag":"Maelezo ya Akaunti",
+      "create_pwd":"Weka nenosiri",
+      "create_repwd":"Thibitisha nenosiri",
+      "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
+      "placeholder_pwd":"Tafadhali weka nenosiri la akaunti",
+      "placeholder_repwd":"Tafadhali thibitisha nenosiri la akaunti",
+      "account_download_keystore":"Pakua faili ya akaunti",
+      "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
+      "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+      "validate_password":"Tafadhali ingiza nenosiri uliloweka",
+      "validate_re_password":"Tafadhali ingiza nenosiri uliloweka tena",
+      "validate_strong_password":"Tafadhali ingiza password ya angalau tarakimu 8",
+      "validate_long_password":"Nenosiri hawezi kuzidi tarakimu kumi kwa urefu",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Nenosiri lisilokubali limeingia mara mbili",
+      "create_success":"Imeundwa kwa ufanisi",
+      "account_quantity_error":"Idadi ya akaunti haiwezi kuzidi 50",
+      "create_success_des":"Tafadhali salama faili yako ya akaunti na usishiriki na mtu yeyote!"
+    },
+    "import_dia": {
+      "tit":"Ingiza akaunti",
+      "placeholder_keystore":"Tafadhali gusa faili ya akaunti hapa",
+      "create_tag":"Maelezo ya Akaunti",
+      "placeholder_tag":"Tafadhali weka jina la kumbuka akaunti",
+      "validate_tag":"Tafadhali ingiza jina la kumbuka akaunti",
+      "validate_tag_length":"Jina la jina la kumbuka haliwezi kuwa kubwa kuliko wahusika 8.",
+      "validate_enter_keystore":"Tafadhali ingiza faili ya akaunti kwanza",
+      "validate_error_keystore":"Kuagiza kwa Akaunti kushindwa, inaweza kuwa kosa la faili la akaunti",
+      "imported_account_success":"Imeingizwa kwa mafanikio",
+      "exist":"Akaunti hii tayari ipo, maelezo ni",
+      "keystore_error":"Hitilafu:",
+      "keystore_length_error":"Faili moja tu ya akaunti inaweza kuagizwa, tafadhali jaribu tena!",
+      "keystore_format_error":"Tafadhali chagua faili sahihi ya akaunti",
+      "keystore_is_has":"Tayari kuna akaunti katika orodha ambayo unahitaji kuagiza.",
+      "imported_success":"Fanya kuchaguliwa"
+    },
+    "remove_dia": {
+      "tit":"Una uhakika unataka kuiondoa?",
+      "remove_confrim":"Nina uhakika kuondoa",
+      "backup":"Tafadhali makini kwa hifadhi ya akaunti hii ili kuepuka uharibifu wa mali.",
+      "input_pwd":"Nenosiri",
+      "placeholder_pwd":"Tafadhali ingiza nenosiri kwa akaunti hii",
+      "validate_password":"Nenosiri uliloingiza ni sahihi",
+      "remove_success":"Imeondolewa kwa ufanisi"
+    }
+  },
+  "page_config": {
+    "config_detection":"Kugundua upangilio",
+    "content_msg": {
+      "ready_test":"Jitayarisha kuchunguza faili ya usanidi",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Maelezo ya upya ya node ya hivi karibuni yamepatikana",
+      "is_local":"Angalia kama kuna faili ya node ndani ya nchi",
+      "already_local":"Faili ya usanidi wa faili ya node ipo kwenye kifaa cha sasa.",
+      "not_local":"Maelezo ya usanidi wa faili ya node haipatikani, inaweza kuwa mara ya kwanza kukimbia.",
+      "config_write_local":"Andika faili ya habari ya node iliyopatikana kwenye disk ya ndani",
+      "whether_update_node":"Angalia kama sasisho linahitajika",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Inapakua mpango wa node, tafadhali subira",
+      "already_downloaded":"Programu ya node imepakuliwa na tayari kuanza.",
+      "ready_start":"Jitayarishe kuanza node",
+      "enter_wallet":"Node itaanza kugundua, tayari kuingia kwenye mkoba",
+      "specifyDataDir":"Tafadhali chagua njia ya kuhifadhi ya data ya node"
+    },
+    "version_dialog": {
+      "version_tit":"Sasisho la toleo la haraka",
+      "download_wallet":"Nenda kwenye tovuti rasmi ili kupakua toleo la hivi karibuni la fedha",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

@@ -1,204 +1,242 @@
 {
-    "confirm":"Konfirmu",
-    "cancel":"Nuligi",
-    "dialog_tit":"Prompt",
-    "close":"Fermi",
-    "confirm_you_active":"Bonvolu konfirmi vian operacion",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Konfirmi",
+  "cancel":"Nuligi",
+  "dialog_tit":"Rapida",
+  "close":"Fermi",
+  "confirm_you_active":"Bonvolu konfirmi vian operacion",
+  "rpcErrors": {
+    "invalidFromAccount":"La sendanto-konto ne validas",
+    "invalidToAccount":"Alvenanta konto ne validas",
+    "invalidAmountFormat":"Nevalida kvanto-formato",
+    "invalidGasFormat":"Nevalida gasformato",
+    "invalidDataFormat":"Nevalida deĵena formato",
+    "dataSizeTooLarge":"Deksesuma datumo estas tro granda",
+    "invalidGasPriceFormat":"Formata prezo de unuo de gaso ne validas",
+    "invalidMciFormat":"MCI-formato ne validas",
+    "notEnoughFail":"Nesufiĉa gaso aŭ nenormala faŭlto"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Hejmo",
+    "transfer":"Translokigo",
+    "contacts":"Kontakto",
+    "setting":"Agordo",
+    "total":"Tuta",
+    "testnet":"Provu reton",
+    "online":"Enreta",
+    "offline":"Senkonekta",
+    "syncing":"En sinkronigo"
+  },
+  "page_setting": {
+    "tit":"Agordo",
+    "lang":"Lingvo",
+    "select":"Bonvolu elekti",
+    "version_number":"Paka versio",
+    "data_path":"Vojo de datumoj de nodoj",
+    "change":"Ŝanĝo",
+    "changeDirNote":"Bonvolu movi la dosierojn en la originala vojo al la nova dosierujo, alikaze ĝi kaŭzos perdon de datumoj.",
+    "note":"Atento"
+  },
+  "page_contacts": {
+    "tit":"Kontakto",
+    "add_dialog":"Nova kontakto",
+    "add_cont": {
+      "tit":"Nova kontakto",
+      "tag":"Kontakto",
+      "address":"Konta adreso",
+      "tag_placeholder":"Bonvolu enigi la nomon de la kontakto",
+      "address_placeholder":"Bonvolu enigi la kontaktan adreson de la kontakto",
+      "add_success":"Aldonita sukcese"
     },
-    "model_header": {
-        "home":"Hejmo",
-        "transfer":"Translokigo",
-        "contacts":"Kontakto",
-        "setting":"Agordo",
-        "total":"Tuta",
-        "testnet":"Testa reto",
-        "online":"Enreta",
-        "offline":"Senkonekta"
+    "delete_dialog": {
+      "title":"Vi forigas",
+      "remove_success":"Sukcese forigis"
     },
-    "page_setting": {
-        "tit":"Agordo",
-        "lang":"Lingvo",
-        "select":"Bonvolu elekti",
-        "version_number":"Vendo"
-    },
-    "page_contacts": {
-        "tit":"Kontakto",
-        "add_dialog":"Nova kontakto",
-        "add_cont": {
-            "tit":"Nova kontakto",
-            "tag":"Kontakto",
-            "address":"Konta adreso",
-            "tag_placeholder":"Bonvolu eniri la nomon de la kontakto",
-            "address_placeholder":"Bonvolu eniri la adreson de kontakto de la kontakto",
-            "add_success":"Aldonita sukcese"
-        },
-        "delete_dialog": {
-            "title":"Vi forigas",
-            "remove_success":"Sukcese forigita"
-        },
-        "msg_info": {
-            "no_tag":"Bonvolu enmeti konton-noton",
-            "no_address":"Bonvolu eniri vian adreson",
-            "valid_address":"La adreso de la kontakto estas neleĝa",
-            "validate_tag_length":"La nomo de la nota nomo ne povas esti pli ol 8 karakteroj.",
-            "contacts_quantity_error":"La nombro da kontaktoj ne povas superi 50",
-            "exist":"La kontakto jam ekzistas,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Sendante partio",
-        "to_address":"Pagu",
-        "amount":"Kvanto",
-        "gas":"Gaso",
-        "send_all":"Sendu ĉion",
-        "data":"Datumoj",
-        "data_placeholder":"Heksadektemaj datumoj",
-        "fees":"Pritraktanta kotizon",
-        "total":"Tuta",
-        "select":"Bonvolu elekti",
-        "no_account_info":"Ankoraŭ neniu konton, bonvolu krei aŭ importi konton",
-        "contacts_dig": {
-            "title":"Elektu kontaktan konton",
-            "select_placeholder":"Bonvolu elekti"
-        },
-        "confirm_dia": {
-            "title":"Bonvolu konfirmi",
-            "enter_passworld_tit":"Bonvolu enmeti vian pasvorton",
-            "enter_passworld_place":"Bonvolu enmeti vian pasvorton"
-        },
-        "msg_info": {
-            "address_null":"Bonvolu eniri la konton de la alia partio",
-            "balance_zero":"Ne sufiĉa ekvilibro, nekapabla daŭrigi",
-            "amount_zero":"Transdono devas esti pli granda ol 0",
-            "amount_error":"Bonvolu enmeti leĝan kvanton",
-            "address_err":"La formato de la translokita adreso estas nevalida.",
-            "send_success":"Transaĵo sendita",
-            "amount_exceeded":"Nuna suma transakcio superas kontentan ekvilibron",
-
-            "decrypt_err":"Malkrapa analizo malsukcesis, ĝi eble povas esti pasvorta eraro",
-            "send_error":"Transakcio malsukcesis: bonvolu kontroli ĉu ekzistas sufiĉa ekvilibro kaj ministo-kotizo"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transakcio-rekordo",
-        "transfer_log_null":"Neniu transakcia historio",
-        "active_icon": {
-            "go_transfer":"Komenci translokigon",
-            "import_keystore":"Konta dosiero",
-            "qrcode":"QR-kodo"
-        },
-        "edit_dia": {
-            "tit":"Modifi noton",
-            "subtit":"Marki noton por via konto",
-            "no_tag":"Bonvolu enmeti konton-noton",
-            "validate_tag_length":"La nomo de la nota nomo ne povas esti pli ol 8 karakteroj."
-        },
-        "dia_tx":{
-            "tit":"Informo pri transakcio",
-            "block_hash":"Numero de transakcio",
-            "status":"Ŝtato",
-            "from":"Sendante partio",
-            "to":"Pagu",
-            "amount":"Kvanto",
-            "data":"Datumoj",
-            "send_time":"Sendante tempon",
-            "mac_time":"Ĉefa ĉeno-tempo"
-        },
-        "keystore": {
-            "tit":"Rezerva barata dosiero",
-            "copy":"Kopiu",
-            "download":"Elŝuti monujo-dosieron"
-        },
-        "msg_info": {
-            "ads_copy_success":"Direkto estis kopiita",
-            "key_copy_success":"Sukcesa kopio"
-        }
-    },
-    "page_home": {
-        "import_account":"Importi konton",
-        "add_account":"Nova konto",
-        "acc":"Konto",
-        "create_dia": {
-            "create_tit":"Krei konton",
-            "backup_tit":"Subtenu vian novan konton",
-            "create_tag":"Rimarko",
-            "create_pwd":"Ŝanĝu pasvorton",
-            "create_repwd":"Konfirmu pasvorton",
-            "placeholder_tag":"Bonvolu agordi la konton",
-            "placeholder_pwd":"Bonvolu agordi la konton-pasvorton",
-            "placeholder_repwd":"Bonvolu konfirmi la konton-pasvorton",
-            
-            
-            "account_download_keystore":"Elŝuti konto-dosieron",
-
-            "validate_tag":"Bonvolu enmeti la konton-nomon",
-            "validate_tag_length":"La nomo de la nota nomo ne povas esti pli ol 8 karakteroj.",
-
-            "validate_password":"Bonvolu enmeti la pasvorton, kiun vi starigis",
-            "validate_re_password":"Bonvolu enmeti la pasvorton, kiun vi starigis denove",
-            "validate_strong_password":"Bonvolu enmeti pasvorton de almenaŭ 8 ciferoj",
-            "validate_long_password":"Pasvorto ne povas superi 100 ciferojn",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Nekonforma pasvorto eniris dufoje",
-
-            "create_success":"Kreita sukcese",
-            "account_quantity_error":"La nombro da kontoj ne povas superi 50",
-            "create_success_des":"Bonvolu konservi vian konton-dosieron kaj ne dividu ĝin kun iu ajn!"
-        },
-        "import_dia": {
-            "tit":"Importi konton",    
-            "placeholder_keystore":"Bonvolu treni la konton-dosieron ĉi tie",
-            "create_tag":"Rimarko",
-            "placeholder_tag":"Bonvolu agordi la konton",
-
-            "validate_tag":"Bonvolu enmeti la konton-nomon",
-            "validate_tag_length":"La nomo de la nota nomo ne povas esti pli ol 8 karakteroj.",
-            "validate_enter_keystore":"Bonvolu importi la konton-dosieron unue",
-            "validate_error_keystore":"Kalkulita importado malsukcesis, eble estu dosiero eraro",
-            "imported_account_success":"Sukcese importita",
-            "exist":"Ĉi tiu konto jam ekzistas, la noto estas",
-            "keystore_error":"Eraro:",
-            "keystore_length_error":"Nur unu konto-dosiero povas esti importita, bonvolu provi denove!",
-            "keystore_format_error":"Bonvolu elekti la ĝustan konton-dosieron",
-            "keystore_is_has":"Jam ekzistas konton en la listo, kiun vi bezonas por importi.",
-            "imported_success":"Elektita dosiero"
-        },
-        "remove_dia": {
-            "tit":"Ĉu vi certas, ke vi volas forigi ĝin?",
-            "remove_confrim":"Mi certe forigas",
-            "backup":"Bonvolu prunti atenton al la rezervo de ĉi tiu konto por eviti nemoveblaĵojn.",
-            "input_pwd":"Pasvorto",
-            "placeholder_pwd":"Bonvolu enmeti la pasvorton por ĉi tiu konto",
-            "validate_password":"La pasvorto, kiun vi eniris, estas malĝusta",
-            "remove_success":"Sukcese forigita"
-        }
-    },
-    "page_config": {
-        "config_detection":"Agordo detekto",
-        "content_msg":{
-            "ready_test":"Preparu por detekti la agordan dosieron",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"La plej lasta nodo-agordo-informo estis akirita",
-            "is_local":"Kontrolu se estas nodo dosiero loke",
-            "already_local":"La agorda dosiero de la nodo dosiero ekzistas sur la nuna aparato.",
-            "not_local":"La agordo-informo de la nodo-dosiero ne estas detektita, eble ĝi estu la unua fojo funkcianta.",
-            "config_write_local":"Skribu la akiritan nodo-dosieron al la loka disko",
-            "whether_update_node":"Kontrolu, se necesas ĝisdatigo",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Elŝuta nodo programo, bonvolu pacienca",
-            "already_downloaded":"La nodo programo estis elŝutita kaj preta por komenci.",
-            "ready_start":"Preparu por komenci la nodo",
-            "enter_wallet":"Nodo komencas detekti, preta por eniri la monujon"
-        },
-        "version_dialog":{
-            "version_tit":"Versio ĝisdatigilo",
-            "download_wallet":"Iru al la oficiala retejo por elŝuti la plej lastan version de la mono",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Bonvolu enigi konton",
+      "no_address":"Bonvolu enmeti la adreson de la konto",
+      "valid_address":"La adreso de la kontakto estas kontraŭleĝa",
+      "validate_tag_length":"La nomo de la noto nomo ne povas esti pli granda ol 8 signojn.",
+      "contacts_quantity_error":"La nombro de kontaktoj ne povas superi 50",
+      "exist":"La kontakto jam ekzistas,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Sendanta partio",
+    "to_address":"Kandidato",
+    "amount":"Kvanto",
+    "gas":"Gaso",
+    "gasPrice":"Prezo por gaso",
+    "send_all":"Sendu ĉiujn",
+    "data":"Datumoj",
+    "data_placeholder":"Deksesaj datumoj",
+    "fees":"Uzado de kotizo",
+    "txFee":"Transakcia kotizo",
+    "total":"Tuta",
+    "select":"Bonvolu elekti",
+    "no_account_info":"Neniu konto ankoraŭ, bonvolu krei aŭ importi konton",
+    "no_keystore_file":"Neniu konto-dosiero trovita por la responda konto",
+    "contacts_dig": {
+      "title":"Elektu kontaktkonto",
+      "select_placeholder":"Bonvolu elekti"
+    },
+    "confirm_dia": {
+      "title":"Bonvolu konfirmi",
+      "enter_passworld_tit":"Bonvolu enigi vian pasvorton",
+      "enter_passworld_place":"Bonvolu enigi vian pasvorton"
+    },
+    "msg_info": {
+      "address_null":"Bonvolu eniri la konton de la alia partio",
+      "balance_zero":"Nesufiĉa ekvilibro, nekapabla daŭrigi",
+      "amount_zero":"Translokiga kvanto devas esti pli granda ol 0",
+      "amount_error":"Bonvolu enigi juran transakcion",
+      "address_err":"La formato de la transigita adreso ne validas.",
+      "gas_error":"Bonvolu enigi juran transakcion kun gaso",
+      "gasPrice_error":"Bonvolu enigi la laŭleĝan transakcion",
+      "send_success":"Transakcio sendita",
+      "amount_exceeded":"La nuna totala transakcia kvanto superas la konton",
+      "txFeeTooLow":"Transakcia kosto estas tro malalta",
+      "decrypt_err":"Fala arta analizado, eble estas pasvorta eraro",
+      "send_error":"Transakcio malsukcesis: bonvolu kontroli ĉu estas sufiĉa ekvilibro kaj kotizo pri minejo",
+      "generate_offline_block_err":"Malsukcesi generi sensignan transakcion",
+      "sign_err":"La subskribo malsukcesis",
+      "send_offline_block_err":"Sendado de subskribita transakcio malsukcesis",
+      "syncingWaitTitle":"La nodo sinkronigas",
+      "syncingWait":"La nodo sinkronigas, la tempa konfirmokontrola tempo povas esti pli longa, bonvolu esti pacienca"
+    }
+  },
+  "pager": {
+    "next":"Sekva paĝo",
+    "prev":"Antaŭa paĝo"
+  },
+  "page_account": {
+    "transfer_log":"Transakcia rekordo",
+    "transfer_log_null":"Neniu transakcia historio",
+    "txSent":"Transdonita transakcio",
+    "txAll":"Ĉiuj transakcioj",
+    "txNew":"Nuna konto havas novajn transakciajn informojn",
+    "checkNow":"Rigardu nun",
+    "active_icon": {
+      "go_transfer":"Komenci transdono",
+      "import_keystore":"Konto-dosiero",
+      "qrcode":"QR-kodo"
+    },
+    "edit_dia": {
+      "tit":"Modifi notojn",
+      "subtit":"Marku noton por via konto",
+      "no_tag":"Bonvolu enigi konton",
+      "validate_tag_length":"La nomo de la noto nomo ne povas esti pli granda ol 8 signojn."
+    },
+    "dia_tx": {
+      "tit":"Transakciaj informoj",
+      "block_hash":"Transakcia nombro",
+      "status":"Ŝtato",
+      "from":"Sendanta partio",
+      "to":"Kandidato",
+      "amount":"Kvanto",
+      "data":"Datumoj",
+      "send_time":"Sendanta tempon",
+      "mac_time":"Ĉefa ĉena tempo",
+      "gasPrice":"Prezo de unuo de gaso (10 <-18> CZR)",
+      "gasUsed":"Gasuzo",
+      "waiting":"Atendante konfirmon",
+      "success":"Sukceso",
+      "sendFail":"Sendi malsukcesis",
+      "fail1":"Fiasko (1)",
+      "fail2":"Fiasko (2)",
+      "fail3":"Fiasko (3)"
+    },
+    "keystore": {
+      "tit":"Rezerva biletujo de dosieroj",
+      "copy":"Kopiu",
+      "download":"Elŝutu biletujon"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adreso kopiis",
+      "key_copy_success":"Sukcesa kopio"
+    }
+  },
+  "page_home": {
+    "import_account":"Importi konton",
+    "add_account":"Nova konto",
+    "acc":"Konto",
+    "create_dia": {
+      "create_tit":"Kreu konton",
+      "backup_tit":"Subtenu vian novan konton",
+      "create_tag":"Konta noto",
+      "create_pwd":"Ŝanĝu pasvorton",
+      "create_repwd":"Konfirmi pasvorton",
+      "placeholder_tag":"Bonvolu agordi la nomon de la konto-noto",
+      "placeholder_pwd":"Bonvolu agordi la konton pasvorton",
+      "placeholder_repwd":"Bonvolu konfirmi la konton pasvorton",
+      "account_download_keystore":"Elŝuti kontan dosieron",
+      "validate_tag":"Bonvolu enigi la kontan nomon",
+      "validate_tag_length":"La nomo de la noto nomo ne povas esti pli granda ol 8 signojn.",
+      "validate_password":"Bonvolu enigi la pasvorton, kiun vi metis",
+      "validate_re_password":"Bonvolu enigi la pasvorton, kiun vi denove agordis",
+      "validate_strong_password":"Bonvolu enigi pasvorton kun almenaŭ 8 ciferoj",
+      "validate_long_password":"Pasvorto ne povas daŭri pli ol 100 ciferojn",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Nekompatebla pasvorto eniris dufoje",
+      "create_success":"Kreita sukcese",
+      "account_quantity_error":"La nombro de kontoj ne povas superi 50",
+      "create_success_des":"Bonvolu konservi vian kontan dosieron kaj ne dividi ĝin kun iu ajn!"
+    },
+    "import_dia": {
+      "tit":"Importi konton",
+      "placeholder_keystore":"Bonvolu treni la kontan dosieron ĉi tie",
+      "create_tag":"Konta noto",
+      "placeholder_tag":"Bonvolu agordi la nomon de la konto-noto",
+      "validate_tag":"Bonvolu enigi la kontan nomon",
+      "validate_tag_length":"La nomo de la noto nomo ne povas esti pli granda ol 8 signojn.",
+      "validate_enter_keystore":"Bonvolu unue importi la kontan dosieron",
+      "validate_error_keystore":"Konto-importado malsukcesis, eble estas konta dosiero-eraro",
+      "imported_account_success":"Sukcese importis",
+      "exist":"Ĉi tiu konto jam ekzistas, la noto estas",
+      "keystore_error":"Eraro:",
+      "keystore_length_error":"Nur unu konto-dosiero povas esti importita, bonvolu reprovi!",
+      "keystore_format_error":"Bonvolu elekti la ĝustan kontan dosieron",
+      "keystore_is_has":"Estas jam konto en la listo, kiun vi bezonas importi.",
+      "imported_success":"Elektita dosiero"
+    },
+    "remove_dia": {
+      "tit":"Ĉu vi certe volas forigi ĝin?",
+      "remove_confrim":"Mi nepre forigos",
+      "backup":"Bonvolu atenti la rezervon de ĉi tiu konto por eviti damaĝojn.",
+      "input_pwd":"Pasvorto",
+      "placeholder_pwd":"Bonvolu enigi la pasvorton por ĉi tiu konto",
+      "validate_password":"La pasvorto, kiun vi enigis, estas erara",
+      "remove_success":"Sukcese forigis"
+    }
+  },
+  "page_config": {
+    "config_detection":"Agordo-detekto",
+    "content_msg": {
+      "ready_test":"Preparu por detekti la agordan dosieron",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"La plej novaj informoj pri nodaj agordoj estis akiritaj",
+      "is_local":"Kontrolu ĉu estas nodo-dosiero loke",
+      "already_local":"La agordodosiero de la noda dosiero ekzistas sur la aktuala aparato.",
+      "not_local":"La agordaj informoj de la noda dosiero ne estas detektitaj, ĝi eble estas la unua fojo.",
+      "config_write_local":"Skribu la akiritan informan dosieron ĉe la loka disko",
+      "whether_update_node":"Kontrolu ĉu ĝisdatigo necesas",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Elŝutante nodan programon, bonvolu esti pacienca",
+      "already_downloaded":"La noda programo estas elŝutita kaj preta por komenci.",
+      "ready_start":"Preparu por komenci la nodon",
+      "enter_wallet":"Nodo komencas detekti sin preta por eniri la monujon",
+      "specifyDataDir":"Bonvolu elekti la konservan vojon de la datenoj de nodo"
+    },
+    "version_dialog": {
+      "version_tit":"Versi ĝisdatiga instigo",
+      "download_wallet":"Iru al la oficiala retejo por elŝuti la plej lastan version de la mono",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

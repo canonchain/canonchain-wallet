@@ -1,204 +1,242 @@
 {
-    "confirm":"確認する",
-    "cancel":"キャンセル",
-    "dialog_tit":"プロンプト",
-    "close":"閉じる",
-    "confirm_you_active":"操作を確認してください",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"確認する",
+  "cancel":"キャンセル",
+  "dialog_tit":"プロンプト",
+  "close":"閉じる",
+  "confirm_you_active":"操作を確認してください",
+  "rpcErrors": {
+    "invalidFromAccount":"送信者のアカウントが無効です",
+    "invalidToAccount":"受信アカウントが無効です",
+    "invalidAmountFormat":"無効な金額フォーマット",
+    "invalidGasFormat":"無効なガスフォーマット",
+    "invalidDataFormat":"無効な16進データ形式",
+    "dataSizeTooLarge":"16進データが大きすぎる",
+    "invalidGasPriceFormat":"ガス単価の形式が無効です",
+    "invalidMciFormat":"MCI形式が無効です",
+    "notEnoughFail":"ガス不足または異常故障"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 -18 CZR"
+  },
+  "model_header": {
+    "home":"ホーム",
+    "transfer":"転送する",
+    "contacts":"お問い合わせ",
+    "setting":"設定",
+    "total":"合計",
+    "testnet":"テストネットワーク",
+    "online":"オンライン",
+    "offline":"オフライン",
+    "syncing":"同期して"
+  },
+  "page_setting": {
+    "tit":"設定",
+    "lang":"言語",
+    "select":"選んでください",
+    "version_number":"ウォレット版",
+    "data_path":"ノードデータパス",
+    "change":"変更",
+    "changeDirNote":"元のパスにあるファイルを新しいディレクトリに移動してください。そうしないと、データが失われる可能性があります。",
+    "note":"注意"
+  },
+  "page_contacts": {
+    "tit":"お問い合わせ",
+    "add_dialog":"新しい連絡先",
+    "add_cont": {
+      "tit":"新しい連絡先",
+      "tag":"お問い合わせ",
+      "address":"アカウントアドレス",
+      "tag_placeholder":"連絡先の名前を入力してください",
+      "address_placeholder":"連絡先のアカウントアドレスを入力してください",
+      "add_success":"追加しました"
     },
-    "model_header": {
-        "home":"ホーム",
-        "transfer":"転送する",
-        "contacts":"連絡先",
-        "setting":"設定",
-        "total":"合計",
-        "testnet":"テストネットワーク",
-        "online":"オンライン",
-        "offline":"オフライン"
+    "delete_dialog": {
+      "title":"削除しています",
+      "remove_success":"削除しました"
     },
-    "page_setting": {
-        "tit":"設定",
-        "lang":"言語",
-        "select":"選択してください",
-        "version_number":"財布バージョン"
-    },
-    "page_contacts": {
-        "tit":"連絡先",
-        "add_dialog":"新しい連絡先",
-        "add_cont": {
-            "tit":"新しい連絡先",
-            "tag":"連絡先",
-            "address":"アカウントアドレス",
-            "tag_placeholder":"連絡先の名前を入力してください",
-            "address_placeholder":"連絡先のアカウントアドレスを入力してください",
-            "add_success":"追加しました"
-        },
-        "delete_dialog": {
-            "title":"削除しています",
-            "remove_success":"削除しました"
-        },
-        "msg_info": {
-            "no_tag":"口座メモを入力してください",
-            "no_address":"あなたのアカウントアドレスを入力してください",
-            "valid_address":"連絡先の住所が違法です",
-            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
-            "contacts_quantity_error":"連絡先の数は50を超えることはできません",
-            "exist":"連絡先は既に存在します"
-        }
-    },
-    "page_transfer": {
-        "from_address":"送信パーティー",
-        "to_address":"受取人",
-        "amount":"金額",
-        "gas":"ガス",
-        "send_all":"全部送る",
-        "data":"データ",
-        "data_placeholder":"16進データ",
-        "fees":"手数料",
-        "total":"合計",
-        "select":"選択してください",
-        "no_account_info":"まだアカウントがありません。アカウントを作成またはインポートしてください",
-        "contacts_dig": {
-            "title":"連絡先アカウントを選択",
-            "select_placeholder":"選択してください"
-        },
-        "confirm_dia": {
-            "title":"ご確認ください",
-            "enter_passworld_tit":"パスワードを入力してください",
-            "enter_passworld_place":"パスワードを入力してください"
-        },
-        "msg_info": {
-            "address_null":"相手のアカウントを入力してください",
-            "balance_zero":"残高不足、続行不可",
-            "amount_zero":"振込金額は0より大きくなければなりません",
-            "amount_error":"法定取引金額を入力してください",
-            "address_err":"転送されたアドレスの形式が無効です。",
-            "send_success":"取引が送信されました",
-            "amount_exceeded":"現在の取引合計金額が口座残高を超えています",
-
-            "decrypt_err":"Walletの解析に失敗しました。パスワードエラーの可能性があります",
-            "send_error":"取引に失敗しました：十分な残高と鉱夫費があるかどうか確認してください"
-        }
-    },
-    "page_account": {
-        "transfer_log":"取引記録",
-        "transfer_log_null":"取引履歴なし",
-        "active_icon": {
-            "go_transfer":"転送を開始する",
-            "import_keystore":"アカウントファイル",
-            "qrcode":"QRコード"
-        },
-        "edit_dia": {
-            "tit":"メモを修正",
-            "subtit":"あなたのアカウントにメモを付ける",
-            "no_tag":"口座メモを入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。"
-        },
-        "dia_tx":{
-            "tit":"取引情報",
-            "block_hash":"取引番号",
-            "status":"州",
-            "from":"送信パーティー",
-            "to":"受取人",
-            "amount":"金額",
-            "data":"データ",
-            "send_time":"送信時間",
-            "mac_time":"メインチェーンタイム"
-        },
-        "keystore": {
-            "tit":"バックアップウォレットファイル",
-            "copy":"コピーする",
-            "download":"財布ファイルをダウンロードする"
-        },
-        "msg_info": {
-            "ads_copy_success":"住所がコピーされました",
-            "key_copy_success":"コピー成功"
-        }
-    },
-    "page_home": {
-        "import_account":"アカウントをインポート",
-        "add_account":"新しいアカウント",
-        "acc":"アカウント",
-        "create_dia": {
-            "create_tit":"アカウントを作成する",
-            "backup_tit":"新しいアカウントをバックアップする",
-            "create_tag":"アカウントノート",
-            "create_pwd":"パスワードを設定",
-            "create_repwd":"パスワード確認",
-            "placeholder_tag":"アカウントノート名を設定してください",
-            "placeholder_pwd":"アカウントのパスワードを設定してください",
-            "placeholder_repwd":"アカウントのパスワードを確認してください",
-            
-            
-            "account_download_keystore":"アカウントファイルをダウンロードする",
-
-            "validate_tag":"アカウントノートの名前を入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
-
-            "validate_password":"設定したパスワードを入力してください",
-            "validate_re_password":"もう一度設定したパスワードを入力してください",
-            "validate_strong_password":"8桁以上のパスワードを入力してください",
-            "validate_long_password":"パスワードは100桁を超えてはいけません",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"パスワードが2回入力されています",
-
-            "create_success":"作成しました",
-            "account_quantity_error":"アカウント数は50を超えることはできません",
-            "create_success_des":"アカウントファイルを保存して他の人と共有しないでください。"
-        },
-        "import_dia": {
-            "tit":"アカウントをインポート",    
-            "placeholder_keystore":"アカウントファイルをここにドラッグしてください",
-            "create_tag":"アカウントノート",
-            "placeholder_tag":"アカウントノート名を設定してください",
-
-            "validate_tag":"アカウントノートの名前を入力してください",
-            "validate_tag_length":"ノート名の名前は8文字以下にする必要があります。",
-            "validate_enter_keystore":"最初にアカウントファイルをインポートしてください",
-            "validate_error_keystore":"アカウントのインポートに失敗しました。アカ​​ウントファイルエラーの可能性があります",
-            "imported_account_success":"正常にインポートされました",
-            "exist":"このアカウントは既に存在します。メモは",
-            "keystore_error":"エラー：",
-            "keystore_length_error":"インポートできるアカウントファイルは1つだけです。もう一度やり直してください。",
-            "keystore_format_error":"正しいアカウントファイルを選択してください",
-            "keystore_is_has":"インポートする必要があるアカウントがリストに既にあります。",
-            "imported_success":"選択済みファイル"
-        },
-        "remove_dia": {
-            "tit":"削除してよろしいですか？",
-            "remove_confrim":"きっと削除します",
-            "backup":"物的損害を避けるために、このアカウントのバックアップに注意を払ってください。",
-            "input_pwd":"パスワード",
-            "placeholder_pwd":"このアカウントのパスワードを入力してください",
-            "validate_password":"入力したパスワードが間違っています",
-            "remove_success":"削除しました"
-        }
-    },
-    "page_config": {
-        "config_detection":"構成検出",
-        "content_msg":{
-            "ready_test":"設定ファイルを検出する準備をする",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"最新のノード構成情報を取得しました",
-            "is_local":"ローカルにノードファイルがあるか確認してください",
-            "already_local":"ノードファイルの設定ファイルは現在のデバイスに存在します。",
-            "not_local":"ノードファイルの構成情報が検出されません。初めて実行される可能性があります。",
-            "config_write_local":"取得したノード情報ファイルをローカルディスクに書き込む",
-            "whether_update_node":"更新が必要かどうかを確認",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"ノードプログラムをダウンロードしています、しばらくお待ちください",
-            "already_downloaded":"ノードプログラムがダウンロードされ、起動する準備が整いました。",
-            "ready_start":"ノードを起動する準備をします。",
-            "enter_wallet":"ノードが検出を開始し、ウォレットに入る準備ができました"
-        },
-        "version_dialog":{
-            "version_tit":"バージョン更新プロンプト",
-            "download_wallet":"公式ウェブサイトに行き、最新版のお金をダウンロードしてください。",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"口座メモを入力してください",
+      "no_address":"アカウントの住所を入力してください",
+      "valid_address":"連絡先の住所が違法です",
+      "validate_tag_length":"音名の名前は8文字以下にする必要があります。",
+      "contacts_quantity_error":"連絡先の数は50を超えることはできません",
+      "exist":"連絡先は既に存在します"
     }
+  },
+  "page_transfer": {
+    "from_address":"送信パーティー",
+    "to_address":"受取人",
+    "amount":"金額",
+    "gas":"ガス",
+    "gasPrice":"ガス単価",
+    "send_all":"全部送る",
+    "data":"データ",
+    "data_placeholder":"16進データ",
+    "fees":"手数料",
+    "txFee":"取引手数料",
+    "total":"合計",
+    "select":"選んでください",
+    "no_account_info":"まだアカウントがありません。アカウントを作成またはインポートしてください",
+    "no_keystore_file":"対応するアカウントのアカウントファイルが見つかりません",
+    "contacts_dig": {
+      "title":"連絡先アカウントを選択",
+      "select_placeholder":"選んでください"
+    },
+    "confirm_dia": {
+      "title":"ご確認ください",
+      "enter_passworld_tit":"パスワードを入力してください",
+      "enter_passworld_place":"パスワードを入力してください"
+    },
+    "msg_info": {
+      "address_null":"相手のアカウントを入力してください",
+      "balance_zero":"残高不足、続行不可",
+      "amount_zero":"振込金額は0より大きくなければなりません",
+      "amount_error":"法定取引金額を入力してください",
+      "address_err":"転送されたアドレスの形式が無効です。",
+      "gas_error":"法定取引ガスを入力してください",
+      "gasPrice_error":"法定取引価格を入力してください",
+      "send_success":"取引が送信されました",
+      "amount_exceeded":"現在の合計取引金額が口座残高を超えています",
+      "txFeeTooLow":"取引コストが低すぎる",
+      "decrypt_err":"Walletの解析に失敗しました。パスワードエラーの可能性があります",
+      "send_error":"取引に失敗しました：十分な残高と鉱夫費があるかどうかを確認してください",
+      "generate_offline_block_err":"未署名のトランザクションを生成できませんでした",
+      "sign_err":"署名が失敗しました",
+      "send_offline_block_err":"署名付きトランザクションの送信に失敗しました",
+      "syncingWaitTitle":"ノードは同期しています",
+      "syncingWait":"ノードが同期している、トランザクション確認時間が長くなる可能性がある、しばらくお待ちください"
+    }
+  },
+  "pager": {
+    "next":"次のページ",
+    "prev":"前のページ"
+  },
+  "page_account": {
+    "transfer_log":"取引記録",
+    "transfer_log_null":"取引履歴なし",
+    "txSent":"送信トランザクション",
+    "txAll":"すべての取引",
+    "txNew":"現在のアカウントに新しい取引情報があります",
+    "checkNow":"今すぐ見る",
+    "active_icon": {
+      "go_transfer":"転送を開始する",
+      "import_keystore":"アカウントファイル",
+      "qrcode":"QRコード"
+    },
+    "edit_dia": {
+      "tit":"メモを修正する",
+      "subtit":"あなたのアカウントにメモを付ける",
+      "no_tag":"口座メモを入力してください",
+      "validate_tag_length":"音名の名前は8文字以下にする必要があります。"
+    },
+    "dia_tx": {
+      "tit":"取引情報",
+      "block_hash":"取引番号",
+      "status":"州",
+      "from":"送信パーティー",
+      "to":"受取人",
+      "amount":"金額",
+      "data":"データ",
+      "send_time":"送信時間",
+      "mac_time":"メインチェーンタイム",
+      "gasPrice":"ガス単価（10 -18 CZR）",
+      "gasUsed":"ガス使用",
+      "waiting":"確認待ち",
+      "success":"成功",
+      "sendFail":"送信失敗",
+      "fail1":"失敗（1）",
+      "fail2":"失敗（2）",
+      "fail3":"失敗（3）"
+    },
+    "keystore": {
+      "tit":"バックアップウォレットファイル",
+      "copy":"コピーする",
+      "download":"財布ファイルをダウンロードする"
+    },
+    "msg_info": {
+      "ads_copy_success":"住所がコピーされました",
+      "key_copy_success":"コピー成功"
+    }
+  },
+  "page_home": {
+    "import_account":"アカウントをインポート",
+    "add_account":"新しいアカウント",
+    "acc":"アカウント",
+    "create_dia": {
+      "create_tit":"アカウントを作成する",
+      "backup_tit":"新しいアカウントをバックアップする",
+      "create_tag":"アカウントノート",
+      "create_pwd":"パスワードを設定",
+      "create_repwd":"パスワード確認",
+      "placeholder_tag":"アカウントノート名を設定してください",
+      "placeholder_pwd":"アカウントのパスワードを設定してください",
+      "placeholder_repwd":"アカウントのパスワードを確認してください",
+      "account_download_keystore":"アカウントファイルをダウンロードする",
+      "validate_tag":"アカウントノートの名前を入力してください",
+      "validate_tag_length":"音名の名前は8文字以下にする必要があります。",
+      "validate_password":"設定したパスワードを入力してください",
+      "validate_re_password":"もう一度設定したパスワードを入力してください",
+      "validate_strong_password":"8桁以上のパスワードを入力してください",
+      "validate_long_password":"パスワードは100桁を超えてはいけません",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"パスワードが2回入力されています",
+      "create_success":"作成しました",
+      "account_quantity_error":"アカウント数は50を超えることはできません",
+      "create_success_des":"アカウントファイルを保存して他の人と共有しないでください。"
+    },
+    "import_dia": {
+      "tit":"アカウントをインポート",
+      "placeholder_keystore":"ここにアカウントファイルをドラッグしてください",
+      "create_tag":"アカウントノート",
+      "placeholder_tag":"アカウントノート名を設定してください",
+      "validate_tag":"アカウントノートの名前を入力してください",
+      "validate_tag_length":"音名の名前は8文字以下にする必要があります。",
+      "validate_enter_keystore":"最初にアカウントファイルをインポートしてください",
+      "validate_error_keystore":"アカウントのインポートに失敗しました。アカ​​ウントファイルエラーの可能性があります",
+      "imported_account_success":"正常にインポートされました",
+      "exist":"このアカウントは既に存在します。メモは",
+      "keystore_error":"エラー：",
+      "keystore_length_error":"インポートできるアカウントファイルは1つだけです。もう一度やり直してください。",
+      "keystore_format_error":"正しいアカウントファイルを選択してください",
+      "keystore_is_has":"インポートする必要があるアカウントがリストに既にあります。",
+      "imported_success":"ファイル選択"
+    },
+    "remove_dia": {
+      "tit":"削除してよろしいですか？",
+      "remove_confrim":"きっと削除します",
+      "backup":"物的損害を避けるために、このアカウントのバックアップに注意を払ってください。",
+      "input_pwd":"パスワード",
+      "placeholder_pwd":"このアカウントのパスワードを入力してください",
+      "validate_password":"入力したパスワードが間違っています",
+      "remove_success":"削除しました"
+    }
+  },
+  "page_config": {
+    "config_detection":"構成検出",
+    "content_msg": {
+      "ready_test":"構成ファイルを検出する準備をする",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"最新のノード構成情報を取得しました",
+      "is_local":"ローカルにノードファイルがあるか確認してください",
+      "already_local":"ノードファイルの設定ファイルは現在のデバイスに存在します。",
+      "not_local":"ノードファイルの構成情報が検出されません。初めて実行される可能性があります。",
+      "config_write_local":"取得したノード情報ファイルをローカルディスクに書き込む",
+      "whether_update_node":"更新が必要かどうかを確認",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"ノードプログラムをダウンロードしています、しばらくお待ちください",
+      "already_downloaded":"ノードプログラムがダウンロードされ、起動する準備が整いました。",
+      "ready_start":"ノードを起動する準備をします。",
+      "enter_wallet":"ノードが検出を開始し、ウォレットに入る準備ができました",
+      "specifyDataDir":"ノードデータの保存先を選択してください"
+    },
+    "version_dialog": {
+      "version_tit":"バージョン更新プロンプト",
+      "download_wallet":"公式ウェブサイトに行き、最新版のお金をダウンロードしてください。",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

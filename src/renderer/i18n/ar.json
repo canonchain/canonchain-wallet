@@ -1,204 +1,242 @@
 {
-    "confirm":"أكد",
-    "cancel":"ألغيت",
-    "dialog_tit":"موجه",
-    "close":"قريب",
-    "confirm_you_active":"يرجى تأكيد العملية الخاصة بك",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"أكد",
+  "cancel":"ألغيت",
+  "dialog_tit":"موجه",
+  "close":"قريب",
+  "confirm_you_active":"يرجى تأكيد العملية الخاصة بك",
+  "rpcErrors": {
+    "invalidFromAccount":"حساب المرسل غير صالح",
+    "invalidToAccount":"الحساب الوارد غير صالح",
+    "invalidAmountFormat":"تنسيق المبلغ غير صالح",
+    "invalidGasFormat":"تنسيق الغاز غير صالح",
+    "invalidDataFormat":"تنسيق بيانات سداسي عشري غير صالح",
+    "dataSizeTooLarge":"البيانات السداسية عشرية كبيرة جدًا",
+    "invalidGasPriceFormat":"تنسيق سعر وحدة الغاز غير صالح",
+    "invalidMciFormat":"تنسيق MCI غير صالح",
+    "notEnoughFail":"الغاز غير كافية أو خطأ غير طبيعي"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <سوب> -18 </ sup> في CZR"
+  },
+  "model_header": {
+    "home":"منزل",
+    "transfer":"نقل",
+    "contacts":"اتصال",
+    "setting":"نصب",
+    "total":"مجموع",
+    "testnet":"اختبار الشبكة",
+    "online":"على الانترنت",
+    "offline":"غير متصل",
+    "syncing":"في التزامن"
+  },
+  "page_setting": {
+    "tit":"نصب",
+    "lang":"لغة",
+    "select":"الرجاء اختيار",
+    "version_number":"نسخة المحفظة",
+    "data_path":"مسار بيانات العقدة",
+    "change":"تغيير",
+    "changeDirNote":"يرجى نقل الملفات في المسار الأصلي إلى الدليل الجديد ، وإلا فسيتسبب ذلك في فقد البيانات.",
+    "note":"انتبه"
+  },
+  "page_contacts": {
+    "tit":"اتصال",
+    "add_dialog":"اتصال جديد",
+    "add_cont": {
+      "tit":"اتصال جديد",
+      "tag":"اتصال",
+      "address":"عنوان الحساب",
+      "tag_placeholder":"الرجاء إدخال اسم جهة الاتصال",
+      "address_placeholder":"الرجاء إدخال عنوان حساب جهة الاتصال",
+      "add_success":"أضيف بنجاح"
     },
-    "model_header": {
-        "home":"منزل",
-        "transfer":"نقل",
-        "contacts":"اتصال",
-        "setting":"نصب",
-        "total":"مجموع",
-        "testnet":"اختبار الشبكة",
-        "online":"على الانترنت",
-        "offline":"غير متصل"
+    "delete_dialog": {
+      "title":"أنت تزيل",
+      "remove_success":"تمت إزالته بنجاح"
     },
-    "page_setting": {
-        "tit":"نصب",
-        "lang":"لغة",
-        "select":"من فضلك اختر",
-        "version_number":"نسخة المحفظة"
-    },
-    "page_contacts": {
-        "tit":"اتصال",
-        "add_dialog":"جهة اتصال جديدة",
-        "add_cont": {
-            "tit":"جهة اتصال جديدة",
-            "tag":"اتصال",
-            "address":"عنوان الحساب",
-            "tag_placeholder":"يرجى إدخال اسم جهة الاتصال",
-            "address_placeholder":"يرجى إدخال عنوان حساب جهة الاتصال",
-            "add_success":"تمت إضافته بنجاح"
-        },
-        "delete_dialog": {
-            "title":"أنت تزيل",
-            "remove_success":"تمت الإزالة بنجاح"
-        },
-        "msg_info": {
-            "no_tag":"يرجى إدخال مذكرة حساب",
-            "no_address":"يرجى إدخال عنوان حسابك",
-            "valid_address":"عنوان جهة الاتصال غير قانوني",
-            "validate_tag_length":"لا يمكن أن يكون اسم اسم الملاحظة أكبر من 8 أحرف.",
-            "contacts_quantity_error":"لا يمكن أن يتجاوز عدد جهات الاتصال 50",
-            "exist":"جهة الاتصال موجودة بالفعل ،"
-        }
-    },
-    "page_transfer": {
-        "from_address":"إرسال الطرف",
-        "to_address":"المستفيد",
-        "amount":"نقود",
-        "gas":"غاز",
-        "send_all":"إرسال الكل",
-        "data":"معطيات",
-        "data_placeholder":"البيانات السداسية العشرية",
-        "fees":"رسوم المناولة",
-        "total":"مجموع",
-        "select":"من فضلك اختر",
-        "no_account_info":"لا يوجد حساب بعد ، يرجى إنشاء أو استيراد حساب",
-        "contacts_dig": {
-            "title":"حدد حساب جهة اتصال",
-            "select_placeholder":"من فضلك اختر"
-        },
-        "confirm_dia": {
-            "title":"يرجى تأكيد",
-            "enter_passworld_tit":"يرجى إدخال كلمة المرور الخاصة بك",
-            "enter_passworld_place":"يرجى إدخال كلمة المرور الخاصة بك"
-        },
-        "msg_info": {
-            "address_null":"يرجى إدخال حساب الطرف الآخر",
-            "balance_zero":"عدم كفاية الرصيد ، غير قادر على الاستمرار",
-            "amount_zero":"يجب أن يكون مبلغ النقل أكبر من 0",
-            "amount_error":"يرجى إدخال مبلغ المعاملة القانونية",
-            "address_err":"تنسيق العنوان المنقولة غير صالح.",
-            "send_success":"تم إرسال المعاملة",
-            "amount_exceeded":"المبلغ الإجمالي الحالي للمعاملة يتجاوز رصيد الحساب",
-
-            "decrypt_err":"فشل تحليل المحفظة ، فقد يكون خطأ في كلمة المرور",
-            "send_error":"فشلت المعاملة: يرجى التحقق مما إذا كان هناك رصيد كافٍ ورسوم تعدين"
-        }
-    },
-    "page_account": {
-        "transfer_log":"سجل المعاملات",
-        "transfer_log_null":"لا يوجد سجل المعاملات",
-        "active_icon": {
-            "go_transfer":"بدء نقل",
-            "import_keystore":"ملف الحساب",
-            "qrcode":"رمز الاستجابة السريعة"
-        },
-        "edit_dia": {
-            "tit":"تعديل الملاحظة",
-            "subtit":"ضع علامة على ملاحظة لحسابك",
-            "no_tag":"يرجى إدخال مذكرة حساب",
-            "validate_tag_length":"لا يمكن أن يكون اسم اسم الملاحظة أكبر من 8 أحرف."
-        },
-        "dia_tx":{
-            "tit":"معلومات المعاملة",
-            "block_hash":"رقم المعاملة",
-            "status":"دولة",
-            "from":"إرسال الطرف",
-            "to":"المستفيد",
-            "amount":"نقود",
-            "data":"معطيات",
-            "send_time":"ارسال الوقت",
-            "mac_time":"وقت السلسلة الرئيسي"
-        },
-        "keystore": {
-            "tit":"ملف المحفظة الاحتياطية",
-            "copy":"نسخة",
-            "download":"تنزيل ملف المحفظة"
-        },
-        "msg_info": {
-            "ads_copy_success":"تم نسخ العنوان",
-            "key_copy_success":"نسخة ناجحة"
-        }
-    },
-    "page_home": {
-        "import_account":"حساب الاستيراد",
-        "add_account":"حساب جديد",
-        "acc":"حساب",
-        "create_dia": {
-            "create_tit":"قم بإنشاء حساب",
-            "backup_tit":"قم بعمل نسخة احتياطية من حسابك الجديد",
-            "create_tag":"ملاحظة الحساب",
-            "create_pwd":"ضبط كلمة المرور",
-            "create_repwd":"تأكيد كلمة المرور",
-            "placeholder_tag":"يرجى ضبط اسم ملاحظة الحساب",
-            "placeholder_pwd":"يرجى ضبط كلمة مرور الحساب",
-            "placeholder_repwd":"يرجى تأكيد كلمة مرور الحساب",
-            
-            
-            "account_download_keystore":"قم بتنزيل ملف الحساب",
-
-            "validate_tag":"يرجى إدخال اسم ملاحظة الحساب",
-            "validate_tag_length":"لا يمكن أن يكون اسم اسم الملاحظة أكبر من 8 أحرف.",
-
-            "validate_password":"يرجى إدخال كلمة المرور التي قمت بتعيينها",
-            "validate_re_password":"يرجى إدخال كلمة المرور التي قمت بتعيينها مرة أخرى",
-            "validate_strong_password":"يرجى إدخال كلمة مرور مكونة من 8 أرقام على الأقل",
-            "validate_long_password":"لا يمكن أن تتجاوز كلمة المرور 100 رقماً طولاً",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"كلمة مرور غير متناسقة دخلت مرتين",
-
-            "create_success":"تم الإنشاء بنجاح",
-            "account_quantity_error":"لا يمكن أن يتجاوز عدد الحسابات 50",
-            "create_success_des":"يرجى حفظ ملف حسابك ولا تشاركه مع أي شخص!"
-        },
-        "import_dia": {
-            "tit":"حساب الاستيراد",    
-            "placeholder_keystore":"يرجى سحب ملف الحساب هنا",
-            "create_tag":"ملاحظة الحساب",
-            "placeholder_tag":"يرجى ضبط اسم ملاحظة الحساب",
-
-            "validate_tag":"يرجى إدخال اسم ملاحظة الحساب",
-            "validate_tag_length":"لا يمكن أن يكون اسم اسم الملاحظة أكبر من 8 أحرف.",
-            "validate_enter_keystore":"يرجى استيراد ملف الحساب أولاً",
-            "validate_error_keystore":"أخفق استيراد الحساب ، وقد يكون خطأ في ملف الحساب",
-            "imported_account_success":"تم استيراده بنجاح",
-            "exist":"هذا الحساب موجود بالفعل ، والملاحظة هي",
-            "keystore_error":"خطأ:",
-            "keystore_length_error":"يمكن استيراد ملف حساب واحد فقط ، يرجى المحاولة مرة أخرى!",
-            "keystore_format_error":"يرجى تحديد ملف الحساب الصحيح",
-            "keystore_is_has":"يوجد بالفعل حساب في القائمة التي تحتاج إلى استيرادها.",
-            "imported_success":"بالفعل اختيار الملف"
-        },
-        "remove_dia": {
-            "tit":"هل أنت متأكد من أنك تريد إزالته؟",
-            "remove_confrim":"أنا متأكد من إزالة",
-            "backup":"يرجى الانتباه إلى النسخة الاحتياطية من هذا الحساب لتجنب ضرر الممتلكات.",
-            "input_pwd":"كلمة المرور",
-            "placeholder_pwd":"يرجى إدخال كلمة المرور لهذا الحساب",
-            "validate_password":"كلمة المرور التي أدخلتها خاطئة",
-            "remove_success":"تمت الإزالة بنجاح"
-        }
-    },
-    "page_config": {
-        "config_detection":"كشف التكوين",
-        "content_msg":{
-            "ready_test":"الاستعداد للكشف عن ملف التكوين",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"تم الحصول على أحدث معلومات تكوين العقدة",
-            "is_local":"تحقق مما إذا كان هناك ملف عقدة محليًا",
-            "already_local":"يوجد ملف التكوين لملف العقدة على الجهاز الحالي.",
-            "not_local":"لم يتم الكشف عن معلومات التكوين لملف العقدة ، فقد تكون المرة الأولى التي يتم تشغيلها.",
-            "config_write_local":"اكتب ملف معلومات العقدة التي تم الحصول عليها إلى القرص المحلي",
-            "whether_update_node":"تحقق مما إذا كان هناك حاجة إلى تحديث",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"تنزيل برنامج العقدة ، يرجى التحلي بالصبر",
-            "already_downloaded":"تم تنزيل برنامج العقدة وجاهزًا لبدءه.",
-            "ready_start":"الاستعداد لبدء العقدة",
-            "enter_wallet":"تبدأ عقدة الكشف ، وعلى استعداد لدخول المحفظة"
-        },
-        "version_dialog":{
-            "version_tit":"إصدار تحديث المطالبة",
-            "download_wallet":"انتقل إلى الموقع الرسمي لتنزيل أحدث إصدار من المال",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"الرجاء إدخال ملاحظة الحساب",
+      "no_address":"يرجى إدخال عنوان الحساب",
+      "valid_address":"عنوان جهة الاتصال غير قانوني",
+      "validate_tag_length":"لا يمكن أن يزيد اسم اسم الملاحظة عن 8 أحرف.",
+      "contacts_quantity_error":"لا يمكن أن يتجاوز عدد جهات الاتصال 50",
+      "exist":"جهة الاتصال موجودة بالفعل ،"
     }
+  },
+  "page_transfer": {
+    "from_address":"إرسال الحزب",
+    "to_address":"المستفيد",
+    "amount":"نقود",
+    "gas":"غاز",
+    "gasPrice":"سعر وحدة الغاز",
+    "send_all":"أرسل الكل",
+    "data":"معطيات",
+    "data_placeholder":"بيانات سداسية عشرية",
+    "fees":"رسوم المناولة",
+    "txFee":"رسوم المعاملة",
+    "total":"مجموع",
+    "select":"الرجاء اختيار",
+    "no_account_info":"لا يوجد حساب بعد ، يرجى إنشاء أو استيراد حساب",
+    "no_keystore_file":"لم يتم العثور على ملف حساب للحساب المقابل",
+    "contacts_dig": {
+      "title":"حدد حساب الاتصال",
+      "select_placeholder":"الرجاء اختيار"
+    },
+    "confirm_dia": {
+      "title":"يرجى تأكيد",
+      "enter_passworld_tit":"من فضلك أدخل كلمة مرورك",
+      "enter_passworld_place":"من فضلك أدخل كلمة مرورك"
+    },
+    "msg_info": {
+      "address_null":"الرجاء إدخال حساب الطرف الآخر",
+      "balance_zero":"عدم كفاية الرصيد ، غير قادر على المتابعة",
+      "amount_zero":"يجب أن يكون مبلغ التحويل أكبر من 0",
+      "amount_error":"الرجاء إدخال مبلغ المعاملة القانونية",
+      "address_err":"تنسيق العنوان المنقول غير صالح.",
+      "gas_error":"يرجى إدخال الغاز معاملة قانونية",
+      "gasPrice_error":"الرجاء إدخال سعر المعاملة القانونية",
+      "send_success":"تم إرسال المعاملة",
+      "amount_exceeded":"يتجاوز إجمالي مبلغ المعاملة الحالي رصيد الحساب",
+      "txFeeTooLow":"تكلفة المعاملة منخفضة جدا",
+      "decrypt_err":"فشل تحليل المحفظة ، فقد يكون خطأ في كلمة المرور",
+      "send_error":"فشل العملية: يرجى التحقق مما إذا كان هناك رصيد كاف ورسوم التعدين",
+      "generate_offline_block_err":"فشل إنشاء معاملة غير موقعة",
+      "sign_err":"فشل التوقيع",
+      "send_offline_block_err":"فشل إرسال معاملة موقعة",
+      "syncingWaitTitle":"العقدة متزامنة",
+      "syncingWait":"العقدة في حالة مزامنة ، وقد يكون وقت تأكيد المعاملة أطول ، يرجى التحلي بالصبر"
+    }
+  },
+  "pager": {
+    "next":"الصفحة التالية",
+    "prev":"الصفحة السابقة"
+  },
+  "page_account": {
+    "transfer_log":"سجل المعاملات",
+    "transfer_log_null":"لا سجل المعاملات",
+    "txSent":"المعاملة المنقولة",
+    "txAll":"جميع المعاملات",
+    "txNew":"الحساب الجاري لديه معلومات جديدة عن المعاملات",
+    "checkNow":"عرض الآن",
+    "active_icon": {
+      "go_transfer":"بدء النقل",
+      "import_keystore":"ملف الحساب",
+      "qrcode":"رمز الاستجابة السريعة"
+    },
+    "edit_dia": {
+      "tit":"تعديل الملاحظات",
+      "subtit":"بمناسبة مذكرة لحسابك",
+      "no_tag":"الرجاء إدخال ملاحظة الحساب",
+      "validate_tag_length":"لا يمكن أن يزيد اسم اسم الملاحظة عن 8 أحرف."
+    },
+    "dia_tx": {
+      "tit":"معلومات المعاملة",
+      "block_hash":"رقم المعاملة",
+      "status":"دولة",
+      "from":"إرسال الحزب",
+      "to":"المستفيد",
+      "amount":"نقود",
+      "data":"معطيات",
+      "send_time":"إرسال الوقت",
+      "mac_time":"الوقت السلسلة الرئيسية",
+      "gasPrice":"سعر وحدة الغاز (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"استخدام الغاز",
+      "waiting":"في انتظار التأكيد",
+      "success":"نجاح",
+      "sendFail":"فشل الإرسال",
+      "fail1":"الفشل (1)",
+      "fail2":"الفشل (2)",
+      "fail3":"الفشل (3)"
+    },
+    "keystore": {
+      "tit":"ملف محفظة النسخ الاحتياطي",
+      "copy":"نسخة",
+      "download":"تحميل ملف المحفظة"
+    },
+    "msg_info": {
+      "ads_copy_success":"تم نسخ العنوان",
+      "key_copy_success":"نسخة ناجحة"
+    }
+  },
+  "page_home": {
+    "import_account":"استيراد حساب",
+    "add_account":"حساب جديد",
+    "acc":"حساب",
+    "create_dia": {
+      "create_tit":"انشاء حساب",
+      "backup_tit":"نسخ احتياطي حسابك الجديد",
+      "create_tag":"ملاحظة الحساب",
+      "create_pwd":"ضبط كلمة المرور",
+      "create_repwd":"تأكيد كلمة المرور",
+      "placeholder_tag":"يرجى ضبط اسم مذكرة الحساب",
+      "placeholder_pwd":"يرجى ضبط كلمة مرور الحساب",
+      "placeholder_repwd":"يرجى تأكيد كلمة مرور الحساب",
+      "account_download_keystore":"تحميل ملف الحساب",
+      "validate_tag":"الرجاء إدخال اسم ملاحظة الحساب",
+      "validate_tag_length":"لا يمكن أن يزيد اسم اسم الملاحظة عن 8 أحرف.",
+      "validate_password":"الرجاء إدخال كلمة المرور التي تحددها",
+      "validate_re_password":"الرجاء إدخال كلمة المرور التي قمت بتعيينها مرة أخرى",
+      "validate_strong_password":"الرجاء إدخال كلمة مرور مكونة من 8 أرقام على الأقل",
+      "validate_long_password":"لا يمكن أن يتجاوز طول كلمة المرور 100 رقم",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"كلمة مرور غير متناسقة دخلت مرتين",
+      "create_success":"تم الإنشاء بنجاح",
+      "account_quantity_error":"لا يمكن أن يتجاوز عدد الحسابات 50",
+      "create_success_des":"يرجى حفظ ملف حسابك وعدم مشاركته مع أي شخص!"
+    },
+    "import_dia": {
+      "tit":"استيراد حساب",
+      "placeholder_keystore":"يرجى سحب ملف الحساب هنا",
+      "create_tag":"ملاحظة الحساب",
+      "placeholder_tag":"يرجى ضبط اسم مذكرة الحساب",
+      "validate_tag":"الرجاء إدخال اسم ملاحظة الحساب",
+      "validate_tag_length":"لا يمكن أن يزيد اسم اسم الملاحظة عن 8 أحرف.",
+      "validate_enter_keystore":"الرجاء استيراد ملف الحساب أولاً",
+      "validate_error_keystore":"فشل استيراد الحساب ، قد يكون خطأ في ملف الحساب",
+      "imported_account_success":"تم الاستيراد بنجاح",
+      "exist":"هذا الحساب موجود بالفعل ، والمذكرة هي",
+      "keystore_error":"خطأ:",
+      "keystore_length_error":"يمكن استيراد ملف حساب واحد فقط ، يرجى المحاولة مرة أخرى!",
+      "keystore_format_error":"يرجى تحديد ملف الحساب الصحيح",
+      "keystore_is_has":"يوجد بالفعل حساب في القائمة تحتاج إلى استيراده.",
+      "imported_success":"الملف المحدد"
+    },
+    "remove_dia": {
+      "tit":"هل أنت متأكد أنك تريد إزالته؟",
+      "remove_confrim":"أنا متأكد من إزالة",
+      "backup":"يرجى الانتباه إلى نسخة احتياطية من هذا الحساب لتجنب الأضرار التي لحقت بالممتلكات.",
+      "input_pwd":"كلمة المرور",
+      "placeholder_pwd":"الرجاء إدخال كلمة المرور لهذا الحساب",
+      "validate_password":"كلمة المرور التي أدخلتها خاطئة",
+      "remove_success":"تمت إزالته بنجاح"
+    }
+  },
+  "page_config": {
+    "config_detection":"كشف التكوين",
+    "content_msg": {
+      "ready_test":"الاستعداد للكشف عن ملف التكوين",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"تم الحصول على أحدث معلومات تكوين العقدة",
+      "is_local":"تحقق مما إذا كان هناك ملف عقدة محليًا",
+      "already_local":"يوجد ملف التكوين الخاص بملف العقدة على الجهاز الحالي.",
+      "not_local":"لم يتم الكشف عن معلومات التكوين الخاصة بملف العقدة ، فقد تكون هذه هي المرة الأولى التي يتم فيها التشغيل.",
+      "config_write_local":"اكتب ملف معلومات العقدة التي تم الحصول عليها إلى القرص المحلي",
+      "whether_update_node":"تحقق ما إذا كان هناك حاجة إلى تحديث",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"تنزيل برنامج العقدة ، يرجى التحلي بالصبر",
+      "already_downloaded":"تم تنزيل برنامج العقدة وجاهز للبدء.",
+      "ready_start":"الاستعداد لبدء العقدة",
+      "enter_wallet":"عقدة يبدأ الكشف ، وعلى استعداد لدخول المحفظة",
+      "specifyDataDir":"يرجى تحديد مسار تخزين بيانات العقدة"
+    },
+    "version_dialog": {
+      "version_tit":"نسخة تحديث موجه",
+      "download_wallet":"انتقل إلى الموقع الرسمي لتنزيل أحدث إصدار من المال",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

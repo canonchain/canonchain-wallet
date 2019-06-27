@@ -1,204 +1,242 @@
 {
-    "confirm":"Berretsi",
-    "cancel":"Bertan behera",
-    "dialog_tit":"Galdetu",
-    "close":"Itxi",
-    "confirm_you_active":"Mesedez berretsi zure eragiketa",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Berretsi",
+  "cancel":"Bertan behera",
+  "dialog_tit":"Galdetu",
+  "close":"Itxi",
+  "confirm_you_active":"Mesedez, berretsi eragiketa",
+  "rpcErrors": {
+    "invalidFromAccount":"Bidaltzailearen kontua baliogabea da",
+    "invalidToAccount":"Sarrerako kontua baliogabea da",
+    "invalidAmountFormat":"Zenbateko formatu baliogabea",
+    "invalidGasFormat":"Gas formatu baliogabea",
+    "invalidDataFormat":"Datu-formatu hamaseitarra baliogabea",
+    "dataSizeTooLarge":"Datu hexadecimal handiegia da",
+    "invalidGasPriceFormat":"Gas unitate prezio formatua baliogabea da",
+    "invalidMciFormat":"MCI formatua baliogabea da",
+    "notEnoughFail":"Ez da nahikoa gas edo akats arraroak"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Hasiera",
+    "transfer":"Transfer",
+    "contacts":"Harremanetarako",
+    "setting":"Ezarri",
+    "total":"Guztira",
+    "testnet":"Probatu sarea",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"Sinkronizazioan"
+  },
+  "page_setting": {
+    "tit":"Ezarri",
+    "lang":"Hizkuntza",
+    "select":"Aukeratu",
+    "version_number":"Wallet bertsioa",
+    "data_path":"Nodoaren datuen bidea",
+    "change":"Aldaketa",
+    "changeDirNote":"Mesedez, eraman fitxategiak jatorrizko bidea direktorio berrira, bestela datu-galerak ekarriko ditu.",
+    "note":"arreta"
+  },
+  "page_contacts": {
+    "tit":"Harremanetarako",
+    "add_dialog":"Kontaktu berria",
+    "add_cont": {
+      "tit":"Kontaktu berria",
+      "tag":"Harremanetarako",
+      "address":"Kontuaren helbidea",
+      "tag_placeholder":"Mesedez, sartu kontaktuaren izena",
+      "address_placeholder":"Mesedez, sartu kontaktuaren kontua",
+      "add_success":"Behar bezala gehitu da"
     },
-    "model_header": {
-        "home":"Hasiera",
-        "transfer":"Transfer",
-        "contacts":"Harremanetarako",
-        "setting":"Ezarri",
-        "total":"Guztira",
-        "testnet":"Proba sarea",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Kendu egiten ari zara",
+      "remove_success":"Behar bezala kendu da"
     },
-    "page_setting": {
-        "tit":"Ezarri",
-        "lang":"Hizkuntza",
-        "select":"Aukeratu ezazu",
-        "version_number":"Karrerako bertsioa"
-    },
-    "page_contacts": {
-        "tit":"Harremanetarako",
-        "add_dialog":"Kontaktu berria",
-        "add_cont": {
-            "tit":"Kontaktu berria",
-            "tag":"Harremanetarako",
-            "address":"Kontu helbidea",
-            "tag_placeholder":"Sartu kontaktuaren izena",
-            "address_placeholder":"Sartu kontaktuaren kontuaren helbidea",
-            "add_success":"Ondo gehitu da"
-        },
-        "delete_dialog": {
-            "title":"Kendu egiten ari zara",
-            "remove_success":"Behar bezala kendu da"
-        },
-        "msg_info": {
-            "no_tag":"Idatzi kontuaren oharra",
-            "no_address":"Sartu zure kontuaren helbidea",
-            "valid_address":"Kontaktuaren helbidea legez kanpokoa da",
-            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
-            "contacts_quantity_error":"Kontaktu kopurua ezin da 50 baino gehiago izan",
-            "exist":"Kontaktua lehendik ere badago,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Bidaltzailea",
-        "to_address":"payee",
-        "amount":"Dirua",
-        "gas":"gas",
-        "send_all":"Bidali dena",
-        "data":"Datuak",
-        "data_placeholder":"Hexadecimal datuak",
-        "fees":"Karga kudeatzea",
-        "total":"Guztira",
-        "select":"Aukeratu ezazu",
-        "no_account_info":"Oraindik ez duzu kontua sortu edo inportatu",
-        "contacts_dig": {
-            "title":"Hautatu kontaktu-kontu bat",
-            "select_placeholder":"Aukeratu ezazu"
-        },
-        "confirm_dia": {
-            "title":"Berretsi",
-            "enter_passworld_tit":"Idatzi zure pasahitza",
-            "enter_passworld_place":"Idatzi zure pasahitza"
-        },
-        "msg_info": {
-            "address_null":"Sartu beste alderdiaren kontua",
-            "balance_zero":"Ez da nahikoa oreka, ezin da jarraitu",
-            "amount_zero":"Transferentzia zenbatekoa 0 baino handiagoa izan behar da",
-            "amount_error":"Sartu transakzio juridikoko zenbatekoa",
-            "address_err":"Transferitutako helbidea formatua baliogabea da.",
-            "send_success":"Transakzioa bidali da",
-            "amount_exceeded":"Uneko transakzioaren guztizko zenbatekoa kontuaren saldoa gainditzen du",
-
-            "decrypt_err":"Huts egin du parekatzeak huts egin du, pasahitzaren errorea izan daiteke",
-            "send_error":"Transakzioak huts egin du: egiaztatu oreka nahikoa dagoela eta meatzaritza kuota"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transakzio erregistroa",
-        "transfer_log_null":"Ez dago transakzioaren historia",
-        "active_icon": {
-            "go_transfer":"Hasi transferentzia",
-            "import_keystore":"Kontu fitxategia",
-            "qrcode":"QR kodea"
-        },
-        "edit_dia": {
-            "tit":"Aldatu oharra",
-            "subtit":"Markatu ohar bat zure konturako",
-            "no_tag":"Idatzi kontuaren oharra",
-            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan."
-        },
-        "dia_tx":{
-            "tit":"Transakzio informazioa",
-            "block_hash":"Transakzio zenbakia",
-            "status":"Estatuko",
-            "from":"Bidaltzailea",
-            "to":"payee",
-            "amount":"Dirua",
-            "data":"Datuak",
-            "send_time":"Denbora bidaltzen",
-            "mac_time":"Katearen denbora nagusia"
-        },
-        "keystore": {
-            "tit":"Babeskopiaren zorro fitxategia",
-            "copy":"Copy",
-            "download":"Deskargatu zorro fitxategia"
-        },
-        "msg_info": {
-            "ads_copy_success":"Helbidea kopiatu da",
-            "key_copy_success":"Kopia arrakastatsua"
-        }
-    },
-    "page_home": {
-        "import_account":"Inportatu kontua",
-        "add_account":"Kontu berria",
-        "acc":"Kontu-",
-        "create_dia": {
-            "create_tit":"Sortu kontua",
-            "backup_tit":"Egin kontu berriaren babeskopia",
-            "create_tag":"Kontuaren oharra",
-            "create_pwd":"Ezarri pasahitza",
-            "create_repwd":"Berretsi pasahitza",
-            "placeholder_tag":"Ezarri kontuaren oharraren izena",
-            "placeholder_pwd":"Ezarri kontuaren pasahitza",
-            "placeholder_repwd":"Berretsi kontuaren pasahitza",
-            
-            
-            "account_download_keystore":"Deskargatu kontu fitxategia",
-
-            "validate_tag":"Idatzi kontuaren oharraren izena",
-            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
-
-            "validate_password":"Idatzi zehaztutako pasahitza",
-            "validate_re_password":"Sartu berriro ezarri duzun pasahitza",
-            "validate_strong_password":"Sartu gutxienez 8 digituko pasahitza",
-            "validate_long_password":"Pasahitzak ezin du 100 luzera gainditzen",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Inconsistent password entered twice",
-
-            "create_success":"Sortu arrakastaz",
-            "account_quantity_error":"Kontuen kopurua ezin da 50 baino gehiago izan",
-            "create_success_des":"Mesedez, gorde zure kontuaren fitxategia eta ez partekatu inorekin!"
-        },
-        "import_dia": {
-            "tit":"Inportatu kontua",    
-            "placeholder_keystore":"Arrastatu kontuaren fitxategia hemen",
-            "create_tag":"Kontuaren oharra",
-            "placeholder_tag":"Ezarri kontuaren oharraren izena",
-
-            "validate_tag":"Idatzi kontuaren oharraren izena",
-            "validate_tag_length":"Oharraren izenaren izena ezin da 8 karaktere baino handiagoa izan.",
-            "validate_enter_keystore":"Inportatu kontu fitxategia lehenik",
-            "validate_error_keystore":"Kontuaren inportazioa huts egin du, kontu fitxategiaren errorea izan daiteke",
-            "imported_account_success":"Ondo inportatu da",
-            "exist":"Kontua badago lehendik ere, oharra da",
-            "keystore_error":"Akatsa:",
-            "keystore_length_error":"Kontu fitxategi bakarra inportatu daiteke, saiatu berriro!",
-            "keystore_format_error":"Hautatu kontu korrontearen fitxategia",
-            "keystore_is_has":"Kontua da dagoeneko inportatu behar duzun zerrendan.",
-            "imported_success":"Dagoeneko hautatutako fitxategia"
-        },
-        "remove_dia": {
-            "tit":"Ziur al zaude ezabatu nahi duzula?",
-            "remove_confrim":"Ziur kendu egin behar dudala",
-            "backup":"Kontu honen babeskopia egin arretaz kalteak saihesteko.",
-            "input_pwd":"Pasahitza",
-            "placeholder_pwd":"Sartu pasahitza kontu honetarako",
-            "validate_password":"Sartutako pasahitza gaizki dago",
-            "remove_success":"Behar bezala kendu da"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfigurazioaren detekzioa",
-        "content_msg":{
-            "ready_test":"Konfigurazio fitxategia hautatzeko prestatu",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Azken nodoaren konfigurazio informazioa lortu da",
-            "is_local":"Egiaztatu nodoen fitxategia lokalean dagoela",
-            "already_local":"Nodo fitxategiaren konfigurazio fitxategia uneko gailuan dago.",
-            "not_local":"Nodoaren konfigurazioaren informazioa ez da hauteman, lehen aldiz exekutatzen egon daiteke.",
-            "config_write_local":"Idatzi lortutako nodoen informazio-fitxategia disko lokalean",
-            "whether_update_node":"Egiaztatu eguneratzea beharrezkoa dela",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Nodoa programa deskargatzen, pazientzia izan",
-            "already_downloaded":"Nodoaren programa deskargatu da eta hasierarako prest dago.",
-            "ready_start":"Prestatu nodoa abiarazteko",
-            "enter_wallet":"Nodoa detekzioa hasten da, zorroan sartzeko prest"
-        },
-        "version_dialog":{
-            "version_tit":"Eguneratzeen bertsioaren jarraipena",
-            "download_wallet":"Joan webgune ofizialera dirua azken bertsioa deskargatzeko",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Sartu kontuko oharra",
+      "no_address":"Sartu kontuaren helbidea",
+      "valid_address":"Kontaktuaren helbidea legez kanpokoa da",
+      "validate_tag_length":"Oharren izenaren izenak ezin du 8 karaktere baino gehiago izan.",
+      "contacts_quantity_error":"Kontaktuen kopurua 50etik gorakoa izan daiteke",
+      "exist":"Kontaktua dagoeneko badago,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Bidalketako festa",
+    "to_address":"payee",
+    "amount":"Dirua",
+    "gas":"gas",
+    "gasPrice":"Gas unitateko prezioa",
+    "send_all":"Bidali guztiak",
+    "data":"Datuak",
+    "data_placeholder":"Datu hexadecimalak",
+    "fees":"Kudeaketa kuota",
+    "txFee":"Transakzio kuota",
+    "total":"Guztira",
+    "select":"Aukeratu",
+    "no_account_info":"Ez dago konturik, sortu edo inportatu kontua",
+    "no_keystore_file":"Ez da konturako dagokion konturik aurkitu",
+    "contacts_dig": {
+      "title":"Hautatu kontaktu kontua",
+      "select_placeholder":"Aukeratu"
+    },
+    "confirm_dia": {
+      "title":"Mesedez, berretsi",
+      "enter_passworld_tit":"Mesedez, sartu zure pasahitza",
+      "enter_passworld_place":"Mesedez, sartu zure pasahitza"
+    },
+    "msg_info": {
+      "address_null":"Mesedez, sartu beste alderdiaren kontua",
+      "balance_zero":"Nahikoa den oreka, ezin da jarraitu",
+      "amount_zero":"Transferentziaren zenbatekoa 0 baino handiagoa izan behar da",
+      "amount_error":"Sartu transakzio juridikoaren zenbatekoa",
+      "address_err":"Transferitutako helbidearen formatua baliogabea da.",
+      "gas_error":"Sartu transakzio legezko gasa",
+      "gasPrice_error":"Sartu transakzioaren prezio juridikoa",
+      "send_success":"Bidalitako transakzioa",
+      "amount_exceeded":"Uneko transakzioaren zenbatekoak kontuaren saldoa gainditzen dute",
+      "txFeeTooLow":"Transakzioaren kostua txikia da",
+      "decrypt_err":"Wallet analizatzeak huts egin du, baliteke pasahitz errorea izatea",
+      "send_error":"Transakzioa huts egin du: egiaztatu baldin eta baldin eta baldin eta nahikoa balantze eta miner kuota badago",
+      "generate_offline_block_err":"Sinatutako transakzioa huts egin du",
+      "sign_err":"Sinadura huts egin du",
+      "send_offline_block_err":"Sinatutako transakzio bat bidaltzean huts egin du",
+      "syncingWaitTitle":"Nodoa sinkronizatuta dago",
+      "syncingWait":"Nodoa sinkronizatuta dago, transakzioaren baieztapen denbora luzeagoa izan daiteke, mesedez egon pazientzia"
+    }
+  },
+  "pager": {
+    "next":"Hurrengo orrialdea",
+    "prev":"Aurreko orrialdea"
+  },
+  "page_account": {
+    "transfer_log":"Transakzio erregistroa",
+    "transfer_log_null":"Ez da transakzioen historia",
+    "txSent":"Transmititutako transakzioa",
+    "txAll":"Transakzio guztiak",
+    "txNew":"Kontu korronteak transakzio informazio berria du",
+    "checkNow":"Ikusi orain",
+    "active_icon": {
+      "go_transfer":"Transferentzia abiaraztea",
+      "import_keystore":"Kontuko fitxategia",
+      "qrcode":"QR kodea"
+    },
+    "edit_dia": {
+      "tit":"Aldatu oharrak",
+      "subtit":"Markatu ohar bat zure konturako",
+      "no_tag":"Sartu kontuko oharra",
+      "validate_tag_length":"Oharren izenaren izenak ezin du 8 karaktere baino gehiago izan."
+    },
+    "dia_tx": {
+      "tit":"Transakzio informazioa",
+      "block_hash":"Transakzioaren zenbakia",
+      "status":"Estatuko",
+      "from":"Bidalketako festa",
+      "to":"payee",
+      "amount":"Dirua",
+      "data":"Datuak",
+      "send_time":"Ordua bidaltzea",
+      "mac_time":"Katearen denbora nagusia",
+      "gasPrice":"Gasaren prezio unitatea (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Gasaren erabilera",
+      "waiting":"Baieztapen zain",
+      "success":"Arrakasta",
+      "sendFail":"Bidali huts egin du",
+      "fail1":"Hutsegitea (1)",
+      "fail2":"Hutsegitea (2)",
+      "fail3":"Hutsegitea (3)"
+    },
+    "keystore": {
+      "tit":"Babeskopia zorro fitxategia",
+      "copy":"Copy",
+      "download":"Deskargatu zorro fitxategia"
+    },
+    "msg_info": {
+      "ads_copy_success":"Helbidea kopiatu da",
+      "key_copy_success":"Kopiatu arrakastatsua"
+    }
+  },
+  "page_home": {
+    "import_account":"Inportatu kontua",
+    "add_account":"Kontu berria",
+    "acc":"Kontu-",
+    "create_dia": {
+      "create_tit":"Sortu kontua",
+      "backup_tit":"Egin babeskopia zure kontu berria",
+      "create_tag":"Kontuko oharra",
+      "create_pwd":"Ezarri pasahitza",
+      "create_repwd":"Berretsi pasahitza",
+      "placeholder_tag":"Mesedez ezarri kontuaren oharren izena",
+      "placeholder_pwd":"Ezarri kontuaren pasahitza",
+      "placeholder_repwd":"Mesedez, baieztatu kontuaren pasahitza",
+      "account_download_keystore":"Deskargatu kontua",
+      "validate_tag":"Sartu kontuko oharren izena",
+      "validate_tag_length":"Oharren izenaren izenak ezin du 8 karaktere baino gehiago izan.",
+      "validate_password":"Sartu ezarritako pasahitza",
+      "validate_re_password":"Sartu berriro ezarri duzun pasahitza",
+      "validate_strong_password":"Sartu gutxienez 8 digitu pasahitza",
+      "validate_long_password":"Pasahitzak ezin du 100 digitu baino gehiago izan",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Pasahitz inkoherente bi aldiz sartu da",
+      "create_success":"Behar bezala sortu da",
+      "account_quantity_error":"Kontu kopurua 50 baino gehiago ezin izango da",
+      "create_success_des":"Gorde zure kontuko fitxategia eta ez partekatu inorekin!"
+    },
+    "import_dia": {
+      "tit":"Inportatu kontua",
+      "placeholder_keystore":"Arrastatu kontu fitxategia hemen",
+      "create_tag":"Kontuko oharra",
+      "placeholder_tag":"Mesedez ezarri kontuaren oharren izena",
+      "validate_tag":"Sartu kontuko oharren izena",
+      "validate_tag_length":"Oharren izenaren izenak ezin du 8 karaktere baino gehiago izan.",
+      "validate_enter_keystore":"Mesedez, inportatu lehenetsitako kontua",
+      "validate_error_keystore":"Kontuaren inportazioa huts egin du, baliteke kontu fitxategiaren errorea",
+      "imported_account_success":"Behar bezala inportatu da",
+      "exist":"Kontu hau lehendik ere badago, oharra da",
+      "keystore_error":"Akatsa:",
+      "keystore_length_error":"Kontu fitxategi bakarra inportatu daiteke, saiatu berriro!",
+      "keystore_format_error":"Hautatu kontu fitxategi zuzena",
+      "keystore_is_has":"Badago kontua inportatu behar duzun zerrendan.",
+      "imported_success":"Hautatutako fitxategia"
+    },
+    "remove_dia": {
+      "tit":"Ziur zaude kendu nahi duzula?",
+      "remove_confrim":"Ziur nago kentzeko",
+      "backup":"Mesedez, kontuan hartu kontu honen babeskopia, kalteei eragozteko.",
+      "input_pwd":"Pasahitza",
+      "placeholder_pwd":"Sartu kontu honen pasahitza",
+      "validate_password":"Sartu duzun pasahitza okerra da",
+      "remove_success":"Behar bezala kendu da"
+    }
+  },
+  "page_config": {
+    "config_detection":"Konfigurazio detekzioa",
+    "content_msg": {
+      "ready_test":"Konfigurazio fitxategia detektatzeko prestatu",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Azken nodo konfigurazio informazioa lortu da",
+      "is_local":"Egiaztatu nodo fitxategi bat dago lokalean",
+      "already_local":"Nodo fitxategiaren konfigurazio fitxategia uneko gailuan dago.",
+      "not_local":"Nodo fitxategiaren konfigurazio informazioa ez da detektatzen, lehen aldiz exekutatzen ari da.",
+      "config_write_local":"Idatzi lortutako nodoaren fitxategia tokiko diskoan",
+      "whether_update_node":"Egiaztatu eguneratzea behar dela",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Nodoa deskargatzeko programa, mesedez, pazientzia izan",
+      "already_downloaded":"Nodoaren programa deskargatu eta abiatzeko prest dago.",
+      "ready_start":"Prestatu nodoa hasteko",
+      "enter_wallet":"Nodoa detektatzen hasten da, zorroa sartzeko prest dago",
+      "specifyDataDir":"Mesedez, hautatu nodoaren biltegiratze bide-izena"
+    },
+    "version_dialog": {
+      "version_tit":"Bertsioaren eguneratze gonbita",
+      "download_wallet":"Joan webgune ofiziala diruaren azken bertsioa deskargatzeko",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

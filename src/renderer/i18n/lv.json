@@ -1,204 +1,242 @@
 {
-    "confirm":"Apstipriniet",
-    "cancel":"Atcelt",
-    "dialog_tit":"Pieprasīt",
-    "close":"Aizvērt",
-    "confirm_you_active":"Lūdzu, apstipriniet savu darbību",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Apstipriniet",
+  "cancel":"Atcelt",
+  "dialog_tit":"Pieprasīt",
+  "close":"Aizvērt",
+  "confirm_you_active":"Lūdzu, apstipriniet savu darbību",
+  "rpcErrors": {
+    "invalidFromAccount":"Sūtītāja konts ir nederīgs",
+    "invalidToAccount":"Ienākošais konts ir nederīgs",
+    "invalidAmountFormat":"Nederīgs summas formāts",
+    "invalidGasFormat":"Nederīgs gāzes formāts",
+    "invalidDataFormat":"Nederīgs heksadecimālais datu formāts",
+    "dataSizeTooLarge":"Heksadecimālie dati ir pārāk lieli",
+    "invalidGasPriceFormat":"Gāzes vienības cenas formāts nav derīgs",
+    "invalidMciFormat":"MCI formāts nav derīgs",
+    "notEnoughFail":"Nepietiekama gāzes vai neparasta kļūme"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Sākums",
+    "transfer":"Pārskaitījums",
+    "contacts":"Kontakti",
+    "setting":"Iestatīšana",
+    "total":"Kopā",
+    "testnet":"Testa tīkls",
+    "online":"Tiešsaistē",
+    "offline":"Bezsaistē",
+    "syncing":"Sinhronizācijā"
+  },
+  "page_setting": {
+    "tit":"Iestatīšana",
+    "lang":"Valoda",
+    "select":"Lūdzu, izvēlieties",
+    "version_number":"Seifa versija",
+    "data_path":"Mezgla datu ceļš",
+    "change":"Mainīt",
+    "changeDirNote":"Lūdzu, pārvietojiet failus sākotnējā ceļā uz jauno direktoriju, pretējā gadījumā tas izraisīs datu zudumu.",
+    "note":"Uzmanību"
+  },
+  "page_contacts": {
+    "tit":"Kontakti",
+    "add_dialog":"Jauns kontakts",
+    "add_cont": {
+      "tit":"Jauns kontakts",
+      "tag":"Kontakti",
+      "address":"Konta adrese",
+      "tag_placeholder":"Lūdzu, ievadiet kontaktpersonas vārdu",
+      "address_placeholder":"Lūdzu, ievadiet kontaktpersonas konta adresi",
+      "add_success":"Pievienots veiksmīgi"
     },
-    "model_header": {
-        "home":"Sākums",
-        "transfer":"Pārskaitījums",
-        "contacts":"Kontakti",
-        "setting":"Iestatīšana",
-        "total":"Kopā",
-        "testnet":"Testa tīkls",
-        "online":"Tiešsaistē",
-        "offline":"Bezsaistē"
+    "delete_dialog": {
+      "title":"Jūs noņemat",
+      "remove_success":"Veiksmīgi noņemta"
     },
-    "page_setting": {
-        "tit":"Iestatīšana",
-        "lang":"Valoda",
-        "select":"Lūdzu, izvēlieties",
-        "version_number":"Seifa versija"
-    },
-    "page_contacts": {
-        "tit":"Kontakti",
-        "add_dialog":"Jauns kontakts",
-        "add_cont": {
-            "tit":"Jauns kontakts",
-            "tag":"Kontakti",
-            "address":"Konta adrese",
-            "tag_placeholder":"Lūdzu, ievadiet kontaktpersonas vārdu",
-            "address_placeholder":"Lūdzu, ievadiet kontaktpersonas konta adresi",
-            "add_success":"Pievienots veiksmīgi"
-        },
-        "delete_dialog": {
-            "title":"Jūs noņemat",
-            "remove_success":"Veiksmīgi noņemta"
-        },
-        "msg_info": {
-            "no_tag":"Lūdzu, ievadiet konta piezīmi",
-            "no_address":"Lūdzu, ievadiet savu konta adresi",
-            "valid_address":"Kontaktpersonas adrese ir nelikumīga",
-            "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
-            "contacts_quantity_error":"Kontaktu skaits nedrīkst pārsniegt 50",
-            "exist":"Kontaktpersona jau pastāv,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Sūtīšanas puse",
-        "to_address":"Saņēmējs",
-        "amount":"Summa",
-        "gas":"Gāze",
-        "send_all":"Sūtīt visus",
-        "data":"Dati",
-        "data_placeholder":"Heksadecimālie dati",
-        "fees":"Pārkraušanas maksa",
-        "total":"Kopā",
-        "select":"Lūdzu, izvēlieties",
-        "no_account_info":"Vēl nav konta, lūdzu, izveidojiet vai importējiet kontu",
-        "contacts_dig": {
-            "title":"Izvēlieties kontaktu kontu",
-            "select_placeholder":"Lūdzu, izvēlieties"
-        },
-        "confirm_dia": {
-            "title":"Lūdzu, apstipriniet",
-            "enter_passworld_tit":"Lūdzu, ievadiet savu paroli",
-            "enter_passworld_place":"Lūdzu, ievadiet savu paroli"
-        },
-        "msg_info": {
-            "address_null":"Lūdzu, ievadiet otras puses kontu",
-            "balance_zero":"Nepietiekams līdzsvars, ko nevar turpināt",
-            "amount_zero":"Pārskaitījuma summai jābūt lielākai par 0",
-            "amount_error":"Lūdzu, ievadiet juridisko darījumu summu",
-            "address_err":"Pārsūtītās adreses formāts nav derīgs.",
-            "send_success":"Nosūtīts darījums",
-            "amount_exceeded":"Pašreizējā darījuma kopējā summa pārsniedz konta atlikumu",
-
-            "decrypt_err":"Seifa parsēšana neizdevās, tā var būt parole kļūda",
-            "send_error":"Darījums neizdevās: lūdzu, pārbaudiet, vai ir pietiekams atlikums un kalnraču maksa"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Darījuma ieraksts",
-        "transfer_log_null":"Nav darījumu vēstures",
-        "active_icon": {
-            "go_transfer":"Uzsākt pārsūtīšanu",
-            "import_keystore":"Konta fails",
-            "qrcode":"QR kods"
-        },
-        "edit_dia": {
-            "tit":"Modificēt piezīmi",
-            "subtit":"Atzīmējiet savu kontu",
-            "no_tag":"Lūdzu, ievadiet konta piezīmi",
-            "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm."
-        },
-        "dia_tx":{
-            "tit":"Informācija par darījumu",
-            "block_hash":"Darījuma numurs",
-            "status":"Valsts",
-            "from":"Sūtīšanas puse",
-            "to":"Saņēmējs",
-            "amount":"Summa",
-            "data":"Dati",
-            "send_time":"Sūtīšanas laiks",
-            "mac_time":"Galvenais ķēdes laiks"
-        },
-        "keystore": {
-            "tit":"Backup seifa fails",
-            "copy":"Kopēt",
-            "download":"Lejupielādēt seifa failu"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adrese ir kopēta",
-            "key_copy_success":"Veiksmīga kopija"
-        }
-    },
-    "page_home": {
-        "import_account":"Importēt kontu",
-        "add_account":"Jauns konts",
-        "acc":"Konts",
-        "create_dia": {
-            "create_tit":"Izveidojiet kontu",
-            "backup_tit":"Dublējiet savu jauno kontu",
-            "create_tag":"Konta piezīme",
-            "create_pwd":"Iestatiet paroli",
-            "create_repwd":"Apstipriniet paroli",
-            "placeholder_tag":"Lūdzu, norādiet konta piezīmes nosaukumu",
-            "placeholder_pwd":"Lūdzu, iestatiet konta paroli",
-            "placeholder_repwd":"Lūdzu, apstipriniet konta paroli",
-            
-            
-            "account_download_keystore":"Lejupielādēt konta failu",
-
-            "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
-            "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
-
-            "validate_password":"Lūdzu, ievadiet savu iestatīto paroli",
-            "validate_re_password":"Lūdzu, ievadiet paroli, kuru vēlreiz iestatījāt",
-            "validate_strong_password":"Lūdzu, ievadiet vismaz 8 ciparu paroli",
-            "validate_long_password":"Parole nedrīkst pārsniegt 100 ciparus",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Divreiz ievadīta nekonsekventa parole",
-
-            "create_success":"Izveidots veiksmīgi",
-            "account_quantity_error":"Kontu skaits nedrīkst pārsniegt 50. T",
-            "create_success_des":"Lūdzu, saglabājiet sava konta failu un nepiedaliet to nevienam!"
-        },
-        "import_dia": {
-            "tit":"Importēt kontu",    
-            "placeholder_keystore":"Lūdzu, velciet konta failu šeit",
-            "create_tag":"Konta piezīme",
-            "placeholder_tag":"Lūdzu, norādiet konta piezīmes nosaukumu",
-
-            "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
-            "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
-            "validate_enter_keystore":"Vispirms importējiet konta failu",
-            "validate_error_keystore":"Konta importēšana neizdevās, var būt konta faila kļūda",
-            "imported_account_success":"Veiksmīgi importēts",
-            "exist":"Šis konts jau pastāv, piezīme ir",
-            "keystore_error":"Kļūda:",
-            "keystore_length_error":"Var importēt tikai vienu konta failu, lūdzu, mēģiniet vēlreiz!",
-            "keystore_format_error":"Lūdzu, atlasiet pareizo konta failu",
-            "keystore_is_has":"Sarakstā jau ir konts, kas nepieciešams importēšanai.",
-            "imported_success":"Jau atlasīts fails"
-        },
-        "remove_dia": {
-            "tit":"Vai tiešām vēlaties to noņemt?",
-            "remove_confrim":"Esmu pārliecināts, ka to noņemšu",
-            "backup":"Lai izvairītos no īpašuma bojājumiem, lūdzu, pievērsiet uzmanību šī konta dublējumkopijai.",
-            "input_pwd":"Parole",
-            "placeholder_pwd":"Lūdzu, ievadiet šī konta paroli",
-            "validate_password":"Ievadītā parole ir nepareiza",
-            "remove_success":"Veiksmīgi noņemta"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfigurācijas noteikšana",
-        "content_msg":{
-            "ready_test":"Sagatavojieties, lai noteiktu konfigurācijas failu",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Ir iegūta jaunākā mezgla konfigurācijas informācija",
-            "is_local":"Pārbaudiet, vai lokāli ir mezglu fails",
-            "already_local":"Pašreizējā ierīcē ir mezgla faila konfigurācijas fails.",
-            "not_local":"Nav konstatēta mezgla faila konfigurācijas informācija, tā var būt pirmā reize.",
-            "config_write_local":"Ierakstiet iegūto mezglu informācijas failu vietējā diskā",
-            "whether_update_node":"Pārbaudiet, vai ir nepieciešams atjauninājums",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Lejupielādējiet mezglu programmu, lūdzu, esiet pacietīgs",
-            "already_downloaded":"Mezgla programma ir lejupielādēta un gatava sākt.",
-            "ready_start":"Sagatavojiet mezglu",
-            "enter_wallet":"Mezgls sāk atklāt, gatavs ievadīt seifu"
-        },
-        "version_dialog":{
-            "version_tit":"Versijas atjaunināšanas uzvedne",
-            "download_wallet":"Iet uz oficiālo tīmekļa vietni, lai lejupielādētu jaunāko naudas versiju",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Lūdzu, ievadiet konta piezīmi",
+      "no_address":"Lūdzu, ievadiet konta adresi",
+      "valid_address":"Kontaktpersonas adrese ir nelikumīga",
+      "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
+      "contacts_quantity_error":"Kontaktu skaits nedrīkst pārsniegt 50",
+      "exist":"Kontaktpersona jau pastāv,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Sūtīšanas puse",
+    "to_address":"Saņēmējs",
+    "amount":"Summa",
+    "gas":"Gāze",
+    "gasPrice":"Gāzes vienības cena",
+    "send_all":"Sūtīt visus",
+    "data":"Dati",
+    "data_placeholder":"Heksadecimālie dati",
+    "fees":"Pārkraušanas maksa",
+    "txFee":"Darījuma maksa",
+    "total":"Kopā",
+    "select":"Lūdzu, izvēlieties",
+    "no_account_info":"Vēl nav konta, lūdzu, izveidojiet vai importējiet kontu",
+    "no_keystore_file":"Atbilstošajam kontam nav atrasts neviens konta fails",
+    "contacts_dig": {
+      "title":"Izvēlieties kontaktu kontu",
+      "select_placeholder":"Lūdzu, izvēlieties"
+    },
+    "confirm_dia": {
+      "title":"Lūdzu, apstipriniet",
+      "enter_passworld_tit":"Lūdzu, ievadiet savu paroli",
+      "enter_passworld_place":"Lūdzu, ievadiet savu paroli"
+    },
+    "msg_info": {
+      "address_null":"Lūdzu, ievadiet otras puses kontu",
+      "balance_zero":"Nepietiekams līdzsvars, ko nevar turpināt",
+      "amount_zero":"Pārskaitījuma summai jābūt lielākai par 0",
+      "amount_error":"Lūdzu, ievadiet juridisko darījumu summu",
+      "address_err":"Pārsūtītās adreses formāts nav derīgs.",
+      "gas_error":"Lūdzu, ievadiet juridisko darījumu gāzi",
+      "gasPrice_error":"Lūdzu, ievadiet juridisko darījumu cenu",
+      "send_success":"Nosūtīts darījums",
+      "amount_exceeded":"Pašreizējā kopējā darījumu summa pārsniedz konta atlikumu",
+      "txFeeTooLow":"Darījumu izmaksas ir pārāk zemas",
+      "decrypt_err":"Seifa parsēšana neizdevās, tā var būt kļūda parolē",
+      "send_error":"Darījums neizdevās: lūdzu, pārbaudiet, vai ir pietiekams atlikums un kalnraču maksa",
+      "generate_offline_block_err":"Izveidot neparakstītu darījumu neizdevās",
+      "sign_err":"Paraksts neizdevās",
+      "send_offline_block_err":"Neizdevās nosūtīt parakstītu darījumu",
+      "syncingWaitTitle":"Mezgls ir sinhronizēts",
+      "syncingWait":"Mezgls ir sinhronizēts, darījuma apstiprināšanas laiks var būt garāks, lūdzu, esiet pacietīgs"
+    }
+  },
+  "pager": {
+    "next":"Nākamā lapa",
+    "prev":"Iepriekšējā lapa"
+  },
+  "page_account": {
+    "transfer_log":"Darījuma ieraksts",
+    "transfer_log_null":"Nav darījumu vēstures",
+    "txSent":"Nosūtīts darījums",
+    "txAll":"Visi darījumi",
+    "txNew":"Norēķinu kontam ir jauna informācija par darījumu",
+    "checkNow":"Skatīt tagad",
+    "active_icon": {
+      "go_transfer":"Uzsākt pārsūtīšanu",
+      "import_keystore":"Konta fails",
+      "qrcode":"QR kods"
+    },
+    "edit_dia": {
+      "tit":"Modificējiet piezīmes",
+      "subtit":"Atzīmējiet savu kontu",
+      "no_tag":"Lūdzu, ievadiet konta piezīmi",
+      "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm."
+    },
+    "dia_tx": {
+      "tit":"Informācija par darījumu",
+      "block_hash":"Darījuma numurs",
+      "status":"Valsts",
+      "from":"Sūtīšanas puse",
+      "to":"Saņēmējs",
+      "amount":"Summa",
+      "data":"Dati",
+      "send_time":"Sūtīšanas laiks",
+      "mac_time":"Galvenais ķēdes laiks",
+      "gasPrice":"Gāzes vienības cena (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Gāzes izmantošana",
+      "waiting":"Gaida apstiprinājumu",
+      "success":"Panākumi",
+      "sendFail":"Sūtīt neizdevās",
+      "fail1":"Kļūme (1)",
+      "fail2":"Kļūme (2)",
+      "fail3":"Kļūme (3)"
+    },
+    "keystore": {
+      "tit":"Backup seifa fails",
+      "copy":"Kopēt",
+      "download":"Lejupielādēt seifa failu"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adrese ir kopēta",
+      "key_copy_success":"Veiksmīga kopija"
+    }
+  },
+  "page_home": {
+    "import_account":"Importēt kontu",
+    "add_account":"Jauns konts",
+    "acc":"Konts",
+    "create_dia": {
+      "create_tit":"Izveidojiet kontu",
+      "backup_tit":"Dublējiet savu jauno kontu",
+      "create_tag":"Konta piezīme",
+      "create_pwd":"Iestatiet paroli",
+      "create_repwd":"Apstipriniet paroli",
+      "placeholder_tag":"Lūdzu, norādiet konta piezīmes nosaukumu",
+      "placeholder_pwd":"Lūdzu, iestatiet konta paroli",
+      "placeholder_repwd":"Lūdzu, apstipriniet konta paroli",
+      "account_download_keystore":"Lejupielādēt konta failu",
+      "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
+      "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
+      "validate_password":"Lūdzu, ievadiet savu iestatīto paroli",
+      "validate_re_password":"Lūdzu, ievadiet paroli, kuru vēlreiz iestatījāt",
+      "validate_strong_password":"Lūdzu, ievadiet vismaz 8 ciparu paroli",
+      "validate_long_password":"Parole nedrīkst pārsniegt 100 ciparus",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Divreiz ievadīta nekonsekventa parole",
+      "create_success":"Izveidots veiksmīgi",
+      "account_quantity_error":"Kontu skaits nedrīkst pārsniegt 50. \ T",
+      "create_success_des":"Lūdzu, saglabājiet sava konta failu un nepiedaliet to nevienam!"
+    },
+    "import_dia": {
+      "tit":"Importēt kontu",
+      "placeholder_keystore":"Lūdzu, velciet konta failu šeit",
+      "create_tag":"Konta piezīme",
+      "placeholder_tag":"Lūdzu, norādiet konta piezīmes nosaukumu",
+      "validate_tag":"Lūdzu, ievadiet konta piezīmes nosaukumu",
+      "validate_tag_length":"Piezīmes nosaukums nevar būt lielāks par 8 rakstzīmēm.",
+      "validate_enter_keystore":"Vispirms importējiet konta failu",
+      "validate_error_keystore":"Konta importēšana neizdevās, var būt konta faila kļūda",
+      "imported_account_success":"Veiksmīgi importēts",
+      "exist":"Šis konts jau pastāv, piezīme ir",
+      "keystore_error":"Kļūda:",
+      "keystore_length_error":"Var importēt tikai vienu konta failu, lūdzu, mēģiniet vēlreiz!",
+      "keystore_format_error":"Lūdzu, atlasiet pareizo konta failu",
+      "keystore_is_has":"Sarakstā jau ir konts, kas nepieciešams importēšanai.",
+      "imported_success":"Atlasīts fails"
+    },
+    "remove_dia": {
+      "tit":"Vai tiešām vēlaties to noņemt?",
+      "remove_confrim":"Esmu pārliecināts, ka to noņemšu",
+      "backup":"Lai izvairītos no īpašuma bojājumiem, lūdzu, pievērsiet uzmanību šī konta dublējumkopijai.",
+      "input_pwd":"Parole",
+      "placeholder_pwd":"Lūdzu, ievadiet šī konta paroli",
+      "validate_password":"Ievadītā parole ir nepareiza",
+      "remove_success":"Veiksmīgi noņemta"
+    }
+  },
+  "page_config": {
+    "config_detection":"Konfigurācijas noteikšana",
+    "content_msg": {
+      "ready_test":"Sagatavojieties, lai noteiktu konfigurācijas failu",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Ir iegūta jaunākā mezgla konfigurācijas informācija",
+      "is_local":"Pārbaudiet, vai lokāli ir mezglu fails",
+      "already_local":"Pašreizējā ierīcē ir mezgla faila konfigurācijas fails.",
+      "not_local":"Nav konstatēta mezgla faila konfigurācijas informācija, tā var būt pirmā reize.",
+      "config_write_local":"Ierakstiet iegūto mezglu informācijas failu vietējā diskā",
+      "whether_update_node":"Pārbaudiet, vai ir nepieciešams atjauninājums",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Lejupielādējiet mezglu programmu, lūdzu, esiet pacietīgs",
+      "already_downloaded":"Mezglu programma ir lejupielādēta un gatava darbam.",
+      "ready_start":"Sagatavojiet mezglu",
+      "enter_wallet":"Mezgls sāk atklāt, gatavs ievadīt seifu",
+      "specifyDataDir":"Lūdzu, atlasiet mezglu datu glabāšanas ceļu"
+    },
+    "version_dialog": {
+      "version_tit":"Versijas atjaunināšanas uzvedne",
+      "download_wallet":"Iet uz oficiālo tīmekļa vietni, lai lejupielādētu jaunāko naudas versiju",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

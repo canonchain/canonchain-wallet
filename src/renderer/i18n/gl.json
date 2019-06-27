@@ -1,204 +1,242 @@
 {
-    "confirm":"Confirmar",
-    "cancel":"Cancelar",
-    "dialog_tit":"Preguntar",
-    "close":"Pechar",
-    "confirm_you_active":"Confirma a túa operación",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Confirmar",
+  "cancel":"Cancelar",
+  "dialog_tit":"Preguntar",
+  "close":"Pechar",
+  "confirm_you_active":"Confirma a túa operación",
+  "rpcErrors": {
+    "invalidFromAccount":"A conta do remitente non é válida",
+    "invalidToAccount":"A conta entrante non é válida",
+    "invalidAmountFormat":"Formato de cantidade non válido",
+    "invalidGasFormat":"Formato de gas non válido",
+    "invalidDataFormat":"Formato de datos hexadecimal non válido",
+    "dataSizeTooLarge":"Os datos hexadecimais son demasiado grandes",
+    "invalidGasPriceFormat":"O formato do prezo unitario do gas non é válido",
+    "invalidMciFormat":"O formato MCI non é válido",
+    "notEnoughFail":"Gas insuficiente ou fallo anormal"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Inicio",
+    "transfer":"Transferencia",
+    "contacts":"Contacto",
+    "setting":"Configuración",
+    "total":"Total",
+    "testnet":"Proba de rede",
+    "online":"Online",
+    "offline":"Desconectado",
+    "syncing":"En sincronización"
+  },
+  "page_setting": {
+    "tit":"Configuración",
+    "lang":"Linguaxe",
+    "select":"Escolla",
+    "version_number":"Versión de carteira",
+    "data_path":"Ruta de datos de nodos",
+    "change":"Cambiar",
+    "changeDirNote":"Por favor, move os ficheiros no camiño orixinal ao novo directorio, senón que causará perda de datos.",
+    "note":"Atención"
+  },
+  "page_contacts": {
+    "tit":"Contacto",
+    "add_dialog":"Novo contacto",
+    "add_cont": {
+      "tit":"Novo contacto",
+      "tag":"Contacto",
+      "address":"Enderezo da conta",
+      "tag_placeholder":"Introduza o nome do contacto",
+      "address_placeholder":"Introduce o enderezo da conta do contacto",
+      "add_success":"Engadido con éxito"
     },
-    "model_header": {
-        "home":"Inicio",
-        "transfer":"Transferencia",
-        "contacts":"Contacto",
-        "setting":"Configuración",
-        "total":"Total",
-        "testnet":"Rede de probas",
-        "online":"En liña",
-        "offline":"Desconectado"
+    "delete_dialog": {
+      "title":"Estás a eliminar",
+      "remove_success":"Eliminouse con éxito"
     },
-    "page_setting": {
-        "tit":"Configuración",
-        "lang":"Linguaxe",
-        "select":"Elixe",
-        "version_number":"Versión de carteira"
-    },
-    "page_contacts": {
-        "tit":"Contacto",
-        "add_dialog":"Novo contacto",
-        "add_cont": {
-            "tit":"Novo contacto",
-            "tag":"Contacto",
-            "address":"Enderezo da conta",
-            "tag_placeholder":"Introduce o nome do contacto",
-            "address_placeholder":"Introduce o enderezo da conta do contacto",
-            "add_success":"Engadiuse con éxito"
-        },
-        "delete_dialog": {
-            "title":"Estás a eliminar",
-            "remove_success":"Eliminouse con éxito"
-        },
-        "msg_info": {
-            "no_tag":"Insira unha nota de conta",
-            "no_address":"Introduce o enderezo da túa conta",
-            "valid_address":"O enderezo do contacto é ilegal",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
-            "contacts_quantity_error":"O número de contactos non pode superar os 50",
-            "exist":"O contacto xa existe,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Festa enviada",
-        "to_address":"Beneficiario",
-        "amount":"Cantidade",
-        "gas":"Gas",
-        "send_all":"Enviar todo",
-        "data":"Datos",
-        "data_placeholder":"Datos hexadecimales",
-        "fees":"Tarifa de manutención",
-        "total":"Total",
-        "select":"Elixe",
-        "no_account_info":"Aínda non hai ningunha conta, crea ou importa unha conta",
-        "contacts_dig": {
-            "title":"Selecciona unha conta de contacto",
-            "select_placeholder":"Elixe"
-        },
-        "confirm_dia": {
-            "title":"Confirma",
-            "enter_passworld_tit":"Introduce o teu contrasinal",
-            "enter_passworld_place":"Introduce o teu contrasinal"
-        },
-        "msg_info": {
-            "address_null":"Insira a conta doutra parte",
-            "balance_zero":"Balance insuficiente, incapaz de continuar",
-            "amount_zero":"O importe da transferencia debe ser superior a 0",
-            "amount_error":"Introduce un importe de transacción legal",
-            "address_err":"O formato do enderezo transferido non é válido.",
-            "send_success":"Transacción enviada",
-            "amount_exceeded":"O importe total da transacción actual supera o saldo da conta",
-
-            "decrypt_err":"Fallou a análise de carteira, pode ser un erro de contrasinal",
-            "send_error":"Fallou a transacción: verifique se hai un saldo suficiente e unha taxa de mineiros"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Rexistro de transaccións",
-        "transfer_log_null":"Sen historial de transaccións",
-        "active_icon": {
-            "go_transfer":"Iniciar unha transferencia",
-            "import_keystore":"Ficheiro da conta",
-            "qrcode":"Código QR"
-        },
-        "edit_dia": {
-            "tit":"Modificar nota",
-            "subtit":"Marca unha nota para a túa conta",
-            "no_tag":"Insira unha nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres."
-        },
-        "dia_tx":{
-            "tit":"Información de transaccións",
-            "block_hash":"Número de transacción",
-            "status":"Estado",
-            "from":"Festa enviada",
-            "to":"Beneficiario",
-            "amount":"Cantidade",
-            "data":"Datos",
-            "send_time":"Enviando tempo",
-            "mac_time":"Tempo de cadea principal"
-        },
-        "keystore": {
-            "tit":"Ficheiro de carteira de respaldo",
-            "copy":"Copiar",
-            "download":"Descargar o ficheiro de carteira"
-        },
-        "msg_info": {
-            "ads_copy_success":"Copiouse a dirección",
-            "key_copy_success":"Copia exitosa"
-        }
-    },
-    "page_home": {
-        "import_account":"Importar conta",
-        "add_account":"Nova conta",
-        "acc":"Conta",
-        "create_dia": {
-            "create_tit":"Crea unha conta",
-            "backup_tit":"Fai unha copia de seguridade da túa nova conta",
-            "create_tag":"Nota de conta",
-            "create_pwd":"Establecer o contrasinal",
-            "create_repwd":"Confirmar o contrasinal",
-            "placeholder_tag":"Configure o nome da nota da conta",
-            "placeholder_pwd":"Configure o contrasinal da conta",
-            "placeholder_repwd":"Confirma o contrasinal da conta",
-            
-            
-            "account_download_keystore":"Descargar o ficheiro da conta",
-
-            "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
-
-            "validate_password":"Introduza o contrasinal que configurou",
-            "validate_re_password":"Introduza o contrasinal que configurou de novo",
-            "validate_strong_password":"Introduza un contrasinal de polo menos 8 díxitos",
-            "validate_long_password":"A contraseña non pode exceder os 100 díxitos",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Contrasinal inconsistente introducido dúas veces",
-
-            "create_success":"Creado con éxito",
-            "account_quantity_error":"O número de contas non pode superar os 50",
-            "create_success_des":"Garda o ficheiro da túa conta e non o comparte con ninguén."
-        },
-        "import_dia": {
-            "tit":"Importar conta",    
-            "placeholder_keystore":"Arrastra aquí o ficheiro da conta",
-            "create_tag":"Nota de conta",
-            "placeholder_tag":"Configure o nome da nota da conta",
-
-            "validate_tag":"Introduce o nome da nota de conta",
-            "validate_tag_length":"O nome do nome da nota non pode ser maior que 8 caracteres.",
-            "validate_enter_keystore":"Importe primeiro o ficheiro da conta",
-            "validate_error_keystore":"Fallou a importación da conta, pode ser un erro de ficheiro de conta",
-            "imported_account_success":"Importada con éxito",
-            "exist":"Esta conta xa existe, a nota é",
-            "keystore_error":"Erro:",
-            "keystore_length_error":"Só se pode importar un ficheiro de conta, téntao de novo.",
-            "keystore_format_error":"Selecciona o ficheiro da conta correcta",
-            "keystore_is_has":"Xa hai unha conta na lista que precisa importar.",
-            "imported_success":"Arquivo xa seleccionado"
-        },
-        "remove_dia": {
-            "tit":"Estás seguro de que queres eliminar?",
-            "remove_confrim":"Estou seguro de eliminar",
-            "backup":"Preste atención á copia de seguridade desta conta para evitar danos á propiedade.",
-            "input_pwd":"Contrasinal",
-            "placeholder_pwd":"Introduza o contrasinal para esta conta",
-            "validate_password":"O contrasinal que introduciu está mal",
-            "remove_success":"Eliminouse con éxito"
-        }
-    },
-    "page_config": {
-        "config_detection":"Detección de configuración",
-        "content_msg":{
-            "ready_test":"Prepárese para detectar o ficheiro de configuración",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Obtíñase a última información de configuración do nodo",
-            "is_local":"Comprobe se hai un ficheiro de nodo localmente",
-            "already_local":"O ficheiro de configuración do ficheiro de nodo existe no dispositivo actual.",
-            "not_local":"Non se detecta a información de configuración do ficheiro do nodo, pode ser a primeira vez que se execute.",
-            "config_write_local":"Escribe o ficheiro de información do nodo obtido no disco local",
-            "whether_update_node":"Comprobe se se necesita unha actualización",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Descargando o programa de nodos, ten paciencia",
-            "already_downloaded":"O programa do nodo foi descargado e listo para comezar.",
-            "ready_start":"Prepárese para iniciar o nodo",
-            "enter_wallet":"O nodo comeza a detección, listo para entrar na carteira"
-        },
-        "version_dialog":{
-            "version_tit":"Solicitude de actualización da versión",
-            "download_wallet":"Vaia ao sitio web oficial para descargar a última versión do diñeiro",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Introduce unha nota de conta",
+      "no_address":"Introduce o enderezo da conta",
+      "valid_address":"O enderezo do contacto é ilegal",
+      "validate_tag_length":"O nome do nome da nota non pode ter máis de 8 caracteres.",
+      "contacts_quantity_error":"O número de contactos non pode superar os 50",
+      "exist":"O contacto xa existe,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Partido de envío",
+    "to_address":"Beneficiario",
+    "amount":"Cantidade",
+    "gas":"Gas",
+    "gasPrice":"Prezo unitario de gas",
+    "send_all":"Enviar todo",
+    "data":"Datos",
+    "data_placeholder":"Datos hexadecimais",
+    "fees":"Taxa de manipulación",
+    "txFee":"Taxa de transacción",
+    "total":"Total",
+    "select":"Escolla",
+    "no_account_info":"Non hai ningunha conta, cree ou importe conta",
+    "no_keystore_file":"Non se atopou ningún ficheiro de conta para a conta correspondente",
+    "contacts_dig": {
+      "title":"Seleccione a conta de contacto",
+      "select_placeholder":"Escolla"
+    },
+    "confirm_dia": {
+      "title":"Confirma",
+      "enter_passworld_tit":"Introduce o teu contrasinal",
+      "enter_passworld_place":"Introduce o teu contrasinal"
+    },
+    "msg_info": {
+      "address_null":"Introduce a conta da outra parte",
+      "balance_zero":"Balance insuficiente, incapaz de continuar",
+      "amount_zero":"O importe da transferencia debe ser maior que 0",
+      "amount_error":"Introduce un importe legal de transacción",
+      "address_err":"O formato da dirección transferida non é válido.",
+      "gas_error":"Introduce un gas de transacción legal",
+      "gasPrice_error":"Introduce o prezo de transacción legal",
+      "send_success":"Transacción enviada",
+      "amount_exceeded":"O importe total da transacción actual supera o saldo da conta",
+      "txFeeTooLow":"O custo da transacción é demasiado baixo",
+      "decrypt_err":"Fallou a análise de carteira, pode ser un erro de contrasinal",
+      "send_error":"A transacción fallou: comprobe se hai suficiente saldo e taxa de mineiro",
+      "generate_offline_block_err":"Fallou a xeración de transacción sen asinar",
+      "sign_err":"A sinatura fallou",
+      "send_offline_block_err":"Fallou o envío dunha transacción asinada",
+      "syncingWaitTitle":"O nodo está sincronizado",
+      "syncingWait":"O nodo está sincronizado, o tempo de confirmación da transacción pode ser máis longo. Ten paciencia"
+    }
+  },
+  "pager": {
+    "next":"Páxina seguinte",
+    "prev":"Páxina anterior"
+  },
+  "page_account": {
+    "transfer_log":"Rexistro de transaccións",
+    "transfer_log_null":"Non hai historial de transaccións",
+    "txSent":"Transacción transmitida",
+    "txAll":"Todas as transaccións",
+    "txNew":"A conta actual ten información de nova transacción",
+    "checkNow":"Ver agora",
+    "active_icon": {
+      "go_transfer":"Iniciar unha transferencia",
+      "import_keystore":"Ficheiro de conta",
+      "qrcode":"Código QR"
+    },
+    "edit_dia": {
+      "tit":"Modificar notas",
+      "subtit":"Marcar unha nota para a túa conta",
+      "no_tag":"Introduce unha nota de conta",
+      "validate_tag_length":"O nome do nome da nota non pode ter máis de 8 caracteres."
+    },
+    "dia_tx": {
+      "tit":"Información de transacción",
+      "block_hash":"Número de transacción",
+      "status":"Estado",
+      "from":"Partido de envío",
+      "to":"Beneficiario",
+      "amount":"Cantidade",
+      "data":"Datos",
+      "send_time":"Envío de tempo",
+      "mac_time":"Tempo da cadea principal",
+      "gasPrice":"Prezo unitario de gas (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Uso do gas",
+      "waiting":"Agardando a confirmación",
+      "success":"Éxito",
+      "sendFail":"Erro ao enviar",
+      "fail1":"Fallo (1)",
+      "fail2":"Fallo (2)",
+      "fail3":"Fallo (3)"
+    },
+    "keystore": {
+      "tit":"Ficheiro de carteira de copia de seguridade",
+      "copy":"Copiar",
+      "download":"Descargar o ficheiro de carteira"
+    },
+    "msg_info": {
+      "ads_copy_success":"Copiouse o enderezo",
+      "key_copy_success":"Copia exitosa"
+    }
+  },
+  "page_home": {
+    "import_account":"Importar conta",
+    "add_account":"Nova conta",
+    "acc":"Conta",
+    "create_dia": {
+      "create_tit":"Crear unha conta",
+      "backup_tit":"Fai unha copia de seguridade da túa nova conta",
+      "create_tag":"Nota de conta",
+      "create_pwd":"Establecer o contrasinal",
+      "create_repwd":"Confirme o contrasinal",
+      "placeholder_tag":"Configure o nome da nota de conta",
+      "placeholder_pwd":"Configure o contrasinal da conta",
+      "placeholder_repwd":"Confirma o contrasinal da conta",
+      "account_download_keystore":"Descargar o ficheiro de conta",
+      "validate_tag":"Introduza o nome da nota de conta",
+      "validate_tag_length":"O nome do nome da nota non pode ter máis de 8 caracteres.",
+      "validate_password":"Introduza o contrasinal que definiu",
+      "validate_re_password":"Introduza o contrasinal que volveu configurar",
+      "validate_strong_password":"Introduza un contrasinal de polo menos 8 díxitos",
+      "validate_long_password":"O contrasinal non pode exceder os 100 díxitos",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"O contrasinal inconsistente entrou dúas veces",
+      "create_success":"Creado con éxito",
+      "account_quantity_error":"O número de contas non pode superar os 50",
+      "create_success_des":"Garde o ficheiro da súa conta e non comparta con ninguén."
+    },
+    "import_dia": {
+      "tit":"Importar conta",
+      "placeholder_keystore":"Arrastre o ficheiro da conta aquí",
+      "create_tag":"Nota de conta",
+      "placeholder_tag":"Configure o nome da nota de conta",
+      "validate_tag":"Introduza o nome da nota de conta",
+      "validate_tag_length":"O nome do nome da nota non pode ter máis de 8 caracteres.",
+      "validate_enter_keystore":"Por favor, primeiro importa o ficheiro da conta",
+      "validate_error_keystore":"Fallou a importación de contas, pode ser un erro no ficheiro de conta",
+      "imported_account_success":"Importouse correctamente",
+      "exist":"Esta conta xa existe, a nota é",
+      "keystore_error":"Erro:",
+      "keystore_length_error":"Só se pode importar un ficheiro de conta, ténteo de novo.",
+      "keystore_format_error":"Seleccione o ficheiro de conta correcto",
+      "keystore_is_has":"Xa hai unha conta na lista que precisa importar.",
+      "imported_success":"Ficheiro seleccionado"
+    },
+    "remove_dia": {
+      "tit":"¿Está seguro de que quere eliminala?",
+      "remove_confrim":"Estou seguro de eliminar",
+      "backup":"Preste atención á copia de seguridade desta conta para evitar danos á propiedade.",
+      "input_pwd":"Contrasinal",
+      "placeholder_pwd":"Introduza o contrasinal para esta conta",
+      "validate_password":"O contrasinal que introduciches é incorrecto",
+      "remove_success":"Eliminouse con éxito"
+    }
+  },
+  "page_config": {
+    "config_detection":"Detección de configuración",
+    "content_msg": {
+      "ready_test":"Prepare-se para detectar o ficheiro de configuración",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Obtivéronse as últimas informacións de configuración de nodos",
+      "is_local":"Comprobe se hai un ficheiro de nodo localmente",
+      "already_local":"O ficheiro de configuración do ficheiro de nodo existe no dispositivo actual.",
+      "not_local":"Non se detecta a información de configuración do ficheiro de nodo, pode que sexa a primeira vez que se executa.",
+      "config_write_local":"Escribe o ficheiro de información do nodo obtido no disco local",
+      "whether_update_node":"Comprobe se é necesaria unha actualización",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Descargando o programa de nodos, ten paciencia",
+      "already_downloaded":"O programa de nodos foi descargado e listo para comezar.",
+      "ready_start":"Prepare-se para iniciar o nodo",
+      "enter_wallet":"O nodo comeza a detección, listo para entrar na carteira",
+      "specifyDataDir":"Seleccione o camiño de almacenamento dos datos do nodo"
+    },
+    "version_dialog": {
+      "version_tit":"Solicitude de actualización de versións",
+      "download_wallet":"Ir á páxina web oficial para descargar a última versión do diñeiro",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

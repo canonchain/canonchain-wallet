@@ -1,204 +1,242 @@
 {
-    "confirm":"אשר",
-    "cancel":"בטל",
-    "dialog_tit":"הפקודה",
-    "close":"סגור",
-    "confirm_you_active":"אשר את הפעולה שלך",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"אשר",
+  "cancel":"בטל",
+  "dialog_tit":"הפקודה",
+  "close":"סגור",
+  "confirm_you_active":"אשר את הפעולה שלך",
+  "rpcErrors": {
+    "invalidFromAccount":"חשבון השולח אינו חוקי",
+    "invalidToAccount":"החשבון הנכנס אינו חוקי",
+    "invalidAmountFormat":"פורמט כמות לא חוקי",
+    "invalidGasFormat":"תבנית גז לא חוקית",
+    "invalidDataFormat":"פורמט נתונים לא הקסדצימלי לא חוקי",
+    "dataSizeTooLarge":"הנתונים הקסדצימליים גדולים מדי",
+    "invalidGasPriceFormat":"פורמט מחיר יחידת הגז אינו חוקי",
+    "invalidMciFormat":"פורמט MCI אינו חוקי",
+    "notEnoughFail":"אין די גז או תקלות לא תקינות"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"בית",
+    "transfer":"העברה",
+    "contacts":"צור קשר",
+    "setting":"הגדרה",
+    "total":"סך הכל",
+    "testnet":"בדוק רשת",
+    "online":"באינטרנט",
+    "offline":"לא מקוון",
+    "syncing":"בסנכרון"
+  },
+  "page_setting": {
+    "tit":"הגדרה",
+    "lang":"שפה",
+    "select":"אנא בחר",
+    "version_number":"גרסת ארנק",
+    "data_path":"נתיב נתוני הצומת",
+    "change":"שנה",
+    "changeDirNote":"אנא העבר את הקבצים בנתיב המקורי לספרייה החדשה, אחרת זה יגרום לאובדן נתונים.",
+    "note":"תשומת לב"
+  },
+  "page_contacts": {
+    "tit":"צור קשר",
+    "add_dialog":"איש קשר חדש",
+    "add_cont": {
+      "tit":"איש קשר חדש",
+      "tag":"צור קשר",
+      "address":"כתובת חשבון",
+      "tag_placeholder":"הזן את שם איש הקשר",
+      "address_placeholder":"הזן את כתובת החשבון של איש הקשר",
+      "add_success":"נוסף בהצלחה"
     },
-    "model_header": {
-        "home":"בית",
-        "transfer":"העברה",
-        "contacts":"צור קשר",
-        "setting":"הגדרה",
-        "total":"סך הכל",
-        "testnet":"בדוק את הרשת",
-        "online":"באינטרנט",
-        "offline":"לא מקוון"
+    "delete_dialog": {
+      "title":"אתה מסיר",
+      "remove_success":"הוסר בהצלחה"
     },
-    "page_setting": {
-        "tit":"הגדרה",
-        "lang":"שפה",
-        "select":"אנא בחר",
-        "version_number":"גרסת ארנק"
-    },
-    "page_contacts": {
-        "tit":"צור קשר",
-        "add_dialog":"איש קשר חדש",
-        "add_cont": {
-            "tit":"איש קשר חדש",
-            "tag":"צור קשר",
-            "address":"כתובת חשבון",
-            "tag_placeholder":"הזן את שם איש הקשר",
-            "address_placeholder":"הזן את כתובת החשבון של איש הקשר",
-            "add_success":"נוסף בהצלחה"
-        },
-        "delete_dialog": {
-            "title":"אתה מסיר",
-            "remove_success":"הוסר בהצלחה"
-        },
-        "msg_info": {
-            "no_tag":"הזן הערה לחשבון",
-            "no_address":"הזן את כתובת החשבון שלך",
-            "valid_address":"הכתובת של איש הקשר אינה חוקית",
-            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
-            "contacts_quantity_error":"מספר אנשי הקשר לא יעלה על 50",
-            "exist":"איש הקשר כבר קיים,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"שולח מסיבה",
-        "to_address":"מקבל תשלום",
-        "amount":"סכום",
-        "gas":"גז",
-        "send_all":"שלח הכל",
-        "data":"נתונים",
-        "data_placeholder":"נתונים הקסדצימליים",
-        "fees":"דמי טיפול",
-        "total":"סך הכל",
-        "select":"אנא בחר",
-        "no_account_info":"אין עדיין חשבון, צור או ייבא חשבון",
-        "contacts_dig": {
-            "title":"בחר חשבון איש קשר",
-            "select_placeholder":"אנא בחר"
-        },
-        "confirm_dia": {
-            "title":"אשר",
-            "enter_passworld_tit":"הזן את הסיסמה שלך",
-            "enter_passworld_place":"הזן את הסיסמה שלך"
-        },
-        "msg_info": {
-            "address_null":"הזן את החשבון של הצד השני",
-            "balance_zero":"איזון מספיק, לא מסוגל להמשיך",
-            "amount_zero":"כמות ההעברה חייבת להיות גדולה מ -0",
-            "amount_error":"הזן סכום עסקה חוקי",
-            "address_err":"הפורמט של הכתובת המועברת אינו חוקי.",
-            "send_success":"העסקה נשלחה",
-            "amount_exceeded":"הסכום הכולל של העסקה הנוכחית עולה על יתרת החשבון",
-
-            "decrypt_err":"ניתוח הארנק נכשל, ייתכן שזו שגיאת סיסמה",
-            "send_error":"העסקה נכשלה: בדוק אם יש מספיק איזון ודמי כורה"
-        }
-    },
-    "page_account": {
-        "transfer_log":"רשומת עסקאות",
-        "transfer_log_null":"אין היסטוריית עסקאות",
-        "active_icon": {
-            "go_transfer":"התחל העברה",
-            "import_keystore":"קובץ חשבון",
-            "qrcode":"קוד QR"
-        },
-        "edit_dia": {
-            "tit":"שנה הערה",
-            "subtit":"סמן הערה עבור החשבון שלך",
-            "no_tag":"הזן הערה לחשבון",
-            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים."
-        },
-        "dia_tx":{
-            "tit":"מידע על עסקאות",
-            "block_hash":"מספר עסקה",
-            "status":"מדינה",
-            "from":"שולח מסיבה",
-            "to":"מקבל תשלום",
-            "amount":"סכום",
-            "data":"נתונים",
-            "send_time":"שולח זמן",
-            "mac_time":"זמן שרשרת הראשי"
-        },
-        "keystore": {
-            "tit":"גיבוי קובץ הארנק",
-            "copy":"העתק",
-            "download":"הורד את קובץ הארנק"
-        },
-        "msg_info": {
-            "ads_copy_success":"הכתובת הועתקה",
-            "key_copy_success":"עותק מוצלח"
-        }
-    },
-    "page_home": {
-        "import_account":"ייבא חשבון",
-        "add_account":"חשבון חדש",
-        "acc":"חשבון",
-        "create_dia": {
-            "create_tit":"צור חשבון",
-            "backup_tit":"גבה את החשבון החדש שלך",
-            "create_tag":"פתק חשבון",
-            "create_pwd":"הגדר סיסמה",
-            "create_repwd":"אשר סיסמה",
-            "placeholder_tag":"הגדר את שם ההערה בחשבון",
-            "placeholder_pwd":"הגדר את סיסמת החשבון",
-            "placeholder_repwd":"אשר את סיסמת החשבון",
-            
-            
-            "account_download_keystore":"הורד את קובץ החשבון",
-
-            "validate_tag":"הזן את שם ההערה בחשבון",
-            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
-
-            "validate_password":"הזן את הסיסמה שהגדרת",
-            "validate_re_password":"הזן את הסיסמה שהגדרת שוב",
-            "validate_strong_password":"הזן סיסמה של 8 ספרות לפחות",
-            "validate_long_password":"הסיסמה לא יכולה לעלות על 100 ספרות באורך",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"סיסמא לא עקבית נכנסה פעמיים",
-
-            "create_success":"נוצר בהצלחה",
-            "account_quantity_error":"מספר החשבונות לא יעלה על 50",
-            "create_success_des":"שמור את קובץ החשבון שלך ואל תשתף אותו עם אף אחד!"
-        },
-        "import_dia": {
-            "tit":"ייבא חשבון",    
-            "placeholder_keystore":"אנא גרור את קובץ החשבון כאן",
-            "create_tag":"פתק חשבון",
-            "placeholder_tag":"הגדר את שם ההערה בחשבון",
-
-            "validate_tag":"הזן את שם ההערה בחשבון",
-            "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
-            "validate_enter_keystore":"תחילה ייבא את קובץ החשבון",
-            "validate_error_keystore":"ייבוא ​​החשבון נכשל, עשוי להיות שגיאת קובץ חשבון",
-            "imported_account_success":"ייבא בהצלחה",
-            "exist":"חשבון זה כבר קיים, הפתק הוא",
-            "keystore_error":"שגיאה:",
-            "keystore_length_error":"ניתן לייבא רק קובץ חשבון אחד, נסה שוב!",
-            "keystore_format_error":"בחר את קובץ החשבון הנכון",
-            "keystore_is_has":"יש כבר חשבון ברשימה שעליך לייבא.",
-            "imported_success":"קובץ שנבחר כבר"
-        },
-        "remove_dia": {
-            "tit":"האם אתה בטוח שברצונך להסיר אותו?",
-            "remove_confrim":"אני בטוח להסיר",
-            "backup":"אנא שים לב לגיבוי של חשבון זה כדי למנוע נזק לרכוש.",
-            "input_pwd":"סיסמה",
-            "placeholder_pwd":"הזן את הסיסמה עבור חשבון זה",
-            "validate_password":"הסיסמה שהזנת שגויה",
-            "remove_success":"הוסר בהצלחה"
-        }
-    },
-    "page_config": {
-        "config_detection":"זיהוי תצורה",
-        "content_msg":{
-            "ready_test":"היכונו כדי לזהות את קובץ התצורה",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"המידע האחרון תצורת הצומת הושג",
-            "is_local":"בדוק אם יש קובץ צומת מקומי",
-            "already_local":"קובץ התצורה של קובץ הצומת קיים בהתקן הנוכחי.",
-            "not_local":"מידע התצורה של קובץ הצומת אינו מזוהה, ייתכן שהוא פועל בפעם הראשונה.",
-            "config_write_local":"כתוב את קובץ הצומת שהושג לדיסק המקומי",
-            "whether_update_node":"בדוק אם יש צורך בעדכון",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"הורדת תוכנית הצומת, בבקשה להיות סבלני",
-            "already_downloaded":"תוכנית הצומת כבר הורד מוכן להתחיל.",
-            "ready_start":"היכונו להתחיל את הצומת",
-            "enter_wallet":"הצומת מתחיל גילוי, מוכן להיכנס לארנק"
-        },
-        "version_dialog":{
-            "version_tit":"גרסה עדכון גרסה",
-            "download_wallet":"עבור אל האתר הרשמי כדי להוריד את הגירסה האחרונה של הכסף",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"הזן הערה לחשבון",
+      "no_address":"הזן את כתובת החשבון",
+      "valid_address":"הכתובת של איש הקשר אינה חוקית",
+      "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
+      "contacts_quantity_error":"מספר אנשי הקשר לא יעלה על 50",
+      "exist":"איש הקשר כבר קיים,"
     }
+  },
+  "page_transfer": {
+    "from_address":"שולח מסיבה",
+    "to_address":"מקבל תשלום",
+    "amount":"סכום",
+    "gas":"גז",
+    "gasPrice":"מחיר יחידת גז",
+    "send_all":"שלח הכל",
+    "data":"נתונים",
+    "data_placeholder":"נתונים הקסדצימליים",
+    "fees":"דמי טיפול",
+    "txFee":"עמלת עסקה",
+    "total":"סך הכל",
+    "select":"אנא בחר",
+    "no_account_info":"אין עדיין חשבון, צור או ייבא חשבון",
+    "no_keystore_file":"לא נמצא קובץ חשבון עבור החשבון המתאים",
+    "contacts_dig": {
+      "title":"בחר חשבון איש קשר",
+      "select_placeholder":"אנא בחר"
+    },
+    "confirm_dia": {
+      "title":"אשר",
+      "enter_passworld_tit":"הזן את הסיסמה שלך",
+      "enter_passworld_place":"הזן את הסיסמה שלך"
+    },
+    "msg_info": {
+      "address_null":"הזן את החשבון של הצד השני",
+      "balance_zero":"איזון מספיק, לא ניתן להמשיך",
+      "amount_zero":"כמות ההעברה חייבת להיות גדולה מ -0",
+      "amount_error":"הזן סכום עסקה חוקי",
+      "address_err":"הפורמט של הכתובת המועברת אינו חוקי.",
+      "gas_error":"הזן גז העסקה חוקי",
+      "gasPrice_error":"הזן את מחיר העסקה המשפטי",
+      "send_success":"העסקה נשלחה",
+      "amount_exceeded":"סכום העסקה הכולל הנוכחי עולה על יתרת החשבון",
+      "txFeeTooLow":"עלות העסקה נמוכה מדי",
+      "decrypt_err":"ניתוח הארנק נכשל, ייתכן שזו שגיאת סיסמה",
+      "send_error":"העסקה נכשלה: בדוק אם יש מספיק איזון כורה בתשלום",
+      "generate_offline_block_err":"יצירת העסקה הלא חתומה נכשלה",
+      "sign_err":"חתימה נכשלה",
+      "send_offline_block_err":"שליחת עסקה חתומה נכשלה",
+      "syncingWaitTitle":"הצומת מסונכרן",
+      "syncingWait":"הצומת מסונכרן, זמן אישור העסקה עשוי להיות ארוך יותר, אנא המתן בסבלנות"
+    }
+  },
+  "pager": {
+    "next":"דף הבא",
+    "prev":"דף קודם"
+  },
+  "page_account": {
+    "transfer_log":"רשומת עסקאות",
+    "transfer_log_null":"אין היסטוריית עסקאות",
+    "txSent":"עסקה מועברת",
+    "txAll":"כל העסקאות",
+    "txNew":"בחשבון הנוכחי יש מידע עסקה חדש",
+    "checkNow":"צפה כעת",
+    "active_icon": {
+      "go_transfer":"התחל העברה",
+      "import_keystore":"קובץ חשבון",
+      "qrcode":"קוד QR"
+    },
+    "edit_dia": {
+      "tit":"שנה הערות",
+      "subtit":"סמן הערה עבור החשבון שלך",
+      "no_tag":"הזן הערה לחשבון",
+      "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים."
+    },
+    "dia_tx": {
+      "tit":"מידע על עסקאות",
+      "block_hash":"מספר עסקה",
+      "status":"מדינה",
+      "from":"שולח מסיבה",
+      "to":"מקבל תשלום",
+      "amount":"סכום",
+      "data":"נתונים",
+      "send_time":"שולח זמן",
+      "mac_time":"זמן שרשרת הראשי",
+      "gasPrice":"מחיר יחידת הגז (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"שימוש בגז",
+      "waiting":"ממתין לאישור",
+      "success":"הצלחה",
+      "sendFail":"השליחה נכשלה",
+      "fail1":"כשל (1)",
+      "fail2":"כשל (2)",
+      "fail3":"כשל (3)"
+    },
+    "keystore": {
+      "tit":"גיבוי קובץ הארנק",
+      "copy":"העתק",
+      "download":"הורד את קובץ הארנק"
+    },
+    "msg_info": {
+      "ads_copy_success":"הכתובת הועתקה",
+      "key_copy_success":"עותק מוצלח"
+    }
+  },
+  "page_home": {
+    "import_account":"ייבא חשבון",
+    "add_account":"חשבון חדש",
+    "acc":"חשבון",
+    "create_dia": {
+      "create_tit":"צור חשבון",
+      "backup_tit":"גבה את החשבון החדש שלך",
+      "create_tag":"פתק חשבון",
+      "create_pwd":"הגדר סיסמה",
+      "create_repwd":"אשר סיסמה",
+      "placeholder_tag":"הגדר את שם ההערה בחשבון",
+      "placeholder_pwd":"הגדר את סיסמת החשבון",
+      "placeholder_repwd":"אשר את סיסמת החשבון",
+      "account_download_keystore":"הורד קובץ חשבון",
+      "validate_tag":"הזן את שם ההערה בחשבון",
+      "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
+      "validate_password":"הזן את הסיסמה שהגדרת",
+      "validate_re_password":"הזן את הסיסמה שהגדרת שוב",
+      "validate_strong_password":"הזן סיסמה של 8 ספרות לפחות",
+      "validate_long_password":"הסיסמה לא יכולה לעלות על 100 ספרות באורך",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"סיסמא לא עקבית נכנסה פעמיים",
+      "create_success":"נוצר בהצלחה",
+      "account_quantity_error":"מספר החשבונות לא יעלה על 50",
+      "create_success_des":"שמור את קובץ החשבון שלך ואל תשתף אותו עם אף אחד!"
+    },
+    "import_dia": {
+      "tit":"ייבא חשבון",
+      "placeholder_keystore":"אנא גרור את קובץ החשבון כאן",
+      "create_tag":"פתק חשבון",
+      "placeholder_tag":"הגדר את שם ההערה בחשבון",
+      "validate_tag":"הזן את שם ההערה בחשבון",
+      "validate_tag_length":"השם של שם ההערה לא יכול להיות גדול מ -8 תווים.",
+      "validate_enter_keystore":"תחילה ייבא את קובץ החשבון",
+      "validate_error_keystore":"ייבוא ​​החשבון נכשל, עשוי להיות שגיאת קובץ חשבון",
+      "imported_account_success":"ייבא בהצלחה",
+      "exist":"חשבון זה כבר קיים, הפתק הוא",
+      "keystore_error":"שגיאה:",
+      "keystore_length_error":"ניתן לייבא רק קובץ חשבון אחד, נסה שוב!",
+      "keystore_format_error":"בחר את קובץ החשבון הנכון",
+      "keystore_is_has":"יש כבר חשבון ברשימה שעליך לייבא.",
+      "imported_success":"הקובץ נבחר"
+    },
+    "remove_dia": {
+      "tit":"האם אתה בטוח שברצונך להסיר אותו?",
+      "remove_confrim":"אני בטוח להסיר",
+      "backup":"אנא שים לב לגיבוי של חשבון זה כדי למנוע נזק לרכוש.",
+      "input_pwd":"סיסמה",
+      "placeholder_pwd":"הזן את הסיסמה עבור חשבון זה",
+      "validate_password":"הסיסמה שהזנת שגויה",
+      "remove_success":"הוסר בהצלחה"
+    }
+  },
+  "page_config": {
+    "config_detection":"זיהוי תצורה",
+    "content_msg": {
+      "ready_test":"היכונו כדי לזהות את קובץ התצורה",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"המידע האחרון תצורת הצומת הושג",
+      "is_local":"בדוק אם קיים קובץ צומת מקומי",
+      "already_local":"קובץ התצורה של קובץ הצומת קיים בהתקן הנוכחי.",
+      "not_local":"מידע התצורה של קובץ הצומת אינו מזוהה, ייתכן שהוא פועל בפעם הראשונה.",
+      "config_write_local":"כתוב את קובץ הצומת שהושג לדיסק המקומי",
+      "whether_update_node":"בדוק אם יש צורך בעדכון",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"הורדת תוכנית הצומת, בבקשה להיות סבלני",
+      "already_downloaded":"תוכנית הצומת כבר הורד מוכן להתחיל.",
+      "ready_start":"היכונו להתחיל את הצומת",
+      "enter_wallet":"הצומת מתחיל גילוי, מוכן להיכנס לארנק",
+      "specifyDataDir":"בחר את נתיב האחסון של נתוני הצומת"
+    },
+    "version_dialog": {
+      "version_tit":"עדכון עדכון גירסה",
+      "download_wallet":"עבור אל האתר הרשמי כדי להוריד את הגירסה האחרונה של הכסף",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

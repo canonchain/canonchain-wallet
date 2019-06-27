@@ -1,204 +1,242 @@
 {
-    "confirm":"Tshawb xyuas",
-    "cancel":"Tshem tawm",
-    "dialog_tit":"Sij hawm",
-    "close":"Kaw",
-    "confirm_you_active":"Thov paub meej tias koj lub lag luam",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Tshawb xyuas",
+  "cancel":"Tshem tawm",
+  "dialog_tit":"Sij hawm",
+  "close":"Kaw",
+  "confirm_you_active":"Thov paub meej tias koj ua haujlwm",
+  "rpcErrors": {
+    "invalidFromAccount":"Tus neeg sender lub account yog invalid",
+    "invalidToAccount":"Cov nyiaj yuav khoom los tsis yog",
+    "invalidAmountFormat":"Hom nyiaj tsis txaus",
+    "invalidGasFormat":"Cov hom roj tsis zoo",
+    "invalidDataFormat":"Cov ntaub ntawv tsis raug cai hexadecimal",
+    "dataSizeTooLarge":"Hexadecimal cov ntaub ntawv yog loj heev",
+    "invalidGasPriceFormat":"Roj chav tsev nqe hom ntawv yog invalid",
+    "invalidMciFormat":"MCI hom ntawv yog invalid",
+    "notEnoughFail":"Kev hlav tsis txaus lossis tsis pom kev zoo"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Tsev",
+    "transfer":"Hloov mus",
+    "contacts":"Hu rau",
+    "setting":"Qhov chaw",
+    "total":"Tag nrho",
+    "testnet":"Kuaj kev sib tw",
+    "online":"Hauv internet",
+    "offline":"Offline",
+    "syncing":"Hauv synchronization"
+  },
+  "page_setting": {
+    "tit":"Qhov chaw",
+    "lang":"Lus",
+    "select":"Thov xaiv",
+    "version_number":"Phab ntsa version",
+    "data_path":"Node cov ntaub ntawv txoj kev",
+    "change":"Hloov",
+    "changeDirNote":"Thov tshem cov ntaub ntawv hauv thawj txoj hauv kev rau cov npe tshiab, txwv tsis pub nws yuav ua rau cov ntaub ntawv poob.",
+    "note":"Nco ntsoov"
+  },
+  "page_contacts": {
+    "tit":"Hu rau",
+    "add_dialog":"Kev sib cuag tshiab",
+    "add_cont": {
+      "tit":"Kev sib cuag tshiab",
+      "tag":"Hu rau",
+      "address":"Tus account chaw nyob",
+      "tag_placeholder":"Thov sau lub npe ntawm tus neeg hu",
+      "address_placeholder":"Thov sau tus neeg hu tus account",
+      "add_success":"Ntxiv ntse"
     },
-    "model_header": {
-        "home":"Tsev",
-        "transfer":"Hloov mus",
-        "contacts":"Hu rau",
-        "setting":"Qhov chaw",
-        "total":"Tag nrho",
-        "testnet":"Kuaj kev sib tw",
-        "online":"Hauv internet",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Koj tshem tawm",
+      "remove_success":"Hloov tawm zoo"
     },
-    "page_setting": {
-        "tit":"Qhov chaw",
-        "lang":"Lus",
-        "select":"Thov xaiv",
-        "version_number":"Lub hnab tawv me"
-    },
-    "page_contacts": {
-        "tit":"Hu rau",
-        "add_dialog":"Sib cuag tshiab",
-        "add_cont": {
-            "tit":"Sib cuag tshiab",
-            "tag":"Hu rau",
-            "address":"Tus account chaw nyob",
-            "tag_placeholder":"Thov sau lub npe ntawm tus neeg hu",
-            "address_placeholder":"Thov sau tus neeg teb xov tooj",
-            "add_success":"Ntxiv ntse"
-        },
-        "delete_dialog": {
-            "title":"Koj tshem tawm",
-            "remove_success":"Hloov tawm zoo"
-        },
-        "msg_info": {
-            "no_tag":"Thov sau ib daim ntawv qhia nyiaj",
-            "no_address":"Thov sau koj tus account chaw nyob",
-            "valid_address":"Qhov chaw nyob ntawm tus xov tooj yog tsis raug cai",
-            "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
-            "contacts_quantity_error":"Cov naj npawb ntawm cov neeg tsis muaj peev xwm tshaj li 50 leej",
-            "exist":"Qhov kev sib cuag twb tshwm sim lawm,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Xa tog",
-        "to_address":"Tus neeg txais kev pab",
-        "amount":"Tus nqi",
-        "gas":"Roj",
-        "send_all":"Xa tag nrho",
-        "data":"Cov ntaub ntawv",
-        "data_placeholder":"Hexadecimal cov ntaub ntawv",
-        "fees":"Kev them nqi",
-        "total":"Tag nrho",
-        "select":"Thov xaiv",
-        "no_account_info":"Tsis muaj dab tsi ntxiv, thov tsim lossis rho nyiaj",
-        "contacts_dig": {
-            "title":"Xaiv tus xovtooj",
-            "select_placeholder":"Thov xaiv"
-        },
-        "confirm_dia": {
-            "title":"Thov paub meej",
-            "enter_passworld_tit":"Thov sau koj tus password",
-            "enter_passworld_place":"Thov sau koj tus password"
-        },
-        "msg_info": {
-            "address_null":"Thov sau rau lwm tog neeg tus account",
-            "balance_zero":"Kev tsis txaus, tsis tuaj yeem mus ntxiv",
-            "amount_zero":"Tus nqi xa mus yuav tsum ntau dua 0",
-            "amount_error":"Thov sau tus nqi raws li txoj cai",
-            "address_err":"Cov hom ntawv ntawm qhov chaw nyob xa mus yog invalid.",
-            "send_success":"Thauj xa tuaj",
-            "amount_exceeded":"Tam sim no lw nqi ntau tshaj li tus account tshuav",
-
-            "decrypt_err":"Cov hnab parsing puav tsis tau, nws yuav ua tau yuam kev password",
-            "send_error":"Hloov ua tsis tau zoo: thov xyuas seb puas muaj nqi txaus thiab cov nqi me me"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Cov ntaub ntawv xov xwm",
-        "transfer_log_null":"Tsis muaj keeb kwm ua lag luam",
-        "active_icon": {
-            "go_transfer":"Pib ib qho kev hloov",
-            "import_keystore":"Txhab nyiaj",
-            "qrcode":"QR code"
-        },
-        "edit_dia": {
-            "tit":"Hloov ntawv",
-            "subtit":"Kos cim rau koj tus account",
-            "no_tag":"Thov sau ib daim ntawv qhia nyiaj",
-            "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim."
-        },
-        "dia_tx":{
-            "tit":"Cov ntaub ntawv xov xwm",
-            "block_hash":"Tus xov tooj lw",
-            "status":"Xeev",
-            "from":"Xa tog",
-            "to":"Tus neeg txais kev pab",
-            "amount":"Tus nqi",
-            "data":"Cov ntaub ntawv",
-            "send_time":"Xa sij hawm",
-            "mac_time":"Lub sij hawm kaw loj"
-        },
-        "keystore": {
-            "tit":"Cov hnab ntawv thaub qab",
-            "copy":"Luam",
-            "download":"Download tau lub hnab nyiaj"
-        },
-        "msg_info": {
-            "ads_copy_success":"Chaw nyob tau luam tawm",
-            "key_copy_success":"Daim ntawv zoo"
-        }
-    },
-    "page_home": {
-        "import_account":"Ntshuam nyiaj",
-        "add_account":"Tshiab tus account",
-        "acc":"Account",
-        "create_dia": {
-            "create_tit":"Tsim ib tug account",
-            "backup_tit":"Rov sau koj tus account tshiab",
-            "create_tag":"Txhab ntawv sau npe",
-            "create_pwd":"Teem password",
-            "create_repwd":"Confirm password",
-            "placeholder_tag":"Thov teem caij rau lub npe nyiaj",
-            "placeholder_pwd":"Thov teem caij tus password",
-            "placeholder_repwd":"Thov paub meej tias tus account password",
-            
-            
-            "account_download_keystore":"Download tau tus account file",
-
-            "validate_tag":"Thov sau tus cim npe lub npe",
-            "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
-
-            "validate_password":"Thov sau tus password koj tau teev tseg",
-            "validate_re_password":"Thov sau tus password koj tau teem dua",
-            "validate_strong_password":"Thov sau ib tug password ntawm yam tsawg 8 tus lej",
-            "validate_long_password":"Lo lus zais tsis pub tshaj 100 tus lej nyob ntev",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Inconsistent password nkag ob zaug",
-
-            "create_success":"Tsim tau zoo",
-            "account_quantity_error":"Tus naj npawb ntawm cov nyiaj yuav tsis pub dhau 50",
-            "create_success_des":"Thov txuag koj cov ntaub ntawv nyiaj thiab tsis txhob koom nrog leej twg!"
-        },
-        "import_dia": {
-            "tit":"Ntshuam nyiaj",    
-            "placeholder_keystore":"Thov cab cov ntaub ntawv ntawm no",
-            "create_tag":"Txhab ntawv sau npe",
-            "placeholder_tag":"Thov teem caij rau lub npe nyiaj",
-
-            "validate_tag":"Thov sau tus cim npe lub npe",
-            "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
-            "validate_enter_keystore":"Thov import cov ntaub ntawv ua ntej",
-            "validate_error_keystore":"Tus account tsis tuaj yeem ua tsis tau tiav, tej zaum yuav yog tus neeg ua yuam kev",
-            "imported_account_success":"Hloov tau zoo",
-            "exist":"Cov nyiaj no twb muaj lawm, daim ntawv no yog",
-            "keystore_error":"Yuam kev:",
-            "keystore_length_error":"Tsuas pub ib tus account cov ntaub ntawv tuaj yeem tuaj rau, thov rov sim dua!",
-            "keystore_format_error":"Thov xaiv cov ntaub ntawv kom yog",
-            "keystore_is_has":"Muaj ib tus as khauj nyob hauv daim ntawv teev npe uas koj xav tau tuaj.",
-            "imported_success":"Twb tau xaiv cov ntaub ntawv"
-        },
-        "remove_dia": {
-            "tit":"Koj puas paub tseeb tias koj xav muab nws tshem?",
-            "remove_confrim":"Kuv nco ntsoov tshem tawm",
-            "backup":"Thov them nyiaj rau lub thaub qab ntawm no kom tsis txhob muaj kev puas tsuaj khoom.",
-            "input_pwd":"Lo lus zais",
-            "placeholder_pwd":"Thov sau tus password rau qhov no",
-            "validate_password":"Tus password uas koj nkag mus yog qhov tsis ncaj ncees lawm",
-            "remove_success":"Hloov tawm zoo"
-        }
-    },
-    "page_config": {
-        "config_detection":"Confection detection",
-        "content_msg":{
-            "ready_test":"Npaj txhawm rau txhim kho cov ntaub ntawv tawm tswv yim",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Qhov tseeb ntawm cov ntaub ntawv ntawm configuration configuration tau txais lawm",
-            "is_local":"Kos yog tias muaj ntaub ntawv ntawm zos",
-            "already_local":"Cov ntaub ntawv teev ntawm cov ntaub ntawv ntawm cov ntaub ntawv muaj nyob rau ntawm cov cuab yeej tam sim no.",
-            "not_local":"Cov lus qhia ntawm cov ntaub ntawv ntawm cov ntaub ntawv ntawm no tsis raug kuaj pom, nws yuav yog thawj zaug khiav.",
-            "config_write_local":"Sau cov ntawv xov xwm ntawm cov ntaub ntawv mus rau lub zos qhov chaw",
-            "whether_update_node":"Kuaj seb puas yuav tsum tau hloov tshiab",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Tawm ntawm qhov kev pab cuam, thov ua siab ntev",
-            "already_downloaded":"Cov kev pab cuam ntawm node twb raug downloaded thiab npaj txhij pib.",
-            "ready_start":"Npaj los pib qhov ntawm",
-            "enter_wallet":"Pib pib, nrhiav kev nkag mus rau hauv lub hnab nyiaj"
-        },
-        "version_dialog":{
-            "version_tit":"Version kho kom sai",
-            "download_wallet":"Mus rau lub vas sab website mus download tau qhov tseeb version ntawm cov nyiaj",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Thov sau ib daim ntawv qhia nyiaj",
+      "no_address":"Thov sau qhov chaw nyob",
+      "valid_address":"Qhov chaw nyob ntawm qhov kev sib txuas lus tsis raug cai",
+      "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
+      "contacts_quantity_error":"Cov naj npawb ntawm cov neeg tsis muaj peev xwm tsis pub dhau 50",
+      "exist":"Qhov kev sib cuag twb tshwm sim lawm,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Xa tog",
+    "to_address":"Tus neeg txais kev pab",
+    "amount":"Tus nqi",
+    "gas":"Roj",
+    "gasPrice":"Roj chav tsev nqe",
+    "send_all":"Xa tag nrho",
+    "data":"Cov ntaub ntawv",
+    "data_placeholder":"Hexadecimal cov ntaub ntawv",
+    "fees":"Kev them nqi",
+    "txFee":"Tus nqi tes",
+    "total":"Tag nrho",
+    "select":"Thov xaiv",
+    "no_account_info":"Tsis muaj dab tsi ntxiv, thov tsim lossis rho nyiaj",
+    "no_keystore_file":"Tsis muaj cov ntaub ntawv tus nqi nrhiav tau rau tus account",
+    "contacts_dig": {
+      "title":"Xaiv tus account",
+      "select_placeholder":"Thov xaiv"
+    },
+    "confirm_dia": {
+      "title":"Thov paub meej",
+      "enter_passworld_tit":"Thov sau koj tus password",
+      "enter_passworld_place":"Thov sau koj tus password"
+    },
+    "msg_info": {
+      "address_null":"Thov sau rau lwm tog neeg tus account",
+      "balance_zero":"Ntsig tsis txaus, tsis tuaj yeem mus ntxiv",
+      "amount_zero":"Tus nqi xa mus yuav tsum ntau dua 0",
+      "amount_error":"Thov sau tus nqi raws li txoj cai",
+      "address_err":"Cov hom ntawv ntawm qhov chaw nyob raug xa tawm yog qhov tsis muaj tseeb.",
+      "gas_error":"Thov sau cov pa roj carbon txoj cai",
+      "gasPrice_error":"Thov sau tus nqi raws li txoj cai",
+      "send_success":"Thauj xa",
+      "amount_exceeded":"Tus nqi tam sim no tus nqi ntau tshaj qhov nyiaj tshuav nyiaj",
+      "txFeeTooLow":"Them cov nqi qis heev",
+      "decrypt_err":"Cov hnab parsing puav tsis tau, nws yuav yog ib qho yuam kev password",
+      "send_error":"Kev Them Xam Xaj: Thov xyuas seb puas muaj nyiaj txaus thiab me me",
+      "generate_offline_block_err":"Ua kom unsigned lw ua tsis tau tejyam",
+      "sign_err":"Kos npe tsis tau",
+      "send_offline_block_err":"Xa ib daim ntawv xee npe tsis tiav",
+      "syncingWaitTitle":"Lub ntawm yog nyob rau hauv sync",
+      "syncingWait":"Cov ntawm no yog nyob rau hauv sync, lub sijhawm lees paub txog kev sib hloov yuav ntev dua, thov koj ua siab ntev"
+    }
+  },
+  "pager": {
+    "next":"Cov nplooj ntawv tom ntej",
+    "prev":"Cov nplooj ntawv dhau los"
+  },
+  "page_account": {
+    "transfer_log":"Cov ntaub ntawv xov xwm",
+    "transfer_log_null":"Tsis muaj keeb kwm yav dhau los",
+    "txSent":"Hloov kev sib tshuam",
+    "txAll":"Tag nrho cov muas",
+    "txNew":"Cov nyiaj tam sim no muaj cov ntaub ntawv qhia tshiab",
+    "checkNow":"Saib tam sim no",
+    "active_icon": {
+      "go_transfer":"Pib ib qho kev hloov",
+      "import_keystore":"Txhab nyiaj",
+      "qrcode":"QR code"
+    },
+    "edit_dia": {
+      "tit":"Hloov cov lus sau cia",
+      "subtit":"Kos cim rau koj tus account",
+      "no_tag":"Thov sau ib daim ntawv qhia nyiaj",
+      "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim."
+    },
+    "dia_tx": {
+      "tit":"Cov ntaub ntawv xov xwm",
+      "block_hash":"Tus xov tooj lw",
+      "status":"Xeev",
+      "from":"Xa tog",
+      "to":"Tus neeg txais kev pab",
+      "amount":"Tus nqi",
+      "data":"Cov ntaub ntawv",
+      "send_time":"Xa sij hawm",
+      "mac_time":"Lub sij hawm kaw loj",
+      "gasPrice":"Roj chav tsev mov (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Siv roj",
+      "waiting":"Tos kev pom zoo",
+      "success":"Kev vam meej",
+      "sendFail":"Xa tsis tau",
+      "fail1":"Yog Tsis Taus (1)",
+      "fail2":"Kev Tsis Taus (2)",
+      "fail3":"Yog tsis yog (3)"
+    },
+    "keystore": {
+      "tit":"Cov hnab ntawv thaub qab",
+      "copy":"Luam",
+      "download":"Download tau lub hnab nyiaj"
+    },
+    "msg_info": {
+      "ads_copy_success":"Chaw nyob tau muab luam tawm",
+      "key_copy_success":"Daim ntawv zoo"
+    }
+  },
+  "page_home": {
+    "import_account":"Ntshuam nyiaj",
+    "add_account":"Tshiab tus account",
+    "acc":"Account",
+    "create_dia": {
+      "create_tit":"Tsim ib tus as khauj",
+      "backup_tit":"Rov qab koj cov nyiaj tshiab",
+      "create_tag":"Txhab ntawv sau npe",
+      "create_pwd":"Teeb tus password",
+      "create_repwd":"Confirm password",
+      "placeholder_tag":"Thov teem caij rau lub npe nyiaj",
+      "placeholder_pwd":"Thov teem caij tus password",
+      "placeholder_repwd":"Thov paub meej tias tus account password",
+      "account_download_keystore":"Download tau tus account file",
+      "validate_tag":"Thov sau tus cim npe lub npe",
+      "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
+      "validate_password":"Thov sau tus password koj tau teev tseg",
+      "validate_re_password":"Thov sau tus password koj tau teem dua",
+      "validate_strong_password":"Thov sau ib tug password ntawm yam tsawg 8 tus lej",
+      "validate_long_password":"Lo lus zais yuav tsis pub tshaj 100 tus lej nyob ntev",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Inconsistent password nkag ob zaug",
+      "create_success":"Tsim tau zoo",
+      "account_quantity_error":"Tus naj npawb ntawm cov nyiaj yuav tsis pub dhau 50",
+      "create_success_des":"Thov txuag koj cov ntaub ntawv nyiaj thiab tsis txhob koom nrog leej twg!"
+    },
+    "import_dia": {
+      "tit":"Ntshuam nyiaj",
+      "placeholder_keystore":"Thov cab cov ntaub ntawv ntawm no",
+      "create_tag":"Txhab ntawv sau npe",
+      "placeholder_tag":"Thov teem caij rau lub npe nyiaj",
+      "validate_tag":"Thov sau tus cim npe lub npe",
+      "validate_tag_length":"Lub npe ntawm lub npe ntawv tsis tuaj yeem ua ntau tshaj 8 cim.",
+      "validate_enter_keystore":"Thov import cov ntaub ntawv ua ntej",
+      "validate_error_keystore":"Account import failed, tej zaum yuav yog tus account file yuam kev",
+      "imported_account_success":"Hloov tau zoo",
+      "exist":"Tus account no twb muaj nyob, daim ntawv yog",
+      "keystore_error":"Yuam kev:",
+      "keystore_length_error":"Tsuas pub ib tus account xwb thiaj tuaj yeem xa tuaj, thov rov sim dua!",
+      "keystore_format_error":"Thov xaiv cov ntaub ntawv kom yog",
+      "keystore_is_has":"Muaj ib tus account hauv daim ntawv teev npe uas koj xav tau ntshuam.",
+      "imported_success":"Cov ntaub ntawv raug xaiv"
+    },
+    "remove_dia": {
+      "tit":"Koj puas paub tseeb tias koj xav muab nws tshem?",
+      "remove_confrim":"Kuv nco ntsoov tshem tawm",
+      "backup":"Thov xyuam xim rau qhov thaub qab ntawm qhov nyiaj no kom tsis txhob muaj kev puas tsuaj.",
+      "input_pwd":"Lo lus zais",
+      "placeholder_pwd":"Thov sau tus password rau qhov no",
+      "validate_password":"Tus password uas koj nkag mus yog qhov tsis ncaj ncees lawm",
+      "remove_success":"Hloov tawm zoo"
+    }
+  },
+  "page_config": {
+    "config_detection":"Confection detection",
+    "content_msg": {
+      "ready_test":"Npaj los xyuas cov ntaub ntawv teev lus",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Qhov tseeb ntawm cov ntaub ntawv ntawm cov configuration configuration tau txais lawm",
+      "is_local":"Kos yog tias muaj ntaub ntawv ntawm zos",
+      "already_local":"Cov ntaub ntawv ntawm cov ntaub ntawv ntawm cov ntaub ntawv muaj nyob rau ntawm cov cuab yeej tam sim no.",
+      "not_local":"Cov lus qhia ntawm cov ntaub ntawv ntawm cov ntaub ntawv ntawm no tsis raug kuaj, nws yuav yog thawj zaug khiav.",
+      "config_write_local":"Sau cov ntaub ntawv ntawm cov ntaub ntawv tau txais los ntawm lub zos qhov disk",
+      "whether_update_node":"Kuaj seb puas yuav tsum tau hloov tshiab",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Tshem tawm ntawm qhov kev pab cuam, thov ua siab ntev",
+      "already_downloaded":"Cov kev pab cuam ntawm node twb raug downloaded thiab npaj txhij pib.",
+      "ready_start":"Npaj los pib lub hauv paus",
+      "enter_wallet":"Node pib nrhiav kom tau, npaj kom nkag mus rau hauv hnab nyiaj",
+      "specifyDataDir":"Thov xaiv txoj kab cia ntawm cov ntaub ntawv ntawm cov ntaub ntawv"
+    },
+    "version_dialog": {
+      "version_tit":"Version kho sai",
+      "download_wallet":"Mus rau lub vas sab website mus download tau qhov tseeb version ntawm cov nyiaj",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

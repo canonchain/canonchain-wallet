@@ -1,204 +1,242 @@
 {
-    "confirm":"bevestigen",
-    "cancel":"geannuleerd",
-    "dialog_tit":"prompt",
-    "close":"dicht",
-    "confirm_you_active":"Bevestig uw werking",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"bevestigen",
+  "cancel":"geannuleerd",
+  "dialog_tit":"prompt",
+  "close":"dicht",
+  "confirm_you_active":"Bevestig uw werking",
+  "rpcErrors": {
+    "invalidFromAccount":"Het account van de afzender is ongeldig",
+    "invalidToAccount":"Inkomende account is ongeldig",
+    "invalidAmountFormat":"Ongeldige hoeveelheidindeling",
+    "invalidGasFormat":"Ongeldig gasformaat",
+    "invalidDataFormat":"Ongeldige hexadecimale gegevensindeling",
+    "dataSizeTooLarge":"Hexadecimale gegevens zijn te groot",
+    "invalidGasPriceFormat":"Formaat prijseenheid gaseenheid is ongeldig",
+    "invalidMciFormat":"MCI-indeling is ongeldig",
+    "notEnoughFail":"Onvoldoende gas of abnormale storing"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"thuis",
+    "transfer":"overdracht",
+    "contacts":"contact",
+    "setting":"oprichten",
+    "total":"totaal",
+    "testnet":"Test netwerk",
+    "online":"online",
+    "offline":"offline",
+    "syncing":"In synchronisatie"
+  },
+  "page_setting": {
+    "tit":"oprichten",
+    "lang":"taal",
+    "select":"Kies alstublieft",
+    "version_number":"Wallet-versie",
+    "data_path":"Node data pad",
+    "change":"verandering",
+    "changeDirNote":"Verplaats de bestanden in het originele pad naar de nieuwe map, anders zal het gegevensverlies veroorzaken.",
+    "note":"opletten"
+  },
+  "page_contacts": {
+    "tit":"contact",
+    "add_dialog":"Nieuw contact",
+    "add_cont": {
+      "tit":"Nieuw contact",
+      "tag":"contact",
+      "address":"Account adres",
+      "tag_placeholder":"Voer de naam van het contact in",
+      "address_placeholder":"Voer het accountadres van de contactpersoon in",
+      "add_success":"Succesvol toegevoegd"
     },
-    "model_header": {
-        "home":"thuis",
-        "transfer":"overdracht",
-        "contacts":"contact",
-        "setting":"oprichten",
-        "total":"totaal",
-        "testnet":"Test het netwerk",
-        "online":"online",
-        "offline":"offline"
+    "delete_dialog": {
+      "title":"Je verwijdert",
+      "remove_success":"Succesvol verwijderd"
     },
-    "page_setting": {
-        "tit":"oprichten",
-        "lang":"taal",
-        "select":"Kies alstublieft",
-        "version_number":"Wallet-versie"
-    },
-    "page_contacts": {
-        "tit":"contact",
-        "add_dialog":"Nieuw contact",
-        "add_cont": {
-            "tit":"Nieuw contact",
-            "tag":"contact",
-            "address":"Account adres",
-            "tag_placeholder":"Voer de naam van het contact in",
-            "address_placeholder":"Voer het accountadres van de contactpersoon in",
-            "add_success":"Succesvol toegevoegd"
-        },
-        "delete_dialog": {
-            "title":"Je verwijdert",
-            "remove_success":"Succesvol verwijderd"
-        },
-        "msg_info": {
-            "no_tag":"Voer een accountnotitie in",
-            "no_address":"Voer alstublieft uw accountadres in",
-            "valid_address":"Het adres van het contact is illegaal",
-            "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
-            "contacts_quantity_error":"Het aantal contacten kan niet groter zijn dan 50",
-            "exist":"De contactpersoon bestaat al,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Het verzenden van een feestje",
-        "to_address":"begunstigde",
-        "amount":"geld",
-        "gas":"gas",
-        "send_all":"Stuur alles",
-        "data":"gegevens",
-        "data_placeholder":"Hexadecimale gegevens",
-        "fees":"Verwerkingskosten",
-        "total":"totaal",
-        "select":"Kies alstublieft",
-        "no_account_info":"Nog geen account, maak of importeer een account",
-        "contacts_dig": {
-            "title":"Selecteer een contactaccount",
-            "select_placeholder":"Kies alstublieft"
-        },
-        "confirm_dia": {
-            "title":"Bevestig alstublieft",
-            "enter_passworld_tit":"Voer uw wachtwoord in",
-            "enter_passworld_place":"Voer uw wachtwoord in"
-        },
-        "msg_info": {
-            "address_null":"Voer het account van de andere partij in",
-            "balance_zero":"Onvoldoende saldo, kan niet doorgaan",
-            "amount_zero":"Overboeking moet groter zijn dan 0",
-            "amount_error":"Voer een wettelijk transactiebedrag in",
-            "address_err":"Het formaat van het overgedragen adres is ongeldig.",
-            "send_success":"Transactie verzonden",
-            "amount_exceeded":"Het totale bedrag van de huidige transactie overschrijdt het rekeningsaldo",
-
-            "decrypt_err":"Portefeuille parseren mislukt, dit kan een wachtwoordfout zijn",
-            "send_error":"Transactie mislukt: controleer of er voldoende saldo en mineerkosten zijn"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transactierecord",
-        "transfer_log_null":"Geen transactiegeschiedenis",
-        "active_icon": {
-            "go_transfer":"Start een overdracht",
-            "import_keystore":"Accountbestand",
-            "qrcode":"QR-code"
-        },
-        "edit_dia": {
-            "tit":"Wijzig opmerking",
-            "subtit":"Markeer een notitie voor uw account",
-            "no_tag":"Voer een accountnotitie in",
-            "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens."
-        },
-        "dia_tx":{
-            "tit":"Transactie informatie",
-            "block_hash":"Transactienummer",
-            "status":"staat",
-            "from":"Het verzenden van een feestje",
-            "to":"begunstigde",
-            "amount":"geld",
-            "data":"gegevens",
-            "send_time":"Het verzenden van tijd",
-            "mac_time":"Hoofdketentijd"
-        },
-        "keystore": {
-            "tit":"Back-upportefeuillebestand",
-            "copy":"exemplaar",
-            "download":"Portefeuillebestand downloaden"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adres is gekopieerd",
-            "key_copy_success":"Succesvolle kopie"
-        }
-    },
-    "page_home": {
-        "import_account":"Account importeren",
-        "add_account":"Nieuw account",
-        "acc":"rekening",
-        "create_dia": {
-            "create_tit":"Maak een account aan",
-            "backup_tit":"Maak een back-up van uw nieuwe account",
-            "create_tag":"Account opmerking",
-            "create_pwd":"Wachtwoord instellen",
-            "create_repwd":"Bevestig wachtwoord",
-            "placeholder_tag":"Stel de accountnotitienaam in",
-            "placeholder_pwd":"Stel het wachtwoord van uw account in",
-            "placeholder_repwd":"Bevestig het wachtwoord van je account",
-            
-            
-            "account_download_keystore":"Download het accountbestand",
-
-            "validate_tag":"Voer de accountnotitienaam in",
-            "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
-
-            "validate_password":"Voer het wachtwoord in dat u heeft ingesteld",
-            "validate_re_password":"Voer het wachtwoord dat u opnieuw hebt ingesteld opnieuw in",
-            "validate_strong_password":"Voer een wachtwoord in van minimaal 8 cijfers",
-            "validate_long_password":"Wachtwoord mag niet langer zijn dan 100 cijfers",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Inconsistent wachtwoord twee keer ingevoerd",
-
-            "create_success":"Met succes gemaakt",
-            "account_quantity_error":"Het aantal accounts kan niet groter zijn dan 50",
-            "create_success_des":"Bewaar uw accountbestand en deel het met niemand!"
-        },
-        "import_dia": {
-            "tit":"Account importeren",    
-            "placeholder_keystore":"Sleep het accountbestand hierheen",
-            "create_tag":"Account opmerking",
-            "placeholder_tag":"Stel de accountnotitienaam in",
-
-            "validate_tag":"Voer de accountnotitienaam in",
-            "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
-            "validate_enter_keystore":"Importeer eerst het accountbestand",
-            "validate_error_keystore":"Accountimport mislukt, mogelijk accountfout",
-            "imported_account_success":"Succesvol geïmporteerd",
-            "exist":"Dit account bestaat al, de notitie is",
-            "keystore_error":"fout:",
-            "keystore_length_error":"Er kan slechts één accountbestand worden geïmporteerd. Probeer het opnieuw!",
-            "keystore_format_error":"Selecteer het juiste accountbestand",
-            "keystore_is_has":"Er staat al een account in de lijst die u moet importeren.",
-            "imported_success":"Al geselecteerd bestand"
-        },
-        "remove_dia": {
-            "tit":"Weet je zeker dat je het wilt verwijderen?",
-            "remove_confrim":"Ik ben zeker om te verwijderen",
-            "backup":"Let op de back-up van dit account om schade aan eigendommen te voorkomen.",
-            "input_pwd":"wachtwoord",
-            "placeholder_pwd":"Voer het wachtwoord in voor dit account",
-            "validate_password":"Het wachtwoord dat je hebt ingevoerd is verkeerd",
-            "remove_success":"Succesvol verwijderd"
-        }
-    },
-    "page_config": {
-        "config_detection":"Configuratiedetectie",
-        "content_msg":{
-            "ready_test":"Bereid je voor om het configuratiebestand te detecteren",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"De laatste knooppuntconfiguratie-informatie is verkregen",
-            "is_local":"Controleer of er lokaal een knooppuntbestand is",
-            "already_local":"Het configuratiebestand van het knooppuntbestand bestaat op het huidige apparaat.",
-            "not_local":"De configuratie-informatie van het knooppuntbestand wordt niet gedetecteerd, mogelijk is dit de eerste keer dat het bestand wordt uitgevoerd.",
-            "config_write_local":"Schrijf het verkregen knooppuntinformatiebestand naar de lokale schijf",
-            "whether_update_node":"Controleer of een update nodig is",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Knoopprogramma downloaden, wees geduldig",
-            "already_downloaded":"Het knooppuntprogramma is gedownload en klaar om te starten.",
-            "ready_start":"Bereid je voor om het knooppunt te starten",
-            "enter_wallet":"Knooppunt start detectie, klaar om de portefeuille te betreden"
-        },
-        "version_dialog":{
-            "version_tit":"Update van de versieupdate",
-            "download_wallet":"Ga naar de officiële website om de nieuwste versie van het geld te downloaden",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Voer een accountnotitie in",
+      "no_address":"Voer het accountadres in",
+      "valid_address":"Het adres van het contact is illegaal",
+      "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
+      "contacts_quantity_error":"Het aantal contacten kan niet groter zijn dan 50",
+      "exist":"De contactpersoon bestaat al,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Het verzenden van een feestje",
+    "to_address":"begunstigde",
+    "amount":"geld",
+    "gas":"gas",
+    "gasPrice":"Prijs van de gasunit",
+    "send_all":"Stuur alles",
+    "data":"gegevens",
+    "data_placeholder":"Hexadecimale gegevens",
+    "fees":"Verwerkingskosten",
+    "txFee":"Transactiekosten",
+    "total":"totaal",
+    "select":"Kies alstublieft",
+    "no_account_info":"Nog geen account, maak of importeer een account",
+    "no_keystore_file":"Geen accountbestand gevonden voor het bijbehorende account",
+    "contacts_dig": {
+      "title":"Selecteer contactaccount",
+      "select_placeholder":"Kies alstublieft"
+    },
+    "confirm_dia": {
+      "title":"Bevestig alstublieft",
+      "enter_passworld_tit":"Voer uw wachtwoord in",
+      "enter_passworld_place":"Voer uw wachtwoord in"
+    },
+    "msg_info": {
+      "address_null":"Voer het account van de andere partij in",
+      "balance_zero":"Onvoldoende saldo, kan niet doorgaan",
+      "amount_zero":"Overdrachtbedrag moet groter zijn dan 0",
+      "amount_error":"Voer een wettelijk transactiebedrag in",
+      "address_err":"Het formaat van het overgedragen adres is ongeldig.",
+      "gas_error":"Voer een wettelijk transactiegas in",
+      "gasPrice_error":"Voer de wettelijke transactieprijs in",
+      "send_success":"Transactie verzonden",
+      "amount_exceeded":"Het huidige totale transactiebedrag overschrijdt het accountsaldo",
+      "txFeeTooLow":"Transactiekosten zijn te laag",
+      "decrypt_err":"Portefeuille parseren is mislukt, dit kan een wachtwoordfout zijn",
+      "send_error":"Transactie mislukt: controleer of er voldoende saldo en mineerkosten zijn",
+      "generate_offline_block_err":"Genereren van niet-ondertekende transactie mislukt",
+      "sign_err":"Handtekening mislukt",
+      "send_offline_block_err":"Het verzenden van een ondertekende transactie is mislukt",
+      "syncingWaitTitle":"Het knooppunt is gesynchroniseerd",
+      "syncingWait":"Het knooppunt is gesynchroniseerd, de bevestigingstijd van de transactie kan langer zijn, wees geduldig"
+    }
+  },
+  "pager": {
+    "next":"Volgende pagina",
+    "prev":"Vorige pagina"
+  },
+  "page_account": {
+    "transfer_log":"Transactierecord",
+    "transfer_log_null":"Geen transactiegeschiedenis",
+    "txSent":"Overgedragen transactie",
+    "txAll":"Alle transacties",
+    "txNew":"Huidige rekening heeft nieuwe transactie-informatie",
+    "checkNow":"Nu bekijken",
+    "active_icon": {
+      "go_transfer":"Start een overdracht",
+      "import_keystore":"Accountbestand",
+      "qrcode":"QR-code"
+    },
+    "edit_dia": {
+      "tit":"Wijzig opmerkingen",
+      "subtit":"Markeer een notitie voor uw account",
+      "no_tag":"Voer een accountnotitie in",
+      "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens."
+    },
+    "dia_tx": {
+      "tit":"Transactie informatie",
+      "block_hash":"Transactie nummer",
+      "status":"staat",
+      "from":"Het verzenden van een feestje",
+      "to":"begunstigde",
+      "amount":"geld",
+      "data":"gegevens",
+      "send_time":"Het verzenden van tijd",
+      "mac_time":"Hoofdketentijd",
+      "gasPrice":"Gaseenheidsprijs (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Gebruik van gas",
+      "waiting":"Wacht op bevestiging",
+      "success":"succes",
+      "sendFail":"Verzenden mislukt",
+      "fail1":"Falen (1)",
+      "fail2":"Mislukken (2)",
+      "fail3":"Mislukken (3)"
+    },
+    "keystore": {
+      "tit":"Backupportefeuillebestand",
+      "copy":"exemplaar",
+      "download":"Portefeuillebestand downloaden"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adres is gekopieerd",
+      "key_copy_success":"Succesvolle kopie"
+    }
+  },
+  "page_home": {
+    "import_account":"Account importeren",
+    "add_account":"Nieuw account",
+    "acc":"rekening",
+    "create_dia": {
+      "create_tit":"Maak een account aan",
+      "backup_tit":"Maak een back-up van uw nieuwe account",
+      "create_tag":"Account opmerking",
+      "create_pwd":"Stel wachtwoord in",
+      "create_repwd":"Bevestig wachtwoord",
+      "placeholder_tag":"Stel de accountnotanaam in",
+      "placeholder_pwd":"Stel het wachtwoord van uw account in",
+      "placeholder_repwd":"Bevestig het accountwachtwoord",
+      "account_download_keystore":"Download het accountbestand",
+      "validate_tag":"Voer de accountnotitienaam in",
+      "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
+      "validate_password":"Voer het wachtwoord in dat u heeft ingesteld",
+      "validate_re_password":"Voer het wachtwoord dat u opnieuw hebt ingesteld opnieuw in",
+      "validate_strong_password":"Voer een wachtwoord in van minimaal 8 cijfers",
+      "validate_long_password":"Wachtwoord mag niet langer zijn dan 100 cijfers",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Inconsistent wachtwoord twee keer ingevoerd",
+      "create_success":"Met succes gemaakt",
+      "account_quantity_error":"Het aantal accounts kan niet groter zijn dan 50",
+      "create_success_des":"Bewaar uw accountbestand en deel het met niemand!"
+    },
+    "import_dia": {
+      "tit":"Account importeren",
+      "placeholder_keystore":"Sleep het accountbestand hierheen",
+      "create_tag":"Account opmerking",
+      "placeholder_tag":"Stel de accountnotanaam in",
+      "validate_tag":"Voer de accountnotitienaam in",
+      "validate_tag_length":"De naam van de nootnaam mag niet groter zijn dan 8 tekens.",
+      "validate_enter_keystore":"Importeer eerst het accountbestand",
+      "validate_error_keystore":"Accountimport mislukt, mogelijk accountfout",
+      "imported_account_success":"Succesvol geïmporteerd",
+      "exist":"Dit account bestaat al, de notitie is",
+      "keystore_error":"fout:",
+      "keystore_length_error":"Er kan slechts één accountbestand worden geïmporteerd. Probeer het opnieuw!",
+      "keystore_format_error":"Selecteer het juiste accountbestand",
+      "keystore_is_has":"Er staat al een account in de lijst die u moet importeren.",
+      "imported_success":"Bestand geselecteerd"
+    },
+    "remove_dia": {
+      "tit":"Weet je zeker dat je het wilt verwijderen?",
+      "remove_confrim":"Ik ben zeker om te verwijderen",
+      "backup":"Let op de back-up van dit account om schade aan eigendommen te voorkomen.",
+      "input_pwd":"wachtwoord",
+      "placeholder_pwd":"Voer het wachtwoord in voor dit account",
+      "validate_password":"Het wachtwoord dat je hebt ingevoerd is verkeerd",
+      "remove_success":"Succesvol verwijderd"
+    }
+  },
+  "page_config": {
+    "config_detection":"Configuratiedetectie",
+    "content_msg": {
+      "ready_test":"Bereid je voor om het configuratiebestand te detecteren",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"De laatste knooppuntconfiguratie-informatie is verkregen",
+      "is_local":"Controleer of er lokaal een knooppuntbestand is",
+      "already_local":"Het configuratiebestand van het knooppuntbestand bestaat op het huidige apparaat.",
+      "not_local":"De configuratie-informatie van het knooppuntbestand wordt niet gedetecteerd, mogelijk is dit de eerste keer dat het bestand wordt uitgevoerd.",
+      "config_write_local":"Schrijf het verkregen knooppuntinformatiebestand naar de lokale schijf",
+      "whether_update_node":"Controleer of een update nodig is",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Knoopprogramma downloaden, wees geduldig",
+      "already_downloaded":"Het knooppuntprogramma is gedownload en klaar om te starten.",
+      "ready_start":"Bereid je voor om het knooppunt te starten",
+      "enter_wallet":"Knooppunt start detectie, klaar om de portefeuille te betreden",
+      "specifyDataDir":"Selecteer het opslagpad van de knooppuntgegevens"
+    },
+    "version_dialog": {
+      "version_tit":"Update van de versieupdate",
+      "download_wallet":"Ga naar de officiële website om de nieuwste versie van het geld te downloaden",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

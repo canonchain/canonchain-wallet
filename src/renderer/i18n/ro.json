@@ -1,204 +1,242 @@
 {
-    "confirm":"confirma",
-    "cancel":"anulat",
-    "dialog_tit":"prompt",
-    "close":"închide",
-    "confirm_you_active":"Vă rugăm să confirmați funcționarea",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"confirma",
+  "cancel":"anulat",
+  "dialog_tit":"prompt",
+  "close":"închide",
+  "confirm_you_active":"Vă rugăm să confirmați funcționarea",
+  "rpcErrors": {
+    "invalidFromAccount":"Contul expeditorului este nevalid",
+    "invalidToAccount":"Contul de intrare este nevalid",
+    "invalidAmountFormat":"Formatul sumelor nevalid",
+    "invalidGasFormat":"Formatul de gaz incorect",
+    "invalidDataFormat":"Formatul de date hexazecimal nu este valid",
+    "dataSizeTooLarge":"Datele hexazecimale sunt prea mari",
+    "invalidGasPriceFormat":"Formatul prețului unității de gaze este nevalid",
+    "invalidMciFormat":"Formatul MCI este nevalid",
+    "notEnoughFail":"Gaz insuficient sau defect anormal"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"acasă",
+    "transfer":"transfer",
+    "contacts":"contact",
+    "setting":"Configurarea",
+    "total":"total",
+    "testnet":"Rețeaua de testare",
+    "online":"online",
+    "offline":"Offline",
+    "syncing":"În sincronizare"
+  },
+  "page_setting": {
+    "tit":"Configurarea",
+    "lang":"limbă",
+    "select":"Vă rugăm să alegeți",
+    "version_number":"Versiune Wallet",
+    "data_path":"Nodul calea de date",
+    "change":"schimbare",
+    "changeDirNote":"Deplasați fișierele în calea originală în noul director, altfel va duce la pierderea datelor.",
+    "note":"Acordați o atenție"
+  },
+  "page_contacts": {
+    "tit":"contact",
+    "add_dialog":"Contact nou",
+    "add_cont": {
+      "tit":"Contact nou",
+      "tag":"contact",
+      "address":"Adresa contului",
+      "tag_placeholder":"Introduceți numele contactului",
+      "address_placeholder":"Introduceți adresa contului de contact",
+      "add_success":"Adăugat cu succes"
     },
-    "model_header": {
-        "home":"acasă",
-        "transfer":"transfer",
-        "contacts":"contact",
-        "setting":"Configurarea",
-        "total":"total",
-        "testnet":"Rețeaua de testare",
-        "online":"online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Înlăturați",
+      "remove_success":"A fost eliminată cu succes"
     },
-    "page_setting": {
-        "tit":"Configurarea",
-        "lang":"limbă",
-        "select":"Vă rugăm să alegeți",
-        "version_number":"Versiunea Wallet"
-    },
-    "page_contacts": {
-        "tit":"contact",
-        "add_dialog":"Contact nou",
-        "add_cont": {
-            "tit":"Contact nou",
-            "tag":"contact",
-            "address":"Adresa contului",
-            "tag_placeholder":"Introduceți numele persoanei de contact",
-            "address_placeholder":"Introduceți adresa contului de contact",
-            "add_success":"Adăugat cu succes"
-        },
-        "delete_dialog": {
-            "title":"Înlăturați",
-            "remove_success":"A fost eliminată cu succes"
-        },
-        "msg_info": {
-            "no_tag":"Introduceți o notă de cont",
-            "no_address":"Introduceți adresa dvs. de cont",
-            "valid_address":"Adresa de contact este ilegală",
-            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
-            "contacts_quantity_error":"Numărul de persoane de contact nu poate depăși 50",
-            "exist":"Contactul există deja,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Trimite părții",
-        "to_address":"Payee",
-        "amount":"bani",
-        "gas":"gaz",
-        "send_all":"Trimiteți-le pe toate",
-        "data":"date",
-        "data_placeholder":"Date hexazecimale",
-        "fees":"Taxă de manipulare",
-        "total":"total",
-        "select":"Vă rugăm să alegeți",
-        "no_account_info":"Nu aveți încă cont, vă rugăm să creați sau să importați un cont",
-        "contacts_dig": {
-            "title":"Selectați un cont de contact",
-            "select_placeholder":"Vă rugăm să alegeți"
-        },
-        "confirm_dia": {
-            "title":"Vă rugăm să confirmați",
-            "enter_passworld_tit":"Introduceți parola",
-            "enter_passworld_place":"Introduceți parola"
-        },
-        "msg_info": {
-            "address_null":"Introduceți contul celeilalte părți",
-            "balance_zero":"Balanță insuficientă, imposibilitatea continuării",
-            "amount_zero":"Suma transferului trebuie să fie mai mare de 0",
-            "amount_error":"Introduceți o sumă legată de tranzacție",
-            "address_err":"Formatul adresei transferate este nevalid.",
-            "send_success":"Tranzacția a fost trimisă",
-            "amount_exceeded":"Suma totală a tranzacției actuale depășește soldul contului",
-
-            "decrypt_err":"Parcelarea parolei nu a reușit, poate fi o eroare de parolă",
-            "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și o taxă pentru mineri"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Înregistrare tranzacție",
-        "transfer_log_null":"Nu există istoricul tranzacțiilor",
-        "active_icon": {
-            "go_transfer":"Inițiați un transfer",
-            "import_keystore":"Fișier de cont",
-            "qrcode":"Codul QR"
-        },
-        "edit_dia": {
-            "tit":"Modificați nota",
-            "subtit":"Marcați o notă pentru contul dvs.",
-            "no_tag":"Introduceți o notă de cont",
-            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere."
-        },
-        "dia_tx":{
-            "tit":"Informații despre tranzacții",
-            "block_hash":"Numărul de tranzacție",
-            "status":"stat",
-            "from":"Trimite părții",
-            "to":"Payee",
-            "amount":"bani",
-            "data":"date",
-            "send_time":"Trimiterea timpului",
-            "mac_time":"Timpul principal al lanțului"
-        },
-        "keystore": {
-            "tit":"Fișierul portofelului de rezervă",
-            "copy":"copie",
-            "download":"Descărcați fișierul portofel"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adresa a fost copiată",
-            "key_copy_success":"Copie reușită"
-        }
-    },
-    "page_home": {
-        "import_account":"Contul de import",
-        "add_account":"Cont nou",
-        "acc":"cont",
-        "create_dia": {
-            "create_tit":"Creați un cont",
-            "backup_tit":"Creați copii de rezervă pentru noul dvs. cont",
-            "create_tag":"Notă privind contul",
-            "create_pwd":"Setați parola",
-            "create_repwd":"Confirmați parola",
-            "placeholder_tag":"Stabiliți numele notei de cont",
-            "placeholder_pwd":"Setați parola contului",
-            "placeholder_repwd":"Confirmați parola contului",
-            
-            
-            "account_download_keystore":"Descărcați fișierul de cont",
-
-            "validate_tag":"Introduceți numele notei de cont",
-            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
-
-            "validate_password":"Introduceți parola setată",
-            "validate_re_password":"Introduceți din nou parola pe care o setați din nou",
-            "validate_strong_password":"Introduceți o parolă cu cel puțin 8 cifre",
-            "validate_long_password":"Parola nu poate depăși 100 de cifre în lungime",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Parola inconsistentă introdusă de două ori",
-
-            "create_success":"Creat cu succes",
-            "account_quantity_error":"Numărul conturilor nu poate depăși 50",
-            "create_success_des":"Salvați fișierul contului dvs. și nu îl distribuiți nimănui!"
-        },
-        "import_dia": {
-            "tit":"Contul de import",    
-            "placeholder_keystore":"Trageți aici fișierul contului",
-            "create_tag":"Notă privind contul",
-            "placeholder_tag":"Stabiliți numele notei de cont",
-
-            "validate_tag":"Introduceți numele notei de cont",
-            "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
-            "validate_enter_keystore":"Vă rugăm să importați mai întâi fișierul contului",
-            "validate_error_keystore":"Contul de import nu a reușit, poate fi eroare de fișier de cont",
-            "imported_account_success":"S-a importat cu succes",
-            "exist":"Acest cont există deja, este nota",
-            "keystore_error":"Eroare:",
-            "keystore_length_error":"Doar un singur fișier de cont poate fi importat, vă rugăm să încercați din nou!",
-            "keystore_format_error":"Selectați fișierul de cont corect",
-            "keystore_is_has":"Există deja un cont în listă pe care trebuie să-l importați.",
-            "imported_success":"Fișier deja selectat"
-        },
-        "remove_dia": {
-            "tit":"Sigur doriți să îl eliminați?",
-            "remove_confrim":"Sunt sigur că voi elimina",
-            "backup":"Fiți atenți la copia de rezervă a acestui cont pentru a evita daunele materiale.",
-            "input_pwd":"parolă",
-            "placeholder_pwd":"Introduceți parola pentru acest cont",
-            "validate_password":"Parola pe care ați introdus-o este greșită",
-            "remove_success":"A fost eliminată cu succes"
-        }
-    },
-    "page_config": {
-        "config_detection":"Detectarea configurației",
-        "content_msg":{
-            "ready_test":"Pregătiți-vă pentru a detecta fișierul de configurare",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Au fost obținute cele mai recente informații privind configurația nodurilor",
-            "is_local":"Verificați dacă există un fișier nod local",
-            "already_local":"Fișierul de configurare al fișierului nod există pe dispozitivul curent.",
-            "not_local":"Informațiile de configurare ale fișierului nod nu sunt detectate, poate fi prima dată când rulează.",
-            "config_write_local":"Scrieți fișierul informațiilor despre nodurile obținute pe discul local",
-            "whether_update_node":"Verificați dacă este necesară o actualizare",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Descărcarea programului de noduri, vă rugăm să aveți răbdare",
-            "already_downloaded":"Programul de noduri a fost descărcat și gata să înceapă.",
-            "ready_start":"Pregătește-te pentru a porni nodul",
-            "enter_wallet":"Nodul începe detectarea, gata să intre în portofel"
-        },
-        "version_dialog":{
-            "version_tit":"Versiunea de actualizare a promptului",
-            "download_wallet":"Du-te la site-ul oficial pentru a descărca cea mai recentă versiune a banilor",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Introduceți o notă de cont",
+      "no_address":"Introduceți adresa contului",
+      "valid_address":"Adresa de contact este ilegală",
+      "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
+      "contacts_quantity_error":"Numărul de persoane de contact nu poate depăși 50",
+      "exist":"Contactul există deja,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Parchetul de trimitere",
+    "to_address":"Payee",
+    "amount":"bani",
+    "gas":"gaz",
+    "gasPrice":"Prețul unității de gaz",
+    "send_all":"Trimiteți-le pe toate",
+    "data":"date",
+    "data_placeholder":"Date hexazecimale",
+    "fees":"Taxă de manipulare",
+    "txFee":"Taxă de tranzacție",
+    "total":"total",
+    "select":"Vă rugăm să alegeți",
+    "no_account_info":"Nu aveți încă cont, vă rugăm să creați sau să importați un cont",
+    "no_keystore_file":"Nu a fost găsit niciun fișier de cont pentru contul corespunzător",
+    "contacts_dig": {
+      "title":"Selectați contul de contact",
+      "select_placeholder":"Vă rugăm să alegeți"
+    },
+    "confirm_dia": {
+      "title":"Vă rugăm să confirmați",
+      "enter_passworld_tit":"Introduceți parola",
+      "enter_passworld_place":"Introduceți parola"
+    },
+    "msg_info": {
+      "address_null":"Introduceți contul celeilalte părți",
+      "balance_zero":"Balanța insuficientă, imposibilitatea de a continua",
+      "amount_zero":"Valoarea transferului trebuie să fie mai mare de 0",
+      "amount_error":"Introduceți o sumă de tranzacție legală",
+      "address_err":"Formatul adresei transferate este nevalid.",
+      "gas_error":"Introduceți un gaz tranzacțional legal",
+      "gasPrice_error":"Introduceți prețul tranzacției juridice",
+      "send_success":"Tranzacția a fost trimisă",
+      "amount_exceeded":"Suma totală a tranzacției depășește soldul contului",
+      "txFeeTooLow":"Costul tranzacției este prea mic",
+      "decrypt_err":"Analiza parolei nu a reușit, poate fi o eroare de parolă",
+      "send_error":"Tranzacția a eșuat: verificați dacă există un echilibru suficient și o taxă pentru mineri",
+      "generate_offline_block_err":"Generarea tranzacției nesemnate nu a reușit",
+      "sign_err":"Semnătura a eșuat",
+      "send_offline_block_err":"Trimiterea unei tranzacții semnate a eșuat",
+      "syncingWaitTitle":"Nodul este sincronizat",
+      "syncingWait":"Nodul este sincronizat, timpul de confirmare a tranzacției poate fi mai lung, vă rugăm să aveți răbdare"
+    }
+  },
+  "pager": {
+    "next":"Pagina următoare",
+    "prev":"Pagina anterioară"
+  },
+  "page_account": {
+    "transfer_log":"Înregistrare tranzacție",
+    "transfer_log_null":"Niciun istoric al tranzacțiilor",
+    "txSent":"Tranzacție transmisă",
+    "txAll":"Toate tranzacțiile",
+    "txNew":"Contul curent conține informații despre tranzacții noi",
+    "checkNow":"Vezi acum",
+    "active_icon": {
+      "go_transfer":"Inițiați un transfer",
+      "import_keystore":"Fișierul de cont",
+      "qrcode":"Codul QR"
+    },
+    "edit_dia": {
+      "tit":"Modificați notele",
+      "subtit":"Marcați o notă pentru contul dvs.",
+      "no_tag":"Introduceți o notă de cont",
+      "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere."
+    },
+    "dia_tx": {
+      "tit":"Informații despre tranzacții",
+      "block_hash":"Numărul de tranzacție",
+      "status":"stat",
+      "from":"Parchetul de trimitere",
+      "to":"Payee",
+      "amount":"bani",
+      "data":"date",
+      "send_time":"Timpul de expediere",
+      "mac_time":"Durata principală a lanțului",
+      "gasPrice":"Prețul unității de gaze (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Utilizarea gazelor",
+      "waiting":"Așteptată confirmarea",
+      "success":"succes",
+      "sendFail":"Trimiterea a eșuat",
+      "fail1":"Nerespectarea (1)",
+      "fail2":"Nerespectarea (2)",
+      "fail3":"Esecul (3)"
+    },
+    "keystore": {
+      "tit":"Fișier de portofel înapoi",
+      "copy":"copie",
+      "download":"Descărcați fișierul portofel"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adresa a fost copiată",
+      "key_copy_success":"Copie reușită"
+    }
+  },
+  "page_home": {
+    "import_account":"Contul de import",
+    "add_account":"Cont nou",
+    "acc":"cont",
+    "create_dia": {
+      "create_tit":"Creați un cont",
+      "backup_tit":"Faceți o copie de siguranță a noului cont",
+      "create_tag":"Notă privind contul",
+      "create_pwd":"Setați parola",
+      "create_repwd":"Confirmați parola",
+      "placeholder_tag":"Stabiliți numele notei de cont",
+      "placeholder_pwd":"Setați parola contului",
+      "placeholder_repwd":"Confirmați parola contului",
+      "account_download_keystore":"Descărcați fișierul de cont",
+      "validate_tag":"Introduceți numele notei de cont",
+      "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
+      "validate_password":"Introduceți parola pe care ați setat-o",
+      "validate_re_password":"Introduceți din nou parola pe care o setați din nou",
+      "validate_strong_password":"Introduceți o parolă cu cel puțin 8 cifre",
+      "validate_long_password":"Parola nu poate depăși 100 de cifre în lungime",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Parola inconsistentă introdusă de două ori",
+      "create_success":"Creat cu succes",
+      "account_quantity_error":"Numărul de conturi nu poate depăși 50",
+      "create_success_des":"Salvați fișierul contului dvs. și nu îl distribuiți nimănui!"
+    },
+    "import_dia": {
+      "tit":"Contul de import",
+      "placeholder_keystore":"Trageți aici fișierul contului",
+      "create_tag":"Notă privind contul",
+      "placeholder_tag":"Stabiliți numele notei de cont",
+      "validate_tag":"Introduceți numele notei de cont",
+      "validate_tag_length":"Numele numelui notei nu poate fi mai mare de 8 caractere.",
+      "validate_enter_keystore":"Vă rugăm să importați mai întâi fișierul contului",
+      "validate_error_keystore":"Importul contului nu a reușit, poate fi eroare de fișier de cont",
+      "imported_account_success":"S-a importat cu succes",
+      "exist":"Acest cont există deja, este nota",
+      "keystore_error":"Eroare:",
+      "keystore_length_error":"Un singur fișier de cont poate fi importat, încercați din nou!",
+      "keystore_format_error":"Selectați fișierul de cont corect",
+      "keystore_is_has":"Există deja un cont în listă pe care trebuie să-l importați.",
+      "imported_success":"Fișierul selectat"
+    },
+    "remove_dia": {
+      "tit":"Sigur doriți să îl eliminați?",
+      "remove_confrim":"Sunt sigur că voi elimina",
+      "backup":"Fiți atenți la backupul acestui cont pentru a evita daunele materiale.",
+      "input_pwd":"parolă",
+      "placeholder_pwd":"Introduceți parola pentru acest cont",
+      "validate_password":"Parola pe care ați introdus-o este greșită",
+      "remove_success":"A fost eliminată cu succes"
+    }
+  },
+  "page_config": {
+    "config_detection":"Detectarea configurației",
+    "content_msg": {
+      "ready_test":"Pregătiți-vă pentru a detecta fișierul de configurare",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Au fost obținute cele mai recente informații privind configurația nodurilor",
+      "is_local":"Verificați dacă există un fișier nod local",
+      "already_local":"Fișierul de configurare al fișierului nod există pe dispozitivul curent.",
+      "not_local":"Informațiile de configurare ale fișierului nod nu sunt detectate, poate fi prima dată când rulează.",
+      "config_write_local":"Scrieți fișierul informațiilor despre noduri obținute pe discul local",
+      "whether_update_node":"Verificați dacă este necesară o actualizare",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Descărcarea programului de noduri, vă rugăm să aveți răbdare",
+      "already_downloaded":"Programul de noduri a fost descărcat și gata să înceapă.",
+      "ready_start":"Pregătește-te pentru a porni nodul",
+      "enter_wallet":"Nodul începe detectarea, gata să intre în portofel",
+      "specifyDataDir":"Selectați calea de stocare a datelor nodurilor"
+    },
+    "version_dialog": {
+      "version_tit":"Versiunea de actualizare a promptului",
+      "download_wallet":"Accesați site-ul oficial pentru a descărca cea mai recentă versiune a banilor",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

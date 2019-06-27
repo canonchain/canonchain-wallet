@@ -1,204 +1,242 @@
 {
-    "confirm":"Potvrďte",
-    "cancel":"Zrušit",
-    "dialog_tit":"Prompt",
-    "close":"Zavřete",
-    "confirm_you_active":"Potvrďte svou činnost",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Potvrďte",
+  "cancel":"Zrušit",
+  "dialog_tit":"Prompt",
+  "close":"Zavřít",
+  "confirm_you_active":"Potvrďte prosím svou operaci",
+  "rpcErrors": {
+    "invalidFromAccount":"Účet odesílatele je neplatný",
+    "invalidToAccount":"Příchozí účet je neplatný",
+    "invalidAmountFormat":"Neplatný formát částky",
+    "invalidGasFormat":"Neplatný formát plynu",
+    "invalidDataFormat":"Neplatný hexadecimální formát dat",
+    "dataSizeTooLarge":"Šestnáctková data jsou příliš velká",
+    "invalidGasPriceFormat":"Formát ceny plynu je neplatný",
+    "invalidMciFormat":"Formát MCI je neplatný",
+    "notEnoughFail":"Nedostatek plynu nebo abnormální porucha"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Domů",
+    "transfer":"Přenos",
+    "contacts":"Kontakt",
+    "setting":"Nastavení",
+    "total":"Celkem",
+    "testnet":"Testovací síť",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"V synchronizaci"
+  },
+  "page_setting": {
+    "tit":"Nastavení",
+    "lang":"Jazyk",
+    "select":"Vyberte prosím",
+    "version_number":"Verze peněženky",
+    "data_path":"Datová cesta uzlu",
+    "change":"Změna",
+    "changeDirNote":"Přesuňte soubory v původní cestě do nového adresáře, jinak dojde ke ztrátě dat.",
+    "note":"Pozor"
+  },
+  "page_contacts": {
+    "tit":"Kontakt",
+    "add_dialog":"Nový kontakt",
+    "add_cont": {
+      "tit":"Nový kontakt",
+      "tag":"Kontakt",
+      "address":"Adresa účtu",
+      "tag_placeholder":"Zadejte jméno kontaktu",
+      "address_placeholder":"Zadejte adresu účtu kontaktu",
+      "add_success":"Úspěšně přidáno"
     },
-    "model_header": {
-        "home":"Domů",
-        "transfer":"Přenos",
-        "contacts":"Kontakt",
-        "setting":"Nastavení",
-        "total":"Celkem",
-        "testnet":"Testovací síť",
-        "online":"Online",
-        "offline":"Offline"
+    "delete_dialog": {
+      "title":"Odstraňujete",
+      "remove_success":"Úspěšně odstraněn"
     },
-    "page_setting": {
-        "tit":"Nastavení",
-        "lang":"Jazyk",
-        "select":"Vyberte prosím",
-        "version_number":"Peněžní verze"
-    },
-    "page_contacts": {
-        "tit":"Kontakt",
-        "add_dialog":"Nový kontakt",
-        "add_cont": {
-            "tit":"Nový kontakt",
-            "tag":"Kontakt",
-            "address":"Adresa účtu",
-            "tag_placeholder":"Zadejte prosím jméno kontaktu",
-            "address_placeholder":"Zadejte adresu účtu kontaktu",
-            "add_success":"Přidáno úspěšně"
-        },
-        "delete_dialog": {
-            "title":"Odstraňujete",
-            "remove_success":"Úspěšně byla odebrána"
-        },
-        "msg_info": {
-            "no_tag":"Zadejte poznámku k účtu",
-            "no_address":"Zadejte adresu svého účtu",
-            "valid_address":"Adresa kontaktu je neplatná",
-            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
-            "contacts_quantity_error":"Počet kontaktů nesmí přesáhnout 50",
-            "exist":"Kontakt již existuje,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Odesílající strana",
-        "to_address":"Příjemce platby",
-        "amount":"Částka",
-        "gas":"Plyn",
-        "send_all":"Pošlete vše",
-        "data":"Data",
-        "data_placeholder":"Hexadecimální data",
-        "fees":"Poplatek za zpracování",
-        "total":"Celkem",
-        "select":"Vyberte prosím",
-        "no_account_info":"Zatím nemáte účet, vytvořte nebo importujte účet",
-        "contacts_dig": {
-            "title":"Vyberte účet kontaktu",
-            "select_placeholder":"Vyberte prosím"
-        },
-        "confirm_dia": {
-            "title":"Potvrďte prosím",
-            "enter_passworld_tit":"Zadejte své heslo",
-            "enter_passworld_place":"Zadejte své heslo"
-        },
-        "msg_info": {
-            "address_null":"Zadejte prosím účet druhé strany",
-            "balance_zero":"Nedostatečná rovnováha, nemůže pokračovat",
-            "amount_zero":"Převod musí být větší než 0",
-            "amount_error":"Zadejte částku právní transakce",
-            "address_err":"Formát přenesené adresy je neplatný.",
-            "send_success":"Transakce odeslána",
-            "amount_exceeded":"Celková částka běžné transakce přesahuje zůstatek účtu",
-
-            "decrypt_err":"Analýza peněženky se nezdařila, může to být chyba hesla",
-            "send_error":"Transakce selhala: zkontrolujte prosím, zda je dostatečný zůstatek a poplatek za mince"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transakční záznam",
-        "transfer_log_null":"Žádná historie transakcí",
-        "active_icon": {
-            "go_transfer":"Zahajte převod",
-            "import_keystore":"Soubor účtu",
-            "qrcode":"QR kód"
-        },
-        "edit_dia": {
-            "tit":"Upravit poznámku",
-            "subtit":"Označte poznámku k účtu",
-            "no_tag":"Zadejte poznámku k účtu",
-            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků."
-        },
-        "dia_tx":{
-            "tit":"Informace o transakcích",
-            "block_hash":"Číslo transakce",
-            "status":"Stát",
-            "from":"Odesílající strana",
-            "to":"Příjemce platby",
-            "amount":"Částka",
-            "data":"Data",
-            "send_time":"Odeslání času",
-            "mac_time":"Hlavní čas řetězce"
-        },
-        "keystore": {
-            "tit":"Záložní soubor peněženky",
-            "copy":"Kopírovat",
-            "download":"Stáhnout soubor peněľenky"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adresa byla zkopírována",
-            "key_copy_success":"Úspěšná kopie"
-        }
-    },
-    "page_home": {
-        "import_account":"Importní účet",
-        "add_account":"Nový účet",
-        "acc":"Účet",
-        "create_dia": {
-            "create_tit":"Vytvořte si účet",
-            "backup_tit":"Zálohujte nový účet",
-            "create_tag":"Poznámka k účtu",
-            "create_pwd":"Nastavte heslo",
-            "create_repwd":"Potvrďte heslo",
-            "placeholder_tag":"Nastavte prosím název účtu",
-            "placeholder_pwd":"Nastavte heslo účtu",
-            "placeholder_repwd":"Potvrďte heslo účtu",
-            
-            
-            "account_download_keystore":"Stáhněte soubor účtu",
-
-            "validate_tag":"Zadejte název bankovky účtu",
-            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
-
-            "validate_password":"Zadejte prosím heslo, které jste nastavili",
-            "validate_re_password":"Zadejte znovu zadané heslo",
-            "validate_strong_password":"Zadejte heslo alespoň 8 číslic",
-            "validate_long_password":"Heslo nesmí překročit 100 číslic",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Nesouvislé zadání hesla dvakrát",
-
-            "create_success":"Vytvořeno úspěšně",
-            "account_quantity_error":"Počet účtů nesmí přesáhnout 50",
-            "create_success_des":"Uložte si soubor účtu a nesdílejte ho nikomu!"
-        },
-        "import_dia": {
-            "tit":"Importní účet",    
-            "placeholder_keystore":"Zde prosím přetáhněte soubor účtu",
-            "create_tag":"Poznámka k účtu",
-            "placeholder_tag":"Nastavte prosím název účtu",
-
-            "validate_tag":"Zadejte název bankovky účtu",
-            "validate_tag_length":"Název jména poznámky nesmí být větší než 8 znaků.",
-            "validate_enter_keystore":"Nejprve importujte soubor účtu",
-            "validate_error_keystore":"Import importu účtu selhal, může to být chyba souboru účtu",
-            "imported_account_success":"Úspěšně importováno",
-            "exist":"Tento účet již existuje, poznámka je",
-            "keystore_error":"Chyba:",
-            "keystore_length_error":"Je možné importovat pouze jeden soubor účtu, zkuste to prosím znovu!",
-            "keystore_format_error":"Vyberte správný soubor účtu",
-            "keystore_is_has":"V seznamu již existuje účet, který je třeba importovat.",
-            "imported_success":"Již vybraný soubor"
-        },
-        "remove_dia": {
-            "tit":"Opravdu ji chcete odstranit?",
-            "remove_confrim":"Určitě odstraním",
-            "backup":"Věnujte prosím pozornost zálohám tohoto účtu, abyste zabránili poškození majetku.",
-            "input_pwd":"Heslo",
-            "placeholder_pwd":"Zadejte heslo pro tento účet",
-            "validate_password":"Zadané heslo je nesprávné",
-            "remove_success":"Úspěšně byla odebrána"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfigurační detekce",
-        "content_msg":{
-            "ready_test":"Připravte se ke zjištění konfiguračního souboru",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Byla získána nejnovější informace o konfiguraci uzlů",
-            "is_local":"Zkontrolujte, zda je lokální soubor uzlu",
-            "already_local":"Konfigurační soubor souboru uzlu existuje na aktuálním zařízení.",
-            "not_local":"Informace o konfiguraci souboru uzlů se nezjistí, může být poprvé spuštěna.",
-            "config_write_local":"Napište získaný informační soubor uzlu na místní disk",
-            "whether_update_node":"Zkontrolujte, zda je potřeba aktualizace",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Stažení programu uzlů, prosím, buďte trpěliví",
-            "already_downloaded":"Program uzlu byl stažen a připraven ke spuštění.",
-            "ready_start":"Připravte se ke spuštění uzlu",
-            "enter_wallet":"Uzel zahájí zjišťování a je připraven k zadání peněženky"
-        },
-        "version_dialog":{
-            "version_tit":"Aktualizace výzvy k verzi",
-            "download_wallet":"Přejděte na oficiální webové stránky a stáhněte si nejnovější verzi peněz",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Zadejte poznámku k účtu",
+      "no_address":"Zadejte adresu účtu",
+      "valid_address":"Adresa kontaktu je nezákonná",
+      "validate_tag_length":"Název názvu poznámky nesmí být větší než 8 znaků.",
+      "contacts_quantity_error":"Počet kontaktů nesmí překročit 50",
+      "exist":"Kontakt již existuje,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Vysílající strana",
+    "to_address":"Příjemce",
+    "amount":"Částka",
+    "gas":"Plyn",
+    "gasPrice":"Cena plynové jednotky",
+    "send_all":"Pošlete všechny",
+    "data":"Data",
+    "data_placeholder":"Šestnáctková data",
+    "fees":"Manipulační poplatek",
+    "txFee":"Transakční poplatek",
+    "total":"Celkem",
+    "select":"Vyberte prosím",
+    "no_account_info":"Ještě nemáte účet, vytvořte nebo importujte účet",
+    "no_keystore_file":"Pro odpovídající účet nebyl nalezen žádný účet",
+    "contacts_dig": {
+      "title":"Vyberte kontaktní účet",
+      "select_placeholder":"Vyberte prosím"
+    },
+    "confirm_dia": {
+      "title":"Potvrďte prosím",
+      "enter_passworld_tit":"Zadejte své heslo",
+      "enter_passworld_place":"Zadejte své heslo"
+    },
+    "msg_info": {
+      "address_null":"Zadejte prosím účet druhé strany",
+      "balance_zero":"Nedostatečná rovnováha, nelze pokračovat",
+      "amount_zero":"Částka převodu musí být větší než 0",
+      "amount_error":"Zadejte částku právní transakce",
+      "address_err":"Formát přenesené adresy je neplatný.",
+      "gas_error":"Zadejte prosím zákonný plyn",
+      "gasPrice_error":"Zadejte právní cenu transakce",
+      "send_success":"Transakce byla odeslána",
+      "amount_exceeded":"Aktuální celková částka transakce převyšuje zůstatek účtu",
+      "txFeeTooLow":"Transakční náklady jsou příliš nízké",
+      "decrypt_err":"Analýza peněženky se nezdařila, může to být chyba hesla",
+      "send_error":"Transakce se nezdařila: zkontrolujte, zda je k dispozici dostatečný zůstatek a poplatek za těžbu",
+      "generate_offline_block_err":"Generování nepodepsané transakce se nezdařilo",
+      "sign_err":"Podpis selhal",
+      "send_offline_block_err":"Odeslání podepsané transakce se nezdařilo",
+      "syncingWaitTitle":"Uzel je synchronizován",
+      "syncingWait":"Uzel je synchronizován, čas potvrzení transakce může být delší, prosím, buďte trpěliví"
+    }
+  },
+  "pager": {
+    "next":"Další stránka",
+    "prev":"Předchozí stránka"
+  },
+  "page_account": {
+    "transfer_log":"Transakční záznam",
+    "transfer_log_null":"Žádná historie transakcí",
+    "txSent":"Převedená transakce",
+    "txAll":"Všechny transakce",
+    "txNew":"Běžný účet má nové informace o transakci",
+    "checkNow":"Zobrazit nyní",
+    "active_icon": {
+      "go_transfer":"Zahájit převod",
+      "import_keystore":"Soubor účtu",
+      "qrcode":"QR kód"
+    },
+    "edit_dia": {
+      "tit":"Změnit poznámky",
+      "subtit":"Označte poznámku pro svůj účet",
+      "no_tag":"Zadejte poznámku k účtu",
+      "validate_tag_length":"Název názvu poznámky nesmí být větší než 8 znaků."
+    },
+    "dia_tx": {
+      "tit":"Informace o transakci",
+      "block_hash":"Číslo transakce",
+      "status":"Státu",
+      "from":"Vysílající strana",
+      "to":"Příjemce",
+      "amount":"Částka",
+      "data":"Data",
+      "send_time":"Čas odeslání",
+      "mac_time":"Doba hlavního řetězce",
+      "gasPrice":"Cena plynové jednotky (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Použití plynu",
+      "waiting":"Čekání na potvrzení",
+      "success":"Úspěch",
+      "sendFail":"Odeslání se nezdařilo",
+      "fail1":"Selhání (1)",
+      "fail2":"Selhání (2)",
+      "fail3":"Selhání (3)"
+    },
+    "keystore": {
+      "tit":"Soubor záložní peněženky",
+      "copy":"Kopírovat",
+      "download":"Stáhnout soubor peněženky"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adresa byla zkopírována",
+      "key_copy_success":"Úspěšná kopie"
+    }
+  },
+  "page_home": {
+    "import_account":"Importovat účet",
+    "add_account":"Nový účet",
+    "acc":"Účet",
+    "create_dia": {
+      "create_tit":"Vytvořit účet",
+      "backup_tit":"Zálohujte nový účet",
+      "create_tag":"Poznámka k účtu",
+      "create_pwd":"Nastavit heslo",
+      "create_repwd":"Potvrďte heslo",
+      "placeholder_tag":"Nastavte prosím název účtu",
+      "placeholder_pwd":"Nastavte heslo účtu",
+      "placeholder_repwd":"Potvrďte prosím heslo účtu",
+      "account_download_keystore":"Stáhnout soubor účtu",
+      "validate_tag":"Zadejte název poznámky k účtu",
+      "validate_tag_length":"Název názvu poznámky nesmí být větší než 8 znaků.",
+      "validate_password":"Zadejte heslo, které jste nastavili",
+      "validate_re_password":"Zadejte heslo, které jste nastavili znovu",
+      "validate_strong_password":"Zadejte prosím alespoň 8místné heslo",
+      "validate_long_password":"Heslo nesmí překročit délku 100 číslic",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Dvakrát zadané nekonzistentní heslo",
+      "create_success":"Vytvořeno úspěšně",
+      "account_quantity_error":"Počet účtů nesmí překročit 50",
+      "create_success_des":"Uložte prosím svůj účet a nesdělujte ho nikomu!"
+    },
+    "import_dia": {
+      "tit":"Importovat účet",
+      "placeholder_keystore":"Zde prosím přetáhněte soubor účtu",
+      "create_tag":"Poznámka k účtu",
+      "placeholder_tag":"Nastavte prosím název účtu",
+      "validate_tag":"Zadejte název poznámky k účtu",
+      "validate_tag_length":"Název názvu poznámky nesmí být větší než 8 znaků.",
+      "validate_enter_keystore":"Nejdříve importujte soubor účtu",
+      "validate_error_keystore":"Import účtu se nezdařil, může to být chyba souboru účtu",
+      "imported_account_success":"Úspěšně importováno",
+      "exist":"Tento účet již existuje, poznámka je",
+      "keystore_error":"Chyba:",
+      "keystore_length_error":"Importovat lze pouze jeden soubor účtu, zkuste to prosím znovu!",
+      "keystore_format_error":"Vyberte správný soubor účtu",
+      "keystore_is_has":"V seznamu je již účet, který potřebujete importovat.",
+      "imported_success":"Soubor byl vybrán"
+    },
+    "remove_dia": {
+      "tit":"Opravdu jej chcete odstranit?",
+      "remove_confrim":"Určitě to odstraním",
+      "backup":"Věnujte prosím pozornost zálohování tohoto účtu, abyste zabránili poškození majetku.",
+      "input_pwd":"Heslo",
+      "placeholder_pwd":"Zadejte prosím heslo pro tento účet",
+      "validate_password":"Zadané heslo je nesprávné",
+      "remove_success":"Úspěšně odstraněn"
+    }
+  },
+  "page_config": {
+    "config_detection":"Detekce konfigurace",
+    "content_msg": {
+      "ready_test":"Připravte se na zjištění konfiguračního souboru",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Byly získány nejnovější informace o konfiguraci uzlu",
+      "is_local":"Zkontrolujte, zda je soubor uzlu lokálně",
+      "already_local":"Konfigurační soubor souboru uzlu existuje v aktuálním zařízení.",
+      "not_local":"Informace o konfiguraci souboru uzlu nejsou detekovány, mohou být poprvé spuštěny.",
+      "config_write_local":"Načtený soubor informací o uzlu zapište na lokální disk",
+      "whether_update_node":"Zkontrolujte, zda je nutná aktualizace",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Stahujte program uzlů, buďte trpěliví",
+      "already_downloaded":"Program uzlu byl stažen a připraven ke spuštění.",
+      "ready_start":"Připravte se na spuštění uzlu",
+      "enter_wallet":"Uzel začíná detekci, připraven k zadání peněženky",
+      "specifyDataDir":"Vyberte cestu úložiště dat uzlu"
+    },
+    "version_dialog": {
+      "version_tit":"Vyzve k aktualizaci verze",
+      "download_wallet":"Přejděte na oficiální stránky a stáhněte si nejnovější verzi peněz",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

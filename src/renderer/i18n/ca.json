@@ -1,204 +1,242 @@
 {
-    "confirm":"Confirma",
-    "cancel":"Cancel·la",
-    "dialog_tit":"Preguntar",
-    "close":"Tanca",
-    "confirm_you_active":"Confirmeu el vostre funcionament",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Confirmeu",
+  "cancel":"Cancel·la",
+  "dialog_tit":"Pregunta",
+  "close":"Tanca",
+  "confirm_you_active":"Confirmeu la vostra operació",
+  "rpcErrors": {
+    "invalidFromAccount":"El compte del remitent no és vàlid",
+    "invalidToAccount":"El compte entrant no és vàlid",
+    "invalidAmountFormat":"Format d’import no vàlid",
+    "invalidGasFormat":"Format de gas no vàlid",
+    "invalidDataFormat":"Format de dades hexadecimal no vàlid",
+    "dataSizeTooLarge":"Les dades hexadecals són massa grans",
+    "invalidGasPriceFormat":"El format del preu unitari del gas no és vàlid",
+    "invalidMciFormat":"El format MCI no és vàlid",
+    "notEnoughFail":"Insuficiència de gasos o fallades anormals"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Inici",
+    "transfer":"Transferència",
+    "contacts":"Contacte",
+    "setting":"Configuració",
+    "total":"Total",
+    "testnet":"Prova de xarxa",
+    "online":"En línia",
+    "offline":"Fora de línia",
+    "syncing":"En sincronització"
+  },
+  "page_setting": {
+    "tit":"Configuració",
+    "lang":"Idioma",
+    "select":"Trieu",
+    "version_number":"Versió de cartera",
+    "data_path":"Camí de dades de nodes",
+    "change":"Canvia",
+    "changeDirNote":"Si us plau, moveu els fitxers a la ruta original al nou directori; en cas contrari, es produiran pèrdues de dades.",
+    "note":"Atenció"
+  },
+  "page_contacts": {
+    "tit":"Contacte",
+    "add_dialog":"Nou contacte",
+    "add_cont": {
+      "tit":"Nou contacte",
+      "tag":"Contacte",
+      "address":"Adreça del compte",
+      "tag_placeholder":"Introduïu el nom del contacte",
+      "address_placeholder":"Introduïu l’adreça del compte del contacte",
+      "add_success":"S'ha afegit correctament"
     },
-    "model_header": {
-        "home":"Inici",
-        "transfer":"Transferència",
-        "contacts":"Contacte",
-        "setting":"Configuració",
-        "total":"Total",
-        "testnet":"Xarxa de proves",
-        "online":"En línia",
-        "offline":"Fora de línia"
+    "delete_dialog": {
+      "title":"Esteu eliminant",
+      "remove_success":"S'ha eliminat correctament"
     },
-    "page_setting": {
-        "tit":"Configuració",
-        "lang":"Llengua",
-        "select":"Trieu",
-        "version_number":"Versió de la cartera"
-    },
-    "page_contacts": {
-        "tit":"Contacte",
-        "add_dialog":"Nou contacte",
-        "add_cont": {
-            "tit":"Nou contacte",
-            "tag":"Contacte",
-            "address":"Adreça del compte",
-            "tag_placeholder":"Introduïu el nom del contacte",
-            "address_placeholder":"Introduïu l'adreça del compte del contacte",
-            "add_success":"S'ha afegit correctament"
-        },
-        "delete_dialog": {
-            "title":"Estàs eliminant",
-            "remove_success":"S'ha eliminat correctament"
-        },
-        "msg_info": {
-            "no_tag":"Introduïu una nota del compte",
-            "no_address":"Introduïu l'adreça del vostre compte",
-            "valid_address":"L'adreça del contacte és il·legal",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
-            "contacts_quantity_error":"El nombre de contactes no pot superar els 50",
-            "exist":"El contacte ja existeix,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Part enviadora",
-        "to_address":"Pagador",
-        "amount":"Import",
-        "gas":"Gas",
-        "send_all":"Envieu-ho tot",
-        "data":"Dades",
-        "data_placeholder":"Dades hexadecimals",
-        "fees":"Tarifa de gestió",
-        "total":"Total",
-        "select":"Trieu",
-        "no_account_info":"Encara no teniu cap compte, creieu o importeu un compte",
-        "contacts_dig": {
-            "title":"Seleccioneu un compte de contacte",
-            "select_placeholder":"Trieu"
-        },
-        "confirm_dia": {
-            "title":"Confirma",
-            "enter_passworld_tit":"Introduïu la vostra contrasenya",
-            "enter_passworld_place":"Introduïu la vostra contrasenya"
-        },
-        "msg_info": {
-            "address_null":"Introduïu el compte de la tercera part",
-            "balance_zero":"Balanç insuficient, incapaç de continuar",
-            "amount_zero":"L'import de la transferència ha de ser superior a 0",
-            "amount_error":"Introduïu un import de transacció legal",
-            "address_err":"El format de l'adreça transferida no és vàlida.",
-            "send_success":"S'ha enviat la transacció",
-            "amount_exceeded":"L'import total de la transacció actual supera el saldo del compte",
-
-            "decrypt_err":"L'anàlisi de la cartera ha fallat, pot ser un error de contrasenya",
-            "send_error":"Ha fallat la transacció: si us plau, comproveu si hi ha un saldo suficient i una tarifa de minera"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Registre de transaccions",
-        "transfer_log_null":"Sense historial de transaccions",
-        "active_icon": {
-            "go_transfer":"Inicieu una transferència",
-            "import_keystore":"Fitxer del compte",
-            "qrcode":"Codi QR"
-        },
-        "edit_dia": {
-            "tit":"Modifica nota",
-            "subtit":"Marqueu una nota per al vostre compte",
-            "no_tag":"Introduïu una nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters."
-        },
-        "dia_tx":{
-            "tit":"Informació sobre la transacció",
-            "block_hash":"Número de transacció",
-            "status":"Estat",
-            "from":"Part enviadora",
-            "to":"Pagador",
-            "amount":"Import",
-            "data":"Dades",
-            "send_time":"S'està enviant el temps",
-            "mac_time":"Temps de cadena principal"
-        },
-        "keystore": {
-            "tit":"Arxiu de cartera de còpia de seguretat",
-            "copy":"Copia",
-            "download":"Descarregar el fitxer de cartera"
-        },
-        "msg_info": {
-            "ads_copy_success":"S'ha copiat l'adreça",
-            "key_copy_success":"Còpia amb èxit"
-        }
-    },
-    "page_home": {
-        "import_account":"Importar compte",
-        "add_account":"Nou compte",
-        "acc":"Compte",
-        "create_dia": {
-            "create_tit":"Crea un compte",
-            "backup_tit":"Feu una còpia de seguretat del vostre compte nou",
-            "create_tag":"Nota del compte",
-            "create_pwd":"Estableix la contrasenya",
-            "create_repwd":"Confirma la contrasenya",
-            "placeholder_tag":"Establiu el nom de la nota del compte",
-            "placeholder_pwd":"Establiu la contrasenya del compte",
-            "placeholder_repwd":"Confirmeu la contrasenya del compte",
-            
-            
-            "account_download_keystore":"Baixeu el fitxer del compte",
-
-            "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
-
-            "validate_password":"Introduïu la contrasenya que heu definit",
-            "validate_re_password":"Introduïu la contrasenya que heu configurat de nou",
-            "validate_strong_password":"Introduïu una contrasenya d'almenys 8 dígits",
-            "validate_long_password":"La contrasenya no pot superar els 100 dígits de durada",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"S'ha introduït una contrasenya inconsistent dues vegades",
-
-            "create_success":"Creat amb èxit",
-            "account_quantity_error":"El nombre de comptes no pot superar els 50",
-            "create_success_des":"Deseu el fitxer del vostre compte i no el compartiu amb ningú."
-        },
-        "import_dia": {
-            "tit":"Importar compte",    
-            "placeholder_keystore":"Arrossegueu aquí el fitxer del compte",
-            "create_tag":"Nota del compte",
-            "placeholder_tag":"Establiu el nom de la nota del compte",
-
-            "validate_tag":"Introduïu el nom de la nota del compte",
-            "validate_tag_length":"El nom del nom de la nota no pot tenir més de 8 caràcters.",
-            "validate_enter_keystore":"Importeu primer el fitxer del compte",
-            "validate_error_keystore":"La importació del compte ha fallat, pot ser un error del fitxer de compte",
-            "imported_account_success":"S'ha importat correctament",
-            "exist":"Aquest compte ja existeix, la nota és",
-            "keystore_error":"Error:",
-            "keystore_length_error":"Només es pot importar un fitxer de compte, torneu-ho a provar.",
-            "keystore_format_error":"Seleccioneu el fitxer del compte correcte",
-            "keystore_is_has":"Ja hi ha un compte a la llista que heu d'importar.",
-            "imported_success":"Arxiu ja seleccionat"
-        },
-        "remove_dia": {
-            "tit":"Esteu segur que voleu eliminar-lo?",
-            "remove_confrim":"Estic segur d'eliminar",
-            "backup":"Poseu atenció a la còpia de seguretat d'aquest compte per evitar danys a la propietat.",
-            "input_pwd":"Contrasenya",
-            "placeholder_pwd":"Introduïu la contrasenya d'aquest compte",
-            "validate_password":"La contrasenya que heu introduït és incorrecta",
-            "remove_success":"S'ha eliminat correctament"
-        }
-    },
-    "page_config": {
-        "config_detection":"Detecció de configuració",
-        "content_msg":{
-            "ready_test":"Prepara't per detectar el fitxer de configuració",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"S'ha obtingut la informació de configuració del node més recent",
-            "is_local":"Comproveu si hi ha un fitxer de node local",
-            "already_local":"El fitxer de configuració del fitxer node existeix en el dispositiu actual.",
-            "not_local":"La informació de configuració del fitxer node no es detecta, pot ser la primera vegada que s'executi.",
-            "config_write_local":"Escriu el fitxer d'informació del node obtingut al disc local",
-            "whether_update_node":"Comproveu si cal una actualització",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"S'està baixant el programa de nodes, tingueu paciència",
-            "already_downloaded":"S'ha baixat el programa del node i està llest per començar.",
-            "ready_start":"Prepara't per iniciar el node",
-            "enter_wallet":"El node comença a detectar, llest per entrar a la cartera"
-        },
-        "version_dialog":{
-            "version_tit":"Indicador d'actualització de la versió",
-            "download_wallet":"Aneu a la pàgina web oficial per descarregar la versió més recent dels diners",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Introduïu una nota de compte",
+      "no_address":"Introduïu l’adreça del compte",
+      "valid_address":"L’adreça del contacte és il·legal",
+      "validate_tag_length":"El nom del nom de la nota no pot ser superior a 8 caràcters.",
+      "contacts_quantity_error":"El nombre de contactes no pot superar els 50",
+      "exist":"El contacte ja existeix,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Part de l'enviament",
+    "to_address":"Beneficiari",
+    "amount":"Quantitat",
+    "gas":"Gas",
+    "gasPrice":"Preu unitari del gas",
+    "send_all":"Envia-ho tot",
+    "data":"Dades",
+    "data_placeholder":"Dades hexadecals",
+    "fees":"Tarifa de manipulació",
+    "txFee":"Quota de transacció",
+    "total":"Total",
+    "select":"Trieu",
+    "no_account_info":"Encara no tens cap compte, creeu o importeu el compte",
+    "no_keystore_file":"No s’ha trobat cap fitxer de compte per al compte corresponent",
+    "contacts_dig": {
+      "title":"Seleccioneu el compte de contacte",
+      "select_placeholder":"Trieu"
+    },
+    "confirm_dia": {
+      "title":"Confirmeu-ho",
+      "enter_passworld_tit":"Introduïu la vostra contrasenya",
+      "enter_passworld_place":"Introduïu la vostra contrasenya"
+    },
+    "msg_info": {
+      "address_null":"Introduïu el compte de l’altra part",
+      "balance_zero":"Balanç insuficient, incapaç de continuar",
+      "amount_zero":"L’import de la transferència ha de ser superior a 0",
+      "amount_error":"Introduïu un import de transacció legal",
+      "address_err":"El format de l’adreça transferida no és vàlid.",
+      "gas_error":"Introduïu un gas legal de transacció",
+      "gasPrice_error":"Introduïu el preu legal de la transacció",
+      "send_success":"Transacció enviada",
+      "amount_exceeded":"L’import total de la transacció actual supera el saldo del compte",
+      "txFeeTooLow":"El cost de la transacció és massa baix",
+      "decrypt_err":"Ha fallat l'anàlisi de cartera, pot ser un error de contrasenya",
+      "send_error":"Ha fallat la transacció: si us plau, comproveu si hi ha balanç suficient i quotes de miners",
+      "generate_offline_block_err":"Ha fallat la generació d’una transacció sense signar",
+      "sign_err":"Ha fallat la signatura",
+      "send_offline_block_err":"No s’ha enviat una transacció signada",
+      "syncingWaitTitle":"El node està sincronitzat",
+      "syncingWait":"El node està sincronitzat, el temps de confirmació de la transacció pot ser més llarg, tingueu paciència"
+    }
+  },
+  "pager": {
+    "next":"Pàgina següent",
+    "prev":"Pàgina anterior"
+  },
+  "page_account": {
+    "transfer_log":"Registre de transaccions",
+    "transfer_log_null":"No hi ha historial de transaccions",
+    "txSent":"Transacció transmesa",
+    "txAll":"Totes les transaccions",
+    "txNew":"El compte actual té informació de nova transacció",
+    "checkNow":"Veure ara",
+    "active_icon": {
+      "go_transfer":"Inicieu una transferència",
+      "import_keystore":"Fitxer de compte",
+      "qrcode":"Codi QR"
+    },
+    "edit_dia": {
+      "tit":"Modificar notes",
+      "subtit":"Marqueu una nota per al vostre compte",
+      "no_tag":"Introduïu una nota de compte",
+      "validate_tag_length":"El nom del nom de la nota no pot ser superior a 8 caràcters."
+    },
+    "dia_tx": {
+      "tit":"Informació de transacció",
+      "block_hash":"Número de transacció",
+      "status":"Estat",
+      "from":"Part de l'enviament",
+      "to":"Beneficiari",
+      "amount":"Quantitat",
+      "data":"Dades",
+      "send_time":"Enviament de temps",
+      "mac_time":"Temps de cadena principal",
+      "gasPrice":"Preu unitari del gas (10 <sup> -18 </sup> CZR)",
+      "gasUsed":"Ús de gasos",
+      "waiting":"Esperant confirmació",
+      "success":"Èxit",
+      "sendFail":"Ha fallat l'enviament",
+      "fail1":"Error (1)",
+      "fail2":"Error (2)",
+      "fail3":"Error (3)"
+    },
+    "keystore": {
+      "tit":"Fitxer de cartera de còpia de seguretat",
+      "copy":"Copia",
+      "download":"Baixa el fitxer de cartera"
+    },
+    "msg_info": {
+      "ads_copy_success":"S'ha copiat l’adreça",
+      "key_copy_success":"Còpia satisfactòria"
+    }
+  },
+  "page_home": {
+    "import_account":"Importa el compte",
+    "add_account":"Nou compte",
+    "acc":"Compte",
+    "create_dia": {
+      "create_tit":"Creeu un compte",
+      "backup_tit":"Feu una còpia de seguretat del vostre compte nou",
+      "create_tag":"Nota de compte",
+      "create_pwd":"Estableix la contrasenya",
+      "create_repwd":"Confirmeu la contrasenya",
+      "placeholder_tag":"Establiu el nom de la nota de compte",
+      "placeholder_pwd":"Establiu la contrasenya del compte",
+      "placeholder_repwd":"Confirmeu la contrasenya del compte",
+      "account_download_keystore":"Baixa el fitxer del compte",
+      "validate_tag":"Introduïu el nom de la nota de compte",
+      "validate_tag_length":"El nom del nom de la nota no pot ser superior a 8 caràcters.",
+      "validate_password":"Introduïu la contrasenya que heu definit",
+      "validate_re_password":"Introduïu la contrasenya que torneu a configurar",
+      "validate_strong_password":"Introduïu una contrasenya d'almenys 8 dígits",
+      "validate_long_password":"La contrasenya no pot excedir de 100 dígits",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"S'ha introduït una contrasenya inconsistent dues vegades",
+      "create_success":"S'ha creat amb èxit",
+      "account_quantity_error":"El nombre de comptes no pot superar els 50",
+      "create_success_des":"Deseu el fitxer del vostre compte i no el compartiu amb ningú."
+    },
+    "import_dia": {
+      "tit":"Importa el compte",
+      "placeholder_keystore":"Arrossegueu aquí el fitxer del compte",
+      "create_tag":"Nota de compte",
+      "placeholder_tag":"Establiu el nom de la nota de compte",
+      "validate_tag":"Introduïu el nom de la nota de compte",
+      "validate_tag_length":"El nom del nom de la nota no pot ser superior a 8 caràcters.",
+      "validate_enter_keystore":"Primer, importeu el fitxer del compte",
+      "validate_error_keystore":"Ha fallat la importació del compte, pot ser que hi hagi un error en el fitxer de compte",
+      "imported_account_success":"S'ha importat correctament",
+      "exist":"Aquest compte ja existeix, la nota és",
+      "keystore_error":"Error:",
+      "keystore_length_error":"Només es pot importar un fitxer de compte, torneu-ho a provar.",
+      "keystore_format_error":"Seleccioneu el fitxer de compte correcte",
+      "keystore_is_has":"Ja hi ha un compte a la llista que necessiteu importar.",
+      "imported_success":"Fitxer seleccionat"
+    },
+    "remove_dia": {
+      "tit":"Esteu segur que voleu eliminar-lo?",
+      "remove_confrim":"Segur que eliminaré",
+      "backup":"Tingueu en compte la còpia de seguretat d’aquest compte per evitar danys a la propietat.",
+      "input_pwd":"Contrasenya",
+      "placeholder_pwd":"Introduïu la contrasenya per a aquest compte",
+      "validate_password":"La contrasenya que heu introduït és incorrecta",
+      "remove_success":"S'ha eliminat correctament"
+    }
+  },
+  "page_config": {
+    "config_detection":"Detecció de configuració",
+    "content_msg": {
+      "ready_test":"Prepareu-vos per detectar el fitxer de configuració",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"S'ha obtingut la informació més recent sobre la configuració del node",
+      "is_local":"Comproveu si hi ha un fitxer de node localment",
+      "already_local":"El fitxer de configuració del fitxer de node existeix al dispositiu actual.",
+      "not_local":"La informació de configuració del fitxer de node no es detecta, pot ser que sigui la primera vegada que s'executa.",
+      "config_write_local":"Escriviu el fitxer d'informació del node obtingut al disc local",
+      "whether_update_node":"Comproveu si cal una actualització",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Baixant el programa de nodes, tingueu paciència",
+      "already_downloaded":"El programa del node s'ha descarregat i llest per començar.",
+      "ready_start":"Prepareu-vos per iniciar el node",
+      "enter_wallet":"El node comença a detectar-se, llest per entrar a la cartera",
+      "specifyDataDir":"Seleccioneu el camí d’emmagatzematge de les dades del node"
+    },
+    "version_dialog": {
+      "version_tit":"Sol·licitud d'actualització de la versió",
+      "download_wallet":"Aneu a la pàgina web oficial per descarregar la darrera versió dels diners",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

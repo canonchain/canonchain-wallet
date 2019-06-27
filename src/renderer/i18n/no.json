@@ -1,204 +1,242 @@
 {
-    "confirm":"bekrefte",
-    "cancel":"avbrutt",
-    "dialog_tit":"prompt",
-    "close":"Lukk",
-    "confirm_you_active":"Vennligst bekreft operasjonen din",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"bekrefte",
+  "cancel":"avbrutt",
+  "dialog_tit":"prompt",
+  "close":"Lukk",
+  "confirm_you_active":"Vennligst bekreft operasjonen din",
+  "rpcErrors": {
+    "invalidFromAccount":"Avsenderens konto er ugyldig",
+    "invalidToAccount":"Innkommende konto er ugyldig",
+    "invalidAmountFormat":"Ugyldig beløp format",
+    "invalidGasFormat":"Ugyldig gassformat",
+    "invalidDataFormat":"Ugyldig heksadesimale dataformat",
+    "dataSizeTooLarge":"Hexadecimal data er for stor",
+    "invalidGasPriceFormat":"Prisen på gassenhetsprisen er ugyldig",
+    "invalidMciFormat":"MCI-formatet er ugyldig",
+    "notEnoughFail":"Utilstrekkelig gass eller unormal feil"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Hjem",
+    "transfer":"Transfer",
+    "contacts":"Kontakt",
+    "setting":"Sett opp",
+    "total":"total",
+    "testnet":"Testnettverk",
+    "online":"online",
+    "offline":"offline",
+    "syncing":"I synkronisering"
+  },
+  "page_setting": {
+    "tit":"Sett opp",
+    "lang":"språk",
+    "select":"Vennligst velg",
+    "version_number":"Wallet-versjon",
+    "data_path":"Node data bane",
+    "change":"Endre",
+    "changeDirNote":"Vennligst flytt filene i den opprinnelige banen til den nye katalogen, ellers vil det føre til tap av data.",
+    "note":"Vær oppmerksom"
+  },
+  "page_contacts": {
+    "tit":"Kontakt",
+    "add_dialog":"Ny kontakt",
+    "add_cont": {
+      "tit":"Ny kontakt",
+      "tag":"Kontakt",
+      "address":"Kontoadresse",
+      "tag_placeholder":"Vennligst skriv inn navnet på kontakten",
+      "address_placeholder":"Vennligst skriv inn kontaktens kontoadresse",
+      "add_success":"Lagt til vellykket"
     },
-    "model_header": {
-        "home":"Hjem",
-        "transfer":"Transfer",
-        "contacts":"Kontakt",
-        "setting":"Sett opp",
-        "total":"total",
-        "testnet":"Testnettverk",
-        "online":"online",
-        "offline":"offline"
+    "delete_dialog": {
+      "title":"Du fjerner",
+      "remove_success":"Ble fjernet"
     },
-    "page_setting": {
-        "tit":"Sett opp",
-        "lang":"språk",
-        "select":"Vennligst velg",
-        "version_number":"Wallet-versjon"
-    },
-    "page_contacts": {
-        "tit":"Kontakt",
-        "add_dialog":"Ny kontakt",
-        "add_cont": {
-            "tit":"Ny kontakt",
-            "tag":"Kontakt",
-            "address":"Kontoadresse",
-            "tag_placeholder":"Vennligst skriv inn navnet på kontakten",
-            "address_placeholder":"Vennligst skriv inn kontaktens kontoadresse",
-            "add_success":"Lagt til med hell"
-        },
-        "delete_dialog": {
-            "title":"Du fjerner",
-            "remove_success":"Ble fjernet"
-        },
-        "msg_info": {
-            "no_tag":"Vennligst skriv inn et kontonotat",
-            "no_address":"Vennligst skriv inn din kontoadresse",
-            "valid_address":"Adressen til kontakten er ulovlig",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
-            "contacts_quantity_error":"Antall kontakter kan ikke overstige 50",
-            "exist":"Kontakten eksisterer allerede,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Sendeparti",
-        "to_address":"betalingsmottaker",
-        "amount":"penger",
-        "gas":"gass",
-        "send_all":"Send alle",
-        "data":"data",
-        "data_placeholder":"Hexadecimal data",
-        "fees":"Håndteringsavgift",
-        "total":"total",
-        "select":"Vennligst velg",
-        "no_account_info":"Ingen konto ennå, vennligst opprett eller importer konto",
-        "contacts_dig": {
-            "title":"Velg en kontaktkonto",
-            "select_placeholder":"Vennligst velg"
-        },
-        "confirm_dia": {
-            "title":"Vennligst bekreft",
-            "enter_passworld_tit":"Vennligst skriv inn passordet ditt",
-            "enter_passworld_place":"Vennligst skriv inn passordet ditt"
-        },
-        "msg_info": {
-            "address_null":"Vennligst skriv inn den annen partens konto",
-            "balance_zero":"Utilstrekkelig balanse, ikke i stand til å fortsette",
-            "amount_zero":"Overføringsbeløpet må være større enn 0",
-            "amount_error":"Vennligst oppgi et juridisk transaksjonsbeløp",
-            "address_err":"Formatet på den overførte adressen er ugyldig.",
-            "send_success":"Transaksjon sendt",
-            "amount_exceeded":"Gjeldende transaksjonsbeløp overstiger kontosaldoen",
-
-            "decrypt_err":"Wallet-parsing mislyktes, det kan være en passordfeil",
-            "send_error":"Transaksjonen mislyktes: sjekk om det er tilstrekkelig saldo og gruveavgift"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Transaksjonsrekord",
-        "transfer_log_null":"Ingen transaksjonshistorikk",
-        "active_icon": {
-            "go_transfer":"Start en overføring",
-            "import_keystore":"Kontofil",
-            "qrcode":"QR-kode"
-        },
-        "edit_dia": {
-            "tit":"Endre notat",
-            "subtit":"Merk et notat for kontoen din",
-            "no_tag":"Vennligst skriv inn et kontonotat",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn."
-        },
-        "dia_tx":{
-            "tit":"Transaksjonsinformasjon",
-            "block_hash":"Transaksjonsnummer",
-            "status":"stat",
-            "from":"Sendeparti",
-            "to":"betalingsmottaker",
-            "amount":"penger",
-            "data":"data",
-            "send_time":"Sende tid",
-            "mac_time":"Hovedkjede tid"
-        },
-        "keystore": {
-            "tit":"Sikkerhetskopi lommebokfil",
-            "copy":"kopi",
-            "download":"Last ned lommebokfilen"
-        },
-        "msg_info": {
-            "ads_copy_success":"Adressen er kopiert",
-            "key_copy_success":"Vellykket kopi"
-        }
-    },
-    "page_home": {
-        "import_account":"Import konto",
-        "add_account":"Ny konto",
-        "acc":"konto",
-        "create_dia": {
-            "create_tit":"Opprett en konto",
-            "backup_tit":"Sikkerhetskopier din nye konto",
-            "create_tag":"Konto notat",
-            "create_pwd":"Angi passord",
-            "create_repwd":"Bekreft passord",
-            "placeholder_tag":"Vennligst sett inn kontonotasjonsnavnet",
-            "placeholder_pwd":"Vennligst sett inn kontopassordet",
-            "placeholder_repwd":"Vennligst bekreft kontopassordet",
-            
-            
-            "account_download_keystore":"Last ned kontofilen",
-
-            "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
-
-            "validate_password":"Vennligst skriv inn passordet du angir",
-            "validate_re_password":"Vennligst skriv inn passordet du angir igjen",
-            "validate_strong_password":"Vennligst oppgi et passord med minst 8 sifre",
-            "validate_long_password":"Passordet kan ikke overstige 100 siffer i lengde",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Inkonsistent passord innført to ganger",
-
-            "create_success":"Opprettet med hell",
-            "account_quantity_error":"Antall kontoer kan ikke overstige 50",
-            "create_success_des":"Vennligst lagre kontofilen din og ikke del den med noen!"
-        },
-        "import_dia": {
-            "tit":"Import konto",    
-            "placeholder_keystore":"Vennligst dra kontofilen her",
-            "create_tag":"Konto notat",
-            "placeholder_tag":"Vennligst sett inn kontonotasjonsnavnet",
-
-            "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
-            "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
-            "validate_enter_keystore":"Vennligst importer kontofilen først",
-            "validate_error_keystore":"Kontoimporten mislyktes, kan være en kontofilfeil",
-            "imported_account_success":"Importert suksess",
-            "exist":"Denne kontoen eksisterer allerede, notatet er",
-            "keystore_error":"feil:",
-            "keystore_length_error":"Bare en kontofil kan importeres, prøv igjen!",
-            "keystore_format_error":"Vennligst velg riktig kontofil",
-            "keystore_is_has":"Det er allerede en konto i listen du må importere.",
-            "imported_success":"Allerede valgt fil"
-        },
-        "remove_dia": {
-            "tit":"Er du sikker på at du vil fjerne den?",
-            "remove_confrim":"Jeg er sikker på å fjerne",
-            "backup":"Vær oppmerksom på sikkerhetskopien av denne kontoen for å unngå skade på eiendom.",
-            "input_pwd":"passord",
-            "placeholder_pwd":"Vennligst skriv inn passordet for denne kontoen",
-            "validate_password":"Passordet du skrev inn er feil",
-            "remove_success":"Ble fjernet"
-        }
-    },
-    "page_config": {
-        "config_detection":"Konfigurasjons deteksjon",
-        "content_msg":{
-            "ready_test":"Forbered deg på å oppdage konfigurasjonsfilen",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Den siste nodekonfigurasjonsinformasjonen er oppnådd",
-            "is_local":"Sjekk om det er en nodeliste lokalt",
-            "already_local":"Konfigurasjonsfilen til nodefilen finnes på den gjeldende enheten.",
-            "not_local":"Konfigurasjonsinformasjonen til nodefilen blir ikke oppdaget, det kan være første gang som kjører.",
-            "config_write_local":"Skriv den innhentede nodeinformasjonsfilen til den lokale disken",
-            "whether_update_node":"Sjekk om en oppdatering er nødvendig",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Nedlasting av nodeprogram, vær så tålmodig",
-            "already_downloaded":"Knuteprogrammet er lastet ned og klar til å starte.",
-            "ready_start":"Forbered deg på å starte noden",
-            "enter_wallet":"Node starter deteksjon, klar til å gå inn i lommeboken"
-        },
-        "version_dialog":{
-            "version_tit":"Versjonsoppdateringsprompt",
-            "download_wallet":"Gå til den offisielle nettsiden for å laste ned den nyeste versjonen av pengene",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Vennligst skriv inn et konto notat",
+      "no_address":"Vennligst skriv inn kontoadressen",
+      "valid_address":"Adressen til kontakten er ulovlig",
+      "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+      "contacts_quantity_error":"Antall kontakter kan ikke overstige 50",
+      "exist":"Kontakten eksisterer allerede,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Sendeparti",
+    "to_address":"betalingsmottaker",
+    "amount":"penger",
+    "gas":"gass",
+    "gasPrice":"Gassprisen",
+    "send_all":"Send alle",
+    "data":"data",
+    "data_placeholder":"Hexadecimal data",
+    "fees":"Håndteringsavgift",
+    "txFee":"Transaksjonsgebyr",
+    "total":"total",
+    "select":"Vennligst velg",
+    "no_account_info":"Ingen konto ennå, vennligst opprett eller importer konto",
+    "no_keystore_file":"Ingen kontofil funnet for den tilhørende kontoen",
+    "contacts_dig": {
+      "title":"Velg kontaktkonto",
+      "select_placeholder":"Vennligst velg"
+    },
+    "confirm_dia": {
+      "title":"Vennligst bekreft",
+      "enter_passworld_tit":"Vennligst skriv inn passordet ditt",
+      "enter_passworld_place":"Vennligst skriv inn passordet ditt"
+    },
+    "msg_info": {
+      "address_null":"Vennligst skriv inn den annen partens konto",
+      "balance_zero":"Utilstrekkelig balanse, ikke i stand til å fortsette",
+      "amount_zero":"Overføringsbeløpet må være større enn 0",
+      "amount_error":"Vennligst skriv inn et juridisk transaksjonsbeløp",
+      "address_err":"Formatet på den overførte adressen er ugyldig.",
+      "gas_error":"Vennligst skriv inn en juridisk transaksjonsgass",
+      "gasPrice_error":"Vennligst skriv inn juridisk transaksjonspris",
+      "send_success":"Transaksjon sendt",
+      "amount_exceeded":"Nåværende totale transaksjonsbeløp overstiger kontosaldoen",
+      "txFeeTooLow":"Transaksjonskostnadene er for lave",
+      "decrypt_err":"Wallet-parsing mislyktes, det kan være en passordfeil",
+      "send_error":"Transaksjonen mislyktes: sjekk om det er tilstrekkelig saldo og gruveavgift",
+      "generate_offline_block_err":"Generer usignert transaksjon mislyktes",
+      "sign_err":"Signaturen mislyktes",
+      "send_offline_block_err":"Sender en signert transaksjon mislyktes",
+      "syncingWaitTitle":"Noden er synkronisert",
+      "syncingWait":"Koden er synkronisert, transaksjonens bekreftelsestid kan være lengre, vær vær tålmodig"
+    }
+  },
+  "pager": {
+    "next":"Neste side",
+    "prev":"Forrige side"
+  },
+  "page_account": {
+    "transfer_log":"Transaksjonsrekord",
+    "transfer_log_null":"Ingen transaksjonshistorikk",
+    "txSent":"Overført transaksjon",
+    "txAll":"Alle transaksjoner",
+    "txNew":"Nåværende konto har ny transaksjonsinformasjon",
+    "checkNow":"Se nå",
+    "active_icon": {
+      "go_transfer":"Start en overføring",
+      "import_keystore":"Kontofil",
+      "qrcode":"QR-kode"
+    },
+    "edit_dia": {
+      "tit":"Endre notater",
+      "subtit":"Merk et notat for kontoen din",
+      "no_tag":"Vennligst skriv inn et konto notat",
+      "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn."
+    },
+    "dia_tx": {
+      "tit":"Transaksjonsinformasjon",
+      "block_hash":"Transaksjonsnummer",
+      "status":"stat",
+      "from":"Sendeparti",
+      "to":"betalingsmottaker",
+      "amount":"penger",
+      "data":"data",
+      "send_time":"Sende tid",
+      "mac_time":"Hovedkjede tid",
+      "gasPrice":"Gassprisen (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Gassbruk",
+      "waiting":"Venter på bekreftelse",
+      "success":"suksess",
+      "sendFail":"Send mislyktes",
+      "fail1":"Feil (1)",
+      "fail2":"Feil (2)",
+      "fail3":"Feil (3)"
+    },
+    "keystore": {
+      "tit":"Sikkerhetskopi lommebokfil",
+      "copy":"kopi",
+      "download":"Last ned lommebokfilen"
+    },
+    "msg_info": {
+      "ads_copy_success":"Adressen er kopiert",
+      "key_copy_success":"Vellykket kopi"
+    }
+  },
+  "page_home": {
+    "import_account":"Importer konto",
+    "add_account":"Ny konto",
+    "acc":"konto",
+    "create_dia": {
+      "create_tit":"Opprett en konto",
+      "backup_tit":"Sikkerhetskopier din nye konto",
+      "create_tag":"Konto notat",
+      "create_pwd":"Angi passord",
+      "create_repwd":"Bekreft passord",
+      "placeholder_tag":"Vennligst sett inn kontonotasjonsnavnet",
+      "placeholder_pwd":"Vennligst sett inn kontopassordet",
+      "placeholder_repwd":"Vennligst bekreft kontopassordet",
+      "account_download_keystore":"Last ned kontofilen",
+      "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
+      "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+      "validate_password":"Vennligst skriv inn passordet du angir",
+      "validate_re_password":"Vennligst skriv inn passordet du angir igjen",
+      "validate_strong_password":"Vennligst skriv inn et passord med minst 8 sifre",
+      "validate_long_password":"Passordet kan ikke overstige 100 siffer i lengde",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Inkonsistent passord innført to ganger",
+      "create_success":"Opprettet med hell",
+      "account_quantity_error":"Antall kontoer kan ikke overstige 50",
+      "create_success_des":"Vennligst lagre kontofilen din og ikke del den med noen!"
+    },
+    "import_dia": {
+      "tit":"Importer konto",
+      "placeholder_keystore":"Vennligst dra kontofilen her",
+      "create_tag":"Konto notat",
+      "placeholder_tag":"Vennligst sett inn kontonotasjonsnavnet",
+      "validate_tag":"Vennligst skriv inn kontonotasjonsnavnet",
+      "validate_tag_length":"Navnet på notatnavnet kan ikke være større enn 8 tegn.",
+      "validate_enter_keystore":"Vennligst importer kontofilen først",
+      "validate_error_keystore":"Kontoimporten mislyktes, kan være en kontofilfeil",
+      "imported_account_success":"Importert med suksess",
+      "exist":"Denne kontoen eksisterer allerede, notatet er",
+      "keystore_error":"feil:",
+      "keystore_length_error":"Bare en kontofil kan importeres, prøv igjen!",
+      "keystore_format_error":"Vennligst velg riktig kontofil",
+      "keystore_is_has":"Det er allerede en konto i listen du må importere.",
+      "imported_success":"Fil valgt"
+    },
+    "remove_dia": {
+      "tit":"Er du sikker på at du vil fjerne den?",
+      "remove_confrim":"Jeg er sikker på å fjerne",
+      "backup":"Vær oppmerksom på sikkerhetskopiering av denne kontoen for å unngå skade på eiendom.",
+      "input_pwd":"passord",
+      "placeholder_pwd":"Vennligst skriv inn passordet for denne kontoen",
+      "validate_password":"Passordet du skrev inn er feil",
+      "remove_success":"Ble fjernet"
+    }
+  },
+  "page_config": {
+    "config_detection":"Konfigurasjonsdeteksjon",
+    "content_msg": {
+      "ready_test":"Forbered deg på å oppdage konfigurasjonsfilen",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Den siste nodekonfigurasjonsinformasjonen er oppnådd",
+      "is_local":"Sjekk om det er en nodeliste lokalt",
+      "already_local":"Konfigurasjonsfilen til nodefilen eksisterer på den gjeldende enheten.",
+      "not_local":"Konfigurasjonsinformasjonen til nodefilen blir ikke oppdaget, det kan være første gang som kjører.",
+      "config_write_local":"Skriv den innhentede nodeinformasjonsfilen til den lokale disken",
+      "whether_update_node":"Sjekk om en oppdatering er nødvendig",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Nedlasting av nodeprogram, vær så tålmodig",
+      "already_downloaded":"Knuteprogrammet er lastet ned og klar til å starte.",
+      "ready_start":"Forbered deg på å starte noden",
+      "enter_wallet":"Node starter deteksjon, klar til å gå inn i lommeboken",
+      "specifyDataDir":"Vennligst velg lagringsbanen til nodedataene"
+    },
+    "version_dialog": {
+      "version_tit":"Versjonsoppdateringsprompt",
+      "download_wallet":"Gå til den offisielle nettsiden for å laste ned den nyeste versjonen av pengene",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

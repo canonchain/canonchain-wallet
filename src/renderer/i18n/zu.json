@@ -1,204 +1,242 @@
 {
-    "confirm":"Qinisekisa",
-    "cancel":"Khansela",
-    "dialog_tit":"I-Prompt",
-    "close":"Vala",
-    "confirm_you_active":"Sicela uqinisekise ukusebenza kwakho",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Qinisekisa",
+  "cancel":"Khansela",
+  "dialog_tit":"I-Prompt",
+  "close":"Vala",
+  "confirm_you_active":"Sicela uqinisekise ukusebenza kwakho",
+  "rpcErrors": {
+    "invalidFromAccount":"I-akhawunti yomthumeli ayivumelekile",
+    "invalidToAccount":"I-akhawunti engenayo ayivumelekile",
+    "invalidAmountFormat":"Ifomethi yemali engavumelekile",
+    "invalidGasFormat":"Ifomethi yeGesi engavumelekile",
+    "invalidDataFormat":"Ifomethi yedatha ye-hexadecimal engavumelekile",
+    "dataSizeTooLarge":"Idatha ye-hexadecimal inkulu kakhulu",
+    "invalidGasPriceFormat":"Ifomethi yentengo yegesi yamagesi ayivumelekile",
+    "invalidMciFormat":"Ifomethi ye-MCI ayivumelekile",
+    "notEnoughFail":"Igesi elinganele noma iphutha elingavamile"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> i-CZR"
+  },
+  "model_header": {
+    "home":"Ikhaya",
+    "transfer":"Kudluliselwa",
+    "contacts":"Othintana naye",
+    "setting":"Ukubeka",
+    "total":"Inani",
+    "testnet":"Inethiwekhi yokuhlola",
+    "online":"Online",
+    "offline":"Akuxhunyiwe ku-inthanethi",
+    "syncing":"Ngokuvumelanisa"
+  },
+  "page_setting": {
+    "tit":"Ukubeka",
+    "lang":"Ulimi",
+    "select":"Sicela ukhethe",
+    "version_number":"I-Wallet version",
+    "data_path":"I-data yedatha yedatha",
+    "change":"Shintsha",
+    "changeDirNote":"Sicela uhambise amafayela endleleni yangempela eya esiqondisweni esisha, ngaphandle kwalokho uzobangela ukulahlekelwa kwedatha.",
+    "note":"Ukunakwa"
+  },
+  "page_contacts": {
+    "tit":"Othintana naye",
+    "add_dialog":"Oxhumana naye omusha",
+    "add_cont": {
+      "tit":"Oxhumana naye omusha",
+      "tag":"Othintana naye",
+      "address":"Ikheli le-Akhawunti",
+      "tag_placeholder":"Sicela ufake igama loxhumana naye",
+      "address_placeholder":"Sicela ufake ikheli le-akhawunti yomxhumanisi",
+      "add_success":"Ingezwe ngempumelelo"
     },
-    "model_header": {
-        "home":"Ikhaya",
-        "transfer":"Kudluliselwa",
-        "contacts":"Othintana naye",
-        "setting":"Ukubeka",
-        "total":"Inani",
-        "testnet":"Inethiwekhi yokuhlola",
-        "online":"Online",
-        "offline":"Akuxhunyiwe ku-inthanethi"
+    "delete_dialog": {
+      "title":"Ususa",
+      "remove_success":"Kususwe ngempumelelo"
     },
-    "page_setting": {
-        "tit":"Ukubeka",
-        "lang":"Ulimi",
-        "select":"Sicela ukhethe",
-        "version_number":"I-Wallet version"
-    },
-    "page_contacts": {
-        "tit":"Othintana naye",
-        "add_dialog":"Oxhumana naye omusha",
-        "add_cont": {
-            "tit":"Oxhumana naye omusha",
-            "tag":"Othintana naye",
-            "address":"Ikheli le-Akhawunti",
-            "tag_placeholder":"Sicela ufake igama loxhumana naye",
-            "address_placeholder":"Sicela ufake ikheli le-akhawunti yothintana naye",
-            "add_success":"Ingezwe ngempumelelo"
-        },
-        "delete_dialog": {
-            "title":"Ususa",
-            "remove_success":"Kususiwe ngempumelelo"
-        },
-        "msg_info": {
-            "no_tag":"Sicela ufake inothi le-akhawunti",
-            "no_address":"Sicela ufake ikheli lakho le-akhawunti",
-            "valid_address":"Ikheli loxhumana naye alivumelekile",
-            "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
-            "contacts_quantity_error":"Inombolo yoxhumana nabo ayikwazi ukudlulela ku-50",
-            "exist":"Oxhumana naye usevele usekhona,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Ithumela iqembu",
-        "to_address":"Umkhokheli",
-        "amount":"Inani",
-        "gas":"Igesi",
-        "send_all":"Thumela konke",
-        "data":"Idatha",
-        "data_placeholder":"Idatha ye-Hexadecimal",
-        "fees":"Imali yokuphatha",
-        "total":"Inani",
-        "select":"Sicela ukhethe",
-        "no_account_info":"Ayikho i-akhawunti okwamanje, sicela udale noma ungenise i-akhawunti",
-        "contacts_dig": {
-            "title":"Khetha i-akhawunti yokuxhumana",
-            "select_placeholder":"Sicela ukhethe"
-        },
-        "confirm_dia": {
-            "title":"Sicela uqinisekise",
-            "enter_passworld_tit":"Sicela ufake iphasiwedi yakho",
-            "enter_passworld_place":"Sicela ufake iphasiwedi yakho"
-        },
-        "msg_info": {
-            "address_null":"Sicela ufake i-akhawunti yomunye umuntu",
-            "balance_zero":"Ibhalansi enganele, ayikwazi ukuqhubeka",
-            "amount_zero":"Ukudluliswa kwemali kumele kube mkhulu kunezingu-0",
-            "amount_error":"Sicela ufake inani lokuthengiselana ngokomthetho",
-            "address_err":"Ifomethi yekheli elidlulisiwe alivumelekile.",
-            "send_success":"Ukuthengiswa kuthunyelwe",
-            "amount_exceeded":"Isamba samanje sesamba senani lidlula ibhalansi ye-akhawunti",
-
-            "decrypt_err":"I-Wallet parsing ihlulekile, kungenzeka kube yiphutha lephasiwedi",
-            "send_error":"Ukuthengwa kwehlulekile: sicela uhlole uma kukhona imali ebhalansi neyamaminerali okwanele"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Irekhodi lomthengi",
-        "transfer_log_null":"Ayikho umlando wokuthengiselana",
-        "active_icon": {
-            "go_transfer":"Qalisa ukudluliselwa",
-            "import_keystore":"Ifayela le-Akhawunti",
-            "qrcode":"Ikhodi ye-QR"
-        },
-        "edit_dia": {
-            "tit":"Shintsha inothi",
-            "subtit":"Maka inothi ye-akhawunti yakho",
-            "no_tag":"Sicela ufake inothi le-akhawunti",
-            "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8."
-        },
-        "dia_tx":{
-            "tit":"Ulwazi lokuthengiselana",
-            "block_hash":"Inombolo yokuthengiselana",
-            "status":"Isimo",
-            "from":"Ithumela iqembu",
-            "to":"Umkhokheli",
-            "amount":"Inani",
-            "data":"Idatha",
-            "send_time":"Ithumela isikhathi",
-            "mac_time":"Isikhathi esikhulu sezinketho"
-        },
-        "keystore": {
-            "tit":"Ifayela lesipele lesipele",
-            "copy":"Kopisha",
-            "download":"Landa ifayela lesikhwama"
-        },
-        "msg_info": {
-            "ads_copy_success":"Ikheli likopishwe",
-            "key_copy_success":"Ikhophi ephumelelayo"
-        }
-    },
-    "page_home": {
-        "import_account":"Ngenisa i-akhawunti",
-        "add_account":"I-akhawunti entsha",
-        "acc":"I-Akhawunti",
-        "create_dia": {
-            "create_tit":"Dala i-akhawunti",
-            "backup_tit":"Yenza isipele i-akhawunti yakho entsha",
-            "create_tag":"Inothi le-akhawunti",
-            "create_pwd":"Setha iphasiwedi",
-            "create_repwd":"Qinisekisa iphasiwedi",
-            "placeholder_tag":"Sicela usethe igama lezinothi ze-akhawunti",
-            "placeholder_pwd":"Sicela usethe iphasiwedi ye-akhawunti",
-            "placeholder_repwd":"Sicela uqinisekise iphasiwedi ye-akhawunti",
-            
-            
-            "account_download_keystore":"Landa ifayela le-akhawunti",
-
-            "validate_tag":"Sicela ufake igama lezinothi ze-akhawunti",
-            "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
-
-            "validate_password":"Sicela ufake iphasiwedi oyibekile",
-            "validate_re_password":"Sicela ufake iphasiwedi oyisethayo futhi",
-            "validate_strong_password":"Sicela ufake iphasiwedi okungenani amadijithi angu-8",
-            "validate_long_password":"Iphasiwedi ayikwazi ukudlula amadijithi angu-100 ubude",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Iphasiwedi engahambisani nayo ifakiwe kabili",
-
-            "create_success":"Idalwe ngempumelelo",
-            "account_quantity_error":"Inombolo yama-akhawunti ayikwazi ukudlula i-50",
-            "create_success_des":"Sicela ulondoloze ifayela lakho le-akhawunti futhi ungabelani nanoma ubani!"
-        },
-        "import_dia": {
-            "tit":"Ngenisa i-akhawunti",    
-            "placeholder_keystore":"Sicela uhudule ifayela le-akhawunti lapha",
-            "create_tag":"Inothi le-akhawunti",
-            "placeholder_tag":"Sicela usethe igama lezinothi ze-akhawunti",
-
-            "validate_tag":"Sicela ufake igama lezinothi ze-akhawunti",
-            "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
-            "validate_enter_keystore":"Sicela ungenise ifayela le-akhawunti kuqala",
-            "validate_error_keystore":"Ukungenisa kwe-Akhawunti kuhlulekile, kungenzeka kube yiphutha lefayela le-akhawunti",
-            "imported_account_success":"Ukungeniswa ngempumelelo",
-            "exist":"Le akhawunti ivele ikhona, inothi likhona",
-            "keystore_error":"Iphutha:",
-            "keystore_length_error":"Ifayela elilodwa kuphela le-akhawunti lingeniswa, sicela uzame futhi!",
-            "keystore_format_error":"Sicela ukhethe ifayela le-akhawunti elungile",
-            "keystore_is_has":"Kukhona i-akhawunti kakade ohlwini oludingayo ukungenisa.",
-            "imported_success":"Ifayela elikhethiwe kakade"
-        },
-        "remove_dia": {
-            "tit":"Uqinisekile ukuthi ufuna ukususa?",
-            "remove_confrim":"Ngiyaqiniseka ukususa",
-            "backup":"Sicela unake isipele salesi akhawunti ukuze ugweme ukulimala kwempahla.",
-            "input_pwd":"Iphasiwedi",
-            "placeholder_pwd":"Sicela ufake iphasiwedi yale akhawunti",
-            "validate_password":"Iphasiwedi oyifakile ayilungile",
-            "remove_success":"Kususiwe ngempumelelo"
-        }
-    },
-    "page_config": {
-        "config_detection":"Ukutholwa kokumiswa",
-        "content_msg":{
-            "ready_test":"Lungiselela ukuthola ifayela lokucushwa",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Ulwazi lokucushwa kwamuva lwe-node litholakale",
-            "is_local":"Hlola uma kukhona ifayela le-node endaweni yangakini",
-            "already_local":"Ifayela lokumisa lefayela le-node likhona kudivayisi yamanje.",
-            "not_local":"Imininingwane yokucushwa kwefayela le-node ayitholakali, kungase kube okokuqala kusebenza.",
-            "config_write_local":"Bhala ifayili yolwazi etholakalayo etholakala kwidiski yendawo",
-            "whether_update_node":"Hlola uma kudingekile isibuyekezo",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Ukulanda uhlelo lwe-node, sicela ubekezele",
-            "already_downloaded":"Uhlelo lwe-noode lulayishiwe futhi lungele ukuqala.",
-            "ready_start":"Lungiselela ukuqala i-node",
-            "enter_wallet":"I-noode iqala ukuthola, ilungele ukungena esikhwameni"
-        },
-        "version_dialog":{
-            "version_tit":"Ukuvuselelwa kokubuyekeza kwe-version",
-            "download_wallet":"Yiya kuwebhusayithi esemthethweni ukulanda inguqulo yakamuva yemali",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Sicela ufake inothi le-akhawunti",
+      "no_address":"Sicela ufake ikheli le-akhawunti",
+      "valid_address":"Ikheli loxhumana naye alivumelekile",
+      "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
+      "contacts_quantity_error":"Inombolo yoxhumana nabo ayikwazi ukudlula i-50",
+      "exist":"Oxhumana naye usevele usekhona,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Ithumela iqembu",
+    "to_address":"Umkhokheli",
+    "amount":"Inani",
+    "gas":"Igesi",
+    "gasPrice":"Inani lentengo yegesi",
+    "send_all":"Thumela konke",
+    "data":"Idatha",
+    "data_placeholder":"Idatha ye-Hexadecimal",
+    "fees":"Imali yokuphatha",
+    "txFee":"Imali yokuthenga",
+    "total":"Inani",
+    "select":"Sicela ukhethe",
+    "no_account_info":"Ayikho i-akhawunti okwamanje, sicela udale noma ungenise i-akhawunti",
+    "no_keystore_file":"Ayikho ifayili ye-akhawunti etholakalayo ye-akhawunti ehambisanayo",
+    "contacts_dig": {
+      "title":"Khetha i-akhawunti yokuxhumana",
+      "select_placeholder":"Sicela ukhethe"
+    },
+    "confirm_dia": {
+      "title":"Sicela uqinisekise",
+      "enter_passworld_tit":"Sicela ufake iphasiwedi yakho",
+      "enter_passworld_place":"Sicela ufake iphasiwedi yakho"
+    },
+    "msg_info": {
+      "address_null":"Sicela ufake i-akhawunti yomunye umuntu",
+      "balance_zero":"Ibhalansi enganele, engakwazi ukuqhubeka",
+      "amount_zero":"Ukudluliswa kwemali kufanele kube mkhulu kunezingu-0",
+      "amount_error":"Sicela ufake inani lokuthengiselana ngokomthetho",
+      "address_err":"Ifomethi yekheli elidlulisiwe alivumelekile.",
+      "gas_error":"Sicela ufake i-gas transaction gas",
+      "gasPrice_error":"Sicela ufake intengo yokuthengiswa komthetho",
+      "send_success":"Ukuthengiswa okuthunyelwe",
+      "amount_exceeded":"Isamba samanje sokuthengiselana esilinganiselwe sidlula ibhalansi ye-akhawunti",
+      "txFeeTooLow":"Izindleko zokuthengiswa ziphansi kakhulu",
+      "decrypt_err":"I-Wallet parsing ihlulekile, kungenzeka kube yiphutha lephasiwedi",
+      "send_error":"Ukuthengiswa kwehlulekile: sicela uhlole uma kukhona imali ebhalansi kanye nemali yezimayini",
+      "generate_offline_block_err":"Ukukhiqiza ukuthengiswa okungabhalwanga kuhlulekile",
+      "sign_err":"Isiginesha sehlulekile",
+      "send_offline_block_err":"Ukuthumela ukuthengiswa okubhalisiwe kuhlulekile",
+      "syncingWaitTitle":"I-node ikuvumelanisa",
+      "syncingWait":"I-node ivumelanisiwe, isikhathi sokuqinisekisa sokuthengiswa singase sikhulu, sicela ubekezele"
+    }
+  },
+  "pager": {
+    "next":"Ikhasi elilandelayo",
+    "prev":"Ikhasi langaphambilini"
+  },
+  "page_account": {
+    "transfer_log":"Irekhodi lomthengi",
+    "transfer_log_null":"Ayikho umlando wokuthengiselana",
+    "txSent":"Ukuthengiselana okudlulisiwe",
+    "txAll":"Yonke imisebenzi",
+    "txNew":"I-akhawunti yamanje inolwazi olusha lokuthengiselana",
+    "checkNow":"Buka manje",
+    "active_icon": {
+      "go_transfer":"Qalisa ukudluliselwa",
+      "import_keystore":"Ifayela le-Akhawunti",
+      "qrcode":"Ikhodi ye-QR"
+    },
+    "edit_dia": {
+      "tit":"Shintsha amanothi",
+      "subtit":"Maka inothi ye-akhawunti yakho",
+      "no_tag":"Sicela ufake inothi le-akhawunti",
+      "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8."
+    },
+    "dia_tx": {
+      "tit":"Ulwazi lokuthengiselana",
+      "block_hash":"Inombolo yokuthengiselana",
+      "status":"Isimo",
+      "from":"Ithumela iqembu",
+      "to":"Umkhokheli",
+      "amount":"Inani",
+      "data":"Idatha",
+      "send_time":"Ithumela isikhathi",
+      "mac_time":"Isikhathi esikhulu sezinketho",
+      "gasPrice":"Inani lentengo yegesi (10 <sup> -18 </ sup> i-CZR)",
+      "gasUsed":"Ukusetshenziswa kwegesi",
+      "waiting":"Ilinde ukuqinisekiswa",
+      "success":"Impumelelo",
+      "sendFail":"Thumela kuhlulekile",
+      "fail1":"Ukuhluleka (1)",
+      "fail2":"Ukuhluleka (2)",
+      "fail3":"Ukuhluleka (3)"
+    },
+    "keystore": {
+      "tit":"Ifayela lesipele lesipele",
+      "copy":"Kopisha",
+      "download":"Landa ifayela lesikhwama"
+    },
+    "msg_info": {
+      "ads_copy_success":"Ikheli likopishwe",
+      "key_copy_success":"Ikhophi ephumelelayo"
+    }
+  },
+  "page_home": {
+    "import_account":"Ngenisa i-akhawunti",
+    "add_account":"I-akhawunti entsha",
+    "acc":"I-Akhawunti",
+    "create_dia": {
+      "create_tit":"Dala i-akhawunti",
+      "backup_tit":"Yenza isipele i-akhawunti yakho entsha",
+      "create_tag":"Inothi le-akhawunti",
+      "create_pwd":"Setha iphasiwedi",
+      "create_repwd":"Qinisekisa iphasiwedi",
+      "placeholder_tag":"Sicela usethe igama lekhawunti le-akhawunti",
+      "placeholder_pwd":"Sicela usethe iphasiwedi ye-akhawunti",
+      "placeholder_repwd":"Sicela uqinisekise iphasiwedi ye-akhawunti",
+      "account_download_keystore":"Landa ifayela le-akhawunti",
+      "validate_tag":"Sicela ufake igama lezinothi ze-akhawunti",
+      "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
+      "validate_password":"Sicela ufake iphasiwedi oyisethiwe",
+      "validate_re_password":"Sicela ufake iphasiwedi oyisethayo futhi",
+      "validate_strong_password":"Sicela ufake iphasiwedi okungenani amadijithi angu-8",
+      "validate_long_password":"Iphasiwedi ayikwazi ukudlula amadijithi angu-100 ubude",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Iphasiwedi engahambisani nayo ifakiwe kabili",
+      "create_success":"Idalwe ngempumelelo",
+      "account_quantity_error":"Inombolo yama-akhawunti ayikwazi ukudlula i-50",
+      "create_success_des":"Sicela ulondoloze ifayela lakho le-akhawunti futhi ungabelani nanoma ubani!"
+    },
+    "import_dia": {
+      "tit":"Ngenisa i-akhawunti",
+      "placeholder_keystore":"Sicela uhudule ifayela le-akhawunti lapha",
+      "create_tag":"Inothi le-akhawunti",
+      "placeholder_tag":"Sicela usethe igama lekhawunti le-akhawunti",
+      "validate_tag":"Sicela ufake igama lezinothi ze-akhawunti",
+      "validate_tag_length":"Igama legama lezinhlamvu alikwazi ukuba likhulu kunezinhlamvu ezingu-8.",
+      "validate_enter_keystore":"Sicela ungenise ifayela le-akhawunti kuqala",
+      "validate_error_keystore":"Ukungenisa kwe-akhawunti kuhlulekile, kungenzeka kube yiphutha lefayela le-akhawunti",
+      "imported_account_success":"Ukungeniswa ngempumelelo",
+      "exist":"Le akhawunti ivele ikhona, inothi likhona",
+      "keystore_error":"Iphutha:",
+      "keystore_length_error":"Ifayela elilodwa kuphela le-akhawunti lingeniswa, sicela uzame futhi!",
+      "keystore_format_error":"Sicela ukhethe ifayela le-akhawunti elungile",
+      "keystore_is_has":"Kukhona i-akhawunti kakade ohlwini oludingayo ukungenisa.",
+      "imported_success":"Ifayela likhethiwe"
+    },
+    "remove_dia": {
+      "tit":"Uqinisekile ukuthi ufuna ukususa?",
+      "remove_confrim":"Ngiyaqiniseka ukususa",
+      "backup":"Sicela unake isipele se-akhawunti ukuze ugweme ukulimala kwempahla.",
+      "input_pwd":"Iphasiwedi",
+      "placeholder_pwd":"Sicela ufake iphasiwedi yale akhawunti",
+      "validate_password":"Iphasiwedi oyifakile ayilungile",
+      "remove_success":"Kususwe ngempumelelo"
+    }
+  },
+  "page_config": {
+    "config_detection":"Ukutholwa kokumiswa",
+    "content_msg": {
+      "ready_test":"Lungiselela ukuthola ifayela lokucushwa",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Ulwazi lwamuva lokulungisa i-node litholakale",
+      "is_local":"Hlola ukuthi kukhona yini ifayela le-node endaweni yangakini",
+      "already_local":"Ifayela lokucushwa lefayela le-node likhona kudivayisi yamanje.",
+      "not_local":"Imininingwane yokucushwa kwefayela le-node ayitholakali, ingase ibe okokuqala isebenza.",
+      "config_write_local":"Bhala ifayili yolwazi etholakalayo etholakala kwidiski yendawo",
+      "whether_update_node":"Hlola uma kudingekile isibuyekezo",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Ukulanda uhlelo lwe-node, sicela ube nesineke",
+      "already_downloaded":"Uhlelo lwe-noode lulayishiwe futhi lungele ukuqala.",
+      "ready_start":"Lungiselela ukuqala i-node",
+      "enter_wallet":"I-noode iqala ukuthola, ilungele ukungena esikhwameni",
+      "specifyDataDir":"Sicela ukhethe indlela yokugcina yedatha ye-node"
+    },
+    "version_dialog": {
+      "version_tit":"Ukuvuselelwa kokubuyekeza kwe-version",
+      "download_wallet":"Yiya kuwebhusayithi esemthethweni ukulanda inguqulo yakamuva yemali",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

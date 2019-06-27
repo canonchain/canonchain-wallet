@@ -1,204 +1,242 @@
 {
-    "confirm":"確認",
-    "cancel":"取消",
-    "dialog_tit":"提示",
-    "close":"關閉",
-    "confirm_you_active":"請確認您的操作",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"確認",
+  "cancel":"取消",
+  "dialog_tit":"提示",
+  "close":"關閉",
+  "confirm_you_active":"請確認您的操作",
+  "rpcErrors": {
+    "invalidFromAccount":"發款方賬戶無效",
+    "invalidToAccount":"收款方賬戶無效",
+    "invalidAmountFormat":"無效的金額格式",
+    "invalidGasFormat":"無效的Gas格式",
+    "invalidDataFormat":"無效的十六進制數據格式",
+    "dataSizeTooLarge":"十六進制數據太大",
+    "invalidGasPriceFormat":"Gas單價格式無效",
+    "invalidMciFormat":"MCI格式無效",
+    "notEnoughFail":"Gas不足或異常故障"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10<sup>-18</sup>CZR"
+  },
+  "model_header": {
+    "home":"首頁",
+    "transfer":"轉賬",
+    "contacts":"聯繫人",
+    "setting":"設置",
+    "total":"合計",
+    "testnet":"測試網絡",
+    "online":"在線",
+    "offline":"離線",
+    "syncing":"同步中"
+  },
+  "page_setting": {
+    "tit":"設置",
+    "lang":"語言",
+    "select":"請選擇",
+    "version_number":"錢包版本",
+    "data_path":"節點數據路徑",
+    "change":"更改",
+    "changeDirNote":"請將原路徑下的文件移動到新目錄下，否則會造成數據丟失",
+    "note":"注意"
+  },
+  "page_contacts": {
+    "tit":"聯繫人",
+    "add_dialog":"新建聯繫人",
+    "add_cont": {
+      "tit":"新建聯繫人",
+      "tag":"聯繫人",
+      "address":"賬戶地址",
+      "tag_placeholder":"請輸入聯繫人的姓名",
+      "address_placeholder":"請輸入聯繫人的賬戶地址",
+      "add_success":"添加成功"
     },
-    "model_header": {
-        "home":"首頁",
-        "transfer":"轉賬",
-        "contacts":"聯繫人",
-        "setting":"設置",
-        "total":"合計",
-        "testnet":"測試網絡",
-        "online":"在線",
-        "offline":"離線"
+    "delete_dialog": {
+      "title":"您正在移除",
+      "remove_success":"移除成功"
     },
-    "page_setting": {
-        "tit":"設置",
-        "lang":"語言",
-        "select":"請選擇",
-        "version_number":"錢包版本"
-    },
-    "page_contacts": {
-        "tit":"聯繫人",
-        "add_dialog":"新建聯繫人",
-        "add_cont": {
-            "tit":"新建聯繫人",
-            "tag":"聯繫人",
-            "address":"賬戶地址",
-            "tag_placeholder":"請輸入聯繫人的姓名",
-            "address_placeholder":"請輸入聯繫人的賬戶地址",
-            "add_success":"添加成功"
-        },
-        "delete_dialog": {
-            "title":"您正在移除",
-            "remove_success":"移除成功"
-        },
-        "msg_info": {
-            "no_tag":"請輸入賬戶備註",
-            "no_address":"請輸入賬戶地址",
-            "valid_address":"聯繫人的地址不合法",
-            "validate_tag_length":"備註名長度不能大於8個字符",
-            "contacts_quantity_error":"聯繫人數量不能超過50個",
-            "exist":"聯繫人已經存在,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"發款方",
-        "to_address":"收款方",
-        "amount":"金額",
-        "gas":"gas",
-        "send_all":"發送全部",
-        "data":"Data",
-        "data_placeholder":"十六進制數據",
-        "fees":"手續費",
-        "total":"合計",
-        "select":"請選擇",
-        "no_account_info":"暫無賬號，請創建或者導入賬號",
-        "contacts_dig": {
-            "title":"選擇聯繫人賬號",
-            "select_placeholder":"請選擇"
-        },
-        "confirm_dia": {
-            "title":"請確認",
-            "enter_passworld_tit":"請輸入密碼",
-            "enter_passworld_place":"請輸入密碼"
-        },
-        "msg_info": {
-            "address_null":"請輸入對方賬戶",
-            "balance_zero":"餘額不足，無法繼續",
-            "amount_zero":"轉賬金額必須大於0",
-            "amount_error":"請輸入合法的交易金額",
-            "address_err":"轉入的地址格式不合法",
-            "send_success":"交易已發送",
-            "amount_exceeded":"當前交易總金額超出賬戶餘額",
-
-            "decrypt_err":"錢包解析失敗，可能是密碼錯誤",
-            "send_error":"交易失敗：請檢查是否有足量餘額和礦工費"
-        }
-    },
-    "page_account": {
-        "transfer_log":"交易記錄",
-        "transfer_log_null":"暫無交易記錄",
-        "active_icon": {
-            "go_transfer":"發起轉賬",
-            "import_keystore":"賬戶文件",
-            "qrcode":"二維碼"
-        },
-        "edit_dia": {
-            "tit":"修改備註",
-            "subtit":"為您的賬戶標記一個備註",
-            "no_tag":"請輸入賬戶備註",
-            "validate_tag_length":"備註名長度不能大於8個字符"
-        },
-        "dia_tx":{
-            "tit":"交易信息",
-            "block_hash":"交易號",
-            "status":"狀態",
-            "from":"發款方",
-            "to":"收款方",
-            "amount":"金額",
-            "data":"數據",
-            "send_time":"發送時間",
-            "mac_time":"主鏈時間"
-        },
-        "keystore": {
-            "tit":"備份錢包文件",
-            "copy":"複製",
-            "download":"下載錢包文件"
-        },
-        "msg_info": {
-            "ads_copy_success":"地址已經復制",
-            "key_copy_success":"複製成功"
-        }
-    },
-    "page_home": {
-        "import_account":"導入賬號",
-        "add_account":"新建賬號",
-        "acc":"賬戶",
-        "create_dia": {
-            "create_tit":"創建賬戶",
-            "backup_tit":"備份您的新賬戶",
-            "create_tag":"賬戶備註",
-            "create_pwd":"設置密碼",
-            "create_repwd":"確認密碼",
-            "placeholder_tag":"請設置賬戶備註名",
-            "placeholder_pwd":"請設置賬戶密碼",
-            "placeholder_repwd":"請確認賬戶密碼",
-            
-            
-            "account_download_keystore":"下載賬戶文件",
-
-            "validate_tag":"請輸入賬戶備註名",
-            "validate_tag_length":"備註名長度不能大於8個字符",
-
-            "validate_password":"請輸入您設置的密碼",
-            "validate_re_password":"請再次輸入您設置的密碼",
-            "validate_strong_password":"請輸入一個至少8位的密碼",
-            "validate_long_password":"密碼長度不能超過100位",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"兩次輸入的密碼不一致",
-
-            "create_success":"創建成功",
-            "account_quantity_error":"賬號數量不能超過50個",
-            "create_success_des":"請保存你的賬戶文件，不要分享給任何人！"
-        },
-        "import_dia": {
-            "tit":"導入賬戶",    
-            "placeholder_keystore":"請將賬戶文件拖入此處",
-            "create_tag":"賬戶備註",
-            "placeholder_tag":"請設置賬戶備註名",
-
-            "validate_tag":"請輸入賬戶備註名",
-            "validate_tag_length":"備註名長度不能大於8個字符",
-            "validate_enter_keystore":"請先導入賬戶文件",
-            "validate_error_keystore":"賬戶導入失敗，可能是賬戶文件錯誤",
-            "imported_account_success":"導入成功",
-            "exist":"此賬戶已經存在,備註是",
-            "keystore_error":"錯誤：",
-            "keystore_length_error":"只能導入一個賬戶文件，請重試！",
-            "keystore_format_error":"請選擇正確的賬戶文件",
-            "keystore_is_has":"列表中已經有您需要導入的賬戶啦",
-            "imported_success":"已經選擇文件"
-        },
-        "remove_dia": {
-            "tit":"你確定要移除嗎？",
-            "remove_confrim":"我確定移除",
-            "backup":"請注意此賬號的備份，避免財產損失",
-            "input_pwd":"密碼",
-            "placeholder_pwd":"請輸入此賬戶的密碼",
-            "validate_password":"您輸入的密碼是錯誤的",
-            "remove_success":"移除成功"
-        }
-    },
-    "page_config": {
-        "config_detection":"配置檢測中",
-        "content_msg":{
-            "ready_test":"準備檢測配置文件",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"已獲取到最新的節點配置信息",
-            "is_local":"檢測本地是否有節點文件",
-            "already_local":"當前設備存在節點文件的配置信息",
-            "not_local":"沒有檢測到節點文件的配置信息，可能是第一次運行",
-            "config_write_local":"將獲取的節點信息文件，寫入本地磁盤",
-            "whether_update_node":"檢測是否需要更新",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"正在下載節點程序,請耐心等待",
-            "already_downloaded":"節點程序已經下載好，準備啟動",
-            "ready_start":"準備啟動節點",
-            "enter_wallet":"節點啟動檢測，準備進入錢包"
-        },
-        "version_dialog":{
-            "version_tit":"版本更新提示",
-            "download_wallet":"去官網下載最新版錢",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"請輸入賬戶備註",
+      "no_address":"請輸入賬戶地址",
+      "valid_address":"聯繫人的地址不合法",
+      "validate_tag_length":"備註名長度不能大於8個字符",
+      "contacts_quantity_error":"聯繫人數量不能超過50個",
+      "exist":"聯繫人已經存在,"
     }
+  },
+  "page_transfer": {
+    "from_address":"發款方",
+    "to_address":"收款方",
+    "amount":"金額",
+    "gas":"gas",
+    "gasPrice":"gas單價",
+    "send_all":"發送全部",
+    "data":"Data",
+    "data_placeholder":"十六進制數據",
+    "fees":"手續費",
+    "txFee":"交易費用",
+    "total":"合計",
+    "select":"請選擇",
+    "no_account_info":"暫無賬號，請創建或者導入賬號",
+    "no_keystore_file":"未找到對應賬號的賬戶文件",
+    "contacts_dig": {
+      "title":"選擇聯繫人賬號",
+      "select_placeholder":"請選擇"
+    },
+    "confirm_dia": {
+      "title":"請確認",
+      "enter_passworld_tit":"請輸入密碼",
+      "enter_passworld_place":"請輸入密碼"
+    },
+    "msg_info": {
+      "address_null":"請輸入對方賬戶",
+      "balance_zero":"餘額不足，無法繼續",
+      "amount_zero":"轉賬金額必須大於0",
+      "amount_error":"請輸入合法的交易金額",
+      "address_err":"轉入的地址格式不合法",
+      "gas_error":"請輸入合法的交易gas",
+      "gasPrice_error":"請輸入合法的交易gas單價",
+      "send_success":"交易已發送",
+      "amount_exceeded":"當前交易總金額超出賬戶餘額",
+      "txFeeTooLow":"交易費用太低",
+      "decrypt_err":"錢包解析失敗，可能是密碼錯誤",
+      "send_error":"交易失敗：請檢查是否有足量餘額和礦工費",
+      "generate_offline_block_err":"生成未簽名的交易失敗",
+      "sign_err":"簽名失敗",
+      "send_offline_block_err":"發送已簽名交易失敗",
+      "syncingWaitTitle":"節點正在同步中",
+      "syncingWait":"節點正在同步中，交易確認時間可能較長，請耐心等待"
+    }
+  },
+  "pager": {
+    "next":"下一頁",
+    "prev":"上一頁"
+  },
+  "page_account": {
+    "transfer_log":"交易記錄",
+    "transfer_log_null":"暫無交易記錄",
+    "txSent":"發送的交易",
+    "txAll":"全部交易",
+    "txNew":"當前賬戶有新的交易信息",
+    "checkNow":"立即查看",
+    "active_icon": {
+      "go_transfer":"發起轉賬",
+      "import_keystore":"賬戶文件",
+      "qrcode":"二維碼"
+    },
+    "edit_dia": {
+      "tit":"修改備註",
+      "subtit":"為您的賬戶標記一個備註",
+      "no_tag":"請輸入賬戶備註",
+      "validate_tag_length":"備註名長度不能大於8個字符"
+    },
+    "dia_tx": {
+      "tit":"交易信息",
+      "block_hash":"交易號",
+      "status":"狀態",
+      "from":"發款方",
+      "to":"收款方",
+      "amount":"金額",
+      "data":"數據",
+      "send_time":"發送時間",
+      "mac_time":"主鏈時間",
+      "gasPrice":"Gas單價(10<sup>-18</sup>CZR)",
+      "gasUsed":"Gas使用",
+      "waiting":"等待確認",
+      "success":"成功",
+      "sendFail":"發送失敗",
+      "fail1":"失敗(1)",
+      "fail2":"失敗(2)",
+      "fail3":"失敗(3)"
+    },
+    "keystore": {
+      "tit":"備份錢包文件",
+      "copy":"複製",
+      "download":"下載錢包文件"
+    },
+    "msg_info": {
+      "ads_copy_success":"地址已經復制",
+      "key_copy_success":"複製成功"
+    }
+  },
+  "page_home": {
+    "import_account":"導入賬號",
+    "add_account":"新建賬號",
+    "acc":"賬戶",
+    "create_dia": {
+      "create_tit":"創建賬戶",
+      "backup_tit":"備份您的新賬戶",
+      "create_tag":"賬戶備註",
+      "create_pwd":"設置密碼",
+      "create_repwd":"確認密碼",
+      "placeholder_tag":"請設置賬戶備註名",
+      "placeholder_pwd":"請設置賬戶密碼",
+      "placeholder_repwd":"請確認賬戶密碼",
+      "account_download_keystore":"下載賬戶文件",
+      "validate_tag":"請輸入賬戶備註名",
+      "validate_tag_length":"備註名長度不能大於8個字符",
+      "validate_password":"請輸入您設置的密碼",
+      "validate_re_password":"請再次輸入您設置的密碼",
+      "validate_strong_password":"請輸入一個至少8位的密碼",
+      "validate_long_password":"密碼長度不能超過100位",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"兩次輸入的密碼不一致",
+      "create_success":"創建成功",
+      "account_quantity_error":"賬號數量不能超過50個",
+      "create_success_des":"請保存你的賬戶文件，不要分享給任何人！"
+    },
+    "import_dia": {
+      "tit":"導入賬戶",
+      "placeholder_keystore":"請將賬戶文件拖入此處",
+      "create_tag":"賬戶備註",
+      "placeholder_tag":"請設置賬戶備註名",
+      "validate_tag":"請輸入賬戶備註名",
+      "validate_tag_length":"備註名長度不能大於8個字符",
+      "validate_enter_keystore":"請先導入賬戶文件",
+      "validate_error_keystore":"賬戶導入失敗，可能是賬戶文件錯誤",
+      "imported_account_success":"導入成功",
+      "exist":"此賬戶已經存在,備註是",
+      "keystore_error":"錯誤：",
+      "keystore_length_error":"只能導入一個賬戶文件，請重試！",
+      "keystore_format_error":"請選擇正確的賬戶文件",
+      "keystore_is_has":"列表中已經有您需要導入的賬戶啦",
+      "imported_success":"已經選擇文件"
+    },
+    "remove_dia": {
+      "tit":"你確定要移除嗎？",
+      "remove_confrim":"我確定移除",
+      "backup":"請注意此賬號的備份，避免財產損失",
+      "input_pwd":"密碼",
+      "placeholder_pwd":"請輸入此賬戶的密碼",
+      "validate_password":"您輸入的密碼是錯誤的",
+      "remove_success":"移除成功"
+    }
+  },
+  "page_config": {
+    "config_detection":"配置檢測中",
+    "content_msg": {
+      "ready_test":"準備檢測配置文件",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"已獲取到最新的節點配置信息",
+      "is_local":"檢測本地是否有節點文件",
+      "already_local":"當前設備存在節點文件的配置信息",
+      "not_local":"沒有檢測到節點文件的配置信息，可能是第一次運行",
+      "config_write_local":"將獲取的節點信息文件，寫入本地磁盤",
+      "whether_update_node":"檢測是否需要更新",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"正在下載節點程序,請耐心等待",
+      "already_downloaded":"節點程序已經下載好，準備啟動",
+      "ready_start":"準備啟動節點",
+      "enter_wallet":"節點啟動檢測，準備進入錢包",
+      "specifyDataDir":"請選擇節點數據的存儲路徑"
+    },
+    "version_dialog": {
+      "version_tit":"版本更新提示",
+      "download_wallet":"去官網下載最新版錢",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

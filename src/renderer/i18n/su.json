@@ -1,204 +1,242 @@
 {
-    "confirm":"ngeceskeun",
-    "cancel":"dibolaykeun",
-    "dialog_tit":"pas",
-    "close":"nutup",
-    "confirm_you_active":"Mangga pastikeun operasi anjeun",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Pastikeun",
+  "cancel":"Ngabatalkeun",
+  "dialog_tit":"Ajakan",
+  "close":"Tutup",
+  "confirm_you_active":"Punten pastikeun operasi anjeun",
+  "rpcErrors": {
+    "invalidFromAccount":"Rekening pangirim henteu sah",
+    "invalidToAccount":"Akun asup anu henteu sah",
+    "invalidAmountFormat":"Pormat Jumlah lepat",
+    "invalidGasFormat":"Format Gas salah",
+    "invalidDataFormat":"Format data hexadecimal lepat",
+    "dataSizeTooLarge":"Data héksadésimal teuing badag",
+    "invalidGasPriceFormat":"Format harga hijian gas henteu sah",
+    "invalidMciFormat":"Format MCI teu sah",
+    "notEnoughFail":"Gas cukup atawa lepat abnormal"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </sup> CZR"
+  },
+  "model_header": {
+    "home":"Imah",
+    "transfer":"Mindahkeun",
+    "contacts":"Kontak",
+    "setting":"Setting",
+    "total":"Total",
+    "testnet":"Uji jaringan",
+    "online":"Online",
+    "offline":"Offline",
+    "syncing":"Dina sinkronisasi"
+  },
+  "page_setting": {
+    "tit":"Setting",
+    "lang":"Basa",
+    "select":"Mangga pilih",
+    "version_number":"Vérsi dompét",
+    "data_path":"Jalur data titik",
+    "change":"Robah",
+    "changeDirNote":"Mangga pindahkeun file dina jalur aslina kana diréktori nu anyar, moal aya kamungkinan kana kagunaan data.",
+    "note":"Perhatian"
+  },
+  "page_contacts": {
+    "tit":"Kontak",
+    "add_dialog":"Kontak anyar",
+    "add_cont": {
+      "tit":"Kontak anyar",
+      "tag":"Kontak",
+      "address":"Alamat akun",
+      "tag_placeholder":"Punten lebetkeun nami kontak",
+      "address_placeholder":"Punten lebetkeun alamat akun kontak ieu",
+      "add_success":"Hasil anu hasil"
     },
-    "model_header": {
-        "home":"imah",
-        "transfer":"mindahkeun",
-        "contacts":"hubungan",
-        "setting":"nyetél",
-        "total":"total",
-        "testnet":"test Network",
-        "online":"online",
-        "offline":"offline"
+    "delete_dialog": {
+      "title":"Anjeun badé nyoplokkeun",
+      "remove_success":"Parantos kalayan hasil dikaluarkeun"
     },
-    "page_setting": {
-        "tit":"nyetél",
-        "lang":"basa",
-        "select":"Mangga pilih",
-        "version_number":"Vérsi dompet"
-    },
-    "page_contacts": {
-        "tit":"hubungan",
-        "add_dialog":"Kontak anyar",
-        "add_cont": {
-            "tit":"Kontak anyar",
-            "tag":"hubungan",
-            "address":"alamat akun",
-            "tag_placeholder":"Mangga lebetkeun nami kontak urang",
-            "address_placeholder":"Mangga lebetkeun alamat kontak tina akun",
-            "add_success":"hasil ditambahkeun"
-        },
-        "delete_dialog": {
-            "title":"Anjeun nyoplokkeun",
-            "remove_success":"dipupus junun"
-        },
-        "msg_info": {
-            "no_tag":"Mangga lebetkeun Katerangan akun",
-            "no_address":"Mangga lebetkeun alamat akun",
-            "valid_address":"Alamat kontak urang henteu sah",
-            "validate_tag_length":"Ngaran Catetan moal kaci ti 8 karakter",
-            "contacts_quantity_error":"Jumlah kontak teu kaci leuwih ti 50",
-            "exist":"Kontak geus aya,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Kirim surélék pihak duit",
-        "to_address":"Payee",
-        "amount":"duit",
-        "gas":"gas",
-        "send_all":"Kirim sadaya",
-        "data":"data",
-        "data_placeholder":"data Hexadecimal",
-        "fees":"waragad",
-        "total":"total",
-        "select":"Mangga pilih",
-        "no_account_info":"No Rekening, mangga jieun rekening atawa impor",
-        "contacts_dig": {
-            "title":"Pilih akun kontak",
-            "select_placeholder":"Mangga pilih"
-        },
-        "confirm_dia": {
-            "title":"Mangga mastikeun",
-            "enter_passworld_tit":"Mangga lebetkeun sandi anjeun",
-            "enter_passworld_place":"Mangga lebetkeun sandi anjeun"
-        },
-        "msg_info": {
-            "address_null":"Mangga lebetkeun rekening silih urang",
-            "balance_zero":"baki anu cukup, teu tiasa neraskeun",
-            "amount_zero":"Jumlah mindahkeun kudu leuwih gede ti 0",
-            "amount_error":"Mangga lebetkeun jumlah urus valid",
-            "address_err":"Kana format alamat henteu sah",
-            "send_success":"Dagang geus dikirim",
-            "amount_exceeded":"Jumlah urus total ngaleuwihan kasaimbangan akun ayeuna",
-
-            "decrypt_err":"resolusi dompét gagal, nya meureun sandi salah",
-            "send_error":"urus gagal: cék ningali lamun aya cukup kasaimbangan sarta panambang fee"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Rékam urus",
-        "transfer_log_null":"Taya transaksi",
-        "active_icon": {
-            "go_transfer":"initiate mindahkeun",
-            "import_keystore":"file akun",
-            "qrcode":"Kode dua diménsi"
-        },
-        "edit_dia": {
-            "tit":"Edit Catetan",
-            "subtit":"Pikeun akun Anjeun nandaan nyarios a",
-            "no_tag":"Mangga lebetkeun Katerangan akun",
-            "validate_tag_length":"Ngaran Catetan moal kaci ti 8 karakter"
-        },
-        "dia_tx":{
-            "tit":"Émbaran dagang",
-            "block_hash":"jumlah urus",
-            "status":"kaayaan",
-            "from":"Kirim surélék pihak duit",
-            "to":"Payee",
-            "amount":"duit",
-            "data":"data",
-            "send_time":"Kirim surélék Time",
-            "mac_time":"waktos tulang tonggong"
-        },
-        "keystore": {
-            "tit":"file dompét cadangan",
-            "copy":"salinan",
-            "download":"Download dompét file"
-        },
-        "msg_info": {
-            "ads_copy_success":"Alamat geus ditiron",
-            "key_copy_success":"ditiron hasil"
-        }
-    },
-    "page_home": {
-        "import_account":"rekening impor",
-        "add_account":"akun anyar",
-        "acc":"rekening",
-        "create_dia": {
-            "create_tit":"Jieun akun",
-            "backup_tit":"Nyadangkeun akun anyar Anjeun",
-            "create_tag":"Akun qur'an",
-            "create_pwd":"sandi",
-            "create_repwd":"Tegeskeun deui kecap akses",
-            "placeholder_tag":"Nyetél Katerangan ngaran akun",
-            "placeholder_pwd":"Set sandi akun",
-            "placeholder_repwd":"Pastikeun sandi akun",
-            
-            
-            "account_download_keystore":"Ngundeur file akun",
-
-            "validate_tag":"Mangga lebetkeun dina Katerangan ngaran akun",
-            "validate_tag_length":"Ngaran Catetan moal kaci ti 8 karakter",
-
-            "validate_password":"Mangga lebetkeun dina sandi geus disetel",
-            "validate_re_password":"Mangga lebetkeun dina sandi geus disetel deui",
-            "validate_strong_password":"Mangga lebetkeun a sandi tina sahanteuna dalapan",
-            "validate_long_password":"sandi éta henteu leuwih ti 100",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Kecap akses teu cocog",
-
-            "create_success":"nyieun ayaan",
-            "account_quantity_error":"Jumlah rekening teu kaci leuwih ti 50",
-            "create_success_des":"Mangga simpen file akun anjeun, ulah babagi kalawan saha!"
-        },
-        "import_dia": {
-            "tit":"rekening impor",    
-            "placeholder_keystore":"Mangga berkas kana akun dieu",
-            "create_tag":"Akun qur'an",
-            "placeholder_tag":"Nyetél Katerangan ngaran akun",
-
-            "validate_tag":"Mangga lebetkeun dina Katerangan ngaran akun",
-            "validate_tag_length":"Ngaran Catetan moal kaci ti 8 karakter",
-            "validate_enter_keystore":"Mangga ngimpor file akun",
-            "validate_error_keystore":"Rekening impor gagal, akun meureun file salah",
-            "imported_account_success":"kasuksésan impor",
-            "exist":"Akun ieu geus aya, catetan nu",
-            "keystore_error":"kasalahan:",
-            "keystore_length_error":"Anjeun tiasa diimpor ngan hiji file akun, mangga cobian deui!",
-            "keystore_format_error":"Mangga pilih file akun bener",
-            "keystore_is_has":"daftar tos boga akun anjeun kedah ngimpor babaturan anjeun",
-            "imported_success":"Geus dipilih file"
-        },
-        "remove_dia": {
-            "tit":"Anjeun yakin rék ngaleupaskeun?",
-            "remove_confrim":"Kuring yakin ngaleupaskeun",
-            "backup":"Perhatikeun yén deui nepi akun ieu, keur ngahindarkeun karuksakan sipat",
-            "input_pwd":"sandi",
-            "placeholder_pwd":"Mangga lebetkeun sandi pikeun akun ieu",
-            "validate_password":"The sandi anjeun diasupkeun téh lepat",
-            "remove_success":"dipupus junun"
-        }
-    },
-    "page_config": {
-        "config_detection":"Pangwanoh Konfigurasi",
-        "content_msg":{
-            "ready_test":"Siap ngadeteksi file konfigurasi",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Geus kaala jeung informasi konfigurasi titik panganyarna",
-            "is_local":"Ngadeteksi naha aya file titik lokal",
-            "already_local":"Ayeuna aya file konfigurasi alat informasi titik",
-            "not_local":"Teu kauninga file konfigurasi titik, nya meureun ngajalankeun munggaran",
-            "config_write_local":"Inpo titik nu kaala file ditulis kana piringan lokal",
-            "whether_update_node":"Naha beungeut perlu diropéa",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Ngundeur titik, punten janten sabar",
-            "already_downloaded":"program titik geus diundeur jeung meunang siap pikeun ngamimitian",
-            "ready_start":"Siap pikeun ngamimitian titik",
-            "enter_wallet":"Mimitian deteksi titik, siap asupkeun dompet"
-        },
-        "version_dialog":{
-            "version_tit":"Vérsi update ajakan",
-            "download_wallet":"jaringan Quguan pikeun ngundeur versi panganyarna tina Duit",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Punten lebetkeun catetan akun",
+      "no_address":"Punten lebetkeun alamat akun",
+      "valid_address":"Alamatna kontak anu haram",
+      "validate_tag_length":"Ngaran nami nami teu tiasa janten langkung gede ti 8 karakter.",
+      "contacts_quantity_error":"Jumlah alamat henteu tiasa ngaleuwihan 50",
+      "exist":"Alamatna geus aya,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Panyirim pihak",
+    "to_address":"Payee",
+    "amount":"Jumlahna",
+    "gas":"Gas",
+    "gasPrice":"Harga unit Gas",
+    "send_all":"Kirim sadaya",
+    "data":"Data",
+    "data_placeholder":"Data hexadecimal",
+    "fees":"Fee Ngatur",
+    "txFee":"Fee urus",
+    "total":"Total",
+    "select":"Mangga pilih",
+    "no_account_info":"Henteu aya akun, punten jieun atanapi ngimpor akun",
+    "no_keystore_file":"Henteu aya file akun kanggo akun anu saluyu",
+    "contacts_dig": {
+      "title":"2Pilih akun kontak",
+      "select_placeholder":"Mangga pilih"
+    },
+    "confirm_dia": {
+      "title":"Punten pastikeun",
+      "enter_passworld_tit":"Punten lebetkeun kecap akses anjeun",
+      "enter_passworld_place":"Punten lebetkeun kecap akses anjeun"
+    },
+    "msg_info": {
+      "address_null":"Punten tuliskeun akun pihak anu sanés",
+      "balance_zero":"Kasaimbangan cukup, teu tiasa neraskeun",
+      "amount_zero":"Jumlah transfer kedah janten langkung langkung ti 0",
+      "amount_error":"Punten lebetkeun jumlah urus légal",
+      "address_err":"Format alamat nu ditransfer henteu sah.",
+      "gas_error":"Punten tuliskeun gas urus légal",
+      "gasPrice_error":"Punten lebetkeun harga urus légal",
+      "send_success":"Urus dikirim",
+      "amount_exceeded":"Jumlah total urus ayeuna ngaleuwihan kasaimbangan akun",
+      "txFeeTooLow":"Biaya urus handap teuing",
+      "decrypt_err":"FITML dompét gagal, meureun aya kasalahan sandi",
+      "send_error":"Transaksi gagal: pariksa upami aya kasaimbangan anu cukup sareng fee panambang",
+      "generate_offline_block_err":"Ngahasilkeun urus tandénan gagal",
+      "sign_err":"Paraf gagal",
+      "send_offline_block_err":"Ngirim urus ditandatanganan gagal",
+      "syncingWaitTitle":"Titik éta nyingkronkeun",
+      "syncingWait":"Titik anu nyingkronkeun, waktos konfirmasi urus tiasa kaci, punten saé"
+    }
+  },
+  "pager": {
+    "next":"Kaca salajengna",
+    "prev":"Kaca saméméhna"
+  },
+  "page_account": {
+    "transfer_log":"Rékam urus",
+    "transfer_log_null":"Teu aya jujutan transaksi",
+    "txSent":"Urus dikirimkeun",
+    "txAll":"Sadaya transaksi",
+    "txNew":"Rekening ayeuna ngagaduhan inpormasi urus anyar",
+    "checkNow":"Tingali ayeuna",
+    "active_icon": {
+      "go_transfer":"Initiate mindahkeun hiji",
+      "import_keystore":"Berkas akun",
+      "qrcode":"QR kode"
+    },
+    "edit_dia": {
+      "tit":"Ngarobih catetan",
+      "subtit":"Tandaan catetan pikeun akun anjeun",
+      "no_tag":"Punten lebetkeun catetan akun",
+      "validate_tag_length":"Ngaran nami nami teu tiasa janten langkung gede ti 8 karakter."
+    },
+    "dia_tx": {
+      "tit":"Inpo urus",
+      "block_hash":"Nomer urus",
+      "status":"Nagara",
+      "from":"Panyirim pihak",
+      "to":"Payee",
+      "amount":"Jumlahna",
+      "data":"Data",
+      "send_time":"Ngirim waktos",
+      "mac_time":"Waktos ranté utama",
+      "gasPrice":"Harga hijian gas (10 <suk> -18 </sup> CZR)",
+      "gasUsed":"Nganggo gas",
+      "waiting":"Ngantosan konfirmasi",
+      "success":"Sukses",
+      "sendFail":"Kirim gagal",
+      "fail1":"Gagalna (1)",
+      "fail2":"Gagalna (2)",
+      "fail3":"Gagalna (3)"
+    },
+    "keystore": {
+      "tit":"File cadangan cadangan",
+      "copy":"Nyalin",
+      "download":"Ngundeur file dompét"
+    },
+    "msg_info": {
+      "ads_copy_success":"Alamat parir",
+      "key_copy_success":"Salinan suksés"
+    }
+  },
+  "page_home": {
+    "import_account":"Rekening impor",
+    "add_account":"Rekening anyar",
+    "acc":"Rekening",
+    "create_dia": {
+      "create_tit":"Jieun akun",
+      "backup_tit":"Jieun cadangan akun anyar anjeun",
+      "create_tag":"Catetan akun",
+      "create_pwd":"Atur sandi",
+      "create_repwd":"Pastikeun kecap akses",
+      "placeholder_tag":"Punten anggo nami catetan akun",
+      "placeholder_pwd":"Punten pakakas sandikecap akun",
+      "placeholder_repwd":"Punten pastikeun kecap akses akun",
+      "account_download_keystore":"Undeur file akun",
+      "validate_tag":"Punten lebetkeun nami catetan akun",
+      "validate_tag_length":"Ngaran nami nami teu tiasa janten langkung gede ti 8 karakter.",
+      "validate_password":"Punten lebetkeun kecap konci anu anjeun atos",
+      "validate_re_password":"Mangga lebetkeun kecap aksés anu anjeun atos sami",
+      "validate_strong_password":"Mangga lebetkeun kecap aksés sahenteuna 8 digit",
+      "validate_long_password":"Kecap aksés tiasa henteu panjang 100 digit panjang",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Sandi teu konsisten diasupkeun dua kali",
+      "create_success":"Dijieun junun",
+      "account_quantity_error":"Jumlah rekening teu tiasa ngaleuwihan 50",
+      "create_success_des":"Punten simpen berkas akun anjeun, teras bagéan éta saha waé!"
+    },
+    "import_dia": {
+      "tit":"Rekening impor",
+      "placeholder_keystore":"Punten sered payil éta akun di dieu",
+      "create_tag":"Catetan akun",
+      "placeholder_tag":"Punten anggo nami catetan akun",
+      "validate_tag":"Punten lebetkeun nami catetan akun",
+      "validate_tag_length":"Ngaran nami nami teu tiasa janten langkung gede ti 8 karakter.",
+      "validate_enter_keystore":"Punten impor na file akun munggaran",
+      "validate_error_keystore":"Impor akun teu gagal, tiasa janten kasalahan berkas akun",
+      "imported_account_success":"Parantos kalayan hasil diimpor",
+      "exist":"Akun ieu parantos aya, catetan kasebut",
+      "keystore_error":"Kasalahan:",
+      "keystore_length_error":"Ngan ukur aya hiji file rekening tiasa diimpor, mangga cobian deui!",
+      "keystore_format_error":"Mangga pilih koropak akun anu leres",
+      "keystore_is_has":"Geus aya akun di daptar nu anjeun kudu impor.",
+      "imported_success":"Berkas anu dipilih"
+    },
+    "remove_dia": {
+      "tit":"Naha anjeun yakin rék ngaleupaskeun?",
+      "remove_confrim":"Kuring yakin ngaleupaskeun",
+      "backup":"Mangga perhatoskeun kana cadangan akun ieu pikeun ngahindarkeun karuksakan sipat.",
+      "input_pwd":"Kecap aksés",
+      "placeholder_pwd":"Mangga lebetkeun kecap akses pikeun akun ieu",
+      "validate_password":"Sandi anu anjeun ngasupkeun salah",
+      "remove_success":"Parantos kalayan hasil dikaluarkeun"
+    }
+  },
+  "page_config": {
+    "config_detection":"Pangwanoh Konfigurasi",
+    "content_msg": {
+      "ready_test":"Nyiapkeun pikeun ngadeteksi file konfigurasi",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Inpo konfigurasi titik panganyarna parantos diala",
+      "is_local":"Pariksa lamun aya file file lokal sacara lokal",
+      "already_local":"The file konfigurasi tina file titik aya dina alat ayeuna.",
+      "not_local":"Inpormasi konfigurasi tina file titik henteu ditetepkeun, tiasa waé mimiti ngajalankeun.",
+      "config_write_local":"Tulis berkas inpormasi node anu kéngingkeun kana disk lokal",
+      "whether_update_node":"Pariksa lamun pamutahiran diperyogikeun",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Ngundeur program titik, punten ati",
+      "already_downloaded":"Program nodena parantos diundeur sareng siap pikeun ditingali.",
+      "ready_start":"Nyiapkeun ngamimitian titik éta",
+      "enter_wallet":"Titik dimimitian deteksi, siap pikeun ngasupkeun dompét",
+      "specifyDataDir":"Punten pilih hiji jalur gudang tina data titikna"
+    },
+    "version_dialog": {
+      "version_tit":"Ajakan update versi",
+      "download_wallet":"Buka ramatloka resmi pikeun ngundeur versi panganyarna tina duit",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

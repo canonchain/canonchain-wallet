@@ -1,204 +1,242 @@
 {
-    "confirm":"확인",
-    "cancel":"취소",
-    "dialog_tit":"프롬프트",
-    "close":"닫기",
-    "confirm_you_active":"당신의 수술을 확인해주세요.",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"확인",
+  "cancel":"취소",
+  "dialog_tit":"프롬프트",
+  "close":"닫기",
+  "confirm_you_active":"귀하의 수술을 확인하십시오",
+  "rpcErrors": {
+    "invalidFromAccount":"발신자의 계정이 잘못되었습니다.",
+    "invalidToAccount":"수신 계정이 잘못되었습니다.",
+    "invalidAmountFormat":"금액 형식이 잘못되었습니다.",
+    "invalidGasFormat":"잘못된 가스 형식",
+    "invalidDataFormat":"잘못된 16 진수 데이터 형식",
+    "dataSizeTooLarge":"16 진수 데이터가 너무 큽니다.",
+    "invalidGasPriceFormat":"가스 단가 형식이 잘못되었습니다.",
+    "invalidMciFormat":"MCI 형식이 잘못되었습니다.",
+    "notEnoughFail":"불충분 한 가스 또는 비정상 결함"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"홈",
+    "transfer":"전송",
+    "contacts":"연락처",
+    "setting":"설정",
+    "total":"합계",
+    "testnet":"네트워크 테스트",
+    "online":"온라인",
+    "offline":"오프라인",
+    "syncing":"동기화 중"
+  },
+  "page_setting": {
+    "tit":"설정",
+    "lang":"언어",
+    "select":"선택해주세요.",
+    "version_number":"월렛 버전",
+    "data_path":"노드 데이터 경로",
+    "change":"변경",
+    "changeDirNote":"원래 경로의 파일을 새 디렉토리로 이동하십시오. 그렇지 않으면 데이터가 손실됩니다.",
+    "note":"주의"
+  },
+  "page_contacts": {
+    "tit":"연락처",
+    "add_dialog":"새 연락처",
+    "add_cont": {
+      "tit":"새 연락처",
+      "tag":"연락처",
+      "address":"계정 주소",
+      "tag_placeholder":"연락처 이름을 입력하십시오.",
+      "address_placeholder":"연락처의 계정 주소를 입력하십시오.",
+      "add_success":"추가 완료"
     },
-    "model_header": {
-        "home":"홈",
-        "transfer":"전송",
-        "contacts":"연락처",
-        "setting":"설정",
-        "total":"합계",
-        "testnet":"네트워크 테스트",
-        "online":"온라인",
-        "offline":"오프라인"
+    "delete_dialog": {
+      "title":"제거하고 있습니다.",
+      "remove_success":"삭제 완료"
     },
-    "page_setting": {
-        "tit":"설정",
-        "lang":"언어",
-        "select":"선택해주세요.",
-        "version_number":"월렛 버전"
-    },
-    "page_contacts": {
-        "tit":"연락처",
-        "add_dialog":"새 연락처",
-        "add_cont": {
-            "tit":"새 연락처",
-            "tag":"연락처",
-            "address":"계정 주소",
-            "tag_placeholder":"연락처 이름을 입력하십시오.",
-            "address_placeholder":"연락처의 계정 주소를 입력하십시오.",
-            "add_success":"추가 완료"
-        },
-        "delete_dialog": {
-            "title":"제거하고 있습니다.",
-            "remove_success":"삭제 완료"
-        },
-        "msg_info": {
-            "no_tag":"계정 메모를 입력하십시오.",
-            "no_address":"계정 주소를 입력하십시오.",
-            "valid_address":"연락처의 주소가 불법입니다.",
-            "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
-            "contacts_quantity_error":"연락처의 수는 50을 초과 할 수 없습니다.",
-            "exist":"연락처가 이미 있습니다."
-        }
-    },
-    "page_transfer": {
-        "from_address":"발신자",
-        "to_address":"수취인",
-        "amount":"금액",
-        "gas":"가스",
-        "send_all":"모두 보내기",
-        "data":"데이터",
-        "data_placeholder":"16 진수 데이터",
-        "fees":"수수료",
-        "total":"합계",
-        "select":"선택해주세요.",
-        "no_account_info":"아직 계정이 없으므로 계정을 만들거나 가져 오십시오.",
-        "contacts_dig": {
-            "title":"연락처 계정 선택",
-            "select_placeholder":"선택해주세요."
-        },
-        "confirm_dia": {
-            "title":"확인해주세요.",
-            "enter_passworld_tit":"비밀번호를 입력하십시오.",
-            "enter_passworld_place":"비밀번호를 입력하십시오."
-        },
-        "msg_info": {
-            "address_null":"상대방의 계정을 입력하십시오.",
-            "balance_zero":"불충분 한 균형, 계속할 수 없음",
-            "amount_zero":"전송 금액은 0보다 커야합니다.",
-            "amount_error":"법적 거래 금액을 입력하십시오.",
-            "address_err":"전송 된 주소의 형식이 잘못되었습니다.",
-            "send_success":"거래가 전송되었습니다.",
-            "amount_exceeded":"현재 거래 총액이 계정 잔액을 초과합니다.",
-
-            "decrypt_err":"월렛 파싱에 실패했습니다. 비밀번호 오류 일 수 있습니다.",
-            "send_error":"거래 실패 : 잔액 및 광부 수수료가 충분한 지 확인하십시오."
-        }
-    },
-    "page_account": {
-        "transfer_log":"거래 기록",
-        "transfer_log_null":"거래 내역 없음",
-        "active_icon": {
-            "go_transfer":"전송 시작",
-            "import_keystore":"계정 파일",
-            "qrcode":"QR 코드"
-        },
-        "edit_dia": {
-            "tit":"메모 수정",
-            "subtit":"내 계정에 메모 쓰기",
-            "no_tag":"계정 메모를 입력하십시오.",
-            "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다."
-        },
-        "dia_tx":{
-            "tit":"거래 정보",
-            "block_hash":"거래 번호",
-            "status":"주",
-            "from":"발신자",
-            "to":"수취인",
-            "amount":"금액",
-            "data":"데이터",
-            "send_time":"보내는 시간",
-            "mac_time":"주요 체인 시간"
-        },
-        "keystore": {
-            "tit":"백업 지갑 파일",
-            "copy":"복사",
-            "download":"지갑 파일 다운로드"
-        },
-        "msg_info": {
-            "ads_copy_success":"주소가 복사되었습니다.",
-            "key_copy_success":"성공적인 사본"
-        }
-    },
-    "page_home": {
-        "import_account":"수입 계정",
-        "add_account":"새 계정",
-        "acc":"계정",
-        "create_dia": {
-            "create_tit":"계정 만들기",
-            "backup_tit":"새 계정 백업",
-            "create_tag":"계정 메모",
-            "create_pwd":"비밀번호 설정",
-            "create_repwd":"암호 확인",
-            "placeholder_tag":"계정 메모 이름을 설정하십시오.",
-            "placeholder_pwd":"계정 암호를 설정하십시오.",
-            "placeholder_repwd":"계정 비밀번호를 확인하십시오.",
-            
-            
-            "account_download_keystore":"계정 파일 다운로드",
-
-            "validate_tag":"계정 메모 이름을 입력하십시오.",
-            "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
-
-            "validate_password":"설정 한 암호를 입력하십시오.",
-            "validate_re_password":"다시 설정 한 암호를 입력하십시오.",
-            "validate_strong_password":"암호를 8 자리 이상 입력하십시오.",
-            "validate_long_password":"암호의 길이는 100 자리를 초과 할 수 없습니다.",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"일치하지 않는 암호가 두 번 입력되었습니다.",
-
-            "create_success":"성공적으로 생성되었습니다.",
-            "account_quantity_error":"계정 수는 50을 초과 할 수 없습니다.",
-            "create_success_des":"계정 파일을 저장하고 누구와도 공유하지 마십시오!"
-        },
-        "import_dia": {
-            "tit":"수입 계정",    
-            "placeholder_keystore":"계정 파일을 여기로 드래그하십시오.",
-            "create_tag":"계정 메모",
-            "placeholder_tag":"계정 메모 이름을 설정하십시오.",
-
-            "validate_tag":"계정 메모 이름을 입력하십시오.",
-            "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
-            "validate_enter_keystore":"먼저 계정 파일을 가져 오십시오.",
-            "validate_error_keystore":"계정 가져 오기에 실패했습니다. 계정 파일 오류 일 수 있습니다.",
-            "imported_account_success":"수입 성공",
-            "exist":"이 계정은 이미 존재하며 메모는",
-            "keystore_error":"오류 :",
-            "keystore_length_error":"하나의 계정 파일 만 가져올 수 있습니다. 다시 시도하십시오!",
-            "keystore_format_error":"올바른 계정 파일을 선택하십시오.",
-            "keystore_is_has":"목록에 이미 가져올 계정이 있습니다.",
-            "imported_success":"이미 선택된 파일"
-        },
-        "remove_dia": {
-            "tit":"제거 하시겠습니까?",
-            "remove_confrim":"나는 반드시 제거해야한다.",
-            "backup":"재산 피해를 막기 위해이 계좌의 백업에주의하십시오.",
-            "input_pwd":"비밀번호",
-            "placeholder_pwd":"이 계정의 비밀번호를 입력하십시오.",
-            "validate_password":"입력 한 암호가 잘못되었습니다.",
-            "remove_success":"삭제 완료"
-        }
-    },
-    "page_config": {
-        "config_detection":"구성 탐지",
-        "content_msg":{
-            "ready_test":"구성 파일 검색 준비",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"최신 노드 구성 정보가 확보되었습니다.",
-            "is_local":"노드 파일이 로컬에 있는지 확인하십시오.",
-            "already_local":"노드 파일의 구성 파일은 현재 디바이스에 존재합니다.",
-            "not_local":"노드 파일의 구성 정보가 감지되지 않았으므로 처음으로 실행 중일 수 있습니다.",
-            "config_write_local":"획득 한 노드 정보 파일을 로컬 디스크에 씁니다.",
-            "whether_update_node":"업데이트가 필요한지 확인하십시오.",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"노드 프로그램을 다운로드하십시오. 잠시 기다려주십시오.",
-            "already_downloaded":"노드 프로그램이 다운로드되어 시작할 준비가되었습니다.",
-            "ready_start":"노드 시작 준비",
-            "enter_wallet":"노드가 감지를 시작하여 지갑에 들어갈 준비가되었습니다."
-        },
-        "version_dialog":{
-            "version_tit":"버전 업데이트 프롬프트",
-            "download_wallet":"최신 버전의 돈을 다운로드하려면 공식 웹 사이트로 이동하십시오.",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"계정 메모를 입력하십시오.",
+      "no_address":"계정 주소를 입력하십시오.",
+      "valid_address":"연락처의 주소가 불법입니다.",
+      "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
+      "contacts_quantity_error":"연락처 수는 50을 초과 할 수 없습니다.",
+      "exist":"대화 상대가 이미 있습니다."
     }
+  },
+  "page_transfer": {
+    "from_address":"발신 측",
+    "to_address":"수취인",
+    "amount":"금액",
+    "gas":"가스",
+    "gasPrice":"가스 단가",
+    "send_all":"모두 보내기",
+    "data":"데이터",
+    "data_placeholder":"16 진수 데이터",
+    "fees":"수수료",
+    "txFee":"거래 수수료",
+    "total":"합계",
+    "select":"선택해주세요.",
+    "no_account_info":"아직 계정이 없으므로 계정을 만들거나 가져 오십시오.",
+    "no_keystore_file":"해당 계정에 대한 계정 파일이 없습니다.",
+    "contacts_dig": {
+      "title":"연락처 계정 선택",
+      "select_placeholder":"선택해주세요."
+    },
+    "confirm_dia": {
+      "title":"확인해주세요.",
+      "enter_passworld_tit":"비밀번호를 입력하십시오.",
+      "enter_passworld_place":"비밀번호를 입력하십시오."
+    },
+    "msg_info": {
+      "address_null":"상대방의 계정을 입력하십시오.",
+      "balance_zero":"불충분 한 균형, 계속할 수 없음",
+      "amount_zero":"전송 금액은 0보다 커야합니다.",
+      "amount_error":"법적 거래 금액을 입력하십시오.",
+      "address_err":"전송 된 주소 형식이 잘못되었습니다.",
+      "gas_error":"법적인 거래 가스를 입력하십시오.",
+      "gasPrice_error":"법적 거래 가격을 입력하십시오.",
+      "send_success":"거래가 전송되었습니다.",
+      "amount_exceeded":"현재 총 거래 금액이 계정 잔액을 초과합니다.",
+      "txFeeTooLow":"거래 비용이 너무 적습니다.",
+      "decrypt_err":"월렛 파싱에 실패했습니다. 비밀번호 오류 일 수 있습니다.",
+      "send_error":"거래 실패 : 잔액 및 광부 수수료가 충분한 지 확인하십시오.",
+      "generate_offline_block_err":"서명되지 않은 트랜잭션 생성에 실패했습니다.",
+      "sign_err":"서명 실패",
+      "send_offline_block_err":"서명 된 트랜잭션을 보내지 못했습니다.",
+      "syncingWaitTitle":"노드가 동기화되어 있습니다.",
+      "syncingWait":"노드가 동기화되었습니다. 트랜잭션 확인 시간이 더 오래 걸릴 수 있습니다. 잠시 기다려주십시오."
+    }
+  },
+  "pager": {
+    "next":"다음 페이지",
+    "prev":"이전 페이지"
+  },
+  "page_account": {
+    "transfer_log":"거래 기록",
+    "transfer_log_null":"거래 내역 없음",
+    "txSent":"전송 된 트랜잭션",
+    "txAll":"모든 거래",
+    "txNew":"당좌 계좌에 새로운 거래 정보가 있습니다.",
+    "checkNow":"지금보기",
+    "active_icon": {
+      "go_transfer":"전송 시작",
+      "import_keystore":"계정 파일",
+      "qrcode":"QR 코드"
+    },
+    "edit_dia": {
+      "tit":"메모 수정",
+      "subtit":"내 계정에 메모 쓰기",
+      "no_tag":"계정 메모를 입력하십시오.",
+      "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다."
+    },
+    "dia_tx": {
+      "tit":"거래 정보",
+      "block_hash":"거래 번호",
+      "status":"주",
+      "from":"발신 측",
+      "to":"수취인",
+      "amount":"금액",
+      "data":"데이터",
+      "send_time":"전송 시간",
+      "mac_time":"주요 체인 시간",
+      "gasPrice":"가스 단가 (10 <-18> CZR)",
+      "gasUsed":"가스 사용",
+      "waiting":"확인을 기다리는 중입니다.",
+      "success":"성공",
+      "sendFail":"보내기 실패",
+      "fail1":"실패 (1)",
+      "fail2":"실패 (2)",
+      "fail3":"실패 (3)"
+    },
+    "keystore": {
+      "tit":"백업 지갑 파일",
+      "copy":"복사",
+      "download":"지갑 파일 다운로드"
+    },
+    "msg_info": {
+      "ads_copy_success":"주소가 복사되었습니다.",
+      "key_copy_success":"성공적인 사본"
+    }
+  },
+  "page_home": {
+    "import_account":"수입 계정",
+    "add_account":"새 계정",
+    "acc":"계정",
+    "create_dia": {
+      "create_tit":"계정 만들기",
+      "backup_tit":"새 계정 백업",
+      "create_tag":"계정 메모",
+      "create_pwd":"암호 설정",
+      "create_repwd":"암호 확인",
+      "placeholder_tag":"계정 메모 이름을 설정하십시오.",
+      "placeholder_pwd":"계정 암호를 설정하십시오.",
+      "placeholder_repwd":"계정 비밀번호를 확인하십시오.",
+      "account_download_keystore":"계정 파일 다운로드",
+      "validate_tag":"계정 이름을 입력하십시오.",
+      "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
+      "validate_password":"설정 한 암호를 입력하십시오.",
+      "validate_re_password":"다시 설정 한 암호를 입력하십시오.",
+      "validate_strong_password":"암호를 8 자리 이상 입력하십시오.",
+      "validate_long_password":"암호의 길이는 100 자리를 초과 할 수 없습니다.",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"일치하지 않는 암호가 두 번 입력되었습니다.",
+      "create_success":"성공적으로 생성되었습니다.",
+      "account_quantity_error":"계정 수는 50을 초과 할 수 없습니다.",
+      "create_success_des":"계정 파일을 저장하고 누구와도 공유하지 마십시오!"
+    },
+    "import_dia": {
+      "tit":"수입 계정",
+      "placeholder_keystore":"계정 파일을 여기로 드래그하십시오.",
+      "create_tag":"계정 메모",
+      "placeholder_tag":"계정 메모 이름을 설정하십시오.",
+      "validate_tag":"계정 이름을 입력하십시오.",
+      "validate_tag_length":"음표 이름의 이름은 8자를 초과 할 수 없습니다.",
+      "validate_enter_keystore":"먼저 계정 파일을 가져 오십시오.",
+      "validate_error_keystore":"계정 가져 오기에 실패했습니다. 계정 파일 오류 일 수 있습니다.",
+      "imported_account_success":"가져 오기를 완료했습니다.",
+      "exist":"이 계정은 이미 존재하며 메모는",
+      "keystore_error":"오류 :",
+      "keystore_length_error":"하나의 계정 파일 만 가져올 수 있습니다. 다시 시도하십시오!",
+      "keystore_format_error":"올바른 계정 파일을 선택하십시오.",
+      "keystore_is_has":"가져올 목록에 이미 계정이 있습니다.",
+      "imported_success":"선택한 파일"
+    },
+    "remove_dia": {
+      "tit":"제거 하시겠습니까?",
+      "remove_confrim":"나는 반드시 제거해야한다.",
+      "backup":"재산 피해를 막기 위해이 계좌의 백업에주의하십시오.",
+      "input_pwd":"비밀번호",
+      "placeholder_pwd":"이 계정의 비밀번호를 입력하십시오.",
+      "validate_password":"입력 한 암호가 잘못되었습니다.",
+      "remove_success":"삭제 완료"
+    }
+  },
+  "page_config": {
+    "config_detection":"구성 탐지",
+    "content_msg": {
+      "ready_test":"구성 파일 검색 준비",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"최신 노드 구성 정보를 얻었습니다.",
+      "is_local":"노드 파일이 로컬에 있는지 확인하십시오.",
+      "already_local":"노드 파일의 구성 파일은 현재 장치에 있습니다.",
+      "not_local":"노드 파일의 구성 정보가 감지되지 않았으므로 처음으로 실행 중일 수 있습니다.",
+      "config_write_local":"획득 한 노드 정보 파일을 로컬 디스크에 씁니다.",
+      "whether_update_node":"업데이트가 필요한지 확인하십시오.",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"노드 프로그램을 다운로드하십시오. 잠시 기다려주십시오.",
+      "already_downloaded":"노드 프로그램이 다운로드되어 시작할 준비가되었습니다.",
+      "ready_start":"노드 시작 준비",
+      "enter_wallet":"노드가 감지를 시작하여 지갑에 들어갈 준비가되었습니다.",
+      "specifyDataDir":"노드 데이터의 저장 경로를 선택하십시오."
+    },
+    "version_dialog": {
+      "version_tit":"버전 업데이트 프롬프트",
+      "download_wallet":"최신 버전의 돈을 다운로드하려면 공식 웹 사이트로 이동하십시오.",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

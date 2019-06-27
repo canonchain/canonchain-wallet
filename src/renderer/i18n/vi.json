@@ -1,204 +1,242 @@
 {
-    "confirm":"Xác nhận",
-    "cancel":"Hủy bỏ",
-    "dialog_tit":"Nhắc",
-    "close":"Đóng",
-    "confirm_you_active":"Vui lòng xác nhận hoạt động của bạn",
-    "unit": {
-        "czr":"Kč"
+  "confirm":"Xác nhận",
+  "cancel":"Hủy bỏ",
+  "dialog_tit":"Nhắc",
+  "close":"Đóng",
+  "confirm_you_active":"Vui lòng xác nhận hoạt động của bạn",
+  "rpcErrors": {
+    "invalidFromAccount":"Tài khoản của người gửi không hợp lệ",
+    "invalidToAccount":"Tài khoản đến không hợp lệ",
+    "invalidAmountFormat":"Định dạng số lượng không hợp lệ",
+    "invalidGasFormat":"Định dạng Gas không hợp lệ",
+    "invalidDataFormat":"Định dạng dữ liệu thập lục phân không hợp lệ",
+    "dataSizeTooLarge":"Dữ liệu thập lục phân quá lớn",
+    "invalidGasPriceFormat":"Định dạng đơn giá gas không hợp lệ",
+    "invalidMciFormat":"Định dạng MCI không hợp lệ",
+    "notEnoughFail":"Khí không đủ hoặc lỗi bất thường"
+  },
+  "unit": {
+    "czr":"Kč",
+    "wei":"10 <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"Trang chủ",
+    "transfer":"Chuyển khoản",
+    "contacts":"Liên hệ",
+    "setting":"Cài đặt",
+    "total":"Tổng cộng",
+    "testnet":"Kiểm tra mạng",
+    "online":"Trực tuyến",
+    "offline":"Ngoại tuyến",
+    "syncing":"Đồng bộ hóa"
+  },
+  "page_setting": {
+    "tit":"Cài đặt",
+    "lang":"Ngôn ngữ",
+    "select":"Vui lòng chọn",
+    "version_number":"Phiên bản ví",
+    "data_path":"Đường dẫn dữ liệu nút",
+    "change":"Thay đổi",
+    "changeDirNote":"Vui lòng di chuyển các tệp trong đường dẫn gốc sang thư mục mới, nếu không nó sẽ gây mất dữ liệu.",
+    "note":"Chú ý"
+  },
+  "page_contacts": {
+    "tit":"Liên hệ",
+    "add_dialog":"Liên hệ mới",
+    "add_cont": {
+      "tit":"Liên hệ mới",
+      "tag":"Liên hệ",
+      "address":"Địa chỉ tài khoản",
+      "tag_placeholder":"Vui lòng nhập tên của liên hệ",
+      "address_placeholder":"Vui lòng nhập địa chỉ tài khoản của người liên hệ",
+      "add_success":"Đã thêm thành công"
     },
-    "model_header": {
-        "home":"Trang chủ",
-        "transfer":"Chuyển khoản",
-        "contacts":"Liên hệ",
-        "setting":"Cài đặt",
-        "total":"Tổng cộng",
-        "testnet":"Kiểm tra mạng",
-        "online":"Trực tuyến",
-        "offline":"Ngoại tuyến"
+    "delete_dialog": {
+      "title":"Bạn đang loại bỏ",
+      "remove_success":"Xóa thành công"
     },
-    "page_setting": {
-        "tit":"Cài đặt",
-        "lang":"Ngôn ngữ",
-        "select":"Vui lòng chọn",
-        "version_number":"Phiên bản ví"
-    },
-    "page_contacts": {
-        "tit":"Liên hệ",
-        "add_dialog":"Liên hệ mới",
-        "add_cont": {
-            "tit":"Liên hệ mới",
-            "tag":"Liên hệ",
-            "address":"Địa chỉ tài khoản",
-            "tag_placeholder":"Vui lòng nhập tên của liên hệ",
-            "address_placeholder":"Vui lòng nhập địa chỉ tài khoản của người liên hệ",
-            "add_success":"Đã thêm thành công"
-        },
-        "delete_dialog": {
-            "title":"Bạn đang gỡ bỏ",
-            "remove_success":"Xóa thành công"
-        },
-        "msg_info": {
-            "no_tag":"Vui lòng nhập ghi chú tài khoản",
-            "no_address":"Vui lòng nhập địa chỉ tài khoản của bạn",
-            "valid_address":"Địa chỉ liên lạc là bất hợp pháp",
-            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
-            "contacts_quantity_error":"Số lượng liên lạc không thể vượt quá 50",
-            "exist":"Liên hệ đã tồn tại,"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Gửi tiệc",
-        "to_address":"Người được trả tiền",
-        "amount":"Số tiền",
-        "gas":"Gas",
-        "send_all":"Gửi tất cả",
-        "data":"Dữ liệu",
-        "data_placeholder":"Dữ liệu thập lục phân",
-        "fees":"Phí xử lý",
-        "total":"Tổng cộng",
-        "select":"Vui lòng chọn",
-        "no_account_info":"Chưa có tài khoản, vui lòng tạo hoặc nhập tài khoản",
-        "contacts_dig": {
-            "title":"Chọn một tài khoản liên lạc",
-            "select_placeholder":"Vui lòng chọn"
-        },
-        "confirm_dia": {
-            "title":"Vui lòng xác nhận",
-            "enter_passworld_tit":"Vui lòng nhập mật khẩu của bạn",
-            "enter_passworld_place":"Vui lòng nhập mật khẩu của bạn"
-        },
-        "msg_info": {
-            "address_null":"Vui lòng nhập tài khoản của bên kia",
-            "balance_zero":"Số dư không đủ, không thể tiếp tục",
-            "amount_zero":"Số tiền chuyển phải lớn hơn 0",
-            "amount_error":"Vui lòng nhập số tiền giao dịch hợp pháp",
-            "address_err":"Định dạng của địa chỉ được chuyển không hợp lệ.",
-            "send_success":"Giao dịch đã được gửi",
-            "amount_exceeded":"Tổng số tiền giao dịch hiện tại vượt quá số dư tài khoản",
-
-            "decrypt_err":"Phân tích ví không thành công, đó có thể là lỗi mật khẩu",
-            "send_error":"Giao dịch thất bại: vui lòng kiểm tra xem có đủ số dư và phí khai thác không"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Biên bản giao dịch",
-        "transfer_log_null":"Không có lịch sử giao dịch",
-        "active_icon": {
-            "go_transfer":"Thực hiện chuyển khoản",
-            "import_keystore":"Tài khoản tập tin",
-            "qrcode":"Mã QR"
-        },
-        "edit_dia": {
-            "tit":"Sửa đổi ghi chú",
-            "subtit":"Đánh dấu một ghi chú cho tài khoản của bạn",
-            "no_tag":"Vui lòng nhập ghi chú tài khoản",
-            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự."
-        },
-        "dia_tx":{
-            "tit":"Thông tin giao dịch",
-            "block_hash":"Số giao dịch",
-            "status":"Nhà nước",
-            "from":"Gửi tiệc",
-            "to":"Người được trả tiền",
-            "amount":"Số tiền",
-            "data":"Dữ liệu",
-            "send_time":"Gửi thời gian",
-            "mac_time":"Thời gian chuỗi chính"
-        },
-        "keystore": {
-            "tit":"Sao lưu tập tin ví",
-            "copy":"Sao chép",
-            "download":"Tải tập tin ví"
-        },
-        "msg_info": {
-            "ads_copy_success":"Địa chỉ đã được sao chép",
-            "key_copy_success":"Bản sao thành công"
-        }
-    },
-    "page_home": {
-        "import_account":"Nhập tài khoản",
-        "add_account":"Tài khoản mới",
-        "acc":"Tài khoản",
-        "create_dia": {
-            "create_tit":"Tạo một tài khoản",
-            "backup_tit":"Sao lưu tài khoản mới của bạn",
-            "create_tag":"Ghi chú tài khoản",
-            "create_pwd":"Đặt mật khẩu",
-            "create_repwd":"Xác nhận mật khẩu",
-            "placeholder_tag":"Vui lòng đặt tên ghi chú tài khoản",
-            "placeholder_pwd":"Vui lòng đặt mật khẩu tài khoản",
-            "placeholder_repwd":"Vui lòng xác nhận mật khẩu tài khoản",
-            
-            
-            "account_download_keystore":"Tải tập tin tài khoản",
-
-            "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
-            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
-
-            "validate_password":"Vui lòng nhập mật khẩu bạn đặt",
-            "validate_re_password":"Vui lòng nhập lại mật khẩu bạn đã đặt lại",
-            "validate_strong_password":"Vui lòng nhập mật khẩu ít nhất 8 chữ số",
-            "validate_long_password":"Mật khẩu không thể vượt quá 100 chữ số",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Mật khẩu không nhất quán được nhập hai lần",
-
-            "create_success":"Tạo thành công",
-            "account_quantity_error":"Số lượng tài khoản không thể vượt quá 50",
-            "create_success_des":"Vui lòng lưu tệp tài khoản của bạn và không chia sẻ nó với bất cứ ai!"
-        },
-        "import_dia": {
-            "tit":"Nhập tài khoản",    
-            "placeholder_keystore":"Vui lòng kéo tập tin tài khoản vào đây",
-            "create_tag":"Ghi chú tài khoản",
-            "placeholder_tag":"Vui lòng đặt tên ghi chú tài khoản",
-
-            "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
-            "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
-            "validate_enter_keystore":"Vui lòng nhập tệp tài khoản trước",
-            "validate_error_keystore":"Nhập tài khoản không thành công, có thể là lỗi tập tin tài khoản",
-            "imported_account_success":"Nhập khẩu thành công",
-            "exist":"Tài khoản này đã tồn tại, ghi chú là",
-            "keystore_error":"Lỗi:",
-            "keystore_length_error":"Chỉ có thể nhập một tệp tài khoản, vui lòng thử lại!",
-            "keystore_format_error":"Vui lòng chọn đúng tài khoản",
-            "keystore_is_has":"Đã có một tài khoản trong danh sách mà bạn cần nhập.",
-            "imported_success":"Đã chọn tập tin"
-        },
-        "remove_dia": {
-            "tit":"Bạn có chắc chắn muốn loại bỏ nó?",
-            "remove_confrim":"Tôi chắc chắn sẽ loại bỏ",
-            "backup":"Vui lòng chú ý sao lưu tài khoản này để tránh thiệt hại tài sản.",
-            "input_pwd":"Mật khẩu",
-            "placeholder_pwd":"Vui lòng nhập mật khẩu cho tài khoản này",
-            "validate_password":"Mật khẩu bạn đã nhập sai",
-            "remove_success":"Xóa thành công"
-        }
-    },
-    "page_config": {
-        "config_detection":"Phát hiện cấu hình",
-        "content_msg":{
-            "ready_test":"Chuẩn bị phát hiện tập tin cấu hình",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Thông tin cấu hình nút mới nhất đã được lấy",
-            "is_local":"Kiểm tra nếu có một tệp nút cục bộ",
-            "already_local":"Tệp cấu hình của tệp nút tồn tại trên thiết bị hiện tại.",
-            "not_local":"Thông tin cấu hình của tệp nút không được phát hiện, đây có thể là lần đầu tiên chạy.",
-            "config_write_local":"Ghi tệp thông tin nút thu được vào đĩa cục bộ",
-            "whether_update_node":"Kiểm tra nếu cần cập nhật",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Đang tải xuống chương trình nút, hãy kiên nhẫn",
-            "already_downloaded":"Chương trình nút đã được tải xuống và sẵn sàng để bắt đầu.",
-            "ready_start":"Chuẩn bị khởi động nút",
-            "enter_wallet":"Nút bắt đầu phát hiện, sẵn sàng để vào ví"
-        },
-        "version_dialog":{
-            "version_tit":"Lời nhắc cập nhật phiên bản",
-            "download_wallet":"Truy cập trang web chính thức để tải về phiên bản tiền mới nhất",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"Vui lòng nhập ghi chú tài khoản",
+      "no_address":"Vui lòng nhập địa chỉ tài khoản",
+      "valid_address":"Địa chỉ liên lạc là bất hợp pháp",
+      "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
+      "contacts_quantity_error":"Số lượng liên lạc không thể vượt quá 50",
+      "exist":"Liên hệ đã tồn tại,"
     }
+  },
+  "page_transfer": {
+    "from_address":"Gửi tiệc",
+    "to_address":"Người được trả tiền",
+    "amount":"Số tiền",
+    "gas":"Gas",
+    "gasPrice":"Đơn giá gas",
+    "send_all":"Gửi tất cả",
+    "data":"Dữ liệu",
+    "data_placeholder":"Dữ liệu thập lục phân",
+    "fees":"Phí xử lý",
+    "txFee":"Phí giao dịch",
+    "total":"Tổng cộng",
+    "select":"Vui lòng chọn",
+    "no_account_info":"Chưa có tài khoản, vui lòng tạo hoặc nhập tài khoản",
+    "no_keystore_file":"Không tìm thấy tệp tài khoản cho tài khoản tương ứng",
+    "contacts_dig": {
+      "title":"Chọn tài khoản liên lạc",
+      "select_placeholder":"Vui lòng chọn"
+    },
+    "confirm_dia": {
+      "title":"Vui lòng xác nhận",
+      "enter_passworld_tit":"Vui lòng nhập mật khẩu của bạn",
+      "enter_passworld_place":"Vui lòng nhập mật khẩu của bạn"
+    },
+    "msg_info": {
+      "address_null":"Vui lòng nhập tài khoản của bên kia",
+      "balance_zero":"Số dư không đủ, không thể tiếp tục",
+      "amount_zero":"Số tiền chuyển phải lớn hơn 0",
+      "amount_error":"Vui lòng nhập số tiền giao dịch hợp pháp",
+      "address_err":"Định dạng của địa chỉ được chuyển không hợp lệ.",
+      "gas_error":"Vui lòng nhập khí giao dịch hợp pháp",
+      "gasPrice_error":"Vui lòng nhập giá giao dịch hợp pháp",
+      "send_success":"Giao dịch đã được gửi",
+      "amount_exceeded":"Tổng số tiền giao dịch hiện tại vượt quá số dư tài khoản",
+      "txFeeTooLow":"Chi phí giao dịch quá thấp",
+      "decrypt_err":"Phân tích ví không thành công, đó có thể là lỗi mật khẩu",
+      "send_error":"Giao dịch thất bại: vui lòng kiểm tra xem có đủ số dư và phí khai thác không",
+      "generate_offline_block_err":"Tạo giao dịch không dấu",
+      "sign_err":"Chữ ký thất bại",
+      "send_offline_block_err":"Gửi một giao dịch đã ký không thành công",
+      "syncingWaitTitle":"Nút đồng bộ",
+      "syncingWait":"Nút đồng bộ, thời gian xác nhận giao dịch có thể lâu hơn, hãy kiên nhẫn"
+    }
+  },
+  "pager": {
+    "next":"Trang tiếp theo",
+    "prev":"Trang trước"
+  },
+  "page_account": {
+    "transfer_log":"Biên bản giao dịch",
+    "transfer_log_null":"Không có lịch sử giao dịch",
+    "txSent":"Giao dịch truyền",
+    "txAll":"Tất cả các giao dịch",
+    "txNew":"Tài khoản hiện tại có thông tin giao dịch mới",
+    "checkNow":"Xem ngay",
+    "active_icon": {
+      "go_transfer":"Thực hiện chuyển khoản",
+      "import_keystore":"Tài khoản tập tin",
+      "qrcode":"Mã QR"
+    },
+    "edit_dia": {
+      "tit":"Sửa đổi ghi chú",
+      "subtit":"Đánh dấu một ghi chú cho tài khoản của bạn",
+      "no_tag":"Vui lòng nhập ghi chú tài khoản",
+      "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự."
+    },
+    "dia_tx": {
+      "tit":"Thông tin giao dịch",
+      "block_hash":"Số giao dịch",
+      "status":"Nhà nước",
+      "from":"Gửi tiệc",
+      "to":"Người được trả tiền",
+      "amount":"Số tiền",
+      "data":"Dữ liệu",
+      "send_time":"Gửi thời gian",
+      "mac_time":"Thời gian chuỗi chính",
+      "gasPrice":"Đơn giá gas (10 <sup> -18 </ sup> CZR)",
+      "gasUsed":"Sử dụng gas",
+      "waiting":"Chờ xác nhận",
+      "success":"Thành công",
+      "sendFail":"Gửi thất bại",
+      "fail1":"Thất bại (1)",
+      "fail2":"Thất bại (2)",
+      "fail3":"Thất bại (3)"
+    },
+    "keystore": {
+      "tit":"Sao lưu tập tin ví",
+      "copy":"Sao chép",
+      "download":"Tải tập tin ví"
+    },
+    "msg_info": {
+      "ads_copy_success":"Địa chỉ đã được sao chép",
+      "key_copy_success":"Bản sao thành công"
+    }
+  },
+  "page_home": {
+    "import_account":"Nhập tài khoản",
+    "add_account":"Tài khoản mới",
+    "acc":"Tài khoản",
+    "create_dia": {
+      "create_tit":"Tạo một tài khoản",
+      "backup_tit":"Sao lưu tài khoản mới của bạn",
+      "create_tag":"Ghi chú tài khoản",
+      "create_pwd":"Đặt mật khẩu",
+      "create_repwd":"Xác nhận mật khẩu",
+      "placeholder_tag":"Vui lòng đặt tên ghi chú tài khoản",
+      "placeholder_pwd":"Vui lòng đặt mật khẩu tài khoản",
+      "placeholder_repwd":"Vui lòng xác nhận mật khẩu tài khoản",
+      "account_download_keystore":"Tải tập tin tài khoản",
+      "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
+      "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
+      "validate_password":"Vui lòng nhập mật khẩu bạn đặt",
+      "validate_re_password":"Vui lòng nhập lại mật khẩu bạn đã đặt lại",
+      "validate_strong_password":"Vui lòng nhập mật khẩu ít nhất 8 chữ số",
+      "validate_long_password":"Mật khẩu không thể vượt quá 100 chữ số",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Mật khẩu không nhất quán được nhập hai lần",
+      "create_success":"Tạo thành công",
+      "account_quantity_error":"Số lượng tài khoản không thể vượt quá 50",
+      "create_success_des":"Vui lòng lưu tệp tài khoản của bạn và không chia sẻ nó với bất cứ ai!"
+    },
+    "import_dia": {
+      "tit":"Nhập tài khoản",
+      "placeholder_keystore":"Vui lòng kéo tập tin tài khoản vào đây",
+      "create_tag":"Ghi chú tài khoản",
+      "placeholder_tag":"Vui lòng đặt tên ghi chú tài khoản",
+      "validate_tag":"Vui lòng nhập tên ghi chú tài khoản",
+      "validate_tag_length":"Tên của tên ghi chú không thể lớn hơn 8 ký tự.",
+      "validate_enter_keystore":"Vui lòng nhập tệp tài khoản trước",
+      "validate_error_keystore":"Nhập tài khoản không thành công, có thể là lỗi tập tin tài khoản",
+      "imported_account_success":"Nhập khẩu thành công",
+      "exist":"Tài khoản này đã tồn tại, ghi chú là",
+      "keystore_error":"Lỗi:",
+      "keystore_length_error":"Chỉ có thể nhập một tệp tài khoản, vui lòng thử lại!",
+      "keystore_format_error":"Vui lòng chọn đúng tài khoản",
+      "keystore_is_has":"Đã có một tài khoản trong danh sách mà bạn cần nhập.",
+      "imported_success":"Tập tin được chọn"
+    },
+    "remove_dia": {
+      "tit":"Bạn có chắc chắn muốn loại bỏ nó?",
+      "remove_confrim":"Tôi chắc chắn để loại bỏ",
+      "backup":"Vui lòng chú ý sao lưu tài khoản này để tránh thiệt hại tài sản.",
+      "input_pwd":"Mật khẩu",
+      "placeholder_pwd":"Vui lòng nhập mật khẩu cho tài khoản này",
+      "validate_password":"Mật khẩu bạn đã nhập sai",
+      "remove_success":"Xóa thành công"
+    }
+  },
+  "page_config": {
+    "config_detection":"Phát hiện cấu hình",
+    "content_msg": {
+      "ready_test":"Chuẩn bị phát hiện tập tin cấu hình",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Thông tin cấu hình nút mới nhất đã được lấy",
+      "is_local":"Kiểm tra nếu có một tệp nút cục bộ",
+      "already_local":"Tệp cấu hình của tệp nút tồn tại trên thiết bị hiện tại.",
+      "not_local":"Thông tin cấu hình của tệp nút không được phát hiện, đây có thể là lần đầu tiên chạy.",
+      "config_write_local":"Ghi tệp thông tin nút thu được vào đĩa cục bộ",
+      "whether_update_node":"Kiểm tra nếu cần cập nhật",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Đang tải xuống chương trình nút, hãy kiên nhẫn",
+      "already_downloaded":"Chương trình nút đã được tải xuống và sẵn sàng để bắt đầu.",
+      "ready_start":"Chuẩn bị khởi động nút",
+      "enter_wallet":"Nút bắt đầu phát hiện, sẵn sàng để vào ví",
+      "specifyDataDir":"Vui lòng chọn đường dẫn lưu trữ của dữ liệu nút"
+    },
+    "version_dialog": {
+      "version_tit":"Lời nhắc cập nhật phiên bản",
+      "download_wallet":"Truy cập trang web chính thức để tải về phiên bản tiền mới nhất",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }

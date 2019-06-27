@@ -1,204 +1,242 @@
 {
-    "confirm":"Constituo",
-    "cancel":"Pax:",
-    "dialog_tit":"promptus",
-    "close":"prope",
-    "confirm_you_active":"Quaeso, scrutare operationem tuum",
-    "unit": {
-        "czr":"CZR"
+  "confirm":"Constituo",
+  "cancel":"Pax:",
+  "dialog_tit":"promptus",
+  "close":"prope",
+  "confirm_you_active":"Quaeso, scrutare operationem tuum",
+  "rpcErrors": {
+    "invalidFromAccount":"Nulla parte propter pecuniam mittere",
+    "invalidToAccount":"Aliquam propter payee",
+    "invalidAmountFormat":"Aliquam tantum format",
+    "invalidGasFormat":"Aliquam forma Gas",
+    "invalidDataFormat":"Aliquam et forma data in veste hexadecimali ostendentur",
+    "dataSizeTooLarge":"Etiam notitia veste hexadecimali ostendentur",
+    "invalidGasPriceFormat":"Gas forma Price invalidum",
+    "invalidMciFormat":"MCI irritum forma",
+    "notEnoughFail":"Vestibulum erat aut naufragii inopia"
+  },
+  "unit": {
+    "czr":"CZR",
+    "wei":"X <sup> -18 </ sup> CZR"
+  },
+  "model_header": {
+    "home":"domum",
+    "transfer":"De translatione",
+    "contacts":"Contact",
+    "setting":"eriges",
+    "total":"summa",
+    "testnet":"test Network",
+    "online":"Online",
+    "offline":"Online",
+    "syncing":"synchronisation"
+  },
+  "page_setting": {
+    "tit":"eriges",
+    "lang":"lingua",
+    "select":"placere eligere",
+    "version_number":"sacculus version",
+    "data_path":"Nodi notitia semita",
+    "change":"mutare",
+    "changeDirNote":"Original file velit movere ad novum in semita ab indice enim aliud faciam in notitia damnum",
+    "note":"attendere"
+  },
+  "page_contacts": {
+    "tit":"Contact",
+    "add_dialog":"Contact novum",
+    "add_cont": {
+      "tit":"Contact novum",
+      "tag":"Contact",
+      "address":"ratio inscriptio",
+      "tag_placeholder":"Placere contactus nomen intrare",
+      "address_placeholder":"Placere contactus oratio rationis intrare",
+      "add_success":"feliciter additae"
     },
-    "model_header": {
-        "home":"domum",
-        "transfer":"De translatione",
-        "contacts":"Contact",
-        "setting":"eriges",
-        "total":"summa",
-        "testnet":"test Network",
-        "online":"Online",
-        "offline":"Online"
+    "delete_dialog": {
+      "title":"Movens igitur tu es",
+      "remove_success":"remota feliciter"
     },
-    "page_setting": {
-        "tit":"eriges",
-        "lang":"lingua",
-        "select":"placere eligere",
-        "version_number":"sacculus version"
-    },
-    "page_contacts": {
-        "tit":"Contact",
-        "add_dialog":"Contact novum",
-        "add_cont": {
-            "tit":"Contact novum",
-            "tag":"Contact",
-            "address":"ratio inscriptio",
-            "tag_placeholder":"Placere contactus nomen intrare",
-            "address_placeholder":"Placere contactus oratio rationis intrare",
-            "add_success":"feliciter additae"
-        },
-        "delete_dialog": {
-            "title":"Movens igitur tu es",
-            "remove_success":"remota feliciter"
-        },
-        "msg_info": {
-            "no_tag":"PDF rationem Disputatio",
-            "no_address":"Oratio pro PDF",
-            "valid_address":"Oratio contactus, non est legitimum scriptor",
-            "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
-            "contacts_quantity_error":"Contactus numerus non magis quam L",
-            "exist":"Iam enim Contact:"
-        }
-    },
-    "page_transfer": {
-        "from_address":"Mitte argentum pars",
-        "to_address":"payee",
-        "amount":"pecunia",
-        "gas":"gas",
-        "send_all":"omnes Mitte",
-        "data":"Data",
-        "data_placeholder":"data veste hexadecimali ostendentur",
-        "fees":"fees",
-        "total":"summa",
-        "select":"placere eligere",
-        "no_account_info":"Nulla ratio, aut placere import rationem creare",
-        "contacts_dig": {
-            "title":"Select ad rationem contactus",
-            "select_placeholder":"placere eligere"
-        },
-        "confirm_dia": {
-            "title":"Quaesumus, adfirma",
-            "enter_passworld_tit":"Please enter vestri password",
-            "enter_passworld_place":"Please enter vestri password"
-        },
-        "msg_info": {
-            "address_null":"PDF rationibus se",
-            "balance_zero":"Quod est insufficiens statera, potest permanere",
-            "amount_zero":"Serie debet esse major moles 0",
-            "amount_error":"Please enter a quantum valet transaction",
-            "address_err":"In forma oratio non esse legitimam,",
-            "send_success":"Trading missum est",
-            "amount_exceeded":"In summa tantum rem excedit current propter statera",
-
-            "decrypt_err":"Peram animi fallit peccatum sit ignoro",
-            "send_error":"Rei deficit: vide si satis est ut Reprehendo et fossores feodo statera"
-        }
-    },
-    "page_account": {
-        "transfer_log":"Record transaction",
-        "transfer_log_null":"Non transactions",
-        "active_icon": {
-            "go_transfer":"initium capiat",
-            "import_keystore":"ratio file",
-            "qrcode":"Duo dumtaxat codice"
-        },
-        "edit_dia": {
-            "tit":"Nota Edit",
-            "subtit":"Nam designat quiddam ob gratiam tui",
-            "no_tag":"PDF rationem Disputatio",
-            "validate_tag_length":"Nomen eius notas non longior quam VIII characters"
-        },
-        "dia_tx":{
-            "tit":"Trading Information",
-            "block_hash":"transaction numerus",
-            "status":"rei publicae",
-            "from":"Mitte argentum pars",
-            "to":"payee",
-            "amount":"pecunia",
-            "data":"Data",
-            "send_time":"mitte Tempus",
-            "mac_time":"Tempus spinam dorsi removerent"
-        },
-        "keystore": {
-            "tit":"Vidulum tergum lima",
-            "copy":"exemplum",
-            "download":"Download file pera"
-        },
-        "msg_info": {
-            "ads_copy_success":"Oratio est copied",
-            "key_copy_success":"copied feliciter"
-        }
-    },
-    "page_home": {
-        "import_account":"propter Import",
-        "add_account":"ratio Novae",
-        "acc":"ratio",
-        "create_dia": {
-            "create_tit":"Create an account",
-            "backup_tit":"Novus tergum sursum vestri ratio",
-            "create_tag":"Ratio dicta",
-            "create_pwd":"Password",
-            "create_repwd":"Affirmo password",
-            "placeholder_tag":"Constitue super propter nomen Disputatio",
-            "placeholder_pwd":"Set propter password",
-            "placeholder_repwd":"Vide rationis password",
-            
-            
-            "account_download_keystore":"Download file rationis",
-
-            "validate_tag":"Name PDF Epistola",
-            "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
-
-            "validate_password":"PDF ponis signum",
-            "validate_re_password":"PDF ponis signum est",
-            "validate_strong_password":"Tesseram saltem octo PDF",
-            "validate_long_password":"Tesseras, non magis quam C",
-            "validate_type_password":"密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-            "validate_password_length":"Passwords non aequare",
-
-            "create_success":"partum victoria",
-            "account_quantity_error":"Numerus autem rationes non potest esse magis quam L",
-            "create_success_des":"Placere nisi ob gratiam tui file: ne participes quis est?"
-        },
-        "import_dia": {
-            "tit":"propter Import",    
-            "placeholder_keystore":"Hic Please file inputatur",
-            "create_tag":"Ratio dicta",
-            "placeholder_tag":"Constitue super propter nomen Disputatio",
-
-            "validate_tag":"Name PDF Epistola",
-            "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
-            "validate_enter_keystore":"Placere importare rationem file",
-            "validate_error_keystore":"Ratio import, defecit germen, sit causa mali file",
-            "imported_account_success":"Import victoria",
-            "exist":"Iam hoc notat",
-            "keystore_error":"Error:",
-            "keystore_length_error":"Te potest importare nisi una ratio lima, quaeso, iterum conare!",
-            "keystore_format_error":"Placere eligere rectam rationem file",
-            "keystore_is_has":"Album quod debes importare rationem iam amicorum",
-            "imported_success":"Lima iam electus"
-        },
-        "remove_dia": {
-            "tit":"Tu es certus sit removere vis?",
-            "remove_confrim":"Im 'certus ad removendum",
-            "backup":"Lorem quod rursum ob rem ne patiamini",
-            "input_pwd":"Password",
-            "placeholder_pwd":"Hoc enim signum PDF",
-            "validate_password":"Tesseras ingressus falsa",
-            "remove_success":"remota feliciter"
-        }
-    },
-    "page_config": {
-        "config_detection":"configurationis deprehensio",
-        "content_msg":{
-            "ready_test":"Promptus ad deprehendere file configuratione",
-            "network_latest":"检测是否有新的 CanonChain 节点文件",
-            "get_latest":"Quae non acquiritur de tardus notitia nodi configuratione",
-            "is_local":"Utrum illic est a locus nodi file deprehendere",
-            "already_local":"Configuratione et fabrica lima notitia est currently nodi",
-            "not_local":"Non nequiquam detecta fraude nodi configuratione files, non potest esse prima currere",
-            "config_write_local":"Ad tertiam quaestionem dicendum files scriptum est locus nodi notitia orbis",
-            "whether_update_node":"Si deprehendatur indiget updated",
-            "no_need":"本地 CanonChain 节点文件是最新的",
-            "need":"本地 CanonChain 节点文件是老版本",
-            "is_local_node":"检测当前设备是否有 CanonChain 节点文件",
-            "have":"当前设备已存在 CanonChain 节点文件",
-            "no":"Download nodi, placere patientes estote",
-            "already_downloaded":"Nodi progressio iam receptae sunt, et compararim incipere",
-            "ready_start":"Promptus nodi incipere",
-            "enter_wallet":"Node deprehendatur proficisci paratum ad vidulum"
-        },
-        "version_dialog":{
-            "version_tit":"Version promptum update",
-            "download_wallet":"Quguan network ut download tardus poema poematis of Pecunia",
-            "wallet_disabled":"CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
-        }
+    "msg_info": {
+      "no_tag":"PDF rationem Disputatio",
+      "no_address":"Oratio pro PDF",
+      "valid_address":"Oratio contactus, non est legitimum scriptor",
+      "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
+      "contacts_quantity_error":"Contactus numerus non magis quam L",
+      "exist":"Iam enim Contact:"
     }
+  },
+  "page_transfer": {
+    "from_address":"Mitte argentum pars",
+    "to_address":"payee",
+    "amount":"pecunia",
+    "gas":"gas",
+    "gasPrice":"Gas unitas pretium",
+    "send_all":"omnes Mitte",
+    "data":"Data",
+    "data_placeholder":"data veste hexadecimali ostendentur",
+    "fees":"fees",
+    "txFee":"transaction costs",
+    "total":"summa",
+    "select":"placere eligere",
+    "no_account_info":"Nulla ratio, aut placere import rationem creare",
+    "no_keystore_file":"Ratio correspondentes propter File Non Inventum",
+    "contacts_dig": {
+      "title":"Select ad rationem contactus",
+      "select_placeholder":"placere eligere"
+    },
+    "confirm_dia": {
+      "title":"Quaesumus, adfirma",
+      "enter_passworld_tit":"Please enter vestri password",
+      "enter_passworld_place":"Please enter vestri password"
+    },
+    "msg_info": {
+      "address_null":"PDF rationibus se",
+      "balance_zero":"Quod est insufficiens statera, potest permanere",
+      "amount_zero":"Serie debet esse major moles 0",
+      "amount_error":"Please enter a quantum valet transaction",
+      "address_err":"In forma oratio non esse legitimam,",
+      "gas_error":"Please enter a Gas plurimum valet,",
+      "gasPrice_error":"PDF amet felis valet unitas pretium",
+      "send_success":"Trading missum est",
+      "amount_exceeded":"In summa tantum rem excedit current propter statera",
+      "txFeeTooLow":"Transaction costs sunt nimis low",
+      "decrypt_err":"Peram animi fallit peccatum sit ignoro",
+      "send_error":"Rei deficit: vide si satis est ut Reprehendo et fossores feodo statera",
+      "generate_offline_block_err":"Non generate unsigned transaction",
+      "sign_err":"subscriptio deficient",
+      "send_offline_block_err":"Mitte ad signatum non res",
+      "syncingWaitTitle":"Nodi est in sync",
+      "syncingWait":"Synchronized nodi, qui paciscendo transigendis confirmationis potest capere diutius, placere patientes estote"
+    }
+  },
+  "pager": {
+    "next":"Next Page",
+    "prev":"priorem"
+  },
+  "page_account": {
+    "transfer_log":"Record transaction",
+    "transfer_log_null":"Non transactions",
+    "txSent":"mitte transaction",
+    "txAll":"omnes transactions",
+    "txNew":"In current negotium notitia ratio est novum",
+    "checkNow":"View autem",
+    "active_icon": {
+      "go_transfer":"initium capiat",
+      "import_keystore":"ratio file",
+      "qrcode":"Duo dumtaxat codice"
+    },
+    "edit_dia": {
+      "tit":"Nota Edit",
+      "subtit":"Nam designat quiddam ob gratiam tui",
+      "no_tag":"PDF rationem Disputatio",
+      "validate_tag_length":"Nomen eius notas non longior quam VIII characters"
+    },
+    "dia_tx": {
+      "tit":"Trading Information",
+      "block_hash":"transaction numerus",
+      "status":"rei publicae",
+      "from":"Mitte argentum pars",
+      "to":"payee",
+      "amount":"pecunia",
+      "data":"Data",
+      "send_time":"mitte Tempus",
+      "mac_time":"Tempus spinam dorsi removerent",
+      "gasPrice":"Gas Price (X <sup> -18 </ sup> CZR)",
+      "gasUsed":"usus gas",
+      "waiting":"Expectantes confirmationis",
+      "success":"success",
+      "sendFail":"Non dimittam",
+      "fail1":"Defectum (I)",
+      "fail2":"Defectum (II)",
+      "fail3":"Defectum (III)"
+    },
+    "keystore": {
+      "tit":"Vidulum tergum lima",
+      "copy":"exemplum",
+      "download":"Download file pera"
+    },
+    "msg_info": {
+      "ads_copy_success":"Oratio est copied",
+      "key_copy_success":"copied feliciter"
+    }
+  },
+  "page_home": {
+    "import_account":"propter Import",
+    "add_account":"ratio Novae",
+    "acc":"ratio",
+    "create_dia": {
+      "create_tit":"Create an account",
+      "backup_tit":"Novus tergum sursum vestri ratio",
+      "create_tag":"Ratio dicta",
+      "create_pwd":"Password",
+      "create_repwd":"Affirmo password",
+      "placeholder_tag":"Set ratio in nomine Disputatio",
+      "placeholder_pwd":"Set propter password",
+      "placeholder_repwd":"Vide rationis password",
+      "account_download_keystore":"Download file rationis",
+      "validate_tag":"Name PDF Epistola",
+      "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
+      "validate_password":"PDF ponis signum",
+      "validate_re_password":"PDF ponis signum est",
+      "validate_strong_password":"Tesseram saltem octo PDF",
+      "validate_long_password":"Tesseras, non magis quam C",
+      "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
+      "validate_password_length":"Passwords non aequare",
+      "create_success":"partum victoria",
+      "account_quantity_error":"Numerus autem rationes non potest esse magis quam L",
+      "create_success_des":"Placere nisi ob gratiam tui file: ne participes quis est?"
+    },
+    "import_dia": {
+      "tit":"propter Import",
+      "placeholder_keystore":"Hic Please file inputatur",
+      "create_tag":"Ratio dicta",
+      "placeholder_tag":"Set ratio in nomine Disputatio",
+      "validate_tag":"Name PDF Epistola",
+      "validate_tag_length":"Nomen eius notas non longior quam VIII characters",
+      "validate_enter_keystore":"Placere importare rationem file",
+      "validate_error_keystore":"Ratio import, defecit germen, sit causa mali file",
+      "imported_account_success":"Import victoria",
+      "exist":"Iam hoc notat",
+      "keystore_error":"Error:",
+      "keystore_length_error":"Te potest importare nisi una ratio lima, quaeso, iterum conare!",
+      "keystore_format_error":"Placere eligere rectam rationem file",
+      "keystore_is_has":"Album quod debes importare rationem iam amicorum",
+      "imported_success":"Lima iam electus"
+    },
+    "remove_dia": {
+      "tit":"Tu es certus sit removere vis?",
+      "remove_confrim":"Im 'certus ad removendum",
+      "backup":"Lorem quod rursum ob rem ne patiamini",
+      "input_pwd":"Password",
+      "placeholder_pwd":"Hoc enim signum PDF",
+      "validate_password":"Tesseras ingressus falsa",
+      "remove_success":"remota feliciter"
+    }
+  },
+  "page_config": {
+    "config_detection":"configurationis deprehensio",
+    "content_msg": {
+      "ready_test":"Promptus ad deprehendere file configuratione",
+      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "get_latest":"Quae non acquiritur de tardus notitia nodi configuratione",
+      "is_local":"Utrum illic est a locus nodi file deprehendere",
+      "already_local":"Configuratione et fabrica lima notitia est currently nodi",
+      "not_local":"Non nequiquam detecta fraude nodi configuratione files, non potest esse prima currere",
+      "config_write_local":"Ad tertiam quaestionem dicendum files scriptum est locus nodi notitia orbis",
+      "whether_update_node":"Si deprehendatur indiget updated",
+      "no_need": "本地 CanonChain 节点文件是最新的",
+      "need": "本地 CanonChain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
+      "have": "当前设备已存在 CanonChain 节点文件",
+      "no":"Download nodi, placere patientes estote",
+      "already_downloaded":"Nodi progressio iam receptae sunt, et compararim incipere",
+      "ready_start":"Promptus nodi incipere",
+      "enter_wallet":"Node deprehendatur proficisci paratum ad vidulum",
+      "specifyDataDir":"Select nodi in repono notitia semita"
+    },
+    "version_dialog": {
+      "version_tit":"Version promptum update",
+      "download_wallet":"Quguan network ut download tardus poema poematis of Pecunia",
+      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+    }
+  }
 }
