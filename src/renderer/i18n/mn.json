@@ -141,6 +141,7 @@
       "send_time":"Цагийг илгээх",
       "mac_time":"Үндсэн гинжин цаг",
       "gasPrice":"Хийн нэгжийн үнэ (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Transaction cost (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Хийн хэрэглээ",
       "waiting":"Батлахыг хүлээж байна",
       "success":"Амжилт",

@@ -141,6 +141,7 @@
       "send_time":"Afsendelsestid",
       "mac_time":"Hovedkæden tid",
       "gasPrice":"Gasenpris (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Transaktionsomkostninger (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gas brug",
       "waiting":"Venter på bekræftelse",
       "success":"succes",

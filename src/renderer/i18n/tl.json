@@ -141,6 +141,7 @@
       "send_time":"Nagpapadala ng oras",
       "mac_time":"Main chain time",
       "gasPrice":"Halaga ng yunit ng gas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Halaga ng transaksyon (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Paggamit ng gas",
       "waiting":"Naghihintay ng kumpirmasyon",
       "success":"Tagumpay",

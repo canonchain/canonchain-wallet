@@ -141,6 +141,7 @@
       "send_time":"Voye tan",
       "mac_time":"Main chenn tan",
       "gasPrice":"Pri inite gaz (10 <sup> -18 </sup> CZR)",
+      "txFee":"Pri tranzaksyon (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Itilize gaz",
       "waiting":"Ap tann konfimasyon an",
       "success":"Siksè",
@@ -220,22 +221,22 @@
       "get_latest":"Te dènye enfòmasyon konfigirasyon nan ne yo te jwenn",
       "is_local":"Tcheke si gen yon dosye ne lokalman",
       "already_local":"Dosye konfigirasyon dosye nod lan egziste sou aparèy aktyèl la.",
-      "not_local":"Enfòmasyon konfigirasyon nan dosye a ne se detekte, li ka premye fwa a kouri.",
+      "not_local":"Pa detekte ne dosye konfigirasyon, li kapab kouri nan premye",
       "config_write_local":"Ekri dosye enfòmasyon ki te jwenn nod la nan disk la lokal yo",
       "whether_update_node":"Tcheke si yon ajou nesesè",
       "no_need": "本地 CanonChain 节点文件是最新的",
       "need": "本地 CanonChain 节点文件是老版本",
       "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
       "have": "当前设备已存在 CanonChain 节点文件",
-      "no":"Téléchargez pwogram ne, tanpri pran pasyans",
-      "already_downloaded":"Te pwogram nan ne te telechaje ak pare yo kòmanse.",
-      "ready_start":"Prepare pou kòmanse ne la",
-      "enter_wallet":"Nodaj kòmanse deteksyon, pare yo antre nan bous la",
-      "specifyDataDir":"Tanpri chwazi chemen an depo done yo ne"
+      "no":"Chaje ne, tanpri pran pasyans",
+      "already_downloaded":"Pwogram neu te telechaje epi pou yo jwenn pare yo kòmanse",
+      "ready_start":"Pare yo kòmanse ne",
+      "enter_wallet":"Kòmanse deteksyon ne, pare yo antre nan bous la",
+      "specifyDataDir":"Chwazi chemen an depo done ne"
     },
     "version_dialog": {
       "version_tit":"Version aktyalizasyon èd memwa",
-      "download_wallet":"Ale nan sit entènèt ofisyèl la download dènye vèsyon an nan lajan an",
+      "download_wallet":"Quguan rezo a download vèsyon an dènye nan Lajan",
       "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
     }
   }

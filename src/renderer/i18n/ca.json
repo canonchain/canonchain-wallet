@@ -141,6 +141,7 @@
       "send_time":"Enviament de temps",
       "mac_time":"Temps de cadena principal",
       "gasPrice":"Preu unitari del gas (10 <sup> -18 </sup> CZR)",
+      "txFee":"Cost de la transacció (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Ús de gasos",
       "waiting":"Esperant confirmació",
       "success":"Èxit",
@@ -180,9 +181,9 @@
       "validate_strong_password":"Introduïu una contrasenya d'almenys 8 dígits",
       "validate_long_password":"La contrasenya no pot excedir de 100 dígits",
       "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
-      "validate_password_length":"S'ha introduït una contrasenya inconsistent dues vegades",
+      "validate_password_length":"Les contrasenyes no coincideixen",
       "create_success":"S'ha creat amb èxit",
-      "account_quantity_error":"El nombre de comptes no pot superar els 50",
+      "account_quantity_error":"El nombre de comptes no pot contenir més de 50",
       "create_success_des":"Deseu el fitxer del vostre compte i no el compartiu amb ningú."
     },
     "import_dia": {
@@ -196,17 +197,17 @@
       "validate_error_keystore":"Ha fallat la importació del compte, pot ser que hi hagi un error en el fitxer de compte",
       "imported_account_success":"S'ha importat correctament",
       "exist":"Aquest compte ja existeix, la nota és",
-      "keystore_error":"Error:",
+      "keystore_error":"error:",
       "keystore_length_error":"Només es pot importar un fitxer de compte, torneu-ho a provar.",
-      "keystore_format_error":"Seleccioneu el fitxer de compte correcte",
-      "keystore_is_has":"Ja hi ha un compte a la llista que necessiteu importar.",
-      "imported_success":"Fitxer seleccionat"
+      "keystore_format_error":"Si us plau, seleccioneu el fitxer de compte correcte",
+      "keystore_is_has":"La llista ja té un compte que ha d'importar els teus amics",
+      "imported_success":"Ha estat seleccionat arxiu"
     },
     "remove_dia": {
       "tit":"Esteu segur que voleu eliminar-lo?",
       "remove_confrim":"Segur que eliminaré",
       "backup":"Tingueu en compte la còpia de seguretat d’aquest compte per evitar danys a la propietat.",
-      "input_pwd":"Contrasenya",
+      "input_pwd":"contrasenya",
       "placeholder_pwd":"Introduïu la contrasenya per a aquest compte",
       "validate_password":"La contrasenya que heu introduït és incorrecta",
       "remove_success":"S'ha eliminat correctament"
@@ -228,14 +229,14 @@
       "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
       "have": "当前设备已存在 CanonChain 节点文件",
       "no":"Baixant el programa de nodes, tingueu paciència",
-      "already_downloaded":"El programa del node s'ha descarregat i llest per començar.",
+      "already_downloaded":"programa de node s'ha descarregat i estar a punt per començar",
       "ready_start":"Prepareu-vos per iniciar el node",
-      "enter_wallet":"El node comença a detectar-se, llest per entrar a la cartera",
-      "specifyDataDir":"Seleccioneu el camí d’emmagatzematge de les dades del node"
+      "enter_wallet":"Iniciar la detecció de node, a punt per entrar a la cartera",
+      "specifyDataDir":"Seleccionar la ruta de dades del node d'emmagatzematge"
     },
     "version_dialog": {
-      "version_tit":"Sol·licitud d'actualització de la versió",
-      "download_wallet":"Aneu a la pàgina web oficial per descarregar la darrera versió dels diners",
+      "version_tit":"ràpida actualització de la versió",
+      "download_wallet":"Quguan xarxa per descarregar l'última versió de Money",
       "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
     }
   }

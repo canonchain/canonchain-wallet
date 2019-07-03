@@ -141,6 +141,7 @@
       "send_time":"Tukua te wa",
       "mac_time":"Te waina matua",
       "gasPrice":"Ko te utu o te kaaine (10 <sup> -18 / / CZR)",
+      "txFee":"Tau utu (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Te whakamahi i te wai",
       "waiting":"Te tatari mo te haamauraa",
       "success":"Te angitu",

@@ -216,6 +216,10 @@
                     <strong class="tx-item-des" v-html="$t('page_account.dia_tx.gasPrice')"></strong>
                     <span class="tx-item-info">{{transactionInfo.gas_price || '-'}}</span>
                 </li>
+                <li class="b-flex b-flex-justify tx-item">
+                    <strong class="tx-item-des" v-html="$t('page_account.dia_tx.txFee')"></strong>
+                    <span class="tx-item-info">{{transactionInfoTxFee}}</span>
+                </li>
                 <li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>
                     <span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>
@@ -310,7 +314,16 @@
                 self.initDatabase();
             }, 5000);
         },
-        computed: {},
+        computed: {
+            transactionInfoTxFee() {
+                if (!this.transactionInfo.gas_price || !this.transactionInfo.gas_used) {
+                    return '-'
+                }
+                return new BigNumber(this.transactionInfo.gas_price).times(
+                    new BigNumber(this.transactionInfo.gas_used)
+                ).div(new BigNumber('1e9')).toString()
+            },
+        },
         beforeDestroy() {
             clearInterval(this.timerSwitch.initData);
             clearTimeout(this.timerSwitch.updateBlocksTimer);
@@ -320,7 +333,6 @@
         },
         methods: {
             clickTabAll(tab) {
-                console.log('clickTabAll tab', tab)
                 if (tab.name === 'second') {
                     this.allTx = []
                     this.allTxPage = 1
@@ -329,8 +341,6 @@
                 }
             },
             fetchAllTxNext() {
-                console.log('this.allTx.length', this.allTx.length)
-                console.log('this.pageSize * this.allTxPage', this.pageSize * this.allTxPage)
                 if (this.allTx.length > this.pageSize * this.allTxPage) {
                     this.allTxPage += 1
                     return
@@ -338,7 +348,6 @@
                 this.fetching = true
                 this.$czr.request.accountBlockList(this.accountInfo.address, this.pageSize, this.allTxNext)
                     .then(res => {
-                        console.log('fetchAllTxNext', res)
                         if (res.code !== 0) {
                             this.$message.error(res.msg)
                             return
@@ -351,7 +360,6 @@
                                     this.$message.error(res.msg)
                                     return
                                 }
-                                console.log('res.blockStates', res)
                                 res.block_states.forEach((blockState, index) => {
                                     if (blockState) {
                                         blocks[index].is_stable = blockState.is_stable
@@ -386,17 +394,14 @@
                 this.fetching = true
                 this.$czr.request.accountBlockList(this.accountInfo.address, 10, '')
                     .then(res => {
-                        console.log('accountBlockList', res)
                         if (res.code !== 0) {
                             this.$message.error(res.msg)
                             return
                         }
                         this.allTx = res.blocks
                         this.allTxNext = res.next_index
-                        console.log('res.blocks.map', res.blocks.map(block => block.hash))
                         this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
                             .then(res => {
-                                console.log('res.blockStates', res)
                                 res.block_states.forEach((blockState, index) => {
                                     if (blockState) {
                                         this.allTx[index].is_stable = blockState.is_stable

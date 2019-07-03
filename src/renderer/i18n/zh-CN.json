@@ -141,6 +141,7 @@
       "send_time": "发送时间",
       "mac_time": "主链时间",
       "gasPrice": "Gas单价(10<sup>-18</sup>CZR)",
+      "txFee": "交易费用(10<sup>-9</sup>CZR)",
       "gasUsed": "Gas使用",
       "waiting": "等待确认",
       "success": "成功",

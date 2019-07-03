@@ -37,7 +37,7 @@
     "version_number":"Versiune Wallet",
     "data_path":"Nodul calea de date",
     "change":"schimbare",
-    "changeDirNote":"Deplasați fișierele în calea originală în noul director, altfel va duce la pierderea datelor.",
+    "changeDirNote":"Vă rugăm să mutați fișierul original în calea noului director, în caz contrar aceasta va cauza pierderi de date",
     "note":"Acordați o atenție"
   },
   "page_contacts": {
@@ -105,7 +105,7 @@
       "sign_err":"Semnătura a eșuat",
       "send_offline_block_err":"Trimiterea unei tranzacții semnate a eșuat",
       "syncingWaitTitle":"Nodul este sincronizat",
-      "syncingWait":"Nodul este sincronizat, timpul de confirmare a tranzacției poate fi mai lung, vă rugăm să aveți răbdare"
+      "syncingWait":"Nodurile sunt sincronizate, confirmarea tranzacției poate dura mai mult, vă rugăm să aveți răbdare"
     }
   },
   "pager": {
@@ -141,6 +141,7 @@
       "send_time":"Timpul de expediere",
       "mac_time":"Durata principală a lanțului",
       "gasPrice":"Prețul unității de gaze (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Costurile de tranzacție (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Utilizarea gazelor",
       "waiting":"Așteptată confirmarea",
       "success":"succes",
@@ -220,7 +221,7 @@
       "get_latest":"Au fost obținute cele mai recente informații privind configurația nodurilor",
       "is_local":"Verificați dacă există un fișier nod local",
       "already_local":"Fișierul de configurare al fișierului nod există pe dispozitivul curent.",
-      "not_local":"Informațiile de configurare ale fișierului nod nu sunt detectate, poate fi prima dată când rulează.",
+      "not_local":"Nu a fost detectat fișiere de configurare nod, acesta poate fi primul termen",
       "config_write_local":"Scrieți fișierul informațiilor despre noduri obținute pe discul local",
       "whether_update_node":"Verificați dacă este necesară o actualizare",
       "no_need": "本地 CanonChain 节点文件是最新的",

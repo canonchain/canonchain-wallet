@@ -141,6 +141,7 @@
       "send_time":"A ’cur ùine seachad",
       "mac_time":"Am prìomh shèine",
       "gasPrice":"Prìs aonad gas (10 <sup> -18 </sup> CZR)",
+      "txFee":"Cosgais-malairt (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Cleachdadh gas",
       "waiting":"A ’feitheamh ri dearbhadh",
       "success":"Soirbheachas",

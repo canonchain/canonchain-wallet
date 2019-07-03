@@ -141,6 +141,7 @@
       "send_time":"Inatuma muda",
       "mac_time":"Muda wa mnyororo kuu",
       "gasPrice":"Gesi ya bei ya bei (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Gharama ya shughuli (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Matumizi ya gesi",
       "waiting":"Inasubiri uthibitisho",
       "success":"Mafanikio",

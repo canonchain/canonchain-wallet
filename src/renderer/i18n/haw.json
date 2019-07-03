@@ -37,7 +37,7 @@
     "version_number":"ʻO ka paku pēlā",
     "data_path":"Ka 'ōleloʻikepili Node",
     "change":"Hoʻololi",
-    "changeDirNote":"Eʻoluʻolu, e hoʻoneʻe i nā peʻe ma ke ala kumu i ka papa kuhikuhi hou, iʻole e hanaʻia ka pohō kālā.",
+    "changeDirNote":"E neʻe i ka palapala waihona ma ke ala o ka mea hou papa kuhikuhi, ai ole ia, e iʻikepili lilo",
     "note":"E nānā"
   },
   "page_contacts": {
@@ -105,7 +105,7 @@
       "sign_err":"Ua hewa ka hōʻailona",
       "send_offline_block_err":"ʻAʻole i pohō ka hoʻounaʻana i kahi palapala i kākauʻia",
       "syncingWaitTitle":"Ua hoʻokauʻia ka puka",
-      "syncingWait":"Ua lokahi ka'īlio, hiki ke lōʻihi o ka hoʻopaʻaʻana i ka manawa, eʻoluʻolu e hoʻomanawanui"
+      "syncingWait":"i synchronized aka wahi, i ka hana e hooiaio ai ke lawe hou, e 'oluʻolu e ahonui"
     }
   },
   "pager": {
@@ -141,6 +141,7 @@
       "send_time":"Hāʻawi manawa",
       "mac_time":"ʻO ka laina maʻamau nui",
       "gasPrice":"ʻO ke kumukūʻai uku kālā (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Hana koina (10 <SUP> -9 </ SUP> CZR)",
       "gasUsed":"Ke hoʻohanaʻia ka lāʻau",
       "waiting":"Ke kali nei no ka hōʻoia",
       "success":"Ka lanakila",
@@ -220,7 +221,7 @@
       "get_latest":"Ua loaʻa i kaʻike o ka hoʻonohonoho kūwaho hou",
       "is_local":"E hōʻoia inā he kōpena'ōpena kahi",
       "already_local":"Kuhi ka'ōnaehana hoʻonohonoho o ke kōpena'īpona ma ka polokalamu i kēia manawa.",
-      "not_local":"ʻAʻoleʻikeʻia kaʻike hoʻonohonohoʻana o ka pūnaewele'ōpena, hiki paha i ka manawa mua ke holo.",
+      "not_local":"'Aʻole ia akulla' wahi hoʻonohonohoʻia AEIU, ka mea i lilo i ka mua holo",
       "config_write_local":"E palapala i ka failaʻikepili i loaʻa i ka disikomo kahi",
       "whether_update_node":"Eʻike i kahi e pono ai ka loiloi",
       "no_need": "本地 CanonChain 节点文件是最新的",

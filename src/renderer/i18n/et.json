@@ -141,6 +141,7 @@
       "send_time":"Saatmise aeg",
       "mac_time":"Peamine keti aeg",
       "gasPrice":"Gaasiühiku hind (10 <sup> -18 </sup> CZR)",
+      "txFee":"Tehingu maksumus (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gaasi kasutamine",
       "waiting":"Kinnituse ootel",
       "success":"Edu",

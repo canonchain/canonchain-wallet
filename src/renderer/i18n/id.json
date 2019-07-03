@@ -141,6 +141,7 @@
       "send_time":"Mengirim waktu",
       "mac_time":"Waktu rantai utama",
       "gasPrice":"Harga satuan gas (10 <sup> -18 </sup> CZR)",
+      "txFee":"Biaya transaksi (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Penggunaan gas",
       "waiting":"Menunggu konfirmasi",
       "success":"Sukses",

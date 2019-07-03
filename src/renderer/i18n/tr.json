@@ -141,6 +141,7 @@
       "send_time":"Zaman gönderme",
       "mac_time":"Ana zincir süresi",
       "gasPrice":"Gaz birim fiyatı (10 <sup> -18 </sup> CZR)",
+      "txFee":"İşlem maliyeti (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gaz kullanımı",
       "waiting":"Onay bekliyorum",
       "success":"başarı",

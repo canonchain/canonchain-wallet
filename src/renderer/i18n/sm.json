@@ -141,6 +141,7 @@
       "send_time":"Tuuina atu taimi",
       "mac_time":"Faʻasologa o le taimi umi",
       "gasPrice":"Totogi o le iunite gas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Tau o fefaʻatauaiga (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Faʻaaogaina kesi",
       "waiting":"Faatali mo se faʻamaoniga",
       "success":"Manuia",

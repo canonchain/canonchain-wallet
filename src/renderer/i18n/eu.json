@@ -141,6 +141,7 @@
       "send_time":"Ordua bidaltzea",
       "mac_time":"Katearen denbora nagusia",
       "gasPrice":"Gasaren prezio unitatea (10 <sup> -18 </sup> CZR)",
+      "txFee":"Transakzioaren kostua (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gasaren erabilera",
       "waiting":"Baieztapen zain",
       "success":"Arrakasta",

@@ -141,6 +141,7 @@
       "send_time":"Waqtiga dirista",
       "mac_time":"Wakhtiga weyn ee silsiladda",
       "gasPrice":"Qiimaha biriimiga gaas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Kharashka isweydaarsiga (10 dhibcood -9 </ sup> CZR)",
       "gasUsed":"Isticmaalka gaas",
       "waiting":"Sugitaanka xaqiijinta",
       "success":"Guul",

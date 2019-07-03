@@ -141,6 +141,7 @@
       "send_time":"Na-eziga oge",
       "mac_time":"Oge nhazi oge",
       "gasPrice":"Ngwá agha gasị (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Ụgwọ ọnụahịa (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Ejiji gas",
       "waiting":"Na-eche maka nkwenye",
       "success":"Ịga nke ọma",

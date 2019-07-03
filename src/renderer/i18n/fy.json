@@ -141,6 +141,7 @@
       "send_time":"Stjoere tiid",
       "mac_time":"Haadketen tiid",
       "gasPrice":"Gasgruttepriis (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Transaktionskosten (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gas brûke",
       "waiting":"Wachtsje foar befestiging",
       "success":"Súkses",

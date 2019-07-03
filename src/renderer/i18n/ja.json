@@ -141,6 +141,7 @@
       "send_time":"送信時間",
       "mac_time":"メインチェーンタイム",
       "gasPrice":"ガス単価（10 -18 CZR）",
+      "txFee":"取引費用（10 -9 CZR）",
       "gasUsed":"ガス使用",
       "waiting":"確認待ち",
       "success":"成功",

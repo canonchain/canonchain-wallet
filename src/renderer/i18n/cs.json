@@ -141,6 +141,7 @@
       "send_time":"Čas odeslání",
       "mac_time":"Doba hlavního řetězce",
       "gasPrice":"Cena plynové jednotky (10 <sup> -18 </sup> CZR)",
+      "txFee":"Transakční náklady (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Použití plynu",
       "waiting":"Čekání na potvrzení",
       "success":"Úspěch",

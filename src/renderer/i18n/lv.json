@@ -141,6 +141,7 @@
       "send_time":"Sūtīšanas laiks",
       "mac_time":"Galvenais ķēdes laiks",
       "gasPrice":"Gāzes vienības cena (10 <sup> -18 </sup> CZR)",
+      "txFee":"Darījuma izmaksas (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gāzes izmantošana",
       "waiting":"Gaida apstiprinājumu",
       "success":"Panākumi",

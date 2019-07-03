@@ -141,6 +141,7 @@
       "send_time":"Temps d'envoi",
       "mac_time":"Temps de la chaîne principale",
       "gasPrice":"Prix ​​unitaire du gaz (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Coût de transaction (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Utilisation de gaz",
       "waiting":"En attente de confirmation",
       "success":"Le succès",

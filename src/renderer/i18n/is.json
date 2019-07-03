@@ -141,6 +141,7 @@
       "send_time":"Sendingartími",
       "mac_time":"Helstu keðjutími",
       "gasPrice":"Gengisverð (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Viðskiptakostnaður (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Notkun gas",
       "waiting":"Bíð eftir staðfestingu",
       "success":"Velgengni",

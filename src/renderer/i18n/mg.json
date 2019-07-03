@@ -37,7 +37,7 @@
     "version_number":"Wallet version",
     "data_path":"Ny lalan-drakitra nodiavina",
     "change":"Change",
-    "changeDirNote":"Alefaso azafady ny antontan-taratasy ao amin'ny lalana voalohany mankany amin'ny lahatahiry vaovao, raha tsy izany dia hitarika ny fahaverezan'ny data.",
+    "changeDirNote":"Mba hifindra ho any tany am-boalohany tahiry ao an-dalana ny lahatahiry vaovao, Raha tsy izany dia hiteraka angona very",
     "note":"mihaino"
   },
   "page_contacts": {
@@ -105,7 +105,7 @@
       "sign_err":"Tsy nahomby ny sonia",
       "send_offline_block_err":"Tsy nahomby ny fandefasana ny kaonty nosoniavina",
       "syncingWaitTitle":"Ny kodiarana dia ao anaty sync",
-      "syncingWait":"Ny kodiarana dia eo am-pifandraisana, ny fotoana fanamafisana ny fifampiraharahana dia mety maharitra ela, mba manàna faharetana"
+      "syncingWait":"Nodes no nampiarahina, ny raharaham-barotra mety ho fandraisana ho mpikambana intsony, azafady hanam-paharetana"
     }
   },
   "pager": {
@@ -140,7 +140,8 @@
       "data":"Data",
       "send_time":"Handefa fotoana",
       "mac_time":"Fandraisana anjara lehibe amin'ny fotoana",
-      "gasPrice":"Taratasy ho an'ny gaza (10 <sup> -18 </ sup> CZR)",
+      "gasPrice":"Gas Price (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Ny vidin'ny transaction (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Fampiasana gazy",
       "waiting":"Miandry fanamafisana",
       "success":"fahombiazana",
@@ -220,7 +221,7 @@
       "get_latest":"Ny fampahalalana farany momba ny fanalahidy farany dia azo",
       "is_local":"Hamarino raha misy rakitra nodia eo an-toerana",
       "already_local":"Ny rakitra fanoratana ny rakitra node dia misy eo amin'ny fitaovana misy ankehitriny.",
-      "not_local":"Ny fampahalalana fanoratana ny rakitra node dia tsy hita, mety ho fotoana voalohany hihazakazahana izany.",
+      "not_local":"Tsy hita node fanahafana antontan-taratasy, dia mety ho ny voalohany hazakazaka",
       "config_write_local":"Soraty amin'ny rakitra ao an-toerana ny rakitra fampahalalana rakitra",
       "whether_update_node":"Hamarino raha ilaina ny fanavaozana",
       "no_need": "本地 CanonChain 节点文件是最新的",
@@ -231,11 +232,11 @@
       "already_downloaded":"Ny programa nokleary dia navoaka ary vonona ny hanomboka.",
       "ready_start":"Manomàna hanombohana ny kodiarana",
       "enter_wallet":"Ny fanandramana dia manomboka ny fanandramana, vonona ny hiditra ny kitapo",
-      "specifyDataDir":"Azafady azafady ny lalan-drakitra momba ny angona node"
+      "specifyDataDir":"Fanteno ny fitehirizana angon-drakitra node lalana"
     },
     "version_dialog": {
       "version_tit":"Version prompt",
-      "download_wallet":"Mandehana any amin'ny tranonkala ofisialy haka ny dikan-teny farany amin'ny vola",
+      "download_wallet":"Quguan tambajotra mba télécharger ny farany dikan-Money",
       "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
     }
   }

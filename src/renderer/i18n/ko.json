@@ -141,6 +141,7 @@
       "send_time":"전송 시간",
       "mac_time":"주요 체인 시간",
       "gasPrice":"가스 단가 (10 <-18> CZR)",
+      "txFee":"거래 비용 (10 -9 CZR)",
       "gasUsed":"가스 사용",
       "waiting":"확인을 기다리는 중입니다.",
       "success":"성공",

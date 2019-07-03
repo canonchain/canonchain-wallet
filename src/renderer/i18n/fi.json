@@ -141,6 +141,7 @@
       "send_time":"Lähetysaika",
       "mac_time":"Tärkein ketjun aika",
       "gasPrice":"Kaasuyksikön hinta (10 <sup> -18 </sup> CZR)",
+      "txFee":"Transaktiokustannukset (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Kaasun käyttö",
       "waiting":"Odotetaan vahvistusta",
       "success":"menestys",

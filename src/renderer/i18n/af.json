@@ -141,6 +141,7 @@
       "send_time":"Stuur tyd",
       "mac_time":"Hoofketting tyd",
       "gasPrice":"Gas eenheidsprys (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Transaksiekoste (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gasgebruik",
       "waiting":"Wag vir bevestiging",
       "success":"sukses",
