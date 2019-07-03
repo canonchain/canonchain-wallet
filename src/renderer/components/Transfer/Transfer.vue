@@ -236,7 +236,7 @@
             changeSlider(val) {
                 if (this.checkedAll) {
                     let weiVal = this.accountInfo.balance;
-                    let targetVal = self.$czr.utils.fromWei(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(val)).times('1e9')).toString(), "czr");
+                    let targetVal = self.$czr.utils.fromKing(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(val)).times('1e9')).toString(), "czr");
                     this.amount = Number(targetVal) >= 0 ? targetVal : 0;
                 }
             },
@@ -257,7 +257,7 @@
             sendAllAmount() {
                 if (this.checkedAll) {
                     let weiVal = this.accountInfo.balance;
-                    let targetVal = self.$czr.utils.fromWei(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).times('1e9')).toString(), "czr");
+                    let targetVal = self.$czr.utils.fromKing(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).times('1e9')).toString(), "czr");
                     this.amount = Number(targetVal) >= 0 ? targetVal : 0;
                 } else {
                     this.amount = 0;
@@ -270,7 +270,7 @@
                 let reg = /^\d+(\.\d{1,18})?$/;
                 let regObj = reg.exec(self.amount);
                 let czrAmount = parseFloat(
-                    self.$czr.utils.toWei(self.amount, "czr")
+                    self.$czr.utils.toKing(self.amount, "czr")
                 );
 
                 if (!self.toAccount) {
@@ -315,7 +315,7 @@
                     const req = {
                         from: this.fromInfo.account,
                         to: this.toAccount,
-                        amount: this.$czr.utils.toWei(this.amount, "czr"),
+                        amount: this.$czr.utils.toKing(this.amount, "czr"),
                         gas: this.gas,
                         gas_price: new BigNumber(this.gasPrice).times('1e9').toString(),
                         data: this.extraData,
@@ -379,7 +379,7 @@
 
                 // 金额 + gas*price <= balance  !!  self.accountInfo.balance
                 // TODO gas_price待确定
-                let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+                let amountValue = self.$czr.utils.toKing(this.amount, "czr");
                 if (new BigNumber(amountValue).plus(new BigNumber(gasValue)).gt(this.accountInfo.balance)) {
                     self.$message.error(
                         self.$t("page_transfer.msg_info.amount_exceeded")
@@ -420,7 +420,7 @@
                     this.sending = false
                     return;
                 }
-                let amountValue = self.$czr.utils.toWei(this.amount, "czr");
+                let amountValue = self.$czr.utils.toKing(this.amount, "czr");
                 let gasValue = this.gas
                 let gasPrice = new BigNumber(this.gasPrice).times('1e9').toString()
 
@@ -551,7 +551,7 @@
         },
         filters: {
             toCzrVal(val) {
-                let tempVal = self.$czr.utils.fromWei(val, "czr");
+                let tempVal = self.$czr.utils.fromKing(val, "czr");
                 return tempVal;
             }
         }

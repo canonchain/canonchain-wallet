@@ -1036,7 +1036,7 @@
                 if (!val) {
                     return 0;
                 }
-                let tempVal = self.$czr.utils.fromWei(val, "czr");
+                let tempVal = self.$czr.utils.fromKing(val, "czr");
                 return new BigNumber(tempVal).toFixed(4)
                 // let reg = /(\d+(?:\.)?)(\d{0,4})/;
                 // let regAry = reg.exec(tempVal);
@@ -1050,7 +1050,7 @@
                 // return integer + decimal;
             },
             toCZRFull(val) {
-                let tempVal = self.$czr.utils.fromWei(val, "czr");
+                let tempVal = self.$czr.utils.fromKing(val, "czr");
                 return tempVal;
             },
             toDate(val) {
