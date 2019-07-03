@@ -141,6 +141,7 @@
       "send_time":"ጊዜ በመላክ ላይ",
       "mac_time":"ዋና ሰንሰለት ጊዜ",
       "gasPrice":"ጋዝ ዩኒት (10 <sup> -18 </ sup> CZR)",
+      "txFee":"የግብይት ወጪ (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"የጋዝ አጠቃቀም",
       "waiting":"ማረጋገጫ በመጠበቅ ላይ",
       "success":"ስኬት",

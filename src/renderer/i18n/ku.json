@@ -141,6 +141,7 @@
       "send_time":"Wext şandin",
       "mac_time":"Demjimara sereke",
       "gasPrice":"Giştî ya bihayê gazê (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Têkilîna mesrefê (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Karanîna gazê",
       "waiting":"Daxwazina pejirandinê",
       "success":"Serkeftinê",

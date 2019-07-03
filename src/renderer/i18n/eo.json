@@ -1,5 +1,5 @@
 {
-  "confirm":"Konfirmi",
+  "confirm":"Konfirmu",
   "cancel":"Nuligi",
   "dialog_tit":"Rapida",
   "close":"Fermi",
@@ -73,7 +73,7 @@
     "send_all":"Sendu ĉiujn",
     "data":"Datumoj",
     "data_placeholder":"Deksesaj datumoj",
-    "fees":"Uzado de kotizo",
+    "fees":"Pritraktado de kotizo",
     "txFee":"Transakcia kotizo",
     "total":"Tuta",
     "select":"Bonvolu elekti",
@@ -141,6 +141,7 @@
       "send_time":"Sendanta tempon",
       "mac_time":"Ĉefa ĉena tempo",
       "gasPrice":"Prezo de unuo de gaso (10 <-18> CZR)",
+      "txFee":"Transakcia kosto (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gasuzo",
       "waiting":"Atendante konfirmon",
       "success":"Sukceso",

@@ -3,7 +3,7 @@
   "cancel":"Cealaigh",
   "dialog_tit":"Pras",
   "close":"Dún",
-  "confirm_you_active":"Deimhnigh le do thoil do oibríocht",
+  "confirm_you_active":"Deimhnigh d’oibríocht le do thoil",
   "rpcErrors": {
     "invalidFromAccount":"Tá cuntas an tseoltóra neamhbhailí",
     "invalidToAccount":"Tá an cuntas atá ag teacht isteach neamhbhailí",
@@ -105,7 +105,7 @@
       "sign_err":"Theip ar shíniú",
       "send_offline_block_err":"Theip ar idirbheart sínithe a sheoladh",
       "syncingWaitTitle":"Tá an nód i gcomhthráth",
-      "syncingWait":"Tá an nód i gcomhthráth, is féidir go mbeidh an t-am daingnithe idirbhirt níos faide, bíodh foighneach agat le do thoil"
+      "syncingWait":"Tá an nód i gcomhthráth, is féidir go mbeidh an t-am dearbhaithe idirbhirt níos faide, bíodh foighneach ort"
     }
   },
   "pager": {
@@ -141,6 +141,7 @@
       "send_time":"Am a sheoladh",
       "mac_time":"Am an phríomhshlabhra",
       "gasPrice":"Praghas aonaid gháis (10 <sup> -18 </sup> CZR)",
+      "txFee":"Costas idirbhirt (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Úsáid gháis",
       "waiting":"Ag feitheamh le deimhniú",
       "success":"Rath",

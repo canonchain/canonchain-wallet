@@ -141,6 +141,7 @@
       "send_time":"Kutumira nguva",
       "mac_time":"Main chain time",
       "gasPrice":"Gesi unit unit (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Mutengo wemari (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gasi kushandisa",
       "waiting":"Kumirira kuvimbiswa",
       "success":"Success",

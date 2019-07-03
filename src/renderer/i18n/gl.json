@@ -37,7 +37,7 @@
     "version_number":"Versión de carteira",
     "data_path":"Ruta de datos de nodos",
     "change":"Cambiar",
-    "changeDirNote":"Por favor, move os ficheiros no camiño orixinal ao novo directorio, senón que causará perda de datos.",
+    "changeDirNote":"Por favor, move os ficheiros no camiño orixinal ao novo directorio, senón que causará perda de datos",
     "note":"Atención"
   },
   "page_contacts": {
@@ -141,6 +141,7 @@
       "send_time":"Envío de tempo",
       "mac_time":"Tempo da cadea principal",
       "gasPrice":"Prezo unitario de gas (10 <sup> -18 </sup> CZR)",
+      "txFee":"Custo da transacción (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Uso do gas",
       "waiting":"Agardando a confirmación",
       "success":"Éxito",

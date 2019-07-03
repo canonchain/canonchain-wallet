@@ -85,8 +85,8 @@
     },
     "confirm_dia": {
       "title":"নিশ্চিত করুন",
-      "enter_passworld_tit":"আপনার পাসওয়ার্ড দিন",
-      "enter_passworld_place":"আপনার পাসওয়ার্ড দিন"
+      "enter_passworld_tit":"আপনার পাসওয়ার্ড লিখুন দয়া করে",
+      "enter_passworld_place":"আপনার পাসওয়ার্ড লিখুন দয়া করে"
     },
     "msg_info": {
       "address_null":"অন্য দলের অ্যাকাউন্ট লিখুন দয়া করে",
@@ -141,6 +141,7 @@
       "send_time":"সময় পাঠানো হচ্ছে",
       "mac_time":"প্রধান চেইন সময়",
       "gasPrice":"গ্যাস ইউনিট মূল্য (10 <sup> -18 </ sup> CZR)",
+      "txFee":"লেনদেনের খরচ (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"গ্যাস ব্যবহার",
       "waiting":"নিশ্চিতকরণের জন্য অপেক্ষা করছে",
       "success":"সাফল্য",

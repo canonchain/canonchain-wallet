@@ -141,6 +141,7 @@
       "send_time":"שולח זמן",
       "mac_time":"זמן שרשרת הראשי",
       "gasPrice":"מחיר יחידת הגז (10 <sup> -18 </ sup> CZR)",
+      "txFee":"עלות עסקה (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"שימוש בגז",
       "waiting":"ממתין לאישור",
       "success":"הצלחה",

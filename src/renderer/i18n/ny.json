@@ -141,6 +141,7 @@
       "send_time":"Kutumiza nthawi",
       "mac_time":"Nthawi yayikulu yowonjezera",
       "gasPrice":"Gulu logula mtengo (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Mtengo wogulitsa (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Kugwiritsira ntchito gasi",
       "waiting":"Kudikirira kutsimikizira",
       "success":"Kupambana",

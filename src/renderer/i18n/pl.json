@@ -141,6 +141,7 @@
       "send_time":"Wysyłanie czasu",
       "mac_time":"Główny czas łańcucha",
       "gasPrice":"Cena jednostkowa gazu (10 <sup> -18 </sup> CZR)",
+      "txFee":"Koszt transakcji (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Wykorzystanie gazu",
       "waiting":"Czekam na potwierdzenie",
       "success":"Sukces",

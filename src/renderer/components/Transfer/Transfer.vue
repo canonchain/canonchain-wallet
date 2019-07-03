@@ -46,6 +46,10 @@
                     </span>
                 </el-form-item>
 
+                <el-form-item :label="$t('page_transfer.txFee')">
+                    <p>{{txFee}} <span>10<sup>-9</sup>CZR</span></p>
+                </el-form-item>
+
                 <el-form-item>
                     <el-input type="textarea" :rows="4" :placeholder="$t('page_transfer.data_placeholder')"
                               v-model="extraData"></el-input>
@@ -183,14 +187,15 @@
                 }, 2000);
             }
             // fetch gas price
-            axios.get('http://39.105.126.14:50615/apis?apikey=YourApiKeyToken&module=stats&action=gas_price')
+            axios.get('http://39.105.101.31:50615/apis?apikey=YourApiKeyToken&module=other&action=gas_price')
                 .then(res => {
+                    // console.log('axios.get',res)
                     if (res.status !== 200) {
                         this.$message.error(new Error(res.statusText))
                         return
                     }
-                    if (res.data.status !== 100) {
-                        this.$message.error(new Error(res.statusText))
+                    if (res.data.code !== 100) {
+                        this.$message.error(new Error(res.data.msg))
                         return
                     }
                     const {
@@ -418,7 +423,6 @@
                 let amountValue = self.$czr.utils.toWei(this.amount, "czr");
                 let gasValue = this.gas
                 let gasPrice = new BigNumber(this.gasPrice).times('1e9').toString()
-                let id = Math.random();
 
                 const keystore = self.$db.get("accounts_keystore")
                     .filter(keystore => keystore.account === self.fromInfo.account)
@@ -455,7 +459,6 @@
                     gas_price: gasPrice,
                     password: self.fromInfo.password,
                     data: self.extraData,
-                    id: id
                 }, transaction, signature, res;
 
                 try {
@@ -518,9 +521,8 @@
                         gas: transaction.gas,
                         gas_price: transaction.gas_price,
                         data: transaction.data,
-                        work: transaction.work,
                         is_stable: "0",
-                        exec_timestamp: transaction.exec_timestamp
+                        send_timestamp: Math.floor(new Date().getTime() / 1000),
                     };
                     // console.log('writeTransToSql', sendBlockInfo)
                     self.writeTransToSql(sendBlockInfo);

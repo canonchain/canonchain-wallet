@@ -141,6 +141,7 @@
       "send_time":"Ho romella nako",
       "mac_time":"Nako e khōlō ea ketane",
       "gasPrice":"Sekhahla sa theko ea khase (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Chelete ea khamphani (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Tšebeliso ea khase",
       "waiting":"E emetse ho netefatsa",
       "success":"Katleho",

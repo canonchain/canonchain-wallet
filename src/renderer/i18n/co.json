@@ -78,7 +78,7 @@
     "total":"Totu",
     "select":"Scegli sì",
     "no_account_info":"Ùn ci hè ancu cunte, creà o importa dente",
-    "no_keystore_file":"Ùn hè truvatu nisunu risultatu per u cuntumu corrispondente",
+    "no_keystore_file":"Ùn hè truvatu nisunu risultatu per u cuntu in questu",
     "contacts_dig": {
       "title":"Selezzi un contu di cuntattu",
       "select_placeholder":"Scegli sì"
@@ -141,6 +141,7 @@
       "send_time":"Mandà u tempu",
       "mac_time":"Tempu di a catena principale",
       "gasPrice":"Prezzo unitu gasu (10 <sup> -18 </sup> CZR)",
+      "txFee":"Costu di transazione (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Ugugliu di u gas",
       "waiting":"Aspittendu a conferma",
       "success":"U successu",

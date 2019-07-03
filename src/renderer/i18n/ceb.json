@@ -141,6 +141,7 @@
       "send_time":"Pagpadala panahon",
       "mac_time":"Main nga kadena nga panahon",
       "gasPrice":"Gas unit nga presyo (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Gasto sa transaksyon (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Paggamit sa gas",
       "waiting":"Naghulat alang sa pagkumpirma",
       "success":"Ang kalampusan",

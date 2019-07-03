@@ -141,6 +141,7 @@
       "send_time":"Čas pošiljanja",
       "mac_time":"Čas glavne verige",
       "gasPrice":"Cena plinske enote (10 <sup> -18 </sup> CZR)",
+      "txFee":"Stroški transakcije (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Uporaba plina",
       "waiting":"Čakanje na potrditev",
       "success":"Uspeh",

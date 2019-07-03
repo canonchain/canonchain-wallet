@@ -141,6 +141,7 @@
       "send_time":"Dërgimi i kohës",
       "mac_time":"Koha kryesore e zinxhirit",
       "gasPrice":"Çmimi i njësisë së gazit (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Kostoja e transaksionit (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Përdorimi i gazit",
       "waiting":"Duke pritur konfirmimin",
       "success":"sukses",

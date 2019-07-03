@@ -141,6 +141,7 @@
       "send_time":"Küldés ideje",
       "mac_time":"Fő láncidő",
       "gasPrice":"Gázegységár (10 <sup> -18 </sup> CZR)",
+      "txFee":"Tranzakciós költség (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Gázhasználat",
       "waiting":"Várakozás a megerősítésre",
       "success":"siker",

@@ -141,6 +141,7 @@
             "send_time": "Sent time",
             "mac_time": "Main chain time",
             "gasPrice": "Gas Price(10<sup>-18</sup>CZR)",
+            "txFee": "Transaction Fee(10<sup>-9</sup>CZR)",
             "gasUsed": "Gas Used",
             "waiting": "Waiting for confirmation",
             "success": "Succeeded",

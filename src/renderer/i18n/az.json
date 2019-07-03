@@ -141,6 +141,7 @@
       "send_time":"Vaxt göndərmə",
       "mac_time":"Əsas zəncirləmə vaxtı",
       "gasPrice":"Qazın qiyməti (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Əməliyyat dəyəri (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Qazdan istifadə",
       "waiting":"Təsdiqləmə gözləyir",
       "success":"Müvəffəqiyyət",

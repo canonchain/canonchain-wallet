@@ -141,6 +141,7 @@
       "send_time":"Menghantar masa",
       "mac_time":"Masa rantaian utama",
       "gasPrice":"Harga unit gas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Kos urus niaga (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Penggunaan gas",
       "waiting":"Menunggu pengesahan",
       "success":"Kejayaan",

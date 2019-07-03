@@ -37,7 +37,7 @@
         <div class="account-content">
             <!-- <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2> -->
             <template>
-                <el-tabs v-model="activeName">
+                <el-tabs v-model="activeName" @tab-click="clickTabAll">
                     <el-tab-pane :label="$t('page_account.txSent')" name="first">
                         <!--  No transaction record  -->
                         <div v-if="sendTransCurrent.tempAry.length==0" class="no-transfer-log">
@@ -49,7 +49,7 @@
                                 <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
                                     <div class="transfer-info">
                                         <p class="by-address">{{item.to}}</p>
-                                        <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                        <p class="transfer-time">{{item.send_timestamp |toDate }}</p>
                                     </div>
                                     <div class="transfer-assets">
                                         <strong class="assets">- {{item.amount | toCZRVal }}</strong>
@@ -57,7 +57,7 @@
                                 </div>
                             </template>
                             <div class="pagin-wrap b-flex b-flex-justify"
-                                 v-if="sendTransCurrent.sourcesAry.length>=sendTransCurrent.limit">
+                                 v-if="sendTransCurrent.sourcesAry.length > sendTransCurrent.limit">
                                 <el-button @click="currentBefore" :disabled="sendTransCurrent.beforeDisabled"
                                            class="before-btn">{{$t('pager.prev')}}
                                 </el-button>
@@ -67,14 +67,16 @@
                             </div>
                         </div>
                     </el-tab-pane>
-                    <el-tab-pane :label="$t('page_account.txAll')" name="second">
+                    <el-tab-pane :label="$t('page_account.txAll')"
+                                 name="second">
                         <el-alert v-if="alertSwitch.isShowMsg" center :title="$t('page_account.txNew')"
                                   :close-text="$t('page_account.checkNow')" type="warning" @close="refreshTrans">
                         </el-alert>
                         <div class="all-transaction">
-                            <div class="transfer-log" v-if="accountInfo.tx_list.length!==0" v-loading="loadingSwitch">
-                                <template v-for="item in accountInfo.currentTxList">
-                                    <div v-if="item.to == address">
+                            <div class="transfer-log" v-if="allTx.length !== 0" v-loading="loadingSwitch">
+                                <template
+                                        v-for="item in allTx.slice((allTxPage - 1) * pageSize, allTxPage * pageSize)">
+                                    <div v-if="item.content.to == address">
                                         <div class="transfer-item b-flex b-flex-justify tx-item plus-assets"
                                              @click="showTxInfo(item)">
                                             <div class="icon-wrap">
@@ -82,10 +84,10 @@
                                             </div>
                                             <div class="transfer-info">
                                                 <p class="by-address">{{item.from}}</p>
-                                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                                <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
                                             </div>
                                             <div class="transfer-assets">
-                                                <div class="assets">+ {{item.amount | toCZRVal }}</div>
+                                                <div class="assets">+ {{item.content.amount | toCZRVal }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -97,27 +99,29 @@
                                                 <i class="iconfont icon-transfer">&#xe638;</i>
                                             </div>
                                             <div class="transfer-info">
-                                                <p class="by-address">{{item.to}}</p>
-                                                <p class="transfer-time">{{item.exec_timestamp |toDate }}</p>
+                                                <p class="by-address">{{item.content.to}}</p>
+                                                <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
                                             </div>
                                             <div class="transfer-assets">
-                                                <div class="assets">- {{item.amount | toCZRVal }}</div>
+                                                <div class="assets">- {{item.content.amount | toCZRVal }}</div>
                                             </div>
                                         </div>
                                     </div>
                                 </template>
                                 <div class="pagin-wrap b-flex b-flex-justify"
-                                     v-if="accountInfo.tx_list.length>=pagingSwitch.limit">
-                                    <el-button :disabled="pagingSwitch.beforeDisabled" @click="beforeList"
+                                     v-if="allTxNext !== ''">
+                                    <el-button :disabled="allTxPage === 1" @click="fetchAllTxPrev"
                                                class="before-btn">{{$t('pager.prev')}}
                                     </el-button>
-                                    <el-button :disabled="pagingSwitch.nextDisabled" @click="nextList" class="next-btn">
+                                    <el-button :disabled="(allTx.length <= allTxPage * pageSize) && allTxNext === null"
+                                               @click="fetchAllTxNext" :loading="fetching"
+                                               class="next-btn">
                                         {{$t('pager.next')}}
                                     </el-button>
                                 </div>
                             </div>
                             <!--  No transaction record  -->
-                            <div v-if="accountInfo.tx_list.length==0" class="no-transfer-log">
+                            <div v-else class="no-transfer-log">
                                 <i class="iconfont">&#xe6e7;</i>
                                 <p>{{ $t('page_account.transfer_log_null') }}</p>
                             </div>
@@ -213,12 +217,16 @@
                     <span class="tx-item-info">{{transactionInfo.gas_price || '-'}}</span>
                 </li>
                 <li class="b-flex b-flex-justify tx-item">
+                    <strong class="tx-item-des" v-html="$t('page_account.dia_tx.txFee')"></strong>
+                    <span class="tx-item-info">{{transactionInfoTxFee}}</span>
+                </li>
+                <li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.exec_timestamp|toDate}}</span>
+                    <span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>
                 </li>
                 <li class="b-flex b-flex-justify tx-item">
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.mac_time')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.mc_timestamp|toDate}}</span>
+                    <span class="tx-item-info">{{transactionInfo.mc_timestamp | toDate}}</span>
                 </li>
             </ul>
         </el-dialog>
@@ -239,6 +247,12 @@
         name: "Account",
         data() {
             return {
+                allTx: [],
+                allTxNext: '',
+                allTxOver: false,
+                allTxPage: 1,
+                pageSize: 10,
+                fetching: false,
                 dialogSwitch: {
                     qrCode: false,
                     editName: false,
@@ -300,12 +314,115 @@
                 self.initDatabase();
             }, 5000);
         },
-        computed: {},
+        computed: {
+            transactionInfoTxFee() {
+                if (!this.transactionInfo.gas_price || !this.transactionInfo.gas_used) {
+                    return '-'
+                }
+                return new BigNumber(this.transactionInfo.gas_price).times(
+                    new BigNumber(this.transactionInfo.gas_used)
+                ).div(new BigNumber('1e9')).toString()
+            },
+        },
         beforeDestroy() {
             clearInterval(this.timerSwitch.initData);
             clearTimeout(this.timerSwitch.updateBlocksTimer);
         },
+        mounted() {
+
+        },
         methods: {
+            clickTabAll(tab) {
+                if (tab.name === 'second') {
+                    this.allTx = []
+                    this.allTxPage = 1
+                    this.allTxNext = ''
+                    this.fetchAllTx()
+                }
+            },
+            fetchAllTxNext() {
+                if (this.allTx.length > this.pageSize * this.allTxPage) {
+                    this.allTxPage += 1
+                    return
+                }
+                this.fetching = true
+                this.$czr.request.accountBlockList(this.accountInfo.address, this.pageSize, this.allTxNext)
+                    .then(res => {
+                        if (res.code !== 0) {
+                            this.$message.error(res.msg)
+                            return
+                        }
+                        this.allTxNext = res.next_index
+                        const blocks = res.blocks
+                        this.$czr.request.getBlockStates(blocks.map(block => block.hash))
+                            .then(res => {
+                                if (res.code !== 0) {
+                                    this.$message.error(res.msg)
+                                    return
+                                }
+                                res.block_states.forEach((blockState, index) => {
+                                    if (blockState) {
+                                        blocks[index].is_stable = blockState.is_stable
+                                        blocks[index].status = blockState.stable_content.status
+                                        blocks[index].mc_timestamp = blockState.stable_content.mc_timestamp
+                                        blocks[index].stable_timestamp = blockState.stable_content.stable_timestamp
+                                        blocks[index].gas_used = blockState.stable_content.gas_used
+                                    }
+                                })
+                                this.allTx = this.allTx.concat(blocks)
+                                this.allTxPage += 1
+                                this.fetching = false
+                            })
+                            .catch(err => {
+                                this.fetching = false
+                                console.error(err)
+                            })
+                    })
+                    .catch(err => {
+                        console.error(err)
+                    })
+                    .finally(() => {
+                        this.fetching = false
+                    })
+            },
+            fetchAllTxPrev() {
+                if (this.allTxPage > 1) {
+                    this.allTxPage -= 1
+                }
+            },
+            fetchAllTx() {
+                this.fetching = true
+                this.$czr.request.accountBlockList(this.accountInfo.address, 10, '')
+                    .then(res => {
+                        if (res.code !== 0) {
+                            this.$message.error(res.msg)
+                            return
+                        }
+                        this.allTx = res.blocks
+                        this.allTxNext = res.next_index
+                        this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
+                            .then(res => {
+                                res.block_states.forEach((blockState, index) => {
+                                    if (blockState) {
+                                        this.allTx[index].is_stable = blockState.is_stable
+                                        this.allTx[index].status = blockState.stable_content.status
+                                        this.allTx[index].mc_timestamp = blockState.stable_content.mc_timestamp
+                                        this.allTx[index].stable_timestamp = blockState.stable_content.stable_timestamp
+                                        this.allTx[index].gas_used = blockState.stable_content.gas_used
+                                    }
+                                })
+                                this.fetching = false
+                            })
+                            .catch(err => {
+                                this.fetching = false
+                                console.error(err)
+                            })
+                    })
+                    .catch(err => {
+                        this.fetching = false
+                        console.error(err)
+                    })
+            },
             //获取所有交易 Start
             runGetTransTimer() {
                 self.timerSwitch.updateBlocksTimer = setTimeout(() => {
@@ -379,7 +496,7 @@
                                 self.runGetTransTimer();
                             } else {
                                 //如果不同，显示msg，并停止获取；
-                                self.alertSwitch.isShowMsg = true;
+                                // self.alertSwitch.isShowMsg = true;
                             }
                         }
                     })
@@ -558,7 +675,7 @@
                     .value();
                 // 按照时间排序
                 _current.sourcesAry.sort((a, b) => {
-                    return b.exec_timestamp - a.exec_timestamp;
+                    return b.send_timestamp - a.send_timestamp;
                 });
                 // console.log(_current.sourcesAry)
                 if (isFirstInit) {
@@ -637,7 +754,6 @@
                     last_summary: "",
                     last_summary_block: "",
                     data: "",
-                    exec_timestamp: "",
                     signature: "",
                     is_stable: '',
                     status: '',
@@ -744,7 +860,7 @@
                                 })
                                 .write()
                             if ((hash === this.transactionInfo.hash)) {
-                                this.transactionInfo = Object.assign({},this.transactionInfo,{
+                                this.transactionInfo = Object.assign({}, this.transactionInfo, {
                                     is_stable: '1',
                                     status: status,
                                     stable_timestamp: stable_timestamp,
@@ -771,12 +887,12 @@
                             //         self.accountInfo.currentTxList[index] = data;
                             //     }
                             // });
-                        }else{
+                        } else {
                             // 检查交易详情，如果不存在，说明交易失败
                             this.$czr.request.getBlock(hash)
-                                .then(res=>{
-                                    if(res.code === 0){
-                                        if(res.block === null){
+                                .then(res => {
+                                    if (res.code === 0) {
+                                        if (res.block === null) {
                                             const tx = this.accountInfo.tx_list.find(tx => {
                                                 return tx.hash === hash
                                             })
@@ -799,7 +915,7 @@
                                                 })
                                                 .write()
                                             if ((hash === this.transactionInfo.hash)) {
-                                                this.transactionInfo = Object.assign({},this.transactionInfo,{
+                                                this.transactionInfo = Object.assign({}, this.transactionInfo, {
                                                     is_stable: '1',
                                                     status: '100',
                                                 });
@@ -826,7 +942,24 @@
 
             //SHOW tx info
             showTxInfo(item) {
-                this.transactionInfo = item;
+                if (item.content) {
+                    this.transactionInfo = {
+                        "hash": item.hash,
+                        "from": item.from,
+                        "previous": item.content.previous,
+                        "to": item.content.to,
+                        "amount": item.content.amount,
+                        "gas": item.content.gas,
+                        "gas_price": item.content.gas_price,
+                        "data": item.data,
+                        "is_stable": item.is_stable,
+                        "status": item.status,
+                        "gas_used": item.gas_used,
+                        "mc_timestamp": item.mc_timestamp
+                    }
+                } else {
+                    this.transactionInfo = item;
+                }
                 this.dialogSwitch.txInfo = true;
             },
             //Show Qrcode

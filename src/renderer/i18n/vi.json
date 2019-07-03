@@ -141,6 +141,7 @@
       "send_time":"Gửi thời gian",
       "mac_time":"Thời gian chuỗi chính",
       "gasPrice":"Đơn giá gas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Chi phí giao dịch (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Sử dụng gas",
       "waiting":"Chờ xác nhận",
       "success":"Thành công",

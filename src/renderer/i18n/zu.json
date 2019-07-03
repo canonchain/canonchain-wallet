@@ -141,6 +141,7 @@
       "send_time":"Ithumela isikhathi",
       "mac_time":"Isikhathi esikhulu sezinketho",
       "gasPrice":"Inani lentengo yegesi (10 <sup> -18 </ sup> i-CZR)",
+      "txFee":"Izindleko zokuthengiselana (10 <sup> -9 </ sup> i-CZR)",
       "gasUsed":"Ukusetshenziswa kwegesi",
       "waiting":"Ilinde ukuqinisekiswa",
       "success":"Impumelelo",

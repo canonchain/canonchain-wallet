@@ -141,6 +141,7 @@
       "send_time":"Anfon amser",
       "mac_time":"Prif amser y gadwyn",
       "gasPrice":"Pris uned nwy (10 <sup> -18 </sup> CZR)",
+      "txFee":"Cost trafodiad (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Defnydd nwy",
       "waiting":"Aros am gadarnhad",
       "success":"Llwyddiant",
@@ -234,7 +235,7 @@
       "specifyDataDir":"Dewiswch lwybr storio data'r nod"
     },
     "version_dialog": {
-      "version_tit":"Diweddariad ar y fersiwn yn brydlon",
+      "version_tit":"Diweddariad y fersiwn yn brydlon",
       "download_wallet":"Ewch i'r wefan swyddogol i lawrlwytho'r fersiwn diweddaraf o'r arian",
       "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
     }

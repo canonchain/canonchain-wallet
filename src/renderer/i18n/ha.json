@@ -141,6 +141,7 @@
       "send_time":"Aika lokaci",
       "mac_time":"Main sarkar lokaci",
       "gasPrice":"Farashin farashin gas (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Kudin ma'amala (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gas amfani",
       "waiting":"Jira don tabbatarwa",
       "success":"Success",

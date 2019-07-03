@@ -141,6 +141,7 @@
       "send_time":"Sendezeit",
       "mac_time":"Hauptkettenzeit",
       "gasPrice":"Gaseinheitspreis (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Transaktionskosten (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gasverbrauch",
       "waiting":"Warten auf Bestätigung",
       "success":"Erfolg",

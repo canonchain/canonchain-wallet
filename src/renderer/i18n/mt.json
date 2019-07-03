@@ -141,6 +141,7 @@
       "send_time":"Mittenti ħin",
       "mac_time":"Ħin tal-katina prinċipali",
       "gasPrice":"Prezz tal-unità tal-gass (10 <sup> -18 </sup> CZR)",
+      "txFee":"Spejjeż tat-transazzjoni (10 <sup> -9 </sup> CZR)",
       "gasUsed":"Użu tal-gass",
       "waiting":"Stennija għall-konferma",
       "success":"Suċċess",

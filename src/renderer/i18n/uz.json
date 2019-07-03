@@ -141,6 +141,7 @@
       "send_time":"Vaqt yuborilmoqda",
       "mac_time":"Asosiy zanjirli vaqt",
       "gasPrice":"Gaz agregati narxi (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Jurnal necha (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Gazdan foydalanish",
       "waiting":"Tasdiqlash kutilmoqda",
       "success":"Muvaffaqiyat",

@@ -141,6 +141,7 @@
       "send_time":"Xa sij hawm",
       "mac_time":"Lub sij hawm kaw loj",
       "gasPrice":"Roj chav tsev mov (10 <sup> -18 </ sup> CZR)",
+      "txFee":"Them nqi (10 <sup> -9 </ sup> CZR)",
       "gasUsed":"Siv roj",
       "waiting":"Tos kev pom zoo",
       "success":"Kev vam meej",
