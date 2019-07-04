@@ -352,11 +352,7 @@
                             this.$message.error(res.msg)
                             return
                         }
-<<<<<<< HEAD
-                        if(!res.blocks.length)return
-=======
                         if(!res.blocks.length) return
->>>>>>> dd2bfb338e30f26e56d12f32c70c8046056d5a3f
                         this.allTxNext = res.next_index
                         const blocks = res.blocks
                         this.$czr.request.getBlockStates(blocks.map(block => block.hash))
@@ -405,10 +401,6 @@
                             this.$message.error(res.msg)
                             return
                         }
-<<<<<<< HEAD
-                        // console.log('accountBlockList',res.blocks)
-=======
->>>>>>> dd2bfb338e30f26e56d12f32c70c8046056d5a3f
                         if(!res.blocks.length) return
                         this.allTx = res.blocks
                         this.allTxNext = res.next_index
