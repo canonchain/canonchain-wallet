@@ -352,10 +352,12 @@
                             this.$message.error(res.msg)
                             return
                         }
+                        if(!res.blocks.length)return
                         this.allTxNext = res.next_index
                         const blocks = res.blocks
                         this.$czr.request.getBlockStates(blocks.map(block => block.hash))
                             .then(res => {
+                                // console.log(res)
                                 if (res.code !== 0) {
                                     this.$message.error(res.msg)
                                     return
@@ -392,16 +394,20 @@
             },
             fetchAllTx() {
                 this.fetching = true
+                // console.log('fetchAllTx',this.accountInfo.address)
                 this.$czr.request.accountBlockList(this.accountInfo.address, 10, '')
                     .then(res => {
                         if (res.code !== 0) {
                             this.$message.error(res.msg)
                             return
                         }
+                        // console.log('accountBlockList',res.blocks)
+                        if(!res.blocks.length) return
                         this.allTx = res.blocks
                         this.allTxNext = res.next_index
                         this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
                             .then(res => {
+                                console.log(res)
                                 res.block_states.forEach((blockState, index) => {
                                     if (blockState) {
                                         this.allTx[index].is_stable = blockState.is_stable
