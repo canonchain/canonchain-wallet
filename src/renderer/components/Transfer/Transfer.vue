@@ -187,7 +187,7 @@
                 }, 2000);
             }
             // fetch gas price
-            axios.get('http://apis.canonchain.com/apis?apikey=YourApiKeyToken&module=other&action=gas_price')
+            axios.get('http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price')
                 .then(res => {
                     // console.log('axios.get',res)
                     if (res.status !== 200) {
