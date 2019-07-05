@@ -406,7 +406,7 @@
                         this.allTxNext = res.next_index
                         this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
                             .then(res => {
-                                console.log(res)
+                                // console.log(res)
                                 res.block_states.forEach((blockState, index) => {
                                     if (blockState) {
                                         this.allTx[index].is_stable = blockState.is_stable

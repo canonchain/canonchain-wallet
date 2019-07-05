@@ -187,7 +187,7 @@
                 }, 2000);
             }
             // fetch gas price
-            axios.get('http://39.105.101.31:50615/apis?apikey=YourApiKeyToken&module=other&action=gas_price')
+            axios.get('http://apis.canonchain.com/apis?apikey=YourApiKeyToken&module=other&action=gas_price')
                 .then(res => {
                     // console.log('axios.get',res)
                     if (res.status !== 200) {
@@ -311,62 +311,64 @@
                 }
 
                 // estimate gas
-                try {
-                    const req = {
-                        from: this.fromInfo.account,
-                        to: this.toAccount,
-                        amount: this.$czr.utils.toKing(this.amount, "czr"),
-                        gas: this.gas,
-                        gas_price: new BigNumber(this.gasPrice).times('1e9').toString(),
-                        data: this.extraData,
-                        mci: 'latest',
-                    }
-                    // console.log('estimateGas req', req)
-                    const res = await this.$czr.request.estimateGas(req)
-                    if (res.code !== 0) {
-                        switch (res.code) {
-                            case 1:
-                                this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
-                                break
-                            case 2:
-                                this.$message.error(this.$t('rpcErrors.invalidToAccount'))
-                                break
-                            case 3:
-                                this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
-                                break
-                            case 4:
-                                this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
-                                break
-                            case 5:
-                                this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
-                                break
-                            case 6:
-                                this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
-                                break
-                            case 7:
-                                this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
-                                break
-                            case 8:
-                                this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
-                                break
-                            case 9:
-                                this.$message.error(this.$t('rpcErrors.notEnoughFail'))
-                                break
-                            default:
-                                this.$message.error(res.msg)
-                                break
+                if (true) { // TODO for first tx
+                    try {
+                        const req = {
+                            from: this.fromInfo.account,
+                            to: this.toAccount,
+                            amount: this.$czr.utils.toKing(this.amount, "czr"),
+                            gas: this.gas,
+                            gas_price: new BigNumber(this.gasPrice).times('1e9').toString(),
+                            data: this.extraData,
+                            mci: 'latest',
                         }
-                        console.error(res.msg)
+                        // console.log('estimateGas req', req)
+                        const res = await this.$czr.request.estimateGas(req)
+                        if (res.code !== 0) {
+                            switch (res.code) {
+                                case 1:
+                                    this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                                    break
+                                case 2:
+                                    this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                                    break
+                                case 3:
+                                    this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                                    break
+                                case 4:
+                                    this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                                    break
+                                case 5:
+                                    this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                                    break
+                                case 6:
+                                    this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                                    break
+                                case 7:
+                                    this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                                    break
+                                case 8:
+                                    this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                                    break
+                                case 9:
+                                    this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                                    break
+                                default:
+                                    this.$message.error(res.msg)
+                                    break
+                            }
+                            console.error(res.msg)
+                            return
+                        }
+                        if (this.gas < res.gas) {
+                            this.$message.error('gas too low')
+                            console.error('gas too low')
+                            return
+                        }
+                    } catch (e) {
+                        console.error(e)
                         return
                     }
-                    if (this.gas < res.gas) {
-                        this.$message.error('gas too low')
-                        console.error('gas too low')
-                        return
-                    }
-                } catch (e) {
-                    console.error(e)
-                    return
                 }
 
                 // 账户余额为0不可以发
