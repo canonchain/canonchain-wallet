@@ -215,6 +215,8 @@
   },
   "page_config": {
     "config_detection":"構成検出",
+    "start_node_err":"ノード起動失敗",
+    "confirm":"決定する",
     "content_msg": {
       "ready_test":"構成ファイルを検出する準備をする",
       "network_latest": "检测是否有新的 CanonChain 节点文件",

@@ -311,7 +311,16 @@
                             "--data_path",
                             dir
                         ], {
-                            stdio: 'ignore'
+                            stdio: ['ignore', 'ignore', 'pipe']
+                        });
+                        ls.stderr.on('data', (data) => {
+                            ls.removeAllListeners('exit')
+                            self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
+                                confirmButtonText: self.$t('page_config.confirm'),
+                                callback: () => {
+                                    remote.app.quit()
+                                }
+                            });
                         });
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
@@ -357,7 +366,16 @@
                         "--data_path",
                         dir
                     ], {
-                        stdio: 'ignore'
+                        stdio: ['ignore', 'ignore', 'pipe']
+                    });
+                    ls.stderr.on('data', (data) => {
+                        ls.removeAllListeners('exit')
+                        self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
+                            confirmButtonText: self.$t('page_config.confirm'),
+                            callback: () => {
+                                remote.app.quit()
+                            }
+                        });
                     });
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);

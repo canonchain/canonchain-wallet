@@ -215,6 +215,8 @@
   },
   "page_config": {
     "config_detection": "配置检测中",
+    "start_node_err": "节点启动失败",
+    "confirm":"确定",
     "content_msg": {
       "ready_test": "准备检测配置文件",
       "network_latest": "检测是否有新的 CanonChain 节点文件",

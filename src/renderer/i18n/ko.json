@@ -215,6 +215,8 @@
   },
   "page_config": {
     "config_detection":"구성 탐지",
+    "start_node_err":"노드 시작 실패",
+    "confirm":"결정",
     "content_msg": {
       "ready_test":"구성 파일 검색 준비",
       "network_latest": "检测是否有新的 CanonChain 节点文件",
