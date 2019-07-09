@@ -98,8 +98,7 @@
 
             checkForNewConfig() {
                 self.conMsg = self.$t("page_config.content_msg.network_latest");
-                self.$startLogs.info("检测是否有新的 CanonChain 节点文件 ");
-
+                self.$startLogs.info(`检测是否有新的 CanonChain 节点文件，从${self.latest_config.BINARY_URL}获取`);
                 axios.get(self.latest_config.BINARY_URL)
                     .then(response => {
                         self.latest_config.content = response.data;
@@ -111,6 +110,7 @@
                         self.checkLocalConfig();
                     })
                     .catch(error => {
+                        self.$startLogs.error(`获取最新的节点配置信息失败, ${error.message}`)
                         self.conMsg = error; // 取本地的，本地取不到，取安装包的配置
                     });
             },
@@ -122,8 +122,8 @@
                     // 现在加载本地json
                     self.local_config = JSON.parse(
                         fs.readFileSync(
-                                path.join(self.userDataPath, "clientBinaries.json")
-                            )
+                            path.join(self.userDataPath, "clientBinaries.json")
+                        )
                             .toString()
                     );
                     self.conMsg = self.$t("page_config.content_msg.already_local");
@@ -154,8 +154,10 @@
                 let latestVer = this.latest_config.content.clients[
                     this.node_info.NODE_TYPE
                     ].version;
-                let localVer = this.local_config.clients[this.node_info.NODE_TYPE]
-                    .version;
+                let localVer = this.local_config &&
+                    this.local_config.clients &&
+                    this.local_config.clients[this.node_info.NODE_TYPE] &&
+                    this.local_config.clients[this.node_info.NODE_TYPE].version; // 破坏性更新，version of undefined
                 self.conMsg = self.$t("page_config.content_msg.whether_update_node");
                 self.$startLogs.info(
                     `检测是否需要更新,本地${localVer},最新${latestVer}`
@@ -321,7 +323,7 @@
                         //     });
                         // });
                         ls.stderr.on('data', (data) => {
-                          self.$walletLogs.error(`canonchain stderr: ${data}`);
+                            self.$walletLogs.error(`canonchain stderr: ${data}`);
                         });
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
