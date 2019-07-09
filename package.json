@@ -1,7 +1,7 @@
 {
   "name": "CanonChain-Wallet",
   "productName": "CanonChain Wallet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "block-wallet"
   ],
@@ -81,7 +81,8 @@
     "vue-i18n": "^7.6.0",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0",
-    "vuex-electron": "^1.0.3"
+    "vuex-electron": "^1.0.3",
+    "winreg": "^1.2.4"
   },
   "devDependencies": {
     "ajv": "^6.7.0",

@@ -23,6 +23,7 @@ let confirmPath = function (pathStr) {
 };
 //创建log的根目录'logs'
 if (basePath) {
+    confirmPath(utility.userDataPath);
     confirmPath(basePath);
     //根据不同的logType创建不同的文件目录
     confirmPath(defaultPath);

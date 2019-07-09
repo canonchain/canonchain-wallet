@@ -100,8 +100,7 @@
                 self.conMsg = self.$t("page_config.content_msg.network_latest");
                 self.$startLogs.info("检测是否有新的 CanonChain 节点文件 ");
 
-                axios
-                    .get(self.latest_config.BINARY_URL)
+                axios.get(self.latest_config.BINARY_URL)
                     .then(response => {
                         self.latest_config.content = response.data;
                         self.conMsg = self.$t("page_config.content_msg.get_latest");
@@ -122,8 +121,7 @@
                 try {
                     // 现在加载本地json
                     self.local_config = JSON.parse(
-                        fs
-                            .readFileSync(
+                        fs.readFileSync(
                                 path.join(self.userDataPath, "clientBinaries.json")
                             )
                             .toString()
@@ -313,14 +311,17 @@
                         ], {
                             stdio: ['ignore', 'ignore', 'pipe']
                         });
+                        // ls.stderr.on('data', (data) => {
+                        //     ls.removeAllListeners('exit')
+                        //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
+                        //         confirmButtonText: self.$t('page_config.confirm'),
+                        //         callback: () => {
+                        //             remote.app.quit()
+                        //         }
+                        //     });
+                        // });
                         ls.stderr.on('data', (data) => {
-                            ls.removeAllListeners('exit')
-                            self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
-                                confirmButtonText: self.$t('page_config.confirm'),
-                                callback: () => {
-                                    remote.app.quit()
-                                }
-                            });
+                          self.$walletLogs.error(`canonchain stderr: ${data}`);
                         });
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
@@ -366,17 +367,17 @@
                         "--data_path",
                         dir
                     ], {
-                        stdio: ['ignore', 'ignore', 'pipe']
+                        stdio: ['ignore', 'ignore', 'ignore']
                     });
-                    ls.stderr.on('data', (data) => {
-                        ls.removeAllListeners('exit')
-                        self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
-                            confirmButtonText: self.$t('page_config.confirm'),
-                            callback: () => {
-                                remote.app.quit()
-                            }
-                        });
-                    });
+                    // ls.stderr.on('data', (data) => {
+                    //     ls.removeAllListeners('exit')
+                    //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
+                    //         confirmButtonText: self.$t('page_config.confirm'),
+                    //         callback: () => {
+                    //             remote.app.quit()
+                    //         }
+                    //     });
+                    // });
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);
                     self.guardNode(ls, nodePath);

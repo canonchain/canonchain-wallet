@@ -36,6 +36,8 @@
 
         <!-- account create -->
         <el-dialog
+                :close-on-click-modal="false"
+                :show-close="createInfo.step === 0"
                 :title="createInfo.step === 0 ? $t('page_home.create_dia.create_tit') : $t('page_home.create_dia.backup_tit') "
                 :visible.sync="dialogSwitch.create" @open="initCreateInfo" width="60%">
             <template v-if="createInfo.step === 0">
@@ -63,15 +65,19 @@
                     <el-button type="primary" @click="createAccount">{{ $t('confirm') }}</el-button>
                 </div>
             </template>
-            <template v-else-if="createInfo.step === 1">
+            <template v-if="createInfo.step === 1">
                 <el-alert :title="$t('page_home.create_dia.create_success')"
                           :description="$t('page_home.create_dia.create_success_des')" :closable="false" type="success"
+                          show-icon>
+                </el-alert>
+                <el-alert :title="$t('page_home.create_dia.download_tit')"
+                          :description="$t('page_home.create_dia.download_des')" :closable="false" type="warning"
                           show-icon>
                 </el-alert>
                 <el-input type="textarea" :rows="2" v-model="createInfo.address" disabled>
                 </el-input>
                 <div slot="footer">
-                    <el-button type="primary" @click="downloadKeystore(createInfo.address)">
+                    <el-button type="danger" @click="downloadKeystore(createInfo.address)">
                         {{$t('page_home.create_dia.account_download_keystore')}}
                     </el-button>
                 </div>

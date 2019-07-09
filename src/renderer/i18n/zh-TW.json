@@ -165,6 +165,8 @@
     "add_account":"新建賬號",
     "acc":"賬戶",
     "create_dia": {
+      "download_tit":"請下載錢包文件",
+      "download_des":"請務必將錢包文件保存好，切勿丟失，否則造成的損失將不可挽回",
       "create_tit":"創建賬戶",
       "backup_tit":"備份您的新賬戶",
       "create_tag":"賬戶備註",

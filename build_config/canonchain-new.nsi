@@ -2,7 +2,7 @@
 
 ; 安装程序初始定义常量
 !define PRODUCT_NAME "CanonChain Wallet"
-!define PRODUCT_VERSION "1.0.0"
+!define PRODUCT_VERSION "1.0.1"
 !define PRODUCT_PUBLISHER "CanonChain"
 !define PRODUCT_WEB_SITE "http://www.canonchain.com"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -57,6 +57,8 @@ Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite on
   File /r  /x d3dcompiler_47.dll "..\build\win-unpacked\*.*"
+  SetOutPath "$INSTDIR\assets"
+  File ..\vc15\vc_redist.x64.exe
   CreateShortCut "$DESKTOP\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
 SectionEnd
 

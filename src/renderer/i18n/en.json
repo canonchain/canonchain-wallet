@@ -165,6 +165,8 @@
     "add_account":"New account",
     "acc":"Account",
     "create_dia": {
+      "download_tit":"Please download the account file",
+      "download_des":"Be sure to save the account file, don't lose it, or the lost will be irreparable.",
       "create_tit":"create Account",
       "backup_tit":"Back up your new account",
       "create_tag":"Account note",
