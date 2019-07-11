@@ -93,7 +93,9 @@
                 </el-alert>
                 <template>
                     <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop
-                         @drop.prevent.stop="importKeystore"> {{$t('page_home.import_dia.placeholder_keystore')}}
+                         @drop.prevent.stop="importKeystore">
+                        {{$t('page_home.import_dia.placeholder_keystore')}}
+                        <!--<el-button size="mini">选择文件</el-button>-->
                     </div>
                     <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
                         <template slot="prepend">
@@ -145,6 +147,7 @@
     const {spawn, spawnSync} = require("child_process");
     const {ipcRenderer} = require('electron')
     import BigNumber from 'bignumber.js/bignumber.mjs'
+    const path = require('path')
 
     let self = null;
     let getBalancesTimer = null;
@@ -309,10 +312,12 @@
                 this.initDatabase();
             },
             pushKeystore(keystore) {
-                self.$db
+                self.$walletLogs.info(`开始保存keystore文件，${JSON.stringify(keystore)}`);
+                const ret = self.$db
                     .get("accounts_keystore")
                     .push(keystore)
                     .write();
+                self.$walletLogs.info(`完成保存keystore文件吗，${JSON.stringify(ret)}`);
             },
 
             // Create Account Start
@@ -381,6 +386,9 @@
                 const accountResult = await self.$czr.accounts.create(self.createInfo.pwd)
                 self.createInfo.pwd = "";//初始化密码
                 if (accountResult.account) {
+                    /* 创建成功, 备份keystore */
+                    fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountResult.account}.json`), JSON.stringify(accountResult))
+
                     self.createInfo.keystore = JSON.stringify(accountResult);
                     self.createInfo.address = accountResult.account;
                     let params = {

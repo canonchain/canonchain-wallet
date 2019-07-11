@@ -191,7 +191,7 @@
                         'Connection': 'keep-alive'
                     },
                     extract: true,
-                    timeout: 1000 * 60
+                    timeout: 1000 * 60,
                 };
 
                 if (flag) {
@@ -204,6 +204,7 @@
 
                     download(
                         this.node_info.binaryVersion.url + radom,
+                        // `http://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip?t=${Date.now()}`,
                         options.directory,
                         options
                     ).then(() => {
@@ -247,6 +248,7 @@
 
                         download(
                             this.node_info.binaryVersion.url + radom,
+                            // `http://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip?t=${Date.now()}`,
                             options.directory,
                             options
                         ).then(() => {
