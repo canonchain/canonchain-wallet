@@ -3,113 +3,148 @@ import {app, BrowserWindow, Menu, dialog, ipcMain} from 'electron'
 // const ClientBinaryManager = require('../../modules/clientBinaryManager');
 const {execFile} = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 let logConfig = require('../log4/log_config.js');
 let mainLogs = logConfig.getLogger('main_process');
 mainLogs.info("********** 主进程开始 ********** ");
 
-if (process.platform === 'win32') {
-    const Registry = require('winreg');
-    const keys = process.arch === 'x64' ? [ // x64
-        {
-            hive: Registry.HKCR,
-            key: '\\Installer\\Dependencies\\VC,redist.x64,amd64,14.21,bundle',
-        },
-        {
-            hive: Registry.HKLM,
-            key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{d992c12e-cab2-426f-bde3-fb8c53950b0d}',
-        },
-        {
-            hive: Registry.HKLM,
-            key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{a9528995-e130-4501-ae19-bbfaddb779cc}',
-        },
-    ] : [ // x86
-        {
-            hive: Registry.HKCR,
-            key: '\\Installer\\Dependencies\\VC,redist.x86,x86,14.21,bundle',
-        },
-        {
-            hive: Registry.HKLM,
-            key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{e2803110-78b3-4664-a479-3611a381656a}',
-        },
-        {
-            hive: Registry.HKLM,
-            key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{23658c02-145e-483d-ba6b-1eb82c580529}',
-        },
-    ];
+// path check
+const BACKUP_PATH = path.join(app.getPath('userData'), '/AccountBackup')
+if (!fs.existsSync(BACKUP_PATH)) {
+    fs.mkdirSync(BACKUP_PATH)
+}
 
-    Promise.any = function (ps) {
-        return new Promise((resolve, reject) => {
-            let errs = []
-            ps.forEach(p => {
-                p.then(resolve)
-                    .catch(err => {
-                        errs.push(err)
-                    })
-                    .finally(() => {
-                        if (errs.length === ps.length) {
-                            reject(errs)
-                        }
-                    })
-            })
-        })
-    };
+ipcMain.on('check-vc2015', () => {
+    if (process.platform === 'win32') { // check vc2015
 
-    function getRegKey(hive, key, name) {
-        return new Promise((resolve, reject) => {
-            const regKey = new Registry({
-                hive,
-                key,
-            });
-            regKey.get(name, (err, registryItem) => {
-                if (err) {
-                    reject(err)
-                }
-                resolve(registryItem)
-            });
-        })
-    }
-
-    Promise.any(keys.map(({hive, key}) => getRegKey(hive, key, 'Version')))
-        .then(registryItem => {
-            mainLogs.info(`系统已安装Visual C++ Redistributable for Visual Studio 2015, ${JSON.stringify(registryItem)}`)
-        })
-        .catch(errs => {
-            mainLogs.info(`系统未检测到Visual C++ Redistributable for Visual Studio 2015`)
+        if (process.arch !== 'x64') {
             dialog.showMessageBox({
                 type: 'info',
-                message: 'Visual C++ Redistributable for Visual Studio 2015可能未安装，请先安装'
-            }, function () {
-                const p = path.join(app.getPath('exe'), '..', 'assets', 'vc_redist.x64.exe')
-                const child = execFile(p, (err, stdout, stderr) => {
-                    if (err) {
-                        mainLogs.error(`执行vc2015安装出错，${err.message}`)
-                        dialog.showMessageBox({
-                            type: 'error',
-                            message: `执行vc2015安装出错, ${err.message}`
-                        }, function () {
-                            app.quit()
-                        })
-                        return
-                    }
-                    if (stderr) {
-                        mainLogs.info(`执行vc2015安装程序stderr，${stderr}`)
-                        dialog.showMessageBox({
-                            type: 'error',
-                            message: `执行vc2015安装出错, ${stderr}`
-                        }, function () {
-                            app.quit()
-                        })
-                        return
-                    }
-                    mainLogs.info(`执行vc2015安装程序stdout，${stdout}`)
-                    app.relaunch()
-                    app.quit()
-                });
+                message: '请使用64位系统运行钱包程序，32位系统可能出现异常',
+            }, function (response) {
 
             })
-        })
-}
+            return
+        }
+
+        const Registry = require('winreg');
+        const keys = [ // x64
+            {
+                hive: Registry.HKCR,
+                key: '\\Installer\\Dependencies\\VC,redist.x64,amd64,14.21,bundle',
+            },
+            {
+                hive: Registry.HKLM,
+                key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\VC,redist.x64,amd64,14.21,bundle', // vc2015-19
+            },
+            {
+                hive: Registry.HKLM,
+                key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\VC,redist.x64,amd64,14.16,bundle', // vc2017
+            },
+            {
+                hive: Registry.HKLM,
+                key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{d992c12e-cab2-426f-bde3-fb8c53950b0d}', // vc2015-update3 Version: 14.0.24215.1
+            },
+            {
+                hive: Registry.HKLM,
+                key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{a9528995-e130-4501-ae19-bbfaddb779cc}', // vc2015 Version: 14.0.25420.1
+            },
+            {
+                hive: Registry.HKLM,
+                key: '\\SOFTWARE\\Classes\\Installer\\Dependencies\\{e46eca4f-393b-40df-9f49-076faf788d83}', // vc2015 Version: 14.0.23026.0
+            },
+        ];
+
+        /**
+         * implement of Promise.any
+         * */
+        function promiseAny(ps) {
+            return new Promise((resolve, reject) => {
+                let errs = []
+                ps.forEach(p => {
+                    p.then(resolve)
+                        .catch(err => {
+                            errs.push(err)
+                        })
+                        .finally(() => {
+                            if (errs.length === ps.length) {
+                                reject(errs)
+                            }
+                        })
+                })
+            })
+        };
+
+        /**
+         * get Registry value
+         * */
+        function getRegKey(hive, key, name) {
+            return new Promise((resolve, reject) => {
+                const regKey = new Registry({
+                    hive,
+                    key,
+                });
+                regKey.get(name, (err, registryItem) => {
+                    if (err) {
+                        reject(err)
+                    }
+                    resolve(registryItem)
+                });
+            })
+        }
+
+        promiseAny(keys.map(({hive, key}) => getRegKey(hive, key, 'Version')))
+            .then(registryItem => {
+                mainLogs.info(`系统已安装Visual C++ Redistributable for Visual Studio 2015, ${JSON.stringify(registryItem)}`)
+                ipcMain.send('vc2015-exists')
+            })
+            .catch(errs => {
+                if (fs.existsSync(path.join(process.env.SystemRoot, 'SysWOW64', 'msvcp140.dll'))) {
+                    mainLogs.info(`系统已存在msvcp140.dll`)
+                    ipcMain.send('vc2015-exists')
+                    return
+                }
+                mainLogs.info(`系统未检测到Visual C++ Redistributable for Visual Studio 2015`)
+                dialog.showMessageBox({
+                    type: 'info',
+                    message: 'Visual C++ Redistributable for Visual Studio 2015可能未安装，请先安装，否则节点可能无法启动',
+                    // buttons: ['立即安装', '取消'],
+                }, function (response) {
+                    // console.log('dialog.showMessageBox response', response)
+                    // if (response === 1) { // 点击了取消
+                    //     return
+                    // }
+                    const p = path.join(app.getPath('exe'), '..', 'assets', 'vc_redist.x64.exe')
+                    const child = execFile(p, (err, stdout, stderr) => {
+                        if (err) {
+                            mainLogs.error(`执行vc2015安装出错，${err.message}`)
+                            dialog.showMessageBox({
+                                type: 'error',
+                                message: `执行vc2015安装出错, ${err.message}`
+                            }, function () {
+                                app.quit()
+                            })
+                            return
+                        }
+                        if (stderr) {
+                            mainLogs.info(`执行vc2015安装程序stderr，${stderr}`)
+                            dialog.showMessageBox({
+                                type: 'error',
+                                message: `执行vc2015安装出错, ${stderr}`
+                            }, function () {
+                                app.quit()
+                            })
+                            return
+                        }
+                        mainLogs.info(`执行vc2015安装程序stdout，${stdout}`)
+                        app.relaunch()
+                        app.quit()
+                    });
+                })
+            })
+    }
+})
 
 let menu;
 // const path          = require('path');

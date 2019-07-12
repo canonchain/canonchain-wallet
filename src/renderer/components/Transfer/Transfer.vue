@@ -1,5 +1,5 @@
 <template>
-    <div class="page-transfer">
+    <div class="page-transfer" v-loading="loading">
         <div class="transfer-cont">
             <el-form ref="form" label-width="100px" v-if="this.database.length>0">
                 <el-form-item :label="$t('page_transfer.from_address')">
@@ -37,17 +37,17 @@
                 <el-form-item :label="$t('page_transfer.gasPrice')">
                     <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
                                :max="+gasPriceRange.high" show-input
-                               input-size="mini" :step="0.001"
+                               input-size="mini" :step="1"
                                @change="changeSlider"
                                class="gas-slider"
                     ></el-slider>
                     <span class="wei-unit">
-                        10<sup>-9</sup>CZR
+                        x 10<sup>-9</sup>CZR
                     </span>
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.txFee')">
-                    <p>{{txFee}} <span>10<sup>-9</sup>CZR</span></p>
+                    <p>{{txFee}} <span>x 10<sup>-9</sup>CZR</span></p>
                 </el-form-item>
 
                 <el-form-item>
@@ -98,7 +98,7 @@
                     <p>{{amount}} {{$t('unit.czr')}}</p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.txFee')">
-                    <p>{{txFee}} <span>10<sup>-9</sup>CZR</span></p>
+                    <p>{{txFee}} <span>x 10<sup>-9</sup>CZR</span></p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.data')">
                     <p>{{extraData || '-'}}</p>
@@ -139,6 +139,7 @@
         name: "Transfer",
         data() {
             return {
+                loading: true,
                 sending: false,
                 dialogSwitch: {
                     contacts: false,
@@ -161,17 +162,23 @@
 
                 toAccount: "",
                 amount: 0,
-                gas: '21000',
-                gasPrice: 0,
+                gas: '',
+                gasPrice: '',
                 gasPriceRange: {
-                    low: '0.010',
-                    medium: '0.015',
-                    high: '0.020',
+                    low: '',
+                    medium: '',
+                    high: '',
                 },
                 extraData: ""
             };
         },
-
+        watch: {
+            gasPrice(newVal, oldVal) {
+                if (isNaN(newVal)) {
+                    this.gasPrice = oldVal
+                }
+            },
+        },
         created() {
             self = this;
             this.contacts = this.$db.get("czr_contacts.contact_ary").value();
@@ -186,8 +193,50 @@
                     self.initDatabase();
                 }, 2000);
             }
+
+            this.$czr.request.estimateGas().then(res => {
+                if (res.code !== 0) {
+                    switch (res.code) {
+                        case 1:
+                            this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                            break
+                        case 2:
+                            this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                            break
+                        case 3:
+                            this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                            break
+                        case 4:
+                            this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                            break
+                        case 5:
+                            this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                            break
+                        case 6:
+                            this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                            break
+                        case 7:
+                            this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                            break
+                        case 8:
+                            this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                            break
+                        case 9:
+                            this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                            break
+                        default:
+                            this.$message.error(res.msg)
+                            break
+                    }
+                    this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
+                    this.$router.go(-1)
+                    return
+                }
+                this.gas = res.gas
+            })
+
             // fetch gas price
-            axios.get('http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price')
+            axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)
                 .then(res => {
                     // console.log('axios.get',res)
                     if (res.status !== 200) {
@@ -208,9 +257,12 @@
                     this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
                 })
                 .catch(err => {
+                    this.$walletLogs.info(`获取gas_price失败, ${err.message}`)
                     this.$message.error(new Error(err.message))
+                    this.$router.go(-1)
                 })
                 .finally(() => {
+                    this.loading = false
                     this.gasPrice = +this.gasPriceRange.medium
                 })
         },

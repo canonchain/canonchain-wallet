@@ -20,7 +20,7 @@
 <script>
     const fs = require("fs");
     const path = require("path");
-    const {remote, app, shell} = require("electron");
+    const {remote, app, shell, ipcRenderer} = require("electron");
     const axios = require("axios");
     const download = require("download");
     const {spawn, spawnSync} = require("child_process");
@@ -33,7 +33,7 @@
     const dialog = remote.dialog
 
 
-    let continued = 500;
+    let continued = 1000;
 
     let self = null;
     export default {
@@ -48,7 +48,9 @@
                 walletVer: packageJson.version,
                 conMsg: "",
                 backgroundImage: "url(" + require("@/assets/img/banner.png") + ")",
-                binariesIsDownloaded: false
+                binariesIsDownloaded: false,
+                canonchainProcess: null,
+                countTry:0,
             };
         },
         created() {
@@ -57,6 +59,24 @@
             this.userDataPath = APP.getPath("userData");
             this.initConfig();
             this.validity();
+            // check vc2015 success
+            ipcRenderer.on('vc2015-exists', () => {
+                // this.$czr.request.status()
+                //     .then(() => {
+                //         this.canonchainProcess.removeAllListeners('error')
+                //         this.canonchainProcess.removeAllListeners('close')
+                //         this.guardNode(this.canonchainProcess, path.join(
+                //             this.userDataPath,
+                //             "download",
+                //             this.node_info.binaryVersion.bin
+                //         ))
+                //     })
+                //     .catch(err => {
+                //
+                //     })
+                // 继续尝试启动节点
+                // this.tryConnentNode()
+            })
         },
         computed: {},
         methods: {
@@ -86,7 +106,7 @@
                 self.latest_config = {
                     content: "",
                     BINARY_URL:
-                    "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" + radom
+                        "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" + radom
                 };
                 self.node_info = {
                     NODE_TYPE: "CanonChain",
@@ -191,7 +211,7 @@
                         'Connection': 'keep-alive'
                     },
                     extract: true,
-                    timeout: 1000 * 60
+                    timeout: 1000 * 60,
                 };
 
                 if (flag) {
@@ -204,6 +224,7 @@
 
                     download(
                         this.node_info.binaryVersion.url + radom,
+                        // `http://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip?t=${Date.now()}`,
                         options.directory,
                         options
                     ).then(() => {
@@ -247,6 +268,7 @@
 
                         download(
                             this.node_info.binaryVersion.url + radom,
+                            // `http://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip?t=${Date.now()}`,
                             options.directory,
                             options
                         ).then(() => {
@@ -304,7 +326,7 @@
                         if (!dir) {
                             dir = path.join(remote.app.getPath('appData'), "Canonchain")
                         }
-                        let ls = spawn(nodePath, [
+                        this.canonchainProcess = spawn(nodePath, [
                             "--daemon",
                             "--rpc",
                             "--rpc_control",
@@ -313,6 +335,22 @@
                         ], {
                             stdio: ['ignore', 'ignore', 'pipe']
                         });
+                        this.canonchainProcess.on('error', err => {
+                            this.$walletLogs.error('canonchain子进程error事件', err.stack)
+                        })
+                        this.canonchainProcess.on('close', (code, sig) => {
+                            this.$walletLogs.error(`canonchain子进程close, 收到信号 ${sig} 而终止`)
+                            ipcRenderer.send('check-vc2015')
+                        })
+                        this.canonchainProcess.on('exit', (code, sig) => {
+                            this.$walletLogs.error(`canonchain子进程exit, 收到信号 ${sig} 而终止`)
+                        })
+                        setTimeout(()=>{
+                            this.canonchainProcess.removeAllListeners('error')
+                            this.canonchainProcess.removeAllListeners('close')
+                            this.canonchainProcess.removeAllListeners('exit')
+                            this.guardNode(this.canonchainProcess, nodePath);
+                        }, 5000)
                         // ls.stderr.on('data', (data) => {
                         //     ls.removeAllListeners('exit')
                         //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
@@ -322,32 +360,39 @@
                         //         }
                         //     });
                         // });
-                        ls.stderr.on('data', (data) => {
-                            self.$walletLogs.error(`canonchain stderr: ${data}`);
+                        this.canonchainProcess.stderr.on('data', (data) => {
+                            self.$startLogs.error(`canonchain stderr: ${data}`);
                         });
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
                         self.conMsg = self.$t("page_config.content_msg.enter_wallet");
-                        self.$startLogs.info("CanonChainPid", ls.pid);
-                        sessionStorage.setItem("CanonChainPid", ls.pid);
+                        self.$startLogs.info("CanonChainPid", this.canonchainProcess.pid);
+                        sessionStorage.setItem("CanonChainPid", this.canonchainProcess.pid);
                         //进程守护
-                        self.guardNode(ls, nodePath);
+                        // self.guardNode(ls, nodePath);
                         self.onlineTimer();
-                        // self.$router.push({ path: "home" });
                     });
             },
             onlineTimer() {
-                self.timer = setTimeout(() => {
-                    self.$czr.request
-                        .status()
+                self.timer = setInterval(() => {
+                    self.$czr.request.status()
                         .then(res => {
                             //清除定时器，
-                            clearTimeout(self.timer);
+                            clearInterval(self.timer);
                             self.timer = null;
                             self.$startLogs.error("Page Config : Online Success");
                             self.$router.push({path: "home"});
                         })
                         .catch(error => {
+                            this.countTry += 1;
+                            if(this.countTry > 60){
+                                dialog.showMessageBox({
+                                    type: 'info',
+                                    message: '节点未能启动，请联系客服获取支持',
+                                }, function (response) {
+                                    remote.app.quit()
+                                })
+                            }
                             self.onlineTimer();
                             self.online = false;
                             self.$startLogs.error(
@@ -369,17 +414,18 @@
                         "--data_path",
                         dir
                     ], {
-                        stdio: ['ignore', 'ignore', 'ignore']
+                        stdio: ['ignore', 'ignore', 'pipe']
                     });
-                    // ls.stderr.on('data', (data) => {
-                    //     ls.removeAllListeners('exit')
-                    //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
-                    //         confirmButtonText: self.$t('page_config.confirm'),
-                    //         callback: () => {
-                    //             remote.app.quit()
-                    //         }
-                    //     });
-                    // });
+                    ls.stderr.on('data', (data) => {
+                        this.$startLogs.error(`canonchain stderr: ${data}`);
+                        //     ls.removeAllListeners('exit')
+                        //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
+                        //         confirmButtonText: self.$t('page_config.confirm'),
+                        //         callback: () => {
+                        //             remote.app.quit()
+                        //         }
+                        //     });
+                    });
                     sessionStorage.setItem("CanonChainPid", ls.pid);
                     self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);
                     self.guardNode(ls, nodePath);
@@ -392,7 +438,10 @@
                 //   self.$walletLogs.info(`stderr: ${data}`);
                 // });
             }
-        }
+        },
+        beforeDestroy() {
+            clearInterval(this.timer)
+        },
     };
 </script>
 
@@ -412,20 +461,24 @@
         width: 100%;
         -webkit-user-select: none;
     }
+
     .icon-config {
         width: 100%;
         text-align: center;
         margin-top: 100px;
     }
+
     .icon-config .el-icon-loading {
         font-size: 42px;
         margin-bottom: 10px;
         color: #fff;
     }
+
     .config-test {
         color: #fff;
         font-size: 16px;
     }
+
     .icon-config .message {
         margin-top: 50px;
         color: #fff;
