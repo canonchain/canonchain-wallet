@@ -14,7 +14,6 @@ const languges = require('../../i18n/languges_conf');
 const APP = process.type === 'renderer' ? remote.app : app
 const STORE_PATH = APP.getPath('userData')
 const BACKUP_PATH = path.join(STORE_PATH, 'AccountBackup')
-console.log('BACKUP_PATH', BACKUP_PATH)
 
 //Production mode initialization path
 if (process.type !== 'renderer') {

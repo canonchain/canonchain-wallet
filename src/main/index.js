@@ -15,18 +15,15 @@ if (!fs.existsSync(BACKUP_PATH)) {
     fs.mkdirSync(BACKUP_PATH)
 }
 
-
-(function () {
+ipcMain.on('check-vc2015', () => {
     if (process.platform === 'win32') { // check vc2015
 
         if (process.arch !== 'x64') {
-            app.on('ready', () => {
-                dialog.showMessageBox({
-                    type: 'info',
-                    message: '请使用64位系统运行钱包程序，32位系统可能出现异常',
-                }, function (response) {
+            dialog.showMessageBox({
+                type: 'info',
+                message: '请使用64位系统运行钱包程序，32位系统可能出现异常',
+            }, function (response) {
 
-                })
             })
             return
         }
@@ -100,10 +97,12 @@ if (!fs.existsSync(BACKUP_PATH)) {
         promiseAny(keys.map(({hive, key}) => getRegKey(hive, key, 'Version')))
             .then(registryItem => {
                 mainLogs.info(`系统已安装Visual C++ Redistributable for Visual Studio 2015, ${JSON.stringify(registryItem)}`)
+                ipcMain.send('vc2015-exists')
             })
             .catch(errs => {
                 if (fs.existsSync(path.join(process.env.SystemRoot, 'SysWOW64', 'msvcp140.dll'))) {
                     mainLogs.info(`系统已存在msvcp140.dll`)
+                    ipcMain.send('vc2015-exists')
                     return
                 }
                 mainLogs.info(`系统未检测到Visual C++ Redistributable for Visual Studio 2015`)
@@ -145,7 +144,7 @@ if (!fs.existsSync(BACKUP_PATH)) {
                 })
             })
     }
-})()
+})
 
 let menu;
 // const path          = require('path');
