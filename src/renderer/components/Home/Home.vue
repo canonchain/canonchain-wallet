@@ -252,7 +252,7 @@
             async initDatabase() {
                 // anbang 查找所有账户
                 // self.database = self.$db.get("czr_accounts").value();
-                self.database = await this.$nedb.account.find();
+                self.database = await this.$nedb.account.sort({ createdAt: 1 }).find();
             },
             //Init Start
             initCreateInfo() {

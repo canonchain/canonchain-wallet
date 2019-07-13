@@ -86,7 +86,7 @@
                 
                 try {
                     // find
-                    let langRes = await self.nedb_language.sort({ _id: -1 }).find();
+                    let langRes = await self.nedb_language.sort({ createdAt: -1 }).find();
                     console.log("langRes",langRes)
                     //count
                     let countRes = await self.nedb_language.count();

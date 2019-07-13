@@ -9,6 +9,7 @@ function NEDB(database_name) {
         filename: path.join(STORE_PATH, `czr_${database_name}.db`),
         // filename: path.join("./build/data", `czr_${database_name}.db`),
         autoload: true,
+        timestampData: true
     };
     this.nedb = new Datastore(options);
 }

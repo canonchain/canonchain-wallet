@@ -689,7 +689,7 @@
                 // _current.sourcesAry.sort((a, b) => {
                 //     return b.send_timestamp - a.send_timestamp;
                 // });
-                _current.sourcesAry = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
+                _current.sourcesAry = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
                 // console.log("_current.sourcesAry",_current.sourcesAry)
                 if (isFirstInit) {
                     self.createSendDefault();
@@ -786,11 +786,11 @@
                 }
                 if (!txListAry.length) {
                     // txListAry = this.$db.get(`send_list.${this.address}`).value()
-                    txListAry = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
+                    txListAry = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
                 }
                 if (!currentList.length) {
                     // currentList = this.$db.get(`send_list.${this.address}`).value()
-                    currentList = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
+                    currentList = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
                 }
 
                 //@anbang 查找account账户(address,tag,banance send_list)
@@ -800,7 +800,7 @@
                 //     .filter({address: this.address})
                 //     .value()[0];
                 this.accountInfo = await this.$nedb.account.findOne({"address":this.address});
-                console.log("accountInfo",this.accountInfo);
+                // console.log("accountInfo",this.accountInfo);
 
                 this.accountInfo.keystore = keystoreFile;
                 self.accountInfo.currentTxList = currentList;
@@ -1028,7 +1028,7 @@
                 //     .write();
                 let updateInfo={tag: this.editTag}
                 let aloneUpdateRes = await this.$nedb.account.update({"address":this.address},{ $set: updateInfo });
-                console.log("aloneUpdateRes",aloneUpdateRes);
+                // console.log("aloneUpdateRes",aloneUpdateRes);
 
                 this.accountInfo.tag = this.editTag;
                 this.dialogSwitch.editName = false;

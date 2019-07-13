@@ -305,12 +305,7 @@
                 /**
                  * @wgy:获取当前账户列表
                  */
-                // this.database = await this.$nedb.account.find();
-                this.database = [{
-                    "address": "czr_32L5SFeC4J8GaK1bXnLniSURVvLq1w4eYg3YsgEezRiM8E23is",
-                    "tag": "账户1",
-                    "balance": "1.000000000001e+23"
-                }]
+                this.database = await this.$nedb.account.find();
             },
             //选择联系人
             confrimContacts() {

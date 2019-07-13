@@ -87,7 +87,7 @@ export default {
         self = this;
         //@gaoxiang 获取$nedb.contact列表，更新database
         //this.database = this.$db.get("czr_contacts.contact_ary").value();
-        this.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
+        this.database = await self.$nedb.contact.sort({ createdAt: 1 }).find();
     },
     methods: {
         initCreateInfo() {
@@ -185,7 +185,7 @@ export default {
 
             //@gaoxiang 获取$nedb.contact列表，更新database
             // self.database = self.$db.get("czr_contacts.contact_ary").value();
-            self.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
+            self.database = await self.$nedb.contact.sort({ createdAt: 1 }).find();
 
             self.$message.success(
                 self.$t("page_contacts.add_cont.add_success")
@@ -206,7 +206,7 @@ export default {
             //     .read()
             //     .get("czr_contacts.contact_ary")
             //     .value();
-            self.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
+            self.database = await self.$nedb.contact.sort({ createdAt: 1 }).find();
 
             //提示成功
             self.$message.success(
