@@ -222,17 +222,17 @@
     "confirm":"determine",
     "content_msg": {
       "ready_test":"Prepare to detect the configuration file",
-      "network_latest": "检测是否有新的 CanonChain 节点文件",
+      "network_latest": "检测是否有新的 Canonchain 节点文件",
       "get_latest":"The latest node configuration information has been obtained",
       "is_local":"Check if there is a node file locally",
       "already_local":"The configuration file of the node file exists on the current device.",
       "not_local":"The configuration information of the node file is not detected, it may be the first time running.",
       "config_write_local":"Write the obtained node information file to the local disk",
       "whether_update_node":"Check if an update is needed",
-      "no_need": "本地 CanonChain 节点文件是最新的",
-      "need": "本地 CanonChain 节点文件是老版本",
-      "is_local_node": "检测当前设备是否有 CanonChain 节点文件",
-      "have": "当前设备已存在 CanonChain 节点文件",
+      "no_need": "本地 Canonchain 节点文件是最新的",
+      "need": "本地 Canonchain 节点文件是老版本",
+      "is_local_node": "检测当前设备是否有 Canonchain 节点文件",
+      "have": "当前设备已存在 Canonchain 节点文件",
       "no":"Downloading node program, please be patient",
       "already_downloaded":"The node program has been downloaded and ready to start.",
       "ready_start":"Prepare to start the node",
@@ -242,7 +242,7 @@
     "version_dialog": {
       "version_tit":"Version update prompt",
       "download_wallet":"Go to the official website to download the latest version of the money",
-      "wallet_disabled": "CanonChain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
+      "wallet_disabled": "Canonchain Wallet 已经有新版本，当前版本已停用,请至官网下载最新版钱包。"
     }
   }
 }

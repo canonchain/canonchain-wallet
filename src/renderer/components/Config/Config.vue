@@ -32,7 +32,6 @@
 
     const dialog = remote.dialog
 
-
     let continued = 1000;
 
     let self = null;
@@ -122,7 +121,7 @@
 
             checkForNewConfig() {
                 self.conMsg = self.$t("page_config.content_msg.network_latest");
-                self.$startLogs.info(`检测是否有新的 CanonChain 节点文件，从${self.latest_config.BINARY_URL}获取`);
+                self.$startLogs.info(`检测是否有新的 Canonchain 节点文件，从${self.latest_config.BINARY_URL}获取`);
                 axios.get(self.latest_config.BINARY_URL)
                     .then(response => {
                         self.latest_config.content = response.data;
@@ -190,11 +189,11 @@
                 );
                 if (latestVer == localVer) {
                     self.conMsg = self.$t("page_config.content_msg.no_need");
-                    self.$startLogs.info("本地 CanonChain 节点文件是最新的");
+                    self.$startLogs.info("本地 Canonchain 节点文件是最新的");
                     this.isDownload();
                 } else {
                     self.conMsg = self.$t("page_config.content_msg.need");
-                    self.$startLogs.info("本地 CanonChain 节点文件是老版本");
+                    self.$startLogs.info("本地 Canonchain 节点文件是老版本");
                     this.isDownload(true);
                 }
             },
@@ -237,7 +236,7 @@
                         this.writeLocalConfig(this.latest_config.content);
                         self.conMsg = self.$t("page_config.content_msg.already_downloaded");
                         self.$startLogs.info("节点程序已经下载好");
-                        self.runCanonChain();
+                        self.runCanonchain();
                     }).catch(error => {
                         self.$startLogs.info("Error");
                         self.$startLogs.info(error);
@@ -245,7 +244,7 @@
                 } else {
                     //判断是否有 CanonChain
                     self.conMsg = self.$t("page_config.content_msg.is_local_node");
-                    self.$startLogs.info("检测当前设备是否有 CanonChain 节点文件");
+                    self.$startLogs.info("检测当前设备是否有 Canonchain 节点文件");
                     try {
                         // console.log(options.directory)
                         self.$startLogs.info(
@@ -262,8 +261,8 @@
                             )
                         );
                         self.conMsg = self.$t("page_config.content_msg.have");
-                        self.$startLogs.info("当前设备已存在 CanonChain 节点文件");
-                        self.runCanonChain();
+                        self.$startLogs.info("当前设备已存在 Canonchain 节点文件");
+                        self.runCanonchain();
                     } catch (err) {
                         self.conMsg = self.$t("page_config.content_msg.no");
                         self.$startLogs.info(
@@ -280,7 +279,7 @@
                         ).then(() => {
                             self.conMsg = self.$t("page_config.content_msg.already_downloaded");
                             self.$startLogs.info("节点程序已经下载好");
-                            self.runCanonChain();
+                            self.runCanonchain();
                         }).catch(error => {
                             self.$startLogs.info("Error");
                             self.$startLogs.info(error);
@@ -301,13 +300,13 @@
                 if (!res) return
                 return res[0]
             },
-            runCanonChain() {
+            runCanonchain() {
                 let nodePath = path.join(
                     this.userDataPath,
                     "download",
                     this.node_info.binaryVersion.bin
                 );
-                self.$startLogs.info("准备启动 CanonChain :", nodePath);
+                self.$startLogs.info("准备启动 Canonchain :", nodePath);
                 self.conMsg = self.$t("page_config.content_msg.ready_start");
 
                 //如果节点启动了，就不再启用了
@@ -373,8 +372,8 @@
                         self.$db.set('czr_setting.canonchain_data_path', dir).write()
 
                         self.conMsg = self.$t("page_config.content_msg.enter_wallet");
-                        self.$startLogs.info("CanonChainPid", this.canonchainProcess.pid);
-                        sessionStorage.setItem("CanonChainPid", this.canonchainProcess.pid);
+                        self.$startLogs.info("CanonchainPid", this.canonchainProcess.pid);
+                        sessionStorage.setItem("CanonchainPid", this.canonchainProcess.pid);
                         //进程守护
                         // self.guardNode(ls, nodePath);
                         self.onlineTimer();
@@ -421,7 +420,7 @@
             },
             guardNode(ls, nodePath) {
                 self.$nodeLogs.info("守护进程开启", ls.pid);
-                sessionStorage.setItem("CanonChainPid", ls.pid);
+                sessionStorage.setItem("CanonchainPid", ls.pid);
                 ls.on("exit", () => {
                     const dir = self.$db.get('czr_setting.canonchain_data_path').value()
                     ls = spawn(path.join(nodePath), [
@@ -444,8 +443,8 @@
                         //         }
                         //     });
                     });
-                    sessionStorage.setItem("CanonChainPid", ls.pid);
-                    self.$nodeLogs.info("守护进程生效，新的CanonChainPid", ls.pid);
+                    sessionStorage.setItem("CanonchainPid", ls.pid);
+                    self.$nodeLogs.info("守护进程生效，新的CanonchainPid", ls.pid);
                     self.guardNode(ls, nodePath);
                 });
                 // ls.stdout.on('data', (data) => {
@@ -456,6 +455,9 @@
                 //   self.$walletLogs.info(`stderr: ${data}`);
                 // });
             }
+        },
+        mounted(){
+            // MyUndefinedFn();
         },
         beforeDestroy() {
             clearInterval(this.timer)
