@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import '../sentry'
 import App from './App'
 import router from './router'
 import store from './store'

@@ -184,12 +184,12 @@
 
     app.on("quit", () => {
         //应用程序正在退出
-        self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonChainPid"));
-        if(!sessionStorage.getItem("CanonChainPid")){
+        self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonchainPid"));
+        if(!sessionStorage.getItem("CanonchainPid")){
             self.$nodeLogs.info("不需要kill Canonchain");
             return
         }
-        let currentPid = Number(sessionStorage.getItem("CanonChainPid"));
+        let currentPid = Number(sessionStorage.getItem("CanonchainPid"));
         let result = process.kill(currentPid, "SIGINT");
         self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
         self.$czr.request.stop().then(data => {
@@ -417,7 +417,7 @@
                 self.createInfo.pwd = "";//初始化密码
                 if (accountResult.account) {
                     /* 创建成功, 备份keystore */
-                    fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountResult.account}.json`), JSON.stringify(accountResult))
+                    this.backupAccount(accountResult)
 
                     self.createInfo.keystore = JSON.stringify(accountResult);
                     self.createInfo.address = accountResult.account;
@@ -437,6 +437,9 @@
                     self.$walletLogs.error("Account Create Error");
                     self.$message.error("Account Create Error");
                 }
+            },
+            backupAccount(accountObj){
+                fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`), JSON.stringify(accountObj))
             },
             downloadKeystore(accVal) {
                 let link = document.createElement("a");
@@ -509,6 +512,8 @@
                     }
 
                     this.importInfo.keystore = data;
+                    // console.log('importData ', data)
+                    this.backupAccount(JSON.parse(data))
                     this.importInfo.alert = {
                         content: this.$t("page_home.import_dia.imported_success"),
                         type: "success"

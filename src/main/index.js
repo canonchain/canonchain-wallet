@@ -1,3 +1,4 @@
+require('../sentry/index');
 import {app, BrowserWindow, Menu, dialog, ipcMain} from 'electron'
 // import { app, BrowserWindow, Tray, Menu, Notification, clipboard, ipcMain, globalShortcut, dialog } from 'electron'
 // const ClientBinaryManager = require('../../modules/clientBinaryManager');
@@ -206,18 +207,21 @@ if (!gotTheLock) {
     app.on('activate', activateFn);//On OS X, when you click the Dock icon and no other window is open, a window is usually recreated in the application.
 }
 
-
 function createWindow() {
     // Create browser window
+    console.log('sentry path ', path.join(__dirname, '..', 'sentry', 'index.js'))
     mainWindow = new BrowserWindow({
         width: 815,
         height: 600,
         icon: "./static/icons/logo.png",
-        title: "CanonChain Wallet",
+        title: `Canonchain Wallet - ${app.getVersion()}`,
         resizable: false,
         fullscreenable: false,
         autoHideMenuBar: true,
-        useContentSize: true
+        useContentSize: true,
+        // webPreferences: {
+        //     preload: path.join(__dirname, '..', 'sentry', 'index.js')
+        // }
     });
 
     mainWindow.loadURL(winURL);
@@ -247,7 +251,7 @@ function activateFn() {
 }
 
 //Solve the production environment can not use copy and paste
-const createMenu = () => {
+function createMenu() {
     if (process.env.NODE_ENV !== 'development') {
         const template = [{
             label: 'Edit',
