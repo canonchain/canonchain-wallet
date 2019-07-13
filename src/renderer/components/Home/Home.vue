@@ -95,7 +95,8 @@
                     <div v-if="!importInfo.keystore" class="holder" @dragover.prevent.stop
                          @drop.prevent.stop="importKeystore">
                         {{$t('page_home.import_dia.placeholder_keystore')}}
-                        <!--<el-button size="mini">选择文件</el-button>-->
+                        &nbsp;
+                        <el-button size="mini" @click="selectImport">选择文件</el-button>
                     </div>
                     <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
                         <template slot="prepend">
@@ -147,6 +148,7 @@
     const {spawn, spawnSync} = require("child_process");
     const {ipcRenderer} = require('electron')
     import BigNumber from 'bignumber.js/bignumber.mjs'
+
     const path = require('path')
 
     let self = null;
@@ -162,7 +164,7 @@
         targetAry: []    //筛选后，需要更新的Blocks
     }
 
-    const app = require("electron").remote.app;
+    const {app, dialog} = require("electron").remote;
 
     // app.on('before-quit', () => {
     //     self.$nodeLogs.info("before-quit start");
@@ -182,7 +184,7 @@
 
     app.on("quit", () => {
         //应用程序正在退出
-        self.$nodeLogs.info("quit start and stop");
+        self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonChainPid"));
         let currentPid = Number(sessionStorage.getItem("CanonChainPid"));
         let result = process.kill(currentPid, "SIGINT");
         self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
@@ -248,6 +250,30 @@
             self.timerSwitch.initAccount = null;
         },
         methods: {
+            selectImport() {
+                console.log('selectImport')
+                dialog.showOpenDialog({
+                    title: '请选择keytore文件',
+                    properties: ['openFile'],
+                    filters:[
+                        {name:'Account File', extensions: ['json']}
+                    ],
+                }, (filePaths) => {
+                    if (filePaths) {
+                        // hack importKeystore
+                        let fakeE = {
+                            dataTransfer: {
+                                files: [
+                                    {
+                                        path: filePaths[0]
+                                    }
+                                ]
+                            }
+                        }
+                        this.importKeystore(fakeE)
+                    }
+                })
+            },
             initDatabase() {
                 self.database = self.$db.get("czr_accounts").value();
             },
@@ -394,9 +420,9 @@
                     let params = {
                         address: accountResult.account,
                         tag:
-                        self.createInfo.tag ||
-                        self.$t("page_home.acc") +
-                        (self.database.length + 1),
+                            self.createInfo.tag ||
+                            self.$t("page_home.acc") +
+                            (self.database.length + 1),
                         balance: 0,
                         send_list: []
                     };
@@ -518,9 +544,9 @@
                 let params = {
                     address: importObj.account,
                     tag:
-                    self.importInfo.tag ||
-                    self.$t("page_home.acc") +
-                    (self.database.length + 1),
+                        self.importInfo.tag ||
+                        self.$t("page_home.acc") +
+                        (self.database.length + 1),
                     balance: 0,
                     send_list: []
                 };
@@ -595,7 +621,8 @@
                 self.$czr.request
                     .accountsBalances(aryForBalans)
                     .then(res => {
-                        // console.log('accountsBalances2', res)
+                        console.log('accountsBalances res ', res)
+                        console.log('aryForBalans ', aryForBalans)
                         if (res.code !== 0) {
                             return self.$walletLogs.info(
                                 `Accounts Balances Error ${res.msg}`
@@ -696,6 +723,7 @@
 <style scoped>
     .page-czr-home {
     }
+
     .home-banner {
         width: 100%;
         text-align: center;
@@ -707,10 +735,12 @@
                 #5a59a0 100%
         );
     }
+
     .home-banner .icon-logo {
         color: #fff;
         font-size: 80px;
     }
+
     .holder {
         display: flex;
         align-items: center;
@@ -721,6 +751,7 @@
         margin-bottom: 10px;
         border-radius: 4px;
     }
+
     /* account */
     .account-wrap {
         /* padding-top: 64px; */
@@ -731,6 +762,7 @@
         margin-left: -20px;
         flex-wrap: wrap;
     }
+
     .accounrt-item {
         width: 218px;
         text-align: center;
@@ -743,6 +775,7 @@
         -webkit-user-select: none;
         border-radius: 5px;
     }
+
     .accounrt-item.add-account {
         border: 1px dashed #dddddd;
         padding-top: 24px;
@@ -752,10 +785,12 @@
         /* background: linear-gradient(white,white) padding-box,
         repeating-linear-gradient(-45deg,#ccc 0, #ccc 2px ,white 0,white 8px); */
     }
+
     .accounrt-item .account-assets {
         font-size: 24px;
         color: #2d2b5d;
     }
+
     /* .accounrt-item .account-avatar{
       position: absolute;
       top: -32px;
@@ -774,6 +809,7 @@
         height: 40px;
         background: #4d4d8f;
     }
+
     .accounrt-item .account-avatar:before {
         content: "";
         position: absolute;
@@ -785,6 +821,7 @@
         border-right: 32px solid transparent;
         border-bottom: 16px solid #4d4d8f;
     }
+
     .accounrt-item .account-avatar:after {
         content: "";
         position: absolute;
@@ -796,11 +833,13 @@
         border-right: 32px solid transparent;
         border-top: 16px solid #4d4d8f;
     }
+
     .accounrt-item .account-avatar .ico-avatar {
         color: #fff;
         font-size: 34px;
         margin-top: -5px;
     }
+
     .accounrt-item .delete-acc {
         position: absolute;
         right: 10px;
@@ -810,9 +849,11 @@
         text-align: center;
         color: rgb(204, 204, 204);
     }
+
     .accounrt-item .delete-acc:hover {
         color: #2d2b5d;
     }
+
     .accounrt-item .account-address {
         max-width: 220px;
         margin-top: 12px;
@@ -821,19 +862,24 @@
         word-break: break-all;
         overflow: hidden;
     }
+
     .accounrt-item .account-cont {
         margin-top: 10px;
     }
+
     .accounrt-item .icon-add-acc {
         font-size: 48px;
         color: #9a9c9d;
     }
+
     .accounrt-item .add-acc-des {
         color: #9a9c9d;
     }
+
     .demo-hist {
         margin-top: 200px;
     }
+
     .remove-acc {
         padding: 10px 0;
         width: 100%;
@@ -843,9 +889,11 @@
         overflow: hidden;
         color: #f56c6c;
     }
+
     .el-dialog h2 {
         font-weight: 400;
     }
+
     .el-dialog .text,
     .el-dialog .el-textarea,
     .el-dialog .el-alert,
@@ -853,12 +901,15 @@
     .el-dialog .text {
         margin-bottom: 10px;
     }
+
     .el-dialog .el-input .el-input-group__prepend {
         width: 200px;
     }
+
     .import-type-wrap {
         text-align: center;
     }
+
     .account-remark {
         width: 150px;
         margin: 0 auto;

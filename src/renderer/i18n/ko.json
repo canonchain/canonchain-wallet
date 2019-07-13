@@ -218,6 +218,7 @@
   "page_config": {
     "config_detection":"구성 탐지",
     "start_node_err":"노드 시작 실패",
+    "connect_node_err": "Connect node failed",
     "confirm":"결정",
     "content_msg": {
       "ready_test":"구성 파일 검색 준비",

@@ -121,7 +121,7 @@
     "checkNow":"立即查看",
     "active_icon": {
       "go_transfer":"发起转账",
-      "import_keystore":"账户文件",
+      "import_keystore":"账户导出",
       "qrcode":"二维码"
     },
     "edit_dia": {

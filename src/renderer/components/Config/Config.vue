@@ -171,6 +171,8 @@
             },
             isUpdate() {
                 // 如果新的配置版本可用，然后询问用户是否希望更新
+                // console.log('this.node_info.NODE_TYPE', this.node_info.NODE_TYPE)
+                // console.log('this.latest_config.content.clients', this.latest_config.content.clients)
                 let latestVer = this.latest_config.content.clients[
                     this.node_info.NODE_TYPE
                     ].version;
@@ -374,6 +376,9 @@
                     });
             },
             onlineTimer() {
+                if(self.timer) {
+                    clearInterval(self.timer)
+                }
                 self.timer = setInterval(() => {
                     self.$czr.request.status()
                         .then(res => {
@@ -384,14 +389,18 @@
                             self.$router.push({path: "home"});
                         })
                         .catch(error => {
+                            // console.log('status 失败',this.countTry)
                             this.countTry += 1;
                             if(this.countTry > 60){
+                                clearInterval(self.timer);
+                                self.$startLogs.error('节点未能启动，请联系客服获取支持');
                                 dialog.showMessageBox({
                                     type: 'info',
-                                    message: '节点未能启动，请联系客服获取支持',
+                                    message: '连接节点失败',
                                 }, function (response) {
                                     remote.app.quit()
                                 })
+                                return
                             }
                             self.onlineTimer();
                             self.online = false;

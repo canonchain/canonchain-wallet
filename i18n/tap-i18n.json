@@ -4,6 +4,9 @@
   "dialog_tit": "提示",
   "close": "关闭",
   "confirm_you_active": "请确认您的操作",
+  "main_process": {
+    "need64bit": "请使用64位系统运行钱包程序，32位系统可能出现异常"
+  },
   "rpcErrors": {
     "invalidFromAccount": "发款方账户无效",
     "invalidToAccount": "收款方账户无效",
@@ -121,7 +124,7 @@
     "checkNow": "立即查看",
     "active_icon": {
       "go_transfer": "发起转账",
-      "import_keystore": "账户文件",
+      "import_keystore": "账户导出",
       "qrcode": "二维码"
     },
     "edit_dia": {
@@ -218,6 +221,7 @@
   "page_config": {
     "config_detection": "配置检测中",
     "start_node_err": "节点启动失败",
+    "connect_node_err": "连接节点失败",
     "confirm":"确定",
     "content_msg": {
       "ready_test": "准备检测配置文件",

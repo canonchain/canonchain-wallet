@@ -218,6 +218,7 @@
   "page_config": {
     "config_detection":"Configuration detection",
     "start_node_err":"Node startup failed",
+    "connect_node_err": "Connect node failed",
     "confirm":"determine",
     "content_msg": {
       "ready_test":"Prepare to detect the configuration file",
