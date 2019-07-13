@@ -42,27 +42,60 @@ export default {
     data() {
         return {
             walletVer: packageJson.version,
-            value: this.$db.get("czr_setting.lang").value(),
-            data_path:this.$db.get('czr_setting.canonchain_data_path').value()
+            // value: this.$db.get("czr_setting.lang").value(),                             //@jiandogn  原来的
+            // data_path:this.$db.get('czr_setting.canonchain_data_path').value()           //@jiandogn  原来的
+            
+            //@jiandong 先赋空值，再用其他异步方法赋值
+            value:"",
+            data_path:"",
+            langOptions:[]
         };
     },
-    computed: {
-        langOptions() {
-            let langs = this.$db.get("czr_setting.lang_conf").value();
-            let tempOption = [];
+    created() {
+        this.init(); 
+    },
+    // computed: {
+    //     langOptions() {
+    //         let langs = this.$db.get("czr_setting.lang_conf").value();
+    //         let tempOption = [];
+    //         for (const lang in langs) {
+    //             tempOption.push({
+    //                 value: lang,
+    //                 label: langs[lang]
+    //             });
+    //         }
+    //         return tempOption;
+    //     }
+    // },
+    methods: {
+
+
+        //@jiandong   异步初始化value，data_path，langOptions
+        async init(){
+            let val = await this.$nedb.setting_language_active.findOne({"name":"active"})
+            let pat =  await this.$nedb.setting_node_path.findOne({"name":"node_path"})
+            this.value = val.value
+            this.data_path = pat.path
+
+            let langsArray = await this.$nedb.setting_language.find()
+            console.log(langsArray);
+            let langs = {}
+            langsArray.forEach(element => {
+                langs[element['name']] = element['alias']
+            });
+            let tempOption = []
             for (const lang in langs) {
                 tempOption.push({
                     value: lang,
                     label: langs[lang]
                 });
             }
-            return tempOption;
-        }
-    },
-    methods: {
+            this.langOptions = tempOption;
+        },
+
         changeDataPath(){
             this.$alert(this.$t('page_setting.changeDirNote'),this.$t('page_setting.note'))
-                .then(()=>{
+                .then(async ()=>{
                     const res = dialog.showOpenDialog({
                         title: this.$t("page_config.content_msg.specifyDataDir"),
                         defaultPath: this.data_path,
@@ -70,18 +103,25 @@ export default {
                     })
                     if(!res) return
                     const dir = res[0]
-                    this.$db.set('czr_setting.canonchain_data_path', dir).write()
+                    // this.$db.set('czr_setting.canonchain_data_path', dir).write()                 //@jiandogn  原来的
+
+                    //@jiandong  异步更新节点保存路径
+                    await this.$nedb.setting_node_path.update({name:"node_path"},{ $set: { path: dir } })
                     remote.app.relaunch()
                     remote.app.quit()
                 })
         },
-        selectVal(val) {
+        async selectVal(val) {
             //Write to the database
-            this.$db
-                .read()
-                .set("czr_setting.lang", val)
-                .write();
+            // this.$db                             //@jiandogn  原来的
+            //     .read()
+            //     .set("czr_setting.lang", val)
+            //     .write();
             //Update current language
+            
+
+            //@jiandong  异步改变语言
+            await this.$nedb.setting_language_active.update({name:"active"},{ $set: { value: val } })
             this.$i18n.locale = val;
         }
     }
