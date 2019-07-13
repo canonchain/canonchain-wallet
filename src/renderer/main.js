@@ -10,6 +10,7 @@ import czr from '../czr'
 
 //Introducing db database
 import db from '../datastore/index'
+import nedb from '../datastore/index2';
 
 //Introducing languages that need support
 import VueI18n from 'vue-i18n'
@@ -34,6 +35,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.prototype.$czr = czr;
 
 Vue.prototype.$db = db
+Vue.prototype.$nedb = nedb
 Vue.prototype.$isOnline = true;
 
 

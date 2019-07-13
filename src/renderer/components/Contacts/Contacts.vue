@@ -83,9 +83,11 @@ export default {
             deleteInfo: {}
         };
     },
-    created() {
+    async created() {
         self = this;
-        this.database = this.$db.get("czr_contacts.contact_ary").value();
+        //@gaoxiang 获取$nedb.contact列表，更新database
+        //this.database = this.$db.get("czr_contacts.contact_ary").value();
+        this.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
     },
     methods: {
         initCreateInfo() {
@@ -136,17 +138,20 @@ export default {
                             tag: self.createInfo.tag,
                             address: self.createInfo.address
                         };
-                        if (
-                            !self.$db
-                                .read()
-                                .has("czr_contacts.contact_ary")
-                                .value()
-                        ) {
-                            self.$db
-                                .read()
-                                .set("czr_contacts.contact_ary", [])
-                                .write();
-                        }
+
+                        //@gaoxiang 初始化db，不需要了    
+                        // if (
+                        //     !self.$db
+                        //         .read()
+                        //         .has("czr_contacts.contact_ary")
+                        //         .value()
+                        // ) {
+                        //     self.$db
+                        //         .read()
+                        //         .set("czr_contacts.contact_ary", [])
+                        //         .write();
+                        // }
+
                         self.initAddContact(tempCon);
                     } else {
                         self.$message.error(
@@ -155,37 +160,54 @@ export default {
                     }
                 })
         },
+        async initAddContact(params) {
 
-        initAddContact: params => {
-            let contact = self.$db
-                .get("czr_contacts.contact_ary")
-                .find({ address: params.address })
-                .value();
+            //@gaoxiang 根据address获取$nedb.contact
+            // let contact = self.$db
+            //     .get("czr_contacts.contact_ary")
+            //     .find({ address: params.address })
+            //     .value();
+            let contact = await self.$nedb.contact.findOne({ address: params.address });
+
             if (contact) {
                 self.$message.error(
                     self.$t("page_contacts.msg_info.exist") + contact.tag
                 );
                 return;
             }
-            self.$db
-                .get("czr_contacts.contact_ary")
-                .push(params)
-                .write();
-            self.database = self.$db.get("czr_contacts.contact_ary").value();
+
+            //@gaoxiang 插入$nedb.contact数据，{tag："", address:""}
+            // self.$db
+            //     .get("czr_contacts.contact_ary")
+            //     .push(params)
+            //     .write();
+            await self.$nedb.contact.insert(params);
+
+            //@gaoxiang 获取$nedb.contact列表，更新database
+            // self.database = self.$db.get("czr_contacts.contact_ary").value();
+            self.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
+
             self.$message.success(
                 self.$t("page_contacts.add_cont.add_success")
             );
             self.dialogSwitch.create = false;
         },
-        deleteContact() {
-            self.$db
-                .get("czr_contacts.contact_ary")
-                .remove({ address: self.deleteInfo.address })
-                .write();
-            self.database = self.$db
-                .read()
-                .get("czr_contacts.contact_ary")
-                .value();
+        async deleteContact() {
+
+            //@gaoxiang 根据address删除$nedb.contact记录
+            // self.$db
+            //     .get("czr_contacts.contact_ary")
+            //     .remove({ address: self.deleteInfo.address })
+            //     .write();
+            await self.$nedb.contact.remove({ address: self.deleteInfo.address });
+
+            //@gaoxiang 获取$nedb.contact列表，更新database
+            // self.database = self.$db
+            //     .read()
+            //     .get("czr_contacts.contact_ary")
+            //     .value();
+            self.database = await self.$nedb.contact.sort({ tag:1, _id: 1 }).find();
+
             //提示成功
             self.$message.success(
                 self.$t("page_contacts.delete_dialog.remove_success")

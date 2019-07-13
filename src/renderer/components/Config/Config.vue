@@ -40,6 +40,7 @@
         name: "Config",
         data() {
             return {
+                nedb_language:this.$nedb.setting_language,
                 versionDialogSwitch: false,
                 latest_config: {},
                 local_config: {},
@@ -77,9 +78,49 @@
                 // 继续尝试启动节点
                 // this.tryConnentNode()
             })
+            self.demo();
         },
         computed: {},
         methods: {
+            async demo(){
+                
+                try {
+                    // find
+                    let langRes = await self.nedb_language.sort({ _id: -1 }).find();
+                    console.log("langRes",langRes)
+                    //count
+                    let countRes = await self.nedb_language.count();
+                    console.log("countRes",countRes)
+
+                    // insert
+                    let insertRes = await this.$nedb.account_tx.insert([{ name: "11", age: 14 }, { name: "12", age: 14 }, { name: "13", age: 14 },{ name: "14", age: 14 },{ name: "15", age: 14 },{ name: "16", age: 14 }]);
+                    console.log("insertRes",insertRes)
+                    
+                    //remove
+                    let aloneRemoverRes = await this.$nedb.account_tx.remove({name:"15"});
+                    console.log("aloneRemoverRes",aloneRemoverRes)
+
+                    //multi remover
+                    let removerRes = await this.$nedb.account_tx.remove({name:{$in:["13","14"]}},{ multi: true });
+                    console.log("removerRes",removerRes)
+
+                    //update
+                    let aloneUpdateRes = await this.$nedb.account_tx.update({name:"16"},{ $set: { age: 199 } });
+                    console.log("aloneUpdateRes",aloneUpdateRes)
+
+                    //findone
+                    let findoneRes = await this.$nedb.account_tx.findOne({ name: "11" });
+                    console.log("findoneRes",findoneRes)
+
+                    // find
+                    let findRes = await this.$nedb.account_tx.find();
+                    console.log("findRes",findRes)
+
+                } catch (error) {
+                    console.error("捕获错误")
+                    console.error(error)
+                }
+            },
             validity() {
                 self.checkForNewConfig();
                 /*
