@@ -41,6 +41,7 @@
         data() {
             return {
                 nedb_language:this.$nedb.setting_language,
+                checkUpdateEnd: process.env.NODE_ENV !== 'production',
                 versionDialogSwitch: false,
                 latest_config: {},
                 local_config: {},
@@ -51,7 +52,7 @@
                 backgroundImage: "url(" + require("@/assets/img/banner.png") + ")",
                 binariesIsDownloaded: false,
                 canonchainProcess: null,
-                countTry:0,
+                countTry: 0,
             };
         },
         created() {
@@ -60,6 +61,9 @@
             this.userDataPath = APP.getPath("userData");
             this.initConfig();
             this.validity();
+            ipcRenderer.on('check-update-end', () => {
+                this.checkUpdateEnd = true
+            })
             // check vc2015 success
             ipcRenderer.on('vc2015-exists', () => {
                 // this.$czr.request.status()
@@ -372,6 +376,7 @@
                         this.canonchainProcess = spawn(nodePath, [
                             "--daemon",
                             "--rpc",
+                            '--rpc_port=8765',
                             "--rpc_control",
                             "--data_path",
                             dir
@@ -388,7 +393,7 @@
                         this.canonchainProcess.on('exit', (code, sig) => {
                             this.$walletLogs.error(`canonchain子进程exit, 收到信号 ${sig} 而终止`)
                         })
-                        setTimeout(()=>{
+                        setTimeout(() => {
                             this.canonchainProcess.removeAllListeners('error')
                             this.canonchainProcess.removeAllListeners('close')
                             this.canonchainProcess.removeAllListeners('exit')
@@ -417,22 +422,24 @@
                     });
             },
             onlineTimer() {
-                if(self.timer) {
+                if (self.timer) {
                     clearInterval(self.timer)
                 }
                 self.timer = setInterval(() => {
                     self.$czr.request.status()
                         .then(res => {
-                            //清除定时器，
-                            clearInterval(self.timer);
-                            self.timer = null;
-                            self.$startLogs.error("Page Config : Online Success");
-                            self.$router.push({path: "home"});
+                            if (this.checkUpdateEnd) {
+                                //清除定时器，
+                                clearInterval(self.timer);
+                                self.timer = null;
+                                self.$startLogs.info("Page Config : Online Success");
+                                self.$router.push({path: "home"});
+                            }
                         })
                         .catch(error => {
                             // console.log('status 失败',this.countTry)
                             this.countTry += 1;
-                            if(this.countTry > 60){
+                            if (this.countTry > 60) {
                                 clearInterval(self.timer);
                                 self.$startLogs.error('节点未能启动，请联系客服获取支持');
                                 dialog.showMessageBox({
@@ -461,6 +468,7 @@
                     ls = spawn(path.join(nodePath), [
                         "--daemon",
                         "--rpc",
+                        '--rpc_port=8765',
                         "--rpc_control",
                         "--data_path",
                         dir
