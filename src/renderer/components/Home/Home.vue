@@ -415,6 +415,13 @@
                     };
                     self.initAccount(params);
                     self.pushKeystore(accountResult);
+                    //后续操作
+                    self.$walletLogs.info(`compactDatafile Start`);
+                    this.$nedb.account.compactDatafile();
+                    this.$nedb.accounts_keystore.compactDatafile();
+                    let resultAcc = await this.$nedb.account.done();
+                    let resultKey = await this.$nedb.account.done();
+                    self.$walletLogs.info(`compactDatafile End`);
                     self.createInfo.step = 1;
                 } else {
                     self.$walletLogs.error("Account Create Error");

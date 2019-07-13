@@ -12,6 +12,7 @@ function NEDB(database_name) {
         timestampData: true
     };
     this.nedb = new Datastore(options);
+    this.nedb.persistence.setAutocompactionInterval(5000)
 }
 
 NEDB.prototype.limit = function (offset, limit) {
@@ -136,6 +137,29 @@ NEDB.prototype.count = function (query) {
     });
 }
 
+/**
+ * compaction.done
+ * 
+ */
+NEDB.prototype.done = function (query) {
+    return new Promise((resolve, reject) => {
+        this.nedb.on("compaction.done", () => {
+            // if (err) {
+            //     return reject(err);
+            // }
+            let treuVal = true;
+            resolve(treuVal);
+        })
+    });
+}
+
+/**
+ * compactDatafile
+ * 
+ */
+NEDB.prototype.compactDatafile = function (query) {
+    this.nedb.persistence.compactDatafile();
+}
 
 module.exports = (database_name) => {
     return new NEDB(database_name);

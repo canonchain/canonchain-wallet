@@ -78,7 +78,7 @@ export default {
             this.data_path = pat.path
 
             let langsArray = await this.$nedb.setting_language.find()
-            console.log(langsArray);
+            // console.log(langsArray);
             let langs = {}
             langsArray.forEach(element => {
                 langs[element['name']] = element['alias']
