@@ -200,48 +200,14 @@
             self.intervalId = setInterval(() => {
                 self.initDatabase();
             }, 2000);
-            this.$czr.request.estimateGas({
-                to: this.$route.query.account || this.database[0].address
-            }).then(res => {
-                if (res.code !== 0) {
-                    switch (res.code) {
-                        case 1:
-                            this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
-                            break
-                        case 2:
-                            this.$message.error(this.$t('rpcErrors.invalidToAccount'))
-                            break
-                        case 3:
-                            this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
-                            break
-                        case 4:
-                            this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
-                            break
-                        case 5:
-                            this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
-                            break
-                        case 6:
-                            this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
-                            break
-                        case 7:
-                            this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
-                            break
-                        case 8:
-                            this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
-                            break
-                        case 9:
-                            this.$message.error(this.$t('rpcErrors.notEnoughFail'))
-                            break
-                        default:
-                            this.$message.error(res.msg)
-                            break
-                    }
-                    this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
-                    this.$router.go(-1)
-                    return
-                }
-                this.gas = res.gas
-            })
+
+            let ret1
+            try {
+                ret1 = await this.getEstimateGas()
+            } catch (e) {
+                return
+            }
+
             let ret
             for (let i = 0; i < 3; i++) {
                 try {
@@ -284,6 +250,58 @@
             },
         },
         methods: {
+            getEstimateGas() {
+                return new Promise((resolve, reject) => {
+                    this.$czr.request.estimateGas({
+                        to: this.$route.query.account || this.database[0].address
+                    }).then(res => {
+                        if (res.code !== 0) {
+                            switch (res.code) {
+                                case 1:
+                                    this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                                    break
+                                case 2:
+                                    this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                                    break
+                                case 3:
+                                    this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                                    break
+                                case 4:
+                                    this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                                    break
+                                case 5:
+                                    this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                                    break
+                                case 6:
+                                    this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                                    break
+                                case 7:
+                                    this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                                    break
+                                case 8:
+                                    this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                                    break
+                                case 9:
+                                    this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                                    break
+                                default:
+                                    this.$message.error(res.msg)
+                                    break
+                            }
+                            this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
+                            this.$alert('节点连接异常，稍后重试', '获取estimate Gas失败')
+                                .finally(() => {
+                                    this.$router.go(-1)
+                                })
+                            reject(new Error(res.msg))
+                        }
+                        this.gas = res.gas
+                        resolve(true)
+                    }).catch(err => {
+                        reject(err)
+                    })
+                })
+            },
             getGasPrice() {
                 return new Promise((resolve, reject) => {
                     axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)

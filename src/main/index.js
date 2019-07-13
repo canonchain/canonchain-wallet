@@ -289,9 +289,14 @@ function createMenu() {
 import {autoUpdater} from 'electron-updater'
 
 autoUpdater.on('error', (error) => {
-    ipcMain.send('check-update-end')
+    // ipcMain.send('check-update-end')
     mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
-    // dialog.showErrorBox('Error: ', error == null ? "unknown" : (error.stack || error).toString())
+    dialog.showMessageBox({
+        type: 'info',
+        message: '检查更新失败，请稍后重试'
+    },()=>{
+        app.quit()
+    })
 })
 
 autoUpdater.on('checking-for-update', () => {
