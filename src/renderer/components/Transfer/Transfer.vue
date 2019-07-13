@@ -1,7 +1,7 @@
 <template>
     <div class="page-transfer" v-loading="loading">
         <div class="transfer-cont">
-            <el-form ref="form" label-width="100px" v-if="this.database.length>0">
+            <el-form ref="form" label-width="100px" v-if="database.length">
                 <el-form-item :label="$t('page_transfer.from_address')">
                     <el-select v-model="fromInfo.account" :placeholder="$t('page_transfer.select')" style="width:100%;">
                         <el-option v-for="item in database" :key="item.address" :label="item.address"
@@ -47,7 +47,7 @@
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.txFee')">
-                    <p>{{txFee}} <span>x 10<sup>-9</sup>CZR</span></p>
+                    <p>{{txFee}} <span>CZR</span></p>
                 </el-form-item>
 
                 <el-form-item>
@@ -98,7 +98,7 @@
                     <p>{{amount}} {{$t('unit.czr')}}</p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.txFee')">
-                    <p>{{txFee}} <span>x 10<sup>-9</sup>CZR</span></p>
+                    <p>{{txFee}} <span>CZR</span></p>
                 </el-form-item>
                 <el-form-item :label="$t('page_transfer.data')">
                     <p>{{extraData || '-'}}</p>
@@ -139,6 +139,7 @@
         name: "Transfer",
         data() {
             return {
+                countGetGasPrice: 0,
                 loading: true,
                 sending: false,
                 dialogSwitch: {
@@ -179,7 +180,7 @@
                 }
             },
         },
-        created() {
+        async created() {
             self = this;
             this.contacts = this.$db.get("czr_contacts.contact_ary").value();
 
@@ -192,79 +193,103 @@
                 self.intervalId = setInterval(() => {
                     self.initDatabase();
                 }, 2000);
+
+                this.$czr.request.estimateGas({
+                    to: this.$route.query.account || this.database[0].address
+                }).then(res => {
+                    if (res.code !== 0) {
+                        switch (res.code) {
+                            case 1:
+                                this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                                break
+                            case 2:
+                                this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                                break
+                            case 3:
+                                this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                                break
+                            case 4:
+                                this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                                break
+                            case 5:
+                                this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                                break
+                            case 6:
+                                this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                                break
+                            case 7:
+                                this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                                break
+                            case 8:
+                                this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                                break
+                            case 9:
+                                this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                                break
+                            default:
+                                this.$message.error(res.msg)
+                                break
+                        }
+                        this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
+                        this.$router.go(-1)
+                        return
+                    }
+                    this.gas = res.gas
+                })
+                let ret
+                for (let i = 0; i < 3; i++) {
+                    try {
+                        // console.log('getGasPrice count ', i)
+                        ret = await this.getGasPrice()
+                    } catch (e) {
+                        this.countGetGasPrice += 1
+                        if (this.countGetGasPrice === 3) {
+                            this.$walletLogs.info(`获取gas_price失败, ${e.message}`)
+                            this.$alert('网络请求失败，请检查网络连接', '获取Gas Price失败')
+                                .finally(() => {
+                                    this.$router.go(-1)
+                                })
+                        }
+                    }
+                    if (ret) {
+                        this.loading = false
+                        this.gasPrice = +this.gasPriceRange.medium
+                        break;
+                    }
+                }
+
+                // fetch gas price
+                // axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)
+                //     .then(res => {
+                //         // console.log('axios.get',res)
+                //         if (res.status !== 200) {
+                //             this.$message.error(new Error(res.statusText))
+                //             return
+                //         }
+                //         if (res.data.code !== 100) {
+                //             this.$message.error(new Error(res.data.msg))
+                //             return
+                //         }
+                //         const {
+                //             cheapest_gas_price,
+                //             median_gas_price,
+                //             highest_gas_price
+                //         } = res.data.result
+                //         this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
+                //         this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
+                //         this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
+                //     })
+                //     .catch(err => {
+                //         this.$walletLogs.info(`获取gas_price失败, ${err.message}`)
+                //         this.$message.error(new Error(err.message))
+                //         this.$router.go(-1)
+                //     })
+                //     .finally(() => {
+                //         this.loading = false
+                //         this.gasPrice = +this.gasPriceRange.medium
+                //     })
             }
 
-            this.$czr.request.estimateGas().then(res => {
-                if (res.code !== 0) {
-                    switch (res.code) {
-                        case 1:
-                            this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
-                            break
-                        case 2:
-                            this.$message.error(this.$t('rpcErrors.invalidToAccount'))
-                            break
-                        case 3:
-                            this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
-                            break
-                        case 4:
-                            this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
-                            break
-                        case 5:
-                            this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
-                            break
-                        case 6:
-                            this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
-                            break
-                        case 7:
-                            this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
-                            break
-                        case 8:
-                            this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
-                            break
-                        case 9:
-                            this.$message.error(this.$t('rpcErrors.notEnoughFail'))
-                            break
-                        default:
-                            this.$message.error(res.msg)
-                            break
-                    }
-                    this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
-                    this.$router.go(-1)
-                    return
-                }
-                this.gas = res.gas
-            })
-
-            // fetch gas price
-            axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)
-                .then(res => {
-                    // console.log('axios.get',res)
-                    if (res.status !== 200) {
-                        this.$message.error(new Error(res.statusText))
-                        return
-                    }
-                    if (res.data.code !== 100) {
-                        this.$message.error(new Error(res.data.msg))
-                        return
-                    }
-                    const {
-                        cheapest_gas_price,
-                        median_gas_price,
-                        highest_gas_price
-                    } = res.data.result
-                    this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
-                    this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
-                    this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
-                })
-                .catch(err => {
-                    this.$walletLogs.info(`获取gas_price失败, ${err.message}`)
-                    this.$message.error(new Error(err.message))
-                    this.$router.go(-1)
-                })
-                .finally(() => {
-                    this.loading = false
-                    this.gasPrice = +this.gasPriceRange.medium
-                })
         },
         beforeDestroy() {
             clearInterval(self.intervalId);
@@ -281,10 +306,51 @@
                 }
             },
             txFee() {
-                return new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).toString()
+                return new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).div(new BigNumber('1e9')).toString()
             },
         },
         methods: {
+            getGasPrice() {
+                return new Promise((resolve, reject) => {
+                    axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)
+                        .then(res => {
+                            // console.log('axios.get',res)
+                            if (res.status !== 200) {
+                                console.log('获取gas Price失败')
+                                // this.countGetGasPrice += 1
+                                // this.$message.error(new Error(res.statusText))
+                                reject(new Error('res.statusText'))
+                                return
+                            }
+                            if (res.data.code !== 100) {
+                                console.log('获取gas Price失败')
+                                // this.countGetGasPrice += 1
+                                // this.$message.error(new Error(res.data.msg))
+                                reject(new Error('res.data.msg'))
+                                return
+                            }
+                            const {
+                                cheapest_gas_price,
+                                median_gas_price,
+                                highest_gas_price
+                            } = res.data.result
+                            this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
+                            this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
+                            this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
+                            resolve(true)
+                        })
+                        .catch(err => {
+                            this.$walletLogs.info(`获取gas_price失败, ${err.message}`)
+                            reject(err)
+                            // this.$message.error(new Error(err.message))
+                            // this.$router.go(-1)
+                        })
+                    // .finally(() => {
+                    //     this.loading = false
+                    //     this.gasPrice = +this.gasPriceRange.medium
+                    // })
+                })
+            },
             changeSlider(val) {
                 if (this.checkedAll) {
                     let weiVal = this.accountInfo.balance;
@@ -618,26 +684,33 @@
         border-top: 1px solid rgba(0, 0, 0, 0.25);
         padding: 40px 0 35px;
     }
+
     .transfer-cont {
         padding: 0 90px;
         min-height: 450px;
     }
+
     .page-transfer .bui-form-selector {
         width: 420px;
         font-size: 14px;
     }
+
     .page-transfer .bui-form-item {
         padding-left: 220px;
     }
+
     .tran_input {
         width: 300px;
     }
+
     .select-none {
         -webkit-user-select: none;
     }
+
     .expected-assets {
         margin-top: 14px;
     }
+
     .trigger-contacts {
         width: 50px;
         height: 38px;
@@ -649,37 +722,63 @@
         border-radius: 4px;
         cursor: pointer;
     }
+
     .trigger-contacts .el-icon-tickets {
         font-size: 24px;
         padding-left: 13px;
         padding-top: 7px;
         color: #a7aaaf;
     }
+
     .trigger-contacts:hover {
         background: #dbdbff;
     }
+
     .trigger-contacts:hover .el-icon-tickets {
         color: #5a59a0;
     }
+
     .send-all-assets {
         /*margin-left: 20px;*/
         font-size: 16px;
     }
+
     .speculate-wrap {
         color: rgb(168, 168, 168);
     }
+
     .no-account-icon {
         font-size: 100px;
         display: block;
         text-align: center;
         margin-top: 50px;
     }
+
     .no-account-des {
         text-align: center;
         margin-top: 40px;
     }
-    .amount {width: 90%;}
-    .inline-block {display: inline-block;width: 9%;text-align: center;}
-    .gas-slider {display: inline-block;width: 85%;}
-    .wei-unit {display: inline-block;line-height: 38px;vertical-align: top;width: 14%;text-align: center;}
+
+    .amount {
+        width: 90%;
+    }
+
+    .inline-block {
+        display: inline-block;
+        width: 9%;
+        text-align: center;
+    }
+
+    .gas-slider {
+        display: inline-block;
+        width: 85%;
+    }
+
+    .wei-unit {
+        display: inline-block;
+        line-height: 38px;
+        vertical-align: top;
+        width: 14%;
+        text-align: center;
+    }
 </style>

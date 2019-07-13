@@ -285,6 +285,7 @@ const createMenu = () => {
 import {autoUpdater} from 'electron-updater'
 
 autoUpdater.on('error', (error) => {
+    ipcMain.send('check-update-end')
     mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
     // dialog.showErrorBox('Error: ', error == null ? "unknown" : (error.stack || error).toString())
 })
@@ -298,6 +299,7 @@ autoUpdater.on('update-available', info => {
 })
 
 autoUpdater.on('update-not-available', info => {
+    ipcMain.send('check-update-end')
     mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
 })
 
@@ -305,10 +307,10 @@ autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, tra
     mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
 })
 
-autoUpdater.on('update-downloaded', info => {
-    mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-    setImmediate(() => autoUpdater.quitAndInstall())
-})
+// autoUpdater.on('update-downloaded', info => {
+//     mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
+//     setImmediate(() => autoUpdater.quitAndInstall())
+// })
 
 // autoUpdater.on('update-available', () => {
 //     dialog.showMessageBox({
@@ -327,16 +329,21 @@ autoUpdater.on('update-downloaded', info => {
 //     })
 // })
 
-// autoUpdater.on('update-downloaded', () => {
-//     dialog.showMessageBox({
-//         title: 'Install Updates',
-//         message: 'Updates downloaded, application will be quit for update...'
-//     }, () => {
-//         setImmediate(() => autoUpdater.quitAndInstall())
-//     })
-// })
+autoUpdater.on('update-downloaded', (info) => {
+    mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
+    dialog.showMessageBox({
+        title: '有新的版本',
+        message: '更新已下载完成，请安装更新'
+    }, () => {
+        mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
+        setImmediate(() => autoUpdater.quitAndInstall())
+    })
+})
 
 app.on('ready', () => {
-    if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
+    if (process.env.NODE_ENV === 'production') {
+        ipcMain.send('check-update-start')
+        autoUpdater.checkForUpdates()
+    }
 })
 

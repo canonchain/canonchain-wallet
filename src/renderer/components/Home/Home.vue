@@ -625,8 +625,8 @@
                 self.$czr.request
                     .accountsBalances(aryForBalans)
                     .then(res => {
-                        console.log('accountsBalances res ', res)
-                        console.log('aryForBalans ', aryForBalans)
+                        // console.log('accountsBalances res ', res)
+                        // console.log('aryForBalans ', aryForBalans)
                         if (res.code !== 0) {
                             return self.$walletLogs.info(
                                 `Accounts Balances Error ${res.msg}`
