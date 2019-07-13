@@ -78,7 +78,7 @@
                 // 继续尝试启动节点
                 // this.tryConnentNode()
             })
-            self.demo();
+            // self.demo();
         },
         computed: {},
         methods: {
@@ -353,12 +353,14 @@
                         self.$startLogs.info("已经有节点，不需要启动;");
                         self.onlineTimer()
                     })
-                    .catch(error => {
+                    .catch(async (error) => {
                         // console.log("本地没有节点，需要启动");
                         self.$startLogs.info("本地没有节点，需要启动");
                         let dir
                         // 读取设置中的节点数据存储路径
-                        const dirSet = self.$db.get('czr_setting.canonchain_data_path').value()
+                        // const dirSet = self.$db.get('czr_setting.canonchain_data_path').value()
+                        let dirSet =await self.$nedb.setting_node_path.findOne({"name":"node_path"})
+                        dirSet =dirSet.path
                         if (dirSet) {
                             dir = dirSet
                         } else {
@@ -404,8 +406,11 @@
                         this.canonchainProcess.stderr.on('data', (data) => {
                             self.$startLogs.error(`canonchain stderr: ${data}`);
                         });
-                        self.$db.set('czr_setting.canonchain_data_path', dir).write()
-
+                        // self.$db.set('czr_setting.canonchain_data_path', dir).write()
+                        /**
+                         * @wgy:写入节点存储路径
+                         */
+                        await self.$nedb.setting_node_path.update({"name":"node_path"},{ $set: { path: dir } })
                         self.conMsg = self.$t("page_config.content_msg.enter_wallet");
                         self.$startLogs.info("CanonChainPid", this.canonchainProcess.pid);
                         sessionStorage.setItem("CanonChainPid", this.canonchainProcess.pid);
@@ -446,8 +451,10 @@
             },
             guardNode(ls, nodePath) {
                 self.$nodeLogs.info("守护进程开启", ls.pid);
-                ls.on("exit", () => {
-                    const dir = self.$db.get('czr_setting.canonchain_data_path').value()
+                ls.on("exit", async () => {
+                    // const dir = self.$db.get('czr_setting.canonchain_data_path').value()
+                    const dir =await self.$nedb.setting_node_path.findOne({"name":"node_path"})
+                    console.log(dir);
                     ls = spawn(path.join(nodePath), [
                         "--daemon",
                         "--rpc",

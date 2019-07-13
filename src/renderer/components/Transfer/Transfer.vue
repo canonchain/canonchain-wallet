@@ -179,9 +179,13 @@
                 }
             },
         },
-        created() {
+        async created() {
             self = this;
-            this.contacts = this.$db.get("czr_contacts.contact_ary").value();
+            // this.contacts = this.$db.get("czr_contacts.contact_ary").value();
+            /**
+             * @wgy:获取联系人列表
+             */
+            this.contacts=await this.$nedb.contact.find()
 
             self.initDatabase();
             if (this.database.length) {
@@ -296,8 +300,17 @@
                 return new BigNumber(val).div('1e18').toString() + ' CZR'
             },
             //Init data
-            initDatabase() {
-                this.database = this.$db.get("czr_accounts").value();
+            async initDatabase() {
+                // this.database = this.$db.get("czr_accounts").value();
+                /**
+                 * @wgy:获取当前账户列表
+                 */
+                // this.database = await this.$nedb.account.find();
+                this.database = [{
+                    "address": "czr_32L5SFeC4J8GaK1bXnLniSURVvLq1w4eYg3YsgEezRiM8E23is",
+                    "tag": "账户1",
+                    "balance": "1.000000000001e+23"
+                }]
             },
             //选择联系人
             confrimContacts() {
@@ -478,9 +491,13 @@
                 let gasValue = this.gas
                 let gasPrice = new BigNumber(this.gasPrice).times('1e9').toString()
 
-                const keystore = self.$db.get("accounts_keystore")
-                    .filter(keystore => keystore.account === self.fromInfo.account)
-                    .value()
+                // const keystore = self.$db.get("accounts_keystore")
+                //     .filter(keystore => keystore.account === self.fromInfo.account)
+                //     .value()
+                /**
+                 * @wgy:获取当前account的keystore
+                 */
+                const keystore =await self.$nedb.accounts_keystore.findOne({"account":self.fromInfo.account})
                 if (!keystore.length) {
                     self.$message.error(self.$t('page_transfer.no_keystore_file'));
                     self.isSubmit = false;
@@ -593,12 +610,17 @@
                     self.$message.error(res.error);
                 }
             },
-            writeTransToSql(blockInfo) {
+            async writeTransToSql(blockInfo) {
                 //写入sendlist
-                self.$db
-                    .get("send_list." + blockInfo.from)
-                    .push(blockInfo)
-                    .write();
+                // self.$db
+                //     .get("send_list." + blockInfo.from)
+                //     .push(blockInfo)
+                //     .write();
+
+                /**
+                 * @wgy:写入sendlist
+                 */
+                await self.$nedb.account_tx.insert(blockInfo)
                 self.$router.push("/account/" + self.fromInfo.account);
             },
 
