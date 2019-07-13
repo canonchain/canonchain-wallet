@@ -10,7 +10,7 @@ import './assets/css/element-ui.css';
 import czr from '../czr'
 
 //Introducing db database
-import db from '../datastore/index'
+// import db from '../datastore/index'
 import nedb from '../datastore/index2';
 
 //Introducing languages that need support
@@ -35,7 +35,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 
 Vue.prototype.$czr = czr;
 
-Vue.prototype.$db = db
+// Vue.prototype.$db = db
 Vue.prototype.$nedb = nedb
 Vue.prototype.$isOnline = true;
 
@@ -46,19 +46,24 @@ for (const languge in languges) {
     messages[languge] = require("@/i18n/" + languge + ".json");
 }
 //Determine the user's language
-let locale = db.get('czr_setting.lang').value();
-const i18n = new VueI18n({
-    locale: locale,// set locale
-    messages,       // set locale messages 
-});
+// let locale = db.get('czr_setting.lang').value();
+let getActive = async () => {
+    let val = await nedb.setting_language_active.findOne({ "name": "active" })
+    // console.log("getActive",val.value );
+    const i18n = new VueI18n({
+        locale: val.value,// set locale
+        messages,       // set locale messages 
+    });
 
 
-/* eslint-disable no-new */
-Vue.config.productionTip = false
-new Vue({
-    el: '#app',
-    router,
-    store,
-    i18n,
-    render: h => h(App)
-})
+    /* eslint-disable no-new */
+    Vue.config.productionTip = false
+    new Vue({
+        el: '#app',
+        router,
+        store,
+        i18n,
+        render: h => h(App)
+    })
+}
+getActive()
