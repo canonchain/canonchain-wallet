@@ -60,7 +60,7 @@
 
                 </el-form-item>
             </el-form>
-            <div v-else>
+            <div v-else v-show="!loading">
                 <i class="el-icon-circle-close-outline no-account-icon"></i>
                 <p class="no-account-des">{{$t('page_transfer.no_account_info')}}</p>
             </div>
@@ -186,114 +186,84 @@
             /**
              * @wgy:获取联系人列表
              */
-            this.contacts=await this.$nedb.contact.find()
+            this.contacts = await this.$nedb.contact.find()
 
-            self.initDatabase();
-            if (this.database.length) {
-                this.fromInfo = {
-                    account: this.$route.query.account || this.database[0].address || "",
-                    password: ""
-                };
-                self.intervalId = setInterval(() => {
-                    self.initDatabase();
-                }, 2000);
-
-                this.$czr.request.estimateGas({
-                    to: this.$route.query.account || this.database[0].address
-                }).then(res => {
-                    if (res.code !== 0) {
-                        switch (res.code) {
-                            case 1:
-                                this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
-                                break
-                            case 2:
-                                this.$message.error(this.$t('rpcErrors.invalidToAccount'))
-                                break
-                            case 3:
-                                this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
-                                break
-                            case 4:
-                                this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
-                                break
-                            case 5:
-                                this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
-                                break
-                            case 6:
-                                this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
-                                break
-                            case 7:
-                                this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
-                                break
-                            case 8:
-                                this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
-                                break
-                            case 9:
-                                this.$message.error(this.$t('rpcErrors.notEnoughFail'))
-                                break
-                            default:
-                                this.$message.error(res.msg)
-                                break
-                        }
-                        this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
-                        this.$router.go(-1)
-                        return
+            await self.initDatabase();
+            if (!this.database.length) {
+                this.loading = false
+                return
+            }
+            this.fromInfo = {
+                account: this.$route.query.account || this.database[0].address || "",
+                password: ""
+            };
+            self.intervalId = setInterval(() => {
+                self.initDatabase();
+            }, 2000);
+            this.$czr.request.estimateGas({
+                to: this.$route.query.account || this.database[0].address
+            }).then(res => {
+                if (res.code !== 0) {
+                    switch (res.code) {
+                        case 1:
+                            this.$message.error(this.$t('rpcErrors.invalidFromAccount'))
+                            break
+                        case 2:
+                            this.$message.error(this.$t('rpcErrors.invalidToAccount'))
+                            break
+                        case 3:
+                            this.$message.error(this.$t('rpcErrors.invalidAmountFormat'))
+                            break
+                        case 4:
+                            this.$message.error(this.$t('rpcErrors.invalidGasFormat'))
+                            break
+                        case 5:
+                            this.$message.error(this.$t('rpcErrors.invalidDataFormat'))
+                            break
+                        case 6:
+                            this.$message.error(this.$t('rpcErrors.dataSizeTooLarge'))
+                            break
+                        case 7:
+                            this.$message.error(this.$t('rpcErrors.invalidGasPriceFormat'))
+                            break
+                        case 8:
+                            this.$message.error(this.$t('rpcErrors.invalidMciFormat'))
+                            break
+                        case 9:
+                            this.$message.error(this.$t('rpcErrors.notEnoughFail'))
+                            break
+                        default:
+                            this.$message.error(res.msg)
+                            break
                     }
-                    this.gas = res.gas
-                })
-                let ret
-                for (let i = 0; i < 3; i++) {
-                    try {
-                        // console.log('getGasPrice count ', i)
-                        ret = await this.getGasPrice()
-                    } catch (e) {
-                        this.countGetGasPrice += 1
-                        if (this.countGetGasPrice === 3) {
-                            this.$walletLogs.info(`获取gas_price失败, ${e.message}`)
-                            this.$alert('网络请求失败，请检查网络连接', '获取Gas Price失败')
-                                .finally(() => {
-                                    this.$router.go(-1)
-                                })
-                        }
-                    }
-                    if (ret) {
-                        this.loading = false
-                        this.gasPrice = +this.gasPriceRange.medium
-                        break;
+                    this.$walletLogs.info(`estimateGas失败, ${res.msg}`)
+                    this.$router.go(-1)
+                    return
+                }
+                this.gas = res.gas
+            })
+            let ret
+            for (let i = 0; i < 3; i++) {
+                try {
+                    console.log('getGasPrice count ', i)
+                    ret = await this.getGasPrice()
+                    console.log('getGasPrice ret ', ret)
+                } catch (e) {
+                    this.countGetGasPrice += 1
+                    if (this.countGetGasPrice === 3) {
+                        this.$walletLogs.info(`获取gas_price失败, ${e.message}`)
+                        this.$alert('网络请求失败，请检查网络连接', '获取Gas Price失败')
+                            .finally(() => {
+                                this.$router.go(-1)
+                            })
                     }
                 }
-
-                // fetch gas price
-                // axios.get(`http://apis.canonchain.com/apis?apikey=BYBA6sS782wXtc4xnEUp34hBpCvztqRm69h4NFADu7gN&module=other&action=gas_price&t=${Date.now()}`)
-                //     .then(res => {
-                //         // console.log('axios.get',res)
-                //         if (res.status !== 200) {
-                //             this.$message.error(new Error(res.statusText))
-                //             return
-                //         }
-                //         if (res.data.code !== 100) {
-                //             this.$message.error(new Error(res.data.msg))
-                //             return
-                //         }
-                //         const {
-                //             cheapest_gas_price,
-                //             median_gas_price,
-                //             highest_gas_price
-                //         } = res.data.result
-                //         this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
-                //         this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
-                //         this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
-                //     })
-                //     .catch(err => {
-                //         this.$walletLogs.info(`获取gas_price失败, ${err.message}`)
-                //         this.$message.error(new Error(err.message))
-                //         this.$router.go(-1)
-                //     })
-                //     .finally(() => {
-                //         this.loading = false
-                //         this.gasPrice = +this.gasPriceRange.medium
-                //     })
+                if (ret) {
+                    this.loading = false
+                    this.gasPrice = +this.gasPriceRange.medium
+                    break;
+                }
             }
-
         },
         beforeDestroy() {
             clearInterval(self.intervalId);
@@ -558,7 +528,7 @@
                 /**
                  * @wgy:获取当前account的keystore
                  */
-                const keystore =await self.$nedb.accounts_keystore.findOne({"account":self.fromInfo.account})
+                const keystore = await self.$nedb.accounts_keystore.findOne({"account": self.fromInfo.account})
                 if (!keystore.length) {
                     self.$message.error(self.$t('page_transfer.no_keystore_file'));
                     self.isSubmit = false;
