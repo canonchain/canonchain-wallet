@@ -139,7 +139,7 @@
             </span>
         </el-dialog>
 
-        <el-dialog :title="$t('page_account.edit_dia.tit')" :visible.sync="dialogSwitch.editName" width="35%" center>
+        <el-dialog :title="$t('page_account.edit_dia.tit')" :visible.sync="dialogSwitch.editName" @open="initTag()" width="35%" center>
             <span>
                 <p class="edit-name-subtit">{{$t('page_account.edit_dia.subtit')}}</p>
                 <el-input v-model="editTag"></el-input>
@@ -274,7 +274,14 @@
                 },
                 loadingSwitch: true,
                 address: this.$route.params.id,
-                accountInfo: null,
+                accountInfo: {
+                    address:this.$route.params.id,
+                    balance:0,
+                    currentTxList:[],
+                    keystore:"",
+                    tag:"",
+                    tx_list:[],
+                },
                 transactionInfo: null,
                 pollingAry: null,
                 qrImgUrl: "",
@@ -305,14 +312,13 @@
             });
             self.initDatabase();
             self.getTxList(true, true);
-            self.initTag();
             self.initTransItem();
 
             self.initSendTrans(true);
 
-            this.timerSwitch.initData = setInterval(() => {
-                self.initDatabase();
-            }, 5000);
+            // this.timerSwitch.initData = setInterval(() => {
+            //     self.initDatabase();
+            // }, 5000);
         },
         computed: {
             transactionInfoTxFee() {
@@ -672,17 +678,19 @@
             //获取所有交易 End
 
             //当前账户发送的交易 Start
-            initSendTrans(isFirstInit) {
+            async initSendTrans(isFirstInit) {
                 // console.log("初始化数据了", isFirstInit);
                 let _current = this.sendTransCurrent;
-                _current.sourcesAry = this.$db
-                    .get("send_list." + this.address)
-                    .value();
-                // 按照时间排序
-                _current.sourcesAry.sort((a, b) => {
-                    return b.send_timestamp - a.send_timestamp;
-                });
-                // console.log(_current.sourcesAry)
+                //anbang 获取当前账户的交易列表
+                // _current.sourcesAry = this.$db
+                //     .get("send_list." + this.address)
+                //     .value();
+                // // 按照时间排序
+                // _current.sourcesAry.sort((a, b) => {
+                //     return b.send_timestamp - a.send_timestamp;
+                // });
+                _current.sourcesAry = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
+                // console.log("_current.sourcesAry",_current.sourcesAry)
                 if (isFirstInit) {
                     self.createSendDefault();
                 }
@@ -767,7 +775,7 @@
                     gas_used: '',
                 };
             },
-            initDatabase() {
+            async initDatabase() {
                 let keystoreFile,
                     txListAry = [],
                     currentList = [];
@@ -777,16 +785,23 @@
                     currentList = self.accountInfo.currentTxList;
                 }
                 if (!txListAry.length) {
-                    txListAry = this.$db.get(`send_list.${this.address}`).value()
+                    // txListAry = this.$db.get(`send_list.${this.address}`).value()
+                    txListAry = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
                 }
                 if (!currentList.length) {
-                    currentList = this.$db.get(`send_list.${this.address}`).value()
+                    // currentList = this.$db.get(`send_list.${this.address}`).value()
+                    currentList = await this.$nedb.account_tx.sort({ _id: -1 }).find({"from":this.address});
                 }
-                this.accountInfo = this.$db
-                    .read()
-                    .get("czr_accounts")
-                    .filter({address: this.address})
-                    .value()[0];
+
+                //@anbang 查找account账户(address,tag,banance send_list)
+                // this.accountInfo = this.$db
+                //     .read()
+                //     .get("czr_accounts")
+                //     .filter({address: this.address})
+                //     .value()[0];
+                this.accountInfo = await this.$nedb.account.findOne({"address":this.address});
+                console.log("accountInfo",this.accountInfo);
+
                 this.accountInfo.keystore = keystoreFile;
                 self.accountInfo.currentTxList = currentList;
                 //更新list
@@ -803,7 +818,7 @@
             getBlock(hash) {
                 self.$czr.request
                     .getBlockState(hash)
-                    .then(data => {
+                    .then(async data => {
                         // console.log('getBlockState data', data)
                         /**
                          * {
@@ -854,16 +869,27 @@
                                 tx.mc_timestamp = mc_timestamp
                                 tx2.gas_used = gas_used
                             }
-                            this.$db.get(`send_list.${this.address}`)
-                                .find({hash: hash})
-                                .assign({
-                                    is_stable: '1',
-                                    status: status,
-                                    stable_timestamp: stable_timestamp,
-                                    mc_timestamp: mc_timestamp,
-                                    gas_used: gas_used,
-                                })
-                                .write()
+
+                            //anbang 更新账户的交易列表信息
+                            // this.$db.get(`send_list.${this.address}`)
+                            //     .find({hash: hash})
+                            //     .assign({
+                            //         is_stable: '1',
+                            //         status: status,
+                            //         stable_timestamp: stable_timestamp,
+                            //         mc_timestamp: mc_timestamp,
+                            //         gas_used: gas_used,
+                            //     })
+                            //     .write()
+                            let updateInfo={
+                                is_stable: '1',
+                                status: status,
+                                stable_timestamp: stable_timestamp,
+                                mc_timestamp: mc_timestamp,
+                                gas_used: gas_used,
+                            };
+                            let aloneUpdateRes = await this.$nedb.account_tx.update({hash:hash},{ $set: updateInfo });
+
                             if ((hash === this.transactionInfo.hash)) {
                                 this.transactionInfo = Object.assign({}, this.transactionInfo, {
                                     is_stable: '1',
@@ -895,7 +921,7 @@
                         } else {
                             // 检查交易详情，如果不存在，说明交易失败
                             this.$czr.request.getBlock(hash)
-                                .then(res => {
+                                .then(async res => {
                                     if (res.code === 0) {
                                         if (res.block === null) {
                                             const tx = this.accountInfo.tx_list.find(tx => {
@@ -912,13 +938,21 @@
                                                 tx2.is_stable = '1'
                                                 tx2.status = '100'
                                             }
-                                            this.$db.get(`send_list.${this.address}`)
-                                                .find({hash: hash})
-                                                .assign({
-                                                    is_stable: '1',
-                                                    status: '100',
-                                                })
-                                                .write()
+                                            //anbang 更新账户的交易列表信息
+                                            // this.$db.get(`send_list.${this.address}`)
+                                            //     .find({hash: hash})
+                                            //     .assign({
+                                            //         is_stable: '1',
+                                            //         status: '100',
+                                            //     })
+                                            //     .write()
+                                            let updateInfo={
+                                                is_stable: '1',
+                                                status: '100',
+                                            };
+                                            
+                                            let aloneUpdateRes = await this.$nedb.account_tx.update({hash:hash},{ $set: updateInfo });
+
                                             if ((hash === this.transactionInfo.hash)) {
                                                 this.transactionInfo = Object.assign({}, this.transactionInfo, {
                                                     is_stable: '1',
@@ -972,7 +1006,7 @@
                 this.dialogSwitch.qrCode = true;
             },
             //Edit Tag
-            setEditTag() {
+            async setEditTag() {
                 if (!this.editTag) {
                     this.$message.error(this.$t("page_account.edit_dia.no_tag"));
                     return;
@@ -985,23 +1019,31 @@
                     );
                     return;
                 }
-                this.$db
-                    .read()
-                    .get("czr_accounts")
-                    .find({address: this.address})
-                    .assign({tag: this.editTag})
-                    .write();
+                // anbang 更改账户的Tag
+                // this.$db
+                //     .read()
+                //     .get("czr_accounts")
+                //     .find({address: this.address})
+                //     .assign({tag: this.editTag})
+                //     .write();
+                let updateInfo={tag: this.editTag}
+                let aloneUpdateRes = await this.$nedb.account.update({"address":this.address},{ $set: updateInfo });
+                console.log("aloneUpdateRes",aloneUpdateRes);
+
                 this.accountInfo.tag = this.editTag;
                 this.dialogSwitch.editName = false;
             },
 
             //export Keystore
-            exportKeystore() {
+            async exportKeystore() {
                 let self = this;
-                let accountKeystore = self.$db
-                    .get("accounts_keystore")
-                    .find({account: self.accountInfo.address})
-                    .value();
+                // anbang 查找 keystore
+                // let accountKeystore = self.$db
+                //     .get("accounts_keystore")
+                //     .find({account: self.accountInfo.address})
+                //     .value();
+                let accountKeystore = await this.$nedb.accounts_keystore.findOne({ "account": self.accountInfo.address });
+
                 if (accountKeystore) {
                     self.accountInfo.keystore = JSON.stringify(accountKeystore);
                     self.dialogSwitch.keystore = true;

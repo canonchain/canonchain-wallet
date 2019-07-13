@@ -224,7 +224,8 @@
             self.initDatabase();
             self.timerSwitch.initAccount = setInterval(() => {
                 self.initDatabase();
-            }, 1500);
+            }, 5000);
+
         },
         mounted() {
             self.$walletLogs.info("HOME:页面渲染成功");
@@ -248,8 +249,10 @@
             self.timerSwitch.initAccount = null;
         },
         methods: {
-            initDatabase() {
-                self.database = self.$db.get("czr_accounts").value();
+            async initDatabase() {
+                // anbang 查找所有账户
+                // self.database = self.$db.get("czr_accounts").value();
+                self.database = await this.$nedb.account.find();
             },
             //Init Start
             initCreateInfo() {
@@ -278,11 +281,14 @@
             },
             //Init End
 
-            initAccount(params) {
-                let account = this.$db
-                    .get("czr_accounts")
-                    .find({address: params.address})
-                    .value();
+            async initAccount(params) {
+                //anbang 查找当前账户
+                // let account = this.$db
+                //     .get("czr_accounts")
+                //     .find({address: params.address})
+                //     .value();
+                let account = await this.$nedb.account.findOne({address: params.address});
+                // console.log("account",account)
                 if (account) {
                     this.$message.error(
                         this.$t("page_home.import_dia.exist") +
@@ -292,31 +298,38 @@
                     );
                     return;
                 }
-                this.$db
-                    .get("czr_accounts")
-                    .push(params)
-                    .write();
+
+                //anbang 写入账户
+                // this.$db
+                //     .get("czr_accounts")
+                //     .push(params)
+                //     .write();
+                let insertRes = await this.$nedb.account.insert(params);
+                // console.log("insertRes",insertRes)
                 //写入send_list的对应key
-                if (
-                    !self.$db
-                        .read()
-                        .has("send_list." + params.address)
-                        .value()
-                ) {
-                    self.$db
-                        .read()
-                        .set("send_list." + params.address, [])
-                        .write();
-                }
+                // anbang 写结构的，不需要再有了
+                // if (
+                //     !self.$db
+                //         .read()
+                //         .has("send_list." + params.address)
+                //         .value()
+                // ) {
+                //     self.$db
+                //         .read()
+                //         .set("send_list." + params.address, [])
+                //         .write();
+                // }
 
                 this.initDatabase();
             },
-            pushKeystore(keystore) {
+            async pushKeystore(keystore) {
                 self.$walletLogs.info(`开始保存keystore文件，${JSON.stringify(keystore)}`);
-                const ret = self.$db
-                    .get("accounts_keystore")
-                    .push(keystore)
-                    .write();
+                //anbang 写入账户
+                // const ret = self.$db
+                //     .get("accounts_keystore")
+                //     .push(keystore)
+                //     .write();
+                const ret = await this.$nedb.accounts_keystore.insert(keystore);
                 self.$walletLogs.info(`完成保存keystore文件吗，${JSON.stringify(ret)}`);
             },
 
@@ -435,7 +448,7 @@
                 }
                 let targetFile = event.dataTransfer.files[0];
 
-                fs.readFile(targetFile.path, "utf8", (err, data) => {
+                fs.readFile(targetFile.path, "utf8", async (err, data) => {
                     if (err) {
                         this.$message.error(
                             this.$t("page_home.import_dia.keystore_error") +
@@ -467,7 +480,9 @@
                         );
                         return;
                     }
-                    let importObjec = this.$db.read().get("czr_accounts").find({address: targetJson.account}).value() // this.importInfo.keystore = JSON.parse(data);
+                    //anbang 找文件
+                    // let importObjec = this.$db.read().get("czr_accounts").find({address: targetJson.account}).value() // this.importInfo.keystore = JSON.parse(data);
+                    let importObjec =  await this.$nedb.account.findOne({address: targetJson.account});
 
                     if (importObjec) {
                         self.$message.error(
@@ -547,10 +562,12 @@
             },
             async removeAccountFn() {
                 //判断keystore是否在本地，如果在本地，删除本地账号系统；否则请求节点删除
-                let isKeystoreAccount = this.$db
-                    .get("accounts_keystore")
-                    .find({account: self.removeInfo.address})
-                    .value();
+                //anbang
+                // let isKeystoreAccount = this.$db
+                //     .get("accounts_keystore")
+                //     .find({account: self.removeInfo.address})
+                //     .value();
+                let isKeystoreAccount = await this.$nedb.accounts_keystore.findOne({account: self.removeInfo.address});
                 if (isKeystoreAccount) {
                     //删除本地账户
                     // const accountResult = ipcRenderer.sendSync('remove_account', isKeystoreAccount, self.removeInfo.pwd);
@@ -565,15 +582,19 @@
                     self.$message.error("不存在账户：" + self.removeInfo.address);
                 }
             },
-            removeSuccess() {
-                self.$db
-                    .get("czr_accounts")
-                    .remove({address: self.removeInfo.address})
-                    .write();
-                self.$db
-                    .get("accounts_keystore")
-                    .remove({account: self.removeInfo.address})
-                    .write();
+            async removeSuccess() {
+                //anbang 删除account 和keystore
+                // self.$db
+                //     .get("czr_accounts")
+                //     .remove({address: self.removeInfo.address})
+                //     .write();
+                // self.$db
+                //     .get("accounts_keystore")
+                //     .remove({account: self.removeInfo.address})
+                //     .write();
+                let aloneRemoverAcc = await this.$nedb.account.remove({address: self.removeInfo.address});
+                let aloneRemoverKey = await this.$nedb.accounts_keystore.remove({account: self.removeInfo.address});
+
                 self.$message.success(self.$t("page_home.remove_dia.remove_success"));
                 self.initDatabase();
                 self.dialogSwitch.remove = false;
@@ -591,7 +612,7 @@
                     self.getAccountsBalances(aryForBalans);
                 }, 5000);
             },
-            getAccountsBalances(aryForBalans) {
+            async getAccountsBalances(aryForBalans) {
                 self.$czr.request
                     .accountsBalances(aryForBalans)
                     .then(res => {
@@ -601,13 +622,20 @@
                                 `Accounts Balances Error ${res.msg}`
                             );
                         }
-                        res.balances.forEach((balance, i) => {
-                            self.$db
-                                .read()
-                                .get("czr_accounts")
-                                .find({address: aryForBalans[i]})
-                                .assign({balance: new BigNumber(balance).toString()})
-                                .write()
+                        let localAcc
+                        res.balances.forEach(async (balance, i) => {
+                            //anbang 如果余额变了，再修改
+                            // self.$db
+                            //     .read()
+                            //     .get("czr_accounts")
+                            //     .find({address: aryForBalans[i]})
+                            //     .assign({balance: new BigNumber(balance).toString()})
+                            //     .write()
+                            localAcc = await this.$nedb.account.findOne({address: aryForBalans[i]});
+                            // console.log("localAcc", localAcc.balance.toString(),balance.toString())
+                            if(localAcc && (localAcc.balance.toString() !== balance.toString())){
+                                let aloneUpdateRes = await this.$nedb.account_tx.update({address: aryForBalans[i]},{ $set: { balance: Number(balance) } });
+                            }
                         })
                     })
                     .catch(error => {
@@ -628,9 +656,12 @@
                     self.chooseUpdateBlocksData();
                 }, 5000);
             },
-            chooseUpdateBlocksData() {
+            async chooseUpdateBlocksData() {
                 //读取所有数据,并筛选不稳定的Hash合集
-                updataBlockData.sourcesObj = self.$db.get("send_list").value();
+                //anbang
+                // updataBlockData.sourcesObj = self.$db.get("send_list").value();
+                updataBlockData.sourcesObj = await self.$nedb.account_tx.find({"is_stable":"0"});
+
                 let curentAry = [];
                 updataBlockData.targetAry = [];
                 for (let key in updataBlockData.sourcesObj) {
@@ -647,16 +678,26 @@
                 })
                 self.startUpdateBlocks();
             },
-            startUpdateBlocks() {
+            async startUpdateBlocks() {
                 //拿到最新数据，写入数据库，并准备下次
                 self.$czr.request
                     .getBlocks(updataBlockData.targetAry) // TODO data change
                     .then(data => {
                         let obtainData = data.blocks || [];
-                        obtainData.forEach(ele => {
+                        let updateInfo;
+                        obtainData.forEach( async ele => {
                             if (ele.is_stable === "1") {
-                                self.$db.get("send_list." + ele.from).find({hash: ele.hash})
-                                    .assign(ele).write()
+                                //更新
+                                // self.$db.get("send_list." + ele.from).find({hash: ele.hash})
+                                    // .assign(ele).write()
+                                updateInfo={
+                                    is_stable: ele.is_stable,
+                                    status: ele.status,
+                                    stable_timestamp: ele.stable_timestamp,
+                                    mc_timestamp: ele.mc_timestamp,
+                                    gas_used: ele.gas_used,
+                                };
+                                let aloneUpdateBlock = await this.$nedb.account_tx.update({hash:ele.hash},{ $set: updateInfo });
                             }
                         })
                         self.runUpdateBlocksTimer();
