@@ -397,7 +397,6 @@
 
                 // const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
                 const accountResult = await self.$czr.accounts.create(self.createInfo.pwd)
-                self.createInfo.pwd = "";//初始化密码
                 if (accountResult.account) {
                     /* 创建成功, 备份keystore */
                     fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountResult.account}.json`), JSON.stringify(accountResult))
@@ -413,6 +412,14 @@
                         balance: 0,
                         send_list: []
                     };
+                    // loading
+                    const loading = this.$loading({
+                        lock: true,
+                        text: '账户文件生成中',
+                        spinner: 'el-icon-loading',
+                        color:"rgba(250, 250, 250, 1)",
+                        background: 'rgba(0, 0, 0, 0.6)'
+                    });
                     self.initAccount(params);
                     self.pushKeystore(accountResult);
                     //后续操作
@@ -422,6 +429,9 @@
                     let resultAcc = await this.$nedb.account.done();
                     let resultKey = await this.$nedb.account.done();
                     self.$walletLogs.info(`compactDatafile End`);
+                    self.createInfo.pwd = "";//初始化密码
+                    self.createInfo.repwd = "";//初始化密码
+                    loading.close();
                     self.createInfo.step = 1;
                 } else {
                     self.$walletLogs.error("Account Create Error");
