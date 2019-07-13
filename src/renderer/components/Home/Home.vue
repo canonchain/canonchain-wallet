@@ -185,6 +185,10 @@
     app.on("quit", () => {
         //应用程序正在退出
         self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonChainPid"));
+        if(!sessionStorage.getItem("CanonChainPid")){
+            self.$nodeLogs.info("不需要kill Canonchain");
+            return
+        }
         let currentPid = Number(sessionStorage.getItem("CanonChainPid"));
         let result = process.kill(currentPid, "SIGINT");
         self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);

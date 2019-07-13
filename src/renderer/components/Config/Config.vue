@@ -414,6 +414,7 @@
             },
             guardNode(ls, nodePath) {
                 self.$nodeLogs.info("守护进程开启", ls.pid);
+                sessionStorage.setItem("CanonChainPid", ls.pid);
                 ls.on("exit", () => {
                     const dir = self.$db.get('czr_setting.canonchain_data_path').value()
                     ls = spawn(path.join(nodePath), [
