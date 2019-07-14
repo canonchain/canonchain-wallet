@@ -1,7 +1,7 @@
 {
   "name": "CanonChain-Wallet",
   "productName": "CanonChain Wallet",
-  "version": "1.0.280-beta",
+  "version": "1.0.4",
   "keywords": [
     "block-wallet"
   ],

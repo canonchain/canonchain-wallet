@@ -672,7 +672,7 @@
                     if(aryForBalans.length){
                         self.getAccountsBalances(aryForBalans);
                     }
-                }, 1000*10);
+                }, 1000*5);
             },
             async getAccountsBalances(aryForBalans) {
                 self.$czr.request
