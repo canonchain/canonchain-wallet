@@ -484,7 +484,8 @@
                 sessionStorage.setItem("CanonchainPid", ls.pid);
                 ls.on("exit", async () => {
                     // const dir = self.$db.get('czr_setting.canonchain_data_path').value()
-                    const dir =await self.$nedb.setting_node_path.findOne({"name":"node_path"})
+                    let dir =await self.$nedb.setting_node_path.findOne({"name":"node_path"})
+                    dir=dir.path;
                     // console.log(dir);
                     ls = spawn(path.join(nodePath), [
                         "--daemon",
