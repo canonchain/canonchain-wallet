@@ -51,7 +51,7 @@ SectionEnd
 Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
   CreateDirectory "$SMPROGRAMS\CanonChain-Wallet"
-  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
+  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
   CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
 
@@ -73,8 +73,8 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
 
+  Delete "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk"
   Delete "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk"
-  Delete "$SMPROGRAMS\CanonChain-Wallet\Website.lnk"
   Delete "$DESKTOP\CanonChain-Wallet.lnk"
 
   RMDir "$SMPROGRAMS\CanonChain-Wallet"
@@ -91,6 +91,7 @@ SectionEnd
 #-- 根据 NSIS 脚本编辑规则，所有 Function 区段必须放置在 Section 区段之后编写，以避免安装程序出现未可预知的问题。--#
 
 Function un.onInit
+!insertmacro MUI_UNGETLANGUAGE
   MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "您确实要完全移除 $(^Name) ，及其所有的组件？" IDYES +2
   Abort
 FunctionEnd
