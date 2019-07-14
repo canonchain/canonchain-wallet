@@ -469,7 +469,15 @@
                 }
             },
             backupAccount(accountObj){
-                fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`), JSON.stringify(accountObj))
+                // fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`), JSON.stringify(accountObj))
+                /**
+                 * @wgy:修改了强制刷入数据
+                 */
+                let accountPath = path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`
+                const fd = fs.openSync(accountPath, 'w');
+                fs.writeFileSync(accountPath, JSON.stringify(accountObj))
+                fs.fdatasyncSync(fd)
+                fs.closeSync(fd)
             },
             downloadKeystore(accVal) {
                 let link = document.createElement("a");
