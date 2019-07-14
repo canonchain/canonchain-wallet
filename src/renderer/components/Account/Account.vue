@@ -1043,9 +1043,14 @@
                 //     .find({account: self.accountInfo.address})
                 //     .value();
                 let accountKeystore = await this.$nedb.accounts_keystore.findOne({ "account": self.accountInfo.address });
-
                 if (accountKeystore) {
-                    self.accountInfo.keystore = JSON.stringify(accountKeystore);
+                    let outputKey = {
+                        account:accountKeystore.account,
+                        kdf_salt:accountKeystore.kdf_salt,
+                        iv:accountKeystore.iv,
+                        ciphertext:accountKeystore.ciphertext,
+                    }
+                    self.accountInfo.keystore = JSON.stringify(outputKey);
                     self.dialogSwitch.keystore = true;
                 } else {
                     self.$message.error("Account Export Error");

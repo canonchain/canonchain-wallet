@@ -8,8 +8,27 @@ const contact = require('./nedb')('contact');
 const setting_language = require('./nedb')('setting_language');
 const setting_language_active = require('./nedb')('setting_language_active');
 const setting_node_path = require('./nedb')('setting_node_path');
+const backup_file = require('./nedb')('backup_file');
 
 let utility = {
+    async initBackupFile() {
+        // 初始化
+        let backupRes
+        try {
+            backupRes = await backup_file.findOne({ name: "backup" });
+        } catch (error) {
+            console.error("initBackupFile 捕获到错误")
+            console.error(error)
+        }
+        if (!backupRes) {
+            try {
+                let insertLen = await backup_file.insert({ name: "backup", is_backup: false });
+            } catch (error) {
+                console.error("initBackupFile 捕获错误")
+                console.error(error)
+            }
+        }
+    },
     async initNodePath() {
         // 初始化
         let nodePathRes
@@ -34,14 +53,14 @@ let utility = {
         try {
             activeRes = await setting_language_active.findOne({ "name": "active" });
         } catch (error) {
-            console.error("initNodePath 捕获到错误")
+            console.error("initLanguageActive 捕获到错误")
             console.error(error)
         }
         if (!activeRes) {
             try {
                 await setting_language_active.insert({ "name": "active", "value": "zh-CN" });
             } catch (error) {
-                console.error("initNodePath 捕获错误")
+                console.error("initLanguageActive 捕获错误")
                 console.error(error)
             }
         }
@@ -49,7 +68,7 @@ let utility = {
     async initLanguage() {
         let resLang;
         try {
-            resLang = await setting_language.findOne({ "active": true });
+            resLang = await setting_language.findOne({ "name": "zh-CN" });
         } catch (error) {
             console.error("initLanguage 捕获到错误")
             console.error(error)
@@ -91,6 +110,7 @@ let utility = {
 utility.initNodePath();
 utility.initLanguage();
 utility.initLanguageActive();
+utility.initBackupFile();
 
 
 /**
@@ -111,5 +131,6 @@ module.exports = {
     contact: contact,
     setting_language: setting_language,
     setting_language_active: setting_language_active,
-    setting_node_path: setting_node_path
+    setting_node_path: setting_node_path,
+    backup_file: backup_file
 }

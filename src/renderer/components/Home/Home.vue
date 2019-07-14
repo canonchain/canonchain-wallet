@@ -427,7 +427,7 @@
                     this.$nedb.account.compactDatafile();
                     this.$nedb.accounts_keystore.compactDatafile();
                     let resultAcc = await this.$nedb.account.done();
-                    let resultKey = await this.$nedb.account.done();
+                    let resultKey = await this.$nedb.accounts_keystore.done();
                     self.$walletLogs.info(`compactDatafile End`);
                     self.createInfo.pwd = "";//初始化密码
                     self.createInfo.repwd = "";//初始化密码

@@ -26,10 +26,18 @@ if (process.type !== 'renderer') {
 }
 
 // Initialize lowdb read and write json file name and storage path
-const adapter = new FileSync(path.join(STORE_PATH, '/czr_data.json'))
+let adapter = new FileSync(path.join(STORE_PATH, '/czr_data.json'))
 
 // Lowdb takes over the file
-const db = Datastore(adapter)
+let db;
+try {
+  db = Datastore(adapter)
+} catch (error) {
+  console.log("try cathc le")
+  db = Datastore(new FileSync(path.join(STORE_PATH, '/czr_data_new.json')))
+}
+
+
 db._.mixin(LodashId)
 
 // Initialize data, pre-specify the basic structure of the database
@@ -58,7 +66,7 @@ function getLanguage() {
   if (navigator.language) {
     language = navigator.language;
   }
-  language = (language =='zh-CN') ? language : 'en'
+  language = (language == 'zh-CN') ? language : 'en'
   // console.log("language",language)
   return language;
 }
