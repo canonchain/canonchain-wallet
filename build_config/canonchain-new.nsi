@@ -51,7 +51,7 @@ SectionEnd
 Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
   CreateDirectory "$SMPROGRAMS\CanonChain-Wallet"
-  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
+  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
   CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
 
@@ -73,8 +73,8 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
 
+  Delete "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk"
   Delete "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk"
-  Delete "$SMPROGRAMS\CanonChain-Wallet\Website.lnk"
   Delete "$DESKTOP\CanonChain-Wallet.lnk"
 
   RMDir "$SMPROGRAMS\CanonChain-Wallet"
