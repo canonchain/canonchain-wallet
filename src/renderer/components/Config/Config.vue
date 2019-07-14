@@ -397,8 +397,10 @@
                         })
                         this.canonchainProcess.on('close', (code, sig) => {
                             this.$walletLogs.error(`canonchain子进程close, 收到信号 ${sig} 而终止`)
-                            this.vcChecking = true;
-                            ipcRenderer.send('check-vc2015')
+                            if(process.platform === 'win32'){
+                                this.vcChecking = true;
+                                ipcRenderer.send('check-vc2015')
+                            }
                         })
                         this.canonchainProcess.on('exit', (code, sig) => {
                             this.$walletLogs.error(`canonchain子进程exit, 收到信号 ${sig} 而终止`)
@@ -409,7 +411,7 @@
                             this.canonchainProcess.removeAllListeners('exit')
                             this.guardNode(this.canonchainProcess, nodePath);
                             //vc错误在节点开启时会立刻出现，如果两秒内都没有出现，认为vc已安装
-                            if(!this.vcChecking)
+                            if((process.platform === 'win32') && !this.vcChecking)
                                 this.vcChecked = true;
                         }, 2000)
                         // ls.stderr.on('data', (data) => {
@@ -446,7 +448,7 @@
                     self.$startLogs.info("setInterval 11",this.checkUpdateEnd)
                     self.$czr.request.status()
                         .then(res => {
-                            if (!this.vcChecked)
+                            if ((process.platform === 'win32') && !this.vcChecked)
                             {
                                 self.$startLogs.info("Page Config : Waiting VC++ checking");
                                 return;

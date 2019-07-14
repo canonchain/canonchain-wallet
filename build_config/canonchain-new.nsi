@@ -1,34 +1,34 @@
-; ¸Ã½Å±¾Ê¹ÓÃ HM VNISEdit ½Å±¾±à¼­Æ÷Ïòµ¼²úÉú
+; ï¿½Ã½Å±ï¿½Ê¹ï¿½ï¿½ HM VNISEdit ï¿½Å±ï¿½ï¿½à¼­ï¿½ï¿½ï¿½òµ¼²ï¿½ï¿½ï¿½
 
-; °²×°³ÌÐò³õÊ¼¶¨Òå³£Á¿
+; ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½å³£ï¿½ï¿½
 !define PRODUCT_NAME "CanonChain Wallet"
-!define PRODUCT_VERSION "1.0.4"
+!define PRODUCT_VERSION "1.0.6"
 !define PRODUCT_PUBLISHER "Canonchain"
 !define PRODUCT_WEB_SITE "http://www.canonchain.com"
 
 SetCompressor lzma
 
-; ------ MUI ÏÖ´ú½çÃæ¶¨Òå (1.67 °æ±¾ÒÔÉÏ¼æÈÝ) ------
+; ------ MUI ï¿½Ö´ï¿½ï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½ (1.67 ï¿½æ±¾ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½) ------
 !include "MUI.nsh"
 
-; MUI Ô¤¶¨Òå³£Á¿
+; MUI Ô¤ï¿½ï¿½ï¿½å³£ï¿½ï¿½
 !define MUI_ABORTWARNING
 !define MUI_ICON "canonchain.ico"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
-; °²×°¹ý³ÌÒ³Ãæ
+; ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 !insertmacro MUI_PAGE_INSTFILES
 
-; °²×°Ð¶ÔØ¹ý³ÌÒ³Ãæ
+; ï¿½ï¿½×°Ð¶ï¿½Ø¹ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 !insertmacro MUI_UNPAGE_INSTFILES
 
-; °²×°Íê³ÉÒ³Ãæ
+; ï¿½ï¿½×°ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 !insertmacro MUI_PAGE_FINISH
 
-; °²×°½çÃæ°üº¬µÄÓïÑÔÉèÖÃ
+; ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 !insertmacro MUI_LANGUAGE "SimpChinese"
 
-; ------ MUI ÏÖ´ú½çÃæ¶¨Òå½áÊø ------
+; ------ MUI ï¿½Ö´ï¿½ï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 InstallDir "$LOCALAPPDATA\Programs\Canonchain Wallet"
@@ -59,14 +59,14 @@ Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
 SectionEnd
 
-#-- ¸ù¾Ý NSIS ½Å±¾±à¼­¹æÔò£¬ËùÓÐ Function Çø¶Î±ØÐë·ÅÖÃÔÚ Section Çø¶ÎÖ®ºó±àÐ´£¬ÒÔ±ÜÃâ°²×°³ÌÐò³öÏÖÎ´¿ÉÔ¤ÖªµÄÎÊÌâ¡£--#
+#-- ï¿½ï¿½ï¿½ï¿½ NSIS ï¿½Å±ï¿½ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Function ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Section ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ô±ï¿½ï¿½â°²×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ô¤Öªï¿½ï¿½ï¿½ï¿½ï¿½â¡£--#
 
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
 FunctionEnd
 
 /******************************
- *  ÒÔÏÂÊÇ°²×°³ÌÐòµÄÐ¶ÔØ²¿·Ö  *
+ *  ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ø²ï¿½ï¿½ï¿½  *
  ******************************/
 
 Section Uninstall
@@ -88,14 +88,14 @@ Section Uninstall
   SetAutoClose true
 SectionEnd
 
-#-- ¸ù¾Ý NSIS ½Å±¾±à¼­¹æÔò£¬ËùÓÐ Function Çø¶Î±ØÐë·ÅÖÃÔÚ Section Çø¶ÎÖ®ºó±àÐ´£¬ÒÔ±ÜÃâ°²×°³ÌÐò³öÏÖÎ´¿ÉÔ¤ÖªµÄÎÊÌâ¡£--#
+#-- ï¿½ï¿½ï¿½ï¿½ NSIS ï¿½Å±ï¿½ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Function ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Section ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ô±ï¿½ï¿½â°²×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ô¤Öªï¿½ï¿½ï¿½ï¿½ï¿½â¡£--#
 
 Function un.onInit
 !insertmacro MUI_UNGETLANGUAGE
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "ÄúÈ·ÊµÒªÍêÈ«ÒÆ³ý $(^Name) £¬¼°ÆäËùÓÐµÄ×é¼þ£¿" IDYES +2
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "ï¿½ï¿½È·ÊµÒªï¿½ï¿½È«ï¿½Æ³ï¿½ $(^Name) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" IDYES +2
   Abort
 FunctionEnd
 
 Function un.onUninstSuccess
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) ÒÑ³É¹¦µØ´ÓÄúµÄ¼ÆËã»úÒÆ³ý¡£"
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) ï¿½Ñ³É¹ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½"
 FunctionEnd

@@ -59,7 +59,7 @@ let utility = {
     },
     async getActive() {
         let val = await nedb.setting_language_active.findOne({ "name": "active" })
-        startLogs.info("getActive", val);
+        // startLogs.info("getActive", val);
         const i18n = new VueI18n({
             locale: val ? val.value : "zh-CN",// set locale
             messages,       // set locale messages 
