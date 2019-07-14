@@ -13,7 +13,7 @@
     "dataSizeTooLarge":"Hexadecimal data is too large",
     "invalidGasPriceFormat":"Gas unit price format is invalid",
     "invalidMciFormat":"MCI format is invalid",
-    "notEnoughFail":"Insufficient gas or abnormal fault"
+    "notEnoughFail":"Insufficient gas or abnormal contract execution"
   },
   "unit": {
     "czr":"CZR",

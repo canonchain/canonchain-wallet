@@ -290,67 +290,6 @@ function createMenu() {
 
 import {autoUpdater} from 'electron-updater'
 
-// autoUpdater.on('error', (error) => {
-//     // ipcMain.send('check-update-end')
-//     mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
-//     dialog.showMessageBox({
-//         type: 'info',
-//         message: '检查更新失败，请稍后重试'
-//     },()=>{
-//         app.quit()
-//     })
-// })
-
-autoUpdater.on('checking-for-update', () => {
-    mainLogs.info("开始检测新的钱包程序");
-})
-
-autoUpdater.on('update-available', info => {
-    mainLogs.info(`有新的钱包程序可用 info:${JSON.stringify(info)}`);
-})
-
-// autoUpdater.on('update-not-available', info => {
-//     // ipcMain.send('check-update-end')
-//     mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
-// })
-
-autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, transferred}) => {
-    mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
-})
-
-// autoUpdater.on('update-downloaded', info => {
-//     mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-//     setImmediate(() => autoUpdater.quitAndInstall())
-// })
-
-// autoUpdater.on('update-available', () => {
-//     dialog.showMessageBox({
-//         type: 'info',
-//         title: 'Found Updates',
-//         message: 'Found updates, do you want update now?',
-//         buttons: ['Sure', 'No']
-//     }, (buttonIndex) => {
-//         if (buttonIndex === 0) {
-//             autoUpdater.downloadUpdate()
-//         }
-//         else {
-//             updater.enabled = true
-//             updater = null
-//         }
-//     })
-// })
-
-autoUpdater.on('update-downloaded', (info) => {
-    mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
-    dialog.showMessageBox({
-        title: '有新的版本',
-        message: '更新已下载完成，点击确定后开始更新'
-    }, () => {
-        mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-        // setImmediate(() => autoUpdater.quitAndInstall())
-        setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
-    })
-})
 // app.on('ready', () => {
 //     if (process.env.NODE_ENV === 'production') {
 //         // ipcMain.send('check-update-start')
@@ -370,9 +309,33 @@ ipcMain.on('update', function(update_event, arg) {
             mainLogs.error('更新失败: ', error == null ? "unknown" : (error.stack || error).toString());
             dialog.showMessageBox({
                 type: 'info',
-                message: '检查更新失败，请稍后重试'
+                message: '更新失败，请检查网络连接'
             },()=>{
                 app.quit()
+            })
+        })
+        
+        autoUpdater.on('checking-for-update', () => {
+            mainLogs.info("开始检测新的钱包程序");
+        })
+
+        autoUpdater.on('update-available', info => {
+            mainLogs.info(`有新的钱包程序可用 info:${JSON.stringify(info)}`);
+        })
+
+        autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, transferred}) => {
+            mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
+        })
+
+        autoUpdater.on('update-downloaded', (info) => {
+            mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
+            dialog.showMessageBox({
+                title: '有新的版本',
+                message: '更新已下载完成，点击确定后开始更新'
+            }, () => {
+                mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
+                setImmediate(() => autoUpdater.quitAndInstall())
+                // setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
             })
         })
     }

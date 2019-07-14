@@ -13,7 +13,7 @@
     "dataSizeTooLarge":"十六进制数据太大",
     "invalidGasPriceFormat":"Gas单价格式无效",
     "invalidMciFormat":"MCI格式无效",
-    "notEnoughFail":"Gas不足或异常故障"
+    "notEnoughFail":"Gas不足或合约执行异常"
   },
   "unit": {
     "czr":"CZR",

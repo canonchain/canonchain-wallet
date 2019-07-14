@@ -457,6 +457,7 @@
                     this.$nedb.accounts_keystore.compactDatafile();
                     let resultAcc1 = await this.$nedb.account.done();
                     let resultKey = await this.$nedb.accounts_keystore.done();
+                    let resultAcc2 = await this.$nedb.account.done();
                     self.$walletLogs.info(`compactDatafile End`);
                     self.createInfo.pwd = "";//初始化密码
                     self.createInfo.repwd = "";//初始化密码
@@ -472,7 +473,7 @@
                 /**
                  * @wgy:修改了强制刷入数据
                  */
-                let accountPath = path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`
+                let accountPath = path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`);
                 const fd = fs.openSync(accountPath, 'w');
                 fs.writeFileSync(accountPath, JSON.stringify(accountObj))
                 fs.fdatasyncSync(fd)
@@ -668,7 +669,9 @@
                         aryForBalans.push(item.address)
                     })
                     // console.log('getAccountsBalances aryForBalans', aryForBalans)
-                    self.getAccountsBalances(aryForBalans);
+                    if(aryForBalans.length){
+                        self.getAccountsBalances(aryForBalans);
+                    }
                 }, 1000*10);
             },
             async getAccountsBalances(aryForBalans) {

@@ -556,8 +556,8 @@
                 let privateKey;
 
                 try {
-                    if (await self.$czr.accounts.validate_account(keystore[0], self.fromInfo.password)) {
-                        privateKey = await self.$czr.accounts.decrypt(keystore[0], self.fromInfo.password)
+                    if (await self.$czr.accounts.validate_account(keystore, self.fromInfo.password)) {
+                        privateKey = await self.$czr.accounts.decrypt(keystore, self.fromInfo.password)
                     } else {
                         this.sending = false
                         self.isSubmit = false
