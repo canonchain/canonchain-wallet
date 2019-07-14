@@ -1,51 +1,51 @@
 {
   "clients": {
-    "CanonChain": {
-      "version": "0.9.7r",
-      "platforms": {
-        "mac": {
-          "x64": {
-            "download": {
-              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain.tar.gz",
-              "type": "tar",
-              "bin": "canonchain"
-            },
-            "bin": "canonchain",
-            "commands": {
-              "sanity": {
-                "args": [
-                  "version"
-                ],
-                "output": [
-                  "CanonChain",
-                  "0.9.7r"
-                ]
+      "CanonChain": {
+          "version": "1.0.4",
+          "platforms": {
+              "mac": {
+                  "x64": {
+                      "download": {
+                          "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/mac/canonchain.tar.gz",
+                          "type": "tar",
+                          "bin": "canonchain"
+                      },
+                      "bin": "canonchain",
+                      "commands": {
+                          "sanity": {
+                              "args": [
+                                  "version"
+                              ],
+                              "output": [
+                                  "CanonChain",
+                                  "1.0.0"
+                              ]
+                          }
+                      }
+                  }
+              },
+              "win": {
+                  "x64": {
+                      "download": {
+                          "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip",
+                          "type": "zip",
+                          "bin": "canonchain.exe"
+                      },
+                      "bin": "canonchain.exe",
+                      "commands": {
+                          "sanity": {
+                              "args": [
+                                  "version"
+                              ],
+                              "output": [
+                                  "CanonChain",
+                                  "1.0.0"
+                              ]
+                          }
+                      }
+                  }
               }
-            }
           }
-        },
-        "win": {
-          "x64": {
-            "download": {
-              "url": "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/node/win/canonchain.zip",
-              "type": "zip",
-              "bin": "canonchain.exe"
-            },
-            "bin": "canonchain.exe",
-            "commands": {
-              "sanity": {
-                "args": [
-                  "version"
-                ],
-                "output": [
-                  "CanonChain",
-                  "0.9.7r"
-                ]
-              }
-            }
-          }
-        }
       }
-    }
   }
 }

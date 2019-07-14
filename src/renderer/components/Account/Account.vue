@@ -316,9 +316,9 @@
 
             self.initSendTrans(true);
 
-            // this.timerSwitch.initData = setInterval(() => {
-            //     self.initDatabase();
-            // }, 5000);
+            this.timerSwitch.initData = setInterval(() => {
+                self.initDatabase();
+            }, 5000);
         },
         computed: {
             transactionInfoTxFee() {
@@ -378,6 +378,7 @@
                                     }
                                 })
                                 this.allTx = this.allTx.concat(blocks)
+                                console.log("this.allTx concat",this.allTx,blocks)
                                 this.allTxPage += 1
                                 this.fetching = false
                             })
@@ -409,6 +410,7 @@
                         }
                         if(!res.blocks.length) return
                         this.allTx = res.blocks
+                        console.log("this.allTx",this.allTx)
                         this.allTxNext = res.next_index
                         this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
                             .then(res => {
@@ -483,11 +485,11 @@
                             ) {
                                 isEqual = self.blockDiff(
                                     newHash,
-                                    self.accountInfo.tx_list[tx_list.length - 1]
+                                    self.accountInfo.tx_list[self.accountInfo.tx_list.length - 1]
                                         .hash
                                 );
                             } else if (
-                                (tempList.length = self.pagingSwitch.limit)
+                                (tempList.length == self.pagingSwitch.limit)
                             ) {
                                 isEqual = self.blockDiff(
                                     newHash,

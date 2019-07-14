@@ -54,17 +54,24 @@
                 countTry: 0,
             };
         },
+        beforeCreate(){
+            // ipcRenderer.send('check-vc2015')
+            // 触发更新的检测
+            ipcRenderer.send('update',"ping-update");
+        },
         created() {
             self = this;
             const APP = process.type === "renderer" ? remote.app : app;
             this.userDataPath = APP.getPath("userData");
             this.initConfig();
             this.validity();
-            ipcRenderer.on('check-update-end', () => {
+            ipcRenderer.on('check-update-end', (event, message) => {
+                self.$startLogs.info("接收到主进程的 check-update-end 触发");
                 this.checkUpdateEnd = true
             })
             // check vc2015 success
             ipcRenderer.on('vc2015-exists', () => {
+                self.$startLogs.info("接收到主进程的 vc2015-exists 触发");
                 // this.$czr.request.status()
                 //     .then(() => {
                 //         this.canonchainProcess.removeAllListeners('error')
@@ -150,7 +157,7 @@
                 self.latest_config = {
                     content: "",
                     BINARY_URL:
-                        "http://www.canonchain.com/resource/file/canonchain/latest/clientBinaries.json" + radom
+                        "https://canonchain-public.oss-cn-hangzhou.aliyuncs.com/wallet/latest/clientBinaries.json" + radom
                 };
                 self.node_info = {
                     NODE_TYPE: "CanonChain",
@@ -429,7 +436,9 @@
                 if (self.timer) {
                     clearInterval(self.timer)
                 }
+                self.$startLogs.info("setInterval 00")
                 self.timer = setInterval(() => {
+                    self.$startLogs.info("setInterval 11",this.checkUpdateEnd)
                     self.$czr.request.status()
                         .then(res => {
                             if (this.checkUpdateEnd) {

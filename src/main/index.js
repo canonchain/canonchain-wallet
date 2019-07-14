@@ -16,7 +16,7 @@ if (!fs.existsSync(BACKUP_PATH)) {
     fs.mkdirSync(BACKUP_PATH)
 }
 
-ipcMain.on('check-vc2015', () => {
+ipcMain.on('check-vc2015', (check_event) => {
     if (process.platform === 'win32') { // check vc2015
 
         if (process.arch !== 'x64') {
@@ -98,12 +98,14 @@ ipcMain.on('check-vc2015', () => {
         promiseAny(keys.map(({hive, key}) => getRegKey(hive, key, 'Version')))
             .then(registryItem => {
                 mainLogs.info(`系统已安装Visual C++ Redistributable for Visual Studio 2015, ${JSON.stringify(registryItem)}`)
-                ipcMain.send('vc2015-exists')
+                // ipcMain.send('vc2015-exists')
+                check_event.sender.send('vc2015-exists')
             })
             .catch(errs => {
                 if (fs.existsSync(path.join(process.env.SystemRoot, 'SysWOW64', 'msvcp140.dll'))) {
                     mainLogs.info(`系统已存在msvcp140.dll`)
-                    ipcMain.send('vc2015-exists')
+                    // ipcMain.send('vc2015-exists')
+                    check_event.sender.send('vc2015-exists')
                     return
                 }
                 mainLogs.info(`系统未检测到Visual C++ Redistributable for Visual Studio 2015`)
@@ -288,16 +290,16 @@ function createMenu() {
 
 import {autoUpdater} from 'electron-updater'
 
-autoUpdater.on('error', (error) => {
-    // ipcMain.send('check-update-end')
-    mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
-    dialog.showMessageBox({
-        type: 'info',
-        message: '检查更新失败，请稍后重试'
-    },()=>{
-        app.quit()
-    })
-})
+// autoUpdater.on('error', (error) => {
+//     // ipcMain.send('check-update-end')
+//     mainLogs.error('Error: ', error == null ? "unknown" : (error.stack || error).toString());
+//     dialog.showMessageBox({
+//         type: 'info',
+//         message: '检查更新失败，请稍后重试'
+//     },()=>{
+//         app.quit()
+//     })
+// })
 
 autoUpdater.on('checking-for-update', () => {
     mainLogs.info("开始检测新的钱包程序");
@@ -307,10 +309,10 @@ autoUpdater.on('update-available', info => {
     mainLogs.info(`有新的钱包程序可用 info:${JSON.stringify(info)}`);
 })
 
-autoUpdater.on('update-not-available', info => {
-    ipcMain.send('check-update-end')
-    mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
-})
+// autoUpdater.on('update-not-available', info => {
+//     // ipcMain.send('check-update-end')
+//     mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
+// })
 
 autoUpdater.on('download-progress', ({delta, bytesPerSecond, percent, total, transferred}) => {
     mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
@@ -342,17 +344,38 @@ autoUpdater.on('update-downloaded', (info) => {
     mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
     dialog.showMessageBox({
         title: '有新的版本',
-        message: '更新已下载完成，请安装更新'
+        message: '更新已下载完成，点击确定后开始更新'
     }, () => {
         mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-        setImmediate(() => autoUpdater.quitAndInstall())
+        // setImmediate(() => autoUpdater.quitAndInstall())
+        autoUpdater.quitAndInstall()
     })
 })
+// app.on('ready', () => {
+//     if (process.env.NODE_ENV === 'production') {
+//         // ipcMain.send('check-update-start')
+//         autoUpdater.checkForUpdates()
+//     }
+// })
 
-app.on('ready', () => {
+ipcMain.on('update', function(update_event, arg) {    
     if (process.env.NODE_ENV === 'production') {
-        ipcMain.send('check-update-start')
         autoUpdater.checkForUpdates()
+        autoUpdater.on('update-not-available', info => {
+            update_event.sender.send('check-update-end', 'pong');
+            mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
+        })
+        autoUpdater.on('error', () => {
+            update_event.sender.send('check-update-end', 'pong');
+            mainLogs.error('更新失败: ', error == null ? "unknown" : (error.stack || error).toString());
+            dialog.showMessageBox({
+                type: 'info',
+                message: '检查更新失败，请稍后重试'
+            },()=>{
+                app.quit()
+            })
+        })
     }
-})
+});
+
 

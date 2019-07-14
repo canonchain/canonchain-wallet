@@ -439,7 +439,7 @@
                             self.createInfo.tag ||
                             self.$t("page_home.acc") +
                             (self.database.length + 1),
-                        balance: 0,
+                        balance: "0",
                         send_list: []
                     };
                     // loading
@@ -447,7 +447,6 @@
                         lock: true,
                         text: '账户文件生成中',
                         spinner: 'el-icon-loading',
-                        color:"rgba(250, 250, 250, 1)",
                         background: 'rgba(0, 0, 0, 0.6)'
                     });
                     self.initAccount(params);
@@ -456,7 +455,7 @@
                     self.$walletLogs.info(`compactDatafile Start`);
                     this.$nedb.account.compactDatafile();
                     this.$nedb.accounts_keystore.compactDatafile();
-                    let resultAcc = await this.$nedb.account.done();
+                    let resultAcc1 = await this.$nedb.account.done();
                     let resultKey = await this.$nedb.accounts_keystore.done();
                     self.$walletLogs.info(`compactDatafile End`);
                     self.createInfo.pwd = "";//初始化密码
@@ -662,12 +661,12 @@
                     })
                     // console.log('getAccountsBalances aryForBalans', aryForBalans)
                     self.getAccountsBalances(aryForBalans);
-                }, 5000);
+                }, 1000*10);
             },
             async getAccountsBalances(aryForBalans) {
                 self.$czr.request
                     .accountsBalances(aryForBalans)
-                    .then(res => {
+                    .then( async res => {
                         // console.log('accountsBalances res ', res)
                         // console.log('aryForBalans ', aryForBalans)
                         if (res.code !== 0) {
@@ -675,21 +674,34 @@
                                 `Accounts Balances Error ${res.msg}`
                             );
                         }
-                        let localAcc
-                        res.balances.forEach(async (balance, i) => {
-                            //anbang 如果余额变了，再修改
-                            // self.$db
-                            //     .read()
-                            //     .get("czr_accounts")
-                            //     .find({address: aryForBalans[i]})
-                            //     .assign({balance: new BigNumber(balance).toString()})
-                            //     .write()
-                            localAcc = await this.$nedb.account.findOne({address: aryForBalans[i]});
-                            // console.log("localAcc", localAcc.balance.toString(),balance.toString())
-                            if(localAcc && (localAcc.balance.toString() !== balance.toString())){
-                                let aloneUpdateRes = await this.$nedb.account_tx.update({address: aryForBalans[i]},{ $set: { balance: Number(balance) } });
+                        let localAcc;
+                        let balance;
+                        
+                        for(let localIndex=0,len = res.balances.length;localIndex<len;){
+                            balance = res.balances[localIndex];
+                            localAcc = await this.$nedb.account.findOne({address: aryForBalans[localIndex]});
+                            // console.log("localAcc", localAcc.balance,balance)
+                            if(localAcc && (localAcc.balance !== balance)){
+                                // console.log("xiugai",aryForBalans[localIndex])
+                                let aloneUpdateRes = await this.$nedb.account.update({address: aryForBalans[localIndex]},{ $set: {balance: balance} });
                             }
-                        })
+                            localIndex++;
+                        }
+                        // res.balances.forEach(async (balance, i) => {
+                        //     //anbang 如果余额变了，再修改
+                        //     // self.$db
+                        //     //     .read()
+                        //     //     .get("czr_accounts")
+                        //     //     .find({address: aryForBalans[i]})
+                        //     //     .assign({balance: new BigNumber(balance).toString()})
+                        //     //     .write()
+                        //     localAcc = await this.$nedb.account.findOne({address: aryForBalans[i]});
+                        //     console.log("localAcc", localAcc.balance.toString(),balance.toString())
+                        //     if(localAcc && (localAcc.balance.toString() !== balance.toString())){
+                        //         console.log("xiugai",aryForBalans[i])
+                        //         let aloneUpdateRes = await this.$nedb.account.update({address: aryForBalans[i]},{ $set: { balance: Number(balance) } });
+                        //     }
+                        // })
                     })
                     .catch(error => {
                         self.$walletLogs.info(
