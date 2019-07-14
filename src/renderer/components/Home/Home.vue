@@ -397,6 +397,7 @@
 
                 // const accountResult = ipcRenderer.sendSync('sync', self.createInfo.pwd);
                 const accountResult = await self.$czr.accounts.create(self.createInfo.pwd)
+                console.log(accountResult.account);
                 if (accountResult.account) {
                     /* 创建成功, 备份keystore */
                     fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountResult.account}.json`), JSON.stringify(accountResult))
@@ -433,6 +434,7 @@
                     self.createInfo.repwd = "";//初始化密码
                     loading.close();
                     self.createInfo.step = 1;
+                    console.log("完成备份")
                 } else {
                     self.$walletLogs.error("Account Create Error");
                     self.$message.error("Account Create Error");
