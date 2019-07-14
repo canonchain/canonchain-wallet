@@ -65,6 +65,7 @@
             })
             // check vc2015 success
             ipcRenderer.on('vc2015-exists', () => {
+                this.vcChecked = true;
                 // this.$czr.request.status()
                 //     .then(() => {
                 //         this.canonchainProcess.removeAllListeners('error')
@@ -389,6 +390,7 @@
                         })
                         this.canonchainProcess.on('close', (code, sig) => {
                             this.$walletLogs.error(`canonchain子进程close, 收到信号 ${sig} 而终止`)
+                            this.vcChecking = true;
                             ipcRenderer.send('check-vc2015')
                         })
                         this.canonchainProcess.on('exit', (code, sig) => {
@@ -399,7 +401,10 @@
                             this.canonchainProcess.removeAllListeners('close')
                             this.canonchainProcess.removeAllListeners('exit')
                             this.guardNode(this.canonchainProcess, nodePath);
-                        }, 5000)
+                            //vc错误在节点开启时会立刻出现，如果两秒内都没有出现，认为vc已安装
+                            if(!this.vcChecking)
+                                this.vcChecked = true;
+                        }, 2000)
                         // ls.stderr.on('data', (data) => {
                         //     ls.removeAllListeners('exit')
                         //     self.$alert(`Error: ${data}`, self.$t('page_config.start_node_err'), {
@@ -432,13 +437,23 @@
                 self.timer = setInterval(() => {
                     self.$czr.request.status()
                         .then(res => {
-                            if (this.checkUpdateEnd) {
-                                //清除定时器，
-                                clearInterval(self.timer);
-                                self.timer = null;
-                                self.$startLogs.info("Page Config : Online Success");
-                                self.$router.push({path: "home"});
+                            if (!this.vcChecked)
+                            {
+                                self.$startLogs.info("Page Config : Waiting VC++ checking");
+                                return;
                             }
+
+                            if (!this.checkUpdateEnd)
+                            {
+                               self.$startLogs.info("Page Config : Waiting update checking");
+                               return;
+                            }
+
+                            //清除定时器，
+                            clearInterval(self.timer);
+                            self.timer = null;
+                            self.$startLogs.info("Page Config : Online Success");
+                            self.$router.push({path: "home"});                            
                         })
                         .catch(error => {
                             // console.log('status 失败',this.countTry)
