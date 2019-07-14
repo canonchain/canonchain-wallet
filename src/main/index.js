@@ -348,7 +348,7 @@ autoUpdater.on('update-downloaded', (info) => {
     }, () => {
         mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
         // setImmediate(() => autoUpdater.quitAndInstall())
-        autoUpdater.quitAndInstall()
+        setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
     })
 })
 // app.on('ready', () => {
