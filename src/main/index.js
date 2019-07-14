@@ -290,6 +290,11 @@ function createMenu() {
 
 import {autoUpdater} from 'electron-updater'
 
+const log = require("electron-log")
+log.transports.file.level = "debug"
+autoUpdater.logger = log
+autoUpdater.checkForUpdatesAndNotify()
+
 // app.on('ready', () => {
 //     if (process.env.NODE_ENV === 'production') {
 //         // ipcMain.send('check-update-start')
@@ -328,17 +333,37 @@ ipcMain.on('update', function(update_event, arg) {
         })
 
         autoUpdater.on('update-downloaded', (info) => {
-            mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
-            dialog.showMessageBox({
-                title: '有新的版本',
-                message: '更新已下载完成，点击确定后开始更新'
-            }, () => {
-                mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-                setImmediate(() => autoUpdater.quitAndInstall())
-                // setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
-            })
+            app.quit()
+            // mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
+            // app.removeAllListeners("window-all-closed")
+            // if (mainWindow != null) {
+            //     // mainWindow.setClosable(true)
+            //     mainWindow.close()
+            // }
+            // autoUpdater.quitAndInstall(false)
+            
+            // mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
+            // dialog.showMessageBox({
+            //     title: '有新的版本',
+            //     message: '更新已下载完成，点击确定后开始更新'
+            // }, () => {
+            //     // mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
+            //     setImmediate(() => {
+            //         app.removeAllListeners("window-all-closed")
+            //         if (mainWindow != null) {
+            //             // mainWindow.setClosable(true)
+            //             mainWindow.close()
+            //         }
+            //         autoUpdater.quitAndInstall(false)
+            //         // autoUpdater.quitAndInstall()
+            //     })
+            //     // setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
+            // })
         })
     }
 });
 
+app.on('quit',function(){
+    autoUpdater.quitAndInstall();
+})
 

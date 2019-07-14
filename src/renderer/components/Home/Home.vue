@@ -170,36 +170,36 @@
     //     self.$nodeLogs.info("before-quit start");
     // })
 
-    app.on("will-quit", () => {
-        //应用程序的窗口已经关闭，应用即将退出
-        self.$nodeLogs.info("will-quit start");
-        self.$czr.request.stop().then(data => {
-            self.$nodeLogs.info("Stop成功 !");
-            self.$nodeLogs.info(data);
-        }).catch(error => {
-            self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
-            self.$nodeLogs.error(error);
-        });
-    });
+    // app.on("will-quit", () => {
+    //     //应用程序的窗口已经关闭，应用即将退出
+    //     self.$nodeLogs.info("will-quit start");
+    //     self.$czr.request.stop().then(data => {
+    //         self.$nodeLogs.info("Stop成功 !");
+    //         self.$nodeLogs.info(data);
+    //     }).catch(error => {
+    //         self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
+    //         self.$nodeLogs.error(error);
+    //     });
+    // });
 
-    app.on("quit", () => {
-        //应用程序正在退出
-        self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonchainPid"));
-        if(!sessionStorage.getItem("CanonchainPid")){
-            self.$nodeLogs.info("不需要kill Canonchain");
-            return
-        }
-        let currentPid = Number(sessionStorage.getItem("CanonchainPid"));
-        let result = process.kill(currentPid, "SIGINT");
-        self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
-        self.$czr.request.stop().then(data => {
-            self.$nodeLogs.info("Stop成功");
-            self.$nodeLogs.info(data);
-        }).catch(error => {
-            self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
-            self.$nodeLogs.error(error);
-        });
-    });
+    // app.on("quit", () => {
+    //     //应用程序正在退出
+    //     self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonchainPid"));
+    //     if(!sessionStorage.getItem("CanonchainPid")){
+    //         self.$nodeLogs.info("不需要kill Canonchain");
+    //         return
+    //     }
+    //     let currentPid = Number(sessionStorage.getItem("CanonchainPid"));
+    //     let result = process.kill(currentPid, "SIGINT");
+    //     self.$nodeLogs.info("app quit kill canonchain:", currentPid, result);
+    //     self.$czr.request.stop().then(data => {
+    //         self.$nodeLogs.info("Stop成功");
+    //         self.$nodeLogs.info(data);
+    //     }).catch(error => {
+    //         self.$nodeLogs.error("出错啦，建议重启钱包后再次操作");
+    //         self.$nodeLogs.error(error);
+    //     });
+    // });
 
     export default {
         name: "Bodyer",
