@@ -289,11 +289,10 @@ function createMenu() {
 
 
 import {autoUpdater} from 'electron-updater'
-
 const log = require("electron-log")
 log.transports.file.level = "debug"
 autoUpdater.logger = log
-autoUpdater.checkForUpdatesAndNotify()
+// autoUpdater.checkForUpdatesAndNotify()
 
 // app.on('ready', () => {
 //     if (process.env.NODE_ENV === 'production') {
@@ -305,21 +304,6 @@ autoUpdater.checkForUpdatesAndNotify()
 ipcMain.on('update', function(update_event, arg) {    
     if (process.env.NODE_ENV === 'production') {
         autoUpdater.checkForUpdates()
-        autoUpdater.on('update-not-available', info => {
-            update_event.sender.send('check-update-end', 'pong');
-            mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
-        })
-        autoUpdater.on('error', () => {
-            update_event.sender.send('check-update-end', 'pong');
-            mainLogs.error('更新失败: ', error == null ? "unknown" : (error.stack || error).toString());
-            dialog.showMessageBox({
-                type: 'info',
-                message: '更新失败，请检查网络连接'
-            },()=>{
-                app.quit()
-            })
-        })
-        
         autoUpdater.on('checking-for-update', () => {
             mainLogs.info("开始检测新的钱包程序");
         })
@@ -332,38 +316,30 @@ ipcMain.on('update', function(update_event, arg) {
             mainLogs.info(`更新下载中...delta: ${delta}，bytesPerSecond: ${bytesPerSecond}，percent: ${percent}，total: ${total}，transferred: ${transferred}`)
         })
 
-        autoUpdater.on('update-downloaded', (info) => {
-            app.quit()
-            // mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
-            // app.removeAllListeners("window-all-closed")
-            // if (mainWindow != null) {
-            //     // mainWindow.setClosable(true)
-            //     mainWindow.close()
-            // }
-            // autoUpdater.quitAndInstall(false)
-            
-            // mainLogs.info(`更新下载完成 info:${JSON.stringify(info)}`);
-            // dialog.showMessageBox({
-            //     title: '有新的版本',
-            //     message: '更新已下载完成，点击确定后开始更新'
-            // }, () => {
-            //     // mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
-            //     setImmediate(() => {
-            //         app.removeAllListeners("window-all-closed")
-            //         if (mainWindow != null) {
-            //             // mainWindow.setClosable(true)
-            //             mainWindow.close()
-            //         }
-            //         autoUpdater.quitAndInstall(false)
-            //         // autoUpdater.quitAndInstall()
-            //     })
-            //     // setTimeout(() => { autoUpdater.quitAndInstall() }, 500);
-            // })
+        autoUpdater.on('update-downloaded', info => {
+            mainLogs.info(`开始更新钱包程序 info:${JSON.stringify(info)}`);
+            dialog.showMessageBox({
+                title: '有新的版本',
+                message: '更新已下载完成，点击确定后开始更新'
+            }, () => {
+                setImmediate(() => autoUpdater.quitAndInstall())
+            })
+        })
+
+        autoUpdater.on('update-not-available', info => {
+            update_event.sender.send('check-update-end', 'pong');
+            mainLogs.info(`没有新的钱包程序 info:${JSON.stringify(info)}`);
+        })
+
+        autoUpdater.on('error', () => {
+            mainLogs.error('更新失败: ', error == null ? "unknown" : (error.stack || error).toString());
+            dialog.showMessageBox({
+                type: 'info',
+                message: '更新失败，请检查网络连接'
+            },()=>{
+                app.quit()
+            })
         })
     }
 });
-
-app.on('quit',function(){
-    autoUpdater.quitAndInstall();
-})
 
