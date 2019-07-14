@@ -547,7 +547,7 @@
                  * @wgy:获取当前account的keystore
                  */
                 const keystore = await self.$nedb.accounts_keystore.findOne({"account": self.fromInfo.account})
-                if (!keystore.length) {
+                if (!keystore.account) {
                     self.$message.error(self.$t('page_transfer.no_keystore_file'));
                     self.isSubmit = false;
                     this.sending = false

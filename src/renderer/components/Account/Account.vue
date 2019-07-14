@@ -409,8 +409,7 @@
                             return
                         }
                         if(!res.blocks.length) return
-                        this.allTx = res.blocks
-                        console.log("this.allTx",this.allTx)
+                        this.allTx = res.blocks;
                         this.allTxNext = res.next_index
                         this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
                             .then(res => {
