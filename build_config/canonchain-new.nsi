@@ -83,7 +83,7 @@ Section Uninstall
   RMDir /r "$INSTDIR\resources"
   RMDir /r "$INSTDIR\locales"
 
-  RMDir "$INSTDIR"
+  RMDir /r "$INSTDIR"
 
   SetAutoClose true
 SectionEnd
