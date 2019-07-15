@@ -239,11 +239,55 @@
                 if (latestVer == localVer) {
                     self.conMsg = self.$t("page_config.content_msg.no_need");
                     self.$startLogs.info("本地 Canonchain 节点文件是最新的");
-                    this.isDownload();
+                    // this.isDownload();
+                    this.writeChmod();
                 } else {
                     self.conMsg = self.$t("page_config.content_msg.need");
                     self.$startLogs.info("本地 Canonchain 节点文件是老版本");
-                    this.isDownload(true);
+                    // this.isDownload(true);
+                    this.writeChmod(true);
+                }
+            },
+            //解决MAC平台，升级节点时的文件权限问题
+            writeChmod(flag){
+                //如果是MAC系统，文件可能没有写入权限，先设置权限再处理
+                if(process.platform === 'darwin'){
+                    fs.open(path.join(this.userDataPath, "download/canonchain"), 'r', function (err, fd) {
+                        if (err) {
+                            //文件不存在，直接去下载
+                            self.$startLogs.info("检测节点文件不存在，直接去下载");
+                            self.isDownload(flag);
+                            return;
+                        }
+                        //文件存在
+                        fs.fstat(fd, function (err, stat) {
+                            if (err) {
+                                //读取错误
+                                self.$startLogs.info("检测节点原权限，直接去下载");
+                                self.isDownload(flag);
+                                return;
+                            }
+                            self.$startLogs.info("原权限" , stat.mode);
+                            //改权限
+                            if (stat.mode !== 33261) {
+                                self.$startLogs.info("文件权限必须修改，否则起不来")
+                                fs.fchmod(fd, '755', function (err) {
+                                    if (err) {
+                                        self.$startLogs.info("修改失败，需要删除")
+                                        self.isDownload(flag);
+                                        return;
+                                    }
+                                    self.$startLogs.info("文件权限已经修改成功了")
+                                    self.isDownload(flag);
+                                })
+                            } else {
+                                self.$startLogs.info("文件权限不需要修改")
+                                self.isDownload(flag);
+                            }
+                        })
+                    })
+                }else{
+                    this.isDownload(flag);
                 }
             },
             isDownload(flag) {
@@ -265,6 +309,8 @@
                         'Connection': 'keep-alive'
                     },
                     extract: true,
+                    strip: 1,
+                    mode: '755',
                     timeout: 1000 * 60,
                 };
 
@@ -369,6 +415,7 @@
                     .catch(async (error) => {
                         // console.log("本地没有节点，需要启动");
                         self.$startLogs.info("本地没有节点，需要启动");
+                        this.conMsg = this.$t("page_config.content_msg.specifyDataDir");
                         let dir
                         // 读取设置中的节点数据存储路径
                         // const dirSet = self.$db.get('czr_setting.canonchain_data_path').value()
