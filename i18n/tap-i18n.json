@@ -4,9 +4,6 @@
   "dialog_tit": "提示",
   "close": "关闭",
   "confirm_you_active": "请确认您的操作",
-  "main_process": {
-    "need64bit": "请使用64位系统运行钱包程序，32位系统可能出现异常"
-  },
   "rpcErrors": {
     "invalidFromAccount": "发款方账户无效",
     "invalidToAccount": "收款方账户无效",

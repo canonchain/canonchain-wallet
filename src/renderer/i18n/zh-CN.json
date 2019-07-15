@@ -140,8 +140,8 @@
       "data":"数据",
       "send_time":"发送时间",
       "mac_time":"主链时间",
-      "gasPrice":"Gas单价(10<sup>-18</sup>CZR)",
-      "txFee":"交易费用(10<sup>-9</sup>CZR)",
+      "gasPrice":"Gas单价(10<sup>-9</sup>CZR)",
+      "txFee":"交易费用(CZR)",
       "gasUsed":"Gas使用",
       "waiting":"等待确认",
       "success":"成功",
@@ -218,6 +218,7 @@
   "page_config": {
     "config_detection":"配置检测中",
     "start_node_err":"节点启动失败",
+    "connect_node_err": "连接节点失败",
     "confirm":"确定",
     "content_msg": {
       "ready_test":"准备检测配置文件",

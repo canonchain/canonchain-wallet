@@ -214,7 +214,7 @@
                 </li>
                 <li class="b-flex b-flex-justify tx-item">
                     <strong class="tx-item-des" v-html="$t('page_account.dia_tx.gasPrice')"></strong>
-                    <span class="tx-item-info">{{transactionInfo.gas_price || '-'}}</span>
+                    <span class="tx-item-info">{{transactionInfoGasPrice}}</span>
                 </li>
                 <li class="b-flex b-flex-justify tx-item">
                     <strong class="tx-item-des" v-html="$t('page_account.dia_tx.txFee')"></strong>
@@ -321,13 +321,20 @@
             }, 5000);
         },
         computed: {
+            transactionInfoGasPrice(){
+                if(!this.transactionInfo.gas_price){
+                    return '-'
+                }
+                return new BigNumber(this.transactionInfo.gas_price)
+                    .div(new BigNumber('1e9')).toString()
+            },
             transactionInfoTxFee() {
                 if (!this.transactionInfo.gas_price || !this.transactionInfo.gas_used) {
                     return '-'
                 }
                 return new BigNumber(this.transactionInfo.gas_price).times(
                     new BigNumber(this.transactionInfo.gas_used)
-                ).div(new BigNumber('1e9')).toString()
+                ).div(new BigNumber('1e18')).toString()
             },
         },
         beforeDestroy() {
