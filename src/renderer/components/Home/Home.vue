@@ -621,7 +621,7 @@
                 this.dialogSwitch.remove = true;
             },
             async removeAccountFn() {
-                //判断keystore是否在本地，如果在本地，删除本地账号系统；否则请求节点删除
+                //判断keystore是否在本地，如果在本地，删除本地账户系统；否则请求节点删除
                 //anbang
                 // let isKeystoreAccount = this.$db
                 //     .get("accounts_keystore")

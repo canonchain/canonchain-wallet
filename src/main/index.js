@@ -153,7 +153,7 @@ let menu;
 // const path          = require('path');
 // const url           = require('url');
 
-// czr账号
+// czr账户
 const czr = require('../czr')
 ipcMain.on('sync', (event, arg) => {
     if (typeof arg === 'string') {
@@ -171,7 +171,7 @@ ipcMain.on('remove_account', (event, file, pwd) => {
         event.returnValue = error.message
     })
 })
-// czr账号
+// czr账户
 
 /**
  * Set `__static` path to static files in production

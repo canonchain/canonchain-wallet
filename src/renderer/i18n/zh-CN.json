@@ -77,10 +77,10 @@
     "txFee":"交易费用",
     "total":"合计",
     "select":"请选择",
-    "no_account_info":"暂无账号，请创建或者导入账号",
-    "no_keystore_file":"未找到对应账号的账户文件",
+    "no_account_info":"暂无账户，请创建或者导入账户",
+    "no_keystore_file":"未找到对应账户的账户文件",
     "contacts_dig": {
-      "title":"选择联系人账号",
+      "title":"选择联系人账户",
       "select_placeholder":"请选择"
     },
     "confirm_dia": {
@@ -151,9 +151,9 @@
       "fail3":"失败(3)"
     },
     "keystore": {
-      "tit":"备份钱包文件",
+      "tit":"备份账户文件",
       "copy":"复制",
-      "download":"下载钱包文件"
+      "download":"下载账户文件"
     },
     "msg_info": {
       "ads_copy_success":"地址已经复制",
@@ -161,12 +161,12 @@
     }
   },
   "page_home": {
-    "import_account":"导入账号",
-    "add_account":"新建账号",
+    "import_account":"导入账户",
+    "add_account":"新建账户",
     "acc":"账户",
     "create_dia": {
-      "download_tit":"请下载钱包文件",
-      "download_des":"请务必将钱包文件保存好，切勿丢失，否则造成的损失将不可挽回",
+      "download_tit":"请下载账户文件",
+      "download_des":"请务必将账户文件保存好，切勿丢失，否则造成的损失将不可挽回",
       "create_tit":"创建账户",
       "backup_tit":"备份您的新账户",
       "create_tag":"账户备注",
@@ -185,7 +185,7 @@
       "validate_type_password": "密码仅支持 数字 英文字母 和 !@#$%^&* 半角字符",
       "validate_password_length":"两次输入的密码不一致",
       "create_success":"创建成功",
-      "account_quantity_error":"账号数量不能超过50个",
+      "account_quantity_error":"账户数量不能超过50个",
       "create_success_des":"请保存你的账户文件，不要分享给任何人！"
     },
     "import_dia": {
@@ -208,7 +208,7 @@
     "remove_dia": {
       "tit":"你确定要移除吗？",
       "remove_confrim":"我确定移除",
-      "backup":"请注意此账号的备份，避免财产损失",
+      "backup":"请注意此账户的备份，避免财产损失",
       "input_pwd":"密码",
       "placeholder_pwd":"请输入此账户的密码",
       "validate_password":"您输入的密码是错误的",
