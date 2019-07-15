@@ -449,14 +449,14 @@
                             this.$walletLogs.error('canonchain子进程error事件', err.stack)
                         })
                         this.canonchainProcess.on('close', (code, sig) => {
-                            this.$walletLogs.error(`canonchain子进程close, 收到信号 ${sig} 而终止`)
+                            this.$walletLogs.error(`canonchain子进程close, 收到信号 ${sig} 而终止, code:${code}`)
                             if(process.platform === 'win32'){
                                 this.vcChecking = true;
                                 ipcRenderer.send('check-vc2015')
                             }
                         })
                         this.canonchainProcess.on('exit', (code, sig) => {
-                            this.$walletLogs.error(`canonchain子进程exit, 收到信号 ${sig} 而终止`)
+                            this.$walletLogs.error(`canonchain子进程exit, 收到信号 ${sig} 而终止, code:${code}`)
                         })
                         setTimeout(() => {
                             this.canonchainProcess.removeAllListeners('error')
