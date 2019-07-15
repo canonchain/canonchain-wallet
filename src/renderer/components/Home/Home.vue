@@ -671,6 +671,8 @@
                     // console.log('getAccountsBalances aryForBalans', aryForBalans)
                     if(aryForBalans.length){
                         self.getAccountsBalances(aryForBalans);
+                    }else{
+                        self.runBalancesTimer();
                     }
                 }, 1000*5);
             },
