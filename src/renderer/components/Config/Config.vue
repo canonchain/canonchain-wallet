@@ -183,7 +183,13 @@
                     })
                     .catch(error => {
                         self.$startLogs.error(`获取最新的节点配置信息失败, ${error.message}`)
-                        self.conMsg = error; // 取本地的，本地取不到，取安装包的配置
+                        self.conMsg = '网络连接失败，请检查网络连接'; // 取本地的，本地取不到，取安装包的配置
+                        dialog.showMessageBox({
+                            type: 'info',
+                            message: '网络连接失败，请检查网络连接'
+                        },()=>{
+                            app.quit()
+                        })
                     });
             },
             checkLocalConfig() {

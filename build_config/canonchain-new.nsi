@@ -48,14 +48,14 @@ Section "MainSection" SEC01
   File /r  /x d3dcompiler_47.dll "..\build\win-unpacked\*.*"
   SetOutPath "$INSTDIR\assets"
   File ..\vc15\vc_redist.x64.exe
-  CreateShortCut "$DESKTOP\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
+  CreateShortCut "$DESKTOP\CanonChain Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
 SectionEnd
 
 Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
-  CreateDirectory "$SMPROGRAMS\CanonChain-Wallet"
-  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
-  CreateShortCut "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk" "$INSTDIR\uninst.exe"
+  CreateDirectory "$SMPROGRAMS\CanonChain Wallet"
+  CreateShortCut "$SMPROGRAMS\CanonChain Wallet\CanonChain Wallet.lnk" "$INSTDIR\CanonChain Wallet.exe"
+  CreateShortCut "$SMPROGRAMS\CanonChain Wallet\Uninstall.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
 
 Section -Post
@@ -76,11 +76,11 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
 
-  Delete "$SMPROGRAMS\CanonChain-Wallet\CanonChain-Wallet.lnk"
-  Delete "$SMPROGRAMS\CanonChain-Wallet\Uninstall.lnk"
-  Delete "$DESKTOP\CanonChain-Wallet.lnk"
+  Delete "$SMPROGRAMS\CanonChain Wallet\CanonChain Wallet.lnk"
+  Delete "$SMPROGRAMS\CanonChain Wallet\Uninstall.lnk"
+  Delete "$DESKTOP\CanonChain Wallet.lnk"
 
-  RMDir "$SMPROGRAMS\CanonChain-Wallet"
+  RMDir "$SMPROGRAMS\CanonChain Wallet"
 
   RMDir /r "$INSTDIR\swiftshader"
   RMDir /r "$INSTDIR\resources"
