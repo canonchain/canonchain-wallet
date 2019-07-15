@@ -353,14 +353,14 @@
                 this.initDatabase();
             },
             async pushKeystore(keystore) {
-                self.$walletLogs.info(`开始保存keystore文件，${JSON.stringify(keystore)}`);
+                self.$walletLogs.info(`开始保存keystore文件`);
                 //anbang 写入账户
                 // const ret = self.$db
                 //     .get("accounts_keystore")
                 //     .push(keystore)
                 //     .write();
                 const ret = await this.$nedb.accounts_keystore.insert(keystore);
-                self.$walletLogs.info(`完成保存keystore文件吗，${JSON.stringify(ret)}`);
+                self.$walletLogs.info(`完成保存keystore文件吗`);
             },
 
             // Create Account Start
