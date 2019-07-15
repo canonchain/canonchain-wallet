@@ -1,6 +1,6 @@
-; 该脚本使用 HM VNISEdit 脚本编辑器向导产生
+; �ýű�ʹ�� HM VNISEdit �ű��༭���򵼲���
 
-; 安装程序初始定义常量
+; ��װ�����ʼ���峣��
 !define PRODUCT_NAME "CanonChain Wallet"
 !define PRODUCT_VERSION "1.0.6"
 !define PRODUCT_PUBLISHER "Canonchain"
@@ -8,30 +8,30 @@
 
 SetCompressor lzma
 
-; ------ MUI 现代界面定义 (1.67 版本以上兼容) ------
+; ------ MUI �ִ����涨�� (1.67 �汾���ϼ���) ------
 !include "MUI.nsh"
 
-; MUI 预定义常量
+; MUI Ԥ���峣��
 !define MUI_ABORTWARNING
 !define MUI_ICON "canonchain.ico"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
-; 许可协议页面
+; ����Э��ҳ��
 !insertmacro MUI_PAGE_LICENSE "LICENSE.txt"
 
-; 安装过程页面
+; ��װ����ҳ��
 !insertmacro MUI_PAGE_INSTFILES
 
-; 安装卸载过程页面
+; ��װж�ع���ҳ��
 !insertmacro MUI_UNPAGE_INSTFILES
 
-; 安装完成页面
+; ��װ���ҳ��
 !insertmacro MUI_PAGE_FINISH
 
-; 安装界面包含的语言设置
+; ��װ�����������������
 !insertmacro MUI_LANGUAGE "SimpChinese"
 
-; ------ MUI 现代界面定义结束 ------
+; ------ MUI �ִ����涨����� ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 InstallDir "$LOCALAPPDATA\Programs\Canonchain Wallet"
@@ -62,14 +62,14 @@ Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
 SectionEnd
 
-#-- 根据 NSIS 脚本编辑规则，所有 Function 区段必须放置在 Section 区段之后编写，以避免安装程序出现未可预知的问题。--#
+#-- ���� NSIS �ű��༭�������� Function ���α�������� Section ����֮���д���Ա��ⰲװ�������δ��Ԥ֪�����⡣--#
 
 Function .onInit
   !insertmacro MUI_LANGDLL_DISPLAY
 FunctionEnd
 
 /******************************
- *  以下是安装程序的卸载部分  *
+ *  �����ǰ�װ�����ж�ز���  *
  ******************************/
 
 Section Uninstall
@@ -91,14 +91,14 @@ Section Uninstall
   SetAutoClose true
 SectionEnd
 
-#-- 根据 NSIS 脚本编辑规则，所有 Function 区段必须放置在 Section 区段之后编写，以避免安装程序出现未可预知的问题。--#
+#-- ���� NSIS �ű��༭�������� Function ���α�������� Section ����֮���д���Ա��ⰲװ�������δ��Ԥ֪�����⡣--#
 
 Function un.onInit
 !insertmacro MUI_UNGETLANGUAGE
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "您确实要完全移除 $(^Name) ，及其所有的组件？" IDYES +2
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "��ȷʵҪ��ȫ�Ƴ� $(^Name) ���������е������" IDYES +2
   Abort
 FunctionEnd
 
 Function un.onUninstSuccess
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) 已成功地从您的计算机移除。"
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) �ѳɹ��ش����ļ�����Ƴ���"
 FunctionEnd
