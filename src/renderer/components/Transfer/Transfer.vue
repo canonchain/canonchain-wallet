@@ -19,7 +19,9 @@
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.amount')">
-                    <el-input v-model="amount" :min="0" :max="accountInfo.balance" class="width-180 amount"></el-input>
+                    <el-input :value="amount" ref="iptAmount"
+                              @input="inputAmount($event, 'iptAmount', 'amount')" :min="0" :max="accountInfo.balance"
+                              class="width-180 amount"></el-input>
                     <span class="inline-block">{{$t('unit.czr')}}</span>
                     <el-checkbox v-model="checkedAll" @change='sendAllAmount' class="send-all-assets">
                         {{$t('page_transfer.send_all')}}&nbsp;
@@ -30,20 +32,24 @@
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gas')">
-                    <el-input v-model="gas" :min="0" :max="accountInfo.balance / (gasPrice * 1000000000)"
+                    <el-input ref="iptGas"
+                              @input="inputGas($event, 'iptGas', 'gas')"
+                              :value="gas" :min="0" :max="accountInfo.balance / (gasPrice * 1000000000)"
                               class="width-180"></el-input>
                 </el-form-item>
 
                 <el-form-item :label="$t('page_transfer.gasPrice')" class="czr-slider-gas">
                     <template v-if="isShowPriceRange">
-                        <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
-                            :max="+gasPriceRange.high" show-input
-                            input-size="mini" :step="1"
-                            @change="changeSlider"
-                            class="gas-slider"
+                        <el-slider v-model="gasPrice"
+                                   :min="10000"
+                                   :max="100000"
+                                   show-input
+                                   input-size="mini" :step="1"
+                                   @change="changeSlider"
+                                   class="gas-slider"
                         ></el-slider>
                     </template>
-                    <template v-else >
+                    <template v-else>
                         <span class="alone-gas-price">
                             {{gasPriceRange.low}}
                         </span>
@@ -140,6 +146,7 @@
     import {setInterval, clearInterval} from "timers"
     import BigNumber from 'bignumber.js/bignumber.mjs'
     import axios from 'axios'
+    import _ from 'lodash'
 
     let self = null;
     export default {
@@ -172,13 +179,14 @@
                 amount: 0,
                 gas: '',
                 gasPrice: '',
-                isShowPriceRange:false,
+                isShowPriceRange: false,
                 gasPriceRange: {
                     low: '',
                     medium: '',
                     high: '',
                 },
-                extraData: ""
+                extraData: "",
+                inputDebounce: this.genInputDebounce(),
             };
         },
         watch: {
@@ -187,6 +195,16 @@
                     this.gasPrice = oldVal
                 }
             },
+            txFee(newVal, oldVal) {
+                // console.log('txFee newVal ', newVal)
+                if (this.checkedAll) {
+                    const amountCanSend = new BigNumber(this.accountInfo.balance)
+                        .minus(new BigNumber(newVal).times('1e18'))
+                    if (amountCanSend.gte(0)) {
+                        this.amount = amountCanSend.div('1e18').toString()
+                    }
+                }
+            }
         },
         async created() {
             self = this;
@@ -219,9 +237,9 @@
             let ret
             for (let i = 0; i < 3; i++) {
                 try {
-                    console.log('getGasPrice count ', i)
+                    // console.log('getGasPrice count ', i)
                     ret = await this.getGasPrice()
-                    console.log('getGasPrice ret ', ret)
+                    // console.log('getGasPrice ret ', ret)
                 } catch (e) {
                     this.countGetGasPrice += 1
                     if (this.countGetGasPrice === 3) {
@@ -254,10 +272,44 @@
                 }
             },
             txFee() {
+                if (!this.gas) {
+                    return '0'
+                }
                 return new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).div(new BigNumber('1e9')).toString()
             },
         },
         methods: {
+            inputGas(val, ref, dataPath){
+                const $input = this.$refs[ref].getInput()
+                const pos = $input.selectionStart
+                if (/^[123456789]\d*$|^0$/.test(val) || val === '') {
+                    _.set(this, dataPath, val)
+                } else {
+                    $input.value = _.get(this, dataPath)
+                    $input.setSelectionRange(pos - 1, pos - 1)
+                }
+            },
+            genInputDebounce() {
+                return _.debounce(this.inputAmount, 300)
+            },
+            inputAmount(val, ref, dataPath) {
+                const $input = this.$refs[ref].getInput()
+                const pos = $input.selectionStart
+                if (/(^[123456789]\d*(\.?\d{0,18})?$)|(^0((?=\.)\.?\d{0,18})?$)/.test(val) || val === '') {
+                    _.set(this, dataPath, val)
+                    const czrCanSend = this.$czr.utils.fromKing(
+                        new BigNumber(this.accountInfo.balance)
+                            .minus(
+                                new BigNumber(this.gas)
+                                    .times(new BigNumber(this.gasPrice))
+                                    .times('1e9')).toString(), "czr"
+                    );
+                    this.checkedAll = czrCanSend === val;
+                } else {
+                    $input.value = _.get(this, dataPath)
+                    $input.setSelectionRange(pos - 1, pos - 1)
+                }
+            },
             getEstimateGas() {
                 return new Promise((resolve, reject) => {
                     this.$czr.request.estimateGas({
@@ -337,11 +389,12 @@
                             this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
                             this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
                             this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
-                            if(this.gasPriceRange.low === this.gasPriceRange.high){
+                            if (this.gasPriceRange.low === this.gasPriceRange.high) {
                                 this.isShowPriceRange = false;
-                            }else{
+                            } else {
                                 this.isShowPriceRange = true;
                             }
+
                             resolve(true)
                         })
                         .catch(err => {
@@ -384,7 +437,7 @@
             sendAllAmount() {
                 if (this.checkedAll) {
                     let weiVal = this.accountInfo.balance;
-                    let targetVal = self.$czr.utils.fromKing(new BigNumber(weiVal).minus(new BigNumber(this.gas).times(new BigNumber(this.gasPrice)).times('1e9')).toString(), "czr");
+                    let targetVal = self.$czr.utils.fromKing(new BigNumber(weiVal).minus(new BigNumber(this.gas || 0).times(new BigNumber(this.gasPrice)).times('1e9')).toString(), "czr");
                     this.amount = Number(targetVal) >= 0 ? targetVal : 0;
                 } else {
                     this.amount = 0;
@@ -487,9 +540,9 @@
                             console.error(res.msg)
                             return
                         }
-                        if (this.gas < res.gas) {
+                        if (new BigNumber(this.gas).lt(new BigNumber(res.gas))) {
                             this.$message.error('gas too low')
-                            console.error('gas too low')
+                            console.error(this.gas, res.gas)
                             return
                         }
                     } catch (e) {
@@ -707,9 +760,11 @@
         padding: 0 90px;
         min-height: 450px;
     }
-    .transfer-cont .el-form-item{
+
+    .transfer-cont .el-form-item {
         margin-bottom: 8px;
     }
+
     .page-transfer .bui-form-selector {
         width: 420px;
         font-size: 14px;
@@ -793,10 +848,12 @@
         display: inline-block;
         width: 85%;
     }
-    .alone-gas-price{
+
+    .alone-gas-price {
         display: inline-block;
         line-height: 38px;
     }
+
     .wei-unit {
         display: inline-block;
         line-height: 38px;
