@@ -96,7 +96,7 @@
                          @drop.prevent.stop="importKeystore">
                         {{$t('page_home.import_dia.placeholder_keystore')}}
                         &nbsp;
-                        <el-button size="mini" @click="selectImport">选择文件</el-button>
+                        <el-button size="mini" @click="selectImport" :disabled="selectImporting">选择文件</el-button>
                     </div>
                     <el-input v-model="importInfo.tag" :placeholder="$t('page_home.import_dia.placeholder_tag')">
                         <template slot="prepend">
@@ -185,7 +185,7 @@
     app.on("quit", () => {
         //应用程序正在退出
         self.$nodeLogs.info("quit start and stop", sessionStorage.getItem("CanonchainPid"));
-        if(!sessionStorage.getItem("CanonchainPid")){
+        if (!sessionStorage.getItem("CanonchainPid")) {
             self.$nodeLogs.info("不需要kill Canonchain");
             return
         }
@@ -205,6 +205,7 @@
         name: "Bodyer",
         data() {
             return {
+                selectImporting: false,
                 dialogSwitch: {
                     create: false,
                     import: false,
@@ -256,12 +257,13 @@
         },
         methods: {
             selectImport() {
-                console.log('selectImport')
-                dialog.showOpenDialog({
+                // console.log('selectImport')
+                this.selectImporting = true
+                const filePaths = dialog.showOpenDialog({
                     title: '请选择keytore文件',
                     properties: ['openFile'],
-                    filters:[
-                        {name:'Account File', extensions: ['json']}
+                    filters: [
+                        {name: 'Account File', extensions: ['json']}
                     ],
                 }, (filePaths) => {
                     if (filePaths) {
@@ -277,12 +279,13 @@
                         }
                         this.importKeystore(fakeE)
                     }
+                    this.selectImporting = false
                 })
             },
             async initDatabase() {
                 // anbang 查找所有账户
                 // self.database = self.$db.get("czr_accounts").value();
-                self.database = await this.$nedb.account.sort({ createdAt: 1 }).find();
+                self.database = await this.$nedb.account.sort({createdAt: 1}).find();
             },
             //Init Start
             initCreateInfo() {
@@ -468,7 +471,7 @@
                     self.$message.error("Account Create Error");
                 }
             },
-            backupAccount(accountObj){
+            backupAccount(accountObj) {
                 // fs.writeFileSync(path.join(app.getPath('userData'), 'AccountBackup', `${accountObj.account}.json`), JSON.stringify(accountObj))
                 /**
                  * @wgy:修改了强制刷入数据
@@ -540,7 +543,7 @@
                     }
                     //anbang 找文件
                     // let importObjec = this.$db.read().get("czr_accounts").find({address: targetJson.account}).value() // this.importInfo.keystore = JSON.parse(data);
-                    let importObjec =  await this.$nedb.account.findOne({address: targetJson.account});
+                    let importObjec = await this.$nedb.account.findOne({address: targetJson.account});
 
                     if (importObjec) {
                         self.$message.error(
@@ -669,17 +672,17 @@
                         aryForBalans.push(item.address)
                     })
                     // console.log('getAccountsBalances aryForBalans', aryForBalans)
-                    if(aryForBalans.length){
+                    if (aryForBalans.length) {
                         self.getAccountsBalances(aryForBalans);
-                    }else{
+                    } else {
                         self.runBalancesTimer();
                     }
-                }, 1000*5);
+                }, 1000 * 5);
             },
             async getAccountsBalances(aryForBalans) {
                 self.$czr.request
                     .accountsBalances(aryForBalans)
-                    .then( async res => {
+                    .then(async res => {
                         // console.log('accountsBalances res ', res)
                         // console.log('aryForBalans ', aryForBalans)
                         if (res.code !== 0) {
@@ -689,14 +692,14 @@
                         }
                         let localAcc;
                         let balance;
-                        
-                        for(let localIndex=0,len = res.balances.length;localIndex<len;){
+
+                        for (let localIndex = 0, len = res.balances.length; localIndex < len;) {
                             balance = res.balances[localIndex];
                             localAcc = await this.$nedb.account.findOne({address: aryForBalans[localIndex]});
                             // console.log("localAcc", localAcc.balance,balance)
-                            if(localAcc && (localAcc.balance !== balance)){
+                            if (localAcc && (localAcc.balance !== balance)) {
                                 // console.log("xiugai",aryForBalans[localIndex])
-                                let aloneUpdateRes = await this.$nedb.account.update({address: aryForBalans[localIndex]},{ $set: {balance: balance} });
+                                let aloneUpdateRes = await this.$nedb.account.update({address: aryForBalans[localIndex]}, {$set: {balance: balance}});
                             }
                             localIndex++;
                         }
@@ -738,7 +741,7 @@
                 //读取所有数据,并筛选不稳定的Hash合集
                 //anbang
                 // updataBlockData.sourcesObj = self.$db.get("send_list").value();
-                updataBlockData.sourcesObj = await self.$nedb.account_tx.find({"is_stable":"0"});
+                updataBlockData.sourcesObj = await self.$nedb.account_tx.find({"is_stable": "0"});
 
                 let curentAry = [];
                 updataBlockData.targetAry = [];
@@ -763,19 +766,19 @@
                     .then(data => {
                         let obtainData = data.blocks || [];
                         let updateInfo;
-                        obtainData.forEach( async ele => {
+                        obtainData.forEach(async ele => {
                             if (ele.is_stable === "1") {
                                 //更新
                                 // self.$db.get("send_list." + ele.from).find({hash: ele.hash})
-                                    // .assign(ele).write()
-                                updateInfo={
+                                // .assign(ele).write()
+                                updateInfo = {
                                     is_stable: ele.is_stable,
                                     status: ele.status,
                                     stable_timestamp: ele.stable_timestamp,
                                     mc_timestamp: ele.mc_timestamp,
                                     gas_used: ele.gas_used,
                                 };
-                                let aloneUpdateBlock = await this.$nedb.account_tx.update({hash:ele.hash},{ $set: updateInfo });
+                                let aloneUpdateBlock = await this.$nedb.account_tx.update({hash: ele.hash}, {$set: updateInfo});
                             }
                         })
                         self.runUpdateBlocksTimer();
