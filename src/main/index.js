@@ -106,7 +106,7 @@ ipcMain.on('check-vc2015', (check_event) => {
                 const vcruntime140Path = path.join(process.env.SystemRoot, 'System32', 'vcruntime140.dll')
                 // if (fs.existsSync(path.join(process.env.SystemRoot, 'SysWOW64', 'msvcp140.dll'))) {
                 if (fs.existsSync(msvcp140Path) && fs.existsSync(vcruntime140Path)) {
-                    mainLogs.info(`系统已存在msvcp140.dll`)
+                    mainLogs.info(`系统已存在msvcp140.dll和vcruntime140.dll`)
                     // ipcMain.send('vc2015-exists')
                     check_event.sender.send('vc2015-exists')
                     return
