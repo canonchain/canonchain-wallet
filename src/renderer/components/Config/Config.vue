@@ -20,7 +20,7 @@
 <script>
     const fs = require("fs");
     const path = require("path");
-    const {remote, app, shell, ipcRenderer} = require("electron");
+    const {remote, shell, ipcRenderer} = require("electron");
     const axios = require("axios");
     const download = require("download");
     const {spawn, spawnSync} = require("child_process");
@@ -30,6 +30,7 @@
     // 检测是否在线
     import {setTimeout} from "timers";
 
+    const app = remote.app
     const dialog = remote.dialog
 
     let continued = 1000;

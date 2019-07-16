@@ -20,7 +20,8 @@
 
                 <el-form-item :label="$t('page_transfer.amount')">
                     <el-input :value="amount" ref="iptAmount"
-                              @input="inputAmount($event, 'iptAmount', 'amount')" :min="0" :max="accountInfo.balance"
+                              @input="inputAmount($event, 'iptAmount', 'amount')"
+                              :min="0" :max="accountInfo.balance"
                               class="width-180 amount"></el-input>
                     <span class="inline-block">{{$t('unit.czr')}}</span>
                     <el-checkbox v-model="checkedAll" @change='sendAllAmount' class="send-all-assets">
@@ -34,7 +35,8 @@
                 <el-form-item :label="$t('page_transfer.gas')">
                     <el-input ref="iptGas"
                               @input="inputGas($event, 'iptGas', 'gas')"
-                              :value="gas" :min="0" :max="accountInfo.balance / (gasPrice * 1000000000)"
+                              :value="gas"
+                              :min="0" :max="accountInfo.balance / (gasPrice * 1000000000)"
                               class="width-180"></el-input>
                 </el-form-item>
 
