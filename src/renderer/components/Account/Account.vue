@@ -49,7 +49,7 @@
                                 <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
                                     <div class="transfer-info">
                                         <p class="by-address">{{item.to}}</p>
-                                        <p class="transfer-time">{{item.send_timestamp |toDate }}</p>
+                                        <p class="transfer-time">{{item.mc_timestamp | toDate }}</p>
                                     </div>
                                     <div class="transfer-assets">
                                         <strong class="assets">- {{item.amount | toCZRVal }}</strong>
@@ -220,13 +220,18 @@
                     <strong class="tx-item-des" v-html="$t('page_account.dia_tx.txFee')"></strong>
                     <span class="tx-item-info">{{transactionInfoTxFee}}</span>
                 </li>
-                <li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>
-                </li>
+                <!--<li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">-->
+                    <!--<strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>-->
+                    <!--<span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>-->
+                <!--</li>-->
                 <li class="b-flex b-flex-justify tx-item">
                     <strong class="tx-item-des">{{$t('page_account.dia_tx.mac_time')}}</strong>
                     <span class="tx-item-info">{{transactionInfo.mc_timestamp | toDate}}</span>
+                </li>
+                <li class="b-flex b-flex-justify tx-item">
+                    <strong class="tx-item-des">{{$t('page_account.dia_tx.stable_time')}}</strong>
+                    <span class="tx-item-info" v-if="transactionInfo.stable_timestamp">{{transactionInfo.stable_timestamp | toDate}}</span>
+                    <span class="tx-item-info" v-else>-</span>
                 </li>
             </ul>
         </el-dialog>
@@ -1002,7 +1007,8 @@
                         "is_stable": item.is_stable,
                         "status": item.status,
                         "gas_used": item.gas_used,
-                        "mc_timestamp": item.mc_timestamp
+                        "mc_timestamp": item.mc_timestamp,
+                        "stable_timestamp": item.stable_timestamp,
                     }
                 } else {
                     this.transactionInfo = item;

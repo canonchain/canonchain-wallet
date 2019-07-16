@@ -710,7 +710,7 @@
                         gas_price: transaction.gas_price,
                         data: transaction.data,
                         is_stable: "0",
-                        send_timestamp: Math.floor(new Date().getTime() / 1000),
+                        // send_timestamp: Math.floor(new Date().getTime() / 1000),
                     };
                     // console.log('writeTransToSql', sendBlockInfo)
                     self.writeTransToSql(sendBlockInfo);

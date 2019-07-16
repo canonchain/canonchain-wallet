@@ -140,6 +140,7 @@
       "data":"data",
       "send_time":"Sending time",
       "mac_time":"Main chain time",
+      "stable_time":"Stable time",
       "gasPrice":"Gas unit price (10<sup>-9</sup>CZR)",
       "txFee":"Transaction cost (CZR)",
       "gasUsed":"Gas use",

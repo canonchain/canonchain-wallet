@@ -140,6 +140,7 @@
       "data":"데이터",
       "send_time":"전송 시간",
       "mac_time":"주요 체인 시간",
+      "stable_time":"稳定时间",
       "gasPrice":"가스 단가 (10<sup>-9</sup>CZR)",
       "txFee":"거래 비용 (CZR)",
       "gasUsed":"가스 사용",

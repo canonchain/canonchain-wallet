@@ -2,7 +2,7 @@
 
 ; 安装程序初始定义常量
 !define PRODUCT_NAME "CanonChain Wallet"
-!define PRODUCT_VERSION "1.0.9"
+!define PRODUCT_VERSION "1.0.10"
 !define PRODUCT_PUBLISHER "Canonchain"
 !define PRODUCT_WEB_SITE "http://www.canonchain.com"
 
