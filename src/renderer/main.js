@@ -79,7 +79,7 @@ let utility = {
     async getOldFile() {
         //1.backup_file is_backup
         let dbBackupFile = await nedb.backup_file.findOne({ "name": "backup" })
-        startLogs.info("dbBackupFile", dbBackupFile);
+        startLogs.info("dbBackupFile");
 
         //2-1 true stop
         if (dbBackupFile && dbBackupFile.is_backup) {
@@ -103,7 +103,6 @@ let utility = {
         }
         //4-2 true go
         startLogs.info("oldFile");
-        startLogs.info(oldFile);
         // set path
         let insertPathNum;
         try {
@@ -117,7 +116,8 @@ let utility = {
     async backupFile() {
 
         //5 filter key data
-        let tempKeyStore = [];
+        let tempKeyStore = [],
+            tempKeyStoreFlag = [];//辅助判断是否存在
         let tempOldKeyItem;
         for (let keyIndex = 0, len = oldFile.accounts_keystore.length; keyIndex < len;) {
             tempOldKeyItem = oldFile.accounts_keystore[keyIndex];
@@ -127,10 +127,12 @@ let utility = {
                 iv: tempOldKeyItem.iv,
                 ciphertext: tempOldKeyItem.ciphertext
             })
+            tempKeyStoreFlag.push(tempOldKeyItem.account);
             keyIndex++;
         }
         //filter acc data
-        let tempAccStore = [];
+        let tempAccStore = [],
+            tempAccStoreFlag = [];//辅助判断是否存在
         let tempOldAccItem;
         for (let accIndex = 0, len = oldFile.czr_accounts.length; accIndex < len;) {
             tempOldAccItem = oldFile.czr_accounts[accIndex];
@@ -139,33 +141,82 @@ let utility = {
                 tag: tempOldAccItem.tag,
                 balance: tempOldAccItem.balance
             })
+            tempAccStoreFlag.push(tempOldAccItem.address);
             accIndex++;
         }
 
         //6 write file
+        startLogs.info("write file")
+        startLogs.info("tempKeyStore.length start", tempKeyStore.length)
         if (tempKeyStore.length) {
-            const insertKeyNum = await nedb.accounts_keystore.insert(tempKeyStore);
-            nedb.accounts_keystore.compactDatafile();
-            let resultKey = await nedb.accounts_keystore.done();
+            //先查找是否存在，然后再写入
+            const hasKeyAcc = await nedb.accounts_keystore.find({"account":{"$in":tempKeyStoreFlag}});
+            startLogs.info("hasKeyAcc", hasKeyAcc.length)
+            if (hasKeyAcc.length) {
+                let keyInDbIndex;
+                hasKeyAcc.forEach(element => {
+                    keyInDbIndex = tempKeyStoreFlag.indexOf(element.account)
+                    startLogs.info("keyInDbIndex", keyInDbIndex, element.account);
+                    if (keyInDbIndex !== -1) {
+                        //存在，需要删除
+                        tempKeyStore.forEach((item, index) => {
+                            if (item.account === element.account) {
+                                startLogs.info("删除了", element.account)
+                                tempKeyStore.splice(index, 1);
+                            }
+                        })
+                    }
+                });
+            }
+            startLogs.info("tempKeyStore.length end", tempKeyStore.length)
+            if (tempKeyStore.length) {
+                const insertKeyNum = await nedb.accounts_keystore.insert(tempKeyStore);
+                nedb.accounts_keystore.compactDatafile();
+                let resultKey = await nedb.accounts_keystore.done();
+            }
         }
+
+        startLogs.info("tempAccStore.length start", tempAccStore.length)
         if (tempAccStore.length) {
-            const insertAccNum = await nedb.account.insert(tempAccStore);
-            nedb.account.compactDatafile();
-            let resultAcc = await nedb.account.done();
+            //先查找是否存在，然后再写入
+            // const hasAcc = await nedb.account.find();
+            const hasAcc = await nedb.account.find({"address":{"$in":tempAccStoreFlag}});
+            startLogs.info("hasAcc", hasAcc.length)
+            if (hasAcc.length) {
+                let accInDbIndex;
+                hasAcc.forEach(element => {
+                    accInDbIndex = tempAccStoreFlag.indexOf(element.address)
+                    startLogs.info("accInDbIndex", accInDbIndex, element.address);
+                    if (accInDbIndex !== -1) {
+                        //存在，需要删除
+                        tempAccStore.forEach((item, index) => {
+                            if (item.address === element.address) {
+                                startLogs.info("删除了", element.address)
+                                tempAccStore.splice(index, 1);
+                            }
+                        })
+                    }
+                });
+            }
+            startLogs.info("tempAccStore.length start", tempAccStore.length)
+            if (tempAccStore.length) {
+                const insertAccNum = await nedb.account.insert(tempAccStore);
+                nedb.account.compactDatafile();
+                let resultAcc = await nedb.account.done();
+            }
         }
         utility.getActive();
         utility.writeBackup();
         //7 modi is_backup
-
     },
     async writeBackup() {
         try {
             let updateLeng = await nedb.backup_file.update({ "name": "backup" }, { $set: { is_backup: true } })
             startLogs.info("设置is_backup为true", updateLeng);
-            startLogs.info(`compactDatafile Start`);
+            startLogs.info(`backup compactDatafile Start`);
             nedb.backup_file.compactDatafile();
             let resultBackup = await nedb.backup_file.done();
-            startLogs.info(`compactDatafile End`);
+            startLogs.info(`backup compactDatafile End`);
         } catch (error) {
             startLogs.info("设置is_backup失败了");
         }

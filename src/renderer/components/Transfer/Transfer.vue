@@ -34,15 +34,22 @@
                               class="width-180"></el-input>
                 </el-form-item>
 
-                <el-form-item :label="$t('page_transfer.gasPrice')">
-                    <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
-                               :max="+gasPriceRange.high" show-input
-                               input-size="mini" :step="1"
-                               @change="changeSlider"
-                               class="gas-slider"
-                    ></el-slider>
+                <el-form-item :label="$t('page_transfer.gasPrice')" class="czr-slider-gas">
+                    <template v-if="isShowPriceRange">
+                        <el-slider v-model="gasPrice" :min="+gasPriceRange.low"
+                            :max="+gasPriceRange.high" show-input
+                            input-size="mini" :step="1"
+                            @change="changeSlider"
+                            class="gas-slider"
+                        ></el-slider>
+                    </template>
+                    <template v-else >
+                        <span class="alone-gas-price">
+                            {{gasPriceRange.low}}
+                        </span>
+                    </template>
                     <span class="wei-unit">
-                        x 10<sup>-9</sup>CZR
+                        x 10<sup>-9</sup> CZR
                     </span>
                 </el-form-item>
 
@@ -165,6 +172,7 @@
                 amount: 0,
                 gas: '',
                 gasPrice: '',
+                isShowPriceRange:false,
                 gasPriceRange: {
                     low: '',
                     medium: '',
@@ -329,6 +337,11 @@
                             this.gasPriceRange.low = new BigNumber(cheapest_gas_price).div('1e9').toString()
                             this.gasPriceRange.medium = new BigNumber(median_gas_price).div('1e9').toString()
                             this.gasPriceRange.high = new BigNumber(highest_gas_price).div('1e9').toString()
+                            if(this.gasPriceRange.low === this.gasPriceRange.high){
+                                this.isShowPriceRange = false;
+                            }else{
+                                this.isShowPriceRange = true;
+                            }
                             resolve(true)
                         })
                         .catch(err => {
@@ -687,14 +700,16 @@
         text-align: left;
         background: #fff;
         border-top: 1px solid rgba(0, 0, 0, 0.25);
-        padding: 40px 0 35px;
+        padding: 30px 0 25px;
     }
 
     .transfer-cont {
         padding: 0 90px;
         min-height: 450px;
     }
-
+    .transfer-cont .el-form-item{
+        margin-bottom: 8px;
+    }
     .page-transfer .bui-form-selector {
         width: 420px;
         font-size: 14px;
@@ -778,7 +793,10 @@
         display: inline-block;
         width: 85%;
     }
-
+    .alone-gas-price{
+        display: inline-block;
+        line-height: 38px;
+    }
     .wei-unit {
         display: inline-block;
         line-height: 38px;
