@@ -41,8 +41,8 @@
                 <el-form-item :label="$t('page_transfer.gasPrice')" class="czr-slider-gas">
                     <template v-if="isShowPriceRange">
                         <el-slider v-model="gasPrice"
-                                   :min="10000"
-                                   :max="100000"
+                                   :min="+gasPriceRange.low"
+                                   :max="+gasPriceRange.high"
                                    show-input
                                    input-size="mini" :step="1"
                                    @change="changeSlider"
