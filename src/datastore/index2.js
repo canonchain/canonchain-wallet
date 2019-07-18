@@ -3,7 +3,7 @@
 })()
 const account = require('./nedb')('account');
 const accounts_keystore = require('./nedb')('accounts_keystore');
-const account_tx = require('./nedb')('account_tx');
+const account_tx = require('./nedb')('account_trans');
 const contact = require('./nedb')('contact');
 const setting_language = require('./nedb')('setting_language');
 const setting_language_active = require('./nedb')('setting_language_active');
