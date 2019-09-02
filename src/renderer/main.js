@@ -29,6 +29,7 @@ startLogs.info("********** 启动日志 记录开始 ********** ");
 nodeLogs.info("********** 节点日志 记录开始 ********** ");
 walletLogs.info("********** 钱包日志 记录开始 ********** ");
 
+Vue.config.keyCodes = { enter: 13 };
 Vue.use(VueI18n);
 Vue.use(ElementUI);
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))

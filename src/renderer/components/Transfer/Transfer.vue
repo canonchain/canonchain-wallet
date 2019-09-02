@@ -134,7 +134,7 @@
 
                 <div slot="footer" class="dialog-footer">
                     <el-button @click="dialogSwitch.password = false">{{$t('cancel')}}</el-button>
-                    <el-button type="primary" :loading="sending" @click.prevent="sendTransaction">{{$t('confirm')}}
+                    <el-button type="primary" :loading="sending" @keyup.enter.native="sendTransaction" @click.prevent="sendTransaction">{{$t('confirm')}}
                     </el-button>
                 </div>
             </el-dialog>

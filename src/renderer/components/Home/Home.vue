@@ -62,7 +62,7 @@
                 </el-input>
                 <div slot="footer">
                     <el-button @click="dialogSwitch.create = false">{{ $t('cancel') }}</el-button>
-                    <el-button type="primary" @click="createAccount">{{ $t('confirm') }}</el-button>
+                    <el-button type="primary" @keyup.enter.native="createAccount" @click="createAccount">{{ $t('confirm') }}</el-button>
                 </div>
             </template>
             <template v-if="createInfo.step === 1">
