@@ -1,615 +1,763 @@
 <template>
-    <div class="page-account-detail">
-        <div class="account-banner">
-            <div class="active-icon">
-                <router-link :to="'/transfer?account=' + address" tag="div" class="acc-interactive">
-                    <i class="iconfont">&#xe605;</i>
-                    <p class="icon-des">{{ $t('page_account.active_icon.go_transfer') }}</p>
-                </router-link>
-                <div class="acc-interactive" @click="exportKeystore">
-                    <i class="iconfont">&#xe638;</i>
-                    <p class="icon-des">{{ $t('page_account.active_icon.import_keystore') }}</p>
-                </div>
-
-                <div class="acc-interactive" @click="showQrCode">
-                    <i class="iconfont">&#xe628;</i>
-                    <p class="icon-des">{{ $t('page_account.active_icon.qrcode') }}</p>
-                </div>
-            </div>
-
-            <div class="account-center">
-                <div class="account-alias-wrap">
-                    <span class="text-sub-color account-remark">{{ accountInfo.tag }}</span>
-                    <i class="iconfont icon-edit-alias" @click="dialogSwitch.editName = true"> &#xe604; </i>
-                </div>
-                <div class="account-has-assets">
-                    <h1 class="account-assets">{{ accountInfo.balance | toCZRVal }}</h1>
-                    <span>{{ $t('unit.czr') }}</span>
-                </div>
-                <div class="account-address-wrap">
-                    <span class="text-sub-color">{{ address}}</span>
-                    <i class="iconfont icon-address-copy" @click="copyAddress"> &#xe645; </i>
-                </div>
-            </div>
-
+  <div class="page-account-detail">
+    <div class="account-banner">
+      <div class="active-icon">
+        <router-link
+          :to="'/transfer?account=' + address"
+          tag="div"
+          class="acc-interactive"
+        >
+          <i class="iconfont">&#xe605;</i>
+          <p class="icon-des">
+            {{ $t("page_account.active_icon.go_transfer") }}
+          </p>
+        </router-link>
+        <div class="acc-interactive" @click="exportKeystore">
+          <i class="iconfont">&#xe638;</i>
+          <p class="icon-des">
+            {{ $t("page_account.active_icon.import_keystore") }}
+          </p>
         </div>
 
-        <div class="account-content">
-            <!-- <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2> -->
-            <template>
-                <el-tabs v-model="activeName" @tab-click="clickTabAll">
-                    <el-tab-pane :label="$t('page_account.txSent')" name="first">
-                        <!--  No transaction record  -->
-                        <div v-if="sendTransCurrent.tempAry.length==0" class="no-transfer-log">
-                            <i class="iconfont">&#xe6e7;</i>
-                            <p>{{ $t('page_account.transfer_log_null') }}</p>
-                        </div>
-                        <div class="transfer-log" v-else>
-                            <template v-for="item in sendTransCurrent.tempAry">
-                                <div class="transfer-item b-flex b-flex-justify tx-item" @click="showTxInfo(item)">
-                                    <div class="transfer-info">
-                                        <p class="by-address">{{item.to}}</p>
-                                        <p class="transfer-time">{{item.mc_timestamp | toDate }}</p>
-                                    </div>
-                                    <div class="transfer-assets">
-                                        <strong class="assets">- {{item.amount | toCZRVal }}</strong>
-                                    </div>
-                                </div>
-                            </template>
-                            <div class="pagin-wrap b-flex b-flex-justify"
-                                 v-if="sendTransCurrent.sourcesAry.length > sendTransCurrent.limit">
-                                <el-button @click="currentBefore" :disabled="sendTransCurrent.beforeDisabled"
-                                           class="before-btn">{{$t('pager.prev')}}
-                                </el-button>
-                                <el-button @click="currentNext" :disabled="sendTransCurrent.nextDisabled"
-                                           class="next-btn">{{$t('pager.next')}}
-                                </el-button>
-                            </div>
-                        </div>
-                    </el-tab-pane>
-                    <el-tab-pane :label="$t('page_account.txAll')"
-                                 name="second">
-                        <el-alert v-if="alertSwitch.isShowMsg" center :title="$t('page_account.txNew')"
-                                  :close-text="$t('page_account.checkNow')" type="warning" @close="refreshTrans">
-                        </el-alert>
-                        <div class="all-transaction">
-                            <div class="transfer-log" v-if="allTx.length !== 0" v-loading="loadingSwitch">
-                                <template
-                                        v-for="item in allTx.slice((allTxPage - 1) * pageSize, allTxPage * pageSize)">
-                                    <div v-if="item.content.to == address">
-                                        <div class="transfer-item b-flex b-flex-justify tx-item plus-assets"
-                                             @click="showTxInfo(item)">
-                                            <div class="icon-wrap">
-                                                <i class="iconfont icon-transfer">&#xe639;</i>
-                                            </div>
-                                            <div class="transfer-info">
-                                                <p class="by-address">{{item.from}}</p>
-                                                <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
-                                            </div>
-                                            <div class="transfer-assets">
-                                                <div class="assets">+ {{item.content.amount | toCZRVal }}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div v-if="item.from == address">
-                                        <div class="transfer-item b-flex b-flex-justify tx-item less-assets"
-                                             @click="showTxInfo(item)">
-                                            <div class="icon-wrap">
-                                                <i class="iconfont icon-transfer">&#xe638;</i>
-                                            </div>
-                                            <div class="transfer-info">
-                                                <p class="by-address">{{item.content.to}}</p>
-                                                <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
-                                            </div>
-                                            <div class="transfer-assets">
-                                                <div class="assets">- {{item.content.amount | toCZRVal }}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </template>
-                                <div class="pagin-wrap b-flex b-flex-justify"
-                                     v-if="allTxNext !== ''">
-                                    <el-button :disabled="allTxPage === 1" @click="fetchAllTxPrev"
-                                               class="before-btn">{{$t('pager.prev')}}
-                                    </el-button>
-                                    <el-button :disabled="(allTx.length <= allTxPage * pageSize) && allTxNext === null"
-                                               @click="fetchAllTxNext" :loading="fetching"
-                                               class="next-btn">
-                                        {{$t('pager.next')}}
-                                    </el-button>
-                                </div>
-                            </div>
-                            <!--  No transaction record  -->
-                            <div v-else class="no-transfer-log">
-                                <i class="iconfont">&#xe6e7;</i>
-                                <p>{{ $t('page_account.transfer_log_null') }}</p>
-                            </div>
-                        </div>
-                    </el-tab-pane>
-                </el-tabs>
-            </template>
-
+        <div class="acc-interactive" @click="showQrCode">
+          <i class="iconfont">&#xe628;</i>
+          <p class="icon-des">{{ $t("page_account.active_icon.qrcode") }}</p>
         </div>
+      </div>
 
-        <el-dialog :title="$t('dialog_tit')" :visible.sync="dialogSwitch.qrCode" width="40%" center>
-            <span>
-                <img :src="qrImgUrl" alt="code" class="qrcode-img">
-                <p class="dia-address">{{address}}</p>
-            </span>
-        </el-dialog>
-
-        <el-dialog :title="$t('page_account.edit_dia.tit')" :visible.sync="dialogSwitch.editName" @open="initTag()" width="35%" center>
-            <span>
-                <p class="edit-name-subtit">{{$t('page_account.edit_dia.subtit')}}</p>
-                <el-input v-model="editTag"></el-input>
-            </span>
-            <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogSwitch.editName = false">{{$t('cancel')}}</el-button>
-                <el-button type="primary" @click="setEditTag">{{$t('confirm')}}</el-button>
-            </span>
-        </el-dialog>
-
-        <el-dialog :title="$t('page_account.keystore.copy')" :visible.sync="dialogSwitch.keystore">
-            <el-input v-if="accountInfo" :value="accountInfo.keystore" type="textarea" disabled
-                      :autosize="{minRows: 2}">
-            </el-input>
-            <div slot="footer">
-                <el-button @click="copyKeystore">{{$t('page_account.keystore.copy')}}</el-button>
-                <el-button type="primary" @click="downloadKeystore">{{$t('page_account.keystore.download')}}</el-button>
-            </div>
-        </el-dialog>
-
-        <!-- tx info -->
-        <el-dialog :title="$t('page_account.dia_tx.tit')" :visible.sync="dialogSwitch.txInfo" width="70%">
-            <ul class="dialog-tx-wap">
-                <li class="b-flex b-flex-justify tx-item tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.block_hash')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.hash}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.status')}}</strong>
-                    <span class="tx-item-info">
-                        <template v-if='transactionInfo.is_stable == "0"'>
-                            <span class="txt-warning"> {{$t('page_account.dia_tx.waiting')}} </span>
-                        </template>
-                        <template v-else-if='transactionInfo.is_stable == "1"'>
-                            <template v-if='transactionInfo.status == "0"'>
-                                <span class="txt-success"> {{$t('page_account.dia_tx.success')}} </span>
-                            </template>
-                            <template v-else-if='transactionInfo.status == "100"'>
-                                <span class="txt-danger"> {{$t('page_account.dia_tx.sendFail')}} </span>
-                            </template>
-                            <template v-else-if='transactionInfo.status == "1"'>
-                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail1')}} </span>
-                            </template>
-                            <template v-else-if='transactionInfo.status == "2"'>
-                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail2')}} </span>
-                            </template>
-                            <template v-else-if='transactionInfo.status == "3"'>
-                                <span class="txt-danger"> {{$t('page_account.dia_tx.fail3')}} </span>
-                            </template>
-                        </template>
-                    </span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.from')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.from}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.to')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.to}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.amount')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.amount| toCZRFull}} {{ $t('unit.czr') }}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.data')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.data || '-'}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.gasUsed')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.gas_used || '-'}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des" v-html="$t('page_account.dia_tx.gasPrice')"></strong>
-                    <span class="tx-item-info">{{transactionInfoGasPrice}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des" v-html="$t('page_account.dia_tx.txFee')"></strong>
-                    <span class="tx-item-info">{{transactionInfoTxFee}}</span>
-                </li>
-                <!--<li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">-->
-                    <!--<strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>-->
-                    <!--<span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>-->
-                <!--</li>-->
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.mac_time')}}</strong>
-                    <span class="tx-item-info">{{transactionInfo.mc_timestamp | toDate}}</span>
-                </li>
-                <li class="b-flex b-flex-justify tx-item">
-                    <strong class="tx-item-des">{{$t('page_account.dia_tx.stable_time')}}</strong>
-                    <span class="tx-item-info" v-if="transactionInfo.stable_timestamp">{{transactionInfo.stable_timestamp | toDate}}</span>
-                    <span class="tx-item-info" v-else>-</span>
-                </li>
-            </ul>
-        </el-dialog>
-
+      <div class="account-center">
+        <div class="account-alias-wrap">
+          <span class="text-sub-color account-remark">{{
+            accountInfo.tag
+          }}</span>
+          <i
+            class="iconfont icon-edit-alias"
+            @click="dialogSwitch.editName = true"
+          >
+            &#xe604;
+          </i>
+        </div>
+        <div class="account-has-assets">
+          <h1 class="account-assets">{{ accountInfo.balance | toCZRVal }}</h1>
+          <span>{{ $t("unit.czr") }}</span>
+        </div>
+        <div class="account-address-wrap">
+          <span class="text-sub-color">{{ address }}</span>
+          <i class="iconfont icon-address-copy" @click="copyAddress">
+            &#xe645;
+          </i>
+        </div>
+      </div>
     </div>
+
+    <div class="account-content">
+      <!-- <h2 class="transfer-tit">{{ $t('page_account.transfer_log') }}</h2> -->
+      <template>
+        <el-tabs v-model="activeName" @tab-click="clickTabAll">
+          <el-tab-pane :label="$t('page_account.txSent')" name="first">
+            <!--  No transaction record  -->
+            <div
+              v-if="sendTransCurrent.tempAry.length == 0"
+              class="no-transfer-log"
+            >
+              <i class="iconfont">&#xe6e7;</i>
+              <p>{{ $t("page_account.transfer_log_null") }}</p>
+            </div>
+            <div class="transfer-log" v-else>
+              <template v-for="item in sendTransCurrent.tempAry">
+                <div
+                  class="transfer-item b-flex b-flex-justify tx-item"
+                  @click="showTxInfo(item)"
+                >
+                  <div class="transfer-info">
+                    <p class="by-address">{{ item.to }}</p>
+                    <p class="transfer-time">
+                      {{ item.mc_timestamp | toDate }}
+                    </p>
+                  </div>
+                  <div class="transfer-assets">
+                    <strong class="assets"
+                      >- {{ item.amount | toCZRVal }}</strong
+                    >
+                  </div>
+                </div>
+              </template>
+              <div
+                class="pagin-wrap b-flex b-flex-justify"
+                v-if="
+                  sendTransCurrent.sourcesAry.length > sendTransCurrent.limit
+                "
+              >
+                <el-button
+                  @click="currentBefore"
+                  :disabled="sendTransCurrent.beforeDisabled"
+                  class="before-btn"
+                  >{{ $t("pager.prev") }}
+                </el-button>
+                <el-button
+                  @click="currentNext"
+                  :disabled="sendTransCurrent.nextDisabled"
+                  class="next-btn"
+                  >{{ $t("pager.next") }}
+                </el-button>
+              </div>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane :label="$t('page_account.txAll')" name="second">
+            <el-alert
+              v-if="alertSwitch.isShowMsg"
+              center
+              :title="$t('page_account.txNew')"
+              :close-text="$t('page_account.checkNow')"
+              type="warning"
+              @close="refreshTrans"
+            >
+            </el-alert>
+            <div class="all-transaction">
+              <div
+                class="transfer-log"
+                v-if="allTx.length !== 0"
+                v-loading="loadingSwitch"
+              >
+                <template
+                  v-for="item in allTx.slice(
+                    (allTxPage - 1) * pageSize,
+                    allTxPage * pageSize
+                  )"
+                >
+                  <div v-if="item.content.to == address">
+                    <div
+                      class="transfer-item b-flex b-flex-justify tx-item plus-assets"
+                      @click="showTxInfo(item)"
+                    >
+                      <div class="icon-wrap">
+                        <i class="iconfont icon-transfer">&#xe639;</i>
+                      </div>
+                      <div class="transfer-info">
+                        <p class="by-address">{{ item.from }}</p>
+                        <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
+                      </div>
+                      <div class="transfer-assets">
+                        <div class="assets">
+                          + {{ item.content.amount | toCZRVal }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div v-if="item.from == address">
+                    <div
+                      class="transfer-item b-flex b-flex-justify tx-item less-assets"
+                      @click="showTxInfo(item)"
+                    >
+                      <div class="icon-wrap">
+                        <i class="iconfont icon-transfer">&#xe638;</i>
+                      </div>
+                      <div class="transfer-info">
+                        <p class="by-address">{{ item.content.to }}</p>
+                        <!--<p class="transfer-time">{{item.send_timestamp |toDate }}</p>-->
+                      </div>
+                      <div class="transfer-assets">
+                        <div class="assets">
+                          - {{ item.content.amount | toCZRVal }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+                <div
+                  class="pagin-wrap b-flex b-flex-justify"
+                  v-if="allTxNext !== ''"
+                >
+                  <el-button
+                    :disabled="allTxPage === 1"
+                    @click="fetchAllTxPrev"
+                    class="before-btn"
+                    >{{ $t("pager.prev") }}
+                  </el-button>
+                  <el-button
+                    :disabled="
+                      allTx.length <= allTxPage * pageSize && allTxNext === null
+                    "
+                    @click="fetchAllTxNext"
+                    :loading="fetching"
+                    class="next-btn"
+                  >
+                    {{ $t("pager.next") }}
+                  </el-button>
+                </div>
+              </div>
+              <!--  No transaction record  -->
+              <div v-else class="no-transfer-log">
+                <i class="iconfont">&#xe6e7;</i>
+                <p>{{ $t("page_account.transfer_log_null") }}</p>
+              </div>
+            </div>
+          </el-tab-pane>
+        </el-tabs>
+      </template>
+    </div>
+
+    <el-dialog
+      :title="$t('dialog_tit')"
+      :visible.sync="dialogSwitch.qrCode"
+      width="40%"
+      center
+    >
+      <span>
+        <img :src="qrImgUrl" alt="code" class="qrcode-img" />
+        <p class="dia-address">{{ address }}</p>
+      </span>
+    </el-dialog>
+
+    <el-dialog
+      :title="$t('page_account.edit_dia.tit')"
+      :visible.sync="dialogSwitch.editName"
+      @open="initTag()"
+      width="35%"
+      center
+    >
+      <span>
+        <p class="edit-name-subtit">{{ $t("page_account.edit_dia.subtit") }}</p>
+        <el-input v-model="editTag"></el-input>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogSwitch.editName = false">{{
+          $t("cancel")
+        }}</el-button>
+        <el-button type="primary" @click="setEditTag">{{
+          $t("confirm")
+        }}</el-button>
+      </span>
+    </el-dialog>
+
+    <el-dialog
+      :title="$t('page_account.keystore.copy')"
+      :visible.sync="dialogSwitch.keystore"
+    >
+      <el-input
+        v-if="accountInfo"
+        :value="accountInfo.keystore"
+        type="textarea"
+        disabled
+        :autosize="{ minRows: 2 }"
+      >
+      </el-input>
+      <div slot="footer">
+        <el-button @click="copyKeystore">{{
+          $t("page_account.keystore.copy")
+        }}</el-button>
+        <el-button type="primary" @click="downloadKeystore">{{
+          $t("page_account.keystore.download")
+        }}</el-button>
+      </div>
+    </el-dialog>
+
+    <!-- tx info -->
+    <el-dialog
+      :title="$t('page_account.dia_tx.tit')"
+      :visible.sync="dialogSwitch.txInfo"
+      width="70%"
+    >
+      <ul class="dialog-tx-wap">
+        <li class="b-flex b-flex-justify tx-item tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.block_hash")
+          }}</strong>
+          <span class="tx-item-info">{{ transactionInfo.hash }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.status")
+          }}</strong>
+          <span class="tx-item-info">
+            <template v-if="transactionInfo.is_stable == '0'">
+              <span class="txt-warning">
+                {{ $t("page_account.dia_tx.waiting") }}
+              </span>
+            </template>
+            <template v-else-if="transactionInfo.is_stable == '1'">
+              <template v-if="transactionInfo.status == '0'">
+                <span class="txt-success">
+                  {{ $t("page_account.dia_tx.success") }}
+                </span>
+              </template>
+              <template v-else-if="transactionInfo.status == '100'">
+                <span class="txt-danger">
+                  {{ $t("page_account.dia_tx.sendFail") }}
+                </span>
+              </template>
+              <template v-else-if="transactionInfo.status == '1'">
+                <span class="txt-danger">
+                  {{ $t("page_account.dia_tx.fail1") }}
+                </span>
+              </template>
+              <template v-else-if="transactionInfo.status == '2'">
+                <span class="txt-danger">
+                  {{ $t("page_account.dia_tx.fail2") }}
+                </span>
+              </template>
+              <template v-else-if="transactionInfo.status == '3'">
+                <span class="txt-danger">
+                  {{ $t("page_account.dia_tx.fail3") }}
+                </span>
+              </template>
+            </template>
+          </span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.from")
+          }}</strong>
+          <span class="tx-item-info">{{ transactionInfo.from }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.to")
+          }}</strong>
+          <span class="tx-item-info">{{ transactionInfo.to }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.amount")
+          }}</strong>
+          <span class="tx-item-info"
+            >{{ transactionInfo.amount | toCZRFull }} {{ $t("unit.czr") }}</span
+          >
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.data")
+          }}</strong>
+          <span class="tx-item-info">{{ transactionInfo.data || "-" }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.gasUsed")
+          }}</strong>
+          <span class="tx-item-info">{{
+            transactionInfo.gas_used || "-"
+          }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong
+            class="tx-item-des"
+            v-html="$t('page_account.dia_tx.gasPrice')"
+          ></strong>
+          <span class="tx-item-info">{{ transactionInfoGasPrice }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong
+            class="tx-item-des"
+            v-html="$t('page_account.dia_tx.txFee')"
+          ></strong>
+          <span class="tx-item-info">{{ transactionInfoTxFee }}</span>
+        </li>
+        <!--<li class="b-flex b-flex-justify tx-item" v-if="transactionInfo.send_timestamp">-->
+        <!--<strong class="tx-item-des">{{$t('page_account.dia_tx.send_time')}}</strong>-->
+        <!--<span class="tx-item-info">{{transactionInfo.send_timestamp | toDate}}</span>-->
+        <!--</li>-->
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.mac_time")
+          }}</strong>
+          <span class="tx-item-info">{{
+            transactionInfo.mc_timestamp | toDate
+          }}</span>
+        </li>
+        <li class="b-flex b-flex-justify tx-item">
+          <strong class="tx-item-des">{{
+            $t("page_account.dia_tx.stable_time")
+          }}</strong>
+          <span class="tx-item-info" v-if="transactionInfo.stable_timestamp">{{
+            transactionInfo.stable_timestamp | toDate
+          }}</span>
+          <span class="tx-item-info" v-else>-</span>
+        </li>
+      </ul>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
-    const {clipboard} = require("electron");
-    import QRCode from "qrcode";
-    import {setInterval, clearInterval, setTimeout, clearTimeout} from "timers";
-    import BigNumber from 'bignumber.js/bignumber.mjs'
+import QRCode from "qrcode";
+import { setInterval, clearInterval, setTimeout, clearTimeout } from "timers";
+import BigNumber from "bignumber.js/bignumber.mjs";
 
-    let self = null;
-    let CONTINUATION = 5000; //定时器间隔时间
-    // let BeforeTime  = 1;
-    export default {
-        name: "Account",
-        data() {
-            return {
-                allTx: [],
-                allTxNext: '',
-                allTxOver: false,
-                allTxPage: 1,
-                pageSize: 10,
-                fetching: false,
-                dialogSwitch: {
-                    qrCode: false,
-                    editName: false,
-                    keystore: false,
-                    txInfo: false
-                },
-                timerSwitch: {
-                    initData: null,
-                    updateBlocksTimer: null,
-                    getLstestTrans: null //获取当前账户下，最新的trans
-                },
-                pagingSwitch: {
-                    limit: 10,
-                    beforeDisabled: true,
-                    nextDisabled: false
-                },
-                alertSwitch: {
-                    isShowMsg: false
-                },
-                loadingSwitch: true,
-                address: this.$route.params.id,
-                accountInfo: {
-                    address:this.$route.params.id,
-                    balance:0,
-                    currentTxList:[],
-                    keystore:"",
-                    tag:"",
-                    tx_list:[],
-                },
-                transactionInfo: null,
-                pollingAry: null,
-                qrImgUrl: "",
-                txStatus: "-",
-                lastBlockHash: "",
-                editTag: "",
-                activeName: "first",
-                sendTransCurrent: {
-                    beforeDisabled: true,
-                    nextDisabled: false,
-                    page: 1,
-                    limit: 10,
-                    sourcesAry: [],
-                    tempAry: [],
-                    totalPage: 0,
-                    unstableAry: []
+const { clipboard } = require("electron");
+
+let self = null;
+const CONTINUATION = 5000; // 定时器间隔时间
+// let BeforeTime  = 1;
+export default {
+  name: "Account",
+  data() {
+    return {
+      allTx: [],
+      allTxNext: "",
+      allTxOver: false,
+      allTxPage: 1,
+      pageSize: 10,
+      fetching: false,
+      dialogSwitch: {
+        qrCode: false,
+        editName: false,
+        keystore: false,
+        txInfo: false
+      },
+      timerSwitch: {
+        initData: null,
+        updateBlocksTimer: null,
+        getLstestTrans: null // 获取当前账户下，最新的trans
+      },
+      pagingSwitch: {
+        limit: 10,
+        beforeDisabled: true,
+        nextDisabled: false
+      },
+      alertSwitch: {
+        isShowMsg: false
+      },
+      loadingSwitch: true,
+      address: this.$route.params.id,
+      accountInfo: {
+        address: this.$route.params.id,
+        balance: 0,
+        currentTxList: [],
+        keystore: "",
+        tag: "",
+        tx_list: []
+      },
+      transactionInfo: null,
+      pollingAry: null,
+      qrImgUrl: "",
+      txStatus: "-",
+      lastBlockHash: "",
+      editTag: "",
+      activeName: "first",
+      sendTransCurrent: {
+        beforeDisabled: true,
+        nextDisabled: false,
+        page: 1,
+        limit: 10,
+        sourcesAry: [],
+        tempAry: [],
+        totalPage: 0,
+        unstableAry: []
+      }
+    };
+  },
+  created() {
+    self = this;
+    QRCode.toDataURL(this.address, { width: 800 }, (err, url) => {
+      if (err) {
+        self.$walletLogs.info(err);
+        return;
+      }
+      self.qrImgUrl = url;
+    });
+    self.initDatabase();
+    self.getTxList(true, true);
+    self.initTransItem();
+
+    self.initSendTrans(true);
+
+    this.timerSwitch.initData = setInterval(() => {
+      self.initDatabase();
+    }, 5000);
+  },
+  computed: {
+    transactionInfoGasPrice() {
+      if (!this.transactionInfo.gas_price) {
+        return "-";
+      }
+      return new BigNumber(this.transactionInfo.gas_price)
+        .div(new BigNumber("1e9"))
+        .toString();
+    },
+    transactionInfoTxFee() {
+      if (!this.transactionInfo.gas_price || !this.transactionInfo.gas_used) {
+        return "-";
+      }
+      return new BigNumber(this.transactionInfo.gas_price)
+        .times(new BigNumber(this.transactionInfo.gas_used))
+        .div(new BigNumber("1e18"))
+        .toString();
+    }
+  },
+  beforeDestroy() {
+    clearInterval(this.timerSwitch.initData);
+    clearTimeout(this.timerSwitch.updateBlocksTimer);
+  },
+  mounted() {},
+  methods: {
+    clickTabAll(tab) {
+      if (tab.name === "second") {
+        this.allTx = [];
+        this.allTxPage = 1;
+        this.allTxNext = "";
+        this.fetchAllTx();
+      }
+    },
+    fetchAllTxNext() {
+      if (this.allTx.length > this.pageSize * this.allTxPage) {
+        this.allTxPage += 1;
+        return;
+      }
+      this.fetching = true;
+      this.$czr.request
+        .accountBlockList(
+          this.accountInfo.address,
+          this.pageSize,
+          this.allTxNext
+        )
+        .then(res => {
+          if (res.code !== 0) {
+            this.$message.error(res.msg);
+            return;
+          }
+          if (!res.blocks.length) return;
+          this.allTxNext = res.next_index;
+          const { blocks } = res;
+          this.$czr.request
+            .getBlockStates(blocks.map(block => block.hash))
+            .then(res => {
+              // console.log(res)
+              if (res.code !== 0) {
+                this.$message.error(res.msg);
+                return;
+              }
+              res.block_states.forEach((blockState, index) => {
+                if (blockState) {
+                  blocks[index].is_stable = blockState.is_stable;
+                  blocks[index].status = blockState.stable_content.status;
+                  blocks[index].mc_timestamp =
+                    blockState.stable_content.mc_timestamp;
+                  blocks[index].stable_timestamp =
+                    blockState.stable_content.stable_timestamp;
+                  blocks[index].gas_used = blockState.stable_content.gas_used;
                 }
-            };
-        },
-        created() {
-            self = this;
-            QRCode.toDataURL(this.address, {width: 800}, (err, url) => {
-                if (err) {
-                    self.$walletLogs.info(err);
-                    return;
-                }
-                self.qrImgUrl = url;
+              });
+              this.allTx = this.allTx.concat(blocks);
+              console.log("this.allTx concat", this.allTx, blocks);
+              this.allTxPage += 1;
+              this.fetching = false;
+            })
+            .catch(err => {
+              this.fetching = false;
+              console.error(err);
             });
-            self.initDatabase();
-            self.getTxList(true, true);
-            self.initTransItem();
+        })
+        .catch(err => {
+          console.error(err);
+        })
+        .finally(() => {
+          this.fetching = false;
+        });
+    },
+    fetchAllTxPrev() {
+      if (this.allTxPage > 1) {
+        this.allTxPage -= 1;
+      }
+    },
+    fetchAllTx() {
+      this.fetching = true;
+      // console.log('fetchAllTx',this.accountInfo.address)
+      this.$czr.request
+        .accountBlockList(this.accountInfo.address, 10, "")
+        .then(res => {
+          if (res.code !== 0) {
+            this.$message.error(res.msg);
+            return;
+          }
+          if (!res.blocks.length) return;
+          this.allTx = res.blocks;
+          this.allTxNext = res.next_index;
+          this.$czr.request
+            .getBlockStates(res.blocks.map(block => block.hash))
+            .then(res => {
+              // console.log(res)
+              res.block_states.forEach((blockState, index) => {
+                if (blockState) {
+                  this.allTx[index].is_stable = blockState.is_stable;
+                  this.allTx[index].status = blockState.stable_content.status;
+                  this.allTx[index].mc_timestamp =
+                    blockState.stable_content.mc_timestamp;
+                  this.allTx[index].stable_timestamp =
+                    blockState.stable_content.stable_timestamp;
+                  this.allTx[index].gas_used =
+                    blockState.stable_content.gas_used;
+                }
+              });
+              this.fetching = false;
+            })
+            .catch(err => {
+              this.fetching = false;
+              console.error(err);
+            });
+        })
+        .catch(err => {
+          this.fetching = false;
+          console.error(err);
+        });
+    },
+    // 获取所有交易 Start
+    runGetTransTimer() {
+      self.timerSwitch.updateBlocksTimer = setTimeout(() => {
+        self.getTxList();
+      }, CONTINUATION);
+    },
+    refreshTrans() {
+      self.accountInfo.tx_list = [];
+      self.accountInfo.currentTxList = [];
+      self.lastBlockHash = "";
+      self.initDatabase();
+      self.getTxList(true);
+    },
+    getTxList(isGetData, runTimer) {
+      // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
+      const tempLastBlock = isGetData ? self.lastBlockHash : ""; // 如果是获取数据的时候，才开始使用最后的blockHash
+      self.$czr.request
+        .accountBlockList(
+          self.accountInfo.address,
+          self.pagingSwitch.limit,
+          tempLastBlock
+        )
+        .then(data => {
+          // console.log('accountBlockList', data)
+          if (data.error) {
+            self.$message({
+              message: data.error,
+              type: "error"
+            });
+            self.loadingSwitch = false;
+            return;
+          }
 
-            self.initSendTrans(true);
+          if (isGetData) {
+            if (runTimer) {
+              self.runGetTransTimer();
+            }
+            self.setListInfo(data);
+          } else {
+            // 对比是否有变化
+            const tempList = data.blocks;
+            const newHash = tempList[tempList.length - 1].hash;
+            let isEqual = true;
+            if (
+              tempList.length > 0 &&
+              tempList.length < self.pagingSwitch.limit
+            ) {
+              isEqual = self.blockDiff(
+                newHash,
+                self.accountInfo.tx_list[self.accountInfo.tx_list.length - 1]
+                  .hash
+              );
+            } else if (tempList.length == self.pagingSwitch.limit) {
+              isEqual = self.blockDiff(
+                newHash,
+                self.accountInfo.tx_list[self.pagingSwitch.limit - 1].hash
+              );
+            }
 
-            this.timerSwitch.initData = setInterval(() => {
-                self.initDatabase();
-            }, 5000);
-        },
-        computed: {
-            transactionInfoGasPrice(){
-                if(!this.transactionInfo.gas_price){
-                    return '-'
-                }
-                return new BigNumber(this.transactionInfo.gas_price)
-                    .div(new BigNumber('1e9')).toString()
-            },
-            transactionInfoTxFee() {
-                if (!this.transactionInfo.gas_price || !this.transactionInfo.gas_used) {
-                    return '-'
-                }
-                return new BigNumber(this.transactionInfo.gas_price).times(
-                    new BigNumber(this.transactionInfo.gas_used)
-                ).div(new BigNumber('1e18')).toString()
-            },
-        },
-        beforeDestroy() {
-            clearInterval(this.timerSwitch.initData);
-            clearTimeout(this.timerSwitch.updateBlocksTimer);
-        },
-        mounted() {
+            // console.log("isEqual ",isEqual)
+            // console.log(
+            //     "2.对比是否变化,判断两次Hash是否相同 => ",
+            //     isEqual
+            // );
+            if (isEqual) {
+              // 如果是相同的，继续下次循环
+              self.runGetTransTimer();
+            } else {
+              // 如果不同，显示msg，并停止获取；
+              // self.alertSwitch.isShowMsg = true;
+            }
+          }
+        })
+        .catch(error => {
+          self.$walletLogs.error("Account blockList Error", error);
+        });
+    },
+    setListInfo(data) {
+      // 第一次初始化的
+      data = data || { blocks: [] };
+      self.loadingSwitch = false;
+      if (data.blocks.length > 0) {
+        self.accountInfo.currentTxList = data.blocks;
+        data.blocks.forEach(element => {
+          self.accountInfo.tx_list.push(element); // TODO tx_list
+        });
+      }
 
-        },
-        methods: {
-            clickTabAll(tab) {
-                if (tab.name === 'second') {
-                    this.allTx = []
-                    this.allTxPage = 1
-                    this.allTxNext = ''
-                    this.fetchAllTx()
-                }
-            },
-            fetchAllTxNext() {
-                if (this.allTx.length > this.pageSize * this.allTxPage) {
-                    this.allTxPage += 1
-                    return
-                }
-                this.fetching = true
-                this.$czr.request.accountBlockList(this.accountInfo.address, this.pageSize, this.allTxNext)
-                    .then(res => {
-                        if (res.code !== 0) {
-                            this.$message.error(res.msg)
-                            return
-                        }
-                        if(!res.blocks.length) return
-                        this.allTxNext = res.next_index
-                        const blocks = res.blocks
-                        this.$czr.request.getBlockStates(blocks.map(block => block.hash))
-                            .then(res => {
-                                // console.log(res)
-                                if (res.code !== 0) {
-                                    this.$message.error(res.msg)
-                                    return
-                                }
-                                res.block_states.forEach((blockState, index) => {
-                                    if (blockState) {
-                                        blocks[index].is_stable = blockState.is_stable
-                                        blocks[index].status = blockState.stable_content.status
-                                        blocks[index].mc_timestamp = blockState.stable_content.mc_timestamp
-                                        blocks[index].stable_timestamp = blockState.stable_content.stable_timestamp
-                                        blocks[index].gas_used = blockState.stable_content.gas_used
-                                    }
-                                })
-                                this.allTx = this.allTx.concat(blocks)
-                                console.log("this.allTx concat",this.allTx,blocks)
-                                this.allTxPage += 1
-                                this.fetching = false
-                            })
-                            .catch(err => {
-                                this.fetching = false
-                                console.error(err)
-                            })
-                    })
-                    .catch(err => {
-                        console.error(err)
-                    })
-                    .finally(() => {
-                        this.fetching = false
-                    })
-            },
-            fetchAllTxPrev() {
-                if (this.allTxPage > 1) {
-                    this.allTxPage -= 1
-                }
-            },
-            fetchAllTx() {
-                this.fetching = true
-                // console.log('fetchAllTx',this.accountInfo.address)
-                this.$czr.request.accountBlockList(this.accountInfo.address, 10, '')
-                    .then(res => {
-                        if (res.code !== 0) {
-                            this.$message.error(res.msg)
-                            return
-                        }
-                        if(!res.blocks.length) return
-                        this.allTx = res.blocks;
-                        this.allTxNext = res.next_index
-                        this.$czr.request.getBlockStates(res.blocks.map(block => block.hash))
-                            .then(res => {
-                                // console.log(res)
-                                res.block_states.forEach((blockState, index) => {
-                                    if (blockState) {
-                                        this.allTx[index].is_stable = blockState.is_stable
-                                        this.allTx[index].status = blockState.stable_content.status
-                                        this.allTx[index].mc_timestamp = blockState.stable_content.mc_timestamp
-                                        this.allTx[index].stable_timestamp = blockState.stable_content.stable_timestamp
-                                        this.allTx[index].gas_used = blockState.stable_content.gas_used
-                                    }
-                                })
-                                this.fetching = false
-                            })
-                            .catch(err => {
-                                this.fetching = false
-                                console.error(err)
-                            })
-                    })
-                    .catch(err => {
-                        this.fetching = false
-                        console.error(err)
-                    })
-            },
-            //获取所有交易 Start
-            runGetTransTimer() {
-                self.timerSwitch.updateBlocksTimer = setTimeout(() => {
-                    self.getTxList();
-                }, CONTINUATION);
-            },
-            refreshTrans() {
-                self.accountInfo.tx_list = [];
-                self.accountInfo.currentTxList = [];
-                self.lastBlockHash = "";
-                self.initDatabase();
-                self.getTxList(true);
-            },
-            getTxList(isGetData, runTimer) {
-                // console.log("开始请求 lastBlockHash > ", self.lastBlockHash);
-                const tempLastBlock = isGetData ? self.lastBlockHash : ""; //如果是获取数据的时候，才开始使用最后的blockHash
-                self.$czr.request
-                    .accountBlockList(
-                        self.accountInfo.address,
-                        self.pagingSwitch.limit,
-                        tempLastBlock
-                    )
-                    .then(data => {
-                        // console.log('accountBlockList', data)
-                        if (data.error) {
-                            self.$message({
-                                message: data.error,
-                                type: "error"
-                            });
-                            self.loadingSwitch = false;
-                            return;
-                        }
-
-                        if (isGetData) {
-                            if (runTimer) {
-                                self.runGetTransTimer();
-                            }
-                            self.setListInfo(data);
-                        } else {
-                            //对比是否有变化
-                            let tempList = data.blocks;
-                            let newHash = tempList[tempList.length - 1].hash;
-                            let isEqual = true;
-                            if (
-                                tempList.length > 0 &&
-                                tempList.length < self.pagingSwitch.limit
-                            ) {
-                                isEqual = self.blockDiff(
-                                    newHash,
-                                    self.accountInfo.tx_list[self.accountInfo.tx_list.length - 1]
-                                        .hash
-                                );
-                            } else if (
-                                (tempList.length == self.pagingSwitch.limit)
-                            ) {
-                                isEqual = self.blockDiff(
-                                    newHash,
-                                    self.accountInfo.tx_list[
-                                    self.pagingSwitch.limit - 1
-                                        ].hash
-                                );
-                            }
-
-                            // console.log("isEqual ",isEqual)
-                            // console.log(
-                            //     "2.对比是否变化,判断两次Hash是否相同 => ",
-                            //     isEqual
-                            // );
-                            if (isEqual) {
-                                //如果是相同的，继续下次循环
-                                self.runGetTransTimer();
-                            } else {
-                                //如果不同，显示msg，并停止获取；
-                                // self.alertSwitch.isShowMsg = true;
-                            }
-                        }
-                    })
-                    .catch(error => {
-                        self.$walletLogs.error("Account blockList Error", error);
-                    });
-            },
-            setListInfo(data) {
-                //第一次初始化的
-                data = !!data ? data : {blocks: []};
-                self.loadingSwitch = false;
-                if (data.blocks.length > 0) {
-                    self.accountInfo.currentTxList = data.blocks;
-                    data.blocks.forEach(element => {
-                        self.accountInfo.tx_list.push(element); // TODO tx_list
-                    });
-                }
-
-                //是否有下页
-                if (data.blocks.length < self.pagingSwitch.limit) {
-                    self.pagingSwitch.nextDisabled = true;
-                } else {
-                    self.pagingSwitch.nextDisabled = false;
-                    self.lastBlockHash = data.blocks[data.list.length - 1].hash; //需要拿新的HASH，准备下次请求
-                }
-            },
-            blockDiff(newHash, oldHash) {
-                return oldHash ? newHash === oldHash : true;
-            },
-            getNextList() {
-                /*
+      // 是否有下页
+      if (data.blocks.length < self.pagingSwitch.limit) {
+        self.pagingSwitch.nextDisabled = true;
+      } else {
+        self.pagingSwitch.nextDisabled = false;
+        self.lastBlockHash = data.blocks[data.list.length - 1].hash; // 需要拿新的HASH，准备下次请求
+      }
+    },
+    blockDiff(newHash, oldHash) {
+      return oldHash ? newHash === oldHash : true;
+    },
+    getNextList() {
+      /*
                     currentTxList最后一个hash是否 等于 tx_list 最后一个hash；
                     - 等于   需要获取
                     - 不等   从tx_list中获取
                 */
-                let _currentTxList = self.accountInfo.currentTxList;
-                let currentTxListHashBlock =
-                    _currentTxList[_currentTxList.length - 1].hash;
-                let _txList = self.accountInfo.tx_list;
-                let lastTxListHashBlock = _txList[_txList.length - 1].hash;
-                // console.log("currentTxListHashBlock == lastTxListHashBlock",currentTxListHashBlock == lastTxListHashBlock)
-                if (currentTxListHashBlock == lastTxListHashBlock) {
-                    //获取
-                    // console.log("获取")
-                    self.lastBlockHash = lastTxListHashBlock;
-                    self.getTxList(true);
-                } else {
-                    //不获取
-                    // console.log("不获取")
-                    //先把当前的哈希，替换为下一个hash
-                    let startHash = currentTxListHashBlock;
-                    let tempAry = [];
-                    let ele;
-                    for (let j = 0; j < _txList.length; j++) {
-                        ele = _txList[j];
-                        let _isSet = ele.hash == startHash;
-                        let _isGoOn = tempAry.length < self.pagingSwitch.limit;
-                        // console.log("_isSet _isGoOn",_isSet,_isGoOn)
-                        if (_isSet && _isGoOn) {
-                            //如果是最后一个item，就不要循环了
-                            if (
-                                _txList[j].hash == _txList[_txList.length - 1].hash
-                            ) {
-                                // console.log("不能循环拉");
-                                self.pagingSwitch.nextDisabled = true; //释放 后翻
-                                break;
-                            }
-                            startHash = _txList[j + 1].hash;
-                            tempAry.push(_txList[j + 1]);
-                        }
-                    }
-                    // _txList.forEach((ele, index) => {
-                    //     let _isSet = ele.hash == startHash;
-                    //     let _isGoOn = tempAry.length < self.pagingSwitch.limit;
-                    //     // console.log("_isSet _isGoOn",_isSet,_isGoOn)
-                    //     if (_isSet && _isGoOn) {
-                    //         startHash = _txList[index + 1].hash;
-                    //         tempAry.push(_txList[index + 1]);
-                    //     }
-                    // });
-                    // console.log("tempAry",tempAry)
-                    self.loadingSwitch = false;
-                    self.accountInfo.currentTxList = tempAry;
-                    self.lastBlockHash = tempAry[tempAry.length - 1].hash;
-                }
-            },
-            getBeforeList() {
-                // 从 tx_list 中取一些值给currentTxLList
-                /*
+      const _currentTxList = self.accountInfo.currentTxList;
+      const currentTxListHashBlock =
+        _currentTxList[_currentTxList.length - 1].hash;
+      const _txList = self.accountInfo.tx_list;
+      const lastTxListHashBlock = _txList[_txList.length - 1].hash;
+      // console.log("currentTxListHashBlock == lastTxListHashBlock",currentTxListHashBlock == lastTxListHashBlock)
+      if (currentTxListHashBlock == lastTxListHashBlock) {
+        // 获取
+        // console.log("获取")
+        self.lastBlockHash = lastTxListHashBlock;
+        self.getTxList(true);
+      } else {
+        // 不获取
+        // console.log("不获取")
+        // 先把当前的哈希，替换为下一个hash
+        let startHash = currentTxListHashBlock;
+        const tempAry = [];
+        let ele;
+        for (let j = 0; j < _txList.length; j++) {
+          ele = _txList[j];
+          const _isSet = ele.hash == startHash;
+          const _isGoOn = tempAry.length < self.pagingSwitch.limit;
+          // console.log("_isSet _isGoOn",_isSet,_isGoOn)
+          if (_isSet && _isGoOn) {
+            // 如果是最后一个item，就不要循环了
+            if (_txList[j].hash == _txList[_txList.length - 1].hash) {
+              // console.log("不能循环拉");
+              self.pagingSwitch.nextDisabled = true; // 释放 后翻
+              break;
+            }
+            startHash = _txList[j + 1].hash;
+            tempAry.push(_txList[j + 1]);
+          }
+        }
+        // _txList.forEach((ele, index) => {
+        //     let _isSet = ele.hash == startHash;
+        //     let _isGoOn = tempAry.length < self.pagingSwitch.limit;
+        //     // console.log("_isSet _isGoOn",_isSet,_isGoOn)
+        //     if (_isSet && _isGoOn) {
+        //         startHash = _txList[index + 1].hash;
+        //         tempAry.push(_txList[index + 1]);
+        //     }
+        // });
+        // console.log("tempAry",tempAry)
+        self.loadingSwitch = false;
+        self.accountInfo.currentTxList = tempAry;
+        self.lastBlockHash = tempAry[tempAry.length - 1].hash;
+      }
+    },
+    getBeforeList() {
+      // 从 tx_list 中取一些值给currentTxLList
+      /*
                 1.当前有 lastBlockHash 开始循环找
                 2.可以取值，并且可以继续，则取值
                     - 取值同时，设置l astBlockHash 为前一个Hash,如果是第一个item了，则astBlockHash 为""
@@ -617,223 +765,231 @@
                 = 开始 > 结束   返回
                 = 开始 > 中间   返回
                 */
-                let localList = self.accountInfo.tx_list;
-                let targetAry = [];
-                // console.log("tx_list", self.accountInfo.tx_list);
-                // console.log("lastBlockHash", self.lastBlockHash);
-                if (self.lastBlockHash) {
-                    //当前list最后数据的hashBlock 就是当前hash；这时候需要换,换成上一页最后一个hash；
-                    let _currentTxList = self.accountInfo.currentTxList;
-                    let currentTxListHashBlock =
-                        _currentTxList[_currentTxList.length - 1].hash;
-                    if (self.lastBlockHash == currentTxListHashBlock) {
-                        //当前 lastBlockHash 在 tx_list 中的索引
-                        let currentIndexInTxLixt = 0;
-                        localList.forEach((ele, index) => {
-                            if (ele.hash == self.lastBlockHash) {
-                                currentIndexInTxLixt = index;
-                            }
-                        });
+      const localList = self.accountInfo.tx_list;
+      const targetAry = [];
+      // console.log("tx_list", self.accountInfo.tx_list);
+      // console.log("lastBlockHash", self.lastBlockHash);
+      if (self.lastBlockHash) {
+        // 当前list最后数据的hashBlock 就是当前hash；这时候需要换,换成上一页最后一个hash；
+        const _currentTxList = self.accountInfo.currentTxList;
+        const currentTxListHashBlock =
+          _currentTxList[_currentTxList.length - 1].hash;
+        if (self.lastBlockHash == currentTxListHashBlock) {
+          // 当前 lastBlockHash 在 tx_list 中的索引
+          let currentIndexInTxLixt = 0;
+          localList.forEach((ele, index) => {
+            if (ele.hash == self.lastBlockHash) {
+              currentIndexInTxLixt = index;
+            }
+          });
 
-                        let currentTxLeng = self.accountInfo.currentTxList.length;
-                        let lessNum =
-                            self.pagingSwitch.limit > currentTxLeng
-                                ? currentTxLeng
-                                : self.pagingSwitch.limit;
-                        let targetIndex = currentIndexInTxLixt - lessNum;
-                        if (targetIndex < 0) {
-                            self.pagingSwitch.beforeDisabled = true;
-                            self.loadingSwitch = false;
-                            return;
-                        }
+          const currentTxLeng = self.accountInfo.currentTxList.length;
+          const lessNum =
+            self.pagingSwitch.limit > currentTxLeng
+              ? currentTxLeng
+              : self.pagingSwitch.limit;
+          const targetIndex = currentIndexInTxLixt - lessNum;
+          if (targetIndex < 0) {
+            self.pagingSwitch.beforeDisabled = true;
+            self.loadingSwitch = false;
+            return;
+          }
 
-                        // let targetIndex = currentIndexInTxLixt - self.pagingSwitch.limit;
-                        // console.log("换blockHash", targetIndex,currentIndexInTxLixt , lessNum ,self.pagingSwitch.limit , currentTxLeng);
-                        self.lastBlockHash = localList[targetIndex].hash;
-                    }
+          // let targetIndex = currentIndexInTxLixt - self.pagingSwitch.limit;
+          // console.log("换blockHash", targetIndex,currentIndexInTxLixt , lessNum ,self.pagingSwitch.limit , currentTxLeng);
+          self.lastBlockHash = localList[targetIndex].hash;
+        }
 
-                    //如果有lastBlockHash
-                    for (let i = localList.length - 1; i >= 0; i--) {
-                        //如果当前Hash 等于 循环的哈希,开始取值
-                        let isSet = localList[i].hash == self.lastBlockHash; //是否取值
-                        let isGoOn = targetAry.length < self.pagingSwitch.limit; //是否继续取值
-                        if (isSet && isGoOn) {
-                            targetAry.unshift(localList[i]);
-                            self.lastBlockHash = i > 0 ? localList[i - 1].hash : "";
-                            if (i == 0) {
-                                self.pagingSwitch.beforeDisabled = true;
-                            }
-                        }
-                        //如果数据读取完毕，不需要循环
-                        if (!isGoOn) {
-                            break;
-                        }
-                    }
-                }
-                if (targetAry.length > 0) {
-                    self.accountInfo.currentTxList = targetAry;
-                } else {
-                    //不能上翻
-                    self.pagingSwitch.beforeDisabled = true;
-                }
-                self.loadingSwitch = false;
-            },
-            nextList() {
-                self.loadingSwitch = true;
-                self.getNextList();
-                self.pagingSwitch.beforeDisabled = false; //释放 前翻
-            },
-            beforeList() {
-                self.loadingSwitch = true;
-                self.getBeforeList();
-                self.pagingSwitch.nextDisabled = false; //释放 后翻
-            },
-            //获取所有交易 End
+        // 如果有lastBlockHash
+        for (let i = localList.length - 1; i >= 0; i--) {
+          // 如果当前Hash 等于 循环的哈希,开始取值
+          const isSet = localList[i].hash == self.lastBlockHash; // 是否取值
+          const isGoOn = targetAry.length < self.pagingSwitch.limit; // 是否继续取值
+          if (isSet && isGoOn) {
+            targetAry.unshift(localList[i]);
+            self.lastBlockHash = i > 0 ? localList[i - 1].hash : "";
+            if (i == 0) {
+              self.pagingSwitch.beforeDisabled = true;
+            }
+          }
+          // 如果数据读取完毕，不需要循环
+          if (!isGoOn) {
+            break;
+          }
+        }
+      }
+      if (targetAry.length > 0) {
+        self.accountInfo.currentTxList = targetAry;
+      } else {
+        // 不能上翻
+        self.pagingSwitch.beforeDisabled = true;
+      }
+      self.loadingSwitch = false;
+    },
+    nextList() {
+      self.loadingSwitch = true;
+      self.getNextList();
+      self.pagingSwitch.beforeDisabled = false; // 释放 前翻
+    },
+    beforeList() {
+      self.loadingSwitch = true;
+      self.getBeforeList();
+      self.pagingSwitch.nextDisabled = false; // 释放 后翻
+    },
+    // 获取所有交易 End
 
-            //当前账户发送的交易 Start
-            async initSendTrans(isFirstInit) {
-                // console.log("初始化数据了", isFirstInit);
-                let _current = this.sendTransCurrent;
-                //anbang 获取当前账户的交易列表
-                // _current.sourcesAry = this.$db
-                //     .get("send_list." + this.address)
-                //     .value();
-                // // 按照时间排序
-                // _current.sourcesAry.sort((a, b) => {
-                //     return b.send_timestamp - a.send_timestamp;
-                // });
-                _current.sourcesAry = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
-                // console.log("_current.sourcesAry",_current.sourcesAry)
-                if (isFirstInit) {
-                    self.createSendDefault();
-                }
-            },
-            createSendDefault() {
-                let _current = this.sendTransCurrent;
-                // 找出不稳定的block is_stable
-                // _current.unstableAry = []
-                // _current.sourcesAry.forEach(ele => {
-                //     if (ele.is_stable !== "1") {
-                //         _current.unstableAry.push(ele.hash);
-                //     }
-                // });
-                // self.$walletLogs.info(
-                //     "需要轮询的 unstableAry",
-                //     _current.unstableAry
-                // );
-                _current.tempAry = _current.sourcesAry.slice(0, 10);
-                _current.page = 1;
-                _current.totalPage = Math.ceil(
-                    _current.sourcesAry.length / _current.limit
-                );
-            },
-            currentBefore() {
-                let _current = this.sendTransCurrent;
-                const curPage = _current.page;
-                const curSliceStart = _current.limit * (curPage - 2);
-                const curSliceEnd = curSliceStart + _current.limit;
-                _current.nextDisabled = false;
-                if (curPage > 1) {
-                    _current.tempAry = _current.sourcesAry.slice(
-                        curSliceStart,
-                        curSliceEnd
-                    );
-                    _current.page--;
-                    if (_current.page === 1) {
-                        _current.beforeDisabled = true;
-                    }
-                }
-            },
-            currentNext() {
-                let _current = this.sendTransCurrent;
-                const curPage = _current.page;
-                const curSliceStart = _current.limit * curPage;
-                const curSliceEnd = curSliceStart + _current.limit;
-                _current.beforeDisabled = false;
-                if (curPage < _current.totalPage) {
-                    _current.tempAry = _current.sourcesAry.slice(
-                        curSliceStart,
-                        curSliceEnd
-                    );
-                    _current.page++;
-                    if (_current.page === _current.totalPage) {
-                        _current.nextDisabled = true;
-                    }
-                }
-            },
-            //当前账户发送的交易 End
+    // 当前账户发送的交易 Start
+    async initSendTrans(isFirstInit) {
+      // console.log("初始化数据了", isFirstInit);
+      const _current = this.sendTransCurrent;
+      // anbang 获取当前账户的交易列表
+      // _current.sourcesAry = this.$db
+      //     .get("send_list." + this.address)
+      //     .value();
+      // // 按照时间排序
+      // _current.sourcesAry.sort((a, b) => {
+      //     return b.send_timestamp - a.send_timestamp;
+      // });
+      _current.sourcesAry = await this.$nedb.account_tx
+        .sort({ createdAt: -1 })
+        .find({ from: this.address });
+      // console.log("_current.sourcesAry",_current.sourcesAry)
+      if (isFirstInit) {
+        self.createSendDefault();
+      }
+    },
+    createSendDefault() {
+      const _current = this.sendTransCurrent;
+      // 找出不稳定的block is_stable
+      // _current.unstableAry = []
+      // _current.sourcesAry.forEach(ele => {
+      //     if (ele.is_stable !== "1") {
+      //         _current.unstableAry.push(ele.hash);
+      //     }
+      // });
+      // self.$walletLogs.info(
+      //     "需要轮询的 unstableAry",
+      //     _current.unstableAry
+      // );
+      _current.tempAry = _current.sourcesAry.slice(0, 10);
+      _current.page = 1;
+      _current.totalPage = Math.ceil(
+        _current.sourcesAry.length / _current.limit
+      );
+    },
+    currentBefore() {
+      const _current = this.sendTransCurrent;
+      const curPage = _current.page;
+      const curSliceStart = _current.limit * (curPage - 2);
+      const curSliceEnd = curSliceStart + _current.limit;
+      _current.nextDisabled = false;
+      if (curPage > 1) {
+        _current.tempAry = _current.sourcesAry.slice(
+          curSliceStart,
+          curSliceEnd
+        );
+        _current.page--;
+        if (_current.page === 1) {
+          _current.beforeDisabled = true;
+        }
+      }
+    },
+    currentNext() {
+      const _current = this.sendTransCurrent;
+      const curPage = _current.page;
+      const curSliceStart = _current.limit * curPage;
+      const curSliceEnd = curSliceStart + _current.limit;
+      _current.beforeDisabled = false;
+      if (curPage < _current.totalPage) {
+        _current.tempAry = _current.sourcesAry.slice(
+          curSliceStart,
+          curSliceEnd
+        );
+        _current.page++;
+        if (_current.page === _current.totalPage) {
+          _current.nextDisabled = true;
+        }
+      }
+    },
+    // 当前账户发送的交易 End
 
-            //Init Start
-            initTag() {
-                this.editTag = this.accountInfo.tag;
-            },
-            initTransItem() {
-                this.transactionInfo = {
-                    hash: "", //哈希值
-                    from: "",
-                    to: "",
-                    amount: "",
-                    previous: "",
-                    parents: "",
-                    witness_list: "",
-                    witness_list_block: "",
-                    last_summary: "",
-                    last_summary_block: "",
-                    data: "",
-                    signature: "",
-                    is_stable: '',
-                    status: '',
-                    stable_timestamp: '',
-                    mc_timestamp: '',
-                    gas_used: '',
-                };
-            },
-            async initDatabase() {
-                let keystoreFile,
-                    txListAry = [],
-                    currentList = [];
-                if (this.accountInfo) {
-                    keystoreFile = this.accountInfo.keystore;
-                    txListAry = this.accountInfo.tx_list;
-                    currentList = self.accountInfo.currentTxList;
-                }
-                if (!txListAry.length) {
-                    // txListAry = this.$db.get(`send_list.${this.address}`).value()
-                    txListAry = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
-                }
-                if (!currentList.length) {
-                    // currentList = this.$db.get(`send_list.${this.address}`).value()
-                    currentList = await this.$nedb.account_tx.sort({ createdAt: -1 }).find({"from":this.address});
-                }
+    // Init Start
+    initTag() {
+      this.editTag = this.accountInfo.tag;
+    },
+    initTransItem() {
+      this.transactionInfo = {
+        hash: "", // 哈希值
+        from: "",
+        to: "",
+        amount: "",
+        previous: "",
+        parents: "",
+        witness_list: "",
+        witness_list_block: "",
+        last_summary: "",
+        last_summary_block: "",
+        data: "",
+        signature: "",
+        is_stable: "",
+        status: "",
+        stable_timestamp: "",
+        mc_timestamp: "",
+        gas_used: ""
+      };
+    },
+    async initDatabase() {
+      let keystoreFile;
+      let txListAry = [];
+      let currentList = [];
+      if (this.accountInfo) {
+        keystoreFile = this.accountInfo.keystore;
+        txListAry = this.accountInfo.tx_list;
+        currentList = self.accountInfo.currentTxList;
+      }
+      if (!txListAry.length) {
+        // txListAry = this.$db.get(`send_list.${this.address}`).value()
+        txListAry = await this.$nedb.account_tx
+          .sort({ createdAt: -1 })
+          .find({ from: this.address });
+      }
+      if (!currentList.length) {
+        // currentList = this.$db.get(`send_list.${this.address}`).value()
+        currentList = await this.$nedb.account_tx
+          .sort({ createdAt: -1 })
+          .find({ from: this.address });
+      }
 
-                //@anbang 查找account账户(address,tag,banance send_list)
-                // this.accountInfo = this.$db
-                //     .read()
-                //     .get("czr_accounts")
-                //     .filter({address: this.address})
-                //     .value()[0];
-                this.accountInfo = await this.$nedb.account.findOne({"address":this.address});
-                // console.log("accountInfo",this.accountInfo);
+      // @anbang 查找account账户(address,tag,banance send_list)
+      // this.accountInfo = this.$db
+      //     .read()
+      //     .get("czr_accounts")
+      //     .filter({address: this.address})
+      //     .value()[0];
+      this.accountInfo = await this.$nedb.account.findOne({
+        address: this.address
+      });
+      // console.log("accountInfo",this.accountInfo);
 
-                this.accountInfo.keystore = keystoreFile;
-                self.accountInfo.currentTxList = currentList;
-                //更新list
-                txListAry.forEach((ele, index) => {
-                    if (ele.is_stable == "0") {
-                        self.getBlock(ele.hash);
-                    }
-                });
-                this.accountInfo.tx_list = txListAry;
-                // console.log('accountInfo.tx_list, currentTxList', txListAry, currentList)
-            },
-            //Init End
+      this.accountInfo.keystore = keystoreFile;
+      self.accountInfo.currentTxList = currentList;
+      // 更新list
+      txListAry.forEach((ele, index) => {
+        if (ele.is_stable == "0") {
+          self.getBlock(ele.hash);
+        }
+      });
+      this.accountInfo.tx_list = txListAry;
+      // console.log('accountInfo.tx_list, currentTxList', txListAry, currentList)
+    },
+    // Init End
 
-            getBlock(hash) {
-                self.$czr.request
-                    .getBlockState(hash)
-                    .then(async data => {
-                        // console.log('getBlockState data', data)
-                        /**
+    getBlock(hash) {
+      self.$czr.request
+        .getBlockState(hash)
+        .then(async data => {
+          // console.log('getBlockState data', data)
+          /**
                          * {
     "code": 0,
     "msg": "OK",
@@ -859,502 +1015,509 @@
     }
 }
                          * */
-                        const blockState = data.block_state
-                        if (blockState.is_stable === 1) {
-                            const {stable_timestamp, gas_used, status, mc_timestamp} = data.block_state.stable_content // TODO save to db
-                            const tx = this.accountInfo.tx_list.find(tx => {
-                                return tx.hash === hash
-                            })
-                            if (tx) {
-                                tx.is_stable = '1'
-                                tx.status = status
-                                tx.stable_timestamp = stable_timestamp
-                                tx.mc_timestamp = mc_timestamp
-                                tx.gas_used = gas_used
-                            }
-                            const tx2 = this.accountInfo.currentTxList.find(tx => {
-                                return tx.hash === hash
-                            })
-                            if (tx2) {
-                                tx2.is_stable = '1'
-                                tx2.status = status
-                                tx2.stable_timestamp = stable_timestamp
-                                tx.mc_timestamp = mc_timestamp
-                                tx2.gas_used = gas_used
-                            }
+          const blockState = data.block_state;
+          if (blockState.is_stable === 1) {
+            const {
+              stable_timestamp,
+              gas_used,
+              status,
+              mc_timestamp
+            } = data.block_state.stable_content; // TODO save to db
+            const tx = this.accountInfo.tx_list.find(tx => {
+              return tx.hash === hash;
+            });
+            if (tx) {
+              tx.is_stable = "1";
+              tx.status = status;
+              tx.stable_timestamp = stable_timestamp;
+              tx.mc_timestamp = mc_timestamp;
+              tx.gas_used = gas_used;
+            }
+            const tx2 = this.accountInfo.currentTxList.find(tx => {
+              return tx.hash === hash;
+            });
+            if (tx2) {
+              tx2.is_stable = "1";
+              tx2.status = status;
+              tx2.stable_timestamp = stable_timestamp;
+              tx.mc_timestamp = mc_timestamp;
+              tx2.gas_used = gas_used;
+            }
 
-                            //anbang 更新账户的交易列表信息
-                            // this.$db.get(`send_list.${this.address}`)
-                            //     .find({hash: hash})
-                            //     .assign({
-                            //         is_stable: '1',
-                            //         status: status,
-                            //         stable_timestamp: stable_timestamp,
-                            //         mc_timestamp: mc_timestamp,
-                            //         gas_used: gas_used,
-                            //     })
-                            //     .write()
-                            let updateInfo={
-                                is_stable: '1',
-                                status: status,
-                                stable_timestamp: stable_timestamp,
-                                mc_timestamp: mc_timestamp,
-                                gas_used: gas_used,
-                            };
-                            let aloneUpdateRes = await this.$nedb.account_tx.update({hash:hash},{ $set: updateInfo });
+            // anbang 更新账户的交易列表信息
+            // this.$db.get(`send_list.${this.address}`)
+            //     .find({hash: hash})
+            //     .assign({
+            //         is_stable: '1',
+            //         status: status,
+            //         stable_timestamp: stable_timestamp,
+            //         mc_timestamp: mc_timestamp,
+            //         gas_used: gas_used,
+            //     })
+            //     .write()
+            const updateInfo = {
+              is_stable: "1",
+              status,
+              stable_timestamp,
+              mc_timestamp,
+              gas_used
+            };
+            const aloneUpdateRes = await this.$nedb.account_tx.update(
+              { hash },
+              { $set: updateInfo }
+            );
 
-                            if ((hash === this.transactionInfo.hash)) {
-                                this.transactionInfo = Object.assign({}, this.transactionInfo, {
-                                    is_stable: '1',
-                                    status: status,
-                                    stable_timestamp: stable_timestamp,
-                                    mc_timestamp: mc_timestamp,
-                                    gas_used: gas_used,
-                                });
-                            }
-                            this.initSendTrans(true)
+            if (hash === this.transactionInfo.hash) {
+              this.transactionInfo = {
+                ...this.transactionInfo,
+                is_stable: "1",
+                status,
+                stable_timestamp,
+                mc_timestamp,
+                gas_used
+              };
+            }
+            this.initSendTrans(true);
 
-                            // self.accountInfo.tx_list.forEach((ele, index) => {
-                            //     if (data.hash == ele.hash) {
-                            //         //写回去 TODO
-                            //         self.accountInfo.tx_list[index] = data;
-                            //         //如果当前是 transactionInfo 则也些过去
-                            //         if ((data.hash = self.transactionInfo.hash)) {
-                            //             self.transactionInfo = data;
-                            //         }
-                            //     }
-                            // });
-                            // //current也需要更改
-                            // self.accountInfo.currentTxList.forEach((ele, index) => {
-                            //     if (data.hash == ele.hash) {
-                            //         //写回去
-                            //         self.accountInfo.currentTxList[index] = data;
-                            //     }
-                            // });
-                        } else {
-                            // 检查交易详情，如果不存在，说明交易失败
-                            this.$czr.request.getBlock(hash)
-                                .then(async res => {
-                                    if (res.code === 0) {
-                                        if (res.block === null) {
-                                            const tx = this.accountInfo.tx_list.find(tx => {
-                                                return tx.hash === hash
-                                            })
-                                            if (tx) {
-                                                tx.is_stable = '1'
-                                                tx.status = '100'
-                                            }
-                                            const tx2 = this.accountInfo.currentTxList.find(tx => {
-                                                return tx.hash === hash
-                                            })
-                                            if (tx2) {
-                                                tx2.is_stable = '1'
-                                                tx2.status = '100'
-                                            }
-                                            //anbang 更新账户的交易列表信息
-                                            // this.$db.get(`send_list.${this.address}`)
-                                            //     .find({hash: hash})
-                                            //     .assign({
-                                            //         is_stable: '1',
-                                            //         status: '100',
-                                            //     })
-                                            //     .write()
-                                            let updateInfo={
-                                                is_stable: '1',
-                                                status: '100',
-                                            };
-                                            
-                                            let aloneUpdateRes = await this.$nedb.account_tx.update({hash:hash},{ $set: updateInfo });
+            // self.accountInfo.tx_list.forEach((ele, index) => {
+            //     if (data.hash == ele.hash) {
+            //         //写回去 TODO
+            //         self.accountInfo.tx_list[index] = data;
+            //         //如果当前是 transactionInfo 则也些过去
+            //         if ((data.hash = self.transactionInfo.hash)) {
+            //             self.transactionInfo = data;
+            //         }
+            //     }
+            // });
+            // //current也需要更改
+            // self.accountInfo.currentTxList.forEach((ele, index) => {
+            //     if (data.hash == ele.hash) {
+            //         //写回去
+            //         self.accountInfo.currentTxList[index] = data;
+            //     }
+            // });
+          } else {
+            // 检查交易详情，如果不存在，说明交易失败
+            this.$czr.request.getBlock(hash).then(async res => {
+              if (res.code === 0) {
+                if (res.block === null) {
+                  const tx = this.accountInfo.tx_list.find(tx => {
+                    return tx.hash === hash;
+                  });
+                  if (tx) {
+                    tx.is_stable = "1";
+                    tx.status = "100";
+                  }
+                  const tx2 = this.accountInfo.currentTxList.find(tx => {
+                    return tx.hash === hash;
+                  });
+                  if (tx2) {
+                    tx2.is_stable = "1";
+                    tx2.status = "100";
+                  }
+                  // anbang 更新账户的交易列表信息
+                  // this.$db.get(`send_list.${this.address}`)
+                  //     .find({hash: hash})
+                  //     .assign({
+                  //         is_stable: '1',
+                  //         status: '100',
+                  //     })
+                  //     .write()
+                  const updateInfo = {
+                    is_stable: "1",
+                    status: "100"
+                  };
 
-                                            if ((hash === this.transactionInfo.hash)) {
-                                                this.transactionInfo = Object.assign({}, this.transactionInfo, {
-                                                    is_stable: '1',
-                                                    status: '100',
-                                                });
-                                            }
-                                            this.initSendTrans(true)
-                                        }
-                                    }
-                                })
-                        }
-                    })
-                    .catch(error => {
-                        self.$walletLogs.error("Get Block Error", error.message);
-                    })
-            },
+                  const aloneUpdateRes = await this.$nedb.account_tx.update(
+                    { hash },
+                    { $set: updateInfo }
+                  );
 
-            //Copy Address
-            copyAddress() {
-                clipboard.writeText(this.address);
-                this.$message({
-                    message: this.$t("page_account.msg_info.ads_copy_success"),
-                    type: "success"
-                });
-            },
-
-            //SHOW tx info
-            showTxInfo(item) {
-                if (item.content) {
+                  if (hash === this.transactionInfo.hash) {
                     this.transactionInfo = {
-                        "hash": item.hash,
-                        "from": item.from,
-                        "previous": item.content.previous,
-                        "to": item.content.to,
-                        "amount": item.content.amount,
-                        "gas": item.content.gas,
-                        "gas_price": item.content.gas_price,
-                        "data": item.data,
-                        "is_stable": item.is_stable,
-                        "status": item.status,
-                        "gas_used": item.gas_used,
-                        "mc_timestamp": item.mc_timestamp,
-                        "stable_timestamp": item.stable_timestamp,
-                    }
-                } else {
-                    this.transactionInfo = item;
+                      ...this.transactionInfo,
+                      is_stable: "1",
+                      status: "100"
+                    };
+                  }
+                  this.initSendTrans(true);
                 }
-                this.dialogSwitch.txInfo = true;
-            },
-            //Show Qrcode
-            showQrCode() {
-                this.dialogSwitch.qrCode = true;
-            },
-            //Edit Tag
-            async setEditTag() {
-                if (!this.editTag) {
-                    this.$message.error(this.$t("page_account.edit_dia.no_tag"));
-                    return;
-                }
+              }
+            });
+          }
+        })
+        .catch(error => {
+          self.$walletLogs.error("Get Block Error", error.message);
+        });
+    },
 
-                //判断长度
-                if (this.editTag.length > 8) {
-                    this.$message.error(
-                        this.$t("page_account.edit_dia.validate_tag_length")
-                    );
-                    return;
-                }
-                // anbang 更改账户的Tag
-                // this.$db
-                //     .read()
-                //     .get("czr_accounts")
-                //     .find({address: this.address})
-                //     .assign({tag: this.editTag})
-                //     .write();
-                let updateInfo={tag: this.editTag}
-                let aloneUpdateRes = await this.$nedb.account.update({"address":this.address},{ $set: updateInfo });
-                // console.log("aloneUpdateRes",aloneUpdateRes);
+    // Copy Address
+    copyAddress() {
+      clipboard.writeText(this.address);
+      this.$message({
+        message: this.$t("page_account.msg_info.ads_copy_success"),
+        type: "success"
+      });
+    },
 
-                this.accountInfo.tag = this.editTag;
-                this.dialogSwitch.editName = false;
-            },
+    // SHOW tx info
+    showTxInfo(item) {
+      if (item.content) {
+        this.transactionInfo = {
+          hash: item.hash,
+          from: item.from,
+          previous: item.content.previous,
+          to: item.content.to,
+          amount: item.content.amount,
+          gas: item.content.gas,
+          gas_price: item.content.gas_price,
+          data: item.data,
+          is_stable: item.is_stable,
+          status: item.status,
+          gas_used: item.gas_used,
+          mc_timestamp: item.mc_timestamp,
+          stable_timestamp: item.stable_timestamp
+        };
+      } else {
+        this.transactionInfo = item;
+      }
+      this.dialogSwitch.txInfo = true;
+    },
+    // Show Qrcode
+    showQrCode() {
+      this.dialogSwitch.qrCode = true;
+    },
+    // Edit Tag
+    async setEditTag() {
+      if (!this.editTag) {
+        this.$message.error(this.$t("page_account.edit_dia.no_tag"));
+        return;
+      }
 
-            //export Keystore
-            async exportKeystore() {
-                let self = this;
-                // anbang 查找 keystore
-                // let accountKeystore = self.$db
-                //     .get("accounts_keystore")
-                //     .find({account: self.accountInfo.address})
-                //     .value();
-                let accountKeystore = await this.$nedb.accounts_keystore.findOne({ "account": self.accountInfo.address });
-                if (accountKeystore) {
-                    let outputKey = {
-                        account:accountKeystore.account,
-                        kdf_salt:accountKeystore.kdf_salt,
-                        iv:accountKeystore.iv,
-                        ciphertext:accountKeystore.ciphertext,
-                    }
-                    self.accountInfo.keystore = JSON.stringify(outputKey);
-                    self.dialogSwitch.keystore = true;
-                } else {
-                    self.$message.error("Account Export Error");
-                }
-            },
+      // 判断长度
+      if (this.editTag.length > 8) {
+        this.$message.error(
+          this.$t("page_account.edit_dia.validate_tag_length")
+        );
+        return;
+      }
+      // anbang 更改账户的Tag
+      // this.$db
+      //     .read()
+      //     .get("czr_accounts")
+      //     .find({address: this.address})
+      //     .assign({tag: this.editTag})
+      //     .write();
+      const updateInfo = { tag: this.editTag };
+      const aloneUpdateRes = await this.$nedb.account.update(
+        { address: this.address },
+        { $set: updateInfo }
+      );
+      // console.log("aloneUpdateRes",aloneUpdateRes);
 
-            //copy
-            copyKeystore() {
-                // clipboard.writeText(JSON.stringify(this.accountInfo.keystore));
-                clipboard.writeText(this.accountInfo.keystore);
-                this.$message.success(
-                    this.$t("page_account.msg_info.key_copy_success")
-                );
-                this.dialogSwitch.keystore = false;
-            },
-            //download
-            downloadKeystore() {
-                let link = document.createElement("a");
-                link.download = this.address + '.json';
-                link.style.display = "none";
-                // let blob = new Blob([JSON.stringify(this.accountInfo.keystore)]);
-                let blob = new Blob([this.accountInfo.keystore]);
-                link.href = URL.createObjectURL(blob);
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                this.dialogSwitch.keystore = false;
-            },
-            addZero(val) {
-                return val < 10 ? "0" + val : val;
-            }
-        },
-        filters: {
-            toCZRVal(val) {
-                if (!val) {
-                    return 0;
-                }
-                let tempVal = self.$czr.utils.fromKing(val, "czr");
-                return new BigNumber(tempVal).toFixed(4)
-                // let reg = /(\d+(?:\.)?)(\d{0,4})/;
-                // let regAry = reg.exec(tempVal);
-                // let integer = regAry[1];
-                // let decimal = regAry[2];
-                // if (decimal) {
-                //     while (decimal.length < 4) {
-                //         decimal += "0";
-                //     }
-                // }
-                // return integer + decimal;
-            },
-            toCZRFull(val) {
-                let tempVal = self.$czr.utils.fromKing(val, "czr");
-                return tempVal;
-            },
-            toDate(val) {
-                if (val == "0" || !val) {
-                    return "-";
-                }
-                let newDate = new Date();
-                newDate.setTime(val * 1000);
-                let addZero = val => {
-                    return val < 10 ? "0" + val : val;
-                };
-                return (
-                    newDate.getFullYear() +
-                    "-" +
-                    addZero(newDate.getMonth() + 1) +
-                    "-" +
-                    addZero(newDate.getDate()) +
-                    " " +
-                    addZero(newDate.getHours()) +
-                    ":" +
-                    addZero(newDate.getMinutes()) +
-                    ":" +
-                    addZero(newDate.getSeconds())
-                );
-            }
-        }
-    };
+      this.accountInfo.tag = this.editTag;
+      this.dialogSwitch.editName = false;
+    },
+
+    // export Keystore
+    async exportKeystore() {
+      const self = this;
+      // anbang 查找 keystore
+      // let accountKeystore = self.$db
+      //     .get("accounts_keystore")
+      //     .find({account: self.accountInfo.address})
+      //     .value();
+      const accountKeystore = await this.$nedb.accounts_keystore.findOne({
+        account: self.accountInfo.address
+      });
+      if (accountKeystore) {
+        const outputKey = {
+          account: accountKeystore.account,
+          kdf_salt: accountKeystore.kdf_salt,
+          iv: accountKeystore.iv,
+          ciphertext: accountKeystore.ciphertext
+        };
+        self.accountInfo.keystore = JSON.stringify(outputKey);
+        self.dialogSwitch.keystore = true;
+      } else {
+        self.$message.error("Account Export Error");
+      }
+    },
+
+    // copy
+    copyKeystore() {
+      // clipboard.writeText(JSON.stringify(this.accountInfo.keystore));
+      clipboard.writeText(this.accountInfo.keystore);
+      this.$message.success(this.$t("page_account.msg_info.key_copy_success"));
+      this.dialogSwitch.keystore = false;
+    },
+    // download
+    downloadKeystore() {
+      const link = document.createElement("a");
+      link.download = `${this.address}.json`;
+      link.style.display = "none";
+      // let blob = new Blob([JSON.stringify(this.accountInfo.keystore)]);
+      const blob = new Blob([this.accountInfo.keystore]);
+      link.href = URL.createObjectURL(blob);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      this.dialogSwitch.keystore = false;
+    },
+    addZero(val) {
+      return val < 10 ? `0${val}` : val;
+    }
+  },
+  filters: {
+    toCZRVal(val) {
+      if (!val) {
+        return 0;
+      }
+      const tempVal = self.$czr.utils.fromKing(val, "czr");
+      return new BigNumber(tempVal).toFixed(4);
+      // let reg = /(\d+(?:\.)?)(\d{0,4})/;
+      // let regAry = reg.exec(tempVal);
+      // let integer = regAry[1];
+      // let decimal = regAry[2];
+      // if (decimal) {
+      //     while (decimal.length < 4) {
+      //         decimal += "0";
+      //     }
+      // }
+      // return integer + decimal;
+    },
+    toCZRFull(val) {
+      const tempVal = self.$czr.utils.fromKing(val, "czr");
+      return tempVal;
+    },
+    toDate(val) {
+      if (val == "0" || !val) {
+        return "-";
+      }
+      const newDate = new Date();
+      newDate.setTime(val * 1000);
+      const addZero = val => {
+        return val < 10 ? `0${val}` : val;
+      };
+      return `${newDate.getFullYear()}-${addZero(
+        newDate.getMonth() + 1
+      )}-${addZero(newDate.getDate())} ${addZero(newDate.getHours())}:${addZero(
+        newDate.getMinutes()
+      )}:${addZero(newDate.getSeconds())}`;
+    }
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .account-banner {
-        height: 175px;
-        text-align: center;
-        background-color: #5a59a0;
-        color: #fff;
-        width: 100%;
-        /* -webkit-user-select: none; */
-        position: relative;
-    }
-    .account-banner .active-icon {
-        padding: 10px 10px;
-        min-width: 200px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 99;
-    }
-    .account-banner .acc-interactive {
-        margin: 10px;
-        display: inline-block;
-    }
-    .account-banner .acc-interactive:hover {
-        cursor: pointer;
-    }
-    .account-banner .acc-interactive:hover .icon-des {
-        color: #e7e7ff;
-    }
-    .account-banner .acc-interactive:hover .iconfont {
-        color: #e7e7ff;
-    }
-    .account-banner .acc-interactive .iconfont {
-        font-size: 18px;
-        color: #bfbef8;
-    }
-    .account-banner .icon-des {
-        font-size: 12px;
-        min-width: 40px;
-        color: #bfbef8;
-    }
-    .account-banner .account-center {
-        z-index: 20;
-        width: 520px;
-        margin: 0 auto;
-        /* text-align: left; */
-    }
-    .account-banner .account-center .iconfont {
-        color: #c4c3f7;
-        cursor: pointer;
-        width: 24px;
-        height: 24px;
-    }
-    .account-banner .account-center .iconfont:hover {
-        color: #e7e7ff;
-    }
-    .account-center {
-        padding-top: 38px;
-    }
-    .account-has-assets {
-        margin: 10px 0 15px;
-    }
-    .account-has-assets .account-assets {
-        font-size: 24px;
-        display: inline-block;
-    }
-    .account-content {
-        text-align: left;
-        padding: 0 20px;
-        margin-top: 40px;
-    }
-    .account-content .transfer-tit {
-        font-size: 18px;
-        font-weight: 400;
-    }
-    /* Transaction Record */
-    .account-content .no-transfer-log {
-        text-align: center;
-        color: #9b9b9b;
-    }
-    .account-content .no-transfer-log .iconfont {
-        font-size: 128px;
-    }
-    .account-content .transfer-log {
-        padding: 22px 0;
-    }
-    .transfer-log .transfer-item {
-        background-color: #fff;
-        padding: 10px 15px;
-        margin-bottom: 2px;
-        border-bottom: 1px solid #f6f6f6;
-        cursor: pointer;
-        -webkit-user-select: none;
-    }
-    .transfer-log .transfer-item:hover {
-        background-color: #f5f7fa;
-    }
-    .account-content .transfer-log .transfer-info {
-        width: 485px;
-        text-align: left;
-    }
-    .transfer-log .icon-wrap {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-    }
-    .transfer-log .icon-wrap .icon-transfer {
-        color: #fff;
-        position: relative;
-        left: 11px;
-        top: 4px;
-        font-size: 20px;
-    }
-    .transfer-log .plus-assets .icon-wrap {
-        background-color: rgba(0, 128, 0, 0.555);
-    }
-    .transfer-log .less-assets .icon-wrap {
-        background-color: rgba(255, 153, 0, 0.555);
-    }
-    .transfer-log .by-address {
-        width: 100%;
-        color: #9a9c9d;
-        width: 64ch;
-        table-layout: fixed;
-        word-break: break-all;
-        overflow: hidden;
-        color: rgb(54, 54, 54);
-    }
-    .transfer-log .transfer-time {
-        color: rgb(161, 161, 161);
-    }
-    .transfer-log .transfer-assets .assets {
-        font-size: 18px;
-        height: 42px;
-        line-height: 42px;
-        width: 170px;
-        text-align: right;
-    }
-    .plus-assets .assets {
-        color: green;
-    }
-    .less-assets .assets {
-        color: rgb(255, 51, 0);
-    }
-    .qrcode-img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .dia-address {
-        text-align: center;
-        table-layout: fixed;
-        word-break: break-all;
-        overflow: hidden;
-    }
-    .edit-name-subtit {
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    .dialog-tx-wap .tx-item {
-        padding: 10px 0 10px;
-        border-bottom: 1px dashed #f3f3f3;
-    }
-    .tx-item-des {
-        width: 160px;
-    }
-    .tx-item-info {
-        width: 80%;
-        padding-left: 10px;
-        text-align: right;
-        color: #9a9c9d;
-        table-layout: fixed;
-        word-break: break-all;
-        overflow: hidden;
-    }
-    .pagin-wrap {
-        padding: 15px 0;
-    }
-    .txt-warning {
-        color: #e6a23c;
-    }
-    .txt-info {
-        color: #909399;
-    }
-    .txt-success {
-        color: #67c23a;
-    }
-    .txt-danger {
-        color: #f56c6c;
-    }
-    .account-alias-wrap {
-        position: relative;
-    }
-    .icon-edit-alias {
-        display: inline-block;
-        height: 24px;
-        line-height: 24px;
-        position: relative;
-        top: -6px;
-        right: 0;
-    }
-    .account-remark {
-        display: inline-block;
-        height: 24px;
-        line-height: 24px;
-        max-width: 150px;
-        margin: 0 auto;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+.account-banner {
+  height: 175px;
+  text-align: center;
+  background-color: #5a59a0;
+  color: #fff;
+  width: 100%;
+  /* -webkit-user-select: none; */
+  position: relative;
+}
+.account-banner .active-icon {
+  padding: 10px 10px;
+  min-width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+.account-banner .acc-interactive {
+  margin: 10px;
+  display: inline-block;
+}
+.account-banner .acc-interactive:hover {
+  cursor: pointer;
+}
+.account-banner .acc-interactive:hover .icon-des {
+  color: #e7e7ff;
+}
+.account-banner .acc-interactive:hover .iconfont {
+  color: #e7e7ff;
+}
+.account-banner .acc-interactive .iconfont {
+  font-size: 18px;
+  color: #bfbef8;
+}
+.account-banner .icon-des {
+  font-size: 12px;
+  min-width: 40px;
+  color: #bfbef8;
+}
+.account-banner .account-center {
+  z-index: 20;
+  width: 520px;
+  margin: 0 auto;
+  /* text-align: left; */
+}
+.account-banner .account-center .iconfont {
+  color: #c4c3f7;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.account-banner .account-center .iconfont:hover {
+  color: #e7e7ff;
+}
+.account-center {
+  padding-top: 38px;
+}
+.account-has-assets {
+  margin: 10px 0 15px;
+}
+.account-has-assets .account-assets {
+  font-size: 24px;
+  display: inline-block;
+}
+.account-content {
+  text-align: left;
+  padding: 0 20px;
+  margin-top: 40px;
+}
+.account-content .transfer-tit {
+  font-size: 18px;
+  font-weight: 400;
+}
+/* Transaction Record */
+.account-content .no-transfer-log {
+  text-align: center;
+  color: #9b9b9b;
+}
+.account-content .no-transfer-log .iconfont {
+  font-size: 128px;
+}
+.account-content .transfer-log {
+  padding: 22px 0;
+}
+.transfer-log .transfer-item {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #f6f6f6;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.transfer-log .transfer-item:hover {
+  background-color: #f5f7fa;
+}
+.account-content .transfer-log .transfer-info {
+  width: 485px;
+  text-align: left;
+}
+.transfer-log .icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.transfer-log .icon-wrap .icon-transfer {
+  color: #fff;
+  position: relative;
+  left: 11px;
+  top: 4px;
+  font-size: 20px;
+}
+.transfer-log .plus-assets .icon-wrap {
+  background-color: rgba(0, 128, 0, 0.555);
+}
+.transfer-log .less-assets .icon-wrap {
+  background-color: rgba(255, 153, 0, 0.555);
+}
+.transfer-log .by-address {
+  width: 100%;
+  color: #9a9c9d;
+  width: 64ch;
+  table-layout: fixed;
+  word-break: break-all;
+  overflow: hidden;
+  color: rgb(54, 54, 54);
+}
+.transfer-log .transfer-time {
+  color: rgb(161, 161, 161);
+}
+.transfer-log .transfer-assets .assets {
+  font-size: 18px;
+  height: 42px;
+  line-height: 42px;
+  width: 170px;
+  text-align: right;
+}
+.plus-assets .assets {
+  color: green;
+}
+.less-assets .assets {
+  color: rgb(255, 51, 0);
+}
+.qrcode-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dia-address {
+  text-align: center;
+  table-layout: fixed;
+  word-break: break-all;
+  overflow: hidden;
+}
+.edit-name-subtit {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.dialog-tx-wap .tx-item {
+  padding: 10px 0 10px;
+  border-bottom: 1px dashed #f3f3f3;
+}
+.tx-item-des {
+  width: 160px;
+}
+.tx-item-info {
+  width: 80%;
+  padding-left: 10px;
+  text-align: right;
+  color: #9a9c9d;
+  table-layout: fixed;
+  word-break: break-all;
+  overflow: hidden;
+}
+.pagin-wrap {
+  padding: 15px 0;
+}
+.txt-warning {
+  color: #e6a23c;
+}
+.txt-info {
+  color: #909399;
+}
+.txt-success {
+  color: #67c23a;
+}
+.txt-danger {
+  color: #f56c6c;
+}
+.account-alias-wrap {
+  position: relative;
+}
+.icon-edit-alias {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  top: -6px;
+  right: 0;
+}
+.account-remark {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  max-width: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 </style>
