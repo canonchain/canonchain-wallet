@@ -73,7 +73,7 @@
     "electron-updater": "^4.0.6",
     "element-ui": "^2.8.2",
     "fs-extra": "^5.0.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.19",
     "lodash-id": "^0.14.0",
     "log4js": "3.0.0",
     "lowdb": "^1.0.0",
